@@ -6,7 +6,7 @@ description: Getting started with SOAP API for Number
 
 Our SOAP API allows full integration of Number services with a high degree of customization. You can use our [SOAP API reference](../../../api-reference/soap-api-v1/) to learn about specific methods in the API.
 
-Before you continue this section, we recommend reading sections with basics around [authentication](../basics-v1/api-authentication-v1.md), [logging](../basics-v1/api-logging-v1.md), and [input validation](../basics-v1/api-input-validation-v1.md).
+Before you continue this section, we recommend reading sections with basics around [authentication](../basics-v1/api-authentication-v2.md), [logging](../basics-v1/api-logging-v1.md), and [input validation](../basics-v1/api-input-validation-v1.md).
 
 
 

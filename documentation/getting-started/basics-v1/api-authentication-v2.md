@@ -164,29 +164,104 @@ pm.collectionVariables.set("token", signature.toUpperCase());
 When the API traffic originates from unknown networks or mobile devices, we also mandate that any credit card numbers be encrypted prior to building your request. You can download our RSA 2048 certificate and use the public key to encrypt the cardholder information.&#x20;
 
 {% hint style="info" %}
-When passing cardholder data through our APIs, only the credit card number needs to be encrypted using RSA, the expiration date and CVV can be left as is.
+When passing cardholder data through our APIs, only the credit card number needs to be encrypted using RSA, the expiration date and CVV can be left as is.\\
 {% endhint %}
 
+Examples of RSA encrypotion:
+
 {% tabs %}
-{% tab title="JavaScript" %}
+{% tab title="C#" %}
+{% code overflow="wrap" %}
+```csharp
+using System.Security.Cryptography;
+using System.Security.Cryptography.X509Certificates;
+using System.Text;
+
+// Example card number to encrypt
+string myCardNumber = "4111111111111111";
+
+X509Store store = new X509Store(StoreName.My, StoreLocation.LocalMachine);
+X509Certificate2? myCert = null;
+
+store.Open(OpenFlags.ReadOnly);
+bool certFound = false;
+
+// Search for cert within store either by thumbprint or subject 
+foreach (X509Certificate2 cert in store.Certificates)
+{
+  if (cert.Subject.Contains("mobile.easypay5.com"))
+  {
+    myCert = cert;
+    certFound = true;
+    break;
+  }
+}
+
+if (!certFound || myCert == null)
+{
+  MessageBox.Show("Unable to find the certificate");
+  return;
+}
+
+byte[] plainBytes = Encoding.UTF8.GetBytes(myCardNumber);
+RSA? rsaPublicKey = myCert.GetRSAPublicKey();
+
+if (rsaPublicKey == null)
+{
+  MessageBox.Show("Unable to get RSA public key from the certificate");
+  return;
+}
+
+// Use the OaepSHA1 RSA encryption padding
+byte[] encryptedBytes = rsaPublicKey.Encrypt(plainBytes, RSAEncryptionPadding.OaepSHA1);
+
+// Convert to Base64 before sending to the API
+string encryptedString = Convert.ToBase64String(encryptedBytes);
+
+// Example payload for the API
+string jsonPayload = $@"
+{{
+    ""ccCardInfo"": {{
+        ""AccountNumber"": ""{encryptedString}"",
+        ""ExpMonth"": 10,
+        ""ExpYear"": 2028,
+        ""CSV"": ""122""
+    }}
+}}";
+
+```
+{% endcode %}
+{% endtab %}
+
+{% tab title="JavaScript (Node.js)" %}
+{% code overflow="wrap" %}
 ```javascript
-const message = "hello world";
-console.log(message);
-```
-{% endtab %}
+const crypto = require("crypto");
+const fs = require("fs");
 
-{% tab title="Python" %}
-```python
-message = "hello world"
-print(message)
-```
-{% endtab %}
+var myCardNumber = "4761530001111118";
 
-{% tab title="Ruby" %}
-```ruby
-message = "hello world"
-puts message
+try {
+  const publicKey = Buffer.from(
+    fs.readFileSync("mobile.easypay5.com.pem", { encoding: "utf-8" })
+  );
+
+  const encryptedData = crypto.publicEncrypt({
+      key: publicKey,
+      padding: crypto.constants.RSA_PKCS1_OAEP_PADDING,
+      oaepHash: 'sha1',
+    },
+    Buffer.from(myCardNumber) // Convert the string to a buffer
+  );
+
+  const encryptedString = encryptedData.toString("base64");
+}
+catch (error) {
+  console.error("Error encrypting card data:", error);
+}
+
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 

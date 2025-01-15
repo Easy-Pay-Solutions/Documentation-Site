@@ -21,7 +21,7 @@
     * [API Input Validation (v1)](documentation/getting-started/basics-v1/api-input-validation-v1.md)
   * [Integration Checklist](documentation/getting-started/integration-checklist.md)
   * [Integration Options (v1)](documentation/getting-started/integration-options-v1/README.md)
-    * [REST API](documentation/getting-started/integration-options-v1/rest-api.md)
+    * [REST API (WIP)](documentation/getting-started/integration-options-v1/rest-api-wip.md)
     * [SOAP API (v1)](documentation/getting-started/integration-options-v1/soap-api-v1.md)
     * [Android SDK (v1)](documentation/getting-started/integration-options-v1/android-sdk-v1.md)
     * [iOS SDK (v1)](documentation/getting-started/integration-options-v1/ios-sdk-v1.md)

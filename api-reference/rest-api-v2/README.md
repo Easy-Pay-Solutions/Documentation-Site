@@ -3,7 +3,7 @@ description: The API reference for the REST API
 icon: object-exclude
 ---
 
-# REST API (v1)
+# REST API (v2)
 
 <figure><img src="../../.gitbook/assets/REST API C.png" alt=""><figcaption></figcaption></figure>
 

@@ -346,7 +346,7 @@ if response.data.errorMessage != "" && response.data.errorCode != 0 {
 }
 ```
 
-If there is No TxApproved flag, then you can omit the last evaluation. More information about consuming the API response can be found in the [REST API integration guide](rest-api.md).
+If there is No TxApproved flag, then you can omit the last evaluation. More information about consuming the API response can be found in the [REST API integration guide](rest-api-wip.md).
 
 
 

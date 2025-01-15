@@ -70,7 +70,7 @@ They allow a variety of functions:&#x20;
 
 You don't need to use both of the APIs, they share similar functionality. We recommend starting with the REST API as our modern option. We continue to have both of the APIs fully supported.
 
-It's important to note that some API functionality will require you to collect cardholder data, such as [Processing a card sale with card present](../../../api-reference/rest-api-v1/card-operations-v2/process-a-card-sale-v2.md#apicardprocrest-v1.0.0-cardsale-cardpresent), and that requires you to be PCI Level 1 compliant. You can overcome this by using our PayForm to collect all cardholder data securely.
+It's important to note that some API functionality will require you to collect cardholder data, such as [Processing a card sale with card present](../../../api-reference/rest-api-v2/card-operations-v2/process-a-card-sale-v2.md#apicardprocrest-v1.0.0-cardsale-cardpresent), and that requires you to be PCI Level 1 compliant. You can overcome this by using our PayForm to collect all cardholder data securely.
 
 
 

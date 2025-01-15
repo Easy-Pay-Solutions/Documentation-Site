@@ -318,7 +318,7 @@ ChargeCreditCard().chargeCreditCard(params: ChargeCreditCardBodyParams): Network
 #### **Response body**
 
 * `ChargeCreditCardResult`
-  * \[See fields listed in the REST API reference - [Process a manual card sale](../../../api-reference/rest-api-v1/query-v1.md#apicardprocrest-v1.0.0-query-consentannual)]
+  * \[See fields listed in the REST API reference - [Process a manual card sale](../../../api-reference/rest-api-v2/query-v2.md#apicardprocrest-v1.0.0-query-consentannual)]
 
 
 
@@ -343,7 +343,7 @@ ListAnnualConsents().listAnnualConsents(params: ListAnnualConsentsBodyParams): N
 #### **Response body**
 
 * `ListAnnualConsentsResult`
-  * \[See fields listed in the REST API reference - [Query annual consent](../../../api-reference/rest-api-v1/query-v1.md#apicardprocrest-v1.0.0-query-consentannual_fulldetail)]
+  * \[See fields listed in the REST API reference - [Query annual consent](../../../api-reference/rest-api-v2/query-v2.md#apicardprocrest-v1.0.0-query-consentannual_fulldetail)]
 
 
 
@@ -367,7 +367,7 @@ CreateAnnualConsent().createAnnualConsent(params: CreateAnnualConsentBodyParams)
 #### **Response body**
 
 * `CreateAnnualConsentResult`
-  * \[See fields listed in the REST API reference - [Create an annual consent with manual card entry](../../../api-reference/rest-api-v1/consent-annual-v2/create-consent-v2.md#apicardprocrest-v1.0.0-consentannual-create_man)]
+  * \[See fields listed in the REST API reference - [Create an annual consent with manual card entry](../../../api-reference/rest-api-v2/consent-annual-v2/create-consent-v2.md#apicardprocrest-v1.0.0-consentannual-create_man)]
 
 
 
@@ -387,7 +387,7 @@ CancelAnnualConsent().cancelAnnualConsent(params: CancelAnnualConsentBodyParams)
 #### **Response body**
 
 * `CancelAnnualConsentResult`
-  * \[See fields listed in the REST API reference - [Cancel a consent (Card on file)](../../../api-reference/rest-api-v1/consent-annual-v2/#apicardprocrest-v1.0.0-consentannual-cancel)]
+  * \[See fields listed in the REST API reference - [Cancel a consent (Card on file)](../../../api-reference/rest-api-v2/consent-annual-v2/#apicardprocrest-v1.0.0-consentannual-cancel)]
 
 
 
@@ -407,7 +407,7 @@ ProcessPaymentAnnual().processPaymentAnnual(params: ProcessPaymentAnnualBodyPara
 #### **Response body**
 
 * `ProcessPaymentAnnualResult`
-  * \[See fields listed in the REST API reference - [Process a payment using a stored card consent](../../../api-reference/rest-api-v1/consent-annual-v2/#apicardprocrest-v1.0.0-consentannual-procpayment)]
+  * \[See fields listed in the REST API reference - [Process a payment using a stored card consent](../../../api-reference/rest-api-v2/consent-annual-v2/#apicardprocrest-v1.0.0-consentannual-procpayment)]
 
 
 

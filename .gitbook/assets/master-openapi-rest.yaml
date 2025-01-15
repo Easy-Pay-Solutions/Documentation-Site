@@ -544,6 +544,11 @@ components:
       example: "/Date(1549947600000-0500)/"
       description: "Date and time in Microsoft JSON date format (Unix timestamp and timezone offset)."
 
+    EINDEX:
+      type: string
+      example: "100"
+      description: Integrator key index for encryption assigned when integrator account is first created, received with the initial login credentials
+
     ErrCode:
       type: integer
       example: 0
@@ -669,6 +674,30 @@ components:
         Phone:
           type: string
           example: "8775558472"
+
+    ReceiptType:
+      type: integer
+      enum:
+        - 1 # Transaction
+        - 2 # Void
+        - 3 # Refund
+        - 4 # Annual Consent
+        - 5 # Recurring Consent
+        - 6 # Subscription
+        - 7 # ACH Transaction
+        - 8 # ACH Void
+        - 9 # ACH Refund
+      example: 2
+      description: The type of receipt
+
+    Recipient:
+      type: integer
+      enum:
+        - 1 # Merchant
+        - 2 # Customer
+        - 3 # Both
+      example: 1
+      description: The targeted recipient type
 
     REF_ID:
       type: string
@@ -950,18 +979,7 @@ components:
         TxLOCK:
           $ref: "#/components/schemas/TxLock"
         TxSTATUS:
-          type: string
-          enum:
-            - "OPEN"
-            - "AUTHOK"
-            - "AUTHFAILED"
-            - "SETTLED"
-            - "FAILED"
-            - "LOCKED"
-            - "VOID"
-            - "HOST"
-          example: "OPEN"
-          description: "Represents the current status of the transaction."
+          $ref: "#/components/schemas/TxStatus"
         TxType:
           type: string
           enum:
@@ -986,25 +1004,145 @@ components:
         If the batch fails, the transaction will remain locked to prevent it from being merged with other settlements.
         In this situation, someone at Number will investigate and resettle the batch in its original grouping.
 
-    Query:
+    TxStatus:
+      type: string
+      enum:
+        - "OPEN"
+        - "AUTHOK"
+        - "AUTHFAILED"
+        - "SETTLED"
+        - "FAILED"
+        - "LOCKED"
+        - "VOID"
+        - "HOST"
+      example: "OPEN"
+      description: Represents the current status of the transaction
+
+    TxStatusInternational:
+      type: string
+      enum:
+        - "3DS"
+        - "Redirect"
+        - "Pending"
+        - "Declined"
+        - "Settled"
+        - "Reversal"
+        - "Refund"
+        - "Void"
+        - "Chargeback"
+      description: Represents the current status of the international transaction
+
+    QueryTransaction:
       type: string
       description: >
-        A query string for obtaining specific records using EasyPay's query language.
-        Build logical terms and join them with '&&' for Logical AND or '||' for Logical OR.
+        A query string for obtaining specific transaction records using Number's query language.
+        Build logical terms and join them with '&&' for logical AND or '||' for logical OR.
         Use single quotes for text and date values. Refer to the variable chart for query composition:
-        * A: MerchID
-        * B: Status
-        * C: CreatedON
-        * D: LastName
-        * E: Result
-        * F: TransID
-        * J: FirstName
-        * L: Amount
-        * M: REF_ID
-        * Q: CardNum Last 4
-        * N: RPGUID
-        * W: ConsentID
-      example: "(B=3)&&(E=1)&&(C>'2024-09-01')&&(G=2)"
+        * A: MERCHANT ID - The merchant record you are interested in, e.g. (A=1).
+        * B: TRANSACTION STATUS - The status of the transaction, e.g. (B=1).
+          * -1: ALL
+          * 1: OPEN
+          * 2: SETTLED
+          * 3: FAILED
+          * 4: LOCKED
+          * 5: VOID
+        * C: DATE CREATED - The date the transaction was created, e.g. (C>='7/5/2024 12:00:00 AM').
+        * D: LAST NAME - Last name of the account holder, e.g. (D LIKE '%MITH') for all names that end with 'MITH'.
+        * E: TRANSACTION LOCK - Lock status of the transaction, e.g. (E<>'0') for locked transactions.
+        * F: BATCH LOG ID - Reference to a batch settlement record, e.g. (F=817).
+        * H: TRANSACTION ID - The unique identifier for the transaction, e.g. (H=58258).
+        * J: FIRST NAME - First name of the account holder, e.g. (J LIKE 'ROB%') for all names that start with 'ROB'.
+        * K: TRANSACTION TYPE - The type of transaction, e.g. (K=-1).
+          * -1: ALL
+          * 1: CCAUTHONLY
+          * 2: CCSALE
+          * 3: CCFORCE
+          * 4: CCVOICE
+          * 5: CCADJUST
+          * 6: CCCREDIT
+        * L: AMOUNT - The $ amount of the transaction, e.g. (L>100.00).
+        * M: CLIENT REFERENCE ID - User-defined value on the transaction.
+        * N: RPGUID - User-defined value on the transaction.
+        * P: CONSENT ID - The Consent ID of card on file the transactions were charged against, e.g. (P=15875).
+        * Q: CREDIT CARD LAST 4 - The last 4 digits of a credit card, e.g. (Q='4123').
+        * R: APPROVAL CODE - The approval code for the transaction, e.g. (R='TAS626').
+        * S: CUSTOMER LAST NAME - The last name of the customer, e.g. (S='SMITH').
+        * T: CUSTOMER FIRST NAME - The first name of the customer, e.g. (T='FOSTER').
+        * U: ORIGIN - The origin of the transaction, e.g. (U='API').
+          * "API": REST / SOAP API
+          * "WID": Widget
+          * "VT": Virtual Terminal
+          * "MOBL": Mobile SDK
+          * "SDK": Verifone
+          * "AUTO": Automatically scheduled from a payment plan
+        * W: BATCH NUMBER - The batch number for the batch settlement, e.g. (W=762).
+      example: "(B=3)&&(E=1)&&(C>'2024-09-01')"
+
+    QueryConsent:
+      type: string
+      description: >
+        A query string for obtaining specific consent records using Number's query language.
+        Build logical terms and join them with '&&' for logical AND or '||' for logical OR.
+        Use single quotes for text and date values. Refer to the variable chart for query composition:
+        * A: MERCHANT ID - The merchant record you are interested in, e.g. (A=1).
+        * B: START DATE - The date the consent becomes active, e.g. (B>='10/20/2024').
+        * C: END DATE - The date the consent expires, e.g. (C<='10/20/2024').
+        * D: ACCOUNT HOLDER LAST NAME - Last name of the account holder, e.g. (D LIKE '%MITH') for all names that end with 'MITH'.
+        * E: CREATED ON - The date the consent was created, e.g. (E<='10/20/2024').
+        * F: CUSTOMER REFERENCE ID - User-defined value on the consent.
+        * G: CONSENT TYPE - The type of consent, e.g. (G='-1').
+          * -1: ALL
+          * 1: ANNUAL
+          * 2: ONE-TIME
+          * 3: RECURRING
+          * 4: SUBSCRIPTION
+        * H: ENABLED - Indicates whether the consent is currently enabled, e.g. (H=1).
+        * J: RPGUID - User-defined value on the consent.
+        * K: ACCOUNT HOLDER FIRST NAME - First name of the account holder, e.g. (K LIKE 'ROB%') for all names that start with 'ROB'.
+        * Z: CONSENT ID - The unique identifier for the consent, e.g. (Z=15875).
+      example: "(G=1)&&(B>'10/20/2024')"
+
+    QueryRecurringSchedule:
+      type: string
+      description: >
+        A query string for obtaining specific recurring schedule records using Number's query language.
+        Build logical terms and join them with '&&' for logical AND or '||' for logical OR.
+        Use single quotes for text and date values. Refer to the variable chart for query composition:
+        * A: CONSENT ID - The unique identifier for the consent associated with the recurring schedule, e.g. (A=545).
+        * B: STATUS - The status of the recurring schedule, e.g. (B=-1).
+          * -1: ALL
+          * 1: SCHEDULED
+          * 2: PAID
+          * 3: FAILED
+          * 4: CANCELLED
+        * C: DUE DATE - The date the next payment is due, e.g. (C='10/20/2024').
+        * D: ACCOUNT HOLDER LAST NAME - Last name of the account holder, e.g. (D LIKE '%MITH') for all names that end with 'MITH'.
+        * E: MERCHANT ID - The unique identifier for the merchant associated with the recurring schedule, e.g. (E=1).
+        * F: ACCOUNT NUMBER LAST 4 - The last 4 digits of the account number associated with the recurring schedule, e.g. (F='1234').
+        * G: SCHEDULE ID - The unique identifier for the recurring schedule, e.g. (G=12). 
+        * H: TYPE - The type of recurring schedule, e.g. (H=-1).
+          * -1: ALL
+          * 3: RECURRING
+          * 4: SUBSCRIPTION
+      example: "(H=3)&&(C>='10/20/2024')"
+
+    QueryBatchLog:
+      type: string
+      description: >
+        A query string for obtaining specific batch log records using Number's query language.
+        Build logical terms and join them with '&&' for logical AND or '||' for logical OR.
+        Use single quotes for text and date values. Refer to the variable chart for query composition:
+        * A: MERCHANT ID - The merchant record you are interested in, e.g. (A=545).
+        * B: STATUS - The status of the batch log, e.g. (B=-1).
+          * -1: ALL
+          * 1: FAILED
+          * 2: APPROVED
+        * C: CREATED ON - The date the batch log was created, e.g. (C>='3/2/2024')&&(C<='4/2/2024').
+        * D: BATCH LOG ID - The unique identifier for the batch log, e.g. (D=1777).
+        * E: BATCH NUMBER - The batch number for the batch log, e.g. (E=185).
+      example: "(B=1)&&(C>='3/2/2024')&&(C<='4/2/2024')"
+
+# ACH
 paths:
   /APIcardProcREST/v1.0.0/ACH/Sale:
     post:
@@ -1279,6 +1417,7 @@ paths:
                       TxID:
                         type: integer
                         example: 35
+                        description: ID of the voided transaction. 0 if voiding was not successful.
       parameters:
         - $ref: "#/components/parameters/SessKey"
         - $ref: "#/components/parameters/ContentType"
@@ -1328,6 +1467,7 @@ paths:
                         $ref: "#/components/schemas/FunctionOk"
                       MerchantList:
                         type: array
+                        description: List of merchants associated with the authenticated user for use with transactions
                         items:
                           type: object
                           properties:
@@ -1346,6 +1486,7 @@ paths:
                             TermID:
                               type: string
                               example: "006"
+                              description: The unique id associated with the merchant terminal
                       RespMsg:
                         type: string
                         example: "SessKey Expires|4/18/2019 7:29:47 AM"
@@ -1792,7 +1933,7 @@ paths:
                 AlternateMerchID:
                   type: integer
                   example: 0
-                  description: Alternate Merchant ID; use 0 for the original merchant record
+                  description: ID of the merchant to collect the payment funds. Use 0 for the merchant on consent.
       responses:
         "200":
           description: Successful calculation of fees
@@ -1896,7 +2037,7 @@ paths:
                 User:
                   type: string
                   example: "Samuel"
-                  description: The user initiating the sale
+                  description: The user initiating the sale. Used for reporting.
       responses:
         "200":
           description: Successful charge of the stored card
@@ -2369,7 +2510,7 @@ paths:
                             type: number
                             format: float
                             example: 100000.0000
-                            description: Lifetime limit for the consent in dollars
+                            description: Lifetime $ limit for the consent
                           NumChargeAttempts:
                             type: integer
                             example: 0
@@ -2398,7 +2539,7 @@ paths:
                             type: number
                             format: float
                             example: 100000.0000
-                            description: Remaining balance available under the consent
+                            description: Remaining $ balance available under the consent
                           TotalDollarsOpen:
                             type: number
                             format: float
@@ -2751,9 +2892,7 @@ paths:
                   example: 23
                   description: The type of receipt, 23 for international
                 Recipient:
-                  type: integer
-                  example: 1
-                  description: 1 for Merchant copy, 2 for Customer copy, 3 for Dual receipt
+                  $ref: "#/components/schemas/Recipient"
       responses:
         "200":
           description: Successfully generated receipt
@@ -2799,7 +2938,7 @@ paths:
                 TokenID:
                   type: string
                   example: "a64d8a2a-5994-11ef-95fc-3e580ecac30f"
-                  description: The consent token ID for the transaction
+                  description: The consent token ID for the transaction returned when creating a sale using the international widget
                 ChargeAmt:
                   type: number
                   format: float
@@ -2858,7 +2997,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/Query"
+              $ref: "#/components/schemas/QueryTransaction"
       responses:
         "200":
           description: Successfully queried transactions
@@ -2891,7 +3030,16 @@ paths:
                           properties:
                             Action:
                               type: string
+                              enum:
+                                - "Sale"
+                                - "Capture"
+                                - "CreditVoid"
+                                - "Get_Trans_Status"
+                                - "Get_Trans_Details"
+                                - "Get_Trans_Status_By_Order"
+                                - "Recurring_Sale"
                               example: "SALE"
+                              description: The action specified when submitting a processing request with the third-party processor
                             Address:
                               type: string
                               example: "generating sale"
@@ -2905,9 +3053,11 @@ paths:
                             Card_Expiration_Date:
                               type: string
                               example: "12/2025"
+                              description: Expiration date of the card in MM/YYYY format
                             Card_Token:
                               type: string
-                              example: ""
+                              example: "4332225cc2db2f4de92583af2e6f62d942650909a5a5282138eb393158e27a63"
+                              description: A value that represents the card number with secured details
                             City:
                               type: string
                               example: "Auburn"
@@ -2918,14 +3068,21 @@ paths:
                               $ref: "#/components/schemas/Date"
                             Currency:
                               type: string
+                              enum:
+                                - "CAD"
+                                - "EUR"
+                                - "GBP"
+                                - "USD"
                               nullable: true
                               example: null
+                              description: The currency type for the international transaction
                             Decline_Reason:
                               type: string
                               example: ""
                             Descriptor:
                               type: string
                               example: ""
+                              description: Description of the payment transaction, e.g. the product or service name
                             Email:
                               type: string
                               example: "ndraper@easypaysolutions.com"
@@ -2957,7 +3114,8 @@ paths:
                               $ref: "#/components/schemas/RPGUID"
                             Recurring_Token:
                               type: string
-                              example: ""
+                              example: "a4b1f2ec-5434-11ef-ac32-e62c2d2c5cd6"
+                              description: The token for the recurring transaction used to charge a card that has been saved previously
                             Result:
                               type: string
                               example: "SUCCESS"
@@ -2969,8 +3127,7 @@ paths:
                               type: string
                               example: "ME"
                             Status:
-                              type: string
-                              example: "SETTLED"
+                              $ref: "#/components/schemas/TxStatusInternational"
                             Trans_Date:
                               type: string
                               example: "Sep 11 2024  4:16PM"
@@ -2981,10 +3138,12 @@ paths:
                               type: string
                               nullable: true
                               example: null
+                              description: The date the transaction was processed by the bank
                             chargeback_date:
                               type: string
                               nullable: true
                               example: null
+                              description: The date the chargeback was completed
                             reason_code:
                               type: string
                               nullable: true
@@ -3079,8 +3238,11 @@ paths:
                       example: 1
                     WTYPE:
                       type: string
-                      description: The type of PayForm (e.g., "PF").
+                      enum:
+                        - "PF" # Regular PayForm
+                        - "PA" # International PayForm
                       example: "PF"
+                      description: The widget type for the PayForm
                     PostURL:
                       type: string
                       description: The URL where real-time values will be posted after payment completion.
@@ -3098,9 +3260,7 @@ paths:
                       description: "This will point to a specific web application on our web servers and EasyPay will provide guidance"
                       example: "PayForm/PF.aspx"
                     EINDEX:
-                      type: string
-                      description: This is an optional 3 digit code which refers to a particular AES256 encryption key
-                      example: "300"
+                      $ref: "#/components/schemas/EINDEX"
                     Amounts:
                       $ref: "#/components/schemas/Amount"
                     Payer:
@@ -3231,12 +3391,15 @@ paths:
                           AutoSettle:
                             type: boolean
                             example: true
+                            description: Indicates whether the account is set to automatically settle transactions at a specified time of day
                           AutoSettleHour:
                             type: integer
                             example: 0
+                            description: The hour of the day at which the account is set to automatically settle transactions
                           AutoSettleMinute:
                             type: integer
                             example: 0
+                            description: The minute of the hour at which the account is set to automatically settle transactions
                           BatchReport:
                             type: boolean
                             example: false
@@ -3282,7 +3445,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/Query"
+              $ref: "#/components/schemas/QueryTransaction"
       responses:
         "200":
           description: Successfully returned ACH transaction records
@@ -3323,7 +3486,13 @@ paths:
                               description: Last four digits of the account number for identification purposes.
                             AcctType:
                               type: string
+                              enum:
+                                - "PersonalChecking"
+                                - "PersonalSavings"
+                                - "BusinessChecking"
+                                - "BusinessSavings"
                               example: "PersonalChecking"
+                              description: Type of account associated with the transaction
                             Amt:
                               type: number
                               format: float
@@ -3409,8 +3578,7 @@ paths:
                               example: "20240703"
                               description: "The date when the transaction occurred, in MMDDYY format."
                             TxSTATUS:
-                              type: string
-                              example: "SETTLED"
+                              $ref: "#/components/schemas/TxStatus"
                             TxType:
                               type: string
                               example: "ACHDEBIT"
@@ -3446,9 +3614,7 @@ paths:
                   description: ID of the consent
                   example: 2
                 ReceiptType:
-                  type: integer
-                  description: Type of receipt to generate
-                  example: 2
+                  $ref: "#/components/schemas/ReceiptType"
       responses:
         "200":
           description: Successfully returned annual consent receipt
@@ -3468,7 +3634,92 @@ paths:
                         $ref: "#/components/schemas/FunctionOk"
                       ReceiptHtml:
                         type: string
-                        example: "<div>some html</div>"
+                        example: |
+                          <!DOCTYPE html>
+                          <html xmlns="http://www.w3.org/1999/xhtml">
+                          <head runat="server">
+                          <meta name="viewport" content= width=device-width, initial-scale=1 />
+                          <title></title>
+                          </head>
+                          <body>
+                          <form id=form1 runat=server>
+                          <div style=font-size:12px;font-family:Verdana align=center>
+                          <h3>SALE RECEIPT</h3>
+                          <br />
+                          <div>
+                          <label>REA010 RETAIL</label>
+                          <br />
+                          <label>1307 BROAD HOLLOW ROAD</label>
+                          <br />
+                          <label>ANYWHERE, ME 11747</label>
+                          <br /><label></label>
+                          </div><br /> <br />
+                          <table style=text-align:left>
+                          <tr>
+                          <td>CARDHOLDER NAME:</td>
+                          <td><label>Wood, Sean</label></td>
+                          </tr>
+                          <tr>
+                          <td>ACCT NUMBER:</td>
+                          <td><label>x1118</label></td>
+                          </tr>
+                          <tr>
+                          <td>EXP DATE:</td>
+                          <td><label>xxxx</label></td>
+                          </tr>
+                          <tr>
+                          <td>TX ID:</td>
+                          <td><label>4117</label></td>
+                          </tr>
+                          <tr>
+                          <td>SEQ:</td>
+                          <td><label>5981</label></td>
+                          </tr>
+                          <tr><td>APPROVAL CODE:</td><td><label>OK5100</label></td></tr>
+                          <tr>
+                          <td><label>PATIENT</label> REF ID:</td>
+                          <td><label>12456</label></td>
+                          </tr>
+                          <tr>
+                          <td>TX DATE:</td>
+                          <td><label>12/13/2024 9:10:44 AM</label></td>
+                          </tr>
+                          <tr>
+                          <td>CARD TYPE:</td>
+                          <td><label>VI</label></td>
+                          </tr>
+                          <tr>
+                          <td>ENTRY METHOD:</td>
+                          <td><label>ManualEntry</label></td>
+                          </tr>
+                          <tr>
+                          <td>AMOUNT:</td>
+                          <td><asp:label runat=server>$10.00</asp:label></td>
+                          </tr>
+                          <tr>
+                          <td></td>
+                          <td><asp:label runat=server></asp:label></td>
+                          </tr>
+                          <tr>
+                          <td>TOTAL(USD):</td>
+                          <td><label>$10.00</label></td>
+                          </tr>
+                          </table>
+                          <br />
+                          <div>
+                          <label>THANK YOU FOR YOUR PATRONAGE</label><br />
+                          <label>All Sales Final</label><br />
+                          <div><label>I agree to pay REA010 RETAIL the above amount according to card issuer agreement.</label></div>
+                          <br /><br />
+                          <div><label>SIGNATURE</label></div>
+                          <br />
+                          <div>___________________________________</div>
+                          <h3><b>MERCHANT COPY</b></h3>
+                          </div>
+                          </div>
+                          </form>
+                          </body>
+                          </html>
                         description: HTML markup of the receipt
                       RespMsg:
                         type: string
@@ -3490,7 +3741,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/Query"
+              $ref: "#/components/schemas/QueryBatchLog"
       responses:
         "200":
           description: Successfully returned batch log records
@@ -3682,7 +3933,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/Query"
+              $ref: "#/components/schemas/QueryConsent"
       responses:
         "200":
           description: Successfully returned consent records
@@ -3784,7 +4035,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/Query"
+              $ref: "#/components/schemas/QueryConsent"
       responses:
         "200":
           description: Successfully returned consent records
@@ -3889,7 +4140,7 @@ paths:
               type: object
               properties:
                 Query:
-                  $ref: "#/components/schemas/Query"
+                  $ref: "#/components/schemas/QueryConsent"
       responses:
         "200":
           description: Successful response with consent records.
@@ -4094,7 +4345,12 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/Query"
+              type: object
+              properties:
+                Query:
+                  type: string
+                  example: "TXStatus"
+                  description: The enumeration type to query.
       responses:
         "200":
           description: Successfully returned enum records
@@ -4251,8 +4507,7 @@ paths:
                             type: integer
                             example: 12
                           TxStatus:
-                            type: string
-                            example: "AUTHOK"
+                            $ref: "#/components/schemas/TxStatus"
                           TxType:
                             type: string
                             example: "CCAUTHONLY"
@@ -4347,10 +4602,12 @@ paths:
                             type: number
                             format: float
                             example: -1
+                            description: The $ amount paid so far on the recurring consent
                           RLastPaymentAmt:
                             type: number
                             format: float
                             example: 1000.0000
+                            description: The last payment $ amount on the recurring consent
                           RNumPayments:
                             type: integer
                             example: 10
@@ -4400,7 +4657,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/Query"
+              $ref: "#/components/schemas/QueryConsent"
       responses:
         "200":
           description: Successfully returned consent records
@@ -4463,10 +4720,12 @@ paths:
                               type: number
                               format: float
                               example: 300.0000
+                              description: The $ amount paid so far on the recurring consent
                             RLastPaymentAmt:
                               type: number
                               format: float
                               example: 75.0000
+                              description: The last payment $ amount on the recurring consent
                             RNumPayments:
                               type: integer
                               example: 4
@@ -4518,7 +4777,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/Query"
+              $ref: "#/components/schemas/QueryRecurringSchedule"
       responses:
         "200":
           description: Successfully returned schedule records
@@ -4735,8 +4994,7 @@ paths:
                           TxLOCK:
                             $ref: "#/components/schemas/TxLock"
                           TxSTATUS:
-                            type: string
-                            example: "AUTHOK"
+                            $ref: "#/components/schemas/TxStatus"
                           TxType:
                             type: string
                             example: "CCAUTHONLY"
@@ -4759,7 +5017,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/Query"
+              $ref: "#/components/schemas/QueryTransaction"
       responses:
         "200":
           description: Successfully returned transaction records
@@ -4812,9 +5070,7 @@ paths:
                   example: 2
                   description: The unique identifier for the transaction
                 ReceiptType:
-                  type: integer
-                  example: 2
-                  description: The type of receipt requested
+                  $ref: "#/components/schemas/ReceiptType"
       responses:
         "200":
           description: Successfully returned transaction receipt
@@ -4939,13 +5195,9 @@ paths:
                   example: 158
                   description: The unique reference identifier for the transaction
                 ReceiptType:
-                  type: integer
-                  example: 1
-                  description: The type of receipt requested (e.g., Sales Receipt)
+                  $ref: "#/components/schemas/ReceiptType"
                 Recipient:
-                  type: integer
-                  example: 1
-                  description: The targeted recipient (e.g., Customer Copy)
+                  $ref: "#/components/schemas/Recipient"
       responses:
         "200":
           description: Successfully generated transaction receipt
@@ -5334,15 +5586,11 @@ paths:
                     MessageType:
                       type: string
                       enum:
-                        - "EMAIL"
-                        - "URLONLY"
-                        - "TEXT"
-                      example: "S"
-                      description: |
-                        The type of message to send. 
-                        - "EMAIL" - Send an email with a link to the payment form.
-                        - "URLONLY" - Send a URL to the payment form.
-                        - "TEXT" - Send a text message with a link to the payment form.
+                        - "EMAIL" # Send an email with a link to the payment form
+                        - "URLONLY" # Send a URL to the payment form
+                        - "TEXT" # Send a text message with a link to the payment form
+                      example: "TEXT"
+                      description: The type of message to send.
                     RefID:
                       type: string
                       example: "52520ABC"
@@ -5366,10 +5614,9 @@ paths:
                     DueOn:
                       type: string
                       example: "1/12/2025"
+                      description: The payment due date in mm/dd/yyyy or yyyy/mm/dd format to display to the customer.
                     EINDEX:
-                      type: string
-                      example: "100"
-                      description: Integrator Key Index for encryption (100, 200, 302...)
+                      $ref: "#/components/schemas/EINDEX"
                     MerchID:
                       type: integer
                       example: 1
@@ -5391,7 +5638,7 @@ paths:
                     ExpiresOn:
                       type: string
                       example: "2025-10-05"
-                      description: A date for when the payment link should no longer be available.
+                      description: A date for when the payment link should no longer be available in yyyy-mm-dd format.
                     SingleUse:
                       type: integer
                       example: 0

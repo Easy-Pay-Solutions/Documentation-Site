@@ -21,7 +21,7 @@ layout:
 
 <figure><img src="../../../.gitbook/assets/Authentication Flow.png" alt=""><figcaption></figcaption></figure>
 
-### Authentication
+## Authentication
 
 Both the REST and SOAP APIs provide their own methods for authenticating with Number. You will need to use them to receive the `Session Key`. To authenticate, you need to provide your `Account Code` and `Token`.
 
@@ -73,7 +73,7 @@ We recommend that you obtain and use the same `Session Key` until you receive on
 
 
 
-### HMAC and RSA
+## HMAC and RSA
 
 If you are not passing cardholder data through the API, you only need the session key to authenticate and connect to your account.  Otherwise, you need to use a signature secured by an HMAC secret and and encrypt the cardholder data using our RSA certificate.
 
@@ -81,7 +81,7 @@ If you are not passing cardholder data through the API, you only need the sessio
 If you have your own PCI compliant program and want to handle cardholder data using our API, you'll need to supplement the authentication header with the HMAC secret and you'll need to use our RSA certificate to encrypt cardholder data.
 {% endhint %}
 
-#### HMAC header
+### HMAC header
 
 ***
 
@@ -159,7 +159,7 @@ pm.collectionVariables.set("token", signature.toUpperCase());
 {% endtab %}
 {% endtabs %}
 
-#### RSA encryption
+### RSA encryption
 
 When the API traffic originates from unknown networks or mobile devices, we also mandate that any credit card numbers be encrypted prior to building your request. You can download our RSA 2048 certificate and use the public key to encrypt the cardholder information.&#x20;
 
@@ -198,7 +198,7 @@ puts message
 
 
 
-### Lockouts
+## Lockouts
 
 When you authenticate, you will receive `FunctionOK` and `AuthSuccess` flags in the response. You should handle the response as follows:
 
@@ -218,7 +218,7 @@ The system will lock your IP after 6 unsuccessful attempts in a row. When a lock
 
 
 
-### Token Renewal
+## Token Renewal
 
 The Client Admin Portal will allow you to create and manage all of your tokens.  There is no limit to the number of tokens you can create. We recommend creating a separate token for each individual processing location (IP address).
 

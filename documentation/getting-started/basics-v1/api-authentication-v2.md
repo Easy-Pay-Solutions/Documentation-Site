@@ -73,11 +73,15 @@ We recommend that you obtain and use the same `Session Key` until you receive on
 
 
 
-### HMAC
+### HMAC and RSA
 
-If you are not passing cardholder data through the API, you only need the session key to authenticate and connect to your account.&#x20;
+If you are not passing cardholder data through the API, you only need the session key to authenticate and connect to your account.  Otherwise, you need to use a signature secured by an HMAC secret and and encrypt the cardholder data using our RSA certificate.
 
-If you have your own PCI compliant program and want to handle cardholder data using our API, you'll need to supplement the authentication header with the HMAC secret and RSA certificate.
+{% hint style="warning" %}
+If you have your own PCI compliant program and want to handle cardholder data using our API, you'll need to supplement the authentication header with the HMAC secret and you'll need to use our RSA certificate to encrypt cardholder data.
+{% endhint %}
+
+#### HMAC header
 
 ***
 
@@ -154,6 +158,39 @@ pm.collectionVariables.set("token", signature.toUpperCase());
 </code></pre>
 {% endtab %}
 {% endtabs %}
+
+#### RSA encryption
+
+When the API traffic originates from unknown networks or mobile devices, we also mandate that any credit card numbers be encrypted prior to building your request. You can download our RSA 2048 certificate and use the public key to encrypt the cardholder information.&#x20;
+
+{% hint style="info" %}
+When passing cardholder data through our APIs, only the credit card number needs to be encrypted using RSA, the expiration date and CVV can be left as is.
+{% endhint %}
+
+{% tabs %}
+{% tab title="JavaScript" %}
+```javascript
+const message = "hello world";
+console.log(message);
+```
+{% endtab %}
+
+{% tab title="Python" %}
+```python
+message = "hello world"
+print(message)
+```
+{% endtab %}
+
+{% tab title="Ruby" %}
+```ruby
+message = "hello world"
+puts message
+```
+{% endtab %}
+{% endtabs %}
+
+
 
 
 

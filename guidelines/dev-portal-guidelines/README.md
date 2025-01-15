@@ -6,6 +6,8 @@ icon: book-open
 
 ### Introduction
 
+<figure><img src="../../.gitbook/assets/Guidelines.png" alt=""><figcaption></figcaption></figure>
+
 This part of the page is dedicated to the administrator of the content of the Developer Portal Documentation website. We have prepared guidelines, recommendations and tips describing the structure of the website, components and their possible use.
 
 {% hint style="danger" %}

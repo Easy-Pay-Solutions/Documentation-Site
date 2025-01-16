@@ -4,6 +4,50 @@ description: A list of best practices for working with the APIs
 
 # API Best Practices (v1)
 
+
+
+## Consuming the API Response
+
+When consuming the API response for any endpoint, you can follow a similar format. It'll allow you to correctly handle all types of responses and display the correct information in the user interface.
+
+
+
+{% stepper %}
+{% step %}
+### Catch all exceptions when calling the API
+
+These can be a result of problems communicating with our service or problems executing the client-side code.
+{% endstep %}
+
+{% step %}
+### Check for a null response
+
+Depending on your implementation, you might receive a null response indicating an unexpected error.
+{% endstep %}
+
+{% step %}
+### Check the value of `FunctionOk`
+
+This boolean flag is included in all API responses and indicates whether the operation executed without exceptions on our servers.&#x20;
+
+If the value of `FunctionOk` is false, it indicates an error which was handled on the Number servers. In case of problems, you can display the `ErrMsg` and `ErrCode` to the user.
+{% endstep %}
+
+{% step %}
+### Check other success flags such as `AuthSuccess` or `TxApproved`
+
+These boolean flags will be included depending on the operation, and they indicate whether the operation was approved. You should use the friendly response message provided in the `RspMsg` field to display more information to the user.
+
+In case of transactions, `TxApproved` with the value of false indicates that the card issuer does not want to approve the transaction. You can also supplement your response with the decline code found in `TxnCode`.
+{% endstep %}
+{% endstepper %}
+
+
+
+***
+
+
+
 ## Logging
 
 It's important to correctly handle exceptions and log all the responses. Before you interface with our APIs, we recommend creating a simple logging utility. This way, there'll be a trail of breadcrumbs in case any issues arise in the future. Without logs, finding out what went wrong can be time consuming.
@@ -32,9 +76,11 @@ Log all of the responses, including successful ones, using your utility class.
 
 ### Logging class example
 
+See the example below to give you more insight into how you might create your logging utility.
+
 {% tabs %}
 {% tab title="C#" %}
-{% code overflow="wrap" lineNumbers="true" fullWidth="true" %}
+{% code lineNumbers="true" fullWidth="true" %}
 ```csharp
 namespace APITest
 {
@@ -97,6 +143,10 @@ namespace APITest
 {% endcode %}
 {% endtab %}
 {% endtabs %}
+
+
+
+***
 
 
 

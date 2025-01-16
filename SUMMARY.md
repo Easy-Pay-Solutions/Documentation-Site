@@ -106,7 +106,3 @@
 * [Dev Portal Guidelines](guidelines/dev-portal-guidelines/README.md)
   * [Developer Portal Structure](guidelines/dev-portal-guidelines/developer-portal-structure.md)
   * [Content Guidelines](guidelines/dev-portal-guidelines/content-guidelines.md)
-
-## Sketches
-
-* [Typography and components checkin](sketches/typography-and-components-checkin.md)

@@ -67,4 +67,4 @@ We recommend the following solutions when adding additional content to the devel
 
 ***
 
-* The content of the page should be added in a legible way, making it easier to find information by visually diversifying the content (using components available in GitBook - which are discussed in "Content Guidelines")
+* The content of the page should be added in a legible way, making it easier to find information by visually diversifying the content (using components available in GitBook - which are described in [Content Guidelines](content-guidelines.md))

@@ -2,7 +2,7 @@
 
 
 
-### Typography
+## Typography
 
 The font family selected in Gitbook settings to create this page is **Inter** - a modern font that can also be used on other Number pages and materials.
 
@@ -69,24 +69,46 @@ To improve the readability of the content, it is allowed to use fonts in the siz
 
 
 
-### Content implementation
+## Spaces and dividers
 
 <figure><img src="../../.gitbook/assets/Content implementation.png" alt=""><figcaption></figcaption></figure>
-
-#### Spaces and dividers
 
 To make the page content more readable, it is recommended to use an empty row of paragraph text as an additional spacer between the sections.
 
 It is recommended to follow the recommendations for the spaces between the specific sections:&#x20;
 
-* Main site section\
+* **Main site sections**\
   \- Empty paragraph row\
   \- Divider\
   \- Empty paragraph row
-* Extended unordered list of content-rich bullet points\
-  \- Divider
-* Content-rich subpage\
-  \- Empty paragraph rows between the sections  and subsections
+* **Repetitive sections appearing next to each other**\
+  \- Divider or empty paragraph row
+* **Content-rich subpage**\
+  \- Divider or empty paragraph row
+
+
+
+***
+
+
+
+## Recommendations for the use of components
+
+To create this page, we used most of the components available in GitBook. Below are some recommendations for their use in future iterations of the documentation.
+
+{% hint style="info" %}
+It is recommended to use different types of content styles - the aim is to increase the readability of the information provided.
+{% endhint %}
+
+We highly recommend mixing the content by adding:
+
+### Lists
+
+* Unordered list:\
+  For all bullet point style elements that do not form logical steps/points
+*
+
+
 
 
 

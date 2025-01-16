@@ -229,7 +229,9 @@ We especially recommend using it to submit credit card details.
 
 
 
-*
+* Featured bullet point list
+
+<table data-view="cards"><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><strong>Bullet point 1</strong></td><td>Bullet point 1 content for few lines</td></tr><tr><td><strong>Bullet point 2</strong></td><td>Bullet point 2 content for few lines</td></tr><tr><td><strong>Bullet point 3</strong></td><td>Bullet point 1 content for few lines</td></tr></tbody></table>
 
 ***
 

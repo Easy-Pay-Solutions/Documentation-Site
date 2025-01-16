@@ -100,13 +100,56 @@ To create this page, we used most of the components available in GitBook. Below 
 It is recommended to use different types of content styles - the aim is to increase the readability of the information provided.
 {% endhint %}
 
+You can find all available components by clicking on "+" icon next to each main content section type:
+
+<figure><img src="../../.gitbook/assets/Components.png" alt=""><figcaption></figcaption></figure>
+
+
+
 We highly recommend mixing the content by adding:
 
 ### Lists
 
-* Unordered list:\
+* **Unordered list:**\
   For all bullet point style elements that do not form logical steps/points
-*
+* **Ordered lists:**\
+  A logical list of steps to be performed or a point-by-point presentation of some process.
+* **Task lists:**\
+  A list of checkboxes added to allow the user to mark the completion of individual necessary tasks.
+* **Stepper:**\
+  A component that is ideally suited to describe a more complex process with steps that logically follow each other.\
+  \
+  **Note:** this component can also be used to differentiate the look of content even if the content it contains is not a logical list (we can use it as a bullet point list)
+
+
+
+### Hints
+
+We can use 4 types of hints:
+
+{% hint style="info" %}
+**Regular hint**
+
+Use to highlight content with a neutral message and to increase content readability.
+{% endhint %}
+
+{% hint style="success" %}
+**Success hint**
+
+Use to highlight content with a neutral message and to increase content readability.
+{% endhint %}
+
+{% hint style="warning" %}
+**Warning hint**
+
+Use to highlight warning content.
+{% endhint %}
+
+{% hint style="danger" %}
+**Error hint**
+
+Use to highlight important content, information necessary to achieve a goal, or examples of errors.
+{% endhint %}
 
 
 

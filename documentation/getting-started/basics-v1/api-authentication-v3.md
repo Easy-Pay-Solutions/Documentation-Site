@@ -176,7 +176,7 @@ Encrypted card numbers will always have 512 bytes.
 
 
 
-Examples of RSA encrypotion:
+Examples of RSA encryption:
 
 {% tabs %}
 {% tab title="C#" %}

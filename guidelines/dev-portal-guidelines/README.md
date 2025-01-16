@@ -8,10 +8,11 @@ icon: book-open
 
 <figure><img src="../../.gitbook/assets/Guidelines.png" alt=""><figcaption></figcaption></figure>
 
-This part of the page is dedicated to the administrator of the content of the Developer Portal Documentation website. We have prepared guidelines, recommendations and tips describing the structure of the website, components and their possible use.
+The Guidelines group is dedicated to the content administrator of the Developer Portal Documentation site. The group should be marked as a "Hidden Group" and should never be published.
 
 {% hint style="danger" %}
-Any new content added to this website should follow the rules described in this section.
+Any new content added to this website must comply with the policies described \
+in this group.
 {% endhint %}
 
 If it is necessary to add elements not described in the guidelines, solutions generally accepted as modern and useful should be used.

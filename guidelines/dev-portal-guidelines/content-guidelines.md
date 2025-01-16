@@ -121,6 +121,8 @@ We highly recommend mixing the content by adding:
   \
   **Note:** this component can also be used to differentiate the look of content even if the content it contains is not a logical list (we can use it as a bullet point list)
 
+***
+
 
 
 ### Hints
@@ -150,6 +152,42 @@ Use to highlight warning content.
 
 Use to highlight important content, information necessary to achieve a goal, or examples of errors.
 {% endhint %}
+
+***
+
+
+
+### Quote
+
+> This component can be used to highlight some content - or to separate it from a larger part in order to differentiate the appearance of the content.
+
+***
+
+
+
+### Files
+
+For additional files, documents and any other types of materials that we want to make available to users, please use the "Files" section - it allows you to highlight files for download.
+
+{% hint style="danger" %}
+**Important**
+
+Files to download should be placed in at least two places:
+
+* Next to the documentation fragment they supplement
+* In the "Resoruces --> Tools and Downloads" section
+{% endhint %}
+
+***
+
+
+
+### Tables
+
+A table is a readable component that can be used for various purposes:
+
+* As a standard table consisting of multiple related content&#x20;
+* As an bullet point element consisting of a graphic and content  (e.g. presentation of the test credit cards numbers of specific suppliers)
 
 
 

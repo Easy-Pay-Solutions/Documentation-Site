@@ -78,9 +78,7 @@ To make the page content more readable, it is recommended to use an empty row of
 It is recommended to follow the recommendations for the spaces between the specific sections:&#x20;
 
 * **Main site sections**\
-  \- Empty paragraph row\
-  \- Divider\
-  \- Empty paragraph row
+  \- Empty paragraph row + Divider + Empty paragraph row
 * **Repetitive sections appearing next to each other**\
   \- Divider or empty paragraph row
 * **Content-rich subpage**\
@@ -212,7 +210,26 @@ For a tables with a lot of content, we recommend using a standard content width 
 
 ### Cards
 
+A component that can replace a bullet list and can be used in many variants to improve content readability:
 
+* 2 columns
+* 3 columns&#x20;
+* With full card image
+* With content image&#x20;
+
+We especially recommend using it to submit credit card details.
+
+
+
+**Examples:**
+
+*   Credit card details cards (2 columns):
+
+    <table data-card-size="large" data-view="cards"><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><h3><img src="../../.gitbook/assets/1 Discover icon.png" alt="" data-size="original"></h3></td><td><strong>DS: 6011 0009 9302 6909</strong><br><strong>EXP DATE: 01/28</strong><br><strong>CVV: 999</strong><br><br>Enter the following amount ($10.10) should get partial approval for ($10.00)</td></tr><tr><td><h3><img src="../../.gitbook/assets/1 Master card icon.png" alt="" data-size="original"></h3></td><td><p><strong>MC: 5146 3126 2000 0045</strong><br><strong>EXP DATE: 01/28</strong></p><p><strong>CVV: 998</strong><br><br>Enter the following amount ($11.10) should get partial approval for ($5.55)</p></td></tr></tbody></table>
+
+
+
+*
 
 ***
 

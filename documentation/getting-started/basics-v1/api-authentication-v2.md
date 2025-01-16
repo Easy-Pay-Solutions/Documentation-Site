@@ -233,19 +233,143 @@ string jsonPayload = $@"
 {% endcode %}
 {% endtab %}
 
+{% tab title="Java" %}
+<pre class="language-java" data-overflow="wrap" data-line-numbers><code class="lang-java">package NumberEncrypt;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.security.InvalidKeyException;
+import java.security.KeyStore;
+import java.security.KeyStoreException;
+import java.security.NoSuchAlgorithmException;
+import java.security.cert.Certificate;
+import java.security.cert.CertificateException;
+import java.security.cert.X509Certificate;
+import java.util.Base64;
+import java.util.Enumeration;
+import javax.crypto.BadPaddingException;
+import javax.crypto.Cipher;
+import javax.crypto.IllegalBlockSizeException;
+import javax.crypto.NoSuchPaddingException;
+
+public class EncryptCard {
+
+  public static void main(String[] args) {
+
+    CertificateDetails certDetails = getCertificateDetails(
+      "C:\\Users\\BobSmith\\Downloads\\mobile_easypay5_com.cer", "");
+    String myCardNumber = "4111111111111111";
+    byte[] plainbytes = myCardNumber.getBytes(StandardCharsets.UTF_8);
+    try {
+      Cipher cipher = Cipher.getInstance(
+        "RSA/ECB/OAEPWithSHA-1AndMGF1Padding");
+      cipher.init(Cipher.ENCRYPT_MODE,
+        certDetails.getX509Certificate().getPublicKey());
+      byte[] encryptedBytes = cipher.doFinal(plainbytes);
+      String eBytesString = Base64.getEncoder()
+        .encodeToString(encryptedBytes);
+      System.out.println(eBytesString);
+
+    }
+    catch (NoSuchAlgorithmException e) {
+      e.printStackTrace();
+    }
+    catch (NoSuchPaddingException e) {
+      e.printStackTrace();
+    }
+    catch (InvalidKeyException e) {
+      e.printStackTrace();
+    }
+    catch (IllegalBlockSizeException e) {
+      e.printStackTrace();
+    }
+    catch (BadPaddingException e) {
+      e.printStackTrace();
+    }
+  }
+
+<strong>  public static CertificateDetails getCertificateDetails(
+</strong><strong>    String jksPath, String jksPassword) {
+</strong>
+    CertificateDetails certDetails = null;
+    try {
+      // Provide location of Java Keystore and password for access
+      KeyStore keyStore = KeyStore.getInstance("Windows-MY");
+      keyStore.load(
+        new FileInputStream(jksPath), jksPassword.toCharArray());
+
+      // Iterate over all aliases
+      Enumeration&#x3C;String> aliasEnum = keyStore.aliases();
+      String alias = "";
+      while (aliasEnum.hasMoreElements()) {
+        alias = (String)aliasEnum.nextElement();
+        if (alias.contains("mobile.easypay5.com")) {
+          break;
+        }
+      }
+      Certificate[] certChain = keyStore.getCertificateChain(alias);
+      certDetails = new CertificateDetails();
+      certDetails.setX509Certificate((X509Certificate)certChain[0]);
+    }
+    catch (KeyStoreException e) {
+      e.printStackTrace();
+    }
+    catch (NoSuchAlgorithmException e) {
+      e.printStackTrace();
+    }
+    catch (CertificateException e) {
+      e.printStackTrace();
+    }
+    catch (FileNotFoundException e) {
+      e.printStackTrace();
+    }
+    catch (IOException e) {
+      e.printStackTrace();
+    }
+
+    return certDetails;
+  }
+}
+
+package NumberEncrypt;
+
+import java.security.PrivateKey;
+import java.security.cert.X509Certificate;
+
+public class CertificateDetails {
+
+  private PrivateKey privateKey;
+  private X509Certificate x509Certificate;
+  public PrivateKey getPrivateKey() {
+    return privateKey;
+  }
+  public void setPrivateKey(PrivateKey privateKey) {
+    this.privateKey = privateKey;
+  }
+  public X509Certificate getX509Certificate() {
+    return x509Certificate;
+  }
+  public void setX509Certificate(X509Certificate x509Certificate) {
+    this.x509Certificate = x509Certificate;
+  }
+}
+</code></pre>
+{% endtab %}
+
 {% tab title="JavaScript (Node.js)" %}
-{% code overflow="wrap" %}
 ```javascript
 const crypto = require("crypto");
 const fs = require("fs");
-
+​
 var myCardNumber = "4761530001111118";
-
+​
 try {
   const publicKey = Buffer.from(
     fs.readFileSync("mobile.easypay5.com.pem", { encoding: "utf-8" })
   );
-
+​
   const encryptedData = crypto.publicEncrypt({
       key: publicKey,
       padding: crypto.constants.RSA_PKCS1_OAEP_PADDING,
@@ -253,19 +377,15 @@ try {
     },
     Buffer.from(myCardNumber) // Convert the string to a buffer
   );
-
+​
   const encryptedString = encryptedData.toString("base64");
 }
 catch (error) {
   console.error("Error encrypting card data:", error);
 }
-
 ```
-{% endcode %}
 {% endtab %}
 {% endtabs %}
-
-
 
 
 

@@ -17,7 +17,7 @@ The font family selected in Gitbook settings to create this page is **Inter** - 
 #### Heading 1
 
 {% hint style="info" %}
-Font style visible in the **Table of Contents** section.
+Font style is visible in the **Table of Contents** section.
 {% endhint %}
 
 It is recommended to skip this font size on subpages where it is not necessary (it is too large).&#x20;
@@ -29,7 +29,7 @@ It is allowed to be used on subpages consisting of a large number of sections an
 #### Heading 2
 
 {% hint style="info" %}
-Font style visible in the **Table of Contents** section.
+Font style is visible in the **Table of Contents** section.
 {% endhint %}
 
 It should be used in place of H1 on subpages where one level of category visible in the Table of Contents section will be sufficient.\
@@ -45,13 +45,13 @@ Recommended for subsections titles.&#x20;
 {% step %}
 #### Paragraph Bold
 
-Recommended for the next level of subsections titles and parts of the paragraphs that should be highlighted.
+Recommended for lower-level subsection titles and parts of paragraphs that should be highlighted.
 {% endstep %}
 
 {% step %}
 #### Paragraph Regular
 
-It should be used in paragraph text and as the main content of other available components (e.g. hint, ordered / unordered lists, cards etc.)
+It should be used in paragraph text and as the main content of other available components (e.g. hints, ordered / unordered lists, cards, etc.).
 
 
 {% endstep %}
@@ -60,5 +60,34 @@ It should be used in paragraph text and as the main content of other available c
 {% hint style="info" %}
 **Exceptions to the use of specific font types:**
 
-To improve the readability of the content, it is allowed to use fonts in the size H2, H3 in the component headings (e.g. hint, ordered / unordered lists, cards etc.) - they will not appear as Table of Contents categories.
+To improve the readability of the content, it is allowed to use fonts in the sizes H2, and H3 in the component headings (e.g. hint, ordered / unordered lists, cards, etc.) - they will not appear as Table of Contents categories.
 {% endhint %}
+
+
+
+***
+
+
+
+### Content implementation
+
+#### Spaces and dividers
+
+To make the page content more readable, it is recommended to use double breaks in the form of paragraph text with the Divider component - above each highest-ranking heading (Heading 1 or Heading 2 - depending on which one will be used as the main heading)
+
+
+
+***
+
+
+
+
+
+
+
+
+
+
+
+
+

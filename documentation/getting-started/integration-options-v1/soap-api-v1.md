@@ -6,7 +6,7 @@ description: Getting started with SOAP API for Number
 
 Our SOAP API allows full integration of Number services with a high degree of customization. You can use our [SOAP API reference](../../../api-reference/soap-api-v1/) to learn about specific methods in the API.
 
-Before you continue this section, we recommend reading sections with basics around [authentication](../basics-v1/api-authentication-v3.md), [logging](../basics-v1/api-logging-v1.md), and [input validation](../basics-v1/api-input-validation-v1.md).
+Before you continue this section, we recommend reading sections about [authentication](../basics-v1/api-authentication-v3.md), [best practices](../basics-v1/api-best-practices-v1.md), and [input validation](../basics-v1/api-input-validation-v1.md).
 
 
 
@@ -178,6 +178,8 @@ private void Authenticate(string acctCode, string token)
 {% endtab %}
 {% endtabs %}
 
+
+
 ### Process Annual Consent
 
 An example of using [<mark style="color:green;">`ConsentAnnual_ProcPayment_Alt`</mark>](../../../api-reference/soap-api-v1/consent-annual-v1/process-annual-consent-v1.md#process-annual-consent-alternative) method
@@ -253,6 +255,8 @@ private void ProcessConsentAnnual(string sessKey,
 {% endtab %}
 {% endtabs %}
 
+
+
 ### Void Transaction
 
 An example of using [<mark style="color:green;">`Transaction_Void`</mark>](../../../api-reference/soap-api-v1/transaction-v1.md#void-transaction) method.
@@ -322,6 +326,8 @@ private void Void(string sessKey, int txID)
 {% endcode %}
 {% endtab %}
 {% endtabs %}
+
+
 
 ### Credit Transaction
 
@@ -393,6 +399,8 @@ private void Credit(string sessKey, int txID, decimal creditAmount)
 {% endtab %}
 {% endtabs %}
 
+
+
 ### Query Transaction
 
 An example of using [<mark style="color:green;">`Transaction_Query`</mark>](../../../api-reference/soap-api-v1/transaction-v1.md#query-transactions) method.
@@ -455,6 +463,8 @@ private void TransactionQuery(string sessKey, string query)
 {% endtab %}
 {% endtabs %}
 
+
+
 ### Consent General Query
 
 An example of using [<mark style="color:green;">`ConsentGeneral_Query`</mark>](../../../api-reference/soap-api-v1/consent-general-v1.md#query-consent) method
@@ -515,6 +525,8 @@ private void ConsentGeneralQuery(string sessKey, string query)
 {% endcode %}
 {% endtab %}
 {% endtabs %}
+
+
 
 ### Generate Receipt
 

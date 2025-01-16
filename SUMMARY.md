@@ -17,7 +17,7 @@
 * [Getting Started](documentation/getting-started/README.md)
   * [Basics (v1)](documentation/getting-started/basics-v1/README.md)
     * [API Authentication (v3)](documentation/getting-started/basics-v1/api-authentication-v3.md)
-    * [API Logging (v1)](documentation/getting-started/basics-v1/api-logging-v1.md)
+    * [API Best Practices (v1)](documentation/getting-started/basics-v1/api-best-practices-v1.md)
     * [API Input Validation (v1)](documentation/getting-started/basics-v1/api-input-validation-v1.md)
   * [Integration Checklist](documentation/getting-started/integration-checklist.md)
   * [Integration Options (v1)](documentation/getting-started/integration-options-v1/README.md)

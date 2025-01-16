@@ -1,22 +1,20 @@
 ---
-description: A framework for logging API error responses
+description: A list of best practices for working with the APIs
 ---
 
-# API Logging (v1)
+# API Best Practices (v1)
 
-Experience in payment processing taught us how important it is to correctly handle exceptions and log all the responses. Before you interface with our APIs, we recommend creating a simple logging utility. This way, there'll be a trail of breadcrumbs in case any issues arise in the future. Without logs, finding out what went wrong can be difficult and time consuming.
+## Logging
 
-
-
-***
+It's important to correctly handle exceptions and log all the responses. Before you interface with our APIs, we recommend creating a simple logging utility. This way, there'll be a trail of breadcrumbs in case any issues arise in the future. Without logs, finding out what went wrong can be time consuming.
 
 
 
-## Recommended way to log the responses
+### Recommended way to log the responses
 
 {% stepper %}
 {% step %}
-### Create a utility class for logging
+#### Create a utility class for logging
 
 It should contain a method that will take the API call name as well as `FunctionOk`, `IsSuccess`, `RespMsg`, `ErrCode`, and `ErrMsg` values. This will compile all of the information necessary to track any issue.
 
@@ -24,7 +22,7 @@ Store the timestamp of the response and all of those values in a database record
 {% endstep %}
 
 {% step %}
-### Use the utility class to log all API results
+#### Use the utility class to log all API results
 
 Log all of the responses, including successful ones, using your utility class.
 {% endstep %}
@@ -32,15 +30,11 @@ Log all of the responses, including successful ones, using your utility class.
 
 
 
-***
-
-
-
 ### Logging class example
 
 {% tabs %}
 {% tab title="C#" %}
-{% code title="LoggingUtil.cs" lineNumbers="true" fullWidth="true" %}
+{% code overflow="wrap" lineNumbers="true" fullWidth="true" %}
 ```csharp
 namespace APITest
 {
@@ -103,6 +97,20 @@ namespace APITest
 {% endcode %}
 {% endtab %}
 {% endtabs %}
+
+
+
+## Preventing Duplicate Charges
+
+A common issue we encounter is complaints about duplicate charges. This can happen when integrators process card-on-file transactions without proper safeguards that prevent submitting the same form multiple times.
+
+If there is button on a webpage that initiates a charge, and there is no mechanism preventing it from being clicked multiple times, the cardholder would be charged each time. To prevent this, it's crucial to disable the button immediately after it's pressed, ensuring that double taps do not occur.&#x20;
+
+{% hint style="warning" %}
+When processing card-on-file transactions, remember to lock the submit button after form submission to prevent multiple API calls and duplicate charges from occuring.
+
+You may also choose to include simple logic that checks `ConsentID` and `TransactionAmount` that would prevent the same combination from being processed multiple times within a short timeframe.
+{% endhint %}
 
 
 

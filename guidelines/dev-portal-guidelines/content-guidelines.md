@@ -223,7 +223,7 @@ We especially recommend using it to submit credit card details.
 
 **Examples:**
 
-*   Credit card details cards (2 columns):
+*   Credit card details (2 columns, image placed in content):
 
     <table data-card-size="large" data-view="cards"><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><h3><img src="../../.gitbook/assets/1 Discover icon.png" alt="" data-size="original"></h3></td><td><strong>DS: 6011 0009 9302 6909</strong><br><strong>EXP DATE: 01/28</strong><br><strong>CVV: 999</strong><br><br>Enter the following amount ($10.10) should get partial approval for ($10.00)</td></tr><tr><td><h3><img src="../../.gitbook/assets/1 Master card icon.png" alt="" data-size="original"></h3></td><td><p><strong>MC: 5146 3126 2000 0045</strong><br><strong>EXP DATE: 01/28</strong></p><p><strong>CVV: 998</strong><br><br>Enter the following amount ($11.10) should get partial approval for ($5.55)</p></td></tr></tbody></table>
 
@@ -233,6 +233,17 @@ We especially recommend using it to submit credit card details.
 
 
     <table data-view="cards"><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><strong>Bullet point 1</strong></td><td>Bullet point 1 content for few lines</td></tr><tr><td><strong>Bullet point 2</strong></td><td>Bullet point 2 content for few lines</td></tr><tr><td><strong>Bullet point 3</strong></td><td>Bullet point 1 content for few lines</td></tr></tbody></table>
+
+
+
+*   Credit card (3 columns, full card image):\
+
+
+    <table data-view="cards"><thead><tr><th data-card-cover data-type="files"></th></tr></thead><tbody><tr><td><a href="../../.gitbook/assets/Masercard.png">Masercard.png</a></td></tr><tr><td><a href="../../.gitbook/assets/Visa.png">Visa.png</a></td></tr><tr><td><a href="../../.gitbook/assets/Amex.png">Amex.png</a></td></tr></tbody></table>
+
+
+
+
 
 
 

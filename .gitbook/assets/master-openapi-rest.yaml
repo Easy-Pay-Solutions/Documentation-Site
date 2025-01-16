@@ -1038,44 +1038,44 @@ components:
         A query string for obtaining specific transaction records using Number's query language.
         Build logical terms and join them with '&&' for logical AND or '||' for logical OR.
         Use single quotes for text and date values. Refer to the variable chart for query composition:
-        * A: MERCHANT ID - The merchant record you are interested in, e.g. (A=1).
-        * B: TRANSACTION STATUS - The status of the transaction, e.g. (B=1).
-          * -1: ALL
-          * 1: OPEN
-          * 2: SETTLED
-          * 3: FAILED
-          * 4: LOCKED
-          * 5: VOID
-        * C: DATE CREATED - The date the transaction was created, e.g. (C>='7/5/2024 12:00:00 AM').
-        * D: LAST NAME - Last name of the account holder, e.g. (D LIKE '%MITH') for all names that end with 'MITH'.
-        * E: TRANSACTION LOCK - Lock status of the transaction, e.g. (E<>'0') for locked transactions.
-        * F: BATCH LOG ID - Reference to a batch settlement record, e.g. (F=817).
-        * H: TRANSACTION ID - The unique identifier for the transaction, e.g. (H=58258).
-        * J: FIRST NAME - First name of the account holder, e.g. (J LIKE 'ROB%') for all names that start with 'ROB'.
-        * K: TRANSACTION TYPE - The type of transaction, e.g. (K=-1).
-          * -1: ALL
-          * 1: CCAUTHONLY
-          * 2: CCSALE
-          * 3: CCFORCE
-          * 4: CCVOICE
-          * 5: CCADJUST
-          * 6: CCCREDIT
-        * L: AMOUNT - The $ amount of the transaction, e.g. (L>100.00).
-        * M: CLIENT REFERENCE ID - User-defined value on the transaction.
-        * N: RPGUID - User-defined value on the transaction.
-        * P: CONSENT ID - The Consent ID of card on file the transactions were charged against, e.g. (P=15875).
-        * Q: CREDIT CARD LAST 4 - The last 4 digits of a credit card, e.g. (Q='4123').
-        * R: APPROVAL CODE - The approval code for the transaction, e.g. (R='TAS626').
-        * S: CUSTOMER LAST NAME - The last name of the customer, e.g. (S='SMITH').
-        * T: CUSTOMER FIRST NAME - The first name of the customer, e.g. (T='FOSTER').
-        * U: ORIGIN - The origin of the transaction, e.g. (U='API').
-          * "API": REST / SOAP API
-          * "WID": Widget
-          * "VT": Virtual Terminal
-          * "MOBL": Mobile SDK
-          * "SDK": Verifone
-          * "AUTO": Automatically scheduled from a payment plan
-        * W: BATCH NUMBER - The batch number for the batch settlement, e.g. (W=762).
+          * A: MERCHANT ID - The merchant record you are interested in, e.g. (A=1).
+          * B: TRANSACTION STATUS - The status of the transaction, e.g. (B=1).
+            * -1: ALL
+            * 1: OPEN
+            * 2: SETTLED
+            * 3: FAILED
+            * 4: LOCKED
+            * 5: VOID
+          * C: DATE CREATED - The date the transaction was created, e.g. (C>='7/5/2024 12:00:00 AM').
+          * D: LAST NAME - Last name of the account holder, e.g. (D LIKE '%MITH') for all names that end with 'MITH'.
+          * E: TRANSACTION LOCK - Lock status of the transaction, e.g. (E<>'0') for locked transactions.
+          * F: BATCH LOG ID - Reference to a batch settlement record, e.g. (F=817).
+          * H: TRANSACTION ID - The unique identifier for the transaction, e.g. (H=58258).
+          * J: FIRST NAME - First name of the account holder, e.g. (J LIKE 'ROB%') for all names that start with 'ROB'.
+          * K: TRANSACTION TYPE - The type of transaction, e.g. (K=-1).
+            * -1: ALL
+            * 1: CCAUTHONLY
+            * 2: CCSALE
+            * 3: CCFORCE
+            * 4: CCVOICE
+            * 5: CCADJUST
+            * 6: CCCREDIT
+          * L: AMOUNT - The $ amount of the transaction, e.g. (L>100.00).
+          * M: CLIENT REFERENCE ID - User-defined value on the transaction.
+          * N: RPGUID - User-defined value on the transaction.
+          * P: CONSENT ID - The Consent ID of card on file the transactions were charged against, e.g. (P=15875).
+          * Q: CREDIT CARD LAST 4 - The last 4 digits of a credit card, e.g. (Q='4123').
+          * R: APPROVAL CODE - The approval code for the transaction, e.g. (R='TAS626').
+          * S: CUSTOMER LAST NAME - The last name of the customer, e.g. (S='SMITH').
+          * T: CUSTOMER FIRST NAME - The first name of the customer, e.g. (T='FOSTER').
+          * U: ORIGIN - The origin of the transaction, e.g. (U='API').
+            * "API": REST / SOAP API
+            * "WID": Widget
+            * "VT": Virtual Terminal
+            * "MOBL": Mobile SDK
+            * "SDK": Verifone
+            * "AUTO": Automatically scheduled from a payment plan
+          * W: BATCH NUMBER - The batch number for the batch settlement, e.g. (W=762).
       example: "(B=3)&&(E=1)&&(C>'2024-09-01')"
 
     QueryConsent:
@@ -1084,22 +1084,22 @@ components:
         A query string for obtaining specific consent records using Number's query language.
         Build logical terms and join them with '&&' for logical AND or '||' for logical OR.
         Use single quotes for text and date values. Refer to the variable chart for query composition:
-        * A: MERCHANT ID - The merchant record you are interested in, e.g. (A=1).
-        * B: START DATE - The date the consent becomes active, e.g. (B>='10/20/2024').
-        * C: END DATE - The date the consent expires, e.g. (C<='10/20/2024').
-        * D: ACCOUNT HOLDER LAST NAME - Last name of the account holder, e.g. (D LIKE '%MITH') for all names that end with 'MITH'.
-        * E: CREATED ON - The date the consent was created, e.g. (E<='10/20/2024').
-        * F: CUSTOMER REFERENCE ID - User-defined value on the consent.
-        * G: CONSENT TYPE - The type of consent, e.g. (G='-1').
-          * -1: ALL
-          * 1: ANNUAL
-          * 2: ONE-TIME
-          * 3: RECURRING
-          * 4: SUBSCRIPTION
-        * H: ENABLED - Indicates whether the consent is currently enabled, e.g. (H=1).
-        * J: RPGUID - User-defined value on the consent.
-        * K: ACCOUNT HOLDER FIRST NAME - First name of the account holder, e.g. (K LIKE 'ROB%') for all names that start with 'ROB'.
-        * Z: CONSENT ID - The unique identifier for the consent, e.g. (Z=15875).
+          * A: MERCHANT ID - The merchant record you are interested in, e.g. (A=1).
+          * B: START DATE - The date the consent becomes active, e.g. (B>='10/20/2024').
+          * C: END DATE - The date the consent expires, e.g. (C<='10/20/2024').
+          * D: ACCOUNT HOLDER LAST NAME - Last name of the account holder, e.g. (D LIKE '%MITH') for all names that end with 'MITH'.
+          * E: CREATED ON - The date the consent was created, e.g. (E<='10/20/2024').
+          * F: CUSTOMER REFERENCE ID - User-defined value on the consent.
+          * G: CONSENT TYPE - The type of consent, e.g. (G='-1').
+            * -1: ALL
+            * 1: ANNUAL
+            * 2: ONE-TIME
+            * 3: RECURRING
+            * 4: SUBSCRIPTION
+          * H: ENABLED - Indicates whether the consent is currently enabled, e.g. (H=1).
+          * J: RPGUID - User-defined value on the consent.
+          * K: ACCOUNT HOLDER FIRST NAME - First name of the account holder, e.g. (K LIKE 'ROB%') for all names that start with 'ROB'.
+          * Z: CONSENT ID - The unique identifier for the consent, e.g. (Z=15875).
       example: "(G=1)&&(B>'10/20/2024')"
 
     QueryRecurringSchedule:
@@ -1108,22 +1108,22 @@ components:
         A query string for obtaining specific recurring schedule records using Number's query language.
         Build logical terms and join them with '&&' for logical AND or '||' for logical OR.
         Use single quotes for text and date values. Refer to the variable chart for query composition:
-        * A: CONSENT ID - The unique identifier for the consent associated with the recurring schedule, e.g. (A=545).
-        * B: STATUS - The status of the recurring schedule, e.g. (B=-1).
-          * -1: ALL
-          * 1: SCHEDULED
-          * 2: PAID
-          * 3: FAILED
-          * 4: CANCELLED
-        * C: DUE DATE - The date the next payment is due, e.g. (C='10/20/2024').
-        * D: ACCOUNT HOLDER LAST NAME - Last name of the account holder, e.g. (D LIKE '%MITH') for all names that end with 'MITH'.
-        * E: MERCHANT ID - The unique identifier for the merchant associated with the recurring schedule, e.g. (E=1).
-        * F: ACCOUNT NUMBER LAST 4 - The last 4 digits of the account number associated with the recurring schedule, e.g. (F='1234').
-        * G: SCHEDULE ID - The unique identifier for the recurring schedule, e.g. (G=12). 
-        * H: TYPE - The type of recurring schedule, e.g. (H=-1).
-          * -1: ALL
-          * 3: RECURRING
-          * 4: SUBSCRIPTION
+          * A: CONSENT ID - The unique identifier for the consent associated with the recurring schedule, e.g. (A=545).
+          * B: STATUS - The status of the recurring schedule, e.g. (B=-1).
+            * -1: ALL
+            * 1: SCHEDULED
+            * 2: PAID
+            * 3: FAILED
+            * 4: CANCELLED
+          * C: DUE DATE - The date the next payment is due, e.g. (C='10/20/2024').
+          * D: ACCOUNT HOLDER LAST NAME - Last name of the account holder, e.g. (D LIKE '%MITH') for all names that end with 'MITH'.
+          * E: MERCHANT ID - The unique identifier for the merchant associated with the recurring schedule, e.g. (E=1).
+          * F: ACCOUNT NUMBER LAST 4 - The last 4 digits of the account number associated with the recurring schedule, e.g. (F='1234').
+          * G: SCHEDULE ID - The unique identifier for the recurring schedule, e.g. (G=12). 
+          * H: TYPE - The type of recurring schedule, e.g. (H=-1).
+            * -1: ALL
+            * 3: RECURRING
+            * 4: SUBSCRIPTION
       example: "(H=3)&&(C>='10/20/2024')"
 
     QueryBatchLog:
@@ -1132,14 +1132,14 @@ components:
         A query string for obtaining specific batch log records using Number's query language.
         Build logical terms and join them with '&&' for logical AND or '||' for logical OR.
         Use single quotes for text and date values. Refer to the variable chart for query composition:
-        * A: MERCHANT ID - The merchant record you are interested in, e.g. (A=545).
-        * B: STATUS - The status of the batch log, e.g. (B=-1).
-          * -1: ALL
-          * 1: FAILED
-          * 2: APPROVED
-        * C: CREATED ON - The date the batch log was created, e.g. (C>='3/2/2024')&&(C<='4/2/2024').
-        * D: BATCH LOG ID - The unique identifier for the batch log, e.g. (D=1777).
-        * E: BATCH NUMBER - The batch number for the batch log, e.g. (E=185).
+          * A: MERCHANT ID - The merchant record you are interested in, e.g. (A=545).
+          * B: STATUS - The status of the batch log, e.g. (B=-1).
+            * -1: ALL
+            * 1: FAILED
+            * 2: APPROVED
+          * C: CREATED ON - The date the batch log was created, e.g. (C>='3/2/2024')&&(C<='4/2/2024').
+          * D: BATCH LOG ID - The unique identifier for the batch log, e.g. (D=1777).
+          * E: BATCH NUMBER - The batch number for the batch log, e.g. (E=185).
       example: "(B=1)&&(C>='3/2/2024')&&(C<='4/2/2024')"
 
 # ACH

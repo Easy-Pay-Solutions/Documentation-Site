@@ -90,7 +90,7 @@ It is recommended to follow the recommendations for the spaces between the speci
 
 
 
-## Recommendations for the use of components
+## Available components
 
 To create this page, we used most of the components available in GitBook. Below are some recommendations for their use in future iterations of the documentation.
 
@@ -243,15 +243,17 @@ We especially recommend using it to submit credit card details.
 
 
 
-
-
-
-
 ***
 
 
 
 ### Tabs
+
+A component that can be used to condense display equivalent content consisting of single or multiple components placed in individual tabs.&#x20;
+
+We are highly recommend to use it for multiple code blocks with different technologies presentation:
+
+<figure><img src="../../.gitbook/assets/Screenshot 2025-01-16 at 16.30.56.png" alt=""><figcaption></figcaption></figure>
 
 
 

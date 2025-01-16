@@ -17,7 +17,7 @@ layout:
     visible: true
 ---
 
-# API Authentication (v2)
+# API Authentication (v3)
 
 <figure><img src="../../../.gitbook/assets/Authentication Flow.png" alt=""><figcaption></figcaption></figure>
 
@@ -180,9 +180,7 @@ Examples of RSA encrypotion:
 
 {% tabs %}
 {% tab title="C#" %}
-{% code overflow="wrap" %}
-```csharp
-using System.Security.Cryptography;
+<pre class="language-csharp" data-overflow="wrap" data-line-numbers><code class="lang-csharp">using System.Security.Cryptography;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 
@@ -222,8 +220,9 @@ if (rsaPublicKey == null)
 }
 
 // Use the OaepSHA1 RSA encryption padding
-byte[] encryptedBytes = rsaPublicKey.Encrypt(plainBytes, RSAEncryptionPadding.OaepSHA1);
-
+<strong>byte[] encryptedBytes = rsaPublicKey.Encrypt(plainBytes,
+</strong><strong>  RSAEncryptionPadding.OaepSHA1);
+</strong>
 // Convert to Base64 before sending to the API
 string encryptedString = Convert.ToBase64String(encryptedBytes);
 
@@ -238,8 +237,7 @@ string jsonPayload = $@"
     }}
 }}";
 
-```
-{% endcode %}
+</code></pre>
 {% endtab %}
 
 {% tab title="Java" %}
@@ -368,6 +366,7 @@ public class CertificateDetails {
 {% endtab %}
 
 {% tab title="JavaScript (Node.js)" %}
+{% code overflow="wrap" lineNumbers="true" %}
 ```javascript
 const crypto = require("crypto");
 const fs = require("fs");
@@ -393,6 +392,7 @@ catch (error) {
   console.error("Error encrypting card data:", error);
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 

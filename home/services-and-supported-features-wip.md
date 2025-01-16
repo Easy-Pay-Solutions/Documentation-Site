@@ -23,8 +23,8 @@ Perfect for companies developing custom applications with embedded payment funct
 | Settlerments                       | Finalizing a transaction by transferring funds from the buyer to the seller.                                                                                                                                                     |
 | Reporting                          | Involves generating summaries and analyses of transaction data to help merchants track financial activities, manage cash flow, and ensure compliance.                                                                            |
 
-{% content-ref url="../documentation/getting-started/integration-options-v1/rest-api-wip.md" %}
-[rest-api-wip.md](../documentation/getting-started/integration-options-v1/rest-api-wip.md)
+{% content-ref url="../documentation/getting-started/integration-options-v1/rest-api-v1.md" %}
+[rest-api-v1.md](../documentation/getting-started/integration-options-v1/rest-api-v1.md)
 {% endcontent-ref %}
 
 {% content-ref url="../documentation/getting-started/integration-options-v1/soap-api-v1.md" %}

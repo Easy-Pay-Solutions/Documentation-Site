@@ -463,7 +463,7 @@ viewModelScope.launch {
 ```
 
 {% hint style="info" %}
-More information about consuming the API response can be found in the [REST API integration guide](rest-api-wip.md).
+More information about consuming the API response can be found in the [REST API integration guide](rest-api-v1.md).
 {% endhint %}
 
 

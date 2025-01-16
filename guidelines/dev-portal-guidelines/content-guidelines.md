@@ -71,11 +71,24 @@ To improve the readability of the content, it is allowed to use fonts in the siz
 
 ### Content implementation
 
+<figure><img src="../../.gitbook/assets/Content implementation.png" alt=""><figcaption></figcaption></figure>
+
 #### Spaces and dividers
 
-To make the page content more readable, it is recommended to use double breaks in the form of paragraph text with the Divider component - above each highest-ranking heading (Heading 1 or Heading 2 - depending on which one will be used as the main heading)
+To make the page content more readable, it is recommended to use an empty row of paragraph text as an additional spacer between the sections.
 
-<figure><img src="../../.gitbook/assets/Content implementation.png" alt=""><figcaption></figcaption></figure>
+It is recommended to follow the recommendations for the spaces between the specific sections:&#x20;
+
+* Main site section\
+  \- Empty paragraph row\
+  \- Divider\
+  \- Empty paragraph row
+* Extended unordered list of content-rich bullet points\
+  \- Divider
+* Content-rich subpage\
+  \- Empty paragraph rows between the sections  and subsections
+
+
 
 
 

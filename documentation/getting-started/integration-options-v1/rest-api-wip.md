@@ -84,6 +84,112 @@ public static async Task Authenticate(string acctCode, string token)
 ```
 {% endcode %}
 {% endtab %}
+
+{% tab title="JavaScript (Node.js)" %}
+{% code overflow="wrap" lineNumbers="true" %}
+```javascript
+'use strict';
+
+const http = require('http');
+const https = require('https');
+
+const port = process.env.PORT || 1337;
+
+http.createServer((req, res) => {
+    let body = '';
+
+    // AcctCode and Token supplied by Number
+    const data = JSON.stringify({
+        AcctCode: 'EP8449374',
+        Token: '645E3CC4FD04472182C4161BA624C565'
+    });
+
+    const options = {
+        host: 'easypay5.com',
+        port: 443,
+        path: '/APIcardProcREST/v1.0.0/Authenticate',
+        method: 'POST',
+        timeout: 2000,
+        headers: {
+            'Content-Type': 'application/json',
+            'Content-Length': Buffer.byteLength(data)
+        }
+    };
+
+    const postReq = https.request(options, (postRes) => {
+        postRes.setEncoding('utf8');
+
+        postRes.on('data', (chunk) => {
+            body += chunk;
+        });
+
+        postRes.on('end', () => {
+            try {
+                if (body === 'Bad Request') {
+                    console.error('Bad request');
+                    res.writeHead(400, { 'Content-Type': 'text/plain' });
+                    res.end('Bad Request');
+                    return;
+                }
+
+                const obj = JSON.parse(body);
+
+                if (!obj) {
+                    console.error('Communication Error: Null Object');
+                    res.writeHead(500, { 'Content-Type': 'text/plain' });
+                    res.end('Communication Error: Null Object');
+                    return;
+                }
+
+                const { AuthenticateResult } = obj;
+
+                if (!AuthenticateResult.FunctionOk) {
+                    console.error(`${AuthenticateResult.ErrMsg} ${AuthenticateResult.ErrCode}`);
+                    res.writeHead(500, { 'Content-Type': 'text/plain' });
+                    res.end(`${AuthenticateResult.ErrMsg} ${AuthenticateResult.ErrCode}`);
+                    return;
+                }
+
+                if (!AuthenticateResult.AuthSuccess) {
+                    console.error(AuthenticateResult.RespMsg);
+                    res.writeHead(401, { 'Content-Type': 'text/plain' });
+                    res.end(AuthenticateResult.RespMsg);
+                    return;
+                }
+
+                console.log(`SessKey: ${AuthenticateResult.SessKey}`);
+                res.writeHead(200, { 'Content-Type': 'text/plain' });
+                res.end(`SessKey: ${AuthenticateResult.SessKey}`);
+            } catch (error) {
+                console.error('Error parsing response:', error);
+                res.writeHead(500, { 'Content-Type': 'text/plain' });
+                res.end('Internal Server Error');
+            }
+        });
+    });
+
+    postReq.on('error', (error) => {
+        console.error('Request error:', error);
+        res.writeHead(500, { 'Content-Type': 'text/plain' });
+        res.end('Request Error');
+    });
+
+    postReq.on('timeout', () => {
+        console.error('Request timed out');
+        res.writeHead(504, { 'Content-Type': 'text/plain' });
+        res.end('Request Timeout');
+    });
+
+    postReq.write(data);
+    postReq.end();
+}).listen(port, () => {
+    console.log(`Server listening on port ${port}`);
+});
+```
+{% endcode %}
+
+
+{% endtab %}
 {% endtabs %}
 
 
@@ -159,6 +265,116 @@ public static async Task ProcessConsent(
 }
 ```
 {% endcode %}
+{% endtab %}
+
+{% tab title="JavaScript (Node.js)" %}
+{% code overflow="wrap" lineNumbers="true" %}
+```javascript
+'use strict';
+
+const http = require('http');
+const https = require('https');
+
+const port = process.env.PORT || 1337;
+
+http.createServer((req, res) => {
+    let body = '';
+
+	const sessKey = '89C8356BB8A84FE9B5303231333441303331343335'
+    const data = JSON.stringify({
+        ConsentID: 1,
+        ProcessAmount: 5.00
+    });
+
+    const options = {
+        host: 'easypay5.com',
+        port: 443,
+        path: '/APIcardProcREST/v1.0.0/ConsentAnnual/ProcPayment',
+        method: 'POST',
+        timeout: 2000,
+        headers: {
+            'Content-Type': 'application/json',
+            'Content-Length': Buffer.byteLength(data),
+            'Accept': 'application/json',
+            'SessKey': sessKey
+        }
+    };
+
+    const postReq = https.request(options, (postRes) => {
+        postRes.setEncoding('utf8');
+
+        postRes.on('data', (chunk) => {
+            body += chunk;
+        });
+
+        postRes.on('end', () => {
+            try {
+                if (body === 'Bad Request') {
+                    console.error('Bad request');
+                    res.writeHead(400, { 'Content-Type': 'text/plain' });
+                    res.end('Bad Request');
+                    return;
+                }
+
+                const obj = JSON.parse(body);
+
+                if (!obj) {
+                    console.error('Communication Error: Null Object');
+                    res.writeHead(500, { 'Content-Type': 'text/plain' });
+                    res.end('Communication Error: Null Object');
+                    return;
+                }
+
+                const { ConsentAnnual_ProcPaymentResult } = obj;
+
+                if (!ConsentAnnual_ProcPaymentResult.FunctionOk) {
+                    console.error(`${ConsentAnnual_ProcPaymentResult.ErrMsg} : ${ConsentAnnual_ProcPaymentResult.ErrCode}`);
+                    res.writeHead(500, { 'Content-Type': 'text/plain' });
+                    res.end(`${ConsentAnnual_ProcPaymentResult.ErrMsg} : ${ConsentAnnual_ProcPaymentResult.ErrCode}`);
+                    return;
+                }
+
+                if (!ConsentAnnual_ProcPaymentResult.TxApproved) {
+                    console.error(ConsentAnnual_ProcPaymentResult.RespMsg);
+                    console.error(`Decline code: ${ConsentAnnual_ProcPaymentResult.TxnCode}`);
+                    res.writeHead(402, { 'Content-Type': 'text/plain' });
+                    res.end(`Declined: ${ConsentAnnual_ProcPaymentResult.RespMsg}`);
+                    return;
+                }
+
+                console.log(`Successful Transaction: ${ConsentAnnual_ProcPaymentResult.RespMsg}`);
+                console.log(`Approval code: ${ConsentAnnual_ProcPaymentResult.TxnCode}`);
+                res.writeHead(200, { 'Content-Type': 'text/plain' });
+                res.end(`Success: ${ConsentAnnual_ProcPaymentResult.RespMsg}`);
+            } catch (error) {
+                console.error('Error parsing response:', error);
+                res.writeHead(500, { 'Content-Type': 'text/plain' });
+                res.end('Internal Server Error');
+            }
+        });
+    });
+
+    postReq.on('error', (error) => {
+        console.error('Request error:', error);
+        res.writeHead(500, { 'Content-Type': 'text/plain' });
+        res.end('Request Error');
+    });
+
+    postReq.on('timeout', () => {
+        console.error('Request timed out');
+        res.writeHead(504, { 'Content-Type': 'text/plain' });
+        res.end('Request Timeout');
+    });
+
+    postReq.write(data);
+    postReq.end();
+}).listen(port, () => {
+    console.log(`Server listening on port ${port}`);
+});
+```
+{% endcode %}
+
+
 {% endtab %}
 {% endtabs %}
 
@@ -506,6 +722,118 @@ public static async Task ShowReceipt(
 
 ```
 {% endcode %}
+{% endtab %}
+
+{% tab title="JavaScript (Node.js)" %}
+{% code overflow="wrap" lineNumbers="true" %}
+```javascript
+'use strict';
+
+const http = require('http');
+const https = require('https');
+
+const port = process.env.PORT || 1337;
+
+http.createServer((req, res) => {
+    let body = '';
+
+    // ReceiptType 1 TRANSACTION RECEIPT
+    // ReceiptType 2 VOID RECEIPT
+    // ReceiptType 3 REFUND RECEIPT
+    // ReceiptType 4 ANNUAL CONSENT AGREEMENT
+    // ReceiptType 5 RECURRING CONSENT AGREEMENT
+    // ReceiptType 6 SUBSCRIPTION CONSENT AGREEMENT
+    // Recipient 1 MERCHANT COPY
+    // Recipient 2 CUSTOMER COPY
+    // Recipient 3 DUAL COPY
+
+    const data = JSON.stringify({
+        REFID: 1,
+        ReceiptType: 1,
+        Recipient: 1
+    });
+
+    const options = {
+        host: 'easypay5.com',
+        port: 443,
+        path: '/APIcardProcREST/v1.0.0/Receipt/ReceiptGenerate',
+        timeout: 2000,
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Content-Length': Buffer.byteLength(data),
+            'Accept': 'application/json',
+            'SessKey': '89C8356BB8A84FE9B5303231333441303331343335'
+        }
+    };
+
+    const postReq = https.request(options, (postRes) => {
+        let responseBody = '';
+
+        postRes.on('data', (chunk) => {
+            responseBody += chunk;
+        });
+
+        postRes.on('end', () => {
+            try {
+                if (responseBody === 'Bad Request') {
+                    console.error('Bad request');
+                    res.writeHead(400, { 'Content-Type': 'text/plain' });
+                    res.end('Bad Request');
+                    return;
+                }
+
+                const obj = JSON.parse(responseBody);
+
+                if (!obj) {
+                    console.error('Communication Error: Null Object');
+                    res.writeHead(500, { 'Content-Type': 'text/plain' });
+                    res.end('Communication Error: Null Object');
+                    return;
+                }
+
+                const { ReceiptGenerateResult } = obj;
+
+                if (!ReceiptGenerateResult.FunctionOk) {
+                    console.error(`${ReceiptGenerateResult.ErrMsg} : ${ReceiptGenerateResult.ErrCode}`);
+                    res.writeHead(500, { 'Content-Type': 'text/plain' });
+                    res.end(`${ReceiptGenerateResult.ErrMsg} : ${ReceiptGenerateResult.ErrCode}`);
+                    return;
+                }
+
+                console.log(ReceiptGenerateResult.RespMsg);
+                const receiptHtml = ReceiptGenerateResult.ReceiptHtml;
+                res.writeHead(200, { 'Content-Type': 'text/html' });
+                res.end(receiptHtml);
+            } catch (error) {
+                console.error('Error parsing response:', error);
+                res.writeHead(500, { 'Content-Type': 'text/plain' });
+                res.end('Internal Server Error');
+            }
+        });
+    });
+
+    postReq.on('error', (error) => {
+        console.error('Request error:', error);
+        res.writeHead(500, { 'Content-Type': 'text/plain' });
+        res.end('Request Error');
+    });
+
+    postReq.on('timeout', () => {
+        console.error('Request timed out');
+        res.writeHead(504, { 'Content-Type': 'text/plain' });
+        res.end('Request Timeout');
+    });
+
+    postReq.write(data);
+    postReq.end();
+}).listen(port, () => {
+    console.log(`Server listening on port ${port}`);
+});
+```
+{% endcode %}
+
+
 {% endtab %}
 {% endtabs %}
 

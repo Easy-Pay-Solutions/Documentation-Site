@@ -167,12 +167,12 @@ When the API traffic originates from unknown networks or mobile devices, we also
 When passing cardholder data through our APIs, only the credit card number needs to be encrypted using RSA, the expiration date and CVV can be left as is.
 {% endhint %}
 
-<table data-card-size="large" data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td>mobile.easypay5.com.cer</td><td></td><td></td><td><a href="https://easypaysoftware.com/mobile.easypay5.com.cer">https://easypaysoftware.com/mobile.easypay5.com.cer</a></td></tr><tr><td>mobile.easypay5.com_base64encoded.cer</td><td></td><td></td><td><a href="https://easypaysoftware.com/mobile.easypay5.com_base64encoded.cer">https://easypaysoftware.com/mobile.easypay5.com_base64encoded.cer</a></td></tr><tr><td>mobile.easypay5.com.p7b</td><td></td><td></td><td><a href="https://easypaysoftware.com/mobile.easypay5.com.p7b">https://easypaysoftware.com/mobile.easypay5.com.p7b</a></td></tr><tr><td>mobile.easypay5.com.pem</td><td></td><td></td><td><a href="https://easypaysoftware.com/mobile.easypay5.com.pem">https://easypaysoftware.com/mobile.easypay5.com.pem</a></td></tr></tbody></table>
-
 {% hint style="info" %}
 When encrypting sensitive cardholder data, use RSA encryption padding of OaepSHA1. \
 Encrypted card numbers will always have 512 bytes.
 {% endhint %}
+
+<table data-card-size="large" data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td>mobile.easypay5.com.cer</td><td></td><td></td><td><a href="https://easypaysoftware.com/mobile.easypay5.com.cer">https://easypaysoftware.com/mobile.easypay5.com.cer</a></td></tr><tr><td>mobile.easypay5.com_base64encoded.cer</td><td></td><td></td><td><a href="https://easypaysoftware.com/mobile.easypay5.com_base64encoded.cer">https://easypaysoftware.com/mobile.easypay5.com_base64encoded.cer</a></td></tr><tr><td>mobile.easypay5.com.p7b</td><td></td><td></td><td><a href="https://easypaysoftware.com/mobile.easypay5.com.p7b">https://easypaysoftware.com/mobile.easypay5.com.p7b</a></td></tr><tr><td>mobile.easypay5.com.pem</td><td></td><td></td><td><a href="https://easypaysoftware.com/mobile.easypay5.com.pem">https://easypaysoftware.com/mobile.easypay5.com.pem</a></td></tr></tbody></table>
 
 
 

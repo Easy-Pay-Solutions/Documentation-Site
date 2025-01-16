@@ -75,6 +75,8 @@ To improve the readability of the content, it is allowed to use fonts in the siz
 
 To make the page content more readable, it is recommended to use double breaks in the form of paragraph text with the Divider component - above each highest-ranking heading (Heading 1 or Heading 2 - depending on which one will be used as the main heading)
 
+<figure><img src="../../.gitbook/assets/Content implementation.png" alt=""><figcaption></figcaption></figure>
+
 
 
 ***

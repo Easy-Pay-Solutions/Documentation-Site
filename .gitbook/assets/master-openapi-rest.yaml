@@ -2997,7 +2997,10 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/QueryTransaction"
+              type: object
+              properties:
+                Query:
+                  $ref: "#/components/schemas/QueryTransaction"
       responses:
         "200":
           description: Successfully queried transactions
@@ -3445,7 +3448,10 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/QueryTransaction"
+              type: object
+              properties:
+                Query:
+                  $ref: "#/components/schemas/QueryTransaction"
       responses:
         "200":
           description: Successfully returned ACH transaction records
@@ -3741,7 +3747,10 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/QueryBatchLog"
+              type: object
+              properties:
+                Query:
+                  $ref: "#/components/schemas/QueryBatchLog"
       responses:
         "200":
           description: Successfully returned batch log records
@@ -3933,7 +3942,10 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/QueryConsent"
+              type: object
+              properties:
+                Query:
+                  $ref: "#/components/schemas/QueryConsent"
       responses:
         "200":
           description: Successfully returned consent records
@@ -4035,7 +4047,10 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/QueryConsent"
+              type: object
+              properties:
+                Query:
+                  $ref: "#/components/schemas/QueryConsent"
       responses:
         "200":
           description: Successfully returned consent records
@@ -4657,7 +4672,10 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/QueryConsent"
+              type: object
+              properties:
+                Query:
+                  $ref: "#/components/schemas/QueryConsent"
       responses:
         "200":
           description: Successfully returned consent records
@@ -4777,7 +4795,10 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/QueryRecurringSchedule"
+              type: object
+              properties:
+                Query:
+                  $ref: "#/components/schemas/QueryRecurringSchedule"
       responses:
         "200":
           description: Successfully returned schedule records
@@ -5017,7 +5038,10 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/QueryTransaction"
+              type: object
+              properties:
+                Query:
+                  $ref: "#/components/schemas/QueryTransaction"
       responses:
         "200":
           description: Successfully returned transaction records

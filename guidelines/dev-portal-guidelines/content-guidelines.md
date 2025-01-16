@@ -251,9 +251,9 @@ We especially recommend using it to submit credit card details.
 
 A component that can be used to condense display equivalent content consisting of single or multiple components placed in individual tabs.&#x20;
 
-We are highly recommend to use it for multiple code blocks with different technologies presentation:
+We highly recommend using it for multiple code blocks with different technology presentations:
 
-<figure><img src="../../.gitbook/assets/Screenshot 2025-01-16 at 16.30.56.png" alt=""><figcaption></figcaption></figure>
+{% include "../../.gitbook/includes/var-sesskey-9b9175ef556e....md" %}
 
 
 

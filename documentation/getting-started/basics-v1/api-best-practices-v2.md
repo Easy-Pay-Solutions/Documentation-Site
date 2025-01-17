@@ -50,7 +50,7 @@ In case of transactions, `TxApproved` with the value of false indicates that the
 
 ## Logging
 
-It's important to correctly handle exceptions and log all the responses. Before you interface with our APIs, we recommend creating a simple logging utility. This way, there'll be a trail of breadcrumbs in case any issues arise in the future. Without logs, finding out what went wrong can be time consuming.
+It's important to correctly handle exceptions and log all the responses. **Before you interface with our APIs, we recommend creating a simple logging utility.** This way, there'll be a trail of breadcrumbs in case any issues arise in the future. Without logs, finding out what went wrong can be time consuming.
 
 
 
@@ -154,7 +154,7 @@ namespace APITest
 
 Common issues we encounter include complaints about duplicate charges. This can happen when integrators process card-on-file transactions without proper safeguards that prevent submitting the same form multiple times.
 
-If there is button on a webpage that initiates a charge, and there is no mechanism preventing it from being clicked multiple times, the cardholder would be charged each time. To prevent this, it's crucial to disable the button immediately after it's pressed, ensuring that double taps do not occur.&#x20;
+If there is button on a webpage that initiates a charge, and there is no mechanism preventing it from being clicked multiple times, **the cardholder would be charged each time**. To prevent this, it's crucial to disable the button immediately after it's pressed, ensuring that double taps do not occur.&#x20;
 
 {% hint style="warning" %}
 When processing card-on-file transactions, remember to lock the submit button after form submission to prevent multiple API calls and duplicate charges from occuring.

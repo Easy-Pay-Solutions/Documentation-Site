@@ -58,8 +58,8 @@ Ideal for developers aiming to offer seamless in-app payments, especially in e-c
 [ios-sdk-v1.md](../documentation/getting-started/integration-options-v1/ios-sdk-v1.md)
 {% endcontent-ref %}
 
-{% content-ref url="../documentation/getting-started/integration-options-v1/android-sdk-v1.md" %}
-[android-sdk-v1.md](../documentation/getting-started/integration-options-v1/android-sdk-v1.md)
+{% content-ref url="../documentation/getting-started/integration-options-v1/android-sdk-v2.md" %}
+[android-sdk-v2.md](../documentation/getting-started/integration-options-v1/android-sdk-v2.md)
 {% endcontent-ref %}
 
 

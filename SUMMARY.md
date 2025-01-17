@@ -25,7 +25,7 @@
   * [Integration Options (v1)](documentation/getting-started/integration-options-v1/README.md)
     * [REST API (v1)](documentation/getting-started/integration-options-v1/rest-api-v1.md)
     * [SOAP API (v1)](documentation/getting-started/integration-options-v1/soap-api-v1.md)
-    * [Android SDK (v1)](documentation/getting-started/integration-options-v1/android-sdk-v1.md)
+    * [Android SDK (v2)](documentation/getting-started/integration-options-v1/android-sdk-v2.md)
     * [iOS SDK (v1)](documentation/getting-started/integration-options-v1/ios-sdk-v1.md)
     * [PayForm](documentation/getting-started/integration-options-v1/payform.md)
     * [Widgets](documentation/getting-started/integration-options-v1/widgets.md)

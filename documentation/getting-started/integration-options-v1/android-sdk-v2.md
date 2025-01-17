@@ -2,7 +2,7 @@
 description: Getting started with Android SDK for Number
 ---
 
-# Android SDK (v1)
+# Android SDK (v2)
 
 {% embed url="https://github.com/Easy-Pay-Solutions/Mobile-SDK-Android" %}
 
@@ -65,7 +65,9 @@ class MainApplication : Application() {
 {% endstep %}
 
 {% step %}
-Please keep in mind that during initialization, the RSA certificate download process begins. Proceeding with any call before downloading has finished will result with an exception (`RSA_CERTIFICATE_NOT_FETCHED`). You can check the download status by accessing the following enum:
+During initialization, the RSA certificate download begins. Proceeding with any call before downloading has finished will result with an exception `RSA_CERTIFICATE_NOT_FETCHED`.&#x20;
+
+You can check the download status by accessing the following enum:
 
 ```kotlin
 EasyPayConfiguration.getInstance().getRsaCertificateFetchingStatus()
@@ -83,7 +85,7 @@ Number's prebuilt payment UI component that allows you to collect credit card in
 
 {% stepper %}
 {% step %}
-Initialize a `PaymentSheet` inside `onCreate` of your checkout Fragment or Activity, passing a method to handle the payment result.
+Initialize a `PaymentSheet` inside `onCreate` of your checkout `Fragment` or `Activity`, passing a method to handle the payment result.
 
 <pre class="language-kotlin"><code class="lang-kotlin"><strong>import com.easypaysolutions.payment_sheet.PaymentSheet
 </strong>import com.easypaysolutions.payment_sheet.utils.PaymentSheetResult
@@ -104,18 +106,17 @@ class PaymentSheetFragment : Fragment() {
 {% endstep %}
 
 {% step %}
-When the customer taps the payment button, call `present` method on the `PaymentSheet` instance with the configuration. `PaymentSheet.Configuration` requires the following parameters:
+When the customer taps the payment button, call `present` method on the `PaymentSheet` instance with your configuration. `PaymentSheet.Configuration` requires the following parameters:
 
 * `AmountsParam` - total $ amount of the payment;
-*   `ConsentCreatorParam` - annual consent details, that contains the following parameters:
+* `ConsentCreatorParam` - annual consent details, that contains the following:
+  * `limitLifeTime` - the maximum $ amount that can be charged in total,
+  * `limitPerCharge` - the maximum $ amount that can be charged per transaction,
+  * `merchantId` - the ID of the merchant that the consent is created for,
+  * `startDate` - the date when the consent is created,
+  * `customerReferenceId` or `consentId` to identify the customer.&#x20;
 
-    * `limitLifeTime` - the maximum $ amount that can be charged in total,
-    * `limitPerCharge` - the maximum $ amount that can be charged per transaction,
-    * `merchantId` - the ID of the merchant that the consent is created for,
-    * `startDate` - the date when the consent is created,
-    * `customerReferenceId` or `consentId` to identify the customer.&#x20;
-
-    **Other parameters are optional.**
+**Other parameters are optional.**
 
 ```kotlin
 // ...
@@ -181,7 +182,7 @@ Number's prebuilt UI component that lets your customers manage their saved credi
 
 {% stepper %}
 {% step %}
-Initialize a `CustomerSheet` inside `onCreate` of your checkout Fragment or Activity, passing a method to handle the customer sheet result.
+Initialize a `CustomerSheet` inside `onCreate` of your checkout `Fragment` or `Activity`, passing a method to handle the customer sheet result.
 
 ```kotlin
 import com.easypaysolutions.customer_sheet.CustomerSheet
@@ -203,15 +204,14 @@ class CustomerSheetFragment : Fragment() {
 {% endstep %}
 
 {% step %}
-To present the customer sheet, call the `present` method on the `CustomerSheet` instance, passing the configuration. `CustomerSheet.Configuration` requires the following parameters:
+To present the customer sheet, call the `present` method on the `CustomerSheet` instance, passing your configuration. `CustomerSheet.Configuration` requires the following parameters:
 
-`ConsentCreatorParam` - annual consent details, that contains the following parameters:
-
-* `limitLifeTime` - the maximum $ amount that can be charged in total,
-* `limitPerCharge` - the maximum $ amount that can be charged per transaction,
-* `merchantId` - the ID of the merchant that the consent is created for,
-* `startDate` - the date when the consent is created,
-* `customerReferenceId` or `consentId` to identify the customer.&#x20;
+* `ConsentCreatorParam` - annual consent details, that contains the following:
+  * `limitLifeTime` - the maximum $ amount that can be charged in total,
+  * `limitPerCharge` - the maximum $ amount that can be charged per transaction,
+  * `merchantId` - the ID of the merchant that the consent is created for,
+  * `startDate` - the date when the consent is created,
+  * `customerReferenceId` or `consentId` to identify the customer.&#x20;
 
 **Other parameters are optional.**
 
@@ -349,7 +349,7 @@ ListAnnualConsents().listAnnualConsents(params: ListAnnualConsentsBodyParams): N
 
 ### 3. Create Annual Consent (ConsentAnnual\_Create\_MAN)
 
-This method creates an annual consent by sending the credit card details, which includes: card number, expiration date, CVV, and card holder contact data. It is not created by swiping the card through a reader device.
+This method creates an annual consent by sending the credit card details, which include: card number, expiration date, CVV, and card holder contact data. It is **not** created by swiping the card through a reader device.
 
 ```kotlin
 CreateAnnualConsent().createAnnualConsent(params: CreateAnnualConsentBodyParams): NetworkResource<CreateAnnualConsentResult>
@@ -432,7 +432,7 @@ To get the `SecureData` from the `SecureTextField`, use the following property:
 val secureData = secureTextField.secureData
 ```
 
-Data is already encrypted and can be used in the API calls directly without any additional encryption.
+**This data is already encrypted and can be used in the API calls without any additional encryption.**
 
 
 
@@ -462,10 +462,6 @@ viewModelScope.launch {
 }
 ```
 
-{% hint style="info" %}
-More information about consuming the API response can be found in the [REST API integration guide](rest-api-v1.md).
-{% endhint %}
-
 
 
 ***
@@ -478,7 +474,7 @@ More information about consuming the API response can be found in the [REST API 
 
 Exceptions that are thrown by the SDK.
 
-<table><thead><tr><th width="342">Exception name</th><th>Suggested solution</th></tr></thead><tbody><tr><td><code>EASY_PAY_CONFIGURATION_NOT_INITIALIZED</code></td><td>Check if <code>EasyPay.init(...)</code> method has been called.</td></tr><tr><td><code>MISSED_SESSION_KEY</code></td><td>Check if correct SESSION_KEY has been provided in the <code>EasyPay.init(...)</code> method.</td></tr><tr><td><code>MISSED_HMAC_SECRET</code></td><td>Check if correct HMAC_SECRET has been provided in the <code>EasyPay.init(...)</code> method.</td></tr><tr><td><code>RSA_CERTIFICATE_NOT_FETCHED</code></td><td>RSA certificate might not be fetched yet. Check the status by calling the <code>EasyPayConfiguration.getInstance().getRsaCertificateFetchingStatus()</code> method.</td></tr><tr><td><code>RSA_CERTIFICATE_FETCH_FAILED</code></td><td>Contact Number.</td></tr><tr><td><code>RSA_CERTIFICATE_PARSING_ERROR</code></td><td>Contact Number.</td></tr></tbody></table>
+<table><thead><tr><th width="342">Exception name</th><th>Suggested solution</th></tr></thead><tbody><tr><td><code>EASY_PAY_CONFIGURATION_NOT_INITIALIZED</code></td><td>Check if <code>EasyPay.init(...)</code> method has been called.</td></tr><tr><td><code>MISSED_SESSION_KEY</code></td><td>Check if correct <code>SESSION_KEY</code> has been provided in the <code>EasyPay.init(...)</code> method.</td></tr><tr><td><code>MISSED_HMAC_SECRET</code></td><td>Check if correct <code>HMAC_SECRET</code> has been provided in the <code>EasyPay.init(...)</code> method.</td></tr><tr><td><code>RSA_CERTIFICATE_NOT_FETCHED</code></td><td>RSA certificate might not be fetched yet. Check the status by calling the <code>EasyPayConfiguration.getInstance().getRsaCertificateFetchingStatus()</code> method.</td></tr><tr><td><code>RSA_CERTIFICATE_FETCH_FAILED</code></td><td>Contact Number.</td></tr><tr><td><code>RSA_CERTIFICATE_PARSING_ERROR</code></td><td>Contact Number.</td></tr></tbody></table>
 
 ### EasyPayApiException
 
@@ -492,11 +488,11 @@ Exceptions that are thrown by the Number API.
 
 ## Semantic Versioning
 
-The SDK follows semantic versioning with a three-part version number: MAJOR.MINOR.PATCH.
+The SDK follows semantic versioning with a three-part version number: `MAJOR`.`MINOR`.`PATCH`.
 
-* MAJOR version is incremented when there are incompatible API changes,
-* MINOR version is incremented when functionality is added in a backwards-compatible manner,
-* PATCH version is incremented when there are backwards-compatible bug fixes.
+* `MAJOR` version is incremented when there are incompatible API changes,
+* `MINOR` version is incremented when functionality is added in a backwards-compatible manner,
+* `PATCH` version is incremented when there are backwards-compatible bug fixes.
 
 
 

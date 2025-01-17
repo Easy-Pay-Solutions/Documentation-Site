@@ -27,7 +27,7 @@
     * [SOAP API (v1)](documentation/getting-started/integration-options-v1/soap-api-v1.md)
     * [Android SDK (v2)](documentation/getting-started/integration-options-v1/android-sdk-v2.md)
     * [iOS SDK (v1)](documentation/getting-started/integration-options-v1/ios-sdk-v1.md)
-    * [PayForm](documentation/getting-started/integration-options-v1/payform.md)
+    * [PayForm (WIP)](documentation/getting-started/integration-options-v1/payform-wip.md)
     * [Widgets](documentation/getting-started/integration-options-v1/widgets.md)
     * [Verifone (WIP)](documentation/getting-started/integration-options-v1/verifone-wip.md)
     * [Virtual Terminal](documentation/getting-started/integration-options-v1/virtual-terminal.md)

@@ -152,6 +152,8 @@ namespace APITest
 
 ## Preventing duplicate charges
 
+<figure><img src="../../../.gitbook/assets/Typography (1).png" alt=""><figcaption></figcaption></figure>
+
 Common issues we encounter include complaints about duplicate charges. This can happen when integrators process card-on-file transactions without proper safeguards that prevent submitting the same form multiple times.
 
 If there is button on a webpage that initiates a charge, and there is no mechanism preventing it from being clicked multiple times, **the cardholder would be charged each time**. To prevent this, it's crucial to disable the button immediately after it's pressed, ensuring that double taps do not occur.&#x20;

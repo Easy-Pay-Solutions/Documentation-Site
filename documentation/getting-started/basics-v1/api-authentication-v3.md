@@ -21,51 +21,43 @@ layout:
 
 <figure><img src="../../../.gitbook/assets/Authentication Flow.png" alt=""><figcaption></figcaption></figure>
 
+
+
 ## Authentication
 
-Both the REST and SOAP APIs provide their own methods for authenticating with Number. You will need to use them to receive the `Session Key`. To authenticate, you need to provide your `Account Code` and `Token`.
-
-
+Both the REST and SOAP APIs provide their own methods for authenticating with Number. You will need to use them to receive a `SessKey`. To authenticate, you need to provide your `AccountCode` and `Token`.
 
 ***
-
-
 
 {% include "../../../.gitbook/includes/param-account-code.md" %}
 
 ***
 
-
-
 {% include "../../../.gitbook/includes/param-token.md" %}
 
 ***
 
+As a result of authentication, you will obtain a session key. This key is required to prove your identity when using any of the other methods provided by our backend.
 
+***
 
-As a result of authentication, you will obtain a `Session Key`. This key is required to prove your identity when using any of the other methods provided by our backend.
+{% include "../../../.gitbook/includes/param-sess-key.md" %}
+
+***
 
 **You will need to reauthenticate when one of the following two errors occurs:**&#x20;
 
 {% hint style="danger" %}
-**5030:** Expired Session Key (session key has expired after 25 hours)&#x20;
+**Error Code 5030:** Expired session (session key has expired after 25 hours)&#x20;
 {% endhint %}
 
 {% hint style="danger" %}
-**5050:** Unauthorized Session Key (your IP has changed since you last authenticated)
+**Error Code 5050:** Unauthorized (your IP has changed since you last authenticated)
 {% endhint %}
 
-The system will lock your IP out if you send 6 unsuccessful authentication attempts in a row. Always abort unsuccessful authentication attempts instead of retrying and notify the user. Only the Number support team can remove the lock from a merchant.
+**The system will lock your IP out if you send 6 unsuccessful authentication attempts in a row.** Always abort unsuccessful authentication attempts instead of retrying and notify the user. Only the Number support team can remove the lock from a merchant.
 
-We recommend that you obtain and use the same `Session Key` until you receive one of those errors.
-
-
-
-***
-
-
-
-{% include "../../../.gitbook/includes/param-sess-key.md" %}
+We recommend that you obtain and use the same key until you receive one of above errors.
 
 
 
@@ -83,15 +75,15 @@ If you have your own PCI compliant program and want to handle cardholder data us
 
 ### HMAC header
 
+When required to secure the request, the `SessKey` header will need to include additional data.
+
 ***
 
 {% include "../../../.gitbook/includes/param-sesskey-pci-secure.md" %}
 
 ***
 
-This key should be passed using the same header, `SessKey`.
-
-Examples of creating the header signature:
+This altered key should be passed instead of the plain session key using a header with the same name, `SessKey`. Here are some examples of creating the header signature:
 
 {% include "../../../.gitbook/includes/var-sesskey-9b9175ef556e....md" %}
 
@@ -103,7 +95,7 @@ When the API traffic originates from unknown networks or mobile devices, we also
 When passing cardholder data through our APIs, only the credit card number needs to be encrypted using RSA, the expiration date and CVV can be left as is.
 {% endhint %}
 
-{% hint style="info" %}
+{% hint style="warning" %}
 When encrypting sensitive cardholder data, use RSA encryption padding of OaepSHA1. \
 Encrypted card numbers will always have 512 bytes.
 {% endhint %}
@@ -348,7 +340,7 @@ When you authenticate, you will receive `FunctionOK` and `AuthSuccess` flags in 
       1. If `AuthSuccess` is false, read `RspMsg` and abort.
       2. If `AuthSuccess` is true, save the `SessKey` value.
 
-Once again, it's important to abort unsuccessful authentication attempts and notify the user that new credentials need to be applied to the product.&#x20;
+Once again, it's important to **abort unsuccessful authentication attempts** and notify the user that new credentials need to be applied to the product.&#x20;
 
 The system will lock your IP after 6 unsuccessful attempts in a row. When a lockout occurs, our support department will need to manually audit it to determine if it's safe to remove the lock.&#x20;
 

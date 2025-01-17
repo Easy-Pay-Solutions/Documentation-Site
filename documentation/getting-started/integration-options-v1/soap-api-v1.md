@@ -16,9 +16,9 @@ Before you continue this section, we recommend reading sections about [authentic
 
 ## Generate the service for WCF applications
 
-The easiest way to get started using Number's SOAP API is to generate the CardProcessClient service. Following the steps below, you'll learn how to generate that service for applications using the [Windows Communication Foundation (WCF)](https://learn.microsoft.com/dotnet/framework/wcf/whats-wcf) framework.
+The easiest way to get started using Number's SOAP API is to generate the `CardProcessClient` service. Following the steps below, you'll learn how to generate that service for applications using the [Windows Communication Foundation (WCF)](https://learn.microsoft.com/dotnet/framework/wcf/whats-wcf) framework.
 
-### Generate CardProcessService using the command line
+### Generate `CardProcessService` using the command line
 
 {% stepper %}
 {% step %}
@@ -36,7 +36,7 @@ SvcUtil.exe is used to generate service model code from metadata documents such 
 {% endstep %}
 
 {% step %}
-#### Use the tool to generate the CardProcessService model
+#### Use the tool to generate the `CardProcessService` model
 
 Open a Command Prompt window and navigate to the directory where SvcUtil.exe is located or add the directory to your system's PATH environment variable for easier access.
 

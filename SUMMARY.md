@@ -4,6 +4,8 @@
   * [Get your business started (WIP)](home/get-your-business-started-wip.md)
   * [Services and supported features (WIP)](home/services-and-supported-features-wip.md)
   * [Supported credit cards](home/supported-credit-cards.md)
+* [Home (v2)](home-v2/README.md)
+  * [Services and supported features (WIP)](home-v2/services-and-supported-features-wip.md)
 
 ## Documentation
 

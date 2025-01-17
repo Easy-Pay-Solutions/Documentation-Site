@@ -2,7 +2,7 @@
 description: A list of best practices for working with the APIs
 ---
 
-# API Best Practices (v1)
+# API Best Practices (v2)
 
 
 
@@ -22,7 +22,7 @@ These can be a result of problems communicating with our service or problems exe
 {% step %}
 ### Check for a null response
 
-Depending on your implementation, you might receive a null response indicating an unexpected error.
+Depending on your implementation, you might receive a null response indicating an unexpected error instead of an exception.
 {% endstep %}
 
 {% step %}
@@ -150,9 +150,9 @@ namespace APITest
 
 
 
-## Preventing Duplicate Charges
+## Preventing duplicate charges
 
-A common issue we encounter is complaints about duplicate charges. This can happen when integrators process card-on-file transactions without proper safeguards that prevent submitting the same form multiple times.
+Common issues we encounter include complaints about duplicate charges. This can happen when integrators process card-on-file transactions without proper safeguards that prevent submitting the same form multiple times.
 
 If there is button on a webpage that initiates a charge, and there is no mechanism preventing it from being clicked multiple times, the cardholder would be charged each time. To prevent this, it's crucial to disable the button immediately after it's pressed, ensuring that double taps do not occur.&#x20;
 

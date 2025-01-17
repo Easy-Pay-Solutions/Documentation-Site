@@ -6,7 +6,7 @@ description: Getting started with iOS SDK for Number
 
 {% embed url="https://github.com/Easy-Pay-Solutions/Mobile-SDK-IOS" %}
 
-The EasyPay iOS SDK offers access to the Number API for effortless integration with any iOS applications. For Android integration, refer to the [Android SDK integration guide](android-sdk-v2.md).
+The EasyPay iOS SDK offers access to the Number API for effortless integration with any iOS application. For Android integration, refer to the [Android SDK integration guide](android-sdk-v2.md).
 
 
 
@@ -19,7 +19,7 @@ The EasyPay iOS SDK offers access to the Number API for effortless integration w
 ### Requirements
 
 * Xcode 15 or above
-* compatible with iOS 13.0 or above
+* Compatible with iOS 13.0 or above
 
 ### Configuration
 
@@ -57,7 +57,7 @@ Prerequisites - get HMAC secret, API key and optional Sentry DSN from Number.
 {% endstep %}
 
 {% step %}
-Configure `EasyPay` class. You can do that in your Payment Module or in AppDelegate (`didFinishLaunchingWithOptions`). Set `isProduction = true` to enable jailbroken device detection.
+Configure `EasyPay` class. You can do that in your Payment Module or in `AppDelegate` (`didFinishLaunchingWithOptions`). Set `isProduction = true` to enable jailbroken device detection.
 
 ```swift
 EasyPay.shared.configureSecrets(apiKey: "YOURAPIKEY",
@@ -68,7 +68,9 @@ EasyPay.shared.configureSecrets(apiKey: "YOURAPIKEY",
 {% endstep %}
 
 {% step %}
-Please keep in mind that during the initialization, the process of downloading the certificate is starting. Proceeding with any call before downloading has finished will result in an error (`RsaCertificateError.failedToLoadCertificateData`). You can check the status of downloading by accessing the following enum:
+During the initialization, the process of downloading the certificate is starting. Proceeding with any call before downloading has finished will result in an error `RsaCertificateError.failedToLoadCertificateData`.&#x20;
+
+You can check the status of downloading by accessing the following enum:
 
 ```swift
 EasyPay.shared.certificateStatus
@@ -76,7 +78,7 @@ EasyPay.shared.certificateStatus
 {% endstep %}
 
 {% step %}
-To enable jailbreak detection please set `isProduction: true` when initializing the library and add the following URL schemes to main Info.plist
+To enable jailbreak detection, please set `isProduction = true` when initializing the library and add the following URL schemes to main `Info.plist`.
 
 ```xml
 <key>LSApplicationQueriesSchemes</key>
@@ -103,7 +105,7 @@ For managing saved cards without paying, the following initializer should be use
  CardSelectionViewController(selectionDelegate: AnyObject, preselectedCardId: Int?, paymentDetails: AddAnnualConsentWidgetModel) throws
 ```
 
-`preselectedCardId` is an optional parameter that allows to mark a card as selected by passing the ConsentId of this card. If nil or incorrect, the selection will be ignored.
+`preselectedCardId` is an optional parameter that allows to mark a card as selected by passing the `ConsentId` of this card. If nil or incorrect, the selection will be ignored.
 
 `paymentDetails` parameter is used for passing additional payment details not visible for the end user. Either `customerReferenceId` or `rpguid` must be provided to get the list of consents of a specific customer. In case of of incorrect initialization data, `CardSelectionViewControllerInitError` will be thrown.
 
@@ -135,7 +137,7 @@ CardSelectionViewController(amount: String, paymentDelegate: AnyObject, preselec
 
 `amount` should be higher than 0 and it is required parameter.
 
-`preselectedCardId` is an optional parameter that allows to mark a card as selected by passing the ConsentId of this card. If nil or incorrect, the selection will be ignored.
+`preselectedCardId` is an optional parameter that allows to mark a card as selected by passing the `ConsentId` of this card. If nil or incorrect, the selection will be ignored.
 
 `paymentDetails` parameter is used for passing additional payment details not visible for the end user. Either `customerReferenceId` or `rpguid` must be provided to get the list of consents of a specific customer. In case of of incorrect initialization data, `CardSelectionViewControllerInitError` will be thrown.
 
@@ -325,6 +327,8 @@ To receive the encrypted card string required to send to the API, you can use th
 nameOfYourTextField.encryptCardData()
 ```
 
+**This data is already encrypted and can be used in the API calls without any additional encryption.**
+
 
 
 ***
@@ -346,7 +350,7 @@ if response.data.errorMessage != "" && response.data.errorCode != 0 {
 }
 ```
 
-If there is No TxApproved flag, then you can omit the last evaluation. More information about consuming the API response can be found in the [REST API integration guide](rest-api-v1.md).
+If there is no `TxApproved` flag, then you can omit the last evaluation. More information about consuming the API response can be found in [Consuming the API response](../basics-v1/api-best-practices-v2.md#consuming-the-api-response) section.
 
 
 
@@ -387,11 +391,11 @@ If there is No TxApproved flag, then you can omit the last evaluation. More info
 
 ## Semantic Versioning
 
-The SDK follows semantic versioning with a three-part version number: MAJOR.MINOR.PATCH.
+The SDK follows semantic versioning with a three-part version number: `MAJOR`.`MINOR`.`PATCH`.
 
-* MAJOR version is incremented when there are incompatible API changes,
-* MINOR version is incremented when functionality is added in a backwards-compatible manner,
-* PATCH version is incremented when there are backwards-compatible bug fixes.
+* `MAJOR` version is incremented when there are incompatible API changes,
+* `MINOR` version is incremented when functionality is added in a backwards-compatible manner,
+* `PATCH` version is incremented when there are backwards-compatible bug fixes.
 
 
 

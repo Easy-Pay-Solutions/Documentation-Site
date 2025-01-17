@@ -56,3 +56,18 @@ For example, if you need to receive a response message with a 116 response code,
 {% hint style="danger" %}
 Table to implement:&#x20;
 {% endhint %}
+
+
+
+***
+
+
+
+## Partial Authorization Test Data <a href="#partial-authorization-test-data" id="partial-authorization-test-data"></a>
+
+To test a partial authorization you will do the following:
+
+<table data-card-size="large" data-view="cards"><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><h3><img src="../../.gitbook/assets/1 Discover icon.png" alt="" data-size="original"></h3></td><td><strong>DS: 6011 2087 0333 1119</strong><br><strong>EXP DATE: 12/28</strong><br><strong>CVV: NONE</strong><br><br>Enter the following amount ($10.10) should get partial approval for ($10.00)</td></tr><tr><td><h3><img src="../../.gitbook/assets/1 Visa icon.png" alt="" data-size="original"></h3></td><td><p><strong>VISA: 4005 5717 0222 2222</strong><br><strong>EXP DATE: 12/28</strong></p><p><strong>CVV: NONE</strong><br><br>Enter the following amount ($11.10) should get partial approval for ($5.55)</p></td></tr></tbody></table>
+
+
+

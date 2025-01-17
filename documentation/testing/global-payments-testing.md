@@ -110,7 +110,7 @@ Use one of these cards:
 
 ### Decline Codes
 
-<table><thead><tr><th width="196">Response Code</th><th width="192">Authorization response</th><th width="357">Response definition</th></tr></thead><tbody><tr><td>00</td><td>APPROVAL</td><td>Approved and completed</td></tr><tr><td>01</td><td>CALL</td><td>Refer to issuer</td></tr><tr><td>02</td><td>CALL</td><td>Refer to issuer - Special condition</td></tr><tr><td>03</td><td>TERM ID ERROR</td><td>Invalid Merchant ID</td></tr><tr><td>04</td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr></tbody></table>
+<table><thead><tr><th width="196">Response Code</th><th width="209">Authorization response</th><th width="357">Response definition</th></tr></thead><tbody><tr><td>00</td><td>APPROVAL</td><td>Approved and completed</td></tr><tr><td>01</td><td>CALL</td><td>Refer to issuer</td></tr><tr><td>02</td><td>CALL</td><td>Refer to issuer - Special condition</td></tr><tr><td>03</td><td>TERM ID ERROR</td><td>Invalid Merchant ID</td></tr><tr><td>04</td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr></tbody></table>
 
 {% hint style="danger" %}
 ## Decline Codes to implement <a href="#decline-codes" id="decline-codes"></a>

@@ -102,6 +102,16 @@ Use one of these cards:
 
 <table data-card-size="large" data-view="cards"><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><h3><img src="../../.gitbook/assets/1 Discover icon.png" alt="" data-size="original"></h3></td><td><strong>DS: 6011 0009 9302 6909</strong><br><strong>EXP DATE: 01/28</strong><br><strong>CVV: 999</strong><br><br>Enter the following amount ($10.10) should get partial approval for ($10.00)</td></tr><tr><td><h3><img src="../../.gitbook/assets/1 Master card icon.png" alt="" data-size="original"></h3></td><td><p><strong>MC: 5146 3126 2000 0045</strong><br><strong>EXP DATE: 01/28</strong></p><p><strong>CVV: 998</strong><br><br>Enter the following amount ($11.10) should get partial approval for ($5.55)</p></td></tr></tbody></table>
 
+
+
+***
+
+
+
+### Decline Codes
+
+<table><thead><tr><th width="196">Response Code</th><th width="192">Authorization response</th><th width="357">Response definition</th></tr></thead><tbody><tr><td>00</td><td>APPROVAL</td><td>Approved and completed</td></tr><tr><td>01</td><td>CALL</td><td>Refer to issuer</td></tr><tr><td>02</td><td>CALL</td><td>Refer to issuer - Special condition</td></tr><tr><td>03</td><td>TERM ID ERROR</td><td>Invalid Merchant ID</td></tr><tr><td>04</td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr></tbody></table>
+
 {% hint style="danger" %}
 ## Decline Codes to implement <a href="#decline-codes" id="decline-codes"></a>
 {% endhint %}

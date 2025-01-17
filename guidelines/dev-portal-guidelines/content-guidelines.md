@@ -8,7 +8,7 @@ The font family selected in Gitbook settings to create this page is **Inter** - 
 
 > The administrator cannot manipulate the size and style of individual fonts.
 
-<figure><img src="../../.gitbook/assets/Typography.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Typography (1).png" alt=""><figcaption></figcaption></figure>
 
 **To build page content, we recommend using the following font types available in GitBook:**
 

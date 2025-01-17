@@ -152,7 +152,7 @@ namespace APITest
 
 ## Preventing duplicate charges
 
-<figure><img src="../../../.gitbook/assets/Typography (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Typography (2).png" alt=""><figcaption></figcaption></figure>
 
 Common issues we encounter include complaints about duplicate charges. This can happen when integrators process card-on-file transactions without proper safeguards that prevent submitting the same form multiple times.
 

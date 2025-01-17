@@ -25,10 +25,23 @@ For AVS Match use:
 
 ### Generating Declines <a href="#generating-declines" id="generating-declines"></a>
 
-* Transactions below $100.00 will receive an Approved response. A specific approval code will be returned.
-* Transactions above $100.00 will receive a Declined response. A specific decline code will be returned.
-* The transaction amount sent in the transaction request message is used to determine which error response code will be received in your response. To request an error response code, the last three digits of the transaction amount should be the response code you wish to receive.
-* For example, if you need to receive a response message with a 116 response code, then the request message could contain a transaction amount of $101.16. Likewise, if you need to receive a response message with a 318 response code, then the request message could contain a transaction amount of $403.18. A complete list of response codes can be found within Appendix A of the UMF specification in your SDK zip file.
+{% stepper %}
+{% step %}
+Transactions below $100.00 will receive an Approved response. A specific approval code will be returned.
+{% endstep %}
+
+{% step %}
+Transactions above $100.00 will receive a Declined response. A specific decline code will be returned.
+{% endstep %}
+
+{% step %}
+The transaction amount sent in the transaction request message is used to determine which error response code will be received in your response. To request an error response code, the last three digits of the transaction amount should be the response code you wish to receive.
+{% endstep %}
+
+{% step %}
+For example, if you need to receive a response message with a 116 response code, then the request message could contain a transaction amount of $101.16. Likewise, if you need to receive a response message with a 318 response code, then the request message could contain a transaction amount of $403.18. A complete list of response codes can be found within Appendix A of the UMF specification in your SDK zip file.
+{% endstep %}
+{% endstepper %}
 
 
 

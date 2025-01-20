@@ -356,6 +356,8 @@ The Client Admin Portal will allow you to create and manage all of your tokens. 
 
 Each token has a lifespan of 6 months since it was generated and will need to be replaced afterwards. This can only be done by physically logging into The Client Admin Portal. To make the process faster, The Client Admin Portal provides a way to POST new tokens to your web server to help automate a part of the renewal process.
 
+<figure><img src="../../../.gitbook/assets/Token Renewal.png" alt=""><figcaption></figcaption></figure>
+
 
 
 

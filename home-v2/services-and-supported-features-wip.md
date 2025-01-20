@@ -85,8 +85,8 @@ Ideal for businesses seeking a quick, simple way to accept online payments witho
 | Store card on file (after collecting cardholder data) | Allows merchants to securely store and reuse cardholder information for future transactions.                                                 |
 | Surcharge payments                                    | Allows businesses to add a surcharge or extra fee to the transaction amount.                                                                 |
 
-{% content-ref url="../documentation/getting-started/integration-options-v1/payform-wip.md" %}
-[payform-wip.md](../documentation/getting-started/integration-options-v1/payform-wip.md)
+{% content-ref url="../documentation/getting-started/integration-options-v1/payform-v1.md" %}
+[payform-v1.md](../documentation/getting-started/integration-options-v1/payform-v1.md)
 {% endcontent-ref %}
 
 

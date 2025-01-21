@@ -2,7 +2,7 @@
 description: Transaction and consent verification using the Virtual Terminal
 ---
 
-# Testing Overview
+# Testing Overview (v1)
 
 
 
@@ -41,7 +41,7 @@ Make sure the amount, last four digits of the credit card, card type, and expira
 There are scenarios where the transaction can get declined due to various reasons like insufficient funds, card not allowed, lost/stolen card, etc. In such cases, the transaction would appear as _FAILED_.
 
 {% hint style="info" %}
-You can find penny codes for testing declines in the [Global Payments Testing](global-payments-testing.md) section.
+You can find penny codes for testing declines in the [Global Payments Testing](global-payments-testing-v1.md) section.
 {% endhint %}
 
 <figure><img src="../../.gitbook/assets/Verifying Transactions - Testing Declines 1 (2).png" alt=""><figcaption><p>Virtual Terminal failed transaction</p></figcaption></figure>
@@ -52,24 +52,9 @@ Clicking on _Full Detail_ can show the reason for decline as highlighted below:
 
 
 
-### Testing partial authorizations <a href="#doing-a-partial-authorization-with-aspen" id="doing-a-partial-authorization-with-aspen"></a>
+### Testing partial auth <a href="#doing-a-partial-authorization-with-aspen" id="doing-a-partial-authorization-with-aspen"></a>
 
-If you need to do partial authorizations, we offer an option named `AllowPartialAuth`.
-
-{% hint style="info" %}
-To turn on `AllowPartialAuth`, send a request to the Number team.
-{% endhint %}
-
-If this option is turned on, then it is possible for a transaction to be approved for the partial amount when the card has an available balance which is less than the amount being authorized.&#x20;
-
-In this case, we will return the approved amount and the balance due. **This remaining balance could be collected in another form of payment or at a later date.**
-
-If this option is turned on, then you can monitor the following values as part of the sale response:
-
-* `IsPartialApproval` boolean
-* `ResponseAuthorizedAmount` decimal
-* `ResponseBalanceAmount` decimal
-* `ResponseApprovedAmount` decimal
+{% include "../../.gitbook/includes/segment-allow-partial-auth.md" %}
 
 #### Partial auth testing data <a href="#partial-auth-testing-data" id="partial-auth-testing-data"></a>
 

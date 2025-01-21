@@ -2,7 +2,7 @@
 icon: house-window
 layout:
   title:
-    visible: true
+    visible: false
   description:
     visible: false
   tableOfContents:
@@ -13,7 +13,9 @@ layout:
     visible: true
 ---
 
-# Embedded Payments Starts Here
+# Home
+
+## Embedded Payments Starts Here
 
 Embedded payments are at the heart of everything we do, enabling ISVs and SaaS providers to integrate tailored payment solutions directly and elegantly into their platforms.
 
@@ -58,7 +60,7 @@ Our comprehensive range of services is designed to meet various needs, ensuring 
 <table data-view="cards"><thead><tr><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>REST API</strong></td><td><a href="documentation/getting-started/integration-options-v1/rest-api-v1.md">rest-api-v1.md</a></td></tr><tr><td><strong>SOAP API</strong></td><td><a href="documentation/getting-started/integration-options-v1/soap-api-v1.md">soap-api-v1.md</a></td></tr><tr><td> <strong>iOS Mobile SDK</strong></td><td><a href="documentation/getting-started/integration-options-v1/ios-sdk-v1.md">ios-sdk-v1.md</a></td></tr><tr><td><strong>Android Mobile SDK</strong></td><td><a href="documentation/getting-started/integration-options-v1/android-sdk-v2.md">android-sdk-v2.md</a></td></tr><tr><td><strong>PayForm</strong></td><td><a href="documentation/getting-started/integration-options-v1/payform-v1.md">payform-v1.md</a></td></tr><tr><td><strong>Virtual Terminal</strong></td><td><a href="documentation/getting-started/integration-options-v1/virtual-terminal.md">virtual-terminal.md</a></td></tr><tr><td><strong>Desktop Applications</strong></td><td><a href="documentation/getting-started/integration-options-v1/custom-desktop-application.md">custom-desktop-application.md</a></td></tr><tr><td><strong>WIN SDK (Dynamic Link Libraries (DLL))</strong></td><td><a href="documentation/getting-started/integration-options-v1/dynamic-link-libraries.md">dynamic-link-libraries.md</a></td></tr><tr><td><strong>Win Services</strong></td><td></td></tr><tr><td><strong>Text2Pay</strong></td><td></td></tr></tbody></table>
 
 {% hint style="info" %}
-[Learn more](embedded-payments-starts-here/services-and-supported-features-wip.md) about services and payment methods
+[Learn more](home/services-and-supported-features-wip.md) about services and payment methods
 {% endhint %}
 
 ***

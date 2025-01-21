@@ -90,7 +90,7 @@ After launching, continuously monitor your payment processing for any issues. Re
 {% endstepper %}
 
 {% hint style="info" %}
-Technical description of integration process can be found on [Integration Checklist](../documentation/getting-started/integration-checklist.md)
+Visit the [Integration Checklist](../documentation/getting-started/integration-checklist.md) for more details.
 {% endhint %}
 
 ***

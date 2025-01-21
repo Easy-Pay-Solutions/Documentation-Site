@@ -10,7 +10,7 @@ Perfect for companies developing custom applications with embedded payment funct
 
 
 {% hint style="info" %}
-Learn more about [REST API](../documentation/getting-started/integration-options-v1/rest-api-v1.md) and [SOAP API](../documentation/getting-started/integration-options-v1/soap-api-v1.md)
+Learn more about [REST API](../documentation/getting-started/integration-options-v1/rest-api-v1.md) and [SOAP API](../documentation/getting-started/integration-options-v1/soap-api-v1.md) integrations.
 {% endhint %}
 
 **Supported features:**
@@ -38,6 +38,10 @@ Provides tools and libraries for integrating payment processing into mobile apps
 Ideal for developers aiming to offer seamless in-app payments, especially in e-commerce and subscription-based mobile applications.\
 
 
+{% hint style="info" %}
+Learn more about [iOS SDK](../documentation/getting-started/integration-options-v1/ios-sdk-v1.md) and [Android SDK](../documentation/getting-started/integration-options-v1/android-sdk-v2.md) integrations.
+{% endhint %}
+
 **Supported features:**
 
 | Feature                                               | Description                                                                                                                    |
@@ -45,14 +49,6 @@ Ideal for developers aiming to offer seamless in-app payments, especially in e-c
 | Online payments                                       | Processes payments without needing a physical point-of-sale system, using a mobile interface. (Card not present transactions)  |
 | Surcharge payments                                    | Allows businesses to add a surcharge or extra fee to the transaction amount.                                                   |
 | Store card on file (after collecting cardholder data) | Allows merchants to securely store and reuse cardholder information for future transactions - if the user saves his card data. |
-
-{% content-ref url="../documentation/getting-started/integration-options-v1/ios-sdk-v1.md" %}
-[ios-sdk-v1.md](../documentation/getting-started/integration-options-v1/ios-sdk-v1.md)
-{% endcontent-ref %}
-
-{% content-ref url="../documentation/getting-started/integration-options-v1/android-sdk-v2.md" %}
-[android-sdk-v2.md](../documentation/getting-started/integration-options-v1/android-sdk-v2.md)
-{% endcontent-ref %}
 
 ***
 
@@ -65,6 +61,10 @@ A plug-and-play payment form that can be easily embedded on websites without adv
 Ideal for businesses seeking a quick, simple way to accept online payments without extensive integration. (Can be rendered in IFRAME or top-level page or Mobile Browser)\
 
 
+{% hint style="info" %}
+Learn more about [PayForm](../documentation/getting-started/integration-options-v1/payform-v1.md) integration.
+{% endhint %}
+
 **Supported features:**
 
 | Feature                                               | Description                                                                                                                                                       |
@@ -72,10 +72,6 @@ Ideal for businesses seeking a quick, simple way to accept online payments witho
 | Online payments                                       | Provides a quick and simple way to accept payments directly through an embedded highly configurable form which can be used on your web site and/or mobile browser |
 | Store card on file (after collecting cardholder data) | Allows merchants to securely store and reuse cardholder information for future transactions.                                                                      |
 | Surcharge payments                                    | Allows businesses to add a surcharge or extra fee to the transaction amount.                                                                                      |
-
-{% content-ref url="../documentation/getting-started/integration-options-v1/payform-v1.md" %}
-[payform-v1.md](../documentation/getting-started/integration-options-v1/payform-v1.md)
-{% endcontent-ref %}
 
 ***
 
@@ -87,6 +83,10 @@ Web application that provides comprehensive credit card processing functionality
 **Use Cases:**\
 It is ideal for in-person/card-present transactions, allowing merchants to efficiently process payments directly at the point of sale with the WIN service installed.&#x20;
 
+{% hint style="info" %}
+Learn more about [Virtual Terminal](../documentation/getting-started/integration-options-v1/virtual-terminal.md) integration.
+{% endhint %}
+
 **Supported features:**
 
 | Feature                             | Description                                                                                                                                                                                                                        |
@@ -101,10 +101,6 @@ It is ideal for in-person/card-present transactions, allowing merchants to effic
 | Crediting (Refunds)                 | The process of returning funds to a customer's account after a transaction has been completed. This typically occurs when a customer returns a product or disputes a charge, and the merchant agrees to reimburse the amount paid. |
 | Settlerments                        | Finalizing a transaction by transferring funds from the buyer to the seller.                                                                                                                                                       |
 | Reporting                           | Involves generating summaries and analyses of transaction data to help merchants track financial activities, manage cash flow, and ensure compliance.                                                                              |
-
-{% content-ref url="../documentation/getting-started/integration-options-v1/virtual-terminal.md" %}
-[virtual-terminal.md](../documentation/getting-started/integration-options-v1/virtual-terminal.md)
-{% endcontent-ref %}
 
 ***
 
@@ -116,6 +112,10 @@ Installed on a user's computer for online payment processing.
 **Use Cases:**\
 Beneficial for businesses who would rather not log into a browser application.
 
+{% hint style="info" %}
+Learn more about [Desktop Applications](../documentation/getting-started/integration-options-v1/custom-desktop-application.md) integration.
+{% endhint %}
+
 **Supported features:**
 
 | Feature                             | Description                                                                                                                                                                                                                        |
@@ -131,10 +131,6 @@ Beneficial for businesses who would rather not log into a browser application.
 | Settlerments                        | Finalizing a transaction by transferring funds from the buyer to the seller.                                                                                                                                                       |
 | Reporting                           | Involves generating summaries and analyses of transaction data to help merchants track financial activities, manage cash flow, and ensure compliance.                                                                              |
 
-{% content-ref url="../documentation/getting-started/integration-options-v1/custom-desktop-application.md" %}
-[custom-desktop-application.md](../documentation/getting-started/integration-options-v1/custom-desktop-application.md)
-{% endcontent-ref %}
-
 ***
 
 ### WIN SDK (Dynamic Link Libraries (DLL))
@@ -145,6 +141,10 @@ Used by desktop applications to integrate payment functions.
 **Use Cases:**\
 For developers integrating payment functionalities into desktop software.\
 
+
+{% hint style="info" %}
+Learn more about [WIN SDK DLL](../documentation/getting-started/integration-options-v1/dynamic-link-libraries.md) integration.
+{% endhint %}
 
 **Supported features:**
 
@@ -158,10 +158,6 @@ For developers integrating payment functionalities into desktop software.\
 | Recurring payments (Automated Payment Plans)  | Automates payment plans using Dynamic Link Libraries (DLL)                                             |
 | Surcharge payments                            | Allows businesses to add a surcharge or extra fee to the transaction amount.                           |
 
-{% content-ref url="../documentation/getting-started/integration-options-v1/dynamic-link-libraries.md" %}
-[dynamic-link-libraries.md](../documentation/getting-started/integration-options-v1/dynamic-link-libraries.md)
-{% endcontent-ref %}
-
 ***
 
 ### Win Services:
@@ -171,6 +167,10 @@ Installed in order to support a local Verifone card reader.
 
 **Use Cases:**\
 Ideal for continuous or automated payment processing within any browser application.
+
+{% hint style="info" %}
+Learn more about Win Services integration.
+{% endhint %}
 
 **Supported features:**
 

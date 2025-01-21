@@ -4,7 +4,7 @@ description: Getting started with the REST API for Number
 
 # REST API (v1)
 
-Our REST API allows full integration of Number services with a high degree of customization. You can use our [REST API reference](../../../api-reference/rest-api-v2/) to learn about specific methods in the API.
+Our REST API allows full integration of Number services with a high degree of customization. You can use our [REST API reference](../../../api-reference/rest-api-v3/) to learn about specific methods in the API.
 
 Before you continue this section, we recommend reading sections about [authentication](../basics-v1/api-authentication-v3.md), [best practices](../basics-v1/api-best-practices-v2.md), and [input validation](../basics-v1/api-input-validation-v1.md).
 
@@ -14,7 +14,7 @@ Before you continue this section, we recommend reading sections about [authentic
 
 ### Authenticate
 
-An example of using the [<mark style="color:green;">`Authenticate`</mark>](../../../api-reference/rest-api-v2/authentication-v2.md#apicardprocrest-v1.0.0-authenticate) method.
+An example of using the [<mark style="color:green;">`Authenticate`</mark>](../../../api-reference/rest-api-v3/authentication-v2.md#apicardprocrest-v1.0.0-authenticate) method.
 
 {% tabs %}
 {% tab title="C#" %}
@@ -196,7 +196,7 @@ http.createServer((req, res) => {
 
 ### Process Annual Consent <a href="#process-annual-consent" id="process-annual-consent"></a>
 
-An example of using [<mark style="color:green;">`ConsentAnnual_ProcPayment`</mark>](../../../api-reference/rest-api-v2/consent-annual-v2/#apicardprocrest-v1.0.0-consentannual-procpayment) method.
+An example of using [<mark style="color:green;">`ConsentAnnual_ProcPayment`</mark>](../../../api-reference/rest-api-v3/consent-annual-v2/#apicardprocrest-v1.0.0-consentannual-procpayment) method.
 
 {% tabs %}
 {% tab title="C#" %}
@@ -382,7 +382,7 @@ http.createServer((req, res) => {
 
 ### Void Transaction <a href="#void-transaction" id="void-transaction"></a>
 
-An example of using [<mark style="color:green;">`CardSale_Void`</mark>](../../../api-reference/rest-api-v2/card-operations-v2/#apicardprocrest-v1.0.0-cardsale-void) method.
+An example of using [<mark style="color:green;">`CardSale_Void`</mark>](../../../api-reference/rest-api-v3/card-operations-v2/#apicardprocrest-v1.0.0-cardsale-void) method.
 
 {% tabs %}
 {% tab title="C#" %}
@@ -456,7 +456,7 @@ public static async Task TransactionVoid(string sessKey, int txID)
 
 ### Credit Transaction <a href="#credit-transaction" id="credit-transaction"></a>
 
-An example of using [<mark style="color:green;">`CardSale_ApplyCredit`</mark>](../../../api-reference/rest-api-v2/card-operations-v2/#apicardprocrest-v1.0.0-cardsale-applycredit) method.
+An example of using [<mark style="color:green;">`CardSale_ApplyCredit`</mark>](../../../api-reference/rest-api-v3/card-operations-v2/#apicardprocrest-v1.0.0-cardsale-applycredit) method.
 
 
 
@@ -533,7 +533,7 @@ public static async Task TransactionCredit(
 
 ### Query Transaction <a href="#query-transaction" id="query-transaction"></a>
 
-An example of using [<mark style="color:green;">`Query_Transaction`</mark>](../../../api-reference/rest-api-v2/query-v2.md#apicardprocrest-v1.0.0-query-transaction) method.
+An example of using [<mark style="color:green;">`Query_Transaction`</mark>](../../../api-reference/rest-api-v3/query-v2.md#apicardprocrest-v1.0.0-query-transaction) method.
 
 {% tabs %}
 {% tab title="C#" %}
@@ -593,7 +593,7 @@ public static async Task TransactionQuery(string sessKey, string query)
 
 ### Consent General Query <a href="#consent-general-query" id="consent-general-query"></a>
 
-An example of using [<mark style="color:green;">`Query_ConsentGeneral`</mark>](../../../api-reference/rest-api-v2/query-v2.md#apicardprocrest-v1.0.0-query-consentgeneral) method.
+An example of using [<mark style="color:green;">`Query_ConsentGeneral`</mark>](../../../api-reference/rest-api-v3/query-v2.md#apicardprocrest-v1.0.0-query-consentgeneral) method.
 
 {% tabs %}
 {% tab title="C#" %}
@@ -654,7 +654,7 @@ public static async Task ConsentGeneralQuery(string sessKey, string query)
 
 ### Generate Receipt <a href="#generate-receipt" id="generate-receipt"></a>
 
-An example of using [<mark style="color:green;">`ReceiptGenerate`</mark>](../../../api-reference/rest-api-v2/receipt-v2.md#apicardprocrest-v1.0.0-receipt-receiptgenerate) method.
+An example of using [<mark style="color:green;">`ReceiptGenerate`</mark>](../../../api-reference/rest-api-v3/receipt-v2.md#apicardprocrest-v1.0.0-receipt-receiptgenerate) method.
 
 {% tabs %}
 {% tab title="C#" %}

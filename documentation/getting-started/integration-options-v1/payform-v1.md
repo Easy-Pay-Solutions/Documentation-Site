@@ -100,7 +100,7 @@ Additionally, in this part of the builder, you can set values for the hidden con
 
 ## PayForm API request
 
-Once you have the request ready, you can call our REST API to generate the PayForm and the `PaymentURL` that you can use to access it. Here's the reference to [Initialize PayForm](../../../api-reference/rest-api-v2/payform-v3.md#payform-initialize) endpoint.
+Once you have the request ready, you can call our REST API to generate the PayForm and the `PaymentURL` that you can use to access it. Here's the reference to [Initialize PayForm](../../../api-reference/rest-api-v3/payform-v3.md#payform-initialize) endpoint.
 
 Here's an example PayForm generated using the endpoint:
 
@@ -180,7 +180,7 @@ In case you're not using encryption, we recommend **validating the information**
 {% step %}
 #### Retrieve and validate the transaction details
 
-Using the `TransactionID` returned by the PayForm, you can call our REST API to [retrieve full transaction details](../../../api-reference/rest-api-v2/query-v2.md#apicardprocrest-v1.0.0-query-transaction_fulldetail) (or [query transaction - full](../../../api-reference/soap-api-v1/transaction-v1.md#query-transaction-full) when using the SOAP API) to get all of the information regarding the transaction.
+Using the `TransactionID` returned by the PayForm, you can call our REST API to [retrieve full transaction details](../../../api-reference/rest-api-v3/query-v2.md#apicardprocrest-v1.0.0-query-transaction_fulldetail) (or [query transaction - full](../../../api-reference/soap-api-v2/transaction-v1.md#query-transaction-full) when using the SOAP API) to get all of the information regarding the transaction.
 
 Then, you can confirm if a transaction with the selected ID exists, and if the `CreatedOn` date roughly matches the current time or the time the PayForm was submitted.
 {% endstep %}
@@ -188,7 +188,7 @@ Then, you can confirm if a transaction with the selected ID exists, and if the `
 {% step %}
 #### Retrieve and validate the consent details (if the card was saved)
 
-If `ConsentID` was returned alongside the `TransactionID`, you can use the REST API to [get full detail of annual consent](../../../api-reference/rest-api-v2/query-v2.md#apicardprocrest-v1.0.0-query-consentannual_fulldetail) (or [query annual consent - full](../../../api-reference/soap-api-v1/consent-annual-v1/query-annual-consent-v1.md#query-annual-consent-full) when using the SOAP API) to get all of the information regarding the consent.
+If `ConsentID` was returned alongside the `TransactionID`, you can use the REST API to [get full detail of annual consent](../../../api-reference/rest-api-v3/query-v2.md#apicardprocrest-v1.0.0-query-consentannual_fulldetail) (or [query annual consent - full](../../../api-reference/soap-api-v2/consent-annual-v1/query-annual-consent-v1.md#query-annual-consent-full) when using the SOAP API) to get all of the information regarding the consent.
 
 Then, you can confirm if a consent with the selected ID exists, and if the `CreatedOn` date roughly matches the current time or the time the PayForm was submitted.
 {% endstep %}
@@ -268,11 +268,11 @@ TXID|174|CID|213
 Having the `TransactionID` and `ConsentID`, you can use our REST API to:
 
 * Gather additional informating concerning the sale;
-  * For the REST API, you can use [full transaction details](../../../api-reference/rest-api-v2/query-v2.md#apicardprocrest-v1.0.0-query-transaction_fulldetail), and [full consent details](../../../api-reference/rest-api-v2/query-v2.md#apicardprocrest-v1.0.0-query-consentannual_fulldetail) methods;
-  * For the SOAP API, you can use [query transaction - full](../../../api-reference/soap-api-v1/transaction-v1.md#query-transaction-full), and [query annual consent - full](../../../api-reference/soap-api-v1/consent-annual-v1/query-annual-consent-v1.md#query-annual-consent-full);
+  * For the REST API, you can use [full transaction details](../../../api-reference/rest-api-v3/query-v2.md#apicardprocrest-v1.0.0-query-transaction_fulldetail), and [full consent details](../../../api-reference/rest-api-v3/query-v2.md#apicardprocrest-v1.0.0-query-consentannual_fulldetail) methods;
+  * For the SOAP API, you can use [query transaction - full](../../../api-reference/soap-api-v2/transaction-v1.md#query-transaction-full), and [query annual consent - full](../../../api-reference/soap-api-v2/consent-annual-v1/query-annual-consent-v1.md#query-annual-consent-full);
 * Provide a receipt;
-  * For the REST API, you can use [generate a transaction receipt](../../../api-reference/rest-api-v2/receipt-v2.md#apicardprocrest-v1.0.0-receipt-receiptgenerate) method;
-  * For the SOAP API, you can use [generate receipt](../../../api-reference/soap-api-v1/receipt-v1.md#generate-receipt) method.
+  * For the REST API, you can use [generate a transaction receipt](../../../api-reference/rest-api-v3/receipt-v2.md#apicardprocrest-v1.0.0-receipt-receiptgenerate) method;
+  * For the SOAP API, you can use [generate receipt](../../../api-reference/soap-api-v2/receipt-v1.md#generate-receipt) method.
 
 
 

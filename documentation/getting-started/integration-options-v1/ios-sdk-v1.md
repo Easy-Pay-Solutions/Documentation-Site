@@ -217,7 +217,7 @@ EasyPay.apiClient.chargeCreditCard(request: CardSaleManualRequest,
 #### **Response body**
 
 * `CardSaleManualResponseModel`
-  * \[See fields listed in the REST API reference - [Process a manual card sale](../../../api-reference/rest-api-v2/card-operations-v2/process-a-card-sale-v2.md#apicardprocrest-v1.0.0-cardsale-manual)]
+  * \[See fields listed in the REST API reference - [Process a manual card sale](../../../api-reference/rest-api-v3/card-operations-v2/process-a-card-sale-v2.md#apicardprocrest-v1.0.0-cardsale-manual)]
 
 ### 2. List Annual Consents (ConsentAnnual\_Query)
 
@@ -242,7 +242,7 @@ EasyPay.apiClient.listAnnualConsents(request: ConsentAnnualListingRequest,
 #### **Response body**
 
 * `ConsentAnnualListingResponseModel`
-  * \[See fields listed in the REST API reference - [Query annual consent](../../../api-reference/rest-api-v2/query-v2.md#apicardprocrest-v1.0.0-consentannual-queryapr)]
+  * \[See fields listed in the REST API reference - [Query annual consent](../../../api-reference/rest-api-v3/query-v2.md#apicardprocrest-v1.0.0-consentannual-queryapr)]
 
 ### 3. Create Annual Consent (ConsentAnnual\_Create\_MAN)
 
@@ -264,7 +264,7 @@ EasyPay.apiClient.createAnnualConsent(request: CreateConsentAnnualRequest,
 #### **Response body**
 
 * `CreateConsentAnnualResponseModel`
-  * \[See fields listed in the REST API reference - [Create an annual consent with manual card entry](../../../api-reference/rest-api-v2/consent-annual-v2/create-consent-v2.md#apicardprocrest-v1.0.0-consentannual-create_man)]
+  * \[See fields listed in the REST API reference - [Create an annual consent with manual card entry](../../../api-reference/rest-api-v3/consent-annual-v2/create-consent-v2.md#apicardprocrest-v1.0.0-consentannual-create_man)]
 
 ### 4. Cancel Annual Consent (ConsentAnnual\_Cancel)
 
@@ -283,7 +283,7 @@ EasyPay.apiClient.cancelAnnualConsent(request: CancelConsentAnnualRequest,
 #### **Response body**
 
 * `CancelConsentAnnualResponseModel`
-  * \[See fields listed in the REST API reference - [Cancel a consent (Card on file)](../../../api-reference/rest-api-v2/consent-annual-v2/#apicardprocrest-v1.0.0-consentannual-cancel)]
+  * \[See fields listed in the REST API reference - [Cancel a consent (Card on file)](../../../api-reference/rest-api-v3/consent-annual-v2/#apicardprocrest-v1.0.0-consentannual-cancel)]
 
 ### 5. Process Payment Annual Consent (ConsentAnnual\_ProcPayment)
 
@@ -303,7 +303,7 @@ EasyPay.apiClient.processPaymentAnnualConsent(request: ProcessPaymentAnnualReque
 #### Response body
 
 * `ProcessPaymentAnnualResponseModel`
-  * \[See fields listed in the REST API reference - [Process a payment using a stored card consent](../../../api-reference/rest-api-v2/consent-annual-v2/#apicardprocrest-v1.0.0-consentannual-procpayment)]
+  * \[See fields listed in the REST API reference - [Process a payment using a stored card consent](../../../api-reference/rest-api-v3/consent-annual-v2/#apicardprocrest-v1.0.0-consentannual-procpayment)]
 
 
 

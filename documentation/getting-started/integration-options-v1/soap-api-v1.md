@@ -4,7 +4,7 @@ description: Getting started with SOAP API for Number
 
 # SOAP API (v1)
 
-Our SOAP API allows full integration of Number services with a high degree of customization. You can use our [SOAP API reference](../../../api-reference/soap-api-v1/) to learn about specific methods in the API.
+Our SOAP API allows full integration of Number services with a high degree of customization. You can use our [SOAP API reference](../../../api-reference/soap-api-v2/) to learn about specific methods in the API.
 
 Before you continue this section, we recommend reading sections about [authentication](../basics-v1/api-authentication-v3.md), [best practices](../basics-v1/api-best-practices-v2.md), and [input validation](../basics-v1/api-input-validation-v1.md).
 
@@ -109,7 +109,7 @@ End Class
 
 ### Authenticate
 
-An example of using the [<mark style="color:green;">`Authenticate`</mark>](../../../api-reference/soap-api-v1/authentication-v1.md#authenticate) method.
+An example of using the [<mark style="color:green;">`Authenticate`</mark>](../../../api-reference/soap-api-v2/authentication-v1.md#authenticate) method.
 
 {% tabs %}
 {% tab title="C# (WCF)" %}
@@ -182,7 +182,7 @@ private void Authenticate(string acctCode, string token)
 
 ### Process Annual Consent
 
-An example of using [<mark style="color:green;">`ConsentAnnual_ProcPayment_Alt`</mark>](../../../api-reference/soap-api-v1/consent-annual-v1/process-annual-consent-v1.md#process-annual-consent-alternative) method
+An example of using [<mark style="color:green;">`ConsentAnnual_ProcPayment_Alt`</mark>](../../../api-reference/soap-api-v2/consent-annual-v1/process-annual-consent-v1.md#process-annual-consent-alternative) method
 
 {% tabs %}
 {% tab title="C# (WCF)" %}
@@ -259,7 +259,7 @@ private void ProcessConsentAnnual(string sessKey,
 
 ### Void Transaction
 
-An example of using [<mark style="color:green;">`Transaction_Void`</mark>](../../../api-reference/soap-api-v1/transaction-v1.md#void-transaction) method.
+An example of using [<mark style="color:green;">`Transaction_Void`</mark>](../../../api-reference/soap-api-v2/transaction-v1.md#void-transaction) method.
 
 {% tabs %}
 {% tab title="C# (WCF)" %}
@@ -331,7 +331,7 @@ private void Void(string sessKey, int txID)
 
 ### Credit Transaction
 
-An example of using [<mark style="color:green;">`Transaction_ApplyCredit`</mark>](../../../api-reference/soap-api-v1/transaction-v1.md#apply-transaction-credit) method.
+An example of using [<mark style="color:green;">`Transaction_ApplyCredit`</mark>](../../../api-reference/soap-api-v2/transaction-v1.md#apply-transaction-credit) method.
 
 {% tabs %}
 {% tab title="C# (WCF)" %}
@@ -403,7 +403,7 @@ private void Credit(string sessKey, int txID, decimal creditAmount)
 
 ### Query Transaction
 
-An example of using [<mark style="color:green;">`Transaction_Query`</mark>](../../../api-reference/soap-api-v1/transaction-v1.md#query-transactions) method.
+An example of using [<mark style="color:green;">`Transaction_Query`</mark>](../../../api-reference/soap-api-v2/transaction-v1.md#query-transactions) method.
 
 {% tabs %}
 {% tab title="C# (WCF)" %}
@@ -467,7 +467,7 @@ private void TransactionQuery(string sessKey, string query)
 
 ### Consent General Query
 
-An example of using [<mark style="color:green;">`ConsentGeneral_Query`</mark>](../../../api-reference/soap-api-v1/consent-general-v1.md#query-consent) method
+An example of using [<mark style="color:green;">`ConsentGeneral_Query`</mark>](../../../api-reference/soap-api-v2/consent-general-v1.md#query-consent) method
 
 {% tabs %}
 {% tab title="C# (WCF)" %}
@@ -530,7 +530,7 @@ private void ConsentGeneralQuery(string sessKey, string query)
 
 ### Generate Receipt
 
-An example of using [<mark style="color:green;">`ReceiptGenerate`</mark>](../../../api-reference/soap-api-v1/receipt-v1.md#generate-receipt) method.
+An example of using [<mark style="color:green;">`ReceiptGenerate`</mark>](../../../api-reference/soap-api-v2/receipt-v1.md#generate-receipt) method.
 
 {% tabs %}
 {% tab title="C# (WCF)" %}

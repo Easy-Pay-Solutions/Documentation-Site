@@ -1,15 +1,15 @@
 ---
-description: The API reference for the SOAP API
 icon: object-intersect
+description: The API reference for the SOAP API
 ---
 
-# SOAP API (v1)
+# SOAP API (v2)
 
 <figure><img src="../../.gitbook/assets/SOAP API B.png" alt=""><figcaption></figcaption></figure>
 
-Our SOAP API is continuously maintained and can be used as an alternative to the REST API \[link] and our other integration options \[link]. You can access everything via the CardProcAPI service.
+Our SOAP API is continuously maintained and can be used as an alternative to the [REST API](../rest-api-v3/) and our [other integration options](../../documentation/getting-started/integration-options-v1/). You can access everything via the CardProcAPI service.
 
-We recommend following our guide \[link] and using [svcutil](https://learn.microsoft.com/en-us/dotnet/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe) to start using the SOAP API. This way you will have ready-made CardProcessClient class to help you use the service.
+We recommend following [our SOAP integration guide](../../documentation/getting-started/integration-options-v1/soap-api-v1.md) and using [svcutil](https://learn.microsoft.com/en-us/dotnet/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe) to start using the SOAP API. This way you will have ready-made CardProcessClient class to help you use the service.
 
 {% tabs %}
 {% tab title="C#" %}

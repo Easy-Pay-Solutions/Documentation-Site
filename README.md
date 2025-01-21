@@ -25,20 +25,6 @@ We understand the critical nature of payment processing and are committed to mai
 [customer-support](help/customer-support/)
 {% endcontent-ref %}
 
-
-
-***
-
-
-
-### AI assistant
-
-Talk to our AI assistant. They are available 24/7 and will be happy to answer any questions you may have about Number integration.
-
-<mark style="color:blue;">Ask AI Now</mark>&#x20;
-
-<figure><img src=".gitbook/assets/AI Assistant.png" alt=""><figcaption></figcaption></figure>
-
 ***
 
 ### Ease of integration

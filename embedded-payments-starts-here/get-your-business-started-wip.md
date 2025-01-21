@@ -2,10 +2,6 @@
 
 At Number, we know that running a business means juggling countless tasks. That's why we've made our payment integration as simple and efficient as possible, so you can focus on what really matters—growing your business.
 
-#### If you need any help, our friendly account managers are just a call or email away:
-
-<table data-card-size="large" data-view="cards"><thead><tr><th></th><th data-hidden data-card-cover data-type="files"></th></tr></thead><tbody><tr><td><strong>John Doe</strong><br>Email: <a href="mailto:john.doe@numbertech.com">john.doe@numbertech.com</a><br>Phone: (123) 456-7890</td><td><a href="../.gitbook/assets/Account manager 1.png">Account manager 1.png</a></td></tr><tr><td><strong>Christine Doe</strong><br>Email: <a href="mailto:john.doe@numbertech.com">john.doe@numbertech.com</a><br>Phone: (123) 456-7890</td><td><a href="../.gitbook/assets/Account manager 2 (1).png">Account manager 2 (1).png</a></td></tr></tbody></table>
-
 {% content-ref url="../documentation/developer-quickstart/" %}
 [developer-quickstart](../documentation/developer-quickstart/)
 {% endcontent-ref %}
@@ -18,9 +14,15 @@ To get your business started with Number, follow these general steps for impleme
 
 {% stepper %}
 {% step %}
-#### **Create an Number Account**:
+#### **Create a Number Account**:
 
-Sign up for an Number Sandbox account to gain access to the platform and its features. Ensure you have all necessary business information ready for registration.
+Sign up for a Number Sandbox account to gain access to the platform and its features. Ensure you have all necessary business information ready for registration.
+
+{% hint style="info" %}
+Contact us to sign up for a Number Sandbox account:
+
+[partners@number.tech](mailto:partners@number.tech)  /  (866) 927-9344
+{% endhint %}
 {% endstep %}
 
 {% step %}
@@ -86,6 +88,10 @@ Once testing is complete and you are satisfied with the implementation, switch t
 After launching, continuously monitor your payment processing for any issues. Regularly check for updates from Number and maintain your integration to ensure compliance and security.
 {% endstep %}
 {% endstepper %}
+
+{% hint style="info" %}
+Technical description of integration process can be found on [Integration Checklist](../documentation/getting-started/integration-checklist.md)
+{% endhint %}
 
 ***
 

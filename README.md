@@ -67,7 +67,17 @@ Our comprehensive range of services is designed to meet various needs, ensuring 
 
 Explore our diverse payment methods for a seamless experience:
 
-<table data-view="cards"><thead><tr><th></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Online payments</strong></td><td><a href=".gitbook/assets/1 Online payments.png">1 Online payments.png</a></td><td></td></tr><tr><td><strong>Card present payments</strong></td><td><a href=".gitbook/assets/2 Card present.png">2 Card present.png</a></td><td><a href="documentation/card-present-payments.md">card-present-payments.md</a></td></tr><tr><td><strong>Store card on file</strong></td><td><a href=".gitbook/assets/3 Store card on file.png">3 Store card on file.png</a></td><td><a href="documentation/store-card-on-file.md">store-card-on-file.md</a></td></tr><tr><td><strong>Surcharge payments</strong></td><td><a href=".gitbook/assets/4 Surcharge payments.png">4 Surcharge payments.png</a></td><td><a href="documentation/surcharge-payments.md">surcharge-payments.md</a></td></tr><tr><td><strong>Recurring payments</strong></td><td><a href=".gitbook/assets/5 Recurring payments.png">5 Recurring payments.png</a></td><td></td></tr><tr><td><strong>Authorizing payments</strong></td><td><a href=".gitbook/assets/6 Authorizing payments.png">6 Authorizing payments.png</a></td><td></td></tr><tr><td><strong>Voiding</strong></td><td><a href=".gitbook/assets/7 Voiding.png">7 Voiding.png</a></td><td></td></tr><tr><td><strong>Crediting (Refunds)</strong></td><td><a href=".gitbook/assets/8 Crediting (Refunds).png">8 Crediting (Refunds).png</a></td><td></td></tr><tr><td><strong>Settlements</strong></td><td><a href=".gitbook/assets/9 Settlements.png">9 Settlements.png</a></td><td></td></tr><tr><td><strong>Reporting</strong></td><td><a href=".gitbook/assets/10 Reporting.png">10 Reporting.png</a></td><td></td></tr><tr><td><strong>Manually keyed transactions</strong></td><td><a href=".gitbook/assets/Manually keyed transactions.png">Manually keyed transactions.png</a></td><td></td></tr></tbody></table>
+* Online payments
+* Card present payments
+* Store card on file
+* Surcharge payments
+* Recurring payments
+* Authorizing payments
+* Voiding
+* Crediting (Refunds)
+* Settlements
+* Reporting
+* Manual keyed transactions
 
 ***
 

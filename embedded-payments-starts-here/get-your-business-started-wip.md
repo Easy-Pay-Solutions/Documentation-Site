@@ -36,8 +36,8 @@ After account creation, retrieve your API key, HMAC secret, and any other necess
 
 Decide on the integration method that best suits your business needs. Options include:
 
-* **Web Widgets**: Use Number's pre-built widgets for collecting payment information directly on your website.
 * **PayForm**: Utilize the Number API for a customizable payment form that can be integrated into your site.
+* **Web Widgets**: Use Number's pre-built widgets for collecting payment information directly on your website.
 * **Virtual Terminal**: Use the web application for processing payments directly through a browser.
 * **Mobile SDK**: If you have a mobile application, consider integrating the Number SDK for mobile payments.
 

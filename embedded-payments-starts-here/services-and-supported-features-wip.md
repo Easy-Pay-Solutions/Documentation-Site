@@ -27,6 +27,8 @@ Learn more about [REST API](../documentation/getting-started/integration-options
 | Settlerments                       | Finalizing a transaction by transferring funds from the buyer to the seller.                                                                                                                                                     |
 | Reporting                          | Involves generating summaries and analyses of transaction data to help merchants track financial activities, manage cash flow, and ensure compliance.                                                                            |
 
+
+
 ***
 
 ### iOS/Android Mobile SDK
@@ -50,6 +52,8 @@ Learn more about [iOS SDK](../documentation/getting-started/integration-options-
 | Surcharge payments                                    | Allows businesses to add a surcharge or extra fee to the transaction amount.                                                   |
 | Store card on file (after collecting cardholder data) | Allows merchants to securely store and reuse cardholder information for future transactions - if the user saves his card data. |
 
+
+
 ***
 
 ### PayForm
@@ -72,6 +76,8 @@ Learn more about [PayForm](../documentation/getting-started/integration-options-
 | Online payments                                       | Provides a quick and simple way to accept payments directly through an embedded highly configurable form which can be used on your web site and/or mobile browser |
 | Store card on file (after collecting cardholder data) | Allows merchants to securely store and reuse cardholder information for future transactions.                                                                      |
 | Surcharge payments                                    | Allows businesses to add a surcharge or extra fee to the transaction amount.                                                                                      |
+
+
 
 ***
 
@@ -102,6 +108,8 @@ Learn more about [Virtual Terminal](../documentation/getting-started/integration
 | Settlerments                        | Finalizing a transaction by transferring funds from the buyer to the seller.                                                                                                                                                       |
 | Reporting                           | Involves generating summaries and analyses of transaction data to help merchants track financial activities, manage cash flow, and ensure compliance.                                                                              |
 
+
+
 ***
 
 ### Desktop Applications
@@ -131,6 +139,8 @@ Learn more about [Desktop Applications](../documentation/getting-started/integra
 | Settlerments                        | Finalizing a transaction by transferring funds from the buyer to the seller.                                                                                                                                                       |
 | Reporting                           | Involves generating summaries and analyses of transaction data to help merchants track financial activities, manage cash flow, and ensure compliance.                                                                              |
 
+
+
 ***
 
 ### WIN SDK (Dynamic Link Libraries (DLL))
@@ -158,6 +168,8 @@ Learn more about [WIN SDK DLL](../documentation/getting-started/integration-opti
 | Recurring payments (Automated Payment Plans)  | Automates payment plans using Dynamic Link Libraries (DLL)                                             |
 | Surcharge payments                            | Allows businesses to add a surcharge or extra fee to the transaction amount.                           |
 
+
+
 ***
 
 ### Win Services:
@@ -183,6 +195,10 @@ Learn more about Win Services integration.
 | Authorizing Payments                          | Verifies cardholder information and checks funds to approve transactions securely.                                    |
 | Store card on file (via integration with API) | Allows secure storage of card details for future transactions.                                                        |
 | Recurring payments (Automated Payment Plans)  | Automates payment plans using Dynamic Link Libraries (DLL)                                                            |
+
+
+
+***
 
 ### Text2Pay
 

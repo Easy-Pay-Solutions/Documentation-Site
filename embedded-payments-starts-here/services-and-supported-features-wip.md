@@ -193,6 +193,10 @@ Allows merchants to send payment reminders and links via SMS or email.
 Ideal for reminding customers about upcoming payments.\
 
 
+{% hint style="info" %}
+Learn more about Text2Pay integration.
+{% endhint %}
+
 **Supported features:**
 
 | Feature                                       | Description                                                                        |

@@ -37,7 +37,7 @@
 * [Store Card on File](documentation/store-card-on-file.md)
 * [Surcharge Payments](documentation/surcharge-payments.md)
 * [Testing](documentation/testing/README.md)
-  * [Testing overview](documentation/testing/testing-overview.md)
+  * [Testing Overview](documentation/testing/testing-overview.md)
   * [Global Payments Testing](documentation/testing/global-payments-testing.md)
   * [First Data Testing](documentation/testing/first-data-testing.md)
   * [ACH Testing](documentation/testing/ach-testing.md)

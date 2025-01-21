@@ -1,9 +1,9 @@
 # Table of contents
 
-* [Home](README.md)
-  * [Get your business started (WIP)](home/get-your-business-started-wip.md)
-  * [Services and supported features (WIP)](home/services-and-supported-features-wip.md)
-  * [Supported credit cards](home/supported-credit-cards.md)
+* [Embedded Payments Starts Here](README.md)
+  * [Get your business started (WIP)](embedded-payments-starts-here/get-your-business-started-wip.md)
+  * [Services and supported features (WIP)](embedded-payments-starts-here/services-and-supported-features-wip.md)
+  * [Supported credit cards](embedded-payments-starts-here/supported-credit-cards.md)
 * [Home (v2)](home-v2/README.md)
   * [Services and supported features (WIP)](home-v2/services-and-supported-features-wip.md)
 

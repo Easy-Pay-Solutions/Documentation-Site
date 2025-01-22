@@ -14,19 +14,19 @@ When consuming the API response for any endpoint, you can follow a similar forma
 
 {% stepper %}
 {% step %}
-### Catch all exceptions when calling the API
+#### Catch all exceptions when calling the API
 
 These can be a result of problems communicating with our service or problems executing the client-side code.
 {% endstep %}
 
 {% step %}
-### Check for a null response
+#### Check for a null response
 
 Depending on your implementation, you might receive a null response indicating an unexpected error instead of an exception.
 {% endstep %}
 
 {% step %}
-### Check the value of `FunctionOk`
+#### Check the value of `FunctionOk`
 
 This boolean flag is included in all API responses and indicates whether the operation executed without exceptions on our servers.&#x20;
 
@@ -34,7 +34,7 @@ If the value of `FunctionOk` is false, it indicates an error which was handled o
 {% endstep %}
 
 {% step %}
-### Check other success flags such as `AuthSuccess` or `TxApproved`
+#### Check other success flags such as `AuthSuccess` or `TxApproved`
 
 These boolean flags will be included depending on the operation, and they indicate whether the operation was approved. You should use the friendly response message provided in the `RspMsg` field to display more information to the user.
 

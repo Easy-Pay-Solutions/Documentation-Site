@@ -16,23 +16,23 @@ You get control of all the operational and design parameters of the PayForm:
 
 {% stepper %}
 {% step %}
-#### From styling
+From styling
 {% endstep %}
 
 {% step %}
-#### Field visibility and read-only parameters;
+Field visibility and read-only parameters;
 {% endstep %}
 
 {% step %}
-#### Initial data (cardholder names, $ amounts, etc.);
+Initial data (cardholder names, $ amounts, etc.);
 {% endstep %}
 
 {% step %}
-#### User-defined data (PatientID, ReferenceID, etc.);
+User-defined data (PatientID, ReferenceID, etc.);
 {% endstep %}
 
 {% step %}
-#### Defined methods for receiving a real-time update after transactions are authorized.
+Defined methods for receiving a real-time update after transactions are authorized.
 {% endstep %}
 {% endstepper %}
 

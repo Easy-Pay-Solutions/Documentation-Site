@@ -372,22 +372,15 @@ If there is no `TxApproved` flag, then you can omit the last evaluation. More in
 
 ### RsaCertificateError
 
-<table><thead><tr><th width="135"></th><th>Error name</th><th>Suggested solution</th></tr></thead><tbody><tr><td><img src="../../../.gitbook/assets/Visa icon 3 (1).png" alt="" data-size="original"></td><td><code>failedToLoadCertificateData</code></td><td>Check certificate status, wait until the full download before proceeding with calls, try to download it again manually.</td></tr><tr><td></td><td><code>failedToCreateCertificate</code></td><td>Contact Number.</td></tr><tr><td></td><td><code>failedToExtractPublicKey</code></td><td>Contact Number.</td></tr></tbody></table>
+<table><thead><tr><th width="110"></th><th>Error name</th><th>Suggested solution</th></tr></thead><tbody><tr><td><img src="../../../.gitbook/assets/Visa icon 3 (1).png" alt="" data-size="original"></td><td><code>failedToLoadCertificateData</code></td><td>Check certificate status, wait until the full download before proceeding with calls, try to download it again manually.</td></tr><tr><td><img src="../../../.gitbook/assets/Visa icon 3 (1).png" alt="" data-size="original"></td><td><code>failedToCreateCertificate</code></td><td>Contact Number.</td></tr><tr><td><img src="../../../.gitbook/assets/Visa icon 3 (1).png" alt="" data-size="original"></td><td><code>failedToExtractPublicKey</code></td><td>Contact Number.</td></tr></tbody></table>
 
 ### AuthenticationError
 
-| Error name                   |                                              Suggested solution                                              |
-| ---------------------------- | :----------------------------------------------------------------------------------------------------------: |
-| `missingSessionKeyOrExpired` | Check if you have provided the correct `apiKey` and `hmacSecret`, contact Number to receive updated secrets. |
+<table><thead><tr><th width="110"></th><th>Error name</th><th>Suggested solution</th></tr></thead><tbody><tr><td><img src="../../../.gitbook/assets/Visa icon 3 (1).png" alt="" data-size="original"></td><td><code>missingSessionKeyOrExpired</code></td><td>Check if you have provided the correct <code>apiKey</code> and <code>hmacSecret</code>, contact Number to receive updated secrets.</td></tr></tbody></table>
 
 ### NetworkingError
 
-| Error name                  | Suggested solution                                          |
-| --------------------------- | ----------------------------------------------------------- |
-| `unsuccesfulRequest`        | Check HTTP status code.                                     |
-| `noDataReceived`            | Data from backend was empty, contact Number.                |
-| `dataDecodingFailure`       | Data from backend was not decoded properly, contact Number. |
-| `invalidCertificatePathURL` | Contact Number.                                             |
+<table><thead><tr><th width="110"></th><th>Error name</th><th>Suggested solution</th></tr></thead><tbody><tr><td><img src="../../../.gitbook/assets/Visa icon 3 (1).png" alt="" data-size="original"></td><td><code>unsuccesfulRequest</code></td><td>Check HTTP status code.</td></tr><tr><td><img src="../../../.gitbook/assets/Visa icon 3 (1).png" alt="" data-size="original"></td><td><code>noDataReceived</code></td><td>Data from backend was empty, contact Number.</td></tr><tr><td><img src="../../../.gitbook/assets/Visa icon 3 (1).png" alt="" data-size="original"></td><td><code>dataDecodingFailure</code></td><td>Data from backend was not decoded properly, contact Number.</td></tr><tr><td><img src="../../../.gitbook/assets/Visa icon 3 (1).png" alt="" data-size="original"></td><td><code>invalidCertificatePathURL</code></td><td>Contact Number.</td></tr></tbody></table>
 
 
 

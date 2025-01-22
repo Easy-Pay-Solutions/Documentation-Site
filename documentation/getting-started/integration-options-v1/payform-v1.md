@@ -35,6 +35,8 @@ You can then present the PayForm in one of two ways:&#x20;
 
 ## PayForm builder
 
+<figure><img src="../../../.gitbook/assets/PayForm_Builder.png" alt=""><figcaption></figcaption></figure>
+
 It might be difficult to prepare a PayForm request by yourself at first. To make it easy to get started, we've prepared a form which can generate that for you.
 
 {% embed url="https://easypay8.com/byopayform/" %}

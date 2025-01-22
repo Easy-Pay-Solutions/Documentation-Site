@@ -36,16 +36,11 @@ You get control of all the operational and design parameters of the PayForm:
 {% endstep %}
 {% endstepper %}
 
-* Form styling;
-* Field visibility and read-only parameters;
-* Initial data (cardholder names, $ amounts, etc.);
-* User-defined data (PatientID, ReferenceID, etc.);
-* Defined methods for receiving a real-time update after transactions are authorized.
+**You can then present the PayForm in one of two ways:**&#x20;
 
-You can then present the PayForm in one of two ways:&#x20;
+<table><thead><tr><th width="132"></th><th></th></tr></thead><tbody><tr><td><img src="../../../.gitbook/assets/iFrame.png" alt="" data-size="original"></td><td>As an iFrame on your website; </td></tr><tr><td><img src="../../../.gitbook/assets/Direct_Link.png" alt="" data-size="original"></td><td>As a direct link to the PayForm.</td></tr></tbody></table>
 
-* As an iFrame on your website;&#x20;
-* As a direct link to the PayForm.
+
 
 **To generate a PayForm, you can make a call to our REST API using a request body generated on the PayForm builder website.**
 

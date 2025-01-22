@@ -195,6 +195,8 @@ EasyPay.shared.configureSecrets(apiKey: String, hmacSecret: String)
 EasyPay.shared.loadCertificate(_ completion: @escaping (Result<Data, Error>) -> Void)
 ```
 
+
+
 ### 1. Charge Credit Card (CreditCardSale\_Manual)
 
 This method processes a credit card card sale when the credit card details are entered manually. Details include the card number, expiration date, CVV, card holder name and address.
@@ -218,6 +220,8 @@ EasyPay.apiClient.chargeCreditCard(request: CardSaleManualRequest,
 
 * `CardSaleManualResponseModel`
   * \[See fields listed in the REST API reference - [Process a manual card sale](../../../api-reference/rest-api-v3/card-operations-v2/process-a-card-sale-v2.md#apicardprocrest-v1.0.0-cardsale-manual)]
+
+
 
 ### 2. List Annual Consents (ConsentAnnual\_Query)
 
@@ -244,6 +248,8 @@ EasyPay.apiClient.listAnnualConsents(request: ConsentAnnualListingRequest,
 * `ConsentAnnualListingResponseModel`
   * \[See fields listed in the REST API reference - [Query annual consent](../../../api-reference/rest-api-v3/query-v2.md#apicardprocrest-v1.0.0-consentannual-queryapr)]
 
+
+
 ### 3. Create Annual Consent (ConsentAnnual\_Create\_MAN)
 
 This method creates an annual consent by sending the credit card details, which include: card number, expiration date, CVV, and card holder contact data. It is not created by swiping the card through a reader device.
@@ -266,6 +272,8 @@ EasyPay.apiClient.createAnnualConsent(request: CreateConsentAnnualRequest,
 * `CreateConsentAnnualResponseModel`
   * \[See fields listed in the REST API reference - [Create an annual consent with manual card entry](../../../api-reference/rest-api-v3/consent-annual-v2/create-consent-v2.md#apicardprocrest-v1.0.0-consentannual-create_man)]
 
+
+
 ### 4. Cancel Annual Consent (ConsentAnnual\_Cancel)
 
 Cancels an annual consent. Credit card data is removed from the system after the cancellation is complete.
@@ -284,6 +292,8 @@ EasyPay.apiClient.cancelAnnualConsent(request: CancelConsentAnnualRequest,
 
 * `CancelConsentAnnualResponseModel`
   * \[See fields listed in the REST API reference - [Cancel a consent (Card on file)](../../../api-reference/rest-api-v3/consent-annual-v2/#apicardprocrest-v1.0.0-consentannual-cancel)]
+
+
 
 ### 5. Process Payment Annual Consent (ConsentAnnual\_ProcPayment)
 
@@ -362,11 +372,11 @@ If there is no `TxApproved` flag, then you can omit the last evaluation. More in
 
 ### RsaCertificateError
 
-| Error name                    |                                                    Suggested solution                                                   |
-| ----------------------------- | :---------------------------------------------------------------------------------------------------------------------: |
-| `failedToLoadCertificateData` | Check certificate status, wait until the full download before proceeding with calls, try to download it again manually. |
-| `failedToCreateCertificate`   |                                                     Contact Number.                                                     |
-| `failedToExtractPublicKey`    |                                                     Contact Number.                                                     |
+| Error name                                                               |                                                    Suggested solution                                                   |
+| ------------------------------------------------------------------------ | :---------------------------------------------------------------------------------------------------------------------: |
+| <mark style="background-color:red;">`failedToLoadCertificateData`</mark> | Check certificate status, wait until the full download before proceeding with calls, try to download it again manually. |
+| <mark style="background-color:red;">`failedToCreateCertificate`</mark>   |                                                     Contact Number.                                                     |
+| <mark style="background-color:red;">`failedToExtractPublicKey`</mark>    |                                                     Contact Number.                                                     |
 
 ### AuthenticationError
 

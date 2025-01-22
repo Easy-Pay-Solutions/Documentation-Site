@@ -134,7 +134,9 @@ We also have a custom desktop application which can be convenient in an office s
 
 The application interfaces with VeriFone card readers. These devices accept EMV chip and contactless cards in addition to the usual card swipe and manual entry.&#x20;
 
-Contact us to learn more.
+{% hint style="info" %}
+[Contact us](../../../help/customer-support/) to learn more.
+{% endhint %}
 
 
 
@@ -146,7 +148,9 @@ Contact us to learn more.
 
 If you wish, you can take advantage of our end-to-end encryption model used with the VeriFone card reader and build around it by referencing our DLL. The DLL will channel its requests through our API and responses can be consumed at the client software product. This way, you can develop your own workflow and displays.
 
+{% hint style="info" %}
 [Contact us](../../../help/customer-support/) to learn more.
+{% endhint %}
 
 
 

@@ -1,6 +1,6 @@
 ---
 icon: bug
-description: Test your integration before going live
+description: Test your integration before going live.
 ---
 
 # Testing (v1)

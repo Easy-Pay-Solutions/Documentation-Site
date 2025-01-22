@@ -1,5 +1,6 @@
 ---
 icon: files
+hidden: true
 ---
 
 # Store Card on File

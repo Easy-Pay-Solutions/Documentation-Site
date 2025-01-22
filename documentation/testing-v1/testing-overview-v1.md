@@ -1,5 +1,5 @@
 ---
-description: Transaction and consent verification using the Virtual Terminal
+description: Transaction and consent verification using the Virtual Terminal.
 ---
 
 # Testing Overview (v1)

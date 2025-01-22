@@ -1,5 +1,6 @@
 ---
 icon: code-commit
+hidden: true
 ---
 
 # Surcharge Payments

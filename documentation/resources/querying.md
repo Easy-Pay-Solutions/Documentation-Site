@@ -27,8 +27,8 @@ Here is a typical Reconciliation query
 * (A=2)&&(U='WID')&&(C>='6/1/2024')&&((B=1)||(B=2))
 * (A=2) is used to return records created under merchant record 2
 * (U='WID') is used to pull records with an **ORIGIN** of **WIDGET**
-* (C>='6/1/2024') <mark style="color:red;">**Important: Please do not return exceessive records, pick a date range!**</mark>&#x20;
-* ((B=1)||(B=2)) is used to pull back OPEN or SETTLED transactions
+* (C>='6/1/2024') **Important: Please do not return exceessive records, pick a date range!**&#x20;
+* ((B=1)||(B=2)) is used to pull back **OPEN** or **SETTLED** transactions
 
 
 

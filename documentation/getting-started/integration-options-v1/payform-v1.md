@@ -129,7 +129,7 @@ Once you have the request ready, you can call our REST API to generate the PayFo
 
 Here's an example PayForm generated using the endpoint:
 
-<figure><img src="../../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Typical PayForm.png" alt=""><figcaption></figcaption></figure>
 
 
 

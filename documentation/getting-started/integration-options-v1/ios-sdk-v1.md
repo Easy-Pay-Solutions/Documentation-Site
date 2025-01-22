@@ -372,11 +372,11 @@ If there is no `TxApproved` flag, then you can omit the last evaluation. More in
 
 ### RsaCertificateError
 
-| Error name                                                               |                                                    Suggested solution                                                   |
-| ------------------------------------------------------------------------ | :---------------------------------------------------------------------------------------------------------------------: |
-| <mark style="background-color:red;">`failedToLoadCertificateData`</mark> | Check certificate status, wait until the full download before proceeding with calls, try to download it again manually. |
-| <mark style="background-color:red;">`failedToCreateCertificate`</mark>   |                                                     Contact Number.                                                     |
-| <mark style="background-color:red;">`failedToExtractPublicKey`</mark>    |                                                     Contact Number.                                                     |
+| Error name                    |                                                    Suggested solution                                                   |
+| ----------------------------- | :---------------------------------------------------------------------------------------------------------------------: |
+| `failedToLoadCertificateData` | Check certificate status, wait until the full download before proceeding with calls, try to download it again manually. |
+| `failedToCreateCertificate`   |                                                     Contact Number.                                                     |
+| `failedToExtractPublicKey`    |                                                     Contact Number.                                                     |
 
 ### AuthenticationError
 

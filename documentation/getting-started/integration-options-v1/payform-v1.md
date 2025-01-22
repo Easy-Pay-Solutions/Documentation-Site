@@ -14,6 +14,28 @@ Collecting a payment or saving a card on file is a two-step process: a call is m
 
 You get control of all the operational and design parameters of the PayForm:
 
+{% stepper %}
+{% step %}
+#### From styling
+{% endstep %}
+
+{% step %}
+#### Field visibility and read-only parameters;
+{% endstep %}
+
+{% step %}
+#### Initial data (cardholder names, $ amounts, etc.);
+{% endstep %}
+
+{% step %}
+#### User-defined data (PatientID, ReferenceID, etc.);
+{% endstep %}
+
+{% step %}
+#### Defined methods for receiving a real-time update after transactions are authorized.
+{% endstep %}
+{% endstepper %}
+
 * Form styling;
 * Field visibility and read-only parameters;
 * Initial data (cardholder names, $ amounts, etc.);

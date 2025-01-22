@@ -4,7 +4,7 @@ description: Getting started with Verifone for Number
 
 # Verifone (WIP)
 
-## Introduction
+Introduction
 
 The Verifone card readers are small hand-held devices. They communicate with your computer on a USB port. A chip transaction is comprised of about a dozen transmissions between the host (your computer) and the device, and then finally to the Number cloud platform.
 
@@ -24,6 +24,8 @@ When a merchant supports a Verfione card reader, it helps eliminate chargebacks 
 
 Software Security Framework is a re-working of the existing PCI standard PA DSS. The PA DSS has been retired since June 30, 2021. Number's "Aspen 3.1" is the first application to achieve the PCI Councils SSF certification, and it provides an end-to-end encrypted solution.
 
+<figure><img src="../../../.gitbook/assets/End to end encyption.png" alt=""><figcaption></figcaption></figure>
+
 
 
 ***
@@ -38,11 +40,11 @@ Currently, we offer four different options for collecting payments with the Veri
 {% step %}
 **Standalone desktop application (upon request)**
 
-This application allows you to collect payments, create card-on-file and payment plans, process a card-on-file, void or credit, settle transactions, and do reporting with an option to export to a PDF.
+This application has automatic updates and allows you to collect payments, create card-on-file and payment plans, process a card-on-file, void or credit, settle transactions, and do reporting with an option to export to a PDF.
 {% endstep %}
 
 {% step %}
-**Easy Pay Verifone SDK**
+**Number Verifone SDK**
 
 This DLL provides a means of collecting payments and creating card-on-file plans. Used in conjunction with our API, you can manage all aspects of your payment requirements, all within the confines of your own custom application.
 {% endstep %}
@@ -51,10 +53,6 @@ This DLL provides a means of collecting payments and creating card-on-file plans
 **Browser-based interface**
 
 We developed a Windows service which uses Cross-Origin Resource Sharing (CORS) to communicate with the browser. As an integrator, this allows you to write simple client-side scripts within your own web applications to initiate transactions with a local Verifone.&#x20;
-
-{% embed url="https://easypay7.com/docs/jquery_verifone.zip" %}
-An example website communicating with the Verifone using jQuery.
-{% endembed %}
 
 The Win service will return a simple XML response for each transaction directly to the HTML/PHP/ASP.NET page for consumption by the host application.
 {% endstep %}
@@ -75,7 +73,17 @@ There are 2 categories of integrations which require two different sets of files
 
 
 
-### Easy Pay Verifone SDK <a href="#easy-pay-verifone-sdk" id="easy-pay-verifone-sdk"></a>
+### Standalone desktop application <a href="#easy-pay-verifone-sdk" id="easy-pay-verifone-sdk"></a>
+
+<figure><img src="../../../.gitbook/assets/Number Desktop Application.png" alt=""><figcaption></figcaption></figure>
+
+If you wish to use the standalone desktop application for Verifone, contact Number for installation files and instructions.
+
+
+
+### Number Verifone SDK <a href="#easy-pay-verifone-sdk" id="easy-pay-verifone-sdk"></a>
+
+<figure><img src="../../../.gitbook/assets/Number .Net Application.png" alt=""><figcaption></figcaption></figure>
 
 For you to directly interface with the Verifone using our SDK, you will need the Verifone drivers with the custom logging package, and the SDK reference files:
 
@@ -109,13 +117,15 @@ After installation, there should be a new windows event log named _EPmiddleWare_
 
 <figure><img src="../../../.gitbook/assets/Verifone screenshot 2.png" alt=""><figcaption></figcaption></figure>
 
-To use the SDK, you only need to directly interface to the file named _EP.Enterprise.Vx820.dll_. The other 3 files in the ZIP file with the SDK are dependencies. Make sure to extract all 4 of the files to the location of your choice.
+To use the SDK, you only need to directly interface to the file named _EP.Enterprise.Vx820.dll_. The other files are dependencies. Make sure to extract all 4 of the files to the location of your choice.
 
 <table data-header-hidden><thead><tr><th width="117"></th><th></th></tr></thead><tbody><tr><td><img src="../../../.gitbook/assets/Icon_File2 (1).png" alt=""></td><td>EP.Enterprise.Vx820Lib.dll</td></tr><tr><td><img src="../../../.gitbook/assets/Icon_File2 (1).png" alt=""></td><td>EP.Vx820.Common.dll</td></tr><tr><td><img src="../../../.gitbook/assets/Icon_File1.png" alt=""></td><td>EP.Enterprise.Vx820Lib.dll.config</td></tr><tr><td><img src="../../../.gitbook/assets/Icon_File2 (1).png" alt=""></td><td>DPayments.DPaymentsSDK.dll</td></tr></tbody></table>
 
 
 
-### Browser based Installation <a href="#browser-based-installation" id="browser-based-installation"></a>
+### Browser-based installation <a href="#browser-based-installation" id="browser-based-installation"></a>
+
+<figure><img src="../../../.gitbook/assets/Number Browser Integration.png" alt=""><figcaption></figcaption></figure>
 
 Before you start, download the Windows service to your machine.
 
@@ -125,19 +135,19 @@ To install the Win service:
 
 {% stepper %}
 {% step %}
-Connect your device to free USB port.
+Connect your device to a free USB port.
 {% endstep %}
 
 {% step %}
-Allow device to initialize.
+Allow the device to initialize.
 {% endstep %}
 
 {% step %}
-Extract the above archive to location of your choice.
+Extract the above archive to a location of your choice.
 {% endstep %}
 
 {% step %}
-Locate the EXE file and right click on the EXE to choose _Run as administrator_.
+Locate the EXE file and right click on it to choose _Run as administrator_.
 {% endstep %}
 
 {% step %}
@@ -145,22 +155,97 @@ Wait for the application to finish, then reboot computer.
 {% endstep %}
 {% endstepper %}
 
-The above install package does the following
+The above installation package does the following:
 
 1. Installs USB drivers for the Verifone.
 2. Creates a custom event log with Windows named _EPmiddleware_.
 3. Installs a certificate which encrypts data between the browser and the Windows service.
-4. Install the Windows service which listens on port 8031.
+4. Installs the Windows service which listens on port 8031.
 
 With this, your website will be able to issue commands to the Windows service. You can see [our example website](https://easypay7.com/JqueryVerifone/) communicating with Verifone.
 
-You can also download the entire site here:
+You can also download the entire site to see how it works:
 
 {% file src="../../../.gitbook/assets/jquery_verifone.zip" %}
 
 #### Virtual Terminal
 
-Our Virtual Terminal has a built-in support for Verifone. All you need to do is install the service and contact Number for this feature to be activated.
+Our Virtual Terminal has a built-in support for Verifone. All you need to do is install the service, then contact Number to have this feature activated.
+
+
+
+#### Middleware response
+
+For browser type Verifone operations, the middleware provides a response object in XML format. This object can be de-serialized or can be consumed as XML. Currently, there are two response object types:
+
+1. `WidgetArgs` - sale response when requesting authorization for a non-zero dollar amount, with the option to save card being optional
+2. `WidgetArgs2` - consent response when requesting to **only** save the card.
+
+{% code title="Sale response sample" overflow="wrap" %}
+```xml
+<?xml version="1.0" encoding="utf-16"?>
+<WidgetArgs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <TxEventTyp>TxApproved</TxEventTyp>
+    <ApprovedAmt>20</ApprovedAmt>
+    <IsPartialApproval>false</IsPartialApproval>
+    <RespMsg>APPROVED 801193</RespMsg>
+    <ErrMsg />
+    <TxnCode>801193</TxnCode>
+    <TxID>19969</TxID>
+    <ErrCode>0</ErrCode>
+    <Mask>4663xxxxxxxx2741</Mask>
+    <cardType>Visa</cardType>
+    <ConsentResult>
+        <ConsentCreated>true</ConsentCreated>
+        <ConsentRequested>true</ConsentRequested>
+        <ErrMsg />
+        <ErrCode>0</ErrCode>
+        <ConsentID>7849</ConsentID>
+        <CardLast4>2741</CardLast4>
+        <ExpDate>0528</ExpDate>
+    </ConsentResult>
+</WidgetArgs>
+```
+{% endcode %}
+
+#### Requesting a Verifone transaction
+
+You can call the middleware to do the following:
+
+1. Chip sale (EMV sale) only;
+2. EMV sale (chip sale) and save card;
+3. Manual sale (keyed entry sale) only;
+4. Manual sale (keyed entry sale) and save card.
+
+```javascript
+// EMV sale only
+$(function() {
+    $('#EMVSaleOnly').click(function() {
+        EMVSaleCombo(false);
+    });
+});
+
+// EMV sale and save card
+$(function() {
+    $('#EMVSaleAndSave').click(function() {
+        EMVSaleCombo(true);
+    });
+});
+
+// Manual sale only
+$(function() {
+    $('#ManualSaleOnly').click(function() {
+        ManualSaleCombo(false);
+    });
+});
+
+// Manual sale and save card
+$(function() {
+    $('#ManualSaleAndSave').click(function() {
+        ManualSaleCombo(true);
+    });
+});
+```
 
 
 
@@ -168,9 +253,9 @@ Our Virtual Terminal has a built-in support for Verifone. All you need to do is 
 
 
 
-## Custom Windows event ;og
+## Custom Windows event log
 
-Once the installation program has completed, you will notice a new Windows event log has been registered named _EPmiddleWare_. This log is relevant for both the SDK and browser-based middleware.
+After installing all the dependencies for either the SDK or the browser-based approach,, you will notice a new Windows event log has been registered named _EPmiddleWare_.&#x20;
 
 This event log stores information about processed transactions as well as any errors encountered, and serves as a powerful troubleshooting component.
 
@@ -199,7 +284,7 @@ On Windows 11, open Control Panel > Hardware and Sound > Power Options > Edit Pl
 Go to _Advanced power settings_ and change the _USB settings_ to disable _USB selective suspend_ for your active power plan.
 
 {% hint style="danger" %}
-When using the Verifone, **make sure to run the power plan with the modified settings**. Battery saver and custom plans have separate settings, they will not be affected.
+When using the Verifone, **make sure that your machine is running the power plan with the modified settings**. All power plans have separate power settings.
 {% endhint %}
 
 <figure><img src="../../../.gitbook/assets/Verifone screenshot 6.png" alt=""><figcaption></figcaption></figure>
@@ -223,28 +308,3 @@ REG ADD HKLM\SYSTEM\CurrentControlSet\Control\Power\PowerSettings\2a737441-1930-
 
 
 
-***
-
-
-
-## End-To-End Encryption <a href="#end-to-end-encryption" id="end-to-end-encryption"></a>
-
-<figure><img src="../../../.gitbook/assets/End to end encyption.png" alt=""><figcaption></figcaption></figure>
-
-
-
-***
-
-## Number EMV Integration Options with End to end Encryption
-
-### Number VxModule
-
-<figure><img src="../../../.gitbook/assets/Number .Net Application.png" alt=""><figcaption></figcaption></figure>
-
-### Number Browser Integration
-
-<figure><img src="../../../.gitbook/assets/Number Browser Integration.png" alt=""><figcaption></figcaption></figure>
-
-### Number Desktop Application / with Automatic Updates
-
-<figure><img src="../../../.gitbook/assets/Number Desktop Application.png" alt=""><figcaption></figcaption></figure>

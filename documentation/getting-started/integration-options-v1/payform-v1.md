@@ -16,7 +16,7 @@ You get control of all the operational and design parameters of the PayForm:
 
 {% stepper %}
 {% step %}
-From styling
+From styling;
 {% endstep %}
 
 {% step %}
@@ -60,7 +60,9 @@ Defined methods for receiving a real-time update after transactions are authoriz
 
 It might be difficult to prepare a PayForm request by yourself at first. To make it easy to get started, we've prepared a form which can generate that for you.
 
-{% embed url="https://easypay8.com/byopayform/" %}
+{% hint style="info" %}
+PayForm builder: [https://easypay8.com/byopayform/](https://easypay8.com/byopayform/)&#x20;
+{% endhint %}
 
 
 

@@ -372,11 +372,7 @@ If there is no `TxApproved` flag, then you can omit the last evaluation. More in
 
 ### RsaCertificateError
 
-| Error name                    |                                                    Suggested solution                                                   |
-| ----------------------------- | :---------------------------------------------------------------------------------------------------------------------: |
-| `failedToLoadCertificateData` | Check certificate status, wait until the full download before proceeding with calls, try to download it again manually. |
-| `failedToCreateCertificate`   |                                                     Contact Number.                                                     |
-| `failedToExtractPublicKey`    |                                                     Contact Number.                                                     |
+<table><thead><tr><th width="135"></th><th>Error name</th><th>Suggested solution</th></tr></thead><tbody><tr><td><img src="../../../.gitbook/assets/Visa icon 3 (1).png" alt="" data-size="original"></td><td><code>failedToLoadCertificateData</code></td><td>Check certificate status, wait until the full download before proceeding with calls, try to download it again manually.</td></tr><tr><td></td><td><code>failedToCreateCertificate</code></td><td>Contact Number.</td></tr><tr><td></td><td><code>failedToExtractPublicKey</code></td><td>Contact Number.</td></tr></tbody></table>
 
 ### AuthenticationError
 
@@ -386,12 +382,12 @@ If there is no `TxApproved` flag, then you can omit the last evaluation. More in
 
 ### NetworkingError
 
-| Error name                  |                      Suggested solution                     |
-| --------------------------- | :---------------------------------------------------------: |
-| `unsuccesfulRequest`        |                   Check HTTP status code.                   |
-| `noDataReceived`            |         Data from backend was empty, contact Number.        |
+| Error name                  | Suggested solution                                          |
+| --------------------------- | ----------------------------------------------------------- |
+| `unsuccesfulRequest`        | Check HTTP status code.                                     |
+| `noDataReceived`            | Data from backend was empty, contact Number.                |
 | `dataDecodingFailure`       | Data from backend was not decoded properly, contact Number. |
-| `invalidCertificatePathURL` |                       Contact Number.                       |
+| `invalidCertificatePathURL` | Contact Number.                                             |
 
 
 

@@ -29,6 +29,8 @@ Before you read about the specific integration options, we recommend having a lo
 
 PCI compliance refers to adherence to the Payment Card Industry Data Security Standard (PCI DSS), which is a set of security standards related to processing, storing, and transmitting credit card information. The PCI DSS was developed by the Payment Card Industry Security Standards Council (PCI SSC), which was founded by major credit card companies like Visa, MasterCard, American Express, Discover, and JCB.
 
+
+
 {% hint style="info" %}
 Some key aspects of PCI compliance include:
 
@@ -39,6 +41,8 @@ Some key aspects of PCI compliance include:
 5. **Regular Monitoring and Network Tests**: Tracking and monitoring all access to network resources and cardholder data, regularly testing security systems and processes.
 6. **An Information Security Policy**: Companies must maintain a policy that addresses information security for all personnel.
 {% endhint %}
+
+
 
 PCI compliance helps protect cardholder data from theft and fraud, ensuring consumer trust and avoiding fines and penalties associated with non-compliance. Businesses of all sizes that handle credit card information are **required** to comply with PCI DSS.
 
@@ -110,11 +114,11 @@ We recommend using the PayForm to collect all cardholder data when integrating w
 
 The Virtual Terminal is a web application which you can access through your browser. It provides all types of credit card processing functionality:
 
-* Authorizations,
-* Voids / credits / settlements,
-* Reporting,
-* Payment plans (recurring / subscription consent),
-* Card-on-file (Annual consent).
+* **Authorizations,**
+* **Voids / credits / settlements,**
+* **Reporting,**
+* **Payment plans (recurring / subscription consent),**
+* **Card-on-file (Annual consent).**
 
 The VT is the fastest way to start trying out our payment services. Otherwise, it's ideal for businesses processing payments over the phone or at sales points lacking a physical terminal.
 
@@ -142,7 +146,7 @@ Contact us to learn more.
 
 If you wish, you can take advantage of our end-to-end encryption model used with the VeriFone card reader and build around it by referencing our DLL. The DLL will channel its requests through our API and responses can be consumed at the client software product. This way, you can develop your own workflow and displays.
 
-Contact us to learn more.
+[Contact us](../../../help/customer-support/) to learn more.
 
 
 

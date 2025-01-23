@@ -13,7 +13,7 @@ To help you with that, we've compiled all the information regarding transaction 
 
 Here are the articles in this section:
 
-<table data-card-size="large" data-view="cards"><thead><tr><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td>Testing Overview</td><td><a href="testing-overview-v1.md">testing-overview-v1.md</a></td></tr><tr><td>Global Payments Testing</td><td><a href="global-payments-testing-v1.md">global-payments-testing-v1.md</a></td></tr><tr><td>First Data Testing</td><td><a href="first-data-testing-v1.md">first-data-testing-v1.md</a></td></tr><tr><td>ACH Testing</td><td><a href="ach-testing-v1.md">ach-testing-v1.md</a></td></tr></tbody></table>
+<table data-card-size="large" data-view="cards"><thead><tr><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Testing Overview ></strong></td><td><a href="testing-overview-v1.md">testing-overview-v1.md</a></td></tr><tr><td><strong>Global Payments Testing ></strong></td><td><a href="global-payments-testing-v1.md">global-payments-testing-v1.md</a></td></tr><tr><td><strong>First Data Testing ></strong></td><td><a href="first-data-testing-v1.md">first-data-testing-v1.md</a></td></tr><tr><td><strong>ACH Testing ></strong></td><td><a href="ach-testing-v1.md">ach-testing-v1.md</a></td></tr></tbody></table>
 
 
 

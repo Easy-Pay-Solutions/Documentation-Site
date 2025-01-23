@@ -217,6 +217,36 @@ $(function() {
 
 
 
+### Resetting the device
+
+The red button on the Verifone can be used to cancel the current operation and set up for _Ready_ state in most cases. See the `ResetVerifone` and `UnlockVerifone` commands.
+
+```javascript
+// Reset button
+$(function () {
+    $('#ResetButton').click(function() {
+        ResetVerifone();
+    });
+});
+
+// Unlock button
+$(function () {
+    $('#UnlockButton').click(function () {
+        UnlockVerifone();
+    });
+});
+```
+
+The `ResetVerifone` operation will send a reset command to the Verifone device. This can be used to put the device back into _Ready_ state.
+
+The `UnlockVerifone` operation will release the middleware from its current wait state or workflow and also send a reset command to the device.&#x20;
+
+{% hint style="warning" %}
+If, for any reason, you continue to receive a _Busy_ response from the middleware, but you don't believe that waiting will yield productive results, you may use the `UnlockVerifone` feature to return the device to _Ready_ state.
+{% endhint %}
+
+
+
 ### Middleware response types
 
 For browser type Verifone operations, the middleware provides a response object in XML format. This object can be de-serialized or can be consumed as XML. Currently, there are two response object types:
@@ -453,7 +483,7 @@ This event log stores information about processed transactions as well as any er
 With the Verifone Windows event log installed, a merchant can export the log and send it to Number if any unexpected behavior is encountered.
 {% endhint %}
 
-<figure><img src="../../../.gitbook/assets/Verifone screenshot 3.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/event viewer verifone enhanced.png" alt=""><figcaption></figcaption></figure>
 
 
 

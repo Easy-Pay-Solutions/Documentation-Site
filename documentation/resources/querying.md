@@ -59,6 +59,30 @@ Here is a typical Reconciliation query
 
 <table><thead><tr><th width="170">Query Variable</th><th>Query Setup</th><th>Example</th></tr></thead><tbody><tr><td>A</td><td>MERCHANT ID</td><td>(A=5)</td></tr><tr><td>B</td><td>START DATE</td><td>(B>='10/20/2024')</td></tr><tr><td>C</td><td>END DATE</td><td>(C&#x3C;='10/20/2024')</td></tr><tr><td>D</td><td>ACCOUNT HOLDER LAST NAME</td><td>(D LIKE '%SMITH%')</td></tr><tr><td>E</td><td>CREATED ON</td><td>(E&#x3C;='10/20/2024')</td></tr><tr><td>F</td><td>CUSTOMER REFERENCE ID (PATIENT ID)</td><td>(F LIKE '%213456%')</td></tr><tr><td>G</td><td>CONSENT TYPE</td><td>(G=-1) = ALL (G=1) = ANNUAL (G=2) = ONE TIME (G=3) = RECURRING (G=4) = SUBSCRIPTION</td></tr><tr><td>H</td><td>ENABLED</td><td>(H=1)</td></tr><tr><td>J</td><td>RPGUID</td><td>(J LIKE '%RPGUIDtest%')</td></tr><tr><td>K</td><td>ACCOUNT HOLDER FIRST NAME</td><td>(K LIKE '%SMITH%')</td></tr><tr><td>Z</td><td>CONSENT ID</td><td>(Z=12345)</td></tr></tbody></table>
 
+
+
+***
+
+
+
+## Recurring Schedule Query <a href="#recurring-schedule-query" id="recurring-schedule-query"></a>
+
+<table><thead><tr><th width="170">Query Variable</th><th>Query Setup</th><th>Example</th></tr></thead><tbody><tr><td>A</td><td>CONSENT ID</td><td>(A=545)</td></tr><tr><td>B</td><td>STATUS</td><td>(B=-1) = ALL (B=1) = SCHEDULED (B=2) = PAID (B=3) = FAILED (B=4) = CANCELLED</td></tr><tr><td>C</td><td>DUE DATE</td><td>(C='10/20/2024')</td></tr><tr><td>D</td><td>ACCOUNT HOLDER LAST NAME</td><td>(D LIKE '%SMITH%')</td></tr><tr><td>E</td><td>MERCHANT ID</td><td>(E=1)</td></tr><tr><td>F</td><td>ACCOUNT NUMBER</td><td>(F='1234') = LAST FOUR OF THE CREDIT CARD</td></tr><tr><td>G</td><td>SCHEDULE ID</td><td>(G=12)</td></tr><tr><td>H</td><td>TYPE</td><td>(H=-1) = ALL (H=3) = RECURRING (H=4) = SUBSCRIPTION</td></tr></tbody></table>
+
+\
+
+
+***
+
+
+
+## Batch Log Query <a href="#batch-log-query" id="batch-log-query"></a>
+
+<table><thead><tr><th width="170">Query Variable</th><th>Query Setup</th><th>Example</th></tr></thead><tbody><tr><td>A</td><td>MERCHANT ID</td><td>(A=545)</td></tr><tr><td>B</td><td>STATUS</td><td>(B=-1) = ALL (B=1) = FAILED (B=2) = APPROVED</td></tr><tr><td>C</td><td>CREATED ON</td><td>(C>='3/2/2024')&#x26;&#x26;(C&#x3C;='4/2/2024')</td></tr><tr><td>D</td><td>ID</td><td>(D=1777)</td></tr><tr><td>E</td><td>BATCH NUMBER</td><td>(E=185)</td></tr></tbody></table>
+
+\
+
+
 \
 \
 

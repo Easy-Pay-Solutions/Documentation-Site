@@ -28,7 +28,7 @@
     * [iOS SDK (v1)](documentation/getting-started/integration-options-v1/ios-sdk-v1.md)
     * [PayForm (v1)](documentation/getting-started/integration-options-v1/payform-v1.md)
     * [Widgets](documentation/getting-started/integration-options-v1/widgets.md)
-    * [Verifone (WIP)](documentation/getting-started/integration-options-v1/verifone-wip.md)
+    * [Verifone (v1)](documentation/getting-started/integration-options-v1/verifone-v1.md)
     * [Virtual Terminal](documentation/getting-started/integration-options-v1/virtual-terminal.md)
     * [Custom desktop application](documentation/getting-started/integration-options-v1/custom-desktop-application.md)
     * [Dynamic Link Libraries](documentation/getting-started/integration-options-v1/dynamic-link-libraries.md)

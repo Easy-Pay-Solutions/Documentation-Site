@@ -125,7 +125,7 @@ To use the SDK, you only need to directly interface to the file named _EP.Enterp
 
 ### Browser-based installation <a href="#browser-based-installation" id="browser-based-installation"></a>
 
-<figure><img src="../../../.gitbook/assets/Number Browser Integration.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Number VX Module.jpg" alt=""><figcaption></figcaption></figure>
 
 Before you start, download the Windows service to your machine.
 

@@ -20,9 +20,9 @@ When a merchant supports a Verfione card reader, it helps eliminate chargebacks 
 
 
 
-### PCI SSC Software Security Framework (SSF) <a href="#pci-ssc-software-security-framework-ssf" id="pci-ssc-software-security-framework-ssf"></a>
+### PCI SSC SSF <a href="#pci-ssc-software-security-framework-ssf" id="pci-ssc-software-security-framework-ssf"></a>
 
-Software Security Framework is a re-working of the existing PCI standard PA DSS. The PA DSS has been retired since June 30, 2021. Number's "Aspen 3.1" is the first application to achieve the PCI Councils SSF certification, and it provides an end-to-end encrypted solution.
+Software Security Framework (SSF) is a re-working of the existing PCI standard PA DSS. The PA DSS has been retired since June 30, 2021. Number's "Aspen 3.1" is the first application to achieve the PCI Councils SSF certification, and it provides an end-to-end encrypted solution.
 
 <figure><img src="../../../.gitbook/assets/End to end encyption.png" alt=""><figcaption></figcaption></figure>
 
@@ -73,7 +73,7 @@ There are 2 categories of integrations which require two different sets of files
 
 
 
-### Standalone desktop application <a href="#easy-pay-verifone-sdk" id="easy-pay-verifone-sdk"></a>
+## Desktop application <a href="#easy-pay-verifone-sdk" id="easy-pay-verifone-sdk"></a>
 
 <figure><img src="../../../.gitbook/assets/Number Desktop Application.png" alt=""><figcaption></figcaption></figure>
 
@@ -81,7 +81,7 @@ If you wish to use the standalone desktop application for Verifone, contact Numb
 
 
 
-### Number Verifone SDK <a href="#easy-pay-verifone-sdk" id="easy-pay-verifone-sdk"></a>
+## Number Verifone SDK <a href="#easy-pay-verifone-sdk" id="easy-pay-verifone-sdk"></a>
 
 <figure><img src="../../../.gitbook/assets/Number .Net Application.png" alt=""><figcaption></figcaption></figure>
 
@@ -123,7 +123,7 @@ To use the SDK, you only need to directly interface to the file named _EP.Enterp
 
 
 
-### Browser-based installation <a href="#browser-based-installation" id="browser-based-installation"></a>
+## Browser-based installation <a href="#browser-based-installation" id="browser-based-installation"></a>
 
 <figure><img src="../../../.gitbook/assets/Number VX Module.jpg" alt=""><figcaption></figcaption></figure>
 
@@ -168,47 +168,15 @@ You can also download the entire site to see how it works:
 
 {% file src="../../../.gitbook/assets/jquery_verifone.zip" %}
 
-#### Virtual Terminal
+
+
+### Virtual Terminal
 
 Our Virtual Terminal has a built-in support for Verifone. All you need to do is install the service, then contact Number to have this feature activated.
 
 
 
-#### Middleware response
-
-For browser type Verifone operations, the middleware provides a response object in XML format. This object can be de-serialized or can be consumed as XML. Currently, there are two response object types:
-
-1. `WidgetArgs` - sale response when requesting authorization for a non-zero dollar amount, with the option to save card being optional
-2. `WidgetArgs2` - consent response when requesting to **only** save the card.
-
-{% code title="Sale response sample" overflow="wrap" %}
-```xml
-<?xml version="1.0" encoding="utf-16"?>
-<WidgetArgs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-    <TxEventTyp>TxApproved</TxEventTyp>
-    <ApprovedAmt>20</ApprovedAmt>
-    <IsPartialApproval>false</IsPartialApproval>
-    <RespMsg>APPROVED 801193</RespMsg>
-    <ErrMsg />
-    <TxnCode>801193</TxnCode>
-    <TxID>19969</TxID>
-    <ErrCode>0</ErrCode>
-    <Mask>4663xxxxxxxx2741</Mask>
-    <cardType>Visa</cardType>
-    <ConsentResult>
-        <ConsentCreated>true</ConsentCreated>
-        <ConsentRequested>true</ConsentRequested>
-        <ErrMsg />
-        <ErrCode>0</ErrCode>
-        <ConsentID>7849</ConsentID>
-        <CardLast4>2741</CardLast4>
-        <ExpDate>0528</ExpDate>
-    </ConsentResult>
-</WidgetArgs>
-```
-{% endcode %}
-
-#### Requesting a Verifone transaction
+### Requesting a transaction
 
 You can call the middleware to do the following:
 
@@ -246,6 +214,228 @@ $(function() {
     });
 });
 ```
+
+
+
+### Middleware response types
+
+For browser type Verifone operations, the middleware provides a response object in XML format. This object can be de-serialized or can be consumed as XML. Currently, there are two response object types:
+
+1. `WidgetArgs` - sale response when **requesting an authorization for a non-zero dollar amount**, with the option to save the card;
+2. `WidgetArgs2` - consent response when **requesting to only save the card**.
+
+
+
+### Consuming the sale response
+
+It is important to consume the `WidgetArgs` response in a particular order, starting with `TxEventType`.
+
+{% include "../../../.gitbook/includes/info-verifone-friendly-response.md" %}
+
+{% code title="Response example" overflow="wrap" %}
+```xml
+<?xml version="1.0" encoding="utf-16"?>
+<WidgetArgs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <TxEventTyp>TxApproved</TxEventTyp>
+    <ApprovedAmt>20</ApprovedAmt>
+    <IsPartialApproval>false</IsPartialApproval>
+    <RespMsg>APPROVED 801193</RespMsg>
+    <ErrMsg />
+    <TxnCode>801193</TxnCode>
+    <TxID>19969</TxID>
+    <ErrCode>0</ErrCode>
+    <Mask>4663xxxxxxxx2741</Mask>
+    <cardType>Visa</cardType>
+    <ConsentResult>
+        <ConsentCreated>true</ConsentCreated>
+        <ConsentRequested>true</ConsentRequested>
+        <ErrMsg />
+        <ErrCode>0</ErrCode>
+        <ConsentID>7849</ConsentID>
+        <CardLast4>2741</CardLast4>
+        <ExpDate>0528</ExpDate>
+    </ConsentResult>
+</WidgetArgs>
+```
+{% endcode %}
+
+***
+
+`TxEventType` string
+
+The type of event that occurred during the transaction, indicating success or failure.
+
+Values: TxApproved, TxDecline, TxReversed, PreSaleDeviceCode, PostSaleDeviceCode, TimeOut, AspenError, AuthFail, FunctionFail, Exception.
+
+***
+
+Here are actions to take for each possible value of `TxEventType`:
+
+{% stepper %}
+{% step %}
+**TxApproved**
+
+The sale was approved by the issuer. You should examine and store these values:
+
+* `TxID` - the unique ID of the transaction; needed to refund or void the transaction.
+* `TxnCode` - the transaction approval code.
+* `ApprovedAmt` - the $ amount charged to the card.
+{% endstep %}
+
+{% step %}
+**TxDecline**
+
+The sale was declined by the issuer. You should examine and store these values:
+
+* `TxID` - the unique ID of the declined transaction.
+* `TxnCode` - the transaction decline code.
+{% endstep %}
+
+{% step %}
+**TxReversed**
+
+The issuer approved the transaction, however, during the final interaction with the chip, the device required the transaction to be declined, and the transaction was voided (reversed).
+{% endstep %}
+
+{% step %}
+**PreSaleDeviceCode**
+
+An error occurred within the device prior to the transaction getting submitted to the issuer. Examine `ErrCode` and `ErrMsg` for more information.
+{% endstep %}
+
+{% step %}
+**PostSaleDeviceCode**
+
+An error occurred within the device after the transaction was submitted to the issuer. Examine `ErrCode` and `ErrMsg` for more information.
+{% endstep %}
+
+{% step %}
+**Timeout**
+
+The user waited too long to insert the card or interact with the device. Examine `ErrCode` and `ErrMsg` for more information.
+{% endstep %}
+
+{% step %}
+#### AspenError
+
+An error occurred on Number Aspen Cloud processing servers. Examine `ErrCode` and `ErrMsg` for more information.
+{% endstep %}
+
+{% step %}
+**AuthFail**
+
+When doing a save card only operation, the issuer declined to verify the card details when executing a $0 authorization. The card will not be saved. You should examine:
+
+* `TxID` - the unique ID of the declined transaction.
+* `TxnCode` - the transaction decline code.
+{% endstep %}
+
+{% step %}
+**FunctionFail**
+
+Returned when you supply improper or out of range values in the request, or when you execute a Verifone command while the previous action has not yet completed. Examine `ErrCode` and `ErrMsg` for more information.
+{% endstep %}
+
+{% step %}
+**Exception**
+
+An error was encountered in the local Windows service. Examine `ErrCode` and `ErrMsg` for more information.
+{% endstep %}
+{% endstepper %}
+
+
+
+### Consuming the consent response
+
+It is important to consume the `WidgetArgs2` response in a particular order, starting with `ConsentEventType`.
+
+{% include "../../../.gitbook/includes/info-verifone-friendly-response.md" %}
+
+{% code title="Response example" overflow="wrap" %}
+```xml
+<?xml version="1.0" encoding="utf-16"?>
+<WidgetArgs2 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <ConsEventTyp>ConsentSuccess</ConsEventTyp>
+    <AuthSuccess>true</AuthSuccess>
+    <AuthMsg>APPROVED 632641|CVV||AVS|0</AuthMsg>
+    <AuthTxID>16809</AuthTxID>
+    <RespMsg>Success : Created Consent ID : 001270</RespMsg>
+    <ErrMsg />
+    <ConsentID>1270</TxnCode>
+    <ErrCode>0</ErrCode>
+    <Mask>4663xxxxxxxx2741</Mask>
+    <cardType>Visa</cardType>
+</WidgetArgs>
+```
+{% endcode %}
+
+***
+
+`ConsentEventType` string
+
+The type of event that occurred during the save card on file operation, indicating success or failure.
+
+Values: ConsentSuccess, ConsentFailed, PreConDeviceCode, PostConDeviceCode, TimeOut, AspenError, AuthFail, FunctionFail, Exception.
+
+***
+
+Here are actions to take for each possible value of `ConsentEventType`:
+
+{% stepper %}
+{% step %}
+**ConsentSuccess**
+
+The consent was created and card was saved successfully. You should examine and store `ConsentID` to be able to charge the customer later.
+{% endstep %}
+
+{% step %}
+**ConsentFailed**
+
+The consent was not created. Examine `ErrCode` and `ErrMsg` for more information.
+{% endstep %}
+
+{% step %}
+**PreConDeviceCode**
+
+An error occurred within the device prior to the card being submitted. Examine `ErrCode` and `ErrMsg` for more information.
+{% endstep %}
+
+{% step %}
+**PostConDeviceCode**
+
+An error occurred within the device after the data was submitted. Examine `ErrCode` and `ErrMsg` for more information.
+{% endstep %}
+
+{% step %}
+**Timeout**
+
+The user waited too long to insert the card or interact with the device. Examine `ErrCode` and `ErrMsg` for more information.
+{% endstep %}
+
+{% step %}
+#### AspenError
+
+An error occurred on Number Aspen Cloud processing servers. Examine `ErrCode` and `ErrMsg` for more information.
+{% endstep %}
+
+{% step %}
+**AuthFail**
+
+When doing a save card only operation, the issuer declined to verify the card details when executing a $0 authorization. The card will not be saved.
+{% endstep %}
+
+{% step %}
+**FunctionFail**
+
+Returned when you supply improper or out of range values in the request, or when you execute a Verifone command while the previous action has not yet completed. Examine `ErrCode` and `ErrMsg` for more information.
+{% endstep %}
+
+{% step %}
+**Exception**
+
+An error was encountered in the local Windows service. Examine `ErrCode` and `ErrMsg` for more information.
+{% endstep %}
+{% endstepper %}
 
 
 

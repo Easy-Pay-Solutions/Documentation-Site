@@ -1,6 +1,7 @@
 ---
 icon: credit-card
 hidden: true
+noIndex: true
 ---
 
 # Card present payments

@@ -1,6 +1,7 @@
 ---
 icon: house-window
 hidden: true
+noIndex: true
 ---
 
 # Home (v2)

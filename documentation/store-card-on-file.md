@@ -1,6 +1,7 @@
 ---
 icon: files
 hidden: true
+noIndex: true
 ---
 
 # Store Card on File

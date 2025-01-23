@@ -1,5 +1,6 @@
 ---
 icon: book-open
+noIndex: true
 ---
 
 # Dev Portal Guidelines

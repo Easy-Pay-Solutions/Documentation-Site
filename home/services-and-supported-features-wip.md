@@ -81,7 +81,7 @@ Learn more about [PayForm](../documentation/getting-started/integration-options-
 
 ***
 
-### Virtual Terminal:
+### Virtual Terminal
 
 **Characteristics:** \
 Web application that provides comprehensive credit card processing functionality, including authorizations, credits, voids, and reporting, while supporting card swipers and chip readers for secure transactions
@@ -168,55 +168,3 @@ Learn more about [WIN SDK DLL](../documentation/getting-started/integration-opti
 | Recurring payments (Automated Payment Plans)  | Automates payment plans using Dynamic Link Libraries (DLL)                                             |
 | Surcharge payments                            | Allows businesses to add a surcharge or extra fee to the transaction amount.                           |
 
-
-
-***
-
-### Win Services:
-
-**Characteristics:** \
-Installed in order to support a local Verifone card reader.
-
-**Use Cases:**\
-Ideal for continuous or automated payment processing within any browser application.
-
-{% hint style="info" %}
-Learn more about Win Services integration.
-{% endhint %}
-
-**Supported features:**
-
-| Feature                                       | Description                                                                                                           |
-| --------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| Card present via Verifone devices             | Processes physical or keyed card transactions using Verifone devices with Windows services running in the background. |
-| Online payments (via browser-based interface) | Supports transaction processing through a web interface, utilizing Windows services for continuous operation.         |
-| Manually keyed transactions                   | Supports Chip/Tap/Swipe and Keyed card data.                                                                          |
-| Surcharge payments                            | Allows businesses to add a surcharge or extra fee to the transaction amount.                                          |
-| Authorizing Payments                          | Verifies cardholder information and checks funds to approve transactions securely.                                    |
-| Store card on file (via integration with API) | Allows secure storage of card details for future transactions.                                                        |
-| Recurring payments (Automated Payment Plans)  | Automates payment plans using Dynamic Link Libraries (DLL)                                                            |
-
-
-
-***
-
-### Text2Pay
-
-**Characteristics:** \
-Allows merchants to send payment reminders and links via SMS or email.
-
-**Use Cases:**\
-Ideal for reminding customers about upcoming payments.\
-
-
-{% hint style="info" %}
-Learn more about Text2Pay integration.
-{% endhint %}
-
-**Supported features:**
-
-| Feature                                       | Description                                                                        |
-| --------------------------------------------- | ---------------------------------------------------------------------------------- |
-| Authorizing Payments                          | Verifies cardholder information and checks funds to approve transactions securely. |
-| Surcharge payments                            | Allows businesses to add a surcharge or extra fee to the transaction amount.       |
-| Store card on file (via integration with API) | Allows secure storage of card details for future transactions.                     |

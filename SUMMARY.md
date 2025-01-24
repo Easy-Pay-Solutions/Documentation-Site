@@ -32,7 +32,7 @@
     * [Virtual Terminal (WIP)](documentation/getting-started/integration-options-v1/virtual-terminal-wip.md)
     * [Custom desktop application](documentation/getting-started/integration-options-v1/custom-desktop-application.md)
     * [Dynamic Link Libraries](documentation/getting-started/integration-options-v1/dynamic-link-libraries.md)
-  * [Client Admin Portal](documentation/getting-started/client-admin-portal.md)
+  * [Client Admin Portal (v1)](documentation/getting-started/client-admin-portal-v1.md)
 * [Card present payments](documentation/card-present-payments.md)
 * [Store Card on File](documentation/store-card-on-file.md)
 * [Surcharge Payments](documentation/surcharge-payments.md)

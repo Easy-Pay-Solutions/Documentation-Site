@@ -296,3 +296,119 @@ Reprint the receipts.
 
 ***
 
+
+
+## Settlements
+
+View and manage the settlements.
+
+{% stepper %}
+{% step %}
+#### Settlements
+
+Manually settle transactions.&#x20;
+
+Select the appropriate merchant account.&#x20;
+
+Select individual transactions, and click _Settle Selected_. Click _Settle All_ to settle all open transactions, or click _Preview Batch_ to see what will be settled.
+
+<figure><img src="../../../.gitbook/assets/epvt8.png" alt=""><figcaption></figcaption></figure>
+{% endstep %}
+
+{% step %}
+#### Batch History
+
+Displays a list of your settlements and allows for reprinting of batch reports.
+
+<figure><img src="../../../.gitbook/assets/epvt9.png" alt=""><figcaption></figcaption></figure>
+{% endstep %}
+{% endstepper %}
+
+
+
+***
+
+
+
+## Miscellaneous
+
+In the upper right-hand corner of the screen, there is a menu of miscellaneous operations.
+
+{% stepper %}
+{% step %}
+#### My Settings
+
+Update your name, email, cellphone number, and change your password
+{% endstep %}
+
+{% step %}
+#### Logout
+
+Log out and end your session with the Virtual Terminal. An open session will automatically log the user out after 15 minutes of inactivity.
+
+{% hint style="danger" %}
+**Remember to always logout or lock your computer when walking away from your workstation.**&#x20;
+{% endhint %}
+{% endstep %}
+
+{% step %}
+#### Contact Us
+
+Displays our support phone number and allows you to send us a secure email.
+{% endstep %}
+{% endstepper %}
+
+
+
+***
+
+
+
+## Lockouts
+
+In order to protect our client’s information, it is necessary for us to lockout users who cannot provide correct credentials. **A lockout will occur if incorrect credentials are entered 6 times in a row.**&#x20;
+
+There are two types of lockouts:&#x20;
+
+* **User lockout** occurs when a user entered their **password** incorrectly for 6 successive attempts.&#x20;
+* **Endpoint lockout** causes your entire office to be locked out because the **username** entered was unknown to our system, and used for 6 successive attempts.&#x20;
+
+{% hint style="info" %}
+If you are experiencing problems authenticating, contact your administrator to reset your credentials. **We recommend to do this before the 6th attempt which could cause a lockout.**
+{% endhint %}
+
+
+
+If you do experience a **user lockout**, you will need to follow these steps to continue:
+
+{% stepper %}
+{% step %}
+#### Get new credentials
+
+Obtain new or updated credentials from your administrator
+{% endstep %}
+
+{% step %}
+#### Reset the terminal
+
+Visit the [reset page](https://easypay5.com/reset) to clear any cookies that have been set on your terminal.
+{% endstep %}
+
+{% step %}
+#### Try using your new credentials
+
+Login with the new or updated credentials.
+{% endstep %}
+{% endstepper %}
+
+If you do experience an **endpoint lockout**, you will first need to need to call the [Number support team](../../../help/customer-support/) to get the lock removed, then follow the instructions for a user lockout.&#x20;
+
+
+
+### Expired Passwords&#x20;
+
+As an additional security precaution, passwords expire after 4 months. You can see your password expiration date every time you log into the Virtual Terminal. &#x20;
+
+You may choose to change your password as often as you wish, however you must change your password every 4 months at a minimum. **Entering an expired password 6 times in succession will cause a user lockout as described above.**
+
+&#x20;

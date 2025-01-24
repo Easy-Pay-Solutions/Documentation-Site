@@ -27,7 +27,7 @@
     * [Android SDK (v2)](documentation/getting-started/integration-options-v1/android-sdk-v2.md)
     * [iOS SDK (v1)](documentation/getting-started/integration-options-v1/ios-sdk-v1.md)
     * [PayForm (v1)](documentation/getting-started/integration-options-v1/payform-v1.md)
-    * [Widgets (WIP)](documentation/getting-started/integration-options-v1/widgets-wip.md)
+    * [Widgets (v1)](documentation/getting-started/integration-options-v1/widgets-v1.md)
     * [Verifone (v1)](documentation/getting-started/integration-options-v1/verifone-v1.md)
     * [Virtual Terminal](documentation/getting-started/integration-options-v1/virtual-terminal.md)
     * [Custom desktop application](documentation/getting-started/integration-options-v1/custom-desktop-application.md)

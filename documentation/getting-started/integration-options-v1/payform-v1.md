@@ -36,16 +36,12 @@ Defined methods for receiving a real-time update after transactions are authoriz
 {% endstep %}
 {% endstepper %}
 
-
-
 **You can then present the PayForm in one of two ways:**&#x20;
 
-<table><thead><tr><th width="114"></th><th></th></tr></thead><tbody><tr><td><img src="../../../.gitbook/assets/Link_S.png" alt="" data-size="original"></td><td>As an iFrame on your website; </td></tr><tr><td><img src="../../../.gitbook/assets/iFrame_S.png" alt="" data-size="original"></td><td>As a direct link to the PayForm.</td></tr></tbody></table>
-
-
+<table data-header-hidden><thead><tr><th width="114"></th><th></th></tr></thead><tbody><tr><td><img src="../../../.gitbook/assets/Link_S.png" alt="" data-size="original"></td><td>As an iFrame on your website</td></tr><tr><td><img src="../../../.gitbook/assets/iFrame_S.png" alt="" data-size="original"></td><td>As a direct link to the PayForm</td></tr></tbody></table>
 
 {% hint style="info" %}
-**To generate a PayForm,** you can make a call to our REST API using a request body generated on the PayForm builder website.
+**To generate a PayForm**, you can make a call to our REST API using a request body generated on the PayForm builder website.
 {% endhint %}
 
 
@@ -58,11 +54,11 @@ Defined methods for receiving a real-time update after transactions are authoriz
 
 <figure><img src="../../../.gitbook/assets/PayForm_Builder.png" alt=""><figcaption></figcaption></figure>
 
-It might be difficult to prepare a PayForm request by yourself at first. To make it easy to get started, we've prepared a form which can generate that for you.
+It might be difficult to prepare a PayForm request by yourself at first. **To make it easy to get started, we've prepared a tool which can generate that for you**.
 
-{% hint style="info" %}
-PayForm builder: [https://easypay8.com/byopayform/](https://easypay8.com/byopayform/)&#x20;
-{% endhint %}
+{% embed url="https://easypay8.com/byopayform/" %}
+PayForm builder
+{% endembed %}
 
 
 
@@ -120,7 +116,7 @@ Additionally, in this part of the builder, you can set values for the hidden con
 
 ## PayForm API request
 
-Once you have the request ready, you can call our REST API to generate the PayForm and the `PaymentURL` that you can use to access it. Here's the reference to [Initialize PayForm](../../../api-reference/rest-api-v3/payform-v3.md#payform-initialize) endpoint.
+Once you have the request ready, you can call our REST API to generate the PayForm and the `PaymentURL` that you can use to access it. See the reference to [#payform-initialize](../../../api-reference/rest-api-v3/payform-v3.md#payform-initialize "mention") endpoint.
 
 Here's an example PayForm generated using the endpoint:
 
@@ -139,7 +135,7 @@ When configuring the form, you may provide one or both of the following URLs:
 
 #### JSON post
 
-Using `JSON post`, you'll be able to provide a POST URL for our servers to stream the data to. Then, you can tap into the request input stream to receive your JSON string.
+Using `JSON post`, you'll be able to provide a `POST URL` for our servers to stream the data to. Then, you can tap into the request input stream to receive your JSON string.
 
 Here's an example of the result and how to tap into the input stream:
 
@@ -185,13 +181,13 @@ public void ProcessPayFormInput(object sender, EventArgs e)
 
 #### Redirect with query string
 
-If you don't choose to use JSON post, we will webrequest your page and add query parameters to the URL. In order for you to validate the information, when configuring the form, you can choose from the following:
+If you don't choose to use `JSON post`, we will web request your page and add query parameters to the URL. In order for you to validate the information, when configuring the form, you can choose from the following:
 
-* If you supply **EIndex**, which is a value that defines your unique AES 256 encryption key as described above, you can read query string values as encrypted parameters (the encrypted message `m`, and the initialization vector `i`);
-* Otherwise, we will supply the query parameters with no encryption and you will be able to query our API to ensure that 1. those values exist and 2. they were created in the last few moments.
+* If you supply `EIndex`, which is a value that defines your unique AES 256 encryption key as described above, you can read query string values as encrypted parameters (the encrypted message `m`, and the initialization vector `i`);
+* Otherwise, we will supply the query parameters with **no encryption** and you will be able to query our API to ensure that **1. those values exist** and **2. they were created in the last few moments**.
 
-{% hint style="warning" %}
-When you are receiving transaction data that is not encrypted, you should validate it before storing any details in your database to avoid malicious actors creating unqualified data.
+{% hint style="danger" %}
+**When you are receiving transaction data that is not encrypted, you should validate it before storing any details to avoid malicious actors creating unqualified data.**
 {% endhint %}
 
 In case you're not using encryption, we recommend **validating the information**.&#x20;

@@ -120,8 +120,8 @@ Ideal for in-person/card-present transactions, allowing merchants to efficiently
 | Settlements                         | Finalizing a transaction by transferring funds from the buyer to the seller.                                                                                                                                                                |
 | Reporting                           | Involves generating summaries and analyses of transaction data to help merchants track financial activities, manage cash flow, and ensure compliance.                                                                                       |
 
-{% content-ref url="../documentation/getting-started/integration-options-v1/virtual-terminal.md" %}
-[virtual-terminal.md](../documentation/getting-started/integration-options-v1/virtual-terminal.md)
+{% content-ref url="../documentation/getting-started/integration-options-v1/virtual-terminal-wip.md" %}
+[virtual-terminal-wip.md](../documentation/getting-started/integration-options-v1/virtual-terminal-wip.md)
 {% endcontent-ref %}
 
 

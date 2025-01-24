@@ -102,7 +102,7 @@ Use our widget builder tool to select various settings, options, and styles. The
 
 {% embed url="https://easypay8.com/byowidget/" %}
 
-Most of the options should be easy to understand or described in the footer of the tool. If you have any questions, please refer to the [#payform-builder](payform-v1.md#payform-builder "mention") guide or contact Number.
+Most of the options should be easy to understand or described in the footer of the tool. If you have any questions, please refer to the [#payform-builder](payform-v1.md#payform-builder "mention") guide or [contact Number](../../../help/customer-support/).
 
 
 
@@ -158,7 +158,7 @@ Here is a list of arguments you can use for `Inputs`:
 * `STATE`: (optional)
 * `ZIP`: (optional)
 * `AMOUNT`: For a one-time payment widget, the $ amount for the transaction.
-* `WTYPE`: The type of widget to use. For testing, use "_P_". For more details, contact Number.
+* `WTYPE`: The type of widget to use. For testing, use "_P_". For more details, [contact Number](../../../help/customer-support/).
 * `REDIRECT`: URL where we can POST the results of the widget submission.&#x20;
 
 {% hint style="info" %}

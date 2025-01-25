@@ -44,7 +44,7 @@
 * [Resources](documentation/resources/README.md)
   * [Tools and Downloads](documentation/resources/tools-and-downloads.md)
   * [Vocabulary](documentation/resources/vocabulary.md)
-  * [Querying](documentation/resources/querying.md)
+  * [Querying (v1)](documentation/resources/querying-v1.md)
   * [Error Codes](documentation/resources/error-codes.md)
   * [Software Requirements](documentation/resources/software-requirements.md)
 

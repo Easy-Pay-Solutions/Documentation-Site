@@ -24,7 +24,7 @@ The data on the magnetic strip of the credit card on card present transactions.
 
 ***
 
-`CardInfo` [api\_CardInfo](../../api-reference/soap-api-v2/soap-object-dictionary-wip.md#api_cardinfo) (object)
+`CardInfo` [api\_CardInfo](../../api-reference/soap-api/soap-object-dictionary.md#api_cardinfo) (object)
 
 The details on the card used for the transaction.
 
@@ -32,7 +32,7 @@ Fields: AccountNumber, ExpMonth, ExpYear, CSV
 
 ***
 
-`EMVRecTags` [api\_EmvReceipt](../../api-reference/soap-api-v2/soap-object-dictionary-wip.md#api_emvreceipt) (object)
+`EMVRecTags` [api\_EmvReceipt](../../api-reference/soap-api/soap-object-dictionary.md#api_emvreceipt) (object)
 
 EMV record tags associated with the transaction.
 

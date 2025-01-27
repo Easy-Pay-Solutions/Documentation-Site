@@ -23,12 +23,12 @@ Perfect for companies developing custom applications with embedded payment funct
 | Settlements                        | Finalizing a transaction by transferring funds from the buyer to the seller.                                                                                                                                                              |
 | Reporting                          | Involves generating summaries and analyses of transaction data to help merchants track financial activities, manage cash flow, and ensure compliance.                                                                                     |
 
-{% content-ref url="../documentation/getting-started/integration-options-v1/rest-api-v1.md" %}
-[rest-api-v1.md](../documentation/getting-started/integration-options-v1/rest-api-v1.md)
+{% content-ref url="../documentation/getting-started/integration-options/rest-api.md" %}
+[rest-api.md](../documentation/getting-started/integration-options/rest-api.md)
 {% endcontent-ref %}
 
-{% content-ref url="../documentation/getting-started/integration-options-v1/soap-api-v1.md" %}
-[soap-api-v1.md](../documentation/getting-started/integration-options-v1/soap-api-v1.md)
+{% content-ref url="../documentation/getting-started/integration-options/soap-api.md" %}
+[soap-api.md](../documentation/getting-started/integration-options/soap-api.md)
 {% endcontent-ref %}
 
 
@@ -54,12 +54,12 @@ Ideal for developers aiming to offer seamless in-app payments, especially in e-c
 | Surcharge payments                                    | Allows businesses to add a surcharge or extra fee to the transaction amount.                                                   |
 | Store card on file (after collecting cardholder data) | Allows merchants to securely store and reuse cardholder information for future transactions if the user saves their card data. |
 
-{% content-ref url="../documentation/getting-started/integration-options-v1/ios-sdk-v1.md" %}
-[ios-sdk-v1.md](../documentation/getting-started/integration-options-v1/ios-sdk-v1.md)
+{% content-ref url="../documentation/getting-started/integration-options/ios-sdk.md" %}
+[ios-sdk.md](../documentation/getting-started/integration-options/ios-sdk.md)
 {% endcontent-ref %}
 
-{% content-ref url="../documentation/getting-started/integration-options-v1/android-sdk-v2.md" %}
-[android-sdk-v2.md](../documentation/getting-started/integration-options-v1/android-sdk-v2.md)
+{% content-ref url="../documentation/getting-started/integration-options/android-sdk.md" %}
+[android-sdk.md](../documentation/getting-started/integration-options/android-sdk.md)
 {% endcontent-ref %}
 
 
@@ -85,8 +85,8 @@ Ideal for businesses seeking a quick, simple way to accept online payments witho
 | Store card on file (after collecting cardholder data) | Allows merchants to securely store and reuse cardholder information for future transactions.                                                 |
 | Surcharge payments                                    | Allows businesses to add a surcharge or extra fee to the transaction amount.                                                                 |
 
-{% content-ref url="../documentation/getting-started/integration-options-v1/payform-v1.md" %}
-[payform-v1.md](../documentation/getting-started/integration-options-v1/payform-v1.md)
+{% content-ref url="../documentation/getting-started/integration-options/payform.md" %}
+[payform.md](../documentation/getting-started/integration-options/payform.md)
 {% endcontent-ref %}
 
 
@@ -120,8 +120,8 @@ Ideal for in-person/card-present transactions, allowing merchants to efficiently
 | Settlements                         | Finalizing a transaction by transferring funds from the buyer to the seller.                                                                                                                                                                |
 | Reporting                           | Involves generating summaries and analyses of transaction data to help merchants track financial activities, manage cash flow, and ensure compliance.                                                                                       |
 
-{% content-ref url="../documentation/getting-started/integration-options-v1/virtual-terminal-wip.md" %}
-[virtual-terminal-wip.md](../documentation/getting-started/integration-options-v1/virtual-terminal-wip.md)
+{% content-ref url="../documentation/getting-started/integration-options/virtual-terminal-wip.md" %}
+[virtual-terminal-wip.md](../documentation/getting-started/integration-options/virtual-terminal-wip.md)
 {% endcontent-ref %}
 
 
@@ -155,8 +155,8 @@ Beneficial for businesses who would rather not log into a browser application.
 | Settlerments                        | Finalizing a transaction by transferring funds from the buyer to the seller.                                                                                                                                                       |
 | Reporting                           | Involves generating summaries and analyses of transaction data to help merchants track financial activities, manage cash flow, and ensure compliance.                                                                              |
 
-{% content-ref url="../documentation/getting-started/integration-options-v1/custom-desktop-application.md" %}
-[custom-desktop-application.md](../documentation/getting-started/integration-options-v1/custom-desktop-application.md)
+{% content-ref url="../documentation/getting-started/integration-options/custom-desktop-application.md" %}
+[custom-desktop-application.md](../documentation/getting-started/integration-options/custom-desktop-application.md)
 {% endcontent-ref %}
 
 
@@ -186,8 +186,8 @@ For developers integrating payment functionalities into desktop software.\
 | Recurring payments (automated payment plans)  | Automates payment plans                                                                                |
 | Surcharge payments                            | Allows businesses to add a surcharge or extra fee to the transaction amount.                           |
 
-{% content-ref url="../documentation/getting-started/integration-options-v1/dynamic-link-libraries.md" %}
-[dynamic-link-libraries.md](../documentation/getting-started/integration-options-v1/dynamic-link-libraries.md)
+{% content-ref url="../documentation/getting-started/integration-options/dynamic-link-libraries.md" %}
+[dynamic-link-libraries.md](../documentation/getting-started/integration-options/dynamic-link-libraries.md)
 {% endcontent-ref %}
 
 

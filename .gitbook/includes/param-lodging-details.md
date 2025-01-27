@@ -2,7 +2,7 @@
 title: param - lodging details
 ---
 
-`LodgingDetails` [api\_LodgingDetails](../../api-reference/soap-api-v2/soap-object-dictionary-wip.md#api_lodgingdetails) (object)
+`LodgingDetails` [api\_LodgingDetails](../../api-reference/soap-api/soap-object-dictionary.md#api_lodgingdetails) (object)
 
 Fields: FirstName, LastName, IsAuthOnly, ConsentID4Auth, Folio, ArrivalDate, DepartureDate, Duration, ChangeDescriptor[^1], ChargeAmount, ExtraChargeAmount, ExtraChargesCode[^2], SaleCode[^3], StayID, CustomerData
 

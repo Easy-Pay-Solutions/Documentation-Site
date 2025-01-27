@@ -1,5 +1,6 @@
 ---
 icon: gauge-simple-min
+hidden: true
 ---
 
 # Developer Quickstart

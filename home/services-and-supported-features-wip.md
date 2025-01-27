@@ -10,7 +10,7 @@ Perfect for companies developing custom applications with embedded payment funct
 
 
 {% hint style="info" %}
-Learn more about [REST API](../documentation/getting-started/integration-options-v1/rest-api-v1.md) and [SOAP API](../documentation/getting-started/integration-options-v1/soap-api-v1.md) integrations.
+Learn more about [REST API](../documentation/getting-started/integration-options/rest-api.md) and [SOAP API](../documentation/getting-started/integration-options/soap-api.md) integrations.
 {% endhint %}
 
 **Supported features:**
@@ -41,7 +41,7 @@ Ideal for developers aiming to offer seamless in-app payments, especially in e-c
 
 
 {% hint style="info" %}
-Learn more about [iOS SDK](../documentation/getting-started/integration-options-v1/ios-sdk-v1.md) and [Android SDK](../documentation/getting-started/integration-options-v1/android-sdk-v2.md) integrations.
+Learn more about [iOS SDK](../documentation/getting-started/integration-options/ios-sdk.md) and [Android SDK](../documentation/getting-started/integration-options/android-sdk.md) integrations.
 {% endhint %}
 
 **Supported features:**
@@ -66,7 +66,7 @@ Ideal for businesses seeking a quick, simple way to accept online payments witho
 
 
 {% hint style="info" %}
-Learn more about [PayForm](../documentation/getting-started/integration-options-v1/payform-v1.md) integration.
+Learn more about [PayForm](../documentation/getting-started/integration-options/payform.md) integration.
 {% endhint %}
 
 **Supported features:**
@@ -90,7 +90,7 @@ Web application that provides comprehensive credit card processing functionality
 It is ideal for in-person/card-present transactions, allowing merchants to efficiently process payments directly at the point of sale with the WIN service installed.&#x20;
 
 {% hint style="info" %}
-Learn more about [Virtual Terminal](../documentation/getting-started/integration-options-v1/virtual-terminal-wip.md) integration.
+Learn more about [Virtual Terminal](../documentation/getting-started/integration-options/virtual-terminal-wip.md) integration.
 {% endhint %}
 
 **Supported features:**
@@ -121,7 +121,7 @@ Installed on a user's computer for online payment processing.
 Beneficial for businesses who would rather not log into a browser application.
 
 {% hint style="info" %}
-Learn more about [Desktop Applications](../documentation/getting-started/integration-options-v1/custom-desktop-application.md) integration.
+Learn more about [Desktop Applications](../documentation/getting-started/integration-options/custom-desktop-application.md) integration.
 {% endhint %}
 
 **Supported features:**
@@ -153,7 +153,7 @@ For developers integrating payment functionalities into desktop software.\
 
 
 {% hint style="info" %}
-Learn more about [WIN SDK DLL](../documentation/getting-started/integration-options-v1/dynamic-link-libraries.md) integration.
+Learn more about [WIN SDK DLL](../documentation/getting-started/integration-options/dynamic-link-libraries.md) integration.
 {% endhint %}
 
 **Supported features:**

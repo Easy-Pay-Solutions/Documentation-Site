@@ -32,7 +32,7 @@ Before you start, you may want to read about using your Verifone device with the
 
 
 
-### Non-EMV Payments
+### Non-EMV payments
 
 Click the _Credit Cards_ tab on the left side of the screen, then _Sale_.
 
@@ -44,7 +44,7 @@ A patient / guest ID or a service description can also be added here and searche
 
 
 
-### EMV Payments
+### EMV payments
 
 Click the _Credit Cards_ tab on the left side of the screen, then on _Sale-EMV_.&#x20;
 
@@ -202,6 +202,16 @@ Use when you want to charge an amount to annual and one-time consents.
 
 Allows you to reprint the consent agreement. You can choose between the customer, merchant, and dual receipt options.
 
+
+
+***
+
+
+
+## Scheduled payments
+
+The scheduled payments view is where you will view and manage all scheduled payments.
+
 #### Process
 
 Run fixed recurring consents and subscriptions.&#x20;
@@ -232,20 +242,14 @@ This displays a history of payments run on a particular consent through the _Sch
 
 The transaction list is where you will view and manage the transactions.
 
-
-
-### Transaction filter
-
-Filter transactions based on the merchant the transaction was processed under, the date range, transaction status, and transaction type.&#x20;
-
 <figure><img src="../../../.gitbook/assets/TransactionsFilterView Window.png" alt=""><figcaption></figcaption></figure>
 
-#### Transaction status and type filters
+#### Transaction operations
 
-For filtering by transaction status and transaction type, see the table below.
+In the _Transaction Operations_ box right above the table, there are several options available to help you manage your transactions.
 
-<table><thead><tr><th valign="top">TxStatus</th><th valign="top">TxType</th></tr></thead><tbody><tr><td valign="top"><em>OPEN</em> - An authorized transaction that has not been settled.</td><td valign="top"><em>CCAUTHONLY</em> - Authorization only, not a live transaction.</td></tr><tr><td valign="top"><em>SETTLED</em> - A finalized transaction sent for deposit to your account.</td><td valign="top"> <em>CCSALE</em> - An authorized transaction.</td></tr><tr><td valign="top"><em>FAILED</em> - Transaction did not receive an authorization.</td><td valign="top"><em>CCFORCE</em> - Number Support team use only.</td></tr><tr><td valign="top"><em>LOCKED</em> - Transaction has an error.</td><td valign="top"><em>CCVOICE</em> - Transaction authorized by voice authorization operator.</td></tr><tr><td valign="top"><em>VOID</em> - Transaction was voided.</td><td valign="top"><em>CCADJUST</em> - A credit issued through administrative adjustment. Number Support team use only.</td></tr><tr><td valign="top"><em>HOST</em> - Transactions with surcharge or a convenience fee.</td><td valign="top"><em>CCCREDIT</em> - A credit transaction refunded to customer card.</td></tr></tbody></table>
-
+{% stepper %}
+{% step %}
 #### Void
 
 Voids can be performed the same day as the transaction before settlement.&#x20;
@@ -253,18 +257,36 @@ Voids can be performed the same day as the transaction before settlement.&#x20;
 {% hint style="warning" %}
 Transactions under _HOST_ with a surcharge can only be voided within 20 minutes of the transaction's approval.
 {% endhint %}
+{% endstep %}
 
+{% step %}
 #### Credit
 
 Credits (refunds) can be processed after settlement.
+{% endstep %}
 
-#### **Full Detail**&#x20;
+{% step %}
+#### **Full Detail**
 
 Displays all the transaction details.
+{% endstep %}
+{% endstepper %}
 
 #### Receipts
 
 Reprint the receipts. You can choose between the customer, merchant, and dual receipt options.
+
+
+
+### Transaction filter
+
+Filter transactions based on the merchant the transaction was processed under, the date range, transaction status, and transaction type.&#x20;
+
+#### Transaction status and type filters
+
+For filtering by transaction status and transaction type, see the table below.
+
+<table><thead><tr><th valign="top">TxStatus</th><th valign="top">TxType</th></tr></thead><tbody><tr><td valign="top"><em>OPEN</em> - An authorized transaction that has not been settled.</td><td valign="top"><em>CCAUTHONLY</em> - Authorization only, not a live transaction.</td></tr><tr><td valign="top"><em>SETTLED</em> - A finalized transaction sent for deposit to your account.</td><td valign="top"> <em>CCSALE</em> - An authorized transaction.</td></tr><tr><td valign="top"><em>FAILED</em> - Transaction did not receive an authorization.</td><td valign="top"><em>CCFORCE</em> - Number Support team use only.</td></tr><tr><td valign="top"><em>LOCKED</em> - Transaction has an error.</td><td valign="top"><em>CCVOICE</em> - Transaction authorized by voice authorization operator.</td></tr><tr><td valign="top"><em>VOID</em> - Transaction was voided.</td><td valign="top"><em>CCADJUST</em> - A credit issued through administrative adjustment. Number Support team use only.</td></tr><tr><td valign="top"><em>HOST</em> - Transactions with surcharge or a convenience fee.</td><td valign="top"><em>CCCREDIT</em> - A credit transaction refunded to customer card.</td></tr></tbody></table>
 
 
 
@@ -312,7 +334,7 @@ Select individual transactions, and click _Settle Selected_. Click _Settle All_ 
 
 
 
-## Batch History
+## Batch history
 
 Displays a list of your settlements and allows for reprinting of batch reports.
 
@@ -401,7 +423,7 @@ If you do experience an **endpoint lockout**, you will first need to need to cal
 
 
 
-### Expired Passwords&#x20;
+### Expired passwords&#x20;
 
 As an additional security precaution, passwords expire after 4 months. You can see your password expiration date every time you log into the Virtual Terminal. &#x20;
 

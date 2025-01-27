@@ -118,7 +118,7 @@ In order to open a widget for collecting credit card information, first you must
 
 #### Key parameter
 
-For `Key`, you need to enter your Number credentials. You can either use your account code and token or a session key. You can read more about those parameters in [api-authentication.md](../basics/api-authentication.md "mention").
+For `Key`, you need to enter your Number credentials. You can either use your account code and token or a session key. You can read more about those parameters in [authentication.md](../basics/authentication.md "mention").
 
 Examples:
 

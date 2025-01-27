@@ -17,7 +17,7 @@
   * [Digital Signatures](documentation/developer-quickstart/digital-signatures.md)
 * [Getting Started](documentation/getting-started/README.md)
   * [Basics](documentation/getting-started/basics/README.md)
-    * [API Authentication](documentation/getting-started/basics/api-authentication.md)
+    * [Authentication](documentation/getting-started/basics/authentication.md)
     * [API Best Practices](documentation/getting-started/basics/api-best-practices.md)
     * [API Input Validation](documentation/getting-started/basics/api-input-validation.md)
   * [Integration Checklist](documentation/getting-started/integration-checklist.md)

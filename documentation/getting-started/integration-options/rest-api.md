@@ -6,7 +6,7 @@ description: Getting started with the REST API for Number
 
 Our REST API allows full integration of Number services with a high degree of customization. You can use our [REST API reference](../../../api-reference/rest-api/) to learn about specific methods in the API.
 
-Before you continue this section, we recommend reading sections about [authentication](../basics/api-authentication.md), [best practices](../basics/api-best-practices.md), and [input validation](../basics/api-input-validation.md).
+Before you continue this section, we recommend reading sections about [authentication](../basics/authentication.md), [best practices](../basics/api-best-practices.md), and [input validation](../basics/api-input-validation.md).
 
 
 

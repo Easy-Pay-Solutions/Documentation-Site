@@ -1032,6 +1032,11 @@ components:
         - "Chargeback"
       description: Represents the current status of the international transaction
 
+    ProcessorTxID:
+      type: string
+      example: "16790131F349BCBA"
+      description: The unique transaction ID from the processor, different from our internal transaction ID.
+
     QueryTransaction:
       type: string
       description: >
@@ -1196,8 +1201,7 @@ paths:
                         type: integer
                         example: 1381
                       uniqueTranID:
-                        type: string
-                        example: "16790131F349BCBA"
+                        $ref: "#/components/schemas/ProcessorTxID"
       parameters:
         - $ref: "#/components/parameters/SessKey"
         - $ref: "#/components/parameters/ContentType"
@@ -1260,8 +1264,7 @@ paths:
                         type: integer
                         example: 1381
                       uniqueTranID:
-                        type: string
-                        example: "16790131F349BCBA"
+                        $ref: "#/components/schemas/ProcessorTxID"
       parameters:
         - $ref: "#/components/parameters/SessKey"
         - $ref: "#/components/parameters/ContentType"
@@ -1365,8 +1368,7 @@ paths:
                         type: integer
                         example: 72
                       uniqueTranID:
-                        type: string
-                        example: "122103CCD3F49CC0"
+                        $ref: "#/components/schemas/ProcessorTxID"
       parameters:
         - $ref: "#/components/parameters/SessKey"
         - $ref: "#/components/parameters/ContentType"
@@ -1499,12 +1501,14 @@ paths:
                           APILocationID:
                             type: integer
                             example: 2210
+                            description: Location identifier used by the Number team to help debug issues.
                           AccountCode:
                             type: string
                             example: "EP9116875"
                           AcctID:
                             type: integer
                             example: 205
+                            description: The ID of the account under which the user was created.
                           Alias:
                             type: string
                             example: "vidya_Venkatraman"
@@ -1523,6 +1527,7 @@ paths:
                           ID:
                             type: integer
                             example: 2547
+                            description: The unique user ID associated with the authenticated user.
                           IsExpired:
                             type: boolean
                             example: false
@@ -3134,6 +3139,7 @@ paths:
                             Trans_Date:
                               type: string
                               example: "Sep 11 2024  4:16PM"
+                              description: The time of the transaction, in MMM DD YYYY h:mmtt format.
                             Trans_ID:
                               type: string
                               example: "328217c4-7059-11ef-a730-a6469c956913"
@@ -3141,16 +3147,17 @@ paths:
                               type: string
                               nullable: true
                               example: null
-                              description: The date the transaction was processed by the bank
+                              description: The date the transaction was processed by the bank, in YYYY-MM-DD HH:mm:ss format.
                             chargeback_date:
                               type: string
                               nullable: true
                               example: null
-                              description: The date the chargeback was completed
+                              description: The date the chargeback was completed, in YYYY-MM-DD HH:mm:ss format.
                             reason_code:
                               type: string
                               nullable: true
                               example: null
+                              description: The provider reason code and description for the transaction.
       parameters:
         - $ref: "#/components/parameters/SessKey"
         - $ref: "#/components/parameters/ContentType"
@@ -3391,6 +3398,7 @@ paths:
                           AutoSchedule:
                             type: boolean
                             example: true
+                            description: Indicates whether the account is set to automatically process scheduled payments from recurring and subscription consents.
                           AutoSettle:
                             type: boolean
                             example: true
@@ -3406,6 +3414,7 @@ paths:
                           BatchReport:
                             type: boolean
                             example: false
+                            description: Indicates whether a batch report should be generated each night after the settlement process runs.
                           DateCreated:
                             $ref: "#/components/schemas/Date"
                           DateModified:
@@ -3783,6 +3792,7 @@ paths:
                             BatchRecs:
                               type: integer
                               example: 3
+                              description: The number of transactions that were processed in the batch.
                             Code:
                               type: string
                               example: "A"
@@ -4444,6 +4454,7 @@ paths:
                             type: string
                             nullable: true
                             example: null
+                            description: The Application Cryptogram code generated by the smart chip on the card during a transaction, used to protect against fraud.
                           AID:
                             type: string
                             nullable: true
@@ -4451,7 +4462,8 @@ paths:
                           ARC:
                             type: string
                             nullable: true
-                            example: null
+                            example: "00"
+                            description: Authorization Response Code.
                           AcctHolderID:
                             type: integer
                             example: 1
@@ -4498,6 +4510,7 @@ paths:
                             type: string
                             nullable: true
                             example: null
+                            description: Terminal ID of the merchant assigned to a specific payment terminal used by the merchant, identifying the POS device.
                           MerchZip:
                             type: string
                             example: "04101"
@@ -4507,11 +4520,13 @@ paths:
                           TSI:
                             type: string
                             nullable: true
-                            example: null
+                            example: "F800"
+                            description: Transaction Status Indicator; indicates the functions performed in transaction.
                           TVR:
                             type: string
                             nullable: true
-                            example: null
+                            example: "0000008000"
+                            description: Transaction Verification Result.
                           TxAmount:
                             type: number
                             format: float
@@ -5650,7 +5665,7 @@ paths:
                     WType:
                       type: string
                       example: "SW"
-                      description: This specifies which payment widget to display (example SMSPN).
+                      description: This specifies which payment widget to display, including custom widgets built for your company. Contact Number for more information.
                     RedirectURL:
                       type: string
                       example: "https://easypay7.com/PostingApp"
@@ -5658,7 +5673,7 @@ paths:
                     WidgetURL:
                       type: string
                       example: "https://easypay5.com/stdwidget"
-                      description: Endpoint for the widget transaction.
+                      description: Endpoint for the widget payment form. Contact Number for more information.
                     ExpiresOn:
                       type: string
                       example: "2025-10-05"
@@ -5674,6 +5689,7 @@ paths:
                       type: array
                       items:
                         type: object
+                      description: Not used.
       responses:
         "200":
           description: Successfully created payment link

@@ -214,7 +214,11 @@ Allows you to reprint the consent agreement. You can choose between the customer
 
 The scheduled payments view is where you will view and manage all scheduled payments.
 
-#### Process
+<figure><img src="../../../.gitbook/assets/ScheduledPayments Window.png" alt=""><figcaption></figcaption></figure>
+
+
+
+#### Schedule Operations
 
 Run fixed recurring consents and subscriptions.&#x20;
 
@@ -224,7 +228,7 @@ Scheduled payments can also be run automatically on the day they are due. [Conta
 
 Filter the consents you want to run by date range and consent type. Once you have the consents you want to charge filtered, you can click _Process All to **process all payments due**_. You can also individually select consents and run them by clicking _Process Selected_.&#x20;
 
-The option to reschedule or cancel a payment are also available on this screen.
+The option to _Reschedule_ or _Cancel Payment_ are also available.
 
 #### Failed Payments
 
@@ -232,7 +236,7 @@ If a customer’s card is declined, you will receive a notification report.
 
 #### Payment History
 
-This displays a history of payments run on a particular consent through the _Scheduled Payments_ option.
+Displays a history of payments run on a particular consent through the _Scheduled Payments_ option.
 
 
 

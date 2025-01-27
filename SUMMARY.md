@@ -2,7 +2,7 @@
 
 * [Home](README.md)
   * [Get your business started](home/get-your-business-started.md)
-  * [Services and supported features (WIP)](home/services-and-supported-features-wip.md)
+  * [Services and supported features](home/services-and-supported-features.md)
 * [Home (v2)](home-v2/README.md)
   * [Services and supported features (WIP)](home-v2/services-and-supported-features-wip.md)
 

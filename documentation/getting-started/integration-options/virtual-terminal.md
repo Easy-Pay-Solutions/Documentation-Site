@@ -146,6 +146,8 @@ You can also place a subscription on hold. **This will pause all processing unti
 
 ## Consent list
 
+Click the _Reports_ tab on the left side of the screen, then _Consents_.
+
 The consent list is where you will manage your consents after they have been created. The query filter can be used to search your consent list.
 
 <figure><img src="../../../.gitbook/assets/AnnualConsentOperations Window.png" alt=""><figcaption></figcaption></figure>
@@ -240,6 +242,8 @@ This displays a history of payments run on a particular consent through the _Sch
 
 ## Transaction list
 
+Click the _Reports_ tab on the left side of the screen, then _Transactions_.
+
 The transaction list is where you will view and manage the transactions.
 
 <figure><img src="../../../.gitbook/assets/TransactionsFilterView Window.png" alt=""><figcaption></figcaption></figure>
@@ -317,6 +321,8 @@ Choose the desired comparison type for search.
 
 
 ## Settlements
+
+Click the _Settlement_ option on the left side of the screen.
 
 View and manage the settlements.
 

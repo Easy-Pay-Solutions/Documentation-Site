@@ -36,7 +36,7 @@ This will show the list of transactions created. Select the transaction to be ve
 
 Make sure the amount, last four digits of the credit card, card type, and expiration date are correct.
 
-<figure><img src="../../.gitbook/assets/Verifying Transactions 2.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/fullDetailApprovedTransaction.png" alt=""><figcaption></figcaption></figure>
 
 
 
@@ -48,9 +48,7 @@ There are scenarios where the transaction can get declined due to various reason
 You can find penny codes for testing declines in the [Global Payments Testing](global-payments-testing.md) section.
 {% endhint %}
 
-Clicking on _Full Detail_ can show the reason for decline as highlighted below:
-
-<figure><img src="../../.gitbook/assets/Verifying Transactions - Testing Declines 2.png" alt=""><figcaption><p>Virtual Terminal full detail with failed <code>TxStatus</code> and <code>Flags</code></p></figcaption></figure>
+You can click _Full Detail_ to try to find out the reason for decline by checking `TxStatus`, `Flags,` and other values.
 
 
 
@@ -74,7 +72,7 @@ Using the test cards, if you enter the amount of $2.78, you should get partial a
 
 The receipt can also be printed in the Virtual Terminal by expanding the _Receipts_ dropdown and clicking the _Merchant_ or _Customer_ button.
 
-<figure><img src="../../.gitbook/assets/Verifying Transactions - Testing Receipts 2.png" alt=""><figcaption><p>Virtual Terminal receipt pop-up (merchant copy)</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/receipt.png" alt=""><figcaption></figcaption></figure>
 
 
 
@@ -88,8 +86,11 @@ Click on the _Reports_ menu and choose _Consents._
 
 Select the consent that needs to be verified from the grid. Click the _Full Detail_ button and make sure the consent, account holder, and end customer details look correct.
 
-<figure><img src="../../.gitbook/assets/Verifying Consents 2.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/FullDetailConsent.png" alt=""><figcaption></figcaption></figure>
 
 To view the consent agreement, click on the _Merchant Consent_ or _Customer Consent_.
 
-<figure><img src="../../.gitbook/assets/Verifying Consents 3.png" alt=""><figcaption><p>Consent annual receipt (merchant copy)</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/ConsentReceiptMerchant (1).png" alt=""><figcaption></figcaption></figure>
+
+
+

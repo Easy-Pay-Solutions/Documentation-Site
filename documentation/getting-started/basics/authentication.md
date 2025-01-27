@@ -17,7 +17,7 @@ layout:
     visible: true
 ---
 
-# API Authentication (v3)
+# Authentication
 
 <figure><img src="../../../.gitbook/assets/Authentication Flow.png" alt=""><figcaption></figcaption></figure>
 
@@ -69,9 +69,7 @@ We recommend that you obtain and use the same key until you receive one of above
 
 If you are not passing cardholder data through the API, you only need the session key to authenticate and connect to your account.  Otherwise, you need to use a signature secured by an HMAC secret and and encrypt the cardholder data using our RSA certificate.
 
-{% hint style="warning" %}
-If you have your own PCI compliant program and want to handle cardholder data using our API, you'll need to supplement the authentication header with the HMAC secret and you'll need to use our RSA certificate to encrypt cardholder data.
-{% endhint %}
+{% include "../../../.gitbook/includes/warning-hmac.md" %}
 
 ### HMAC header
 
@@ -85,7 +83,7 @@ When required to secure the request, the `SessKey` header will need to include a
 
 This altered key should be passed instead of the plain session key using a header with the same name, `SessKey`. Here are some examples of creating the header signature:
 
-{% include "../../../.gitbook/includes/var-sesskey-9b9175ef556e....md" %}
+{% include "../../../.gitbook/includes/code-hmac.md" %}
 
 ### RSA encryption
 

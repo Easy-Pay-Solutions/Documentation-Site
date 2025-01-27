@@ -253,7 +253,7 @@ A component that can be used to condense display equivalent content consisting o
 
 We highly recommend using it for multiple code blocks with different technology presentations:
 
-{% include "../../.gitbook/includes/var-sesskey-9b9175ef556e....md" %}
+{% include "../../.gitbook/includes/code-hmac.md" %}
 
 
 

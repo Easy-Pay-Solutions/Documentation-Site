@@ -2,5 +2,5 @@
 hidden: true
 ---
 
-# Before You Begin
+# Payment Reminder
 

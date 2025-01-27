@@ -1,9 +1,8 @@
 ---
 description: Getting started with Virtual Terminal for Number
-hidden: true
 ---
 
-# Virtual Terminal (WIP)
+# Virtual Terminal
 
 <figure><img src="../../../.gitbook/assets/epvt0 full width (2).png" alt=""><figcaption></figcaption></figure>
 
@@ -11,13 +10,13 @@ hidden: true
 
 ## Introduction
 
-The Virtual Terminal (VT) is a web application that provides all types of credit card processing functionality. The VT is the fastest way to start trying out our payment services.&#x20;
+The Virtual Terminal is a web application that provides all types of credit card processing functionality. The VT is the fastest way to start trying out our payment services.&#x20;
 
 {% embed url="https://easypay5.com/VT" %}
 
 When you log in to the Virtual Terminal, you are brought to the home screen. The number of open transactions and scheduled payments due display at the top of the screen. Your default merchant and user roles are listed just below, along with the expiration date of your password.&#x20;
 
-<figure><img src="../../../.gitbook/assets/epvt1 docs.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/HomePageExpandedNav (1).png" alt=""><figcaption></figcaption></figure>
 
 
 
@@ -79,6 +78,8 @@ An email address can be added to the consent so your customer will receive a rec
 
 ### Annual and one-time
 
+Click the _Consents_ tab on the left side of the screen, then _Create Annual Consent_, _Create Annual: EMV_, or _Create One-Time Consent_ depending on the type of consent you need and payment method.
+
 <figure><img src="../../../.gitbook/assets/epvt2.png" alt=""><figcaption></figcaption></figure>
 
 Creating annual and one-time consents allows your office to charge a card at a later date. **This can be useful in situations where you expect a balance to be due after services have been provided.**
@@ -101,6 +102,8 @@ An email address can be added to the consent so your customer will receive a rec
 
 ### Fixed recurring
 
+Click the _Recurring_ tab on the left side of the screen, then _Create Recurring Consent_ or _Create Recurring: EMV_ based on the payment method.
+
 <figure><img src="../../../.gitbook/assets/epvt3.png" alt=""><figcaption></figcaption></figure>
 
 Creating a fixed recurring consent allows your office to set up a payment plan with your customer.  **This can be useful in situations where your customer has an outstanding balance due.**
@@ -118,6 +121,8 @@ An email address can be added to the consent so your customer will receive a rec
 
 
 ### Subscription
+
+Click the _Recurring_ tab on the left side of the screen, then _Create Subscription_.
 
 <figure><img src="../../../.gitbook/assets/epvt4.png" alt=""><figcaption></figcaption></figure>
 
@@ -141,23 +146,19 @@ You can also place a subscription on hold. **This will pause all processing unti
 
 ## Consent list
 
-The consent list is where you will manage your consents after they have been created.  The query filter can be used to search your consent list.
+The consent list is where you will manage your consents after they have been created. The query filter can be used to search your consent list.
 
-<figure><img src="../../../.gitbook/assets/epvt5.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/AnnualConsentOperations Window.png" alt=""><figcaption></figcaption></figure>
 
-In the _Consent Operations_ box right above the table, there are several options available to help you manage your consents.
+#### Consent operations
+
+In the _Consent Operations_ box right above the table, there are several options available to help you manage your consents. **The availability of each option will vary depending on whether the selected consent is annual or recurring.**
 
 {% stepper %}
 {% step %}
 #### **Edit**
 
 The edit screen allows you to add or change the email address associated with consent, update the billing zip code and expiration date, add or change the reference ID and service description.
-{% endstep %}
-
-{% step %}
-#### **Receipts**
-
-Allows you to reprint the consent agreement.
 {% endstep %}
 
 {% step %}
@@ -195,8 +196,12 @@ Use when you want to charge an amount to annual and one-time consents.
 
 <figure><img src="../../../.gitbook/assets/epvt6 left-align (1).png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
+{% endstepper %}
 
-{% step %}
+#### **Receipts**
+
+Allows you to reprint the consent agreement. You can choose between the customer, merchant, and dual receipt options.
+
 #### Process
 
 Run fixed recurring consents and subscriptions.&#x20;
@@ -208,20 +213,14 @@ Scheduled payments can also be run automatically on the day they are due. [Conta
 Filter the consents you want to run by date range and consent type. Once you have the consents you want to charge filtered, you can click _Process All to **process all payments due**_. You can also individually select consents and run them by clicking _Process Selected_.&#x20;
 
 The option to reschedule or cancel a payment are also available on this screen.
-{% endstep %}
 
-{% step %}
 #### Failed Payments
 
 If a customer’s card is declined, you will receive a notification report.
-{% endstep %}
 
-{% step %}
 #### Payment History
 
 This displays a history of payments run on a particular consent through the _Scheduled Payments_ option.
-{% endstep %}
-{% endstepper %}
 
 
 
@@ -229,42 +228,24 @@ This displays a history of payments run on a particular consent through the _Sch
 
 
 
-## <mark style="background-color:orange;">Transaction list</mark>
+## Transaction list
 
 The transaction list is where you will view and manage the transactions.
 
-<figure><img src="../../../.gitbook/assets/epvt7.png" alt=""><figcaption></figcaption></figure>
 
-{% stepper %}
-{% step %}
-#### Search
 
-Search your database, create reports based on results, void, credit, and reprint receipts.
-{% endstep %}
-
-{% step %}
-#### Query filter
+### Transaction filter
 
 Filter transactions based on the merchant the transaction was processed under, the date range, transaction status, and transaction type.&#x20;
 
+<figure><img src="../../../.gitbook/assets/TransactionsFilterView Window.png" alt=""><figcaption></figcaption></figure>
+
+#### Transaction status and type filters
+
+For filtering by transaction status and transaction type, see the table below.
+
 <table><thead><tr><th valign="top">TxStatus</th><th valign="top">TxType</th></tr></thead><tbody><tr><td valign="top"><em>OPEN</em> - An authorized transaction that has not been settled.</td><td valign="top"><em>CCAUTHONLY</em> - Authorization only, not a live transaction.</td></tr><tr><td valign="top"><em>SETTLED</em> - A finalized transaction sent for deposit to your account.</td><td valign="top"> <em>CCSALE</em> - An authorized transaction.</td></tr><tr><td valign="top"><em>FAILED</em> - Transaction did not receive an authorization.</td><td valign="top"><em>CCFORCE</em> - Number Support team use only.</td></tr><tr><td valign="top"><em>LOCKED</em> - Transaction has an error.</td><td valign="top"><em>CCVOICE</em> - Transaction authorized by voice authorization operator.</td></tr><tr><td valign="top"><em>VOID</em> - Transaction was voided.</td><td valign="top"><em>CCADJUST</em> - A credit issued through administrative adjustment. Number Support team use only.</td></tr><tr><td valign="top"><em>HOST</em> - Transactions with surcharge or a convenience fee.</td><td valign="top"><em>CCCREDIT</em> - A credit transaction refunded to customer card.</td></tr></tbody></table>
-{% endstep %}
 
-{% step %}
-#### Search type
-
-Find the search value in a specific field.
-
-<table><thead><tr><th valign="top">Search type</th></tr></thead><tbody><tr><td valign="top"><code>Acct LastName</code> - Last name of the cardholder.</td></tr><tr><td valign="top"><code>Acct FirstName</code> - First name of the cardholder.</td></tr><tr><td valign="top"><code>Cust LastName</code> - Last name of the customer (if different than cardholder).</td></tr><tr><td valign="top"><code>Cust FirstName</code> - First name of the customer (if different than cardholder).</td></tr><tr><td valign="top"><code>RefID</code> - The custom user-defined value entered at the time of transaction.</td></tr><tr><td valign="top"><code>Amount</code> - The $ amount of the transaction.</td></tr></tbody></table>
-{% endstep %}
-
-{% step %}
-#### Search filter
-
-Further narrow your search with customer specific information.
-{% endstep %}
-
-{% step %}
 #### Void
 
 Voids can be performed the same day as the transaction before settlement.&#x20;
@@ -272,26 +253,40 @@ Voids can be performed the same day as the transaction before settlement.&#x20;
 {% hint style="warning" %}
 Transactions under _HOST_ with a surcharge can only be voided within 20 minutes of the transaction's approval.
 {% endhint %}
-{% endstep %}
 
-{% step %}
 #### Credit
 
 Credits (refunds) can be processed after settlement.
-{% endstep %}
 
-{% step %}
 #### **Full Detail**&#x20;
 
 Displays all the transaction details.
-{% endstep %}
 
-{% step %}
 #### Receipts
 
-Reprint the receipts.
-{% endstep %}
-{% endstepper %}
+Reprint the receipts. You can choose between the customer, merchant, and dual receipt options.
+
+
+
+### Transaction search
+
+Search your database, create reports based on results, void, credit, and reprint receipts.
+
+<figure><img src="../../../.gitbook/assets/TransactionsSearchView Window.png" alt=""><figcaption></figcaption></figure>
+
+#### Search for
+
+Find the search value in a specific field by using the _Search for a_ dropdown.
+
+<table><thead><tr><th valign="top">Search field type</th></tr></thead><tbody><tr><td valign="top"><code>Acct LastName</code> - Last name of the cardholder.</td></tr><tr><td valign="top"><code>Acct FirstName</code> - First name of the cardholder.</td></tr><tr><td valign="top"><code>Cust LastName</code> - Last name of the customer (if different than cardholder).</td></tr><tr><td valign="top"><code>Cust FirstName</code> - First name of the customer (if different than cardholder).</td></tr><tr><td valign="top"><code>RefID</code> - The custom user-defined value entered at the time of transaction.</td></tr><tr><td valign="top"><code>Amount</code> - The $ amount of the transaction.</td></tr></tbody></table>
+
+#### Search value
+
+The value to search for in the specified field.
+
+#### Search type
+
+Choose the desired comparison type for search.
 
 
 
@@ -303,27 +298,25 @@ Reprint the receipts.
 
 View and manage the settlements.
 
-{% stepper %}
-{% step %}
-#### Settlements
+<figure><img src="../../../.gitbook/assets/SettlementsPage Window.png" alt=""><figcaption></figcaption></figure>
 
-Manually settle transactions.&#x20;
+#### Manually settle transactions.&#x20;
 
 Select the appropriate merchant account.&#x20;
 
 Select individual transactions, and click _Settle Selected_. Click _Settle All_ to settle all open transactions, or click _Preview Batch_ to see what will be settled.
 
-<figure><img src="../../../.gitbook/assets/epvt8.png" alt=""><figcaption></figcaption></figure>
-{% endstep %}
 
-{% step %}
-#### Batch History
+
+***
+
+
+
+## Batch History
 
 Displays a list of your settlements and allows for reprinting of batch reports.
 
-<figure><img src="../../../.gitbook/assets/epvt9.png" alt=""><figcaption></figcaption></figure>
-{% endstep %}
-{% endstepper %}
+<figure><img src="../../../.gitbook/assets/BatchHistoryReport Window.png" alt=""><figcaption></figcaption></figure>
 
 
 
@@ -335,11 +328,19 @@ Displays a list of your settlements and allows for reprinting of batch reports.
 
 In the upper right-hand corner of the screen, there is a menu of miscellaneous operations.
 
+<figure><img src="../../../.gitbook/assets/RightHandMiscOptions Full Length.png" alt=""><figcaption></figcaption></figure>
+
 {% stepper %}
 {% step %}
 #### My Settings
 
 Update your name, email, cellphone number, and change your password
+{% endstep %}
+
+{% step %}
+#### Contact Us
+
+Displays our support phone number and allows you to send us a secure email.
 {% endstep %}
 
 {% step %}
@@ -350,12 +351,6 @@ Log out and end your session with the Virtual Terminal. An open session will aut
 {% hint style="danger" %}
 **Remember to always logout or lock your computer when walking away from your workstation.**&#x20;
 {% endhint %}
-{% endstep %}
-
-{% step %}
-#### Contact Us
-
-Displays our support phone number and allows you to send us a secure email.
 {% endstep %}
 {% endstepper %}
 

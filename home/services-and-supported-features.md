@@ -1,4 +1,4 @@
-# Services and supported features (WIP)
+# Services and supported features
 
 ### REST/SOAP API
 
@@ -90,7 +90,7 @@ Web application that provides comprehensive credit card processing functionality
 It is ideal for in-person/card-present transactions, allowing merchants to efficiently process payments directly at the point of sale with the WIN service installed.&#x20;
 
 {% hint style="info" %}
-Learn more about [Virtual Terminal](../documentation/getting-started/integration-options/virtual-terminal-wip.md) integration.
+Learn more about [Virtual Terminal](../documentation/getting-started/integration-options/virtual-terminal.md) integration.
 {% endhint %}
 
 **Supported features:**

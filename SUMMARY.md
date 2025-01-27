@@ -29,7 +29,7 @@
     * [PayForm](documentation/getting-started/integration-options/payform.md)
     * [Widgets](documentation/getting-started/integration-options/widgets.md)
     * [Verifone](documentation/getting-started/integration-options/verifone.md)
-    * [Virtual Terminal (WIP)](documentation/getting-started/integration-options/virtual-terminal-wip.md)
+    * [Virtual Terminal](documentation/getting-started/integration-options/virtual-terminal.md)
     * [Custom desktop application](documentation/getting-started/integration-options/custom-desktop-application.md)
     * [Dynamic Link Libraries](documentation/getting-started/integration-options/dynamic-link-libraries.md)
   * [Client Admin Portal](documentation/getting-started/client-admin-portal.md)

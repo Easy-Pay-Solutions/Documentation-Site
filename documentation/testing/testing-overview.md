@@ -14,7 +14,11 @@ After API, PayForm, or widget integration, it is important to login to our Virtu
 An example user name for the Virtual Terminal can look like this: **VT4914533**
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/Testing Integration.png" alt=""><figcaption><p>Virtual Terminal login screen</p></figcaption></figure>
+For more information about the Virtual Terminal, see the [virtual-terminal.md](../getting-started/integration-options/virtual-terminal.md "mention") guide. You can access Virtual Terminal using the link below.
+
+{% embed url="https://easypay5.com/VT" %}
+
+<figure><img src="../../.gitbook/assets/epvt0 full width (2).png" alt=""><figcaption></figcaption></figure>
 
 
 
@@ -26,13 +30,13 @@ An example user name for the Virtual Terminal can look like this: **VT4914533**
 
 Once logged in, expand the _Transactions_ tab in the navigation on the left, then click on _Search_.
 
-<figure><img src="../../.gitbook/assets/Verifying Transactions 1 (2).png" alt=""><figcaption><p>Virtual Terminal search screen</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/TransactionsSearchView Window.png" alt=""><figcaption></figcaption></figure>
 
 This will show the list of transactions created. Select the transaction to be verified, and click on _Full Detail_ button under _Transaction Operations_. A pop up will open to show all the information about the transaction, account holder, and the end customer.
 
 Make sure the amount, last four digits of the credit card, card type, and expiration date are correct.
 
-<figure><img src="../../.gitbook/assets/Verifying Transactions 2.png" alt=""><figcaption><p>Virtual Terminal full transaction detail</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Verifying Transactions 2.png" alt=""><figcaption></figcaption></figure>
 
 
 
@@ -43,8 +47,6 @@ There are scenarios where the transaction can get declined due to various reason
 {% hint style="info" %}
 You can find penny codes for testing declines in the [Global Payments Testing](global-payments-testing.md) section.
 {% endhint %}
-
-<figure><img src="../../.gitbook/assets/Verifying Transactions - Testing Declines 1 (2).png" alt=""><figcaption><p>Virtual Terminal failed transaction</p></figcaption></figure>
 
 Clicking on _Full Detail_ can show the reason for decline as highlighted below:
 
@@ -70,9 +72,7 @@ Using the test cards, if you enter the amount of $2.78, you should get partial a
 
 ### Testing receipts <a href="#testing-receipts" id="testing-receipts"></a>
 
-The receipt can also be printed in the Virtual Terminal by clicking the _Merchant_ or _Customer_ button.
-
-<figure><img src="../../.gitbook/assets/Verifying Transactions - Testing Receipts 1 (1).png" alt=""><figcaption><p>Virtual Terminal search screen with receipt buttons pointed out</p></figcaption></figure>
+The receipt can also be printed in the Virtual Terminal by expanding the _Receipts_ dropdown and clicking the _Merchant_ or _Customer_ button.
 
 <figure><img src="../../.gitbook/assets/Verifying Transactions - Testing Receipts 2.png" alt=""><figcaption><p>Virtual Terminal receipt pop-up (merchant copy)</p></figcaption></figure>
 
@@ -84,13 +84,11 @@ The receipt can also be printed in the Virtual Terminal by clicking the _Merchan
 
 ## Verifying consents <a href="#verifying-consents" id="verifying-consents"></a>
 
-Click on the _Consent List_ menu as shown below:
-
-<figure><img src="../../.gitbook/assets/Verifying Consents 1 (2).png" alt=""><figcaption><p>Virtual Terminal consent search screen</p></figcaption></figure>
+Click on the _Reports_ menu and choose _Consents._
 
 Select the consent that needs to be verified from the grid. Click the _Full Detail_ button and make sure the consent, account holder, and end customer details look correct.
 
-<figure><img src="../../.gitbook/assets/Verifying Consents 2.png" alt=""><figcaption><p>Virtual Terminal consent full detail</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Verifying Consents 2.png" alt=""><figcaption></figcaption></figure>
 
 To view the consent agreement, click on the _Merchant Consent_ or _Customer Consent_.
 

@@ -16,7 +16,7 @@ Return batch processing details. Batches are used for settling open transactions
 
 ***
 
-{% include "../../.gitbook/includes/param-query.md" %}
+{% include "../../.gitbook/includes/param-query-batch-log.md" %}
 {% endtab %}
 
 {% tab title="Response body" %}

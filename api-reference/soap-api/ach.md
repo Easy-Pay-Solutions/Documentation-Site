@@ -78,9 +78,7 @@ The authorization ID provided by the payment processor upon approval of the tran
 
 ***
 
-`uniqueTranID` string
-
-A unique identifier for the transaction that can be used for tracking and reconciliation purposes.
+{% include "../../.gitbook/includes/param-uniquetranid.md" %}
 {% endtab %}
 {% endtabs %}
 
@@ -132,9 +130,7 @@ The authorization ID provided by the payment processor upon approval of the tran
 
 ***
 
-`uniqueTranID` string
-
-A unique identifier for the transaction that can be used for tracking and reconciliation purposes.
+{% include "../../.gitbook/includes/param-uniquetranid.md" %}
 {% endtab %}
 {% endtabs %}
 

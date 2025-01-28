@@ -2,7 +2,7 @@
 description: A quickstart guide to authenticating with Number services
 ---
 
-# Authentication (v1)
+# Authentication
 
 ## Basics
 
@@ -13,6 +13,12 @@ In general, to authenticate to our services, depending on your use case, you'll 
 #### An account code and token
 
 Using the unique key representing the Number account and the token generated from the Client Admin Portal which expires every 6 months, you'll be able to authenticate to both the REST and SOAP API.&#x20;
+{% endstep %}
+
+{% step %}
+#### API key
+
+When initializing either of the mobile SDKs, you'll need an API key provided by Number.&#x20;
 {% endstep %}
 
 {% step %}
@@ -98,7 +104,17 @@ Include the signature in the same way as the `SessKey` in the previous case.
 
 ## Android and iOS SDK
 
+Authenticating with the mobile SDKs is very simple. [Contact Number](../../help/customer-support/) to get an API key, HMAC secret, and an optional Sentry DSN.&#x20;
 
+After installing the SDK of your choice, you can configure and initialize the `EasyPay` class.
+
+#### Android
+
+{% include "../../.gitbook/includes/block-android-config-ep.md" %}
+
+#### iOS
+
+{% include "../../.gitbook/includes/block-ios-configure-easypay.md" %}
 
 
 
@@ -108,7 +124,13 @@ Include the signature in the same way as the `SessKey` in the previous case.
 
 ## Virtual Terminal
 
+To log in and use the features of Virtual Terminal, you'll first need to create accounts for your users through the Client Admin Portal.&#x20;
 
+To access the portal, [Contact Number](../../help/customer-support/). You will be asked to provide the full name, e-mail address, and cell phone number for every individual you wish to have access to the portal. Those individuals will then be able to enter the portal and create new Virtual Terminal users through the portal by entering _Manage Accounts_ > _Users_ through the navigation on the left.
+
+Now, those users will be able to access the Virtual Terminal using the link below.
+
+{% embed url="https://easypay5.com/VT" %}
 
 
 

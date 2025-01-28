@@ -57,14 +57,7 @@ Prerequisites - get HMAC secret, API key and optional Sentry DSN from Number.
 {% endstep %}
 
 {% step %}
-Configure `EasyPay` class. You can do that in your Payment Module or in `AppDelegate` (`didFinishLaunchingWithOptions`). Set `isProduction = true` to enable jailbroken device detection.
-
-```swift
-EasyPay.shared.configureSecrets(apiKey: "YOURAPIKEY",
-                                hmacSecret: "YOURHMACSECRET",
-                                sentryKey: "YOURSENTRYKEY", 
-                                isProduction: Bool)
-```
+{% include "../../../.gitbook/includes/block-ios-configure-easypay.md" %}
 {% endstep %}
 
 {% step %}

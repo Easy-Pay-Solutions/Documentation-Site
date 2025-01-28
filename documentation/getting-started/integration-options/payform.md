@@ -28,7 +28,7 @@ Initial data (cardholder names, $ amounts, etc.);
 {% endstep %}
 
 {% step %}
-User-defined data (PatientID, ReferenceID, etc.);
+User-defined data (ReferenceID, etc.);
 {% endstep %}
 
 {% step %}
@@ -70,7 +70,7 @@ There are three operation types you can choose from:
 * Saving cardholder data to be charged later (card-on-file);
 * Both saving the cardholder data (card-on-file) and an instant card payment.
 
-This choice wil also pre-determine some of the required fields and submission options for you.
+This choice will also pre-determine some of the required fields and submission options for you.
 
 
 
@@ -78,7 +78,7 @@ This choice wil also pre-determine some of the required fields and submission op
 
 There is a number of fields you can have added to your form. For some of the fields, you can choose to provide a default value, and to mark them as read-only.
 
-<table><thead><tr><th width="166">Field name</th><th width="403">Description</th><th>Read-only option</th></tr></thead><tbody><tr><td>First Name</td><td>Cardholder first name. If only <code>First Name</code> is visible, field will be changed to <code>Full Name</code><strong>.</strong></td><td>yes</td></tr><tr><td>Last Name</td><td>Cardholder last name. If only <code>Last Name</code> is visible, field will be changed to <code>Full Name</code><strong>.</strong></td><td>yes</td></tr><tr><td>Address</td><td>Cardholder street address.</td><td>yes</td></tr><tr><td>City</td><td>Cardholder city.</td><td>yes</td></tr><tr><td>State</td><td>Cardholder state.</td><td>yes</td></tr><tr><td>Zip Code</td><td>Cardholder zip code.</td><td>yes</td></tr><tr><td>Amount</td><td> A total $ amount to charge, when applicable to the chosen transaction type.</td><td>yes</td></tr><tr><td>REFID</td><td>A user-defined custom field</td><td>yes</td></tr><tr><td>RPGUID</td><td>A hidden user-defined custom field</td><td>yes</td></tr><tr><td>Expiration</td><td>Expiration date on the card, <strong>required</strong>.</td><td>-</td></tr><tr><td>CVV</td><td>Security code on the back of the card, <strong>required</strong>.</td><td>-</td></tr><tr><td>Agree to Pay confirmation</td><td></td><td>-</td></tr><tr><td>Agree to Save Card on File confirmation</td><td></td><td>-</td></tr><tr><td>Email</td><td>Cardholder email address.</td><td>yes</td></tr><tr><td>Auth to Email</td><td>Permission to send an email.</td><td>-</td></tr><tr><td>Logos</td><td></td><td>-</td></tr></tbody></table>
+<table><thead><tr><th width="166">Field name</th><th width="403">Description</th><th>Read-only option</th></tr></thead><tbody><tr><td>First Name</td><td>Cardholder first name. If only <code>First Name</code> is visible, field will be changed to <code>Full Name</code><strong>.</strong></td><td>yes</td></tr><tr><td>Last Name</td><td>Cardholder last name. If only <code>Last Name</code> is visible, field will be changed to <code>Full Name</code><strong>.</strong></td><td>yes</td></tr><tr><td>Address</td><td>Cardholder street address.</td><td>yes</td></tr><tr><td>City</td><td>Cardholder city.</td><td>yes</td></tr><tr><td>State</td><td>Cardholder state.</td><td>yes</td></tr><tr><td>Zip Code</td><td>Cardholder zip code.</td><td>yes</td></tr><tr><td>Amount</td><td>A total $ amount to charge, when applicable to the chosen transaction type.</td><td>yes</td></tr><tr><td>REFID</td><td>A user-defined custom field</td><td>yes</td></tr><tr><td>RPGUID</td><td>A hidden user-defined custom field</td><td>yes</td></tr><tr><td>Expiration</td><td>Expiration date on the card, <strong>required</strong>.</td><td>-</td></tr><tr><td>CVV</td><td>Security code on the back of the card, <strong>required</strong>.</td><td>-</td></tr><tr><td>Agree to Pay confirmation</td><td>Adds a checkbox that will be required to submit and complete the instant card payment.</td><td>-</td></tr><tr><td>Agree to Save Card on File confirmation</td><td>Adds a checkbox that will be required to successfully save the card on file.</td><td>-</td></tr><tr><td>Email</td><td>Cardholder email address.</td><td>yes</td></tr><tr><td>Auth to Email</td><td>Permission to send an email.</td><td>-</td></tr><tr><td>Logos</td><td>Adds EasyPay Solutions, PCI Certified, and Digicert Secured logos to the form.</td><td>-</td></tr></tbody></table>
 
 
 
@@ -96,7 +96,7 @@ We care about making sure that the PayForm can match the style of your branding.
 
 Here is a list of all non-default customization options that can affect the look of the PayForm:
 
-<table><thead><tr><th width="293">Customization element</th><th>Options</th></tr></thead><tbody><tr><td>Label position</td><td>Left of the textbox, above the textbox, within the textbox.</td></tr><tr><td>PayForm corners</td><td>Semiround, round, semiround subtle.</td></tr><tr><td>Font family</td><td>Serif Font, Roboto font.</td></tr><tr><td>Required field indicators</td><td>Show.</td></tr><tr><td>Hide buttons</td><td>Hide both buttons, hide cancel button.</td></tr><tr><td>Text box size</td><td>Tall text boxes, short text boxes.</td></tr><tr><td>Background color<br>Button background color<br>Button border color<br>Button text color<br>Label text color<br>Textbox text color<br>Textbox background color</td><td>Any RGB value (can be selected using the color picker).</td></tr></tbody></table>
+<table><thead><tr><th width="293">Customization element</th><th>Options</th></tr></thead><tbody><tr><td>Label position</td><td>Left of the text box, above the text box, within the text box.</td></tr><tr><td>Text box corners</td><td>Semiround, round, semiround subtle.</td></tr><tr><td>Font family</td><td>Serif Font, Roboto font.</td></tr><tr><td>Required field indicators</td><td>Show.</td></tr><tr><td>Hide buttons</td><td>Hide both buttons, hide cancel button.</td></tr><tr><td>Text box size</td><td>Tall text boxes, short text boxes.</td></tr><tr><td>Background color<br>Button background color<br>Button border color<br>Button text color<br>Label text color<br>Text box text color<br>Text box background color</td><td>Any RGB value (can be selected using the color picker).</td></tr></tbody></table>
 
 
 
@@ -268,20 +268,20 @@ bindEvent(window, 'message', function(e) {
 If your implementation is using encryption, after decrypting, you'll get a string which can look like this:
 
 ```
-TRANSACTIONID|174|CONSENTID|213|CARDNO|5339|CARDTYPE|Amex|FIRSTNAME|Bob|LASTNAME|smith|REFID|7899
+TXID|174|CONSENTID|213|CARDNO|5339|CARDTYPE|Amex|FIRSTNAME|Bob|LASTNAME|smith|REFID|7899
 ```
 
-If you are not using encryption, the message will contain less information, and can look like this:
+If you are not using encryption, it will contain 2 URL parameters instead, and can look like this:
 
 ```
-TXID|174|CID|213
+?txid=123&cid=321
 ```
 
 {% include "../../../.gitbook/includes/info-post-message-consentid.md" %}
 
 #### Requesting additional transaction and consent details
 
-Having the `TransactionID` and `ConsentID`, you can use our REST API to:
+Having the `TransactionID` (`TxID`) and `ConsentID`, you can use our REST API to:
 
 * Gather additional informating concerning the sale;
   * For the REST API, you can use [full transaction details](../../../api-reference/rest-api/query.md#apicardprocrest-v1.0.0-query-transaction_fulldetail), and [full consent details](../../../api-reference/rest-api/query.md#apicardprocrest-v1.0.0-query-consentannual_fulldetail) methods;

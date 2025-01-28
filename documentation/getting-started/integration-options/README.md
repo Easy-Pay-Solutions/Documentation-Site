@@ -10,8 +10,8 @@ Before you start using our services, you'll want to decide which type of integra
 * Mobile SDKs for Android and iOS
 * PayForm and legacy widgets
 * The Virtual Terminal web application
-* Desktop applications
-* Dynamic Link Libraries (DLLs)
+* Custom desktop applications
+* Win service and DLLs
 
 **You don't have to limit yourself to one type of integration.** Many integrators use our PayForm to collect the cardholder data, and then use our API for the rest. The Virtual Terminal can also be used for various functions such as processing payments, creating card-on-file plans (consents), and generating reports. You can find more details about each integration in the next few sections.
 
@@ -154,7 +154,7 @@ The application interfaces with VeriFone card readers. These devices accept EMV 
 
 
 
-## Win service and DLLs for the Verifone
+## Win service and DLLs
 
 If you wish, you can take advantage of our end-to-end encryption model used with the Verifone card reader and build around it by referencing our Dynamic Link Library. The DLL will channel its requests through our API and responses can be consumed at the client software product. This way, you can develop your own workflow and displays.
 

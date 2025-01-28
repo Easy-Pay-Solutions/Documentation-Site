@@ -2,7 +2,7 @@
 description: Methods related to creating and modifying recurring consent
 ---
 
-# Consent Recurring (v1)
+# Consent Recurring
 
 ## Create Recurring Consent
 
@@ -50,7 +50,7 @@ Fields: MerchID, CustomerRefID, ServiceDescrip, RPGUID, StartDate, NumPayments, 
 
 ***
 
-`MySched` array\<api\_SchedLine> (array\<object>)
+`MySched` List\<api\_SchedLine> (array\<object>)
 
 Fields: SchedID, paymentNo, paymentAmt, paymentDate, Remaining
 {% endtab %}

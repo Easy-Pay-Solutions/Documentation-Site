@@ -1,11 +1,18 @@
 ---
 icon: gauge-simple-min
+description: Partnership isn’t just a word—it’s how we power payments.
 ---
 
 # Developer Quickstart
 
 <figure><img src="../../.gitbook/assets/Developer quickstart B (1).png" alt=""><figcaption></figcaption></figure>
 
-Here are the articles in this section:
+Integrating payment services into your system is a complex task, and it grows all the more complex  the more ideas and customization needs you have. We want to make that process as easy to follow as possible—from one developer to another.&#x20;
 
-<table data-card-size="large" data-view="cards"><thead><tr><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Before You Begin ></strong></td><td><a href="before-you-begin.md">before-you-begin.md</a></td></tr><tr><td><strong>Authentication ></strong></td><td><a href="authentication.md">authentication.md</a></td></tr><tr><td><strong>Payment: Step 1 to Step N ></strong></td><td><a href="annual-consent.md">annual-consent.md</a></td></tr><tr><td><strong>Payment Reminders ></strong></td><td><a href="payment-reminder.md">payment-reminder.md</a></td></tr><tr><td><strong>Querying ></strong></td><td><a href="querying.md">querying.md</a></td></tr><tr><td><strong>Digital Signatures ></strong></td><td><a href="digital-signatures.md">digital-signatures.md</a></td></tr></tbody></table>
+We've prepared this quickstart section to help you get started. We recommend going through all of the sections in order and then moving onto the [getting-started](../getting-started/ "mention") section to find out which integration option makes the most sense for you and how to implement it in your system.
+
+Now, if you are ready to explore...
+
+{% content-ref url="before-you-begin.md" %}
+[before-you-begin.md](before-you-begin.md)
+{% endcontent-ref %}

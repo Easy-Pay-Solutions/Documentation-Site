@@ -26,7 +26,7 @@ You can control the design of the form, the size, and the way data is populated 
 
 * Is the widget going to be public-facing or practice-facing?
 * Do you need to collect cardholder information, make instant sales, or both?
-* What fields do you need to show to the user? (cardholder info, patient info...?)
+* What fields do you need to show to the user? (cardholder info...?)
 * What information do you want to pass in the background as a hidden field? (`ReferenceID`, ...?)
 * What fields should be pre-populated? (`Firstname`, `Lastname`, ...?)
 * What fields can be altered by the user, and what should be read-only? (`Address`, `Amount`, ...?)

@@ -19,7 +19,7 @@ layout:
 
 <mark style="color:green;">`POST`</mark> /ICardProcess/CreditCardSale\_Composite
 
-tbd (no description in current docu)
+This is for internal use only.
 
 {% tabs %}
 {% tab title="Request body" %}

@@ -30,7 +30,7 @@
     * [Verifone](documentation/getting-started/integration-options/verifone.md)
     * [Virtual Terminal](documentation/getting-started/integration-options/virtual-terminal.md)
   * [Client Admin Portal](documentation/getting-started/client-admin-portal.md)
-* [Card present payments](documentation/card-present-payments.md)
+* [Card Present Payments](documentation/card-present-payments.md)
 * [Store Card on File](documentation/store-card-on-file.md)
 * [Surcharge Payments](documentation/surcharge-payments.md)
 * [Testing](documentation/testing/README.md)

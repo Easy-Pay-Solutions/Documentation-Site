@@ -2,7 +2,7 @@
 description: Methods related to processing recurring schedules
 ---
 
-# Process Scheduled Payments (v1)
+# Process Scheduled Payments
 
 ## Process Scheduled Payments
 
@@ -48,13 +48,13 @@ The number of payments that got partial authorization.
 
 ***
 
-`ApprovedPayments` array\<api\_RecurringPayment> (array\<object>)
+`ApprovedPayments` List\<api\_RecurringPayment> (array\<object>)
 
 Fields: ConsentID, MerchID, SchedNum, SchedID, TxID, TxApproved, IsPartialApproval, TxnCode, PaymentAmt, PaymentNum, AcctNo, SEQ, CardHolder, CardType, PaymentDate, ConsentType, ErrMsg.
 
 ***
 
-`DeclinedPayments` array\<api\_RecurringPayment> (array\<object>)
+`DeclinedPayments` List\<api\_RecurringPayment> (array\<object>)
 
 Fields: ConsentID, MerchID, SchedNum, SchedID, TxID, TxApproved, IsPartialApproval, TxnCode, PaymentAmt, PaymentNum, AcctNo, SEQ, CardHolder, CardType, PaymentDate, ConsentType, ErrMsg.
 {% endtab %}
@@ -108,13 +108,13 @@ The number of payments that got partial authorization.
 
 ***
 
-`ApprovedPayments` array\<api\_RecurringPayment> (array\<object>)
+`ApprovedPayments` List\<api\_RecurringPayment> (array\<object>)
 
 Fields: ConsentID, MerchID, SchedNum, SchedID, TxID, TxApproved, IsPartialApproval, TxnCode, PaymentAmt, PaymentNum, AcctNo, SEQ, CardHolder, CardType, PaymentDate, ConsentType, ErrMsg.
 
 ***
 
-`DeclinedPayments` array\<api\_RecurringPayment> (array\<object>)
+`DeclinedPayments` List\<api\_RecurringPayment> (array\<object>)
 
 Fields: ConsentID, MerchID, SchedNum, SchedID, TxID, TxApproved, IsPartialApproval, TxnCode, PaymentAmt, PaymentNum, AcctNo, SEQ, CardHolder, CardType, PaymentDate, ConsentType, ErrMsg.
 {% endtab %}

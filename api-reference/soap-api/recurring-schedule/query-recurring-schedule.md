@@ -2,7 +2,7 @@
 description: Methods related to querying recurring schedules
 ---
 
-# Query Recurring Schedule (v1)
+# Query Recurring Schedule
 
 ## Query Scheduled Payments
 
@@ -16,7 +16,7 @@ Return the recurring schedule details.
 
 ***
 
-{% include "../../../.gitbook/includes/param-query.md" %}
+{% include "../../../.gitbook/includes/param-query-recurring-schedule.md" %}
 {% endtab %}
 
 {% tab title="Response body" %}
@@ -28,7 +28,7 @@ Return the recurring schedule details.
 
 ***
 
-`Schedule` array\<api\_RecurringSchedLine> (array\<object>)
+`Schedule` List\<api\_RecurringSchedLine> (array\<object>)
 
 Fields: ID, ConsentID, MerchID, AcctHolderID, SchedNum, DueOn, PaymentNum, OfTotalPayments, PaymentAmt, OfTotalPayment,  Period, RStatus, TxID, Tries, AcctNo, LastName, RPGUID, ConsentType.
 {% endtab %}

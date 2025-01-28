@@ -77,7 +77,7 @@ After launching, continuously monitor your payment processing for any issues. Re
 {% endstepper %}
 
 {% hint style="info" %}
-You can find a detailed integration guide by visiting the [Integration Checklist](../documentation/getting-started/integration-checklist.md) section.
+You can find a detailed integration guide by visiting the [integration-checklist.md](../documentation/getting-started/integration-checklist.md "mention") section.
 {% endhint %}
 
 

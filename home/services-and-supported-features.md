@@ -168,3 +168,31 @@ Learn more about [WIN SDK DLL](../documentation/getting-started/integration-opti
 | Recurring payments (Automated Payment Plans)  | Automates payment plans using Dynamic Link Libraries (DLL)                                             |
 | Surcharge payments                            | Allows businesses to add a surcharge or extra fee to the transaction amount.                           |
 
+
+
+***
+
+### WIN Services
+
+**Characteristics:** \
+Used by desktop applications to integrate payment functions.
+
+**Use Cases:**\
+For developers integrating payment functionalities into desktop software.\
+
+
+{% hint style="info" %}
+Learn more about WIN Services integration.
+{% endhint %}
+
+**Supported features:**
+
+| Functionality                                 | Description                                                                                                           |
+| --------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| Card present via Verifone devices             | Processes physical or keyed card transactions using Verifone devices with Windows services running in the background. |
+| Online payments (via browser-based interface) | Supports transaction processing through a web interface, utilizing Windows services for continuous operation.         |
+| Manually keyed transactions                   | Supports Chip/Tap/Swipe and Keyed card data.                                                                          |
+| Surcharge payments                            | Allows businesses to add a surcharge or extra fee to the transaction amount.                                          |
+| Authorizing Payments                          | Verifies cardholder information and checks funds to approve transactions securely.                                    |
+| Store card on file (via integration with API) | Allows secure storage of card details for future transactions.                                                        |
+| Recurring payments (Automated Payment Plans)  | Automates payment plans using Dynamic Link Libraries (DLL)                                                            |

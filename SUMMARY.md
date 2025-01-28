@@ -3,8 +3,6 @@
 * [Home](README.md)
   * [Get your business started](home/get-your-business-started.md)
   * [Services and supported features](home/services-and-supported-features.md)
-* [Home (v2)](home-v2/README.md)
-  * [Services and supported features (WIP)](home-v2/services-and-supported-features-wip.md)
 
 ## Documentation
 
@@ -31,8 +29,6 @@
     * [Widgets](documentation/getting-started/integration-options/widgets.md)
     * [Verifone](documentation/getting-started/integration-options/verifone.md)
     * [Virtual Terminal](documentation/getting-started/integration-options/virtual-terminal.md)
-    * [Custom desktop application](documentation/getting-started/integration-options/custom-desktop-application.md)
-    * [Dynamic Link Libraries](documentation/getting-started/integration-options/dynamic-link-libraries.md)
   * [Client Admin Portal](documentation/getting-started/client-admin-portal.md)
 * [Card present payments](documentation/card-present-payments.md)
 * [Store Card on File](documentation/store-card-on-file.md)

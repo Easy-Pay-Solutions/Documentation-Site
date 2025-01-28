@@ -2,7 +2,7 @@
 description: Methods related to all types of consent
 ---
 
-# Consent General (v1)
+# Consent General
 
 ## Query Consent
 
@@ -16,7 +16,7 @@ Return consent details.
 
 ***
 
-{% include "../../.gitbook/includes/param-query.md" %}
+{% include "../../.gitbook/includes/param-query-consent.md" %}
 {% endtab %}
 
 {% tab title="Response body" %}

@@ -72,9 +72,11 @@ They allow a variety of functions:&#x20;
 * Returning receipts and documents for signature,&#x20;
 * Creating / modifying / processing payment plans.
 
-You don't need to use both of the APIs, they share similar functionality. We recommend starting with the REST API as our modern option. We continue to have both of the APIs fully supported.
+You don't need to use both of the APIs, they share similar functionality. **We recommend starting with the REST API as our modern option.** We continue to have both of the APIs supported.
 
 It's important to note that some API functionality will require you to collect cardholder data, such as [Processing a card sale with card present](../../../api-reference/rest-api/card-operations/process-a-card-sale.md#apicardprocrest-v1.0.0-cardsale-cardpresent), and that requires you to be PCI Level 1 compliant. You can overcome this by using our PayForm to collect all cardholder data securely.
+
+You can read more about implementation in the [rest-api.md](rest-api.md "mention") and [soap-api.md](soap-api.md "mention") integration guides.
 
 
 
@@ -88,6 +90,8 @@ The mobile SDKs will allow you to integrate Number payments services into any An
 
 If you need to integrate Number payments with a mobile application, we recommend using this approach.
 
+You can read more about implementation in the [android-sdk.md](android-sdk.md "mention") and [ios-sdk.md](ios-sdk.md "mention") integration guides.
+
 
 
 ***
@@ -100,9 +104,11 @@ A PayForm is the most convenient means of collecting cardholder data. By using o
 
 Once the cardholder data is collected, you can use other integrations, such as our APIs or the Virtual Terminal, to process consents, credit, void, and query transactions.
 
-We also have a widget as a legacy option to the PayForm. With this widget, users will enter their cardholder data directly into the Number platform, and your system can be updated in realtime.
+We also have a widget as a legacy option to the PayForm. With this widget, users will enter their cardholder data directly into the Number platform, and your system can be updated in realtime. **If you're just starting, we suggest using the PayForm as our modern option.**
 
-We recommend using the PayForm to collect all cardholder data when integrating with web applications.
+We recommend using the PayForm to collect all cardholder data when integrating with web applications as it's secure, easy to get started, and offers a lot of customization.&#x20;
+
+You can read more about implementation in the [payform.md](payform.md "mention") and [widgets.md](widgets.md "mention") integration guides.
 
 
 
@@ -112,15 +118,17 @@ We recommend using the PayForm to collect all cardholder data when integrating w
 
 ## Virtual Terminal
 
-The Virtual Terminal is a web application which you can access through your browser. It provides all types of credit card processing functionality:
+The Virtual Terminal (VT) is a web application which you can access through your browser. It provides all types of credit card processing functionality:
 
-* **Authorizations,**
-* **Voids / credits / settlements,**
-* **Reporting,**
-* **Payment plans (recurring / subscription consent),**
-* **Card-on-file (Annual consent).**
+* Authorizations,
+* Voids / credits / settlements,
+* Reporting,
+* Payment plans (recurring / subscription consent),
+* Card-on-file (Annual consent).
 
 The VT is the fastest way to start trying out our payment services. Otherwise, it's ideal for businesses processing payments over the phone or at sales points lacking a physical terminal.
+
+You can read more about the Virtual Terminal in the [virtual-terminal.md](virtual-terminal.md "mention") user guide.
 
 
 
@@ -144,13 +152,11 @@ The application interfaces with VeriFone card readers. These devices accept EMV 
 
 
 
-## Dynamic Link Libraries
+## Win service and DLLs for the Verifone
 
-If you wish, you can take advantage of our end-to-end encryption model used with the VeriFone card reader and build around it by referencing our DLL. The DLL will channel its requests through our API and responses can be consumed at the client software product. This way, you can develop your own workflow and displays.
+If you wish, you can take advantage of our end-to-end encryption model used with the Verifone card reader and build around it by referencing our Dynamic Link Library. The DLL will channel its requests through our API and responses can be consumed at the client software product. This way, you can develop your own workflow and displays.
 
-{% hint style="info" %}
-[Contact us](../../../help/customer-support/) to learn more.
-{% endhint %}
+You can read more about integrating with Verifone in the [verifone.md](verifone.md "mention") integration guide.
 
 
 

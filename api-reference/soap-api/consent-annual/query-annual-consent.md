@@ -2,7 +2,7 @@
 description: Methods related to querying annual consent
 ---
 
-# Query Annual Consent (v1)
+# Query Annual Consent
 
 ## Query Annual Consent
 
@@ -16,7 +16,7 @@ Return annual consent details.&#x20;
 
 ***
 
-{% include "../../../.gitbook/includes/param-query.md" %}
+{% include "../../../.gitbook/includes/param-query-consent.md" %}
 {% endtab %}
 
 {% tab title="Response body" %}
@@ -28,7 +28,7 @@ Return annual consent details.&#x20;
 
 ***
 
-`Consents` array\<api\_ConsentAnnual> (array\<object>)
+`Consents` List\<api\_ConsentAnnual> (array\<object>)
 
 A list of relevant consent records.
 

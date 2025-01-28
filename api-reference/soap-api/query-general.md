@@ -2,7 +2,7 @@
 description: Methods related querying general information such as enum values
 ---
 
-# Query General (v1)
+# Query General
 
 ## Query Decline Codes
 
@@ -20,7 +20,7 @@ Return a list of decline codes.
 
 ***
 
-`DeclineCodes` array\<api\_DeclineCodes> (array\<object>)
+`DeclineCodes` List\<api\_DeclineCodes> (array\<object>)
 
 Fields: DeclCode, RespMsg, RespDef, CustMsg.
 {% endtab %}
@@ -48,7 +48,7 @@ Return a list of enum items in the system.
 
 ***
 
-`EnumItems` array\<api\_EnumItem>
+`EnumItems` List\<api\_EnumItem>
 
 Fields: EnumText, EnumValue.
 {% endtab %}
@@ -76,7 +76,7 @@ Return a list of lodging-related enum items in the system.
 
 ***
 
-`EnumItems` array\<api\_EnumItem>
+`EnumItems` List\<api\_EnumItem>
 
 Fields: EnumText, EnumValue.
 {% endtab %}

@@ -13,7 +13,7 @@ Before you start using our services, you'll want to decide which type of integra
 * Desktop applications
 * Dynamic Link Libraries (DLLs)
 
-You don't have to limit yourself to one type of integration. Many integrators use our PayForm to collect the cardholder data, and then use our API for the rest. The Virtual Terminal can also be used for various functions such as processing payments, creating card-on-file plans (consents), and generating reports. You can find more details about each integration in the next few sections.
+**You don't have to limit yourself to one type of integration.** Many integrators use our PayForm to collect the cardholder data, and then use our API for the rest. The Virtual Terminal can also be used for various functions such as processing payments, creating card-on-file plans (consents), and generating reports. You can find more details about each integration in the next few sections.
 
 Before you read about the specific integration options, we recommend having a look at the PCI Compliance section below to help you clarify which options are relevant to your unique case.
 
@@ -45,6 +45,8 @@ Some key aspects of PCI compliance include:
 
 
 PCI compliance helps protect cardholder data from theft and fraud, ensuring consumer trust and avoiding fines and penalties associated with non-compliance. Businesses of all sizes that handle credit card information are **required** to comply with PCI DSS.
+
+
 
 ### Integration choice based on compliance
 
@@ -143,7 +145,7 @@ We also have a custom desktop application which can be convenient in an office s
 The application interfaces with VeriFone card readers. These devices accept EMV chip and contactless cards in addition to the usual card swipe and manual entry.&#x20;
 
 {% hint style="info" %}
-[Contact us](../../../help/customer-support/) to learn more.
+[Contact us](../../../help/customer-support/) to learn more about custom desktop applications.
 {% endhint %}
 
 

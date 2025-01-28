@@ -1,8 +1,8 @@
 # Table of contents
 
 * [Home](README.md)
-  * [Get your business started](home/get-your-business-started.md)
-  * [Services and supported features](home/services-and-supported-features.md)
+  * [Get Your Business Started](home/get-your-business-started.md)
+  * [Services and Supported Features](home/services-and-supported-features.md)
 
 ## Documentation
 
@@ -96,7 +96,7 @@
 
 ## Help
 
-* [Customer support](help/customer-support/README.md)
+* [Customer Support](help/customer-support/README.md)
   * [FAQ](help/customer-support/faq.md)
 
 ## Guidelines

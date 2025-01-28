@@ -2,13 +2,13 @@
 description: Methods related to transactions
 ---
 
-# Transaction (v1)
+# Transaction
 
 ## Apply Transaction Credit
 
 <mark style="color:green;">`POST`</mark> /ICardProcess/Transaction\_ApplyCredit
 
-Apply a full or partial credit against a settled credit card charge.
+Apply a full or partial credit against a settled credit card charge.&#x20;
 
 {% include "../../.gitbook/includes/info-void-credit-transaction.md" %}
 
@@ -99,7 +99,7 @@ Query credit card transactions. Those can include authorizations, charges, credi
 
 ***
 
-`Transactions` array\<api\_Transaction> (array\<object>)
+`Transactions` List\<api\_Transaction> (array\<object>)
 
 Fields: ID, SEQ\_NO, ACCT\_LAST\_NAME, ACCT\_FIRST\_NAME, ACCT\_NO, EXP\_DATE, AMOUNT, TXN\_DATE, TXN\_TIME, TXN\_DATETIME, TXN\_CODE, BatchNO, BatchStatus, BatchLogID, CARD\_TYPE, CardPresent, SALE\_TAX, SURCHARGE, CASHBACK, TxStatus, TxLOCK, REF\_ID, RPGUID, RefTxID, MerchID, SERVER, TIP, CreatedOn, LastChangedOn, LAST\_CHANGED\_BY, Origin, UserID, IsLocked, PAYMENT\_TYPE, TxType, ConsentID, PreAuthID, AcctHolderID, EndCustID, Credits, Flags, AVSr, CVVr, PrepaidBalance, PartialAuthApproved, HAuthorizedAmount, IsPartialApproval.
 {% endtab %}

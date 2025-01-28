@@ -2,7 +2,7 @@
 description: Getting started with Verifone for Number
 ---
 
-# Verifone (WIP)
+# Verifone
 
 Introduction
 
@@ -24,7 +24,7 @@ When a merchant supports a Verfione card reader, it helps eliminate chargebacks 
 
 Software Security Framework (SSF) is a re-working of the existing PCI standard PA DSS. The PA DSS has been retired since June 30, 2021. Number's "Aspen 3.1" is the first application to achieve the PCI Councils SSF certification, and it provides an end-to-end encrypted solution.
 
-<figure><img src="../../../.gitbook/assets/End to end encyption.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Card Present Data transfer B.png" alt=""><figcaption></figcaption></figure>
 
 
 

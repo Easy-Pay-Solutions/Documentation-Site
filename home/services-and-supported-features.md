@@ -2,7 +2,7 @@
 description: A short compilation of Number services and supported features
 ---
 
-# Services and supported features
+# Services and Supported Features
 
 ### REST/SOAP API
 
@@ -72,7 +72,7 @@ To learn to use mobile SDKs, see the [android-sdk.md](../documentation/getting-s
 A plug-and-play payment form that can be easily embedded on websites without advanced technical setup. Requires simple API integration to initiate the form.
 
 **Use Cases:**\
-Ideal for businesses seeking a quick, simple way to accept online payments without extensive integration. Can be rendered in iFrame or as a top-level page.
+Ideal for businesses seeking a quick, simple way to accept online payments without extensive integration. Can be rendered in IFrame or as a top-level page.
 
 {% hint style="info" %}
 To learn to use the PayForm, see the [payform.md](../documentation/getting-started/integration-options/payform.md "mention") configuration guide.

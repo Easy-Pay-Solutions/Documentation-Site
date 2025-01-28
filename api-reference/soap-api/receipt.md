@@ -58,7 +58,7 @@ The html of the receipt.
 
 <mark style="color:green;">`POST`</mark> /ICardProcess/ReceiptDetail\_Query
 
-Return the details needed to generate a receipt for a credit card sale. For other receipt types, see the [Generate Receipt](receipt.md#generate-receipt) method.
+Return the details needed to generate a receipt for a credit card sale. For other receipt types, see the [#generate-receipt](receipt.md#generate-receipt "mention") method.
 
 {% tabs %}
 {% tab title="Request body" %}

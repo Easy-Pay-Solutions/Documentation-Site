@@ -2,9 +2,9 @@
 description: Methods related to Text2Pay
 ---
 
-# Text2Pay (v1)
+# Text to Pay
 
-## Settle Merchant Transactions - All Open
+## Send a Payment Reminder
 
 <mark style="color:green;">`POST`</mark> /ICardProcess/SMSPayment
 

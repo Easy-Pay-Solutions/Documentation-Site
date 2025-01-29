@@ -529,7 +529,7 @@ components:
         Track:
           type: string
           nullable: true
-          example: null
+          example: "%B4788250000028291^VISA TEST/GOOD^231010100733000000?;4895390000000013=151210100000733?"
 
     CVVr:
       type: string
@@ -1171,6 +1171,47 @@ paths:
                 MerchID:
                   type: integer
                   example: 1
+            example:
+              ChargeDetails:
+                AccountNumber: "878460000256"
+                RoutingNumber: "211274515"
+                Amount: 10.25
+                AccountType: 1
+              AcctHolder:
+                Firstname: "Sally"
+                Lastname: "Smith"
+                Company: ""
+                Title: ""
+                Url: ""
+                BillIngAdress:
+                  Address1: "123 Test Road"
+                  Address2: ""
+                  City: "Portland"
+                  State: "ME"
+                  ZIP: "04005"
+                  Country: "USA"
+                Email: "testing@easypaysolutions.com"
+                Phone: "8775558472"
+              EndCustomer:
+                Firstname: "Sally"
+                Lastname: "Smith"
+                Company: ""
+                Title: ""
+                Url: ""
+                BillIngAdress:
+                  Address1: "123 Test Road"
+                  Address2: ""
+                  City: "Portland"
+                  State: "ME"
+                  ZIP: "04005"
+                  Country: "USA"
+                Email: "testing@easypaysolutions.com"
+                Phone: "8775558472"
+              PurchItems:
+                ServiceDescrip: "FROM API TESTER"
+                ClientRefID: "12456AA"
+                RPGUID: "3d3424a6-c5f3-4c28"
+              MerchID: 1
       responses:
         "200":
           description: Successful ACH Sale transaction
@@ -1231,6 +1272,47 @@ paths:
                 MerchID:
                   type: integer
                   example: 1
+            example:
+              ChargeDetails:
+                AccountNumber: "878460000256"
+                RoutingNumber: "211274515"
+                Amount: 10.25
+                AccountType: 1
+              AcctHolder:
+                Firstname: "Sally"
+                Lastname: "Smith"
+                Company: ""
+                Title: ""
+                Url: ""
+                BillIngAdress:
+                  Address1: "123 Test Road"
+                  Address2: ""
+                  City: "Portland"
+                  State: "ME"
+                  ZIP: "04005"
+                  Country: "USA"
+                Email: "testing@easypaysolutions.com"
+                Phone: "8775558472"
+              EndCustomer:
+                Firstname: "Sally"
+                Lastname: "Smith"
+                Company: ""
+                Title: ""
+                Url: ""
+                BillIngAdress:
+                  Address1: "123 Test Road"
+                  Address2: ""
+                  City: "Portland"
+                  State: "ME"
+                  ZIP: "04005"
+                  Country: "USA"
+                Email: "testing@easypaysolutions.com"
+                Phone: "8775558472"
+              PurchItems:
+                ServiceDescrip: "FROM API TESTER"
+                ClientRefID: "12456AA"
+                RPGUID: "3d3424a6-c5f3-4c28"
+              MerchID: 1
       responses:
         "200":
           description: Successful ACH Combo Sale and Consent transaction
@@ -1290,6 +1372,9 @@ paths:
                   type: number
                   format: float
                   example: 15.25
+            example:
+              TxID: 2
+              CreditAmount: 15.25
       responses:
         "200":
           description: Successful application of credit to the ACH transaction
@@ -1341,6 +1426,9 @@ paths:
                   type: number
                   format: float
                   example: 5.10
+            example:
+              ConsentID: 21
+              ProcessAmount: 5.10
       responses:
         "200":
           description: Successful processing of ACH consent payment
@@ -1390,6 +1478,8 @@ paths:
                 TxID:
                   type: integer
                   example: 35
+            example:
+              TxID: 35
       responses:
         "200":
           description: Successful voiding of the ACH transaction
@@ -1562,7 +1652,7 @@ paths:
               properties:
                 Track:
                   type: string
-                  example: "TrackData"
+                  example: "%B4788250000028291^VISA TEST/GOOD^231010100733000000?;4895390000000013=151210100000733?"
                 AcctHolder:
                   $ref: "#/components/schemas/AccountHolder"
                 EndCustomer:
@@ -1574,6 +1664,54 @@ paths:
                 MerchID:
                   type: integer
                   example: 1
+            example:
+              Track: "%B4788250000028291^VISA TEST/GOOD^231010100733000000?;4895390000000013=151210100000733?"
+              AcctHolder:
+                Firstname: "Sean"
+                Lastname: "Wood"
+                Company: ""
+                Title: ""
+                Url: ""
+                BillIngAdress:
+                  Address1: "123 Fake St."
+                  Address2: ""
+                  City: "PORTLAND"
+                  State: "ME"
+                  ZIP: "04106"
+                  Country: "USA"
+                Email: "robert@easypaysolutions.com"
+                Phone: "8777248472"
+              EndCustomer:
+                Firstname: "Sean"
+                Lastname: "Wood"
+                Company: ""
+                Title: ""
+                Url: ""
+                BillIngAdress:
+                  Address1: "123 Fake St."
+                  Address2: ""
+                  City: "PORTLAND"
+                  State: "ME"
+                  ZIP: "04106"
+                  Country: "USA"
+                Email: "robert@easypaysolutions.com"
+                Phone: "8777248472"
+              Amounts:
+                TotalAmt: 10.0
+                SalesTax: 0.0
+                Surcharge: 0.0
+                Tip: 0.0
+                CashBack: 0.0
+                ClinicAmount: 0.0
+                VisionAmount: 0.0
+                PrescriptionAmount: 0.0
+                DentalAmount: 0.0
+                TotalMedicalAmount: 0.0
+              PurchItems:
+                ServiceDescrip: "FROM API TESTER"
+                ClientRefID: ""
+                RPGUID: "a8e2bbfc-e423-4a84-a9e9-2a6e08153368"
+              MerchID: 1
       responses:
         "200":
           description: Successful response
@@ -1663,6 +1801,58 @@ paths:
                 MerchID:
                   type: integer
                   example: 1
+            example:
+              ccCardInfo:
+                AccountNumber: "4111111111111111"
+                ExpMonth: 10
+                ExpYear: 2028
+                CSV: "122"
+              AcctHolder:
+                Firstname: "Sean"
+                Lastname: "Wood"
+                Company: ""
+                Title: ""
+                Url: ""
+                BillIngAdress:
+                  Address1: "123 Fake St."
+                  Address2: ""
+                  City: "PORTLAND"
+                  State: "ME"
+                  ZIP: "04106"
+                  Country: "USA"
+                Email: "robert@easypaysolutions.com"
+                Phone: "8777248472"
+              EndCustomer:
+                Firstname: "Sean"
+                Lastname: "Wood"
+                Company: ""
+                Title: ""
+                Url: ""
+                BillIngAdress:
+                  Address1: "123 Fake St."
+                  Address2: ""
+                  City: "PORTLAND"
+                  State: "ME"
+                  ZIP: "04106"
+                  Country: "USA"
+                Email: "robert@easypaysolutions.com"
+                Phone: "8777248472"
+              Amounts:
+                TotalAmt: 10.0
+                SalesTax: 0.0
+                Surcharge: 0.0
+                Tip: 0.0
+                CashBack: 0.0
+                ClinicAmount: 0.0
+                VisionAmount: 0.0
+                PrescriptionAmount: 0.0
+                DentalAmount: 0.0
+                TotalMedicalAmount: 0.0
+              PurchItems:
+                ServiceDescrip: "FROM API TESTER"
+                ClientRefID: ""
+                RPGUID: "3d3424a6-c5f3-4c28-a294-490b6f674b41"
+              MerchID: 1
       responses:
         "200":
           description: Successful response
@@ -1752,6 +1942,51 @@ paths:
                   $ref: "#/components/schemas/Amounts"
                 PurchItems:
                   $ref: "#/components/schemas/Items"
+            example:
+              MerchID: 1
+              ccCardInfo:
+                AccountNumber: "4111111111111111"
+                ExpMonth: 10
+                ExpYear: 2028
+                CSV: "122"
+              AcctHolder:
+                Firstname: "Sean"
+                Lastname: "Wood"
+                Company: ""
+                Title: ""
+                Url: ""
+                BillIngAdress:
+                  Address1: "123 Fake St."
+                  Address2: ""
+                  City: "PORTLAND"
+                  State: "ME"
+                  ZIP: "04106"
+                  Country: "USA"
+                Email: "robert@easypaysolutions.com"
+                Phone: "8777248472"
+              EndCustomer:
+                Firstname: "Sean"
+                Lastname: "Wood"
+                Company: ""
+                Title: ""
+                Url: ""
+                BillIngAdress:
+                  Address1: "123 Fake St."
+                  Address2: ""
+                  City: "PORTLAND"
+                  State: "ME"
+                  ZIP: "04106"
+                  Country: "USA"
+                Email: "robert@easypaysolutions.com"
+                Phone: "8777248472"
+              Amounts:
+                BaseAmt: 52
+                Surcharge: 1.04
+                TotalAmt: 53.04
+              PurchItems:
+                ServiceDescrip: "FROM API TESTER"
+                ClientRefID: "1876345"
+                RPGUID: "3d3424a6-c5f3-4c28-a294-490b6f674b41"
       responses:
         "200":
           description: Successful response
@@ -1814,7 +2049,7 @@ paths:
         - $ref: "#/components/parameters/ContentType"
         - $ref: "#/components/parameters/Accept"
 
-  # Credit\Return\Refund a Transaction
+  # Credit/Return/Refund a Transaction
 
   /APIcardProcREST/v1.0.0/CardSale/ApplyCredit:
     post:
@@ -1836,6 +2071,9 @@ paths:
                   format: float
                   example: 5.0
                   description: Amount to be refunded
+            example:
+              TxID: 56
+              CreditAmount: 5.0
       responses:
         "200":
           description: Successful processing of the refund
@@ -1884,6 +2122,8 @@ paths:
                   type: integer
                   example: 53
                   description: Transaction ID of the charge to be voided
+            example:
+              TxID: 53
       responses:
         "200":
           description: Successful voiding of the transaction

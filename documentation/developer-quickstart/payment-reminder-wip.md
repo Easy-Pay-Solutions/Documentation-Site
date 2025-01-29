@@ -1,3 +1,7 @@
+---
+description: Send a payment reminder to a client through a text or e-mail
+---
+
 # Payment Reminder (WIP)
 
 ## Introduction
@@ -10,13 +14,11 @@ Here's an example reminder:
 
 Once they receive the reminder, they can click the link that is sent along with the message to open a payment page. This will allow them to enter their card details and make a payment.
 
-<figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/PaymentReminderForm Left.png" alt=""><figcaption></figcaption></figure>
 
 After the payment is submitted, a transaction receipt would be sent to the e-mail address on file.
 
-<figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
-
-
+<figure><img src="../../.gitbook/assets/PaymentReminderSaleReceipt Left.png" alt=""><figcaption></figcaption></figure>
 
 ## Implementation
 
@@ -36,3 +38,10 @@ Both implementations use a similar body structure, and the fields are described 
 
 ### Response
 
+If you didn't catch any exceptions and your response is not null, check the value of `FunctionOK`. If `FunctionOk` is false, it indicates an error that was handled on the Number servers. You can find more details by looking at `ErrMsg` and `ErrCode` included in the response.
+
+**You don't have to do anything else, the reminder was sent successfully.** A friendly response message is included in `RespMsg` field, and the `PaymentURL` is also returned if you wish to store it.
+
+
+
+&#x20;

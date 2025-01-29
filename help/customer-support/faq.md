@@ -134,7 +134,7 @@ To process refunds, you can use the Number API to initiate a credit transaction 
 
 You can create card-on-file payment plans using a variety of channels such as the Virtual Terminal, our APIs, PayForm, widgets, and the Win service for Verifone. All of those options allow you to manage recurring payments and consent agreements.
 
-To find out more, we recommend reading the [annual-consent.md](../../documentation/developer-quickstart/annual-consent.md "mention") quickstart guide.
+To find out more, we recommend reading the [annual-consent-wip.md](../../documentation/developer-quickstart/annual-consent-wip.md "mention") quickstart guide.
 
 </details>
 

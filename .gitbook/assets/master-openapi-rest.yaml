@@ -3944,6 +3944,8 @@ paths:
               properties:
                 Query:
                   $ref: "#/components/schemas/QueryTransaction"
+            example:
+              Query: "(H=1405)"
       responses:
         "200":
           description: Successfully returned ACH transaction records
@@ -4113,6 +4115,9 @@ paths:
                   example: 2
                 ReceiptType:
                   $ref: "#/components/schemas/ReceiptType"
+            example:
+              ConsentID: 2
+              ReceiptType: 1
       responses:
         "200":
           description: Successfully returned annual consent receipt
@@ -4243,6 +4248,8 @@ paths:
               properties:
                 Query:
                   $ref: "#/components/schemas/QueryBatchLog"
+            example:
+              Query: "(C>='7/19/2023')&&(C<'7/20/2023')"
       responses:
         "200":
           description: Successfully returned batch log records
@@ -4336,6 +4343,8 @@ paths:
                   type: integer
                   description: ID of the consent
                   example: 12
+            example:
+              ConsentID: 12
       responses:
         "200":
           description: Successfully returned full detail for consent
@@ -4439,6 +4448,8 @@ paths:
               properties:
                 Query:
                   $ref: "#/components/schemas/QueryConsent"
+            example:
+              Query: "(A=-1)&&(G=1)&&(H='True')"
       responses:
         "200":
           description: Successfully returned consent records
@@ -4544,6 +4555,8 @@ paths:
               properties:
                 Query:
                   $ref: "#/components/schemas/QueryConsent"
+            example:
+              Query: "(A=1)&&(J='07e77e99-b16e-4b0f-8935-8d28e3fa28ef')"
       responses:
         "200":
           description: Successfully returned consent records
@@ -4649,6 +4662,8 @@ paths:
               properties:
                 Query:
                   $ref: "#/components/schemas/QueryConsent"
+            example:
+              Query: "(A=-1)&&(G=1)&&(E>='3/29/2023')&&(E<'4/29/2023')"
       responses:
         "200":
           description: Successful response with consent records.
@@ -4754,6 +4769,8 @@ paths:
                   type: integer
                   description: The number of days within which the cards are expiring.
                   example: 20
+            example:
+              NumDays: 20
       responses:
         "200":
           description: Successful response with consents for expiring cards.
@@ -4810,6 +4827,9 @@ paths:
                   format: date
                   description: The end date of the expiration period.
                   example: "8/9/2023"
+            example:
+              StartDate: "7/10/2023"
+              EndDate: "8/9/2023"
       responses:
         "200":
           description: Successful response with consents for expiring cards in the specified range.
@@ -4859,6 +4879,8 @@ paths:
                   type: string
                   example: "TXStatus"
                   description: The enumeration type to query.
+            example:
+              Query: "TXStatus"
       responses:
         "200":
           description: Successfully returned enum records
@@ -4913,6 +4935,8 @@ paths:
                   type: integer
                   description: Transaction ID for which to retrieve the receipt details
                   example: 12
+            example:
+              TxID: 12
       responses:
         "200":
           description: Successfully returned receipt details
@@ -5053,6 +5077,8 @@ paths:
                   type: integer
                   description: Consent ID for which to retrieve full details
                   example: 24
+            example:
+              ConsentID: 24
       responses:
         "200":
           description: Successfully returned full details
@@ -5174,6 +5200,8 @@ paths:
               properties:
                 Query:
                   $ref: "#/components/schemas/QueryConsent"
+            example:
+              Query: "(E>='12/01/2023')&&(E<'12/31/2023')"
       responses:
         "200":
           description: Successfully returned consent records
@@ -5297,6 +5325,8 @@ paths:
               properties:
                 Query:
                   $ref: "#/components/schemas/QueryRecurringSchedule"
+            example:
+              Query: "(E=1)&&(H=4)"
       responses:
         "200":
           description: Successfully returned schedule records
@@ -5347,6 +5377,8 @@ paths:
                 TxID:
                   type: integer
                   example: 12
+            example:
+              TxID: 12
       responses:
         "200":
           description: Successfully returned transaction details
@@ -5540,6 +5572,8 @@ paths:
               properties:
                 Query:
                   $ref: "#/components/schemas/QueryTransaction"
+            example:
+              Query: "(A=-1)&&(B=-1)&&(C>='4/13/2023')&&(C<'4/29/2023')"
       responses:
         "200":
           description: Successfully returned transaction records
@@ -5593,6 +5627,9 @@ paths:
                   description: The unique identifier for the transaction
                 ReceiptType:
                   $ref: "#/components/schemas/ReceiptType"
+            example:
+              TxID: 2
+              ReceiptType: 2
       responses:
         "200":
           description: Successfully returned transaction receipt
@@ -5640,6 +5677,8 @@ paths:
                   type: integer
                   example: 2
                   description: The unique identifier for the transaction
+            example:
+              TxID: 2
       responses:
         "200":
           description: Successfully returned voice settings

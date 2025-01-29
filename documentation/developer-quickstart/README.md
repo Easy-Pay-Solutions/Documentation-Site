@@ -13,6 +13,6 @@ We've prepared this quickstart section to help you get started. We recommend goi
 
 Now, if you are ready to explore...
 
-{% content-ref url="before-you-begin.md" %}
-[before-you-begin.md](before-you-begin.md)
+{% content-ref url="authentication.md" %}
+[authentication.md](authentication.md)
 {% endcontent-ref %}

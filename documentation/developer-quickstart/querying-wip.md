@@ -4,6 +4,8 @@ description: Find the information you need by querying
 
 # Querying
 
+## Introduction
+
 If you need to find a specific record (transaction, consent, etc.) and you don't remember the unique ID for that record or you need to find all records matching your criteria, you can either query our **APIs** programatically or use the **Virtual Terminal** to view and filter the records from its user interface.
 
 

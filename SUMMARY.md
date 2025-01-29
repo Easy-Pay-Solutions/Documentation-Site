@@ -11,7 +11,7 @@
   * [Authentication](documentation/developer-quickstart/authentication.md)
   * [Credit Card Sale](documentation/developer-quickstart/credit-card-sale.md)
   * [Annual Consent](documentation/developer-quickstart/annual-consent.md)
-  * [Querying (WIP)](documentation/developer-quickstart/querying-wip.md)
+  * [Querying](documentation/developer-quickstart/querying.md)
   * [Payment Reminder (WIP)](documentation/developer-quickstart/payment-reminder-wip.md)
   * [Digital Signatures](documentation/developer-quickstart/digital-signatures.md)
 * [Getting Started](documentation/getting-started/README.md)

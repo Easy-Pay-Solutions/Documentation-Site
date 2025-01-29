@@ -1447,6 +1447,9 @@ paths:
                   type: string
                   example: "2148B239CF6846BDA5D141BF4A4CFBE8"
                   description: Token that expires every 2 years
+            example:
+              AcctCode: "EP911XXXX"
+              Token: "2148B239CF6846BDA5D141BF4A4CFBE8"
       responses:
         "200":
           description: Successful authentication and session key retrieval

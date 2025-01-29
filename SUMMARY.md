@@ -12,7 +12,6 @@
   * [Annual Consent (WIP)](documentation/developer-quickstart/annual-consent-wip.md)
   * [Querying](documentation/developer-quickstart/querying-wip.md)
   * [Payment Reminder (WIP)](documentation/developer-quickstart/payment-reminder-wip.md)
-  * [Digital Signatures (WIP)](documentation/developer-quickstart/digital-signatures-wip.md)
 * [Getting Started](documentation/getting-started/README.md)
   * [Basics](documentation/getting-started/basics/README.md)
     * [Authentication](documentation/getting-started/basics/authentication.md)

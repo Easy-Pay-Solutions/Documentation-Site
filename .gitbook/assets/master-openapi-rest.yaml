@@ -2946,6 +2946,8 @@ paths:
                   type: integer
                   example: 23
                   description: ID of the consent to be cancelled
+            example:
+              ConsentID: 23
       responses:
         "200":
           description: Recurring consent successfully cancelled
@@ -3025,6 +3027,52 @@ paths:
                   $ref: "#/components/schemas/Person"
                 EndCustomer:
                   $ref: "#/components/schemas/Person"
+            example:
+              ccCardInfo:
+                AccountNumber: "4111111111111111"
+                ExpMonth: 10
+                ExpYear: 23
+                CSV: "123"
+                Track: "%B4788250000028291^VISA TEST/GOOD^231010100733000000?;4895390000000013=151210100000733?"
+              ConsentCreator:
+                MerchID: 1
+                CustomerRefID: "A123456"
+                ServiceDescrip: ""
+                RPGUID: ""
+                StartDate: "\/Date(1564409121413-0400)\/"
+                NumPayments: 10
+                TotalAmount: 10000.0
+                Period: 2
+              AcctHolder:
+                Firstname: "Sean"
+                Lastname: "Wood"
+                Company: ""
+                Title: ""
+                Url: ""
+                BillIngAdress:
+                  Address1: "123 Fake St"
+                  Address2: ""
+                  City: "PORTLAND"
+                  State: "ME"
+                  ZIP: "04106"
+                  Country: "USA"
+                Email: "robert@easypaysolutions.com"
+                Phone: "8777248472"
+              EndCustomer:
+                Firstname: "Sean"
+                Lastname: "Wood"
+                Company: ""
+                Title: ""
+                Url: ""
+                BillIngAdress:
+                  Address1: "123 Fake St."
+                  Address2: ""
+                  City: "PORTLAND"
+                  State: "ME"
+                  ZIP: "04106"
+                  Country: "USA"
+                Email: "robert@easypaysolutions.com"
+                Phone: "8777248472"
       responses:
         "200":
           description: Successful response
@@ -3133,6 +3181,16 @@ paths:
                       description: Description of the service
                     RPGUID:
                       $ref: "#/components/schemas/RPGUID"
+            example:
+              ConsentID: 42
+              ConsentMods:
+                ExpMonth: 10
+                ExpYear: 2028
+                Email: "sean@easypaysolutions.com"
+                Zip: "04101"
+                CustomerRefID: "A123456"
+                ServiceDescrip: "Test"
+                RPGUID: ""
       responses:
         "200":
           description: Recurring consent successfully modified
@@ -3222,6 +3280,19 @@ paths:
                       type: boolean
                       example: false
                       description: Whether the consent is on hold
+            example:
+              ConsentID: 12
+              ConsentMods:
+                ExpMonth: 10
+                ExpYear: 2022
+                Email: "noreply@easypaysolutions.com"
+                Zip: "04106"
+                RPGUID: ""
+                CustomerRefID: "A123456"
+                ServiceDescrip: "Test"
+                PaymentAmt: 10.0
+                PaymentAdjustDate: "2019-04-29T07:26:11.0932908-04:00"
+                OnHold: false
       responses:
         "200":
           description: Subscription consent successfully modified
@@ -3267,6 +3338,10 @@ paths:
                   description: The type of receipt, 23 for international
                 Recipient:
                   $ref: "#/components/schemas/Recipient"
+            example:
+              REFID: "5eef4782-5be1-11ef-bbc1-46647bd59a7a"
+              ReceiptType: 23
+              Recipient: 1
       responses:
         "200":
           description: Successfully generated receipt
@@ -3318,6 +3393,9 @@ paths:
                   format: float
                   example: 5.0
                   description: The amount to be charged
+            example:
+              TokenID: "a64d8a2a-5994-11ef-95fc-3e580ecac30f"
+              ChargeAmt: 5.0
       responses:
         "200":
           description: Successfully processed the payment consent
@@ -3375,6 +3453,8 @@ paths:
               properties:
                 Query:
                   $ref: "#/components/schemas/QueryTransaction"
+            example:
+              Query: "(F='328217c4-7059-11ef-a730-a6469c956913')&&(B=3)&&(E=1)"
       responses:
         "200":
           description: Successfully queried transactions
@@ -3554,6 +3634,9 @@ paths:
                   format: float
                   example: 5.0
                   description: The amount of the credit to be voided
+            example:
+              TransID: "a88ed0e4-5a3b-11ef-b49b-46647bd59a7a"
+              CreditAmt: 5.0
       responses:
         "200":
           description: Successfully voided the credit
@@ -3707,6 +3790,37 @@ paths:
                           type: string
                           description: String controlling optional color schemes.
                           example: "#ffffff,#428bca,#007bff,#212121,#ffffff,#212121,#ffffff"
+            example:
+              InitParams:
+                MerchID: 1
+                WTYPE: "PF"
+                PostURL: "https://easypay7.com/swidget/JsonGet.aspx"
+                RedirectURL: "https://easypay8.com/CYWidget/"
+                REF_ID: "A97689#"
+                RPGUID: "92e1e15c-f64a-466b-8733-9b518b9f374c"
+                EndPoint: "PayForm/PF.aspx"
+                EINDEX: "300"
+                Amounts:
+                  Amount: 20
+                  Surcharge: 0
+                  TotalAmt: 20
+                Payer:
+                  Firstname: "John Doe"
+                  Lastname: ""
+                  BillingAddress:
+                    StreetAddress: ""
+                    City: ""
+                    State: ""
+                    ZIP: "04048"
+                    Country: ""
+                  Email: ""
+                  Phone: ""
+                WidOptions:
+                  eVisible: "0665"
+                  eReadOnly: "0040"
+                  eStyles: "0001"
+                  eSubmission: "0A01"
+                  eColors: "#ffffff,#428bca,#007bff,#212121,#ffffff,#212121,#ffffff"
       responses:
         "200":
           description: Successful initialization of PayForm

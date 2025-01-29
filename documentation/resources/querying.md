@@ -2,21 +2,19 @@
 description: Reference to the Number query language
 ---
 
-# Querying (v1)
+# Querying
 
 ### Introduction
 
 Number provides a robust query language for filtering specific records using the APIs.&#x20;
 
-{% hint style="danger" %}
-**Never request a query without a limiting date factor. As the account grows, you may attempt to return an excessive number of past records and cause an error.**
-{% endhint %}
+{% include "../../.gitbook/includes/warning-query-date-factor.md" %}
 
 #### Example
 
 To return all settled transaction records created in June 2024, you can use the query below:
 
-```prolog
+```sql
 (A=1)&&(C>='6/1/2024')&&(C<'7/1/2024')&&(B=2)
 ```
 
@@ -30,7 +28,8 @@ Queries in the Number query language consist of the following:
 
 Each letter represents a query parameter (filter). You can follow it up by&#x20;
 
-* an equal sign "=" and a value for equality comparison,
+* an equal sign "=" for equality comparison,
+* ">", ">=", "<", and "<=" for comparison of numeric values and dates,
 * the "_LIKE_" keyword for SQL-like string comparison.
 
 **Use single quotes for text and date values.**&#x20;
@@ -67,7 +66,7 @@ For effective reconciliation, it is recommended to periodically query the databa
 
 Here is a typical Reconciliation query
 
-```prolog
+```sql
 (A=2)&&(U='WID')&&(C>='6/1/2024')&&((B=1)||(B=2))
 ```
 
@@ -87,7 +86,7 @@ Here is a typical Reconciliation query
 Obtain specific transaction records using Number's query language.&#x20;
 
 {% code title="Query example" overflow="wrap" %}
-```prolog
+```sql
 (G=1)&&(B>'10/20/2024')
 ```
 {% endcode %}
@@ -105,7 +104,7 @@ Obtain specific transaction records using Number's query language.&#x20;
 Obtain specific consent records using Number's query language
 
 {% code title="Query example" overflow="wrap" %}
-```prolog
+```sql
 (G=1)&&(B>'10/20/2024')
 ```
 {% endcode %}
@@ -123,7 +122,7 @@ Obtain specific consent records using Number's query language
 Obtain specific recurring schedule records using Number's query language.
 
 {% code title="Query example" overflow="wrap" %}
-```prolog
+```sql
 (H=3)&&(C>='10/20/2024')
 ```
 {% endcode %}

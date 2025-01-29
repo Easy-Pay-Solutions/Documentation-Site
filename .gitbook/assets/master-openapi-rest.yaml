@@ -2182,6 +2182,10 @@ paths:
                   type: integer
                   example: 0
                   description: ID of the merchant to collect the payment funds. Use 0 for the merchant on consent.
+            example:
+              ConsentID: 7849
+              Amount: 52.00
+              AlternateMerchID: 0
       responses:
         "200":
           description: Successful calculation of fees
@@ -2226,6 +2230,8 @@ paths:
                   type: integer
                   example: 20
                   description: ID of the consent to be canceled
+            example:
+              ConsentID: 20
       responses:
         "200":
           description: Successful cancellation of consent
@@ -2286,6 +2292,18 @@ paths:
                   type: string
                   example: "Samuel"
                   description: The user initiating the sale. Used for reporting.
+            example:
+              ConsentID: 8
+              Amounts:
+                BaseAmt: 52
+                Surcharge: 1.04
+                TotalAmt: 53.04
+              purchDetails:
+                ServiceDescrip: "Annual Checkup"
+                ClientRefID: "174356"
+                RPGUID: "99438332"
+              AlternateMerchID: 0
+              User: "Samuel"
       responses:
         "200":
           description: Successful charge of the stored card
@@ -2373,6 +2391,47 @@ paths:
                   $ref: "#/components/schemas/Person"
                 EndCustomer:
                   $ref: "#/components/schemas/Person"
+            example:
+              Track: "%B4788250000028291^VISA TEST/GOOD^231010100733000000?;4895390000000013=151210100000733?"
+              ConsentCreator:
+                MerchID: 1
+                CustomerRefID: "A1523644"
+                ServiceDescrip: "REST Test"
+                RPGUID: "ad8c349f-a301-4fc8-956c-54b59a3f6440"
+                StartDate: "\/Date(1566406242284-0400)\/"
+                NumDays: 365
+                LimitPerCharge: 1000.0
+                LimitLifeTime: 100000.0
+              AcctHolder:
+                Firstname: "Sean"
+                Lastname: "Wood"
+                Company: ""
+                Title: ""
+                Url: ""
+                BillIngAdress:
+                  Address1: "123 Fake St"
+                  Address2: ""
+                  City: "PORTLAND"
+                  State: "ME"
+                  ZIP: "04106"
+                  Country: "USA"
+                Email: "robert@easypaysolutions.com"
+                Phone: "8777248472"
+              EndCustomer:
+                Firstname: "Sean"
+                Lastname: "Wood"
+                Company: ""
+                Title: ""
+                Url: ""
+                BillIngAdress:
+                  Address1: "123 Fake St."
+                  Address2: ""
+                  City: "PORTLAND"
+                  State: "ME"
+                  ZIP: "04106"
+                  Country: "USA"
+                Email: "robert@easypaysolutions.com"
+                Phone: "8777248472"
       responses:
         "200":
           description: Successful response
@@ -2437,6 +2496,51 @@ paths:
                   $ref: "#/components/schemas/Person"
                 EndCustomer:
                   $ref: "#/components/schemas/Person"
+            example:
+              ccCardInfo:
+                AccountNumber: "4111111111111111"
+                ExpMonth: 10
+                ExpYear: 2022
+                CSV: "122"
+              ConsentCreator:
+                MerchID: 1
+                CustomerRefID: "A1523644"
+                ServiceDescrip: "REST Test"
+                RPGUID: "4c269391-a698-4e10-a1a8-0353ee80d1a6"
+                StartDate: "\/Date(1563800567934-0400)\/"
+                NumDays: 365
+                LimitPerCharge: 1000.0
+                LimitLifeTime: 100000.0
+              AcctHolder:
+                Firstname: "Sean"
+                Lastname: "Wood"
+                Company: ""
+                Title: ""
+                Url: ""
+                BillIngAdress:
+                  Address1: "123 Fake St"
+                  Address2: ""
+                  City: "PORTLAND"
+                  State: "ME"
+                  ZIP: "04106"
+                  Country: "USA"
+                Email: "robert@easypaysolutions.com"
+                Phone: "8777248472"
+              EndCustomer:
+                Firstname: "Sean"
+                Lastname: "Wood"
+                Company: ""
+                Title: ""
+                Url: ""
+                BillIngAdress:
+                  Address1: "123 Fake St."
+                  Address2: ""
+                  City: "PORTLAND"
+                  State: "ME"
+                  ZIP: "04106"
+                  Country: "USA"
+                Email: "robert@easypaysolutions.com"
+                Phone: "8777248472"
       responses:
         "200":
           description: Successful response
@@ -2496,6 +2600,19 @@ paths:
                   description: ID of the consent to be modified
                 ConsentMods:
                   $ref: "#/components/schemas/ConsentMods"
+            example:
+              ConsentID: 10
+              ConsentMods:
+                ExpMonth: 10
+                ExpYear: 22
+                Email: "robert@easypaysolutions.com"
+                Zip: "04106"
+                CustomerRefID: "A1235456"
+                ServiceDescrip: "REST API Testor"
+                RPGUID: "adf98580-b4ab-42fc-bb99-01c89964afe9"
+                NumDays: 365
+                LimitPerCharge: 10000.0
+                LimitLifeTime: 100000.0
       responses:
         "200":
           description: Successful modification of annual consent
@@ -2546,6 +2663,9 @@ paths:
                   format: float
                   example: 5.0
                   description: Amount to be processed
+            example:
+              ConsentID: 21
+              ProcessAmount: 5.0
       responses:
         "200":
           description: Successful processing of consent payment
@@ -2632,6 +2752,10 @@ paths:
                   type: integer
                   example: 1
                   description: ID of the alternate merchant
+            example:
+              ConsentID: 542
+              ProcessAmount: 1.0
+              AlternateMerchID: 1
       responses:
         "200":
           description: Successful processing of consent payment with alternate merchant
@@ -2709,6 +2833,8 @@ paths:
                   type: integer
                   example: 10
                   description: ID of the consent for which to retrieve statistics
+            example:
+              ConsentID: 10
       responses:
         "200":
           description: Successfully retrieved consent statistics

@@ -4,8 +4,6 @@ description: Getting started with Verifone for Number
 
 # Verifone
 
-Introduction
-
 The Verifone card readers are small hand-held devices. They communicate with your computer on a USB port. A chip transaction is comprised of about a dozen transmissions between the host (your computer) and the device, and then finally to the Number cloud platform.
 
 Using the Verifone card readers offers a highly secure method of collecting cardholder data.
@@ -13,7 +11,7 @@ Using the Verifone card readers offers a highly secure method of collecting card
 Cardholder data is encrypted within the device itself, and remains encrypted as it travels across the Internet to our PCI Level One Compliant processing platform.&#x20;
 
 {% hint style="info" %}
-When a merchant supports a Verfione card reader, it helps eliminate chargebacks for transactions which were run through the device.
+When a merchant supports a Verifone card reader, it helps eliminate chargebacks for transactions which were run through the device.
 {% endhint %}
 
 <figure><img src="../../../.gitbook/assets/Verifone.png" alt=""><figcaption></figcaption></figure>
@@ -38,29 +36,23 @@ Currently, we offer four different options for collecting payments with the Veri
 
 {% stepper %}
 {% step %}
-**Standalone desktop application (upon request)**
+#### **Standalone desktop application (upon request)** <a href="#h-1-standalone-desktop-application-upon-request-only" id="h-1-standalone-desktop-application-upon-request-only"></a>
 
 This application has automatic updates and allows you to collect payments, create card-on-file and payment plans, process a card-on-file, void or credit, settle transactions, and do reporting with an option to export to a PDF.
 {% endstep %}
 
 {% step %}
-**Number Verifone SDK**
+#### **Number Verifone SDK** <a href="#h-2-easy-pay-verifone-sdk" id="h-2-easy-pay-verifone-sdk"></a>
 
 This DLL provides a means of collecting payments and creating card-on-file plans. Used in conjunction with our API, you can manage all aspects of your payment requirements, all within the confines of your own custom application.
 {% endstep %}
 
 {% step %}
-**Browser-based interface**
+#### **Browser-based interface** <a href="#h-3-browser-based-interface" id="h-3-browser-based-interface"></a>
 
-We developed a Windows service which uses Cross-Origin Resource Sharing (CORS) to communicate with the browser. As an integrator, this allows you to write simple client-side scripts within your own web applications to initiate transactions with a local Verifone.&#x20;
+We developed a Windows service which uses Cross-Origin Resource Sharing (CORS) to communicate with the browser. The Win service will return a simple XML response for each transaction directly to the HTML/PHP/ASP.NET page for consumption by the host application.
 
-The Win service will return a simple XML response for each transaction directly to the HTML/PHP/ASP.NET page for consumption by the host application.
-{% endstep %}
-
-{% step %}
-Virt**ual Terminal**
-
-Our Number Virtual Terminal has a built-in support for Verifone. After installing the middleware service, you can ask the Number team for this feature to be activated.&#x20;
+As an integrator, this allows you to write simple client-side scripts within your own web applications to initiate transactions with a local Verifone. You can also use this service with the Virtual Terminal to avoid writing any code.
 {% endstep %}
 {% endstepper %}
 
@@ -68,7 +60,7 @@ Our Number Virtual Terminal has a built-in support for Verifone. After installin
 
 There are 2 categories of integrations which require two different sets of files
 
-1. Browser-based - install our Win service which contains all your dependencies, including the drivers and console installer;
+1. Browser-based - install our Win service which contains all your dependencies, including the drivers and console installer.
 2. Desktop-based - install our SDK, then use separate installers for drivers and a custom event log.
 
 
@@ -77,7 +69,7 @@ There are 2 categories of integrations which require two different sets of files
 
 <figure><img src="../../../.gitbook/assets/Number Desktop Application.png" alt=""><figcaption></figcaption></figure>
 
-If you wish to use the standalone desktop application for Verifone, contact Number for installation files and instructions.
+If you wish to use the standalone desktop application for Verifone, [contact Number ](../../../help/customer-support/)for installation files and instructions.
 
 
 
@@ -162,7 +154,7 @@ The above installation package does the following:
 3. Installs a certificate which encrypts data between the browser and the Windows service.
 4. Installs the Windows service which listens on port 8031.
 
-With this, your website will be able to issue commands to the Windows service. You can see [our example website](https://easypay7.com/JqueryVerifone/) communicating with Verifone.
+With this, your website will be able to issue commands to the Windows service. You can see [our example website](https://easypay1.com/JqueryVerifone/) communicating with Verifone.
 
 You can also download the entire site to see how it works:
 
@@ -172,7 +164,9 @@ You can also download the entire site to see how it works:
 
 ### Virtual Terminal
 
-Our Virtual Terminal has a built-in support for Verifone. All you need to do is install the service, then [contact Number](../../../help/customer-support/) to have this feature activated.
+You can also use our Virtual Terminal together with the Windows service. It has built-in support for Verifone. This way, you won't have to build your own UI or write any code. After installing the service, [contact Number](../../../help/customer-support/) to have this feature activated.
+
+You can read more about using the Virtual Terminal in the [virtual-terminal.md](virtual-terminal.md "mention") guide.
 
 
 
@@ -180,10 +174,10 @@ Our Virtual Terminal has a built-in support for Verifone. All you need to do is 
 
 You can call the middleware to do the following:
 
-1. Chip sale (EMV sale) only;
-2. EMV sale (chip sale) and save card;
-3. Manual sale (keyed entry sale) only;
-4. Manual sale (keyed entry sale) and save card.
+1. Chip sale (EMV sale) only
+2. EMV sale (chip sale) and save card
+3. Manual sale (keyed entry sale) only
+4. Manual sale (keyed entry sale) and save card
 
 ```javascript
 // EMV sale only

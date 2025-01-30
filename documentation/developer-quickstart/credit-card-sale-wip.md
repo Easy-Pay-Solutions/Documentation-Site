@@ -32,13 +32,15 @@ We have a custom desktop application which can be convenient in an office settin
 
 Both our REST API and SOAP API offer methods for handling card present transactions.
 
-If you have your own PCI level one compliance program, you may use our APIs and write your own custom code calling our APIs to collect card present payments. You can read more about PCI compliance in our short [#pci-compliance](../getting-started/integration-options/#pci-compliance "mention") guide.
+If you have your own PCI level one compliance program, you may use our APIs and write your own custom code calling our APIs to collect card present payments. You can read more about PCI compliance in the short [#pci-compliance](../getting-started/integration-options/#pci-compliance "mention") section of our integration guide.
 {% endstep %}
 {% endstepper %}
 
 ### <mark style="background-color:orange;">Verifone integration</mark>
 
-To use Number with your Verifone card reader, see our [verifone.md](../getting-started/integration-options/verifone.md "mention") integration guide. There are a few approaches to integration, but we recommend to download and install our Win service.
+There are a few approaches to integration, but we recommend the browser-based interface option. to download and install our Win service.
+
+To learn more about how to use Number with your Verifone card reader, see our [verifone.md](../getting-started/integration-options/verifone.md "mention") integration guide.
 
 
 

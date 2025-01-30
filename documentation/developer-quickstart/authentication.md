@@ -4,7 +4,7 @@ description: A quickstart guide to authenticating with Number services
 
 # Authentication
 
-<figure><img src="../../.gitbook/assets/Authenticate.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Authenticate 2.png" alt=""><figcaption></figcaption></figure>
 
 ## Basics
 

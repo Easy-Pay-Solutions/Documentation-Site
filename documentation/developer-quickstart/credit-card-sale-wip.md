@@ -16,15 +16,11 @@ You can use Verifone card readers, which are secure devices that connect to your
 {% endstep %}
 
 {% step %}
-#### Any USB card reader through the Virtual Terminal
+#### Any USB card reader through the Virtual Terminal or our custom desktop app
 
 When you have a USB card reader connected to your machine, you can log into the Virtual Terminal to make card present sales.&#x20;
-{% endstep %}
 
-{% step %}
-#### Any USB card reader through our custom desktop application
-
-We have a custom desktop application which can be convenient in an office setting to collect card present payments. It offers much of the same functionality as the Virtual Terminal.
+We also have a custom desktop application which can be convenient in an office setting to collect card present payments. It offers much of the same functionality as the Virtual Terminal.
 {% endstep %}
 
 {% step %}
@@ -36,13 +32,15 @@ If you have your own PCI level one compliance program, you may use our APIs and 
 {% endstep %}
 {% endstepper %}
 
+
+
 ### Verifone integration
 
 There are a few approaches to integration, but we recommend the browser-based interface option.&#x20;
 
-Before you start, you'll need to download the [Verifone Windows service](https://easypay1.com/deploy/MiddleWare/EPVerifoneSetup_E2E_1041.zip) to your machine, connect your device to a free USB port, allow it to initialize, extract the archive with the service and run the EXE as an administrator, then reboot after installation is complete.
+Before you start, you'll need to download the [Verifone Windows service](https://easypay1.com/deploy/MiddleWare/EPVerifoneSetup_E2E_1041.zip) to your machine, connect your card reader device to a free USB port, allow it to initialize, extract the archive with the service and run the EXE as an administrator. After the installation is complete, reboot the system.
 
-With this, you'll be able to issue commands to the Win service by calling `https://localhost:8031` from your website. Here's an simplified example of how you can invoke the service:
+Now, you'll be able to issue commands to the Win service by calling `https://localhost:8031` from your website. Here's an simplified example of how you can invoke the service:
 
 {% tabs %}
 {% tab title="JavaScript" %}
@@ -81,7 +79,6 @@ function initiateEMVTransaction() {
         url: url,
         success: function (data) {
             // Hex to byte array, then UTF text, and alert the XML object
-            // You can use any implementation for conversion
             alert(stringFromUTF8Array(hexToBytes(data)));
         },
         error: function (xhr, status, error) {
@@ -105,36 +102,38 @@ For an in-depth tutorial on how to integrate and use your Verifone card reader w
 
 
 
-### <mark style="background-color:orange;">Virtual Terminal</mark>
+### Virtual Terminal
 
-When you expand _Credit Cards_ in the navigation on the left, you'll have options for a sale, an EMV sale, authorization, forced auth, and adjustments.
+When you want to use your USB card reader with the Virtual Terminal, you have to first install the very same [Windows service](https://easypay1.com/deploy/MiddleWare/EPVerifoneSetup_E2E_1041.zip) that is used when doing a Verifone browser-based integration. After installation, [contact the Number support team](../../help/customer-support/) to get the card reader features activated.
+
+When you visit the Virtual Terminal, log in and expand _Credit Cards_ in the navigation on the left. You'll see options for a sale, an EMV sale, authorization, forced auth, and adjustments. As long as your USB card reader is connected to your machine, it will seamlessly integrate with the Virtual Terminal.
+
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
 To learn more about using the Virtual Terminal, see the [virtual-terminal.md](../getting-started/integration-options/virtual-terminal.md "mention") user guide.
 
 
 
-### <mark style="background-color:orange;">Custom desktop application</mark>
+### Custom desktop application
 
 Read more in the [integration-options](../getting-started/integration-options/ "mention") guide or [contact Number](../../help/customer-support/) to get access.
 
 
 
-### <mark style="background-color:orange;">REST API or SOAP API integration</mark>
+### REST API or SOAP API integration
 
-
+If you wish to have more control over the integration and you are PCI Level 1 compliant, you can try using our APIs. They provide methods for all payment types available using our other services, including card present payments.
 
 {% include "../../.gitbook/includes/warning-pci-compliant-only.md" %}
 
 You can use the following API operations:
 
 * For the REST API, use [#apicardprocrest-v1.0.0-cardsale-cardpresent](../../api-reference/rest-api/card-operations/process-a-card-sale.md#apicardprocrest-v1.0.0-cardsale-cardpresent "mention")
-* For the SOAP API, use [#card-present-sales](credit-card-sale-wip.md#card-present-sales "mention").
+* For the SOAP API, use [#credit-card-sale-card-present](../../api-reference/soap-api/credit-card/credit-card-sale.md#credit-card-sale-card-present "mention").
 
+After authenticating, when you scan the credit card and collect the track data alongside the other payment details, prepare the HMAC secured header like shown in [authentication.md](authentication.md "mention") quickstart guide, and encrypt the card number using our RSA certificate. Follow the instructions in the API reference to prepare and handle the request.
 
-
-
-
-
+To learn more about using the APIs, see the [rest-api.md](../getting-started/integration-options/rest-api.md "mention") and [soap-api.md](../getting-started/integration-options/soap-api.md "mention") integration guides.
 
 
 

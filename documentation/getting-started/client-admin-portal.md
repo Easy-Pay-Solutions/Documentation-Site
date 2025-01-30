@@ -2,7 +2,7 @@
 description: Getting started with the Client Admin Portal
 ---
 
-# Client Admin Portal (v1)
+# Client Admin Portal
 
 The Client Admin Portal gives the means to create, modify, and remove Virtual Terminal users, create new API tokens, and inspect active or expiring tokens.
 
@@ -32,11 +32,11 @@ Once you log in, you'll see a menu on the left with a _Manage Tokens_ heading.
 
 The _Active Tokens_ option allows you to view all of tokens that have been assigned to your accounts, their expiration date, and their current status. This can be useful for administrators to see what tokens are nearing their expiration. Columns can be sorted by clicking on the column header.
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 The _Token Renewal_ option allows you to select the accounts to issue new tokens to. It also provides you with a summary of the total number of active tokens that are assigned to each account.
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 After selecting the accounts you wish to renew, you will see a summary with new token information.
 

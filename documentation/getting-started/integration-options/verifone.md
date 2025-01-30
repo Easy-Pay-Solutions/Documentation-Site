@@ -172,7 +172,7 @@ You can also download the entire site to see how it works:
 
 ### Virtual Terminal
 
-Our Virtual Terminal has a built-in support for Verifone. All you need to do is install the service, then contact Number to have this feature activated.
+Our Virtual Terminal has a built-in support for Verifone. All you need to do is install the service, then [contact Number](../../../help/customer-support/) to have this feature activated.
 
 
 

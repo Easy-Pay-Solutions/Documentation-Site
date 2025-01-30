@@ -36,11 +36,72 @@ If you have your own PCI level one compliance program, you may use our APIs and 
 {% endstep %}
 {% endstepper %}
 
-### <mark style="background-color:orange;">Verifone integration</mark>
+### Verifone integration
 
-There are a few approaches to integration, but we recommend the browser-based interface option. to download and install our Win service.
+There are a few approaches to integration, but we recommend the browser-based interface option.&#x20;
 
-To learn more about how to use Number with your Verifone card reader, see our [verifone.md](../getting-started/integration-options/verifone.md "mention") integration guide.
+Before you start, you'll need to download the [Verifone Windows service](https://easypay1.com/deploy/MiddleWare/EPVerifoneSetup_E2E_1041.zip) to your machine, connect your device to a free USB port, allow it to initialize, extract the archive with the service and run the EXE as an administrator, then reboot after installation is complete.
+
+With this, you'll be able to issue commands to the Win service by calling `https://localhost:8031` from your website. Here's an simplified example of how you can invoke the service:
+
+{% tabs %}
+{% tab title="JavaScript" %}
+{% code overflow="wrap" lineNumbers="true" %}
+```javascript
+// Initiates CHIP transaction
+function initiateEMVTransaction() {
+    // You must either supply a session key for authentication or modify your eptools profile to point to a particular account
+    // You may modify your stored profile at c:\ProgramData\EasyPay\Eptools\eptools\profiles
+    const sessKey = getSessKey();
+    
+    // Each account can have multiple merchant records. Normally this can be '1' for default if you only have one merchant on account.
+    const merchID = getMerchId();
+    
+    // Note: any 'address' field should be an object consisting of:
+    // 'Address1', 'Address2', 'City', 'State', 'ZIP', and 'Country'
+    
+    // The account holder and end customer JSONs should consist of:
+    // 'Firstname', 'Lastname', 'address' (see above), 'Email', and 'Phone'
+    const acctHolderJson = getAcctHolderJson();
+    const endCustJson = getEndCustJson();
+    
+    // Purchase details should consist of the following fields:
+    // 'REFID' and 'RPGUID' (your custom defined values), and 'ServiceDesc'
+    const purchDetailsJson = getPurchDetailsJson();
+
+    // The amount needs to be stripped from '$' and ',' symbols
+    let amount = getAmount();
+    amount = amount.replace('$', "").replace(',', ""); 
+
+    const url = `https://localhost:8031/VerifoneSVC/service/GetEmvJson?SessKey=${sessKey}&AcctHolderJson=${acctHolderJson}&EndCustJson=${endCustJson}&PurchDetailsJson=${purchDetailsJson}&MerchID=${merchID}&Amount=${amount}`;
+
+    // Make the call to the service and do basic error/success handling
+    $.ajax({
+        type: "GET",
+        url: url,
+        success: function (data) {
+            // Hex to byte array, then UTF text, and alert the XML object
+            // You can use any implementation for conversion
+            alert(stringFromUTF8Array(hexToBytes(data)));
+        },
+        error: function (xhr, status, error) {
+            console.error("Verifone Middleware Error", {
+                statusCode: xhr.status,
+                statusText: xhr.statusText,
+                error: error
+            });
+            alert(`Verifone Middleware Error: ${error}`);
+        }
+    });
+}
+```
+{% endcode %}
+{% endtab %}
+{% endtabs %}
+
+{% hint style="info" %}
+For an in-depth tutorial on how to integrate and use your Verifone card reader with Number, see our [verifone.md](../getting-started/integration-options/verifone.md "mention") integration guide.
+{% endhint %}
 
 
 

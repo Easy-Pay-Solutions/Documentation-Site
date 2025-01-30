@@ -4,6 +4,8 @@ description: A quickstart guide to authenticating with Number services
 
 # Authentication
 
+<figure><img src="../../.gitbook/assets/Authenticate.png" alt=""><figcaption></figcaption></figure>
+
 ## Basics
 
 In general, to authenticate to our services, depending on your use case, you'll need:

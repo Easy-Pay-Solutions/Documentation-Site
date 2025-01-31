@@ -4,7 +4,7 @@ description: Learn to make credit card sales with Number
 
 # Credit Card Sale (WIP)
 
-<figure><img src="../../.gitbook/assets/Credit Card Sale.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Credit card sale 2.png" alt=""><figcaption></figcaption></figure>
 
 ## Card present sales
 

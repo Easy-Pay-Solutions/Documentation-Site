@@ -2,7 +2,7 @@
 description: Learn to make credit card sales and collect consent with Number
 ---
 
-# Credit Card Sales and Consent (WIP)
+# Card Sales and Consent (WIP)
 
 <figure><img src="../../.gitbook/assets/Credit card sale 2 (2).png" alt=""><figcaption></figcaption></figure>
 
@@ -30,7 +30,7 @@ We also have a custom desktop application which can be convenient in an office s
 
 Both our REST API and SOAP API offer methods for handling card present transactions.
 
-If you have your own PCI level one compliance program, you may use our APIs and write your own custom code calling our APIs to collect card present payments and consent. You can read more about PCI compliance in the short [#pci-compliance](../getting-started/integration-options/#pci-compliance "mention") section of our integration guide.
+If you have your own PCI level one compliance program, you may use our APIs and write your own custom code calling our APIs to collect card present payments and consent. You can read more about PCI compliance in the short [#pci-compliance](../getting-started/integration-options/#pci-compliance "mention") section of our [integration-options](../getting-started/integration-options/ "mention") guide.
 {% endstep %}
 {% endstepper %}
 
@@ -40,13 +40,17 @@ If you have your own PCI level one compliance program, you may use our APIs and 
 
 There are a few approaches to integration, but we recommend the browser-based interface option.&#x20;
 
+{% hint style="info" %}
+For an in-depth tutorial on how to integrate and use your Verifone card reader with Number, see our [verifone.md](../getting-started/integration-options/verifone.md "mention") integration guide.
+{% endhint %}
+
 Before you start, you'll need to download the [Verifone Windows service](https://easypay1.com/deploy/MiddleWare/EPVerifoneSetup_E2E_1041.zip) to your machine, connect your card reader device to a free USB port, allow it to initialize, extract the archive with the service and run the EXE as an administrator. After the installation is complete, reboot the system.
 
 Now, you'll be able to issue commands to the Windows service by calling `https://localhost:8031` from your website.&#x20;
 
 #### Card present sales
 
-Here's an simplified example of how you can invoke the service:
+Here's an simplified example of how you can invoke the service for a card present sale:
 
 {% tabs %}
 {% tab title="JavaScript" %}
@@ -102,21 +106,71 @@ function initiateEMVTransaction() {
 {% endtab %}
 {% endtabs %}
 
-{% hint style="info" %}
-For an in-depth tutorial on how to integrate and use your Verifone card reader with Number, see our [verifone.md](../getting-started/integration-options/verifone.md "mention") integration guide.
-{% endhint %}
+#### Card present annual consent
+
+Here's an simplified example of how you can invoke the service to collect annual consent:
+
+{% tabs %}
+{% tab title="JavaScript" %}
+{% code overflow="wrap" lineNumbers="true" %}
+```javascript
+// Save card chip for annual consent
+function saveCardChip() {
+    // You must either supply a session key for authentication or modify your eptools profile to point to a particular account
+    // You may modify your stored profile at c:\ProgramData\EasyPay\Eptools\eptools\profiles
+    const sessKey = getSessKey();
+    
+    // Each account can have multiple merchant records. Normally this can be '1' for default if you only have one merchant on account.
+    const merchID = getMerchId();
+    
+    // Note: any 'address' field should be an object consisting of:
+    // 'Address1', 'Address2', 'City', 'State', 'ZIP', and 'Country'
+    
+    // The account holder and end customer JSONs should consist of:
+    // 'Firstname', 'Lastname', 'address' (see above), 'Email', and 'Phone'
+    const acctHolderJson = getAcctHolderJson();
+    const endCustJson = getEndCustJson();
+    
+    // Purchase details should consist of the following fields:
+    // 'REFID' and 'RPGUID' (your custom defined values), and 'ServiceDesc'
+    const purchDetailsJson = getPurchDetailsJson();
+    
+    // Annual params should consist of the following fields:
+    // 'StartDate' in yyyy-mm-dd format, 'NumDays' the consent should be active, 'LimitPerCharge' in $, 'LimitLifeTime' in $
+    // The amounts need to be stripped from '$' and ',' symbols
+    const annualParamsJson = getAnnualParamsJson();
+
+    const url = `https://localhost:8031/VerifoneSVC/service/GetAnnualJson?SessKey=${sessKey}&AcctHolderJson=${acctHolderJson}&EndCustJson=${endCustJson}&PurchDetailsJson=${purchDetailsJson}&MerchID=${merchID}&AnnualParams=${annualParamsJson}&IsManual=False`;
+
+    // Make the call to the service and do basic error/success handling
+    $.ajax({
+        type: "GET",
+        url: url,
+        success: function (data) {
+            // Hex to byte array, then UTF text, and alert the XML object
+            alert(stringFromUTF8Array(hexToBytes(data)));
+        },
+        error: function (xhr, status, error) {
+            console.error("Verifone Middleware Error", {
+                statusCode: xhr.status,
+                statusText: xhr.statusText,
+                error: error
+            });
+            alert(`Verifone Middleware Error: ${error}`);
+        }
+    });
+}
+
+```
+{% endcode %}
+{% endtab %}
+{% endtabs %}
 
 
 
 ### Virtual Terminal or desktop application
 
 When you want to use your USB card reader with the Virtual Terminal, you have to first install the very same [Windows service](https://easypay1.com/deploy/MiddleWare/EPVerifoneSetup_E2E_1041.zip) that is used when doing a Verifone browser-based integration. After installation, [contact the Number support team](../../help/customer-support/) to get the card reader features activated.
-
-#### Card present sales
-
-When you visit the Virtual Terminal, log in and expand _Credit Cards_ in the navigation on the left. You'll see options for a sale, an EMV sale, authorization, forced auth, and adjustments. As long as your USB card reader is connected to your machine, it will seamlessly integrate with the Virtual Terminal.
-
-<figure><img src="../../.gitbook/assets/HomePageExpandedNav cropped.png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 To learn more about using the Virtual Terminal, see the [virtual-terminal.md](../getting-started/integration-options/virtual-terminal.md "mention") user guide.
@@ -126,26 +180,55 @@ To learn more about using the Virtual Terminal, see the [virtual-terminal.md](..
 Read more about using our custom desktop application for sales in the [integration-options](../getting-started/integration-options/ "mention") guide or [contact Number](../../help/customer-support/) to get access.
 {% endhint %}
 
+#### Card present sales
+
+When you visit the Virtual Terminal, log in and expand _Credit Cards_ in the navigation on the left. You'll see options for a sale, an EMV sale, authorization, forced auth, and adjustments.&#x20;
+
+<figure><img src="../../.gitbook/assets/HomePageExpandedNav cropped.png" alt=""><figcaption></figcaption></figure>
+
+As long as your USB card reader is connected to your machine, it will seamlessly integrate with the Virtual Terminal for card present transactions.
+
+#### Card present consent
+
+When you visit the Virtual Terminal, log in and expand _Consents_ in the navigation on the left. You'll see options for annual consent, EMV annual consent, and one-time consent. You can also expand the _Recurring_ tab to find options to create recurring consent, EMV recurring consent, and subscription consent.
+
+<figure><img src="../../.gitbook/assets/HomePageExpandedNav cropped consent.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/epvt2.png" alt=""><figcaption></figcaption></figure>
+
+As long as your USB card reader is connected to your machine, it will seamlessly integrate with the Virtual Terminal for card present transactions.
+
 
 
 ### REST / SOAP API integration
 
 If you wish to have more control over the integration and you are PCI Level 1 compliant, you can try using our APIs. They provide methods for all payment types available using our other services, including card present payments.
 
-{% include "../../.gitbook/includes/warning-pci-compliant-only.md" %}
+{% hint style="info" %}
+To learn more about our APIs, see the [rest-api.md](../getting-started/integration-options/rest-api.md "mention") and [soap-api.md](../getting-started/integration-options/soap-api.md "mention") integration guides.
+{% endhint %}
 
-After authenticating, when you scan the credit card and collect the track data alongside the other payment details, prepare the HMAC secured header like shown in [authentication.md](authentication.md "mention") quickstart guide, and encrypt the card number using our RSA certificate. Follow the instructions in the API reference to prepare and handle the request.
+After authenticating, when you scan the credit card and collect the track data alongside the other payment details, prepare the HMAC secured header like shown in [authentication.md](authentication.md "mention") quickstart guide, and encrypt the card number using our RSA certificate.&#x20;
+
+Follow the instructions in the API reference to prepare and handle the request.
 
 #### Card present sales
 
 You can use the following API operations:
 
+{% include "../../.gitbook/includes/warning-pci-compliant-only.md" %}
+
 * For the REST API, use [#apicardprocrest-v1.0.0-cardsale-cardpresent](../../api-reference/rest-api/card-operations/process-a-card-sale.md#apicardprocrest-v1.0.0-cardsale-cardpresent "mention")
 * For the SOAP API, use [#credit-card-sale-card-present](../../api-reference/soap-api/credit-card/credit-card-sale.md#credit-card-sale-card-present "mention")
 
-{% hint style="info" %}
-To learn more about our APIs, see the [rest-api.md](../getting-started/integration-options/rest-api.md "mention") and [soap-api.md](../getting-started/integration-options/soap-api.md "mention") integration guides.
-{% endhint %}
+#### Card present consent
+
+You can use the following API operations:
+
+{% include "../../.gitbook/includes/warning-pci-compliant-only.md" %}
+
+* For the REST API, you can use [#apicardprocrest-v1.0.0-consentannual-create\_cp](../../api-reference/rest-api/consent-annual/create-consent.md#apicardprocrest-v1.0.0-consentannual-create_cp "mention") and [#apicardprocrest-v1.0.0-consentrecurring-create](../../api-reference/rest-api/consent-recurring/create-consent.md#apicardprocrest-v1.0.0-consentrecurring-create "mention")
+* For the SOAP API, you can use [#create-annual-consent-card-present](../../api-reference/soap-api/consent-annual/#create-annual-consent-card-present "mention"), [#create-recurring-consent](../../api-reference/soap-api/consent-recurring/#create-recurring-consent "mention"), and [#create-subscription-consent-card-present](../../api-reference/soap-api/consent-subscription/#create-subscription-consent-card-present "mention")
 
 
 
@@ -153,7 +236,7 @@ To learn more about our APIs, see the [rest-api.md](../getting-started/integrati
 
 
 
-## Manual card sales and consent
+## <mark style="background-color:orange;">Manual card sales and consent</mark>
 
 To make credit card sales and collect consent using Number when you want to enter the card details manually, you have the following options:
 

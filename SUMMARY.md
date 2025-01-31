@@ -8,7 +8,7 @@
 
 * [Developer Quickstart](documentation/developer-quickstart/README.md)
   * [Authentication](documentation/developer-quickstart/authentication.md)
-  * [Credit Card Sale (WIP)](documentation/developer-quickstart/credit-card-sale-wip.md)
+  * [Credit Card Sale](documentation/developer-quickstart/credit-card-sale.md)
   * [Annual Consent (WIP)](documentation/developer-quickstart/annual-consent-wip.md)
   * [Querying](documentation/developer-quickstart/querying-wip.md)
   * [Payment Reminder (WIP)](documentation/developer-quickstart/payment-reminder-wip.md)

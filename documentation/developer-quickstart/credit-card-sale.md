@@ -2,7 +2,7 @@
 description: Learn to make credit card sales with Number
 ---
 
-# Credit Card Sale (WIP)
+# Credit Card Sale
 
 <figure><img src="../../.gitbook/assets/Credit card sale 2 (2).png" alt=""><figcaption></figcaption></figure>
 
@@ -18,7 +18,7 @@ You can use Verifone card readers, which are secure devices that connect to your
 {% endstep %}
 
 {% step %}
-#### Any USB card reader through the Virtual Terminal or our custom desktop app
+#### USB card reader through the Virtual Terminal or our desktop app
 
 When you have a USB card reader connected to your machine, you can log into the Virtual Terminal to make card present sales.&#x20;
 
@@ -26,7 +26,7 @@ We also have a custom desktop application which can be convenient in an office s
 {% endstep %}
 
 {% step %}
-#### A custom integration with our REST API or SOAP API
+#### Custom integration with our REST API or SOAP API
 
 Both our REST API and SOAP API offer methods for handling card present transactions.
 
@@ -42,7 +42,11 @@ There are a few approaches to integration, but we recommend the browser-based in
 
 Before you start, you'll need to download the [Verifone Windows service](https://easypay1.com/deploy/MiddleWare/EPVerifoneSetup_E2E_1041.zip) to your machine, connect your card reader device to a free USB port, allow it to initialize, extract the archive with the service and run the EXE as an administrator. After the installation is complete, reboot the system.
 
-Now, you'll be able to issue commands to the Win service by calling `https://localhost:8031` from your website. Here's an simplified example of how you can invoke the service:
+Now, you'll be able to issue commands to the Windows service by calling `https://localhost:8031` from your website.&#x20;
+
+#### Example
+
+Here's an simplified example of how you can invoke the service:
 
 {% tabs %}
 {% tab title="JavaScript" %}
@@ -110,7 +114,7 @@ When you want to use your USB card reader with the Virtual Terminal, you have to
 
 When you visit the Virtual Terminal, log in and expand _Credit Cards_ in the navigation on the left. You'll see options for a sale, an EMV sale, authorization, forced auth, and adjustments. As long as your USB card reader is connected to your machine, it will seamlessly integrate with the Virtual Terminal.
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/HomePageExpandedNav cropped.png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 To learn more about using the Virtual Terminal, see the [virtual-terminal.md](../getting-started/integration-options/virtual-terminal.md "mention") user guide.
@@ -126,8 +130,6 @@ Read more about using our custom desktop application for sales in the [integrati
 
 
 
-
-
 ### REST / SOAP API integration
 
 If you wish to have more control over the integration and you are PCI Level 1 compliant, you can try using our APIs. They provide methods for all payment types available using our other services, including card present payments.
@@ -137,7 +139,7 @@ If you wish to have more control over the integration and you are PCI Level 1 co
 You can use the following API operations:
 
 * For the REST API, use [#apicardprocrest-v1.0.0-cardsale-cardpresent](../../api-reference/rest-api/card-operations/process-a-card-sale.md#apicardprocrest-v1.0.0-cardsale-cardpresent "mention")
-* For the SOAP API, use [#credit-card-sale-card-present](../../api-reference/soap-api/credit-card/credit-card-sale.md#credit-card-sale-card-present "mention").
+* For the SOAP API, use [#credit-card-sale-card-present](../../api-reference/soap-api/credit-card/credit-card-sale.md#credit-card-sale-card-present "mention")
 
 After authenticating, when you scan the credit card and collect the track data alongside the other payment details, prepare the HMAC secured header like shown in [authentication.md](authentication.md "mention") quickstart guide, and encrypt the card number using our RSA certificate. Follow the instructions in the API reference to prepare and handle the request.
 
@@ -157,13 +159,13 @@ To make manual credit card sales using Number, you have the following options:
 
 {% stepper %}
 {% step %}
-#### Use a PayForm widget
+#### PayForm widget
 
-You can configure and customize our PayForm widget and redirect your users to a separate page with the form or embed it as an iFrame in your existing web application.
+You can configure and customize our PayForm widget and redirect your users to a separate page with the form or embed it as an IFrame in your existing web application.
 {% endstep %}
 
 {% step %}
-#### Virtual Terminal or our custom desktop application
+#### Virtual Terminal or our desktop application
 
 The Virtual Terminal website allows you to handle manual card sales by default. This approach requires no coding and is perfect for a physical point-of-sale.
 
@@ -179,7 +181,7 @@ If you have a mobile application that needs to handle payments, our SDKs impleme
 {% step %}
 #### REST API or SOAP API integration
 
-If you need more configuration, you can always call our APIs to collect manual card sales.
+If you need more customization, you can always call our APIs to collect manual card sales.
 
 If you have your own PCI level one compliance program, you may use our APIs and write your own custom code calling our APIs to collect manual card payments. You can read more about PCI compliance in the short [#pci-compliance](../getting-started/integration-options/#pci-compliance "mention") section of our integration guide.
 {% endstep %}
@@ -193,7 +195,7 @@ The PayForm is designed to be a highly flexible and secure payment form for your
 
 {% include "../../.gitbook/includes/info-payform-builder.md" %}
 
-You can read about configuration specifics in the [payform.md](../getting-started/integration-options/payform.md "mention") guide. For the purpose of this tutorial, you can follow the example below, we'll briefly explain each configuration step.&#x20;
+You can read about configuration specifics in the [#payform-builder](../getting-started/integration-options/payform.md#payform-builder "mention") section of our full PayForm guide. For the purpose of this tutorial, you can follow the example below; we'll briefly explain each configuration step.&#x20;
 
 #### Example
 
@@ -205,9 +207,9 @@ In the example below, the PayForm has been setup for **an instant card payment**
 {% step %}
 #### Visible and read-only fields
 
-The user (cardholder) will need to provide their first and last names, full address, email, and click a checkbox to agree to pay and give their permissions to receive an email.
+The cardholder will need to provide their first and last names, full address, email, and click a checkbox to agree to pay and give their permissions to receive an email.
 
-Additionally, they'll see the amount field, bu tit'll be read-only.
+Additionally, they'll see the amount field, bu it'll be read-only.
 {% endstep %}
 
 {% step %}
@@ -225,7 +227,7 @@ The styling and colors were mostly left on default, only switching out the butto
 {% step %}
 #### Pre-filled values
 
-The amount will be pre-filled as $25, the Redirect URL is using an example URL to your website, and the EIndex is using the sandbox value for encryption key. EndPoint should be left as default.
+The amount will be pre-filled as $25, the Redirect URL is using an example URL to your website, and the EIndex is using the sandbox value for encryption key. EndPoint should generally be left as default.
 {% endstep %}
 {% endstepper %}
 
@@ -294,9 +296,13 @@ Learn more about how to configure and use the PayForm in the [payform.md](../get
 
 
 
-### <mark style="background-color:orange;">Virtual Terminal</mark>
+### Virtual Terminal
 
-The Virtual Terminal is a web application that allows you to manually enter credit card details and process transactions through your browser. This option is suitable for businesses that need to process payments without a physical terminal 4 5 .
+The Virtual Terminal is a web application that allows you to manually enter credit card details and process transactions through your browser.&#x20;
+
+When you visit the Virtual Terminal, log in and expand _Credit Cards_ in the navigation on the left. You'll see options for a sale, an EMV sale, authorization, forced auth, and adjustments. Follow the instructions and manually enter the cardholder details to make a sale.
+
+<figure><img src="../../.gitbook/assets/HomePageExpandedNav cropped.png" alt=""><figcaption></figcaption></figure>
 
 
 
@@ -308,23 +314,32 @@ Read more about using our custom desktop application for sales in the [integrati
 
 
 
-### <mark style="background-color:orange;">Android / iOS SDK integration</mark>
+### Android / iOS SDK integration
 
-* If you are developing an Android application, you can utilize the Number Android SDK to charge credit cards manually. The method`ChargeCreditCard().chargeCreditCard(params: ChargeCreditCardBodyParams)`allows you to process credit card transactions by entering the card details manually 3 .
-* **Request Parameters**:
-  * `encryptedCardNumber`: Securely handle the card number.
-  * `creditCardInfo`: Include details like expiration date and CVV.
-  * `accountHolder`: Information about the cardholder 3 .
+If you are developing an Android or iOS application, you can utilize our SDKs to charge credit cards manually.&#x20;
+
+**We recommend following the** [android-sdk.md](../getting-started/integration-options/android-sdk.md "mention") **and** [ios-sdk.md](../getting-started/integration-options/ios-sdk.md "mention") **guides.**
+
+The relevant methods are described in [#id-1.-charge-credit-card-creditcardsale\_manual](../getting-started/integration-options/android-sdk.md#id-1.-charge-credit-card-creditcardsale_manual "mention") section of the Android SDK guide and [#id-1.-charge-credit-card-creditcardsale\_manual](../getting-started/integration-options/ios-sdk.md#id-1.-charge-credit-card-creditcardsale_manual "mention") section of the iOS SDK guide.&#x20;
 
 
 
-### <mark style="background-color:orange;">REST / SOAP API integration</mark>
+### REST / SOAP API integration
 
-* You can process a manual card sale using the`/ICardProcess/CreditCardSale_Manual`API endpoint. This requires sending a POST request with the necessary credit card information, including the account number, expiration date, CVV, and account holder details 1 .
-* **Request Parameters**:
-  * `SessKey`: A unique session key for authentication.
-  * `ccCardInfo`: Contains the credit card details (AccountNumber, ExpMonth, ExpYear, CSV).
-  * `AcctHolder`: Information about the account holder 2 1 .
+If you wish to have more control over the integration and you are PCI Level 1 compliant, you can try using our APIs. They provide methods for all payment types available using our other services, including manual card sales.
+
+{% include "../../.gitbook/includes/warning-pci-compliant-only.md" %}
+
+You can use the following API operations:
+
+* For the REST API, use [#apicardprocrest-v1.0.0-cardsale-manual](../../api-reference/rest-api/card-operations/process-a-card-sale.md#apicardprocrest-v1.0.0-cardsale-manual "mention")
+* For the SOAP API, use [#credit-card-sale-manual](../../api-reference/soap-api/credit-card/credit-card-sale.md#credit-card-sale-manual "mention")
+
+After authenticating, when you collect cardholder data alongside the other payment details, prepare the HMAC secured header like shown in [authentication.md](authentication.md "mention") quickstart guide, and encrypt the card number using our RSA certificate. Follow the instructions in the API reference to prepare and handle the request.
+
+{% hint style="info" %}
+To learn more about our APIs, see the [rest-api.md](../getting-started/integration-options/rest-api.md "mention") and [soap-api.md](../getting-started/integration-options/soap-api.md "mention") integration guides.
+{% endhint %}
 
 
 

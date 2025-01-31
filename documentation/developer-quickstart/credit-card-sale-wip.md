@@ -112,17 +112,23 @@ When you visit the Virtual Terminal, log in and expand _Credit Cards_ in the nav
 
 <figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
+{% hint style="info" %}
 To learn more about using the Virtual Terminal, see the [virtual-terminal.md](../getting-started/integration-options/virtual-terminal.md "mention") user guide.
+{% endhint %}
 
 
 
 ### Custom desktop application
 
-Read more in the [integration-options](../getting-started/integration-options/ "mention") guide or [contact Number](../../help/customer-support/) to get access.
+{% hint style="info" %}
+Read more about using our custom desktop application for sales in the [integration-options](../getting-started/integration-options/ "mention") guide or [contact Number](../../help/customer-support/) to get access.
+{% endhint %}
 
 
 
-### REST API or SOAP API integration
+
+
+### REST / SOAP API integration
 
 If you wish to have more control over the integration and you are PCI Level 1 compliant, you can try using our APIs. They provide methods for all payment types available using our other services, including card present payments.
 
@@ -135,7 +141,9 @@ You can use the following API operations:
 
 After authenticating, when you scan the credit card and collect the track data alongside the other payment details, prepare the HMAC secured header like shown in [authentication.md](authentication.md "mention") quickstart guide, and encrypt the card number using our RSA certificate. Follow the instructions in the API reference to prepare and handle the request.
 
-To learn more about using the APIs, see the [rest-api.md](../getting-started/integration-options/rest-api.md "mention") and [soap-api.md](../getting-started/integration-options/soap-api.md "mention") integration guides.
+{% hint style="info" %}
+To learn more about our APIs, see the [rest-api.md](../getting-started/integration-options/rest-api.md "mention") and [soap-api.md](../getting-started/integration-options/soap-api.md "mention") integration guides.
+{% endhint %}
 
 
 
@@ -143,30 +151,180 @@ To learn more about using the APIs, see the [rest-api.md](../getting-started/int
 
 
 
-## <mark style="background-color:orange;">Manual card sales</mark>
+## Manual card sales
 
 To make manual credit card sales using Number, you have the following options:
 
-1. **Manual Card Sale via API**:
-   * You can process a manual card sale using the`/ICardProcess/CreditCardSale_Manual`API endpoint. This requires sending a POST request with the necessary credit card information, including the account number, expiration date, CVV, and account holder details 1 .
-   * **Request Parameters**:
-     * `SessKey`: A unique session key for authentication.
-     * `ccCardInfo`: Contains the credit card details (AccountNumber, ExpMonth, ExpYear, CSV).
-     * `AcctHolder`: Information about the account holder 2 1 .
-2. **Using the Android SDK**:
-   * If you are developing an Android application, you can utilize the Number Android SDK to charge credit cards manually. The method`ChargeCreditCard().chargeCreditCard(params: ChargeCreditCardBodyParams)`allows you to process credit card transactions by entering the card details manually 3 .
-   * **Request Parameters**:
-     * `encryptedCardNumber`: Securely handle the card number.
-     * `creditCardInfo`: Include details like expiration date and CVV.
-     * `accountHolder`: Information about the cardholder 3 .
-3. **Virtual Terminal**:
-   * The Virtual Terminal is a web application that allows you to manually enter credit card details and process transactions through your browser. This option is suitable for businesses that need to process payments without a physical terminal 4 5 .
+{% stepper %}
+{% step %}
+#### Use a PayForm widget
 
-#### Steps to Implement:
+You can configure and customize our PayForm widget and redirect your users to a separate page with the form or embed it as an iFrame in your existing web application.
+{% endstep %}
 
-* **Choose Your Method**: Decide whether to use the API, Android SDK, or Virtual Terminal based on your application needs.
-* **Set Up Authentication**: Ensure you have a valid`SessKey`for API calls or integrate the SDK properly in your application.
-* **Send Transaction Data**: For API, format your request body with the required parameters and send it to the specified endpoint. For the SDK, use the provided methods to handle transactions.
-* **Test Your Integration**: Use a sandbox environment to test your implementation before going live 5 .
+{% step %}
+#### Virtual Terminal or our custom desktop application
 
-For detailed implementation instructions, refer to the specific documentation for each method.
+The Virtual Terminal website allows you to handle manual card sales by default. This approach requires no coding and is perfect for a physical point-of-sale.
+
+We also have a custom desktop application which can be convenient way to collect manual card payments. It offers much of the same functionality as the Virtual Terminal.
+{% endstep %}
+
+{% step %}
+#### Android or iOS SDK integration
+
+If you have a mobile application that needs to handle payments, our SDKs implement secure forms which can collect payments from your users.
+{% endstep %}
+
+{% step %}
+#### REST API or SOAP API integration
+
+If you need more configuration, you can always call our APIs to collect manual card sales.
+
+If you have your own PCI level one compliance program, you may use our APIs and write your own custom code calling our APIs to collect manual card payments. You can read more about PCI compliance in the short [#pci-compliance](../getting-started/integration-options/#pci-compliance "mention") section of our integration guide.
+{% endstep %}
+{% endstepper %}
+
+
+
+### PayForm
+
+The PayForm is designed to be a highly flexible and secure payment form for your users. To start collecting payments with the PayForm, you'll want to use our builder tool for configuration, then our REST API to generate a payment URL.&#x20;
+
+{% include "../../.gitbook/includes/info-payform-builder.md" %}
+
+You can read about configuration specifics in the [payform.md](../getting-started/integration-options/payform.md "mention") guide. For the purpose of this tutorial, you can follow the example below, we'll briefly explain each configuration step.&#x20;
+
+#### Example
+
+In the example below, the PayForm has been setup for **an instant card payment**.&#x20;
+
+<figure><img src="../../.gitbook/assets/payform builder example 3.png" alt=""><figcaption></figcaption></figure>
+
+{% stepper %}
+{% step %}
+#### Visible and read-only fields
+
+The user (cardholder) will need to provide their first and last names, full address, email, and click a checkbox to agree to pay and give their permissions to receive an email.
+
+Additionally, they'll see the amount field, bu tit'll be read-only.
+{% endstep %}
+
+{% step %}
+#### Submission options
+
+The PayForm will redirect the user to an external URL. An encrypted query string containing the POST data will also be appended to the URL&#x20;
+{% endstep %}
+
+{% step %}
+#### Styling and colors
+
+The styling and colors were mostly left on default, only switching out the button background and border to shades of green.
+{% endstep %}
+
+{% step %}
+#### Pre-filled values
+
+The amount will be pre-filled as $25, the Redirect URL is using an example URL to your website, and the EIndex is using the sandbox value for encryption key. EndPoint should be left as default.
+{% endstep %}
+{% endstepper %}
+
+\
+The JSON will look like the following:
+
+{% code title="PayForm JSON example" %}
+```json
+{
+  "InitParams": {
+    "MerchID": 1,
+    "WTYPE": "PF",
+    "PostURL": "",
+    "RedirectURL": "https://yourwebsite.com/success",
+    "REF_ID": "",
+    "RPGUID": "",
+    "EndPoint": "PayForm/PF.aspx",
+    "EINDEX": "300",
+    "Amounts": {
+      "Amount": 25,
+      "Surcharge": 0,
+      "TotalAmt": 25
+    },
+    "Payer": {
+      "Firstname": "",
+      "Lastname": "",
+      "BillingAddress": {
+        "StreetAddress": "",
+        "City": "",
+        "State": "",
+        "ZIP": "",
+        "Country": ""
+      },
+      "Email": "",
+      "Phone": ""
+    },
+    "WidOptions": {
+      "eVisible": "6E7F",
+      "eReadOnly": "0040",
+      "eStyles": "0001",
+      "eSubmission": "0201",
+      "eColors": "#ffffff,#7aca44,#73ff00,#212121,#ffffff,#212121,#ffffff"
+    }
+  }
+}
+```
+{% endcode %}
+
+**This JSON can be used to make a REST API request to generate the actual payment form.**&#x20;
+
+You may re-use this JSON to generate the same type of form for multiple different users. You may also want to dynamically configure values like the amounts from your code.
+
+{% hint style="success" %}
+To generate a PayForm, make a request to [#payform-initialize](../../api-reference/rest-api/payform.md#payform-initialize "mention").&#x20;
+{% endhint %}
+
+If you include a valid session key, the PayForm will be accessible under the `PaymentUrl` included in the response. You can embed it into your site or redirect the user to the page.
+
+Once the user fills out and submits the form, we'll handle the payment.
+
+If you want to handle the query string when redirecting back to your website to store the transaction ID in your database, read the [#redirect-with-query-string](../getting-started/integration-options/payform.md#redirect-with-query-string "mention") section of our full PayForm guide.
+
+{% hint style="info" %}
+Learn more about how to configure and use the PayForm in the [payform.md](../getting-started/integration-options/payform.md "mention") guide.
+{% endhint %}
+
+
+
+### <mark style="background-color:orange;">Virtual Terminal</mark>
+
+The Virtual Terminal is a web application that allows you to manually enter credit card details and process transactions through your browser. This option is suitable for businesses that need to process payments without a physical terminal 4 5 .
+
+
+
+### Custom desktop application
+
+{% hint style="info" %}
+Read more about using our custom desktop application for sales in the [integration-options](../getting-started/integration-options/ "mention") guide or [contact Number](../../help/customer-support/) to get access.
+{% endhint %}
+
+
+
+### <mark style="background-color:orange;">Android / iOS SDK integration</mark>
+
+* If you are developing an Android application, you can utilize the Number Android SDK to charge credit cards manually. The method`ChargeCreditCard().chargeCreditCard(params: ChargeCreditCardBodyParams)`allows you to process credit card transactions by entering the card details manually 3 .
+* **Request Parameters**:
+  * `encryptedCardNumber`: Securely handle the card number.
+  * `creditCardInfo`: Include details like expiration date and CVV.
+  * `accountHolder`: Information about the cardholder 3 .
+
+
+
+### <mark style="background-color:orange;">REST / SOAP API integration</mark>
+
+* You can process a manual card sale using the`/ICardProcess/CreditCardSale_Manual`API endpoint. This requires sending a POST request with the necessary credit card information, including the account number, expiration date, CVV, and account holder details 1 .
+* **Request Parameters**:
+  * `SessKey`: A unique session key for authentication.
+  * `ccCardInfo`: Contains the credit card details (AccountNumber, ExpMonth, ExpYear, CSV).
+  * `AcctHolder`: Information about the account holder 2 1 .
+
+
+

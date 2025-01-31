@@ -4,7 +4,7 @@ description: Send a payment reminder to a client through a text or e-mail
 
 # Payment Reminder (WIP)
 
-<figure><img src="../../.gitbook/assets/Payment Reminder.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Payment Reminder 1.png" alt=""><figcaption></figcaption></figure>
 
 ## Introduction
 

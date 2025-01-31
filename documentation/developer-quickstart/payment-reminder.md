@@ -6,11 +6,9 @@ description: Send a payment reminder to a client through a text or e-mail
 
 <figure><img src="../../.gitbook/assets/Payment Reminder 1.png" alt=""><figcaption></figcaption></figure>
 
-## Introduction
 
-As an integrator, you may wish to send a payment reminder to a client through a text or e-mail.&#x20;
 
-Here's an example reminder:
+As an integrator, you may wish to send a payment reminder to a client through a text or e-mail which will allow them to pay the amount due. Here's an example reminder:
 
 > You have a payment due to Merchant XYZ of $125.00 due on 10/4/2016. Please follow the link below to make the payment. https://easypay5.com/PaymentReminder/?AT=GzNHZXXXXo=sNLs0gh3I9xMKALxwGCjQsXnFycTXV0htipN92dAbU4IIl7E9rFb6YKosbakwUOapfwtQODMdT0=\&Z=1
 

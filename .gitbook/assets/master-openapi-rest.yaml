@@ -6174,11 +6174,16 @@ paths:
                     RefID:
                       type: string
                       example: "52520ABC"
+                      description: A custom user-defined field to save with the record.
                     RPGUID:
                       $ref: "#/components/schemas/RPGUID"
                     MessageBody:
                       type: string
                       example: ""
+                      description: |
+                        The message to send. Use **Merch1** to insert merchant's name into your message template. The payment URL will be added at the end automatically. 
+                        If the body is left empty, a default generic message will be used:
+                          "You have a Payment Due to [Merchant Name] of [Amount] due on [DueOn]. Please follow the link below to make the Payment. [Link Here]"
                     AcctHolderID:
                       type: integer
                       example: 0
@@ -6187,6 +6192,7 @@ paths:
                       type: number
                       format: float
                       example: 50.00
+                      description: he $ amount to collect.
                     ConsentID:
                       type: integer
                       example: 0
@@ -6200,9 +6206,11 @@ paths:
                     MerchID:
                       type: integer
                       example: 1
+                      description: unique identifier for the Merchant record.
                     TXID:
                       type: integer
                       example: 0
+                      description: Not used, please fill with 0.
                     WType:
                       type: string
                       example: "SW"
@@ -6210,15 +6218,15 @@ paths:
                     RedirectURL:
                       type: string
                       example: "https://easypay7.com/PostingApp"
-                      description: The URL to redirect to after processing the payment.
+                      description: The URL to redirect to after processing the payment. The payment data will be appended to the URL to be consumed by the merchant.
                     WidgetURL:
                       type: string
                       example: "https://easypay5.com/stdwidget"
-                      description: Endpoint for the widget payment form. Contact Number for more information.
+                      description: Endpoint for the widget payment form, including custom forms. Contact Number and we will provide you with a value.
                     ExpiresOn:
                       type: string
                       example: "2025-10-05"
-                      description: A date for when the payment link should no longer be available in yyyy-mm-dd format.
+                      description: A date in yyyy-mm-dd format for when the payment link should no longer be available.
                     SingleUse:
                       type: integer
                       example: 0
@@ -6226,6 +6234,7 @@ paths:
                     OptParam:
                       type: string
                       example: "VISIBLE|1EE7|READONLY|0000|STYLES|0000|OPTIONS|0601|COLORS|#ffffff,#428bca,#007bff,#212121,#ffffff,#212121,#ffffff"
+                      description: "Parameters which control the design and behavior of the payment form including the visible fields, read-only fields, color and styling, and submission options."
                     Questions:
                       type: array
                       items:

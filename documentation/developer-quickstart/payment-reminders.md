@@ -1,8 +1,8 @@
 ---
-description: Send a payment reminder to a client through a text or e-mail
+description: Send payment reminders to clients through text or e-mail
 ---
 
-# Payment Reminder
+# Payment Reminders
 
 <figure><img src="../../.gitbook/assets/Payment Reminder 1.png" alt=""><figcaption></figcaption></figure>
 

@@ -10,7 +10,7 @@
   * [Authentication](documentation/developer-quickstart/authentication.md)
   * [Card Sales and Consent (WIP)](documentation/developer-quickstart/card-sales-and-consent-wip.md)
   * [Querying and Filtering](documentation/developer-quickstart/querying-and-filtering.md)
-  * [Payment Reminder](documentation/developer-quickstart/payment-reminder.md)
+  * [Payment Reminders](documentation/developer-quickstart/payment-reminders.md)
 * [Getting Started](documentation/getting-started/README.md)
   * [Basics](documentation/getting-started/basics/README.md)
     * [Authentication](documentation/getting-started/basics/authentication.md)

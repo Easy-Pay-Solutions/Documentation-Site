@@ -16,7 +16,7 @@ The Virtual Terminal is a web application that provides all types of credit card
 
 When you log in to the Virtual Terminal, you are brought to the home screen. The number of open transactions and scheduled payments due display at the top of the screen. Your default merchant and user roles are listed just below, along with the expiration date of your password.&#x20;
 
-<figure><img src="../../../.gitbook/assets/Virtual Terminal 2.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Virtual Terminal 2 (1).png" alt=""><figcaption></figcaption></figure>
 
 
 
@@ -150,7 +150,7 @@ Click the _Reports_ tab on the left side of the screen, then _Consents_.
 
 The consent list is where you will manage your consents after they have been created. The query filter can be used to search your consent list.
 
-<figure><img src="../../../.gitbook/assets/Virtual Terminal 6a Consent list.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Virtual Terminal 6a Consent list (1).png" alt=""><figcaption></figcaption></figure>
 
 #### Consent operations
 
@@ -214,7 +214,7 @@ Allows you to reprint the consent agreement. You can choose between the customer
 
 The scheduled payments view is where you will view and manage all scheduled payments.
 
-<figure><img src="../../../.gitbook/assets/Virtual Terminal 7a Scheduled payments.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Virtual Terminal 7a Scheduled payments (1).png" alt=""><figcaption></figcaption></figure>
 
 
 
@@ -250,7 +250,7 @@ Click the _Reports_ tab on the left side of the screen, then _Transactions_.
 
 The transaction list is where you will view and manage the transactions.
 
-<figure><img src="../../../.gitbook/assets/Virtual Terminal 8a Transaction list.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Virtual Terminal 8a Transaction list (1).png" alt=""><figcaption></figcaption></figure>
 
 #### Transaction operations
 
@@ -302,7 +302,7 @@ For filtering by transaction status and transaction type, see the table below.
 
 Search your database, create reports based on results, void, credit, and reprint receipts.
 
-<figure><img src="../../../.gitbook/assets/Virtual Terminal 9 Transaction search.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Virtual Terminal 9 Transaction search (2).png" alt=""><figcaption></figcaption></figure>
 
 #### Search for
 
@@ -330,7 +330,7 @@ Click the _Settlement_ option on the left side of the screen.
 
 View and manage the settlements.
 
-<figure><img src="../../../.gitbook/assets/Virtual Terminal 10 Transaction search.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Virtual Terminal 10 Transaction search (2).png" alt=""><figcaption></figcaption></figure>
 
 #### Manually settle transactions.&#x20;
 
@@ -348,7 +348,7 @@ Select individual transactions, and click _Settle Selected_. Click _Settle All_ 
 
 Displays a list of your settlements and allows for reprinting of batch reports.
 
-<figure><img src="../../../.gitbook/assets/Virtual Terminal 11 Batch history.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Virtual Terminal 11 Batch history (1).png" alt=""><figcaption></figcaption></figure>
 
 
 

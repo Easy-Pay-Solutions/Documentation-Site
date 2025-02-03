@@ -4,7 +4,7 @@ description: Getting started with Virtual Terminal for Number
 
 # Virtual Terminal
 
-<figure><img src="../../../.gitbook/assets/epvt0 full width (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Virtual terminal 1.png" alt=""><figcaption></figcaption></figure>
 
 
 
@@ -16,7 +16,7 @@ The Virtual Terminal is a web application that provides all types of credit card
 
 When you log in to the Virtual Terminal, you are brought to the home screen. The number of open transactions and scheduled payments due display at the top of the screen. Your default merchant and user roles are listed just below, along with the expiration date of your password.&#x20;
 
-<figure><img src="../../../.gitbook/assets/HomePageExpandedNav (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Virtual Terminal 2.png" alt=""><figcaption></figcaption></figure>
 
 
 
@@ -80,7 +80,7 @@ An email address can be added to the consent so your customer will receive a rec
 
 Click the _Consents_ tab on the left side of the screen, then _Create Annual Consent_, _Create Annual: EMV_, or _Create One-Time Consent_ depending on the type of consent you need and payment method.
 
-<figure><img src="../../../.gitbook/assets/epvt2.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Virtual Terminal 3 Annual and one-time.png" alt=""><figcaption></figcaption></figure>
 
 Creating annual and one-time consents allows your office to charge a card at a later date. **This can be useful in situations where you expect a balance to be due after services have been provided.**
 
@@ -104,7 +104,7 @@ An email address can be added to the consent so your customer will receive a rec
 
 Click the _Recurring_ tab on the left side of the screen, then _Create Recurring Consent_ or _Create Recurring: EMV_ based on the payment method.
 
-<figure><img src="../../../.gitbook/assets/epvt3.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Virtual Terminal 4 Fixed recurring.png" alt=""><figcaption></figcaption></figure>
 
 Creating a fixed recurring consent allows your office to set up a payment plan with your customer.  **This can be useful in situations where your customer has an outstanding balance due.**
 
@@ -124,7 +124,7 @@ An email address can be added to the consent so your customer will receive a rec
 
 Click the _Recurring_ tab on the left side of the screen, then _Create Subscription_.
 
-<figure><img src="../../../.gitbook/assets/epvt4.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Virtual Terminal 5 Subscription.png" alt=""><figcaption></figcaption></figure>
 
 Creating a subscription consent allows your office to set up a re-occurring payment indefinitely. **This can be useful in situations where your customer makes a regular donation or payment to your organization.**&#x20;
 
@@ -150,7 +150,7 @@ Click the _Reports_ tab on the left side of the screen, then _Consents_.
 
 The consent list is where you will manage your consents after they have been created. The query filter can be used to search your consent list.
 
-<figure><img src="../../../.gitbook/assets/AnnualConsentOperations Window.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Virtual Terminal 6a Consent list.png" alt=""><figcaption></figcaption></figure>
 
 #### Consent operations
 
@@ -196,7 +196,7 @@ If your customer wants to change the schedule completely, it is recommended that
 
 Use when you want to charge an amount to annual and one-time consents.
 
-<figure><img src="../../../.gitbook/assets/epvt6 left-align (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Virtual Terminal 6b Consent list Charge.png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 {% endstepper %}
 
@@ -214,7 +214,7 @@ Allows you to reprint the consent agreement. You can choose between the customer
 
 The scheduled payments view is where you will view and manage all scheduled payments.
 
-<figure><img src="../../../.gitbook/assets/ScheduledPayments Window.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Virtual Terminal 7a Scheduled payments.png" alt=""><figcaption></figcaption></figure>
 
 
 
@@ -250,7 +250,7 @@ Click the _Reports_ tab on the left side of the screen, then _Transactions_.
 
 The transaction list is where you will view and manage the transactions.
 
-<figure><img src="../../../.gitbook/assets/TransactionsFilterView Window.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Virtual Terminal 8a Transaction list.png" alt=""><figcaption></figcaption></figure>
 
 #### Transaction operations
 
@@ -302,7 +302,7 @@ For filtering by transaction status and transaction type, see the table below.
 
 Search your database, create reports based on results, void, credit, and reprint receipts.
 
-<figure><img src="../../../.gitbook/assets/TransactionsSearchView Window.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Virtual Terminal 9 Transaction search.png" alt=""><figcaption></figcaption></figure>
 
 #### Search for
 
@@ -330,7 +330,7 @@ Click the _Settlement_ option on the left side of the screen.
 
 View and manage the settlements.
 
-<figure><img src="../../../.gitbook/assets/SettlementsPage Window.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Virtual Terminal 10 Transaction search.png" alt=""><figcaption></figcaption></figure>
 
 #### Manually settle transactions.&#x20;
 
@@ -348,7 +348,7 @@ Select individual transactions, and click _Settle Selected_. Click _Settle All_ 
 
 Displays a list of your settlements and allows for reprinting of batch reports.
 
-<figure><img src="../../../.gitbook/assets/BatchHistoryReport Window.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Virtual Terminal 11 Batch history.png" alt=""><figcaption></figcaption></figure>
 
 
 
@@ -360,7 +360,7 @@ Displays a list of your settlements and allows for reprinting of batch reports.
 
 In the upper right-hand corner of the screen, there is a menu of miscellaneous operations.
 
-<figure><img src="../../../.gitbook/assets/RightHandMiscOptions Full Length.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Virtual Terminal 12 Miscellaneous.png" alt=""><figcaption></figcaption></figure>
 
 {% stepper %}
 {% step %}

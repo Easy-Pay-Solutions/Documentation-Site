@@ -14,7 +14,7 @@ Once they receive the reminder, they can click the link that is sent along with 
 
 After the payment is submitted, a transaction receipt would be sent to the e-mail address on file.
 
-<figure><img src="../../.gitbook/assets/PaymentReminderFormAndReceipt.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/transaction receipt.png" alt=""><figcaption></figcaption></figure>
 
 
 

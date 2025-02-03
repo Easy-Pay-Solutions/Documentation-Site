@@ -94,7 +94,11 @@ The mobile SDKs will allow you to integrate Number payments services into any An
 
 If you need to integrate Number payments with a mobile application, we recommend using this approach.
 
-You can read more about implementation in the [android-sdk.md](android-sdk.md "mention") and [ios-sdk.md](ios-sdk.md "mention") integration guides.
+You can read more about implementation in the SDK integration guides:
+
+<table data-card-size="large" data-view="cards"><thead><tr><th></th></tr></thead><tbody><tr><td><a data-mention href="android-sdk.md">android-sdk.md</a> ></td></tr><tr><td><a data-mention href="ios-sdk.md">ios-sdk.md</a> ></td></tr></tbody></table>
+
+
 
 
 
@@ -112,7 +116,9 @@ We also have a widget as a legacy option to the PayForm. With this widget, users
 
 We recommend using the PayForm to collect all cardholder data when integrating with web applications as it's secure, easy to get started, and offers a lot of customization.&#x20;
 
-You can read more about implementation in the [payform.md](payform.md "mention") and [widgets.md](widgets.md "mention") integration guides.
+You can read more about implementation in the integration guides:
+
+<table data-card-size="large" data-view="cards"><thead><tr><th></th></tr></thead><tbody><tr><td><a data-mention href="payform.md">payform.md</a> ></td></tr><tr><td><a data-mention href="widgets.md">widgets.md</a> ></td></tr></tbody></table>
 
 
 
@@ -132,7 +138,9 @@ The Virtual Terminal (VT) is a web application which you can access through your
 
 The VT is the fastest way to start trying out our payment services. Otherwise, it's ideal for businesses processing payments over the phone or at sales points lacking a physical terminal.
 
-You can read more about the Virtual Terminal in the [virtual-terminal.md](virtual-terminal.md "mention") user guide.
+You can read more about the Virtual Terminal in the user guide:
+
+<table data-card-size="large" data-view="cards"><thead><tr><th></th></tr></thead><tbody><tr><td><a data-mention href="virtual-terminal.md">virtual-terminal.md</a> ></td></tr></tbody></table>
 
 
 
@@ -160,7 +168,9 @@ The application interfaces with VeriFone card readers. These devices accept EMV 
 
 If you wish, you can take advantage of our end-to-end encryption model used with the Verifone card reader and build around it by referencing our Dynamic Link Library. The DLL will channel its requests through our API and responses can be consumed at the client software product. This way, you can develop your own workflow and displays.
 
-You can read more about integrating with Verifone in the [verifone.md](verifone.md "mention") integration guide.
+You can read more about integrating with Verifone in the integration guide:
+
+<table data-card-size="large" data-view="cards"><thead><tr><th></th></tr></thead><tbody><tr><td><a data-mention href="verifone.md">verifone.md</a> ></td></tr></tbody></table>
 
 
 

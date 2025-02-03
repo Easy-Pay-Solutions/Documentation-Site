@@ -263,7 +263,7 @@ EasyPay.apiClient.createAnnualConsent(request: CreateConsentAnnualRequest,
 #### **Response body**
 
 * `CreateConsentAnnualResponseModel`
-  * \[See fields listed in the REST API reference - [Create an annual consent with manual card entry](../../../api-reference/rest-api/consent-annual/create-consent.md#apicardprocrest-v1.0.0-consentannual-create_man)]
+  * \[See fields listed in the REST API reference - [Create an annual consent with manual card entry](../../../api-reference/rest-api/consent-annual/create-annual-consent.md#apicardprocrest-v1.0.0-consentannual-create_man)]
 
 
 

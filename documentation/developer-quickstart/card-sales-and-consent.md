@@ -2,7 +2,7 @@
 description: Learn to make credit card sales and collect consent with Number
 ---
 
-# Card Sales and Consent (WIP)
+# Card Sales and Consent
 
 <figure><img src="../../.gitbook/assets/Credit card sale 2 (2).png" alt=""><figcaption></figcaption></figure>
 
@@ -48,7 +48,7 @@ Before you start, you'll need to download the [Verifone Windows service](https:/
 
 Now, you'll be able to issue commands to the Windows service by calling `https://localhost:8031` from your website.&#x20;
 
-#### Card present sales
+#### Verifone card present sales
 
 Here's an simplified example of how you can invoke the service for a card present sale:
 
@@ -106,7 +106,7 @@ function initiateEMVTransaction() {
 {% endtab %}
 {% endtabs %}
 
-#### Card present annual consent
+#### Verifone card present annual consent
 
 Here's an simplified example of how you can invoke the service to collect annual consent:
 
@@ -180,7 +180,7 @@ To learn more about using the Virtual Terminal, see the [virtual-terminal.md](..
 Read more about using our custom desktop application for sales in the [integration-options](../getting-started/integration-options/ "mention") guide or [contact Number](../../help/customer-support/) to get access.
 {% endhint %}
 
-#### Card present sales
+#### Virtual Terminal card present sales
 
 When you visit the Virtual Terminal, log in and expand _Credit Cards_ in the navigation on the left. You'll see options for a sale, an EMV sale, authorization, forced auth, and adjustments.&#x20;
 
@@ -188,7 +188,7 @@ When you visit the Virtual Terminal, log in and expand _Credit Cards_ in the nav
 
 As long as your USB card reader is connected to your machine, it will seamlessly integrate with the Virtual Terminal for card present transactions.
 
-#### Card present consent
+#### Virtual Terminal card present consent
 
 When you visit the Virtual Terminal, log in and expand _Consents_ in the navigation on the left. You'll see options for annual consent, EMV annual consent, and one-time consent. You can also expand the _Recurring_ tab to find options to create recurring consent, EMV recurring consent, and subscription consent.
 
@@ -212,7 +212,7 @@ After authenticating, when you scan the credit card and collect the track data a
 
 Follow the instructions in the API reference to prepare and handle the request.
 
-#### Card present sales
+#### API card present sales
 
 You can use the following API operations:
 
@@ -221,13 +221,13 @@ You can use the following API operations:
 * For the REST API, use [#apicardprocrest-v1.0.0-cardsale-cardpresent](../../api-reference/rest-api/card-operations/process-a-card-sale.md#apicardprocrest-v1.0.0-cardsale-cardpresent "mention")
 * For the SOAP API, use [#credit-card-sale-card-present](../../api-reference/soap-api/credit-card/credit-card-sale.md#credit-card-sale-card-present "mention")
 
-#### Card present consent
+#### API card present consent
 
 You can use the following API operations:
 
 {% include "../../.gitbook/includes/warning-pci-compliant-only.md" %}
 
-* For the REST API, you can use [#apicardprocrest-v1.0.0-consentannual-create\_cp](../../api-reference/rest-api/consent-annual/create-consent.md#apicardprocrest-v1.0.0-consentannual-create_cp "mention") and [#apicardprocrest-v1.0.0-consentrecurring-create](../../api-reference/rest-api/consent-recurring/create-consent.md#apicardprocrest-v1.0.0-consentrecurring-create "mention")
+* For the REST API, you can use [#apicardprocrest-v1.0.0-consentannual-create\_cp](../../api-reference/rest-api/consent-annual/create-annual-consent.md#apicardprocrest-v1.0.0-consentannual-create_cp "mention") and [#apicardprocrest-v1.0.0-consentrecurring-create](../../api-reference/rest-api/consent-recurring/create-recurring-consent.md#apicardprocrest-v1.0.0-consentrecurring-create "mention")
 * For the SOAP API, you can use [#create-annual-consent-card-present](../../api-reference/soap-api/consent-annual/#create-annual-consent-card-present "mention"), [#create-recurring-consent](../../api-reference/soap-api/consent-recurring/#create-recurring-consent "mention"), and [#create-subscription-consent-card-present](../../api-reference/soap-api/consent-subscription/#create-subscription-consent-card-present "mention")
 
 
@@ -236,7 +236,7 @@ You can use the following API operations:
 
 
 
-## <mark style="background-color:orange;">Manual card sales and consent</mark>
+## Manual card sales and consent
 
 To make credit card sales and collect consent using Number when you want to enter the card details manually, you have the following options:
 
@@ -276,11 +276,15 @@ If you have your own PCI level one compliance program, you may use our APIs and 
 
 The PayForm is designed to be a highly flexible and secure payment form for your users. To start collecting payments and consent with the PayForm, you'll want to use our builder tool for configuration, then our REST API to generate a payment URL.&#x20;
 
+{% hint style="info" %}
+Learn more about how to configure and use the PayForm in the [payform.md](../getting-started/integration-options/payform.md "mention") guide.
+{% endhint %}
+
 {% include "../../.gitbook/includes/info-payform-builder.md" %}
 
 You can read about configuration specifics in the [#payform-builder](../getting-started/integration-options/payform.md#payform-builder "mention") section of our full PayForm guide. For the purpose of this tutorial, you can follow the example below; we'll briefly explain each configuration step.&#x20;
 
-#### Manual card sale
+#### PayForm manual card sale
 
 In the example below, the PayForm has been setup for **an instant card payment**.&#x20;
 
@@ -314,7 +318,6 @@ The amount will be pre-filled as $25, the Redirect URL is using an example URL t
 {% endstep %}
 {% endstepper %}
 
-\
 The JSON will look like the following:
 
 {% code title="PayForm JSON example" %}
@@ -373,21 +376,17 @@ Once the user fills out and submits the form, we'll handle the payment.
 
 If you want to handle the query string when redirecting back to your website to store the transaction ID in your database, read the [#redirect-with-query-string](../getting-started/integration-options/payform.md#redirect-with-query-string "mention") section of our full PayForm guide.
 
-{% hint style="info" %}
-Learn more about how to configure and use the PayForm in the [payform.md](../getting-started/integration-options/payform.md "mention") guide.
-{% endhint %}
+#### PayForm manual consent
+
+To use the PayForm to save a card on file, follow the steps in [#payform-manual-card-sale](card-sales-and-consent.md#payform-manual-card-sale "mention"), change the transaction type to collecting cardholder data, and skip the amount field.
+
+You may also collect an instant payment and consent at the same time by choosing the third transaction type, the combo widget.
 
 
 
 ### Virtual Terminal or desktop application
 
 The Virtual Terminal is a web application that allows you to manually enter credit card details and process transactions through your browser.&#x20;
-
-#### Manual card sale
-
-When you visit the Virtual Terminal, log in and expand _Credit Cards_ in the navigation on the left. You'll see options for a sale, an EMV sale, authorization, forced auth, and adjustments. Follow the instructions and manually enter the cardholder details to make a sale.
-
-<figure><img src="../../.gitbook/assets/HomePageExpandedNav cropped.png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 To learn more about using the Virtual Terminal, see the [virtual-terminal.md](../getting-started/integration-options/virtual-terminal.md "mention") user guide.
@@ -397,19 +396,35 @@ To learn more about using the Virtual Terminal, see the [virtual-terminal.md](..
 Read more about using our custom desktop application for sales in the [integration-options](../getting-started/integration-options/ "mention") guide or [contact Number](../../help/customer-support/) to get access.
 {% endhint %}
 
+#### Virtual Terminal manual card sale
+
+When you visit the Virtual Terminal, log in and expand _Credit Cards_ in the navigation on the left. You'll see options for a sale, an EMV sale, authorization, forced auth, and adjustments. Follow the instructions and manually enter the cardholder details to make a sale.
+
+<figure><img src="../../.gitbook/assets/HomePageExpandedNav cropped.png" alt=""><figcaption></figcaption></figure>
+
+#### Virtual Terminal manual consent
+
+Using the Virtual Terminal, you can create annual, one-time, recurring, and subscription consents. Log in and expand _Consents_ and _Recurring_ tabs on the left side of the screen. Choose the type of consent you're interested in and follow the instructions to manually enter the cardholder details and store a card on file.
+
+<figure><img src="../../.gitbook/assets/HomePageExpandedNav cropped consent (1).png" alt=""><figcaption></figcaption></figure>
+
 
 
 ### Android / iOS SDK integration
 
-If you are developing an Android or iOS application, you can utilize our SDKs to charge credit cards and collect consent manually.&#x20;
-
-#### Manual card sale
-
-The relevant methods are described in [#id-1.-charge-credit-card-creditcardsale\_manual](../getting-started/integration-options/android-sdk.md#id-1.-charge-credit-card-creditcardsale_manual "mention") section of the Android SDK guide and [#id-1.-charge-credit-card-creditcardsale\_manual](../getting-started/integration-options/ios-sdk.md#id-1.-charge-credit-card-creditcardsale_manual "mention") section of the iOS SDK guide.&#x20;
+If you are developing an Android or iOS application, you can utilize our SDKs to charge credit cards and collect consent manually by having users enter their own details.&#x20;
 
 {% hint style="info" %}
 We recommend following the [android-sdk.md](../getting-started/integration-options/android-sdk.md "mention") and [ios-sdk.md](../getting-started/integration-options/ios-sdk.md "mention") guides to learn how to integrate Number with your mobile applications.
 {% endhint %}
+
+#### Mobile manual card sale
+
+The relevant methods are described in [#id-1.-charge-credit-card-creditcardsale\_manual](../getting-started/integration-options/android-sdk.md#id-1.-charge-credit-card-creditcardsale_manual "mention") section of the Android SDK guide and [#id-1.-charge-credit-card-creditcardsale\_manual](../getting-started/integration-options/ios-sdk.md#id-1.-charge-credit-card-creditcardsale_manual "mention") section of the iOS SDK guide.&#x20;
+
+#### Mobile manual consent annual
+
+The relevant methods are described in [#id-3.-create-annual-consent-consentannual\_create\_man](../getting-started/integration-options/android-sdk.md#id-3.-create-annual-consent-consentannual_create_man "mention") section of the Android SDK guide and [#id-3.-create-annual-consent-consentannual\_create\_man](../getting-started/integration-options/ios-sdk.md#id-3.-create-annual-consent-consentannual_create_man "mention") section of the iOS SDK guide.&#x20;
 
 
 
@@ -417,7 +432,9 @@ We recommend following the [android-sdk.md](../getting-started/integration-optio
 
 If you wish to have more control over the integration and you are PCI Level 1 compliant, you can try using our APIs. They provide methods for all payment types available using our other services, including manual card sales and collecting different types of consent.
 
-{% include "../../.gitbook/includes/warning-pci-compliant-only.md" %}
+{% hint style="info" %}
+To learn more about our APIs, see the [rest-api.md](../getting-started/integration-options/rest-api.md "mention") and [soap-api.md](../getting-started/integration-options/soap-api.md "mention") integration guides.
+{% endhint %}
 
 After authenticating, when you collect cardholder data alongside the other payment details, prepare the HMAC secured header like shown in [authentication.md](authentication.md "mention") quickstart guide, and encrypt the card number using our RSA certificate. Follow the instructions in the API reference to prepare and handle the request.
 
@@ -425,12 +442,19 @@ After authenticating, when you collect cardholder data alongside the other payme
 
 You can use the following API operations:
 
-* For the REST API, use [#apicardprocrest-v1.0.0-cardsale-manual](../../api-reference/rest-api/card-operations/process-a-card-sale.md#apicardprocrest-v1.0.0-cardsale-manual "mention")
-* For the SOAP API, use [#credit-card-sale-manual](../../api-reference/soap-api/credit-card/credit-card-sale.md#credit-card-sale-manual "mention")
+{% include "../../.gitbook/includes/warning-pci-compliant-only.md" %}
 
-{% hint style="info" %}
-To learn more about our APIs, see the [rest-api.md](../getting-started/integration-options/rest-api.md "mention") and [soap-api.md](../getting-started/integration-options/soap-api.md "mention") integration guides.
-{% endhint %}
+* For the REST API, use [#apicardprocrest-v1.0.0-cardsale-manual](../../api-reference/rest-api/card-operations/process-a-card-sale.md#apicardprocrest-v1.0.0-cardsale-manual "mention").
+* For the SOAP API, use [#credit-card-sale-manual](../../api-reference/soap-api/credit-card/credit-card-sale.md#credit-card-sale-manual "mention").
+
+#### Manual consent
+
+You can use the following API operations:
+
+{% include "../../.gitbook/includes/warning-pci-compliant-only.md" %}
+
+* For the REST API, use [#apicardprocrest-v1.0.0-consentannual-create\_man](../../api-reference/rest-api/consent-annual/create-annual-consent.md#apicardprocrest-v1.0.0-consentannual-create_man "mention") for annual consent and [#apicardprocrest-v1.0.0-consentrecurring-create](../../api-reference/rest-api/consent-recurring/create-recurring-consent.md#apicardprocrest-v1.0.0-consentrecurring-create "mention") for recurring consent.
+* For the SOAP API, use [#create-annual-consent-manual](../../api-reference/soap-api/consent-annual/#create-annual-consent-manual "mention") for annual, [#create-recurring-consent](../../api-reference/soap-api/consent-recurring/#create-recurring-consent "mention") for recurring, and [#create-subscription-consent-card-present](../../api-reference/soap-api/consent-subscription/#create-subscription-consent-card-present "mention")for subscription consent.
 
 
 

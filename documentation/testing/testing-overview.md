@@ -36,7 +36,7 @@ This will show the list of transactions created. Select the transaction to be ve
 
 Make sure the amount, last four digits of the credit card, card type, and expiration date are correct.
 
-<figure><img src="../../.gitbook/assets/Testing 3.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Testing 3 (1).png" alt=""><figcaption></figcaption></figure>
 
 
 

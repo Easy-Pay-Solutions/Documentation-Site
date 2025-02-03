@@ -16,7 +16,7 @@ The Virtual Terminal is a web application that provides all types of credit card
 
 When you log in to the Virtual Terminal, you are brought to the home screen. The number of open transactions and scheduled payments due display at the top of the screen. Your default merchant and user roles are listed just below, along with the expiration date of your password.&#x20;
 
-<figure><img src="../../../.gitbook/assets/Virtual Terminal 2 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Virtual Terminal 2 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 
 

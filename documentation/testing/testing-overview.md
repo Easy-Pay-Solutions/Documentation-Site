@@ -18,7 +18,7 @@ For more information about the Virtual Terminal, see the [virtual-terminal.md](.
 
 {% embed url="https://easypay5.com/VT" %}
 
-<figure><img src="../../.gitbook/assets/epvt0 full width (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Testing 1.png" alt=""><figcaption></figcaption></figure>
 
 
 
@@ -30,13 +30,13 @@ For more information about the Virtual Terminal, see the [virtual-terminal.md](.
 
 Once logged in, expand the _Transactions_ tab in the navigation on the left, then click on _Search_.
 
-<figure><img src="../../.gitbook/assets/TransactionsSearchView Window.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Testing 2.png" alt=""><figcaption></figcaption></figure>
 
 This will show the list of transactions created. Select the transaction to be verified, and click on _Full Detail_ button under _Transaction Operations_. A pop up will open to show all the information about the transaction, account holder, and the end customer.
 
 Make sure the amount, last four digits of the credit card, card type, and expiration date are correct.
 
-<figure><img src="../../.gitbook/assets/fullDetailApprovedTransaction.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Testing 3.png" alt=""><figcaption></figcaption></figure>
 
 
 
@@ -72,7 +72,7 @@ Using the test cards, if you enter the amount of $2.78, you should get partial a
 
 The receipt can also be printed in the Virtual Terminal by expanding the _Receipts_ dropdown and clicking the _Merchant_ or _Customer_ button.
 
-<figure><img src="../../.gitbook/assets/receipt.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Testing 4.png" alt=""><figcaption></figcaption></figure>
 
 
 
@@ -86,11 +86,11 @@ Click on the _Reports_ menu and choose _Consents._
 
 Select the consent that needs to be verified from the grid. Click the _Full Detail_ button and make sure the consent, account holder, and end customer details look correct.
 
-<figure><img src="../../.gitbook/assets/FullDetailConsent.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Testing 5.png" alt=""><figcaption></figcaption></figure>
 
 To view the consent agreement, click on the _Merchant Consent_ or _Customer Consent_.
 
-<figure><img src="../../.gitbook/assets/ConsentReceiptMerchant (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Testing 6.png" alt=""><figcaption></figcaption></figure>
 
 
 

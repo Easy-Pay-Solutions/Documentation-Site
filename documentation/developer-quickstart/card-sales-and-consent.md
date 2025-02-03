@@ -406,7 +406,7 @@ When you visit the Virtual Terminal, log in and expand _Credit Cards_ in the nav
 
 Using the Virtual Terminal, you can create annual, one-time, recurring, and subscription consents. Log in and expand _Consents_ and _Recurring_ tabs on the left side of the screen. Choose the type of consent you're interested in and follow the instructions to manually enter the cardholder details and store a card on file.
 
-<figure><img src="../../.gitbook/assets/HomePageExpandedNav cropped consent (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="broken-reference" alt=""><figcaption></figcaption></figure>
 
 
 

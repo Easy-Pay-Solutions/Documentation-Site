@@ -227,8 +227,8 @@ You can use the following API operations:
 
 {% include "../../.gitbook/includes/warning-pci-compliant-only.md" %}
 
-* For the REST API, you can use [#apicardprocrest-v1.0.0-consentannual-create\_cp](../../api-reference/rest-api/consent-annual/create-annual-consent.md#apicardprocrest-v1.0.0-consentannual-create_cp "mention") and [#apicardprocrest-v1.0.0-consentrecurring-create](../../api-reference/rest-api/consent-recurring/create-recurring-consent.md#apicardprocrest-v1.0.0-consentrecurring-create "mention")
-* For the SOAP API, you can use [#create-annual-consent-card-present](../../api-reference/soap-api/consent-annual/#create-annual-consent-card-present "mention"), [#create-recurring-consent](../../api-reference/soap-api/consent-recurring/#create-recurring-consent "mention"), and [#create-subscription-consent-card-present](../../api-reference/soap-api/consent-subscription/#create-subscription-consent-card-present "mention")
+* For the REST API, you can use [#apicardprocrest-v1.0.0-consentannual-create\_cp](../../api-reference/rest-api/consent-annual/create-annual-consent.md#apicardprocrest-v1.0.0-consentannual-create_cp "mention") and [#apicardprocrest-v1.0.0-consentrecurring-create](../../api-reference/rest-api/consent-recurring/create-recurring-consent.md#apicardprocrest-v1.0.0-consentrecurring-create "mention").
+* For the SOAP API, you can use [#create-annual-consent-card-present](../../api-reference/soap-api/consent-annual/#create-annual-consent-card-present "mention"), [#create-recurring-consent](../../api-reference/soap-api/consent-recurring/#create-recurring-consent "mention"), and [#create-subscription-consent-card-present](../../api-reference/soap-api/consent-subscription/#create-subscription-consent-card-present "mention").
 
 
 

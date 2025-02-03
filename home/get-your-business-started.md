@@ -1,88 +1,10 @@
+---
+description: Find out how long it takes to get started with Number
+---
+
 # Get Your Business Started
 
 At Number, we know that running a business means juggling countless tasks. That's why we've made our payment integration as simple and efficient as possible, so you can focus on what really matters—growing your business.
-
-{% content-ref url="../documentation/developer-quickstart/" %}
-[developer-quickstart](../documentation/developer-quickstart/)
-{% endcontent-ref %}
-
-
-
-***
-
-
-
-### A few steps to get started&#x20;
-
-To get your business started with Number, follow these general steps for implementation:
-
-{% stepper %}
-{% step %}
-#### **Create a Number Account**
-
-Sign up for a Number Sandbox account to gain access to the platform and its features. Ensure you have all necessary business information ready for registration.
-
-{% hint style="info" %}
-Contact us to sign up for a Number Sandbox account: \
-[partners@number.tech](mailto:partners@number.tech)  /  (866) 927-9344
-{% endhint %}
-{% endstep %}
-
-{% step %}
-#### **Obtain credentials**
-
-After account creation, retrieve the necessary credentials from the Number Client Admin Portal. This will be essential for encryption and authentication.
-{% endstep %}
-
-{% step %}
-#### **Choose your integration method**
-
-Decide on the integration method that best suits your business needs. Options include:
-
-* **REST API and the PayForm**: Utilize the Number API and a customizable pre-built payment form that can be integrated directly into your site.
-* **Verifone**: Collect payments using Verifone card readers with our software.
-* **Mobile SDK**: If you have a mobile application, use the Number SDK for in-app payments.
-* **Virtual Terminal**: A web application for processing payments directly through a browser.
-{% endstep %}
-
-{% step %}
-#### **Integrate our solution**
-
-Depending on the integration method of choice, you might need to develop code to call our APIs or SDKs, or simply install some software and log in.
-{% endstep %}
-
-{% step %}
-#### **Test your integration on a development environment**
-
-Before going live, thoroughly test your integration in a sandbox environment. Ensure that all payment flows work as expected and that you can handle various transaction scenarios.
-{% endstep %}
-
-{% step %}
-#### Number inspection
-
-The Number team always inspects the workflow that our clients develop prior to going Live.
-{% endstep %}
-
-{% step %}
-#### **Go live**
-
-Once testing is complete and you are satisfied with the implementation, switch to the production environment. Update your configuration as necessary.
-{% endstep %}
-
-{% step %}
-#### **Monitor and maintain**
-
-After launching, continuously monitor your payment processing for any issues. Regularly check for updates from Number to ensure compliance and security.
-{% endstep %}
-{% endstepper %}
-
-{% hint style="info" %}
-You can find a detailed integration guide by visiting the [integration-checklist.md](../documentation/getting-started/integration-checklist.md "mention") section.
-{% endhint %}
-
-
-
-***
 
 
 
@@ -90,5 +12,13 @@ You can find a detailed integration guide by visiting the [integration-checklist
 
 Before you start using our services, you might want to gain more insight into the work required to integrate. We've prepared a rough implementation timeline to help guide you in your decision-making.
 
-<table><thead><tr><th width="136">Phase</th><th width="138">Sub phase</th><th width="100">Duration</th><th>Task</th></tr></thead><tbody><tr><td>Obtain Sandbox Credentials</td><td>—</td><td>1 Day</td><td><a href="../help/customer-support/">Contact the Number team</a> to obtain sandbox credentials for integration testing.</td></tr><tr><td>Investigate Integration Options</td><td>—</td><td>1-2 Days</td><td>Determine the appropriate <a href="../documentation/getting-started/integration-options/">integration </a><a href="../documentation/getting-started/integration-options/">methods</a>: PCI Level One clients can use a purely API integration, while others would need to implement a PayForm for collecting cardholder data.</td></tr><tr><td>Develop a Payment Workflow</td><td>—</td><td>1-2 Days</td><td>Outline all interaction points in your current workflow where payments might be collected. <br><br>Define your requirements for various types of payment processes and equipment (card readers, web payments, card-present transactions, back-office processes, and reporting mechanisms).</td></tr><tr><td>Develop Your Integration</td><td>Front-end</td><td>1-2 Weeks</td><td>Create the front-end components necessary for user interactions, ensuring a seamless payment experience.</td></tr><tr><td></td><td>EMV <strong>(</strong>Optional)</td><td>1 Week</td><td>If you want to support Verifone card chip readers, you'll need to implement EMV functionality to support chip card transactions and enhance security measures.</td></tr><tr><td></td><td>Server-side</td><td>2-3 Weeks</td><td>Develop the server-side logic to handle payment processing, invoking our services (through an API or an SDK).<br><br>Develop data management, coupling your users with the payment activities by storing consent or transaction IDs, and optionally storing transaction amounts for reconciliation.</td></tr><tr><td></td><td>Reporting and Reconciliation</td><td>1 Week</td><td>Consult us to set up reporting and reconciliation processes to track transactions and ensure financial accuracy.</td></tr><tr><td>Unit Testing</td><td>—</td><td>1-2 Weeks</td><td>Conduct unit testing to validate the integration functionality before going live, ensuring all components work as intended.</td></tr></tbody></table>
+{% hint style="info" %}
+You can find a detailed integration guide by visiting the [integration-checklist-wip.md](../documentation/getting-started/integration-checklist-wip.md "mention") section.
+{% endhint %}
+
+To get your business started with Number, follow these general steps for implementation:
+
+<table><thead><tr><th width="260">Phase</th><th width="122">Duration</th><th>Task</th></tr></thead><tbody><tr><td>Obtain Sandbox credentials</td><td>1 day</td><td><a href="../help/customer-support/">Contact the Number team</a> to obtain sandbox credentials for integration testing.</td></tr><tr><td>Choose integration options</td><td>1-2 days</td><td>Decide on <a href="../documentation/getting-started/integration-options/">integration options</a> that best suit your business needs.</td></tr><tr><td>Develop a payment workflow</td><td>1-2 days</td><td>Outline all interaction points in your current workflow where payments might be collected.</td></tr><tr><td>Develop your integration</td><td>1-2 weeks<br><br><br>1 week<br>(optional)<br><br>2-3 weeks<br><br><br><br>1 week<br><br></td><td>Create the front-end components necessary for user interactions.<br><br>If you want to support Verifone card chip readers, implement EMV functionality.<br><br>Write the server-side logic to handle payment processing, invoking our services. Develop data management.<br><br>Setup logging according to our guides. Consult us to set up reporting and reconciliation processes.</td></tr><tr><td>Test your integration</td><td>1-2 weeks</td><td>Conduct unit testing to validate the integration functionality before going live.</td></tr><tr><td>Number inspection</td><td></td><td>The Number team always inspects our clients workflows prior to going live.</td></tr><tr><td>Go live</td><td>1 day</td><td>Switch to the production environment and update configuration as necessary.</td></tr><tr><td><strong>Total integration tme</strong></td><td><strong>6-10 weeks</strong></td><td><strong>If you have multiple teams working on developing the integration, you can be done as soon as 4 weeks.</strong></td></tr></tbody></table>
+
+
 

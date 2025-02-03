@@ -28,19 +28,19 @@ There are two methods to generate token renewals.&#x20;
 
 Once you log in, you'll see a menu on the left with a _Manage Tokens_ heading.
 
-<figure><img src="../../.gitbook/assets/epsportal1.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/1 Integrator Token Renewal.png" alt=""><figcaption></figcaption></figure>
 
 The _Active Tokens_ option allows you to view all of tokens that have been assigned to your accounts, their expiration date, and their current status. This can be useful for administrators to see what tokens are nearing their expiration. Columns can be sorted by clicking on the column header.
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2 Integrator Token Renewal.png" alt=""><figcaption></figcaption></figure>
 
 The _Token Renewal_ option allows you to select the accounts to issue new tokens to. It also provides you with a summary of the total number of active tokens that are assigned to each account.
 
-<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/3 Integrator Token Renewal.png" alt=""><figcaption></figcaption></figure>
 
 After selecting the accounts you wish to renew, you will see a summary with new token information.
 
-<figure><img src="../../.gitbook/assets/epsportal3.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/4 Integrator Token Renewal.png" alt=""><figcaption></figcaption></figure>
 
 Next, you will be given the option to choose how the token information should be posted. You can copy the text from the screen manually or POST the token to a URL of your choice.&#x20;
 
@@ -48,11 +48,11 @@ Next, you will be given the option to choose how the token information should be
 When renewing multiple tokens, their info will be separated by pipe "|" characters.
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/5 Integrator Token Renewal.png" alt=""><figcaption></figcaption></figure>
 
 You can select `POST classic` to **post your token to your URL with the classic method** or `POST JSON` button to **make an API call that will send a JSON array of tokens to your URL**.
 
-<figure><img src="../../.gitbook/assets/epsportal4.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/6 Integrator Token Renewal.png" alt=""><figcaption></figcaption></figure>
 
 
 
@@ -84,7 +84,7 @@ using (var reader = new StreamReader(Request.InputStream))
 
 Once you have made your selection, click on the _Post Token URL_ button. **You will be given a window in which you can enter a URL.** If you have already provided us with one, that URL will be entered into the window by default. You may still manually enter a different URL at this point.
 
-<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/7 Integrator Token Renewal.png" alt=""><figcaption></figcaption></figure>
 
 Once you have the correct posting URL entered, click on the _Post_ button. You'll see a parameter appended to your posting URL. **This is what you will use to download your token file.**
 

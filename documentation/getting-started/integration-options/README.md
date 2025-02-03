@@ -80,7 +80,7 @@ It's important to note that some API functionality will require you to collect c
 
 You can read more about implementation in the API integration guides:
 
-<table data-card-size="large" data-view="cards"><thead><tr><th></th></tr></thead><tbody><tr><td><a data-mention href="rest-api.md">rest-api.md</a></td></tr><tr><td><a data-mention href="soap-api.md">soap-api.md</a></td></tr></tbody></table>
+<table data-card-size="large" data-view="cards"><thead><tr><th></th></tr></thead><tbody><tr><td><a data-mention href="rest-api.md">rest-api.md</a> ></td></tr><tr><td><a data-mention href="soap-api.md">soap-api.md</a> ></td></tr></tbody></table>
 
 
 

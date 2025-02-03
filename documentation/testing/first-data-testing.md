@@ -2,7 +2,7 @@
 description: Cards for testing, response code reference, and penny codes for First Data.
 ---
 
-# First Data Testing (v1)
+# First Data Testing
 
 ## Test Cards <a href="#test-cards" id="test-cards"></a>
 
@@ -48,7 +48,7 @@ To request an error response code, the last three digits of the transaction amou
 
 To test a partial authorization, use these cards and request values:
 
-<table><thead><tr><th width="162">Card brand</th><th width="133">Card number</th><th width="115">EXP date</th><th width="71">CVV</th><th width="97">Request</th><th>Partial approval</th></tr></thead><tbody><tr><td><h3><img src="../../.gitbook/assets/Discover icon.png" alt=""></h3></td><td>6011 2087 0333 1119</td><td>12/28</td><td>-</td><td>$1169.10</td><td>$584.55</td></tr><tr><td><h3><img src="../../.gitbook/assets/Visa icon.png" alt=""></h3></td><td>4005 5717 0222 2222</td><td>12/28</td><td> -</td><td>$612.64</td><td>$306.32</td></tr></tbody></table>
+<table><thead><tr><th width="164">Card brand</th><th width="195">Card number</th><th width="104">EXP date</th><th width="71">CVV</th><th width="94">Request</th><th>Partial approval</th></tr></thead><tbody><tr><td><h3><img src="../../.gitbook/assets/Discover icon.png" alt=""></h3></td><td>6011 2087 0333 1119</td><td>12/28</td><td>-</td><td>$1169.10</td><td>$584.55</td></tr><tr><td><h3><img src="../../.gitbook/assets/Visa icon.png" alt=""></h3></td><td>4005 5717 0222 2222</td><td>12/28</td><td> -</td><td>$612.64</td><td>$306.32</td></tr></tbody></table>
 
 
 

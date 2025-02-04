@@ -39,7 +39,7 @@ Number prioritizes straightforward and efficient integration. Check our quicksta
 
 ### Integrate Number
 
-Use our Mobile SDKs and API Reference to integrate a Number service into your system or application.
+Use our API, Verifone service or mobile SDKs to integrate Number into your system.
 
 <table data-card-size="large" data-view="cards"><thead><tr><th></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>REST API Reference</strong></td><td><a href=".gitbook/assets/API Reference (1).png">API Reference (1).png</a></td><td><a href="broken-reference">Broken link</a></td></tr><tr><td><strong>Verifone Win Service &#x26; SDK</strong></td><td><a href=".gitbook/assets/WIN SDK.png">WIN SDK.png</a></td><td><a href="documentation/getting-started/integration-options/verifone.md">verifone.md</a></td></tr><tr><td><strong>Android Mobile SDK</strong></td><td><a href=".gitbook/assets/Mobile SDK Android (1).png">Mobile SDK Android (1).png</a></td><td><a href="documentation/getting-started/integration-options/android-sdk.md">android-sdk.md</a></td></tr><tr><td> <strong>iOS Mobile SDK</strong></td><td><a href=".gitbook/assets/Mobile SDK iOS (1).png">Mobile SDK iOS (1).png</a></td><td><a href="documentation/getting-started/integration-options/ios-sdk.md">ios-sdk.md</a></td></tr></tbody></table>
 

@@ -261,11 +261,7 @@ class CustomerSheetFragment : Fragment() {
 
 
 
-***
-
-
-
-## Screenshots
+### Screenshots
 
 #### **Save Card**
 
@@ -318,7 +314,7 @@ Data in the SecureTextField component is already encrypted and can be used in th
 
 ## Common objects
 
-Below you'll find code describing some of the objects that are commonly used in requests or responses. Use it as a reference. The code includes parameter names, types, and some validation rules.
+Below you'll find code describing some of the objects that are commonly used in requests or responses. You can use it as a reference. The code includes parameter names, types, and some validation rules.
 
 
 

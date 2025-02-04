@@ -27,14 +27,18 @@ After account creation, retrieve the necessary credentials from the Number Clien
 {% step %}
 #### **Choose your integration methods: 1-2 days**
 
-Read about the [integration options](integration-options/) and decide which one best suit your business needs. Options include:
+Read about the [integration-options](integration-options/ "mention") and decide which one best suit your business needs. Options include:
 
 * **REST API and the PayForm**: Utilize the Number API and a customizable pre-built payment form that can be integrated directly into your site.
 * **Verifone**: Collect payments using Verifone card readers with our software.
 * **Mobile SDK**: If you have a mobile application, use the Number SDK for in-app payments.
 * **Virtual Terminal**: A web application for processing payments directly through a browser.
 
-For example: PCI Level 1 clients can use a purely API integration, while others may need to implement a PayForm for collecting cardholder data through their website.
+{% hint style="info" %}
+You can find guides that will help you learn how to navigate each integration method on the [integration-options](integration-options/ "mention") page.
+{% endhint %}
+
+For example: PCI Level 1 clients can use a purely API integration, while others would need to implement a PayForm for collecting cardholder data directly through their website.&#x20;
 {% endstep %}
 
 {% step %}
@@ -62,7 +66,7 @@ Create the frontend components necessary for user interaction.
 Unless you want to use Verifone card readers or other card readers, you can skip this step as you won't need the EMV integration.
 {% endhint %}
 
-Implement EMV functionality provided by our WIndows service or SDK to support chip card transactions and enhance security measures.
+Implement EMV functionality provided by our Windows service or SDK to support chip card transactions. Read the [verifone.md](integration-options/verifone.md "mention") guide to learn how you can do that.
 {% endstep %}
 
 {% step %}
@@ -81,13 +85,13 @@ Develop data management, coupling your users with the payment activities by stor
 {% step %}
 #### Develop the processes for logging, reporting, and reconciliation: 1 week
 
-Setup logging according to our guides. Consult us to set up reporting and reconciliation processes. They will allow you to track transactions and ensure financial accuracy.
+Set up basic logging where applicable. Consult us to set up reporting and reconciliation processes. They will allow you to track transactions and ensure financial accuracy.
 {% endstep %}
 
 {% step %}
 #### **Test your integration on a development environment: 1-2 weeks**
 
-Before going live, thoroughly test your integration in a sandbox environment. Ensure that all payment flows work as expected and that you can handle various transaction scenarios.\
+Before going live, thoroughly test your integration in a sandbox environment. Ensure that all payment flows work as expected and that you can handle various transaction scenarios. You can read more about using the sandbox in the [testing](../testing/ "mention") section.\
 \
 Conduct unit testing to validate the integration functionality before going live, ensuring all components work as intended.
 {% endstep %}
@@ -107,7 +111,9 @@ Once testing is complete and you are satisfied with the implementation, switch t
 {% step %}
 #### Monitor and maintain: continuous
 
-Once you go live, monitor your integration to make sure there are no problems. Work on UI improvements and other fixes as required.
+Once you go live, monitor your integration to make sure there are no problems. Work on improvements and fixes as required.
 {% endstep %}
 {% endstepper %}
+
+
 

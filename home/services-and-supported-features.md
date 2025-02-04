@@ -106,6 +106,14 @@ It is ideal for in-person/card-present transactions, allowing merchants to effic
 To learn to use the Virtual Terminal, see the [virtual-terminal.md](../documentation/getting-started/integration-options/virtual-terminal.md "mention") user guide.
 {% endhint %}
 
+{% hint style="success" %}
+You can also use our **custom desktop application** as an alternative to the Virtual Terminal. The desktop application supports much of the same features. &#x20;
+
+It can be installed on user's computer, and it's beneficial for businesses who would rather not log into a browser application.
+
+To learn more about our custom desktop application, [contact the Number support team](../help/customer-support/).
+{% endhint %}
+
 
 
 **Supported features:**
@@ -130,49 +138,13 @@ To learn to use the Virtual Terminal, see the [virtual-terminal.md](../documenta
 
 
 
-### Desktop Applications
+### Win Service and DLL
 
 **Characteristics:** \
-Installed on a user's computer for online payment processing.
+Used by your application and a Verifone card reader to integrate Number payment functions.
 
 **Use Cases:**\
-Beneficial for businesses who would rather not log into a browser application.
-
-{% hint style="info" %}
-To learn more about custom desktop applications, [contact the Number support team](../help/customer-support/).
-{% endhint %}
-
-
-
-**Supported features:**
-
-| Feature                             | Description                                                                                                                                                                                                            |
-| ----------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Online payments                     | Processes payments without needing a physical point-of-sale system, using a web interface.                                                                                                                             |
-| Card present                        | Accepts card present payments using Verifone or a different USB card reader.                                                                                                                                           |
-| Manual entry                        | Accepts payments by manually entering card details.                                                                                                                                                                    |
-| Surcharge payments                  | Allows businesses to add a surcharge or extra fee to the transaction amount.                                                                                                                                           |
-| Store card on file (annual consent) | Allows storing customer card information with their consent for recurring use.                                                                                                                                         |
-| Recurring payments (payment plans)  | Facilitates the automated scheduling of regular payments over time.                                                                                                                                                    |
-| Authorizing payments                | Verifies cardholder information and checks funds to approve transactions securely.                                                                                                                                     |
-| Voiding                             | Cancels authorized transactions pre-settlement, stopping fund transfers.                                                                                                                                               |
-| Crediting (refunds)                 | <p>Return funds to a customer's account after a transaction has been completed. </p><p></p><p>Occurs when a customer returns a product or disputes a charge, and the merchant agrees to reimburse the amount paid.</p> |
-| Settlements                         | Finalizing a transaction by transferring funds from the buyer to the seller.                                                                                                                                           |
-| Reporting                           | Involves generating summaries and analyses of transaction data to help merchants track financial activities, manage cash flow, and ensure compliance.                                                                  |
-
-
-
-***
-
-
-
-### Win Service and DLLs
-
-**Characteristics:** \
-Used by your desktop applications and Verifone to integrate Number payment functions.
-
-**Use Cases:**\
-For developers integrating payment functionalities into custom desktop applications or Verifone.
+For developers integrating payment functionalities into card readers and custom applications.
 
 {% hint style="info" %}
 Learn more about integrating with Verifone in the [verifone.md](../documentation/getting-started/integration-options/verifone.md "mention") integration guide.

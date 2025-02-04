@@ -12,7 +12,7 @@ description: Getting started with Virtual Terminal for Number
 
 The Virtual Terminal is a web application that provides all types of credit card processing functionality. The VT is the fastest way to start trying out our payment services.&#x20;
 
-{% embed url="https://easypay5.com/VT" %}
+{% include "../../../.gitbook/includes/link-virtual-terminal.md" %}
 
 When you log in to the Virtual Terminal, you are brought to the home screen. The number of open transactions and scheduled payments due display at the top of the screen. Your default merchant and user roles are listed just below, along with the expiration date of your password.&#x20;
 
@@ -381,7 +381,7 @@ Displays our support phone number and allows you to send us a secure email.
 Log out and end your session with the Virtual Terminal. An open session will automatically log the user out after 15 minutes of inactivity.
 
 {% hint style="danger" %}
-**Remember to always logout or lock your computer when walking away from your workstation.**&#x20;
+**Remember to always log out or lock your computer when walking away from your workstation!**
 {% endhint %}
 {% endstep %}
 {% endstepper %}

@@ -4,7 +4,7 @@ description: Getting started with widgets for Number
 
 # Widgets
 
-Widgets are our legacy option to collecting cardholder data and payments. If you are just getting started with Number, we recommend using the [PayForm](payform.md) instead.
+Widgets are our legacy option to collecting cardholder data and payments. If you are just getting started with Number, we recommend using the [payform.md](payform.md "mention") instead.
 
 A Number widget is a pre-made web form which can be used to collect cardholder data. They can be used to make instant payments and collect consent.
 
@@ -85,7 +85,7 @@ We encourage integrators to design their own payment page if they so desire. You
 
 To open your widget, first you need to create a string manifest that will eventually become an encrypted URL. There are two ways to create this manifest:&#x20;
 
-1. Using our widget builder tool;
+1. Using our widget builder tool.
 2. Creating it yourself using your programming language of choice.
 
 {% hint style="warning" %}
@@ -100,7 +100,7 @@ If you want to use advanced options such as dynamically pre-populating form data
 
 Use our widget builder tool to select various settings, options, and styles. The widget manifest and encrypted URL will be generated for you.
 
-{% embed url="https://easypay8.com/byowidget/" %}
+{% include "../../../.gitbook/includes/link-widget-builder.md" %}
 
 Most of the options should be easy to understand or described in the footer of the tool. If you have any questions, please refer to the [#payform-builder](payform.md#payform-builder "mention") guide or [contact Number](../../../help/customer-support/).
 
@@ -158,7 +158,7 @@ Here is a list of arguments you can use for `Inputs`:
 * `STATE`: (optional)
 * `ZIP`: (optional)
 * `AMOUNT`: For a one-time payment widget, the $ amount for the transaction.
-* `WTYPE`: The type of widget to use. For testing, use "_P_". For more details, [contact Number](../../../help/customer-support/).
+* `WTYPE`: The type of widget to use. Use "_P_" for testing and [contact Number](../../../help/customer-support/) for more details.
 * `REDIRECT`: URL where we can POST the results of the widget submission.&#x20;
 
 {% hint style="info" %}
@@ -189,8 +189,8 @@ EINDEX=300
 
 In all cases, encrypt the above manifest and create two components:&#x20;
 
-* an initialization vector (`I`);
-* an encrypted message (`M`).
+* an initialization vector (`I`)
+* an encrypted message (`M`)
 
 Gather the widget manifest and encrypt it. The final step is to create the URL using the template.
 

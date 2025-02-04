@@ -44,7 +44,9 @@ There are a few approaches to integration, but we recommend the browser-based in
 For an in-depth tutorial on how to integrate and use your Verifone card reader with Number, see our [verifone.md](../getting-started/integration-options/verifone.md "mention") integration guide.
 {% endhint %}
 
-Before you start, you'll need to download the [Verifone Windows service](https://easypay1.com/deploy/MiddleWare/EPVerifoneSetup_E2E_1041.zip) to your machine, connect your card reader device to a free USB port, allow it to initialize, extract the archive with the service and run the EXE as an administrator. After the installation is complete, reboot the system.
+Before you start, you'll need to download the Verifone Windows service to your machine, connect your card reader device to a free USB port, allow it to initialize, extract the archive with the service and run the EXE as an administrator. After the installation is complete, reboot the system.
+
+{% include "../../.gitbook/includes/link-verifone-windows-service.md" %}
 
 Now, you'll be able to issue commands to the Windows service by calling `https://localhost:8031` from your website.&#x20;
 
@@ -170,7 +172,9 @@ function saveCardChip() {
 
 ### Virtual Terminal or desktop application
 
-When you want to use your USB card reader with the Virtual Terminal, you have to first install the very same [Windows service](https://easypay1.com/deploy/MiddleWare/EPVerifoneSetup_E2E_1041.zip) that is used when doing a Verifone browser-based integration. After installation, [contact the Number support team](../../help/customer-support/) to get the card reader features activated.
+When you want to use your USB card reader with the Virtual Terminal, you have to first install the very same Windows service that is used when doing a Verifone browser-based integration. After installation, [contact the Number support team](../../help/customer-support/) to get the card reader features activated.
+
+{% include "../../.gitbook/includes/link-verifone-windows-service.md" %}
 
 {% hint style="info" %}
 To learn more about using the Virtual Terminal, see the [virtual-terminal.md](../getting-started/integration-options/virtual-terminal.md "mention") user guide.
@@ -208,7 +212,7 @@ If you wish to have more control over the integration and you are PCI Level 1 co
 To learn more about our APIs, see the [rest-api.md](../getting-started/integration-options/rest-api.md "mention") and [soap-api.md](../getting-started/integration-options/soap-api.md "mention") integration guides.
 {% endhint %}
 
-After authenticating, when you scan the credit card and collect the track data alongside the other payment details, prepare the HMAC secured header like shown in [authentication.md](authentication.md "mention") quickstart guide, and encrypt the card number using our RSA certificate.&#x20;
+After authenticating, when you scan the credit card and collect the track data alongside the other payment details, if using the REST API, prepare the HMAC secured header like shown in [authentication.md](authentication.md "mention") quickstart guide, and encrypt the card number using our RSA certificate.&#x20;
 
 Follow the instructions in the API reference to prepare and handle the request.
 
@@ -406,7 +410,7 @@ When you visit the Virtual Terminal, log in and expand _Credit Cards_ in the nav
 
 Using the Virtual Terminal, you can create annual, one-time, recurring, and subscription consents. Log in and expand _Consents_ and _Recurring_ tabs on the left side of the screen. Choose the type of consent you're interested in and follow the instructions to manually enter the cardholder details and store a card on file.
 
-<figure><img src="broken-reference" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/HomePageExpandedNav cropped consent (1).png" alt=""><figcaption></figcaption></figure>
 
 
 
@@ -436,7 +440,7 @@ If you wish to have more control over the integration and you are PCI Level 1 co
 To learn more about our APIs, see the [rest-api.md](../getting-started/integration-options/rest-api.md "mention") and [soap-api.md](../getting-started/integration-options/soap-api.md "mention") integration guides.
 {% endhint %}
 
-After authenticating, when you collect cardholder data alongside the other payment details, prepare the HMAC secured header like shown in [authentication.md](authentication.md "mention") quickstart guide, and encrypt the card number using our RSA certificate. Follow the instructions in the API reference to prepare and handle the request.
+After authenticating, when you collect cardholder data alongside the other payment details, if using the REST API, prepare the HMAC secured header like shown in [authentication.md](authentication.md "mention") quickstart guide, and encrypt the card number using our RSA certificate. Follow the instructions in the API reference to prepare and handle the request.
 
 #### Manual card sale
 

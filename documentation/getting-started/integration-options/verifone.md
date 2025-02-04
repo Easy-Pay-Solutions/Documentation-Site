@@ -79,7 +79,9 @@ If you wish to use the standalone desktop application for Verifone, [contact Num
 
 For you to directly interface with the Verifone using our SDK, you will need the Verifone drivers with the custom logging package, and the SDK reference files:
 
-<table data-card-size="large" data-view="cards"><thead><tr><th align="center" valign="middle"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td align="center" valign="middle">Verifone drivers and the <br>custom logging package</td><td><a href="https://easypay1.com/deploy/SetupVerifoneDrivers/Setup_USB_log_win11.zip">https://easypay1.com/deploy/SetupVerifoneDrivers/Setup_USB_log_win11.zip</a></td></tr><tr><td align="center" valign="middle">Verifone SDK reference files</td><td><a href="https://easypay1.com/deploy/VerifoneSDK/EP.Enterprise.Vx820Lib2.zip">https://easypay1.com/deploy/VerifoneSDK/EP.Enterprise.Vx820Lib2.zip</a></td></tr></tbody></table>
+{% include "../../../.gitbook/includes/link-verifone-usb-log.md" %}
+
+{% include "../../../.gitbook/includes/link-verifone-sdk.md" %}
 
 When installed, the first component will provide USB drivers and create a virtual COM 9 port. In addition, it will add a unique event log to the existing windows event log collection.&#x20;
 
@@ -121,7 +123,7 @@ To use the SDK, you only need to directly interface to the file named _EP.Enterp
 
 Before you start, download the Windows service to your machine.
 
-{% embed url="https://easypay1.com/deploy/MiddleWare/EPVerifoneSetup_E2E_1041.zip" %}
+{% include "../../../.gitbook/includes/link-verifone-windows-service.md" %}
 
 To install the Win service:
 
@@ -158,7 +160,7 @@ With this, your website will be able to issue commands to the Windows service. Y
 
 You can also download the entire site to see how it works:
 
-{% file src="../../../.gitbook/assets/jquery_verifone.zip" %}
+{% include "../../../.gitbook/includes/link-verifone-example-download.md" %}
 
 
 

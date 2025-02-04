@@ -16,7 +16,7 @@ An example user name for the Virtual Terminal can look like this: **VT4914533**
 
 For more information about the Virtual Terminal, see the [virtual-terminal.md](../getting-started/integration-options/virtual-terminal.md "mention") guide. You can access Virtual Terminal using the link below.
 
-{% embed url="https://easypay5.com/VT" %}
+{% include "../../.gitbook/includes/link-virtual-terminal.md" %}
 
 <figure><img src="../../.gitbook/assets/Testing 1.png" alt=""><figcaption></figcaption></figure>
 
@@ -45,7 +45,7 @@ Make sure the amount, last four digits of the credit card, card type, and expira
 There are scenarios where the transaction can get declined due to various reasons like insufficient funds, card not allowed, lost/stolen card, etc. In such cases, the transaction would appear as _FAILED_.
 
 {% hint style="info" %}
-You can find penny codes for testing declines in the [Global Payments Testing](global-payments-testing.md) section.
+You can find penny codes for testing declines in the [global-payments-testing.md](global-payments-testing.md "mention") section.
 {% endhint %}
 
 You can click _Full Detail_ to try to find out the reason for decline by checking `TxStatus`, `Flags,` and other values.

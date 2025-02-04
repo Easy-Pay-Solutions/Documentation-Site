@@ -4,7 +4,7 @@ description: Getting started with Android SDK for Number
 
 # Android SDK
 
-{% embed url="https://github.com/Easy-Pay-Solutions/Mobile-SDK-Android" %}
+{% include "../../../.gitbook/includes/link-android-sdk.md" %}
 
 The EasyPay Android SDK offers access to the Number API for seamless integration with any and all Android applications. For iOS integration, refer to the [iOS SDK integration guide](ios-sdk.md).
 

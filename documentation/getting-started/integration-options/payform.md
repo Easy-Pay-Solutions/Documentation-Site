@@ -14,27 +14,11 @@ Collecting a payment or saving a card on file is a two-step process: a call is m
 
 You get control of all the operational and design parameters of the PayForm:
 
-{% stepper %}
-{% step %}
-From styling;
-{% endstep %}
-
-{% step %}
-Field visibility and read-only parameters;
-{% endstep %}
-
-{% step %}
-Initial data (cardholder names, $ amounts, etc.);
-{% endstep %}
-
-{% step %}
-User-defined data (ReferenceID, etc.);
-{% endstep %}
-
-{% step %}
-Defined methods for receiving a real-time update after transactions are authorized.
-{% endstep %}
-{% endstepper %}
+1. From styling
+2. Field visibility and read-only parameters
+3. Initial data (cardholder names, $ amounts, etc.)
+4. User-defined data (ReferenceID, etc.)
+5. Defined methods for receiving a real-time update after transactions are authorized
 
 **You can then present the PayForm in one of two ways:**&#x20;
 
@@ -56,9 +40,7 @@ Defined methods for receiving a real-time update after transactions are authoriz
 
 It might be difficult to prepare a PayForm request by yourself at first. **To make it easy to get started, we've prepared a tool which can generate that for you**.
 
-{% embed url="https://easypay8.com/byopayform/" %}
-PayForm builder
-{% endembed %}
+{% include "../../../.gitbook/includes/link-payform-builder.md" %}
 
 
 

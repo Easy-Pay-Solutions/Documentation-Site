@@ -36,7 +36,7 @@
   * [First Data Testing](documentation/testing/first-data-testing.md)
   * [ACH Testing](documentation/testing/ach-testing.md)
 * [Resources](documentation/resources/README.md)
-  * [Tools and Downloads (WIP)](documentation/resources/tools-and-downloads-wip.md)
+  * [Tools and Downloads](documentation/resources/tools-and-downloads.md)
   * [Vocabulary](documentation/resources/vocabulary.md)
   * [Querying](documentation/resources/querying.md)
   * [Error Codes](documentation/resources/error-codes.md)

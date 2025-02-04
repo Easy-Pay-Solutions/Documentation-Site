@@ -46,4 +46,4 @@ End Class
 
 The base URL of the SOAP service is [https://easypay5.com/APIcardProcR119/CardProcAPI.svc](https://easypay5.com/APIcardProcR119/CardProcAPI.svc)
 
-<table data-card-size="large" data-view="cards"><thead><tr><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td>WSDL file</td><td><a href="https://easypay5.com/APIcardProcR119/CardProcAPI.svc?wsdl">https://easypay5.com/APIcardProcR119/CardProcAPI.svc?wsdl</a></td></tr><tr><td>Single WSDL file</td><td><a href="https://easypay5.com/APIcardProcR119/CardProcAPI.svc?singleWsdl">https://easypay5.com/APIcardProcR119/CardProcAPI.svc?singleWsdl</a></td></tr></tbody></table>
+{% include "../../.gitbook/includes/link-wsdl-files.md" %}

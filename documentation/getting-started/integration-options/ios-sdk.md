@@ -4,7 +4,7 @@ description: Getting started with iOS SDK for Number
 
 # iOS SDK
 
-{% embed url="https://github.com/Easy-Pay-Solutions/Mobile-SDK-IOS" %}
+{% include "../../../.gitbook/includes/link-ios-sdk.md" %}
 
 The EasyPay iOS SDK offers access to the Number API for effortless integration with any iOS application. For Android integration, refer to the [Android SDK integration guide](android-sdk.md).
 

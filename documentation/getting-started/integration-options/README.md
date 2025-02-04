@@ -11,11 +11,11 @@ Before you start using our services, you'll want to decide which type of integra
 * PayForm and legacy widgets
 * The Virtual Terminal web application
 * Custom desktop applications
-* Win service and DLLs
+* Win service and DLL
 
 **You don't have to limit yourself to one type of integration.** Many integrators use our PayForm to collect the cardholder data, and then use our API for the rest. The Virtual Terminal can also be used for various functions such as processing payments, creating card-on-file plans (consents), and generating reports. You can find more details about each integration in the next few sections.
 
-Before you read about the specific integration options, we recommend having a look at the PCI Compliance section below to help you clarify which options are relevant to your unique case.
+Before you read about the specific integration options, we recommend having a look at the [#pci-compliance](./#pci-compliance "mention") section below to help you clarify which options are relevant to your unique case.
 
 
 
@@ -29,10 +29,8 @@ Before you read about the specific integration options, we recommend having a lo
 
 PCI compliance refers to adherence to the Payment Card Industry Data Security Standard (PCI DSS), which is a set of security standards related to processing, storing, and transmitting credit card information. The PCI DSS was developed by the Payment Card Industry Security Standards Council (PCI SSC), which was founded by major credit card companies like Visa, MasterCard, American Express, Discover, and JCB.
 
-
-
 {% hint style="info" %}
-Some key aspects of PCI compliance include:
+Key aspects of PCI compliance include:
 
 1. **Maintaining Secure Networks and Systems**: Installing and maintaining a firewall configuration to protect cardholder data and not using vendor-supplied defaults for system passwords and other security parameters.
 2. **Protecting Cardholder Data**: Companies must protect stored cardholder data and encrypt transmission of cardholder data across open, public networks.
@@ -41,8 +39,6 @@ Some key aspects of PCI compliance include:
 5. **Regular Monitoring and Network Tests**: Tracking and monitoring all access to network resources and cardholder data, regularly testing security systems and processes.
 6. **An Information Security Policy**: Companies must maintain a policy that addresses information security for all personnel.
 {% endhint %}
-
-
 
 PCI compliance helps protect cardholder data from theft and fraud, ensuring consumer trust and avoiding fines and penalties associated with non-compliance. Businesses of all sizes that handle credit card information are **required** to comply with PCI DSS.
 

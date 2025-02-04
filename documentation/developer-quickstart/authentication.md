@@ -110,6 +110,10 @@ Authenticating with the mobile SDKs is very simple. [Contact Number](../../help/
 
 After installing the SDK of your choice, you can configure and initialize the `EasyPay` class.
 
+{% include "../../.gitbook/includes/link-android-sdk.md" %}
+
+{% include "../../.gitbook/includes/link-ios-sdk.md" %}
+
 #### Android
 
 {% include "../../.gitbook/includes/block-android-config-ep.md" %}
@@ -132,7 +136,7 @@ To access the portal, [Contact Number](../../help/customer-support/). You will b
 
 Now, those users will be able to access the Virtual Terminal using the link below.
 
-{% embed url="https://easypay5.com/VT" %}
+{% include "../../.gitbook/includes/link-virtual-terminal.md" %}
 
 
 

@@ -33,7 +33,7 @@ We understand the critical nature of payment processing and are committed to mai
 
 Number prioritizes straightforward and efficient integration. Check our quickstart guide and integration checklist to see how you can get started.
 
-<table data-card-size="large" data-view="cards"><thead><tr><th></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Developer Quickstart</strong></td><td><a href=".gitbook/assets/1 Getting started.png">1 Getting started.png</a></td><td><a href="documentation/developer-quickstart/">developer-quickstart</a></td></tr><tr><td><strong>Integration Checklist</strong></td><td><a href=".gitbook/assets/2 Integration Checklist.png">2 Integration Checklist.png</a></td><td><a href="documentation/getting-started/integration-checklist-wip.md">integration-checklist-wip.md</a></td></tr></tbody></table>
+<table data-card-size="large" data-view="cards"><thead><tr><th></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Developer Quickstart</strong></td><td><a href=".gitbook/assets/1 Getting started.png">1 Getting started.png</a></td><td><a href="documentation/developer-quickstart/">developer-quickstart</a></td></tr><tr><td><strong>Integration Checklist</strong></td><td><a href=".gitbook/assets/2 Integration Checklist.png">2 Integration Checklist.png</a></td><td><a href="documentation/getting-started/integration-checklist.md">integration-checklist.md</a></td></tr></tbody></table>
 
 
 

@@ -16,7 +16,7 @@
     * [Authentication](documentation/getting-started/basics/authentication.md)
     * [API Best Practices](documentation/getting-started/basics/api-best-practices.md)
     * [API Input Validation](documentation/getting-started/basics/api-input-validation.md)
-  * [Integration Checklist (WIP)](documentation/getting-started/integration-checklist-wip.md)
+  * [Integration Checklist](documentation/getting-started/integration-checklist.md)
   * [Integration Options](documentation/getting-started/integration-options/README.md)
     * [REST API](documentation/getting-started/integration-options/rest-api.md)
     * [SOAP API](documentation/getting-started/integration-options/soap-api.md)

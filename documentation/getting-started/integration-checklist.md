@@ -69,9 +69,8 @@ Implement EMV functionality provided by our WIndows service or SDK to support ch
 #### Develop the backend integration: 2-3 weeks
 
 {% hint style="info" %}
-Depending on the scope of your integration, it might take less time.
-
-You can skip this step if you only plan on only using the Virtual Terminal.&#x20;
+Depending on the scope of your integration, it might take less time.\
+Also, you can skip this step if you only plan on only using the Virtual Terminal.&#x20;
 {% endhint %}
 
 Write the server-side logic to handle payment processing, invoking our services.\

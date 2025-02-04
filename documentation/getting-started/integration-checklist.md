@@ -66,7 +66,7 @@ Create the frontend components necessary for user interaction.
 Unless you want to use Verifone card readers or other card readers, you can skip this step as you won't need the EMV integration.
 {% endhint %}
 
-Implement EMV functionality provided by our Windows service or SDK to support chip card transactions. Read the [verifone.md](integration-options/verifone.md "mention") guide to learn how you can do that.
+Implement EMV functionality provided by our Windows service or SDK to support chip card transactions. Read the [verifone.md](integration-options/verifone.md "mention") guide to learn how to use these services.
 {% endstep %}
 
 {% step %}

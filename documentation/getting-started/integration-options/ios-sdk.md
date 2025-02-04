@@ -190,7 +190,7 @@ EasyPay.shared.loadCertificate(_ completion: @escaping (Result<Data, Error>) -> 
 
 
 
-### 1. Charge Credit Card (CreditCardSale\_Manual)
+### 1. Charge Credit Card
 
 This method processes a credit card card sale when the credit card details are entered manually. Details include the card number, expiration date, CVV, card holder name and address.
 
@@ -216,7 +216,7 @@ EasyPay.apiClient.chargeCreditCard(request: CardSaleManualRequest,
 
 
 
-### 2. List Annual Consents (ConsentAnnual\_Query)
+### 2. List Annual Consents
 
 A query that returns annual consent details. Depending on the query sent, a single consent or multiple consents may be returned.
 
@@ -243,7 +243,7 @@ EasyPay.apiClient.listAnnualConsents(request: ConsentAnnualListingRequest,
 
 
 
-### 3. Create Annual Consent (ConsentAnnual\_Create\_MAN)
+### 3. Create Annual Consent
 
 This method creates an annual consent by sending the credit card details, which include: card number, expiration date, CVV, and card holder contact data. It is not created by swiping the card through a reader device.
 
@@ -267,7 +267,7 @@ EasyPay.apiClient.createAnnualConsent(request: CreateConsentAnnualRequest,
 
 
 
-### 4. Cancel Annual Consent (ConsentAnnual\_Cancel)
+### 4. Cancel Annual Consent
 
 Cancels an annual consent. Credit card data is removed from the system after the cancellation is complete.
 
@@ -288,7 +288,7 @@ EasyPay.apiClient.cancelAnnualConsent(request: CancelConsentAnnualRequest,
 
 
 
-### 5. Process Payment Annual Consent (ConsentAnnual\_ProcPayment)
+### 5. Process Payment Annual Consent
 
 This method uses the credit card stored on file to process a payment for an existing consent.
 

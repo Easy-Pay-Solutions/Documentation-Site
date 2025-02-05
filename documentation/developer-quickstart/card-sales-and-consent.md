@@ -14,7 +14,7 @@ To make sales or collect consent when a card is present using Number, you have s
 {% step %}
 #### **Integration with a Verifone card reader**
 
-You can use Verifone card readers, which are secure devices that connect to your computer via USB. They encrypt cardholder data during transmission to ensure security.
+You can use Verifone card readers. They are secure devices that connect to your computer via USB. They encrypt cardholder data during transmission to ensure security.
 {% endstep %}
 
 {% step %}
@@ -22,7 +22,7 @@ You can use Verifone card readers, which are secure devices that connect to your
 
 When you have a USB card reader connected to your machine, you can log into the Virtual Terminal to make card present sales and to collect consent.&#x20;
 
-We also have a custom desktop application which can be convenient in an office setting to collect card present payments. It offers much of the same functionality as the Virtual Terminal.
+We also have a custom desktop application which can be convenient in an office setting to collect card present payments. It offers similar functionality to the Virtual Terminal.
 {% endstep %}
 
 {% step %}
@@ -30,7 +30,7 @@ We also have a custom desktop application which can be convenient in an office s
 
 Both our REST API and SOAP API offer methods for handling card present transactions.
 
-If you have your own PCI level one compliance program, you may use our APIs and write your own custom code calling our APIs to collect card present payments and consent. You can read more about PCI compliance in the short [#pci-compliance](../getting-started/integration-options/#pci-compliance "mention") section of our [integration-options](../getting-started/integration-options/ "mention") guide.
+If you have your own PCI level one compliance program, you may write your own custom code calling our APIs to collect card present payments and consent. You can read more about PCI compliance in the short [#pci-compliance](../getting-started/integration-options/#pci-compliance "mention") section of our [integration-options](../getting-started/integration-options/ "mention") guide.
 {% endstep %}
 {% endstepper %}
 
@@ -48,7 +48,7 @@ Before you start, you'll need to download the Verifone Windows service to your m
 
 {% include "../../.gitbook/includes/link-verifone-windows-service.md" %}
 
-Now, you'll be able to issue commands to the Windows service by calling `https://localhost:8031` from your website.&#x20;
+You can issue commands to the service by calling `https://localhost:8031` from your website.&#x20;
 
 #### Verifone card present sales
 
@@ -212,7 +212,7 @@ If you wish to have more control over the integration and you are PCI Level 1 co
 To learn more about our APIs, see the [rest-api.md](../getting-started/integration-options/rest-api.md "mention") and [soap-api.md](../getting-started/integration-options/soap-api.md "mention") integration guides.
 {% endhint %}
 
-After authenticating, when you scan the credit card and collect the track data alongside the other payment details, if using the REST API, prepare the HMAC secured header like shown in [authentication.md](authentication.md "mention") quickstart guide, and encrypt the card number using our RSA certificate.&#x20;
+When you scan the credit card and collect the track data alongside the other payment details, if using the REST API, prepare the HMAC secured header like shown in [authentication.md](authentication.md "mention") quickstart guide, and encrypt the card number using our RSA certificate.&#x20;
 
 Follow the instructions in the API reference to prepare and handle the request.
 
@@ -220,16 +220,12 @@ Follow the instructions in the API reference to prepare and handle the request.
 
 You can use the following API operations:
 
-{% include "../../.gitbook/includes/warning-pci-compliant-only.md" %}
-
 * For the REST API, use [#apicardprocrest-v1.0.0-cardsale-cardpresent](../../api-reference/rest-api/card-operations/process-a-card-sale.md#apicardprocrest-v1.0.0-cardsale-cardpresent "mention")
 * For the SOAP API, use [#credit-card-sale-card-present](../../api-reference/soap-api/credit-card/credit-card-sale.md#credit-card-sale-card-present "mention")
 
 #### API card present consent
 
 You can use the following API operations:
-
-{% include "../../.gitbook/includes/warning-pci-compliant-only.md" %}
 
 * For the REST API, you can use [#apicardprocrest-v1.0.0-consentannual-create\_cp](../../api-reference/rest-api/consent-annual/create-annual-consent.md#apicardprocrest-v1.0.0-consentannual-create_cp "mention") and [#apicardprocrest-v1.0.0-consentrecurring-create](../../api-reference/rest-api/consent-recurring/create-recurring-consent.md#apicardprocrest-v1.0.0-consentrecurring-create "mention").
 * For the SOAP API, you can use [#create-annual-consent-card-present](../../api-reference/soap-api/consent-annual/#create-annual-consent-card-present "mention"), [#create-recurring-consent](../../api-reference/soap-api/consent-recurring/#create-recurring-consent "mention"), and [#create-subscription-consent-card-present](../../api-reference/soap-api/consent-subscription/#create-subscription-consent-card-present "mention").
@@ -268,9 +264,9 @@ If you have a mobile application that needs to handle payments and consent, our 
 {% step %}
 #### REST API or SOAP API integration
 
-If you need more customization, you can always call our APIs for sales and consent.
+For more customization, you can call our APIs for sales and consent.
 
-If you have your own PCI level one compliance program, you may use our APIs and write your own custom code calling our APIs to collect manual card payments and consent. You can read more about PCI compliance in the short [#pci-compliance](../getting-started/integration-options/#pci-compliance "mention") section of our integration guide.
+If you have your own PCI level one compliance program, you may write your own custom code calling our APIs to collect manual card payments and consent. You can read more about PCI compliance in the short [#pci-compliance](../getting-started/integration-options/#pci-compliance "mention") section of our integration guide.
 {% endstep %}
 {% endstepper %}
 
@@ -292,7 +288,7 @@ You can read about configuration specifics in the [#payform-builder](../getting-
 
 In the example below, the PayForm has been setup for **an instant card payment**.&#x20;
 
-<figure><img src="../../.gitbook/assets/payform builder example 3.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/payform builder example 5.png" alt=""><figcaption></figcaption></figure>
 
 {% stepper %}
 {% step %}
@@ -300,7 +296,7 @@ In the example below, the PayForm has been setup for **an instant card payment**
 
 The cardholder will need to provide their first and last names, full address, email, and click a checkbox to agree to pay and give their permissions to receive an email.
 
-Additionally, they'll see the amount field, bu it'll be read-only.
+Additionally, they'll see the amount field, but it'll be read-only.
 {% endstep %}
 
 {% step %}
@@ -312,13 +308,13 @@ The PayForm will redirect the user to an external URL. An encrypted query string
 {% step %}
 #### Styling and colors
 
-The styling and colors were mostly left on default, only switching out the button background and border to shades of green.
+The styling and colors were left as default, only switching out the button background and border to different shades of green.
 {% endstep %}
 
 {% step %}
 #### Pre-filled values
 
-The amount will be pre-filled as $25, the Redirect URL is using an example URL to your website, and the EIndex is using the sandbox value for encryption key. EndPoint should generally be left as default.
+The amount will be pre-filled as $25, the redirect URL is using an example URL to your website, and the EIndex is using the sandbox value for encryption key. Endpoint value should always be left as default.
 {% endstep %}
 {% endstepper %}
 
@@ -359,7 +355,7 @@ The JSON will look like the following:
       "eReadOnly": "0040",
       "eStyles": "0001",
       "eSubmission": "0201",
-      "eColors": "#ffffff,#7aca44,#73ff00,#212121,#ffffff,#212121,#ffffff"
+      "eColors": "#ffffff,#6cca44,#59ff00,#212121,#ffffff,#212121,#ffffff"
     }
   }
 }
@@ -384,7 +380,7 @@ If you want to handle the query string when redirecting back to your website to 
 
 To use the PayForm to save a card on file, follow the steps in [#payform-manual-card-sale](card-sales-and-consent.md#payform-manual-card-sale "mention"), change the transaction type to collecting cardholder data, and skip the amount field.
 
-You may also collect an instant payment and consent at the same time by choosing the third transaction type, the combo widget.
+You may also collect an instant payment and consent at the same time by choosing the combo widget as your transaction type.
 
 
 
@@ -424,11 +420,11 @@ We recommend following the [android-sdk.md](../getting-started/integration-optio
 
 #### Mobile manual card sale
 
-The relevant methods are described in [#id-1.-charge-credit-card-creditcardsale\_manual](../getting-started/integration-options/android-sdk.md#id-1.-charge-credit-card-creditcardsale_manual "mention") section of the Android SDK guide and [#id-1.-charge-credit-card-creditcardsale\_manual](../getting-started/integration-options/ios-sdk.md#id-1.-charge-credit-card-creditcardsale_manual "mention") section of the iOS SDK guide.&#x20;
+The relevant methods are described in [#id-1.-charge-credit-card](../getting-started/integration-options/android-sdk.md#id-1.-charge-credit-card "mention") section of the [android-sdk.md](../getting-started/integration-options/android-sdk.md "mention") guide and [#id-1.-charge-credit-card](../getting-started/integration-options/ios-sdk.md#id-1.-charge-credit-card "mention") section of the [ios-sdk.md](../getting-started/integration-options/ios-sdk.md "mention") guide.&#x20;
 
 #### Mobile manual consent annual
 
-The relevant methods are described in [#id-3.-create-annual-consent-consentannual\_create\_man](../getting-started/integration-options/android-sdk.md#id-3.-create-annual-consent-consentannual_create_man "mention") section of the Android SDK guide and [#id-3.-create-annual-consent-consentannual\_create\_man](../getting-started/integration-options/ios-sdk.md#id-3.-create-annual-consent-consentannual_create_man "mention") section of the iOS SDK guide.&#x20;
+The relevant methods are described in [#id-3.-create-annual-consent](../getting-started/integration-options/android-sdk.md#id-3.-create-annual-consent "mention") section of the [android-sdk.md](../getting-started/integration-options/android-sdk.md "mention") guide and [#id-3.-create-annual-consent](../getting-started/integration-options/ios-sdk.md#id-3.-create-annual-consent "mention") section of the [ios-sdk.md](../getting-started/integration-options/ios-sdk.md "mention") guide.&#x20;
 
 
 
@@ -446,16 +442,12 @@ After authenticating, when you collect cardholder data alongside the other payme
 
 You can use the following API operations:
 
-{% include "../../.gitbook/includes/warning-pci-compliant-only.md" %}
-
 * For the REST API, use [#apicardprocrest-v1.0.0-cardsale-manual](../../api-reference/rest-api/card-operations/process-a-card-sale.md#apicardprocrest-v1.0.0-cardsale-manual "mention").
 * For the SOAP API, use [#credit-card-sale-manual](../../api-reference/soap-api/credit-card/credit-card-sale.md#credit-card-sale-manual "mention").
 
 #### Manual consent
 
 You can use the following API operations:
-
-{% include "../../.gitbook/includes/warning-pci-compliant-only.md" %}
 
 * For the REST API, use [#apicardprocrest-v1.0.0-consentannual-create\_man](../../api-reference/rest-api/consent-annual/create-annual-consent.md#apicardprocrest-v1.0.0-consentannual-create_man "mention") for annual consent and [#apicardprocrest-v1.0.0-consentrecurring-create](../../api-reference/rest-api/consent-recurring/create-recurring-consent.md#apicardprocrest-v1.0.0-consentrecurring-create "mention") for recurring consent.
 * For the SOAP API, use [#create-annual-consent-manual](../../api-reference/soap-api/consent-annual/#create-annual-consent-manual "mention") for annual, [#create-recurring-consent](../../api-reference/soap-api/consent-recurring/#create-recurring-consent "mention") for recurring, and [#create-subscription-consent-card-present](../../api-reference/soap-api/consent-subscription/#create-subscription-consent-card-present "mention")for subscription consent.

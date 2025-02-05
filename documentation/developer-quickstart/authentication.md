@@ -8,13 +8,13 @@ description: A quickstart guide to authenticating with Number services
 
 ## Basics
 
-In general, to authenticate to our services, depending on your use case, you'll need:
+To authenticate to our services, depending on your integration of choice, you might need the following:
 
 {% stepper %}
 {% step %}
 #### An account code and token
 
-Using the unique key representing the Number account and the token generated from the Client Admin Portal which expires every 6 months, you'll be able to authenticate to both the REST and SOAP API.&#x20;
+Using your unique key representing the Number account and the token generated from the Client Admin Portal, you'll be able to authenticate to both the REST and SOAP API.&#x20;
 {% endstep %}
 
 {% step %}
@@ -26,7 +26,7 @@ When initializing either of the mobile SDKs, you'll need an API key provided by 
 {% step %}
 #### HMAC secret
 
-If you are PCI Compliant and want to use our APIs to collect cardholder data, some endpoints will require you to append additional data to the session header. With this, you'll be required to use an HMAC secret provided by us to generate this header.
+If you are PCI Compliant and want to use our REST API to collect cardholder data, some endpoints will require you to append additional data to the session header. You'll be able to generate this header using an HMAC secret provided by us.
 
 {% include "../../.gitbook/includes/warning-hmac.md" %}
 {% endstep %}
@@ -37,8 +37,6 @@ If you are PCI Compliant and want to use our APIs to collect cardholder data, so
 When logging into the Virtual Terminal or the Client Admin Portal, you'll need a username and password. Those may also require two-factor authentication using a text message to your mobile phone.
 {% endstep %}
 {% endstepper %}
-
-If you want to read more about authentication, see the [authentication.md](../getting-started/basics/authentication.md "mention") guide.
 
 
 
@@ -66,12 +64,12 @@ Use the Client Admin Portal to create a token. If you don't have access to the C
 {% step %}
 #### Send a request to authenticate and store the session key
 
-You'll need to provide your account code (`AcctCode`) and token (`Token`).
+You'll need to provide your account code as `AcctCode` and token as `Token`.
 
 REST API: [#apicardprocrest-v1.0.0-authenticate](../../api-reference/rest-api/authentication.md#apicardprocrest-v1.0.0-authenticate "mention")\
 SOAP API: [#authenticate](../../api-reference/soap-api/authentication.md#authenticate "mention")
 
-Review the response and store the value of the `SessKey`.
+Handle the response and store the `SessKey` value.
 {% endstep %}
 
 {% step %}
@@ -90,13 +88,15 @@ You'll need to prepare a secured header and use its value in place of the origin
 
 If the HMAC secret was not provided to you previously or you don't know how to find the value of `UserID` or `DeviceID`, [contact Number](../../help/customer-support/).&#x20;
 
-The format for the key is as follows: [`SessKey`](#user-content-fn-1)[^1]\_[`Epoch`](#user-content-fn-2)[^2]\_[`DeviceID`](#user-content-fn-3)[^3]\_[`Hash`](#user-content-fn-4)[^4].
+The format for the key is as follows: [`SessKey`](#user-content-fn-1)[^1]\_[`Epoch`](#user-content-fn-2)[^2]\_[`DeviceID`](#user-content-fn-3)[^3]\_[`Hash`](#user-content-fn-4)[^4]. Include this key in the same way as you would include the `SessKey` (see case above).
 
 {% include "../../.gitbook/includes/code-hmac.md" %}
-
-Include the signature in the same way as the `SessKey` in the previous case.
 {% endstep %}
 {% endstepper %}
+
+{% hint style="info" %}
+If you want to read more about authentication, see the [authentication.md](../getting-started/basics/authentication.md "mention") guide&#x20;
+{% endhint %}
 
 
 

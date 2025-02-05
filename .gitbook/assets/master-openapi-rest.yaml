@@ -443,7 +443,12 @@ components:
         - "R" # Recurring Consent
         - "A" # Annual Consent
       example: "S"
-      description: "The type of consent given for the payment."
+      description: |
+        The type of consent given for the payment.
+          - S: Subscription Consent
+          - O: One-time Consent
+          - R: Recurring Consent
+          - A: Annual Consent
 
     Customer:
       type: object
@@ -537,7 +542,10 @@ components:
         - "M" # Match
         - "N" # No Match
       example: ""
-      description: "CVV response code indicating the result of the Card Verification Value check."
+      description: |
+        CVV response code indicating the result of the Card Verification Value check.
+          - M: Match - The CVV provided matches the cardholder's information.
+          - N: No Match - The CVV provided does not match the cardholder's information.
 
     Date:
       type: string
@@ -569,7 +577,13 @@ components:
         - "FORCE_PENDING"
         - "INC_PENDING"
       example: ""
-      description: Flags indicating special conditions or statuses related to the transaction.
+      description: |
+        Flags indicating special conditions or statuses related to the transaction.
+          - ADJUST_PENDING: Indicates that an adjustment is pending.
+          - CAPTURE_PENDING: Indicates that a capture is pending.
+          - CREDIT_PENDING: Indicates that a credit is pending.
+          - FORCE_PENDING: Indicates that a force is pending.
+          - INC_PENDING: Indicates that an increase is pending.
 
     FunctionOk:
       type: boolean
@@ -699,7 +713,17 @@ components:
         - 8 # ACH Void
         - 9 # ACH Refund
       example: 2
-      description: The type of receipt
+      description: |
+        The type of receipt
+          - 1: Transaction
+          - 2: Void
+          - 3: Refund
+          - 4: Annual Consent
+          - 5: Recurring Consent
+          - 6: Subscription
+          - 7: ACH Transaction
+          - 8: ACH Void
+          - 9: ACH Refund
 
     Recipient:
       type: integer
@@ -708,7 +732,11 @@ components:
         - 2 # Customer
         - 3 # Both
       example: 1
-      description: The targeted recipient type
+      description: |
+        The targeted recipient type
+          - 1: Merchant
+          - 2: Customer
+          - 3: Both
 
     REF_ID:
       type: string
@@ -788,7 +816,11 @@ components:
             - "C" # Cancelled
             - "S" # Scheduled
           example: "S"
-          description: "The status of the payment."
+          description: |
+            The status of the payment.
+              - P: Paid - The payment has been successfully processed.
+              - C: Cancelled - The payment has been cancelled.
+              - S: Scheduled - The payment is scheduled for processing.
         SchedNum:
           type: integer
           example: 59
@@ -842,11 +874,16 @@ components:
           type: string
           enum:
             - "VI" # Visa
-            - "MC" # MasterCard
+            - "MC" # Mastercard
             - "AE" # American Express
             - "DS" # Discover
           example: "VI"
-          description: "The type of card used for the transaction."
+          description: |
+            The type of card used for the transaction.
+              - VI: Visa
+              - MC: Mastercard
+              - AE: American Express
+              - DS: Discover
         CASHBACK:
           type: number
           format: float
@@ -924,7 +961,14 @@ components:
             - "SDK" # Verifone
             - "AUTO" # Automatically scheduled from a payment plan
           example: "API"
-          description: "The source from which the transaction originated."
+          description: |
+            The source from which the transaction originated.
+              - API: REST / SOAP API
+              - WID: Widget
+              - VT: Virtual Terminal
+              - MOBL: Mobile SDK
+              - SDK: Verifone
+              - AUTO: Automatically scheduled from a payment plan
         PAYMENT_TYPE:
           type: string
           example: "C"
@@ -999,7 +1043,14 @@ components:
             - "CCADJUST"
             - "CCCREDIT"
           example: "CCSALE"
-          description: "Specifies the type of transaction being processed."
+          description: |
+            Specifies the type of transaction being processed.
+              - CCAUTHONLY: Authorization only
+              - CCSALE: Sale
+              - CCFORCE: Force
+              - CCVOICE: Voice
+              - CCADJUST: Adjustment
+              - CCCREDIT: Credit
         UserID:
           type: integer
           example: 2547
@@ -1025,7 +1076,16 @@ components:
         - "VOID"
         - "HOST"
       example: "OPEN"
-      description: Represents the current status of the transaction
+      description: |
+        Represents the current status of the transaction.
+          - OPEN: The transaction is open and has not been processed.
+          - AUTHOK: The transaction has been authorized.
+          - AUTHFAILED: The transaction authorization failed.
+          - SETTLED: The transaction has been settled.
+          - FAILED: The transaction failed.
+          - LOCKED: The transaction is locked.
+          - VOID: The transaction has been voided.
+          - HOST: The transaction is being processed by the host.
 
     TxStatusInternational:
       type: string
@@ -3505,7 +3565,7 @@ paths:
                                 - "Get_Trans_Status_By_Order"
                                 - "Recurring_Sale"
                               example: "SALE"
-                              description: The action specified when submitting a processing request with the third-party processor
+                              description: The action specified when submitting a processing request with the third-party processor.
                             Address:
                               type: string
                               example: "generating sale"
@@ -3713,7 +3773,10 @@ paths:
                         - "PF" # Regular PayForm
                         - "PA" # International PayForm
                       example: "PF"
-                      description: The widget type for the PayForm
+                      description: |
+                        The widget type for the PayForm
+                          - PF: Regular PayForm
+                          - PA: International PayForm
                     PostURL:
                       type: string
                       description: The URL where real-time values will be posted after payment completion.
@@ -6194,10 +6257,14 @@ paths:
                       type: string
                       enum:
                         - "EMAIL" # Send an email with a link to the payment form
-                        - "URLONLY" # Send a URL to the payment form
+                        - "URLONLY" # Only return a URL to the payment form in the response
                         - "TEXT" # Send a text message with a link to the payment form
                       example: "TEXT"
-                      description: The type of message to send.
+                      description: |
+                        The type of message to send.
+                          - EMAIL: Send an email with a link to the payment form
+                          - URLONLY: Only return a URL to the payment form in the response
+                          - TEXT: Send a text message with a link to the payment form
                     RefID:
                       type: string
                       example: "52520ABC"

@@ -8,8 +8,6 @@ Integrating payment processing into your system can be a daunting task. To help 
 
 
 
-### Steps to integrate with Number
-
 {% stepper %}
 {% step %}
 #### **Create a Number account and obtain credentials: 1-2 days**

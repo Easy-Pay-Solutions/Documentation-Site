@@ -324,6 +324,56 @@ catch (error) {
 
 
 
+#### Encrypted test cards <a href="#test-cards" id="test-cards"></a>
+
+Here are some test cards with encrypted card numbers for [first-data-testing.md](../../testing/first-data-testing.md "mention"). Before you implement encryption, you can use them for testing in the Sandbox environment.
+
+You can read more about testing in the [testing](../../testing/ "mention") section.
+
+{% tabs %}
+{% tab title="Visa" %}
+Card number: **4761 5300 0111 1118**
+
+{% code title="Encrypted string" %}
+```
+K8ELXxBJGpgO02O9Rw3XYe32D4msyv2lBO/SaQyx2vkPjFdy8hBjOxKQ9Q9NMQro9HotSzdev0Legr+iwevfvMnZINZMAy7ufNA4CniT3YcNdOYbzATBD1iTTiLcf+/we9QHsuo70R7Mij9oONFdh5UX948v89ZQMc95RyXtXpU1sUXkf/GG+gm9XFG0y09pb7KCIwa8vxhbMej0I7k7xhR3t6651XWec7H4NVE6jqMOSK7S3/cuqU9eHhqOD24f3X8xnzrGQUTGEvfk63bsH4UgXq/lEo27yMSi0FpsBLyw7fE/1FsFQG58HgMoXmwdjGtHPSH4/xUXJHtihkKHi8Ge9Zch7k9v7ZiAAe48qUPmFs2bOH3XV3jtvPo3fX64vz3Ode37oehe06+MmQR7ho+cR/r/IDAA74zQWRgYfDL79UhaLEMCQ7mcoxGlRgz5gfOy1inD1mL14lPlH8FcTDcnlDBtwakzlSP8NrmtFGvz3gV9T3d9nAP2yBvP4qXF875rGhiXgQ8HQHAit0SyxMuqdNtnScUbTu4iUHqQr4xtsiOQ/MoJIFgygtPs4ndEpNAeImvr7+DgFQvhkZyDWJBQ8qqpv4vlO3pDAJ6/7UzSmSD5D9vjdFj9tAAf72cXLtu1STcB7XKzzrG696kBdYAWhoF/z72n1n4AtZGWMf0=
+```
+{% endcode %}
+{% endtab %}
+
+{% tab title="Mastercard" %}
+Card number: **5137 2211 1111 6668**
+
+{% code title="Encrypted string" %}
+```
+WkPwbAzt1xZxECR4tdWOZDi219AiFmKq8qn6/MwwMPSeqkcRInqFMp3DxmM33G7pPrsvkIZA5zwk/tPLjjKkPDE1czVdVHA8yxYra6ggiGnjlASrxKdDGz6vaujGOnnex3cjXxV4mGC2gEhERTaFyXVlJDpM2jh/fdbXpg11n0BwmFBzgReTAV5BsS87vOqLfHjg9evm4lTIlYoqKR6DcGLn27Wd2ExwQu6V8nc8rkR6hwqEXsz3BFsbDtUhLeeWZdsEtZfKbAMzVAjwhUIbtsm4NOLLyQ5aSVc3P48FuW5GU9OZJD1MeicdsD+DFYmQk77UkEWEcKm9hogzf66sgrLAhY+TXg4iO4X0BJb8AJQRV0m9Am3VaemOIX/zw851AacwWxVNgYwrxbzcik9ODZR5GR8pHwXsPfeED2XISzGyfBdpv/5gqs5wTAlpZc0yW0nDShx9j+nmUJGVrd3RMHJddOe5+8HIWHFqAh3cQ6DBPe4FgBrTTtM44FlG+PuCRcVW6eQrnUr/llnWJdrUT5wKvGodewJCZv5JAdY9JZk9uj/qyITnDXVDC7uxxdHQgdq8yqjLZ/6iUoSu/dFFIflXmc/QFF13kRX74+XzYkMdEhUWQQ73R2KUKuTtO0jPMW5f+52UVJmUjEKYcggB8PcapFXAToKY0WaQhoSwOi0=
+```
+{% endcode %}
+{% endtab %}
+
+{% tab title="Discover" %}
+Card number: **6011 2087 0111 7775**
+
+{% code title="Encrypted string" %}
+```
+FFcT8XK/lbjN6oBxp7qY4DND1QYeejnjcaYxCfVVaRQ4tqgE6SrOSGqvpfkOXWbacOHDd26SF+lNGx2Uj7UxMRglY/6AjsMfWfffG15kyfKNLJIPwiLklpNwKgOH3J9z8CHYXF1G7gQR/q4Z42z851iFB7DNGfPJ7iZk+ZPh4YEer+R+ZH2nlLx0GVcbI6YOXtCgNLC8LJd8brzrmqKyA/0ZrJJaD+PmiK6rZxcHdPqIdx1Bc+x7y54GTd6LpigGVtnS65PKPzjIjfXYpTgyBQhbqIpy6qu5r6G3CwWupYjdXV4xX3GzTsQDX3byoSssRdQEmDeUa78iIlk3QbHHJn81SdorHaUI34uU1c0D5eqWzVSh4aAhrnTjDlx0ecS1Wn0cPpMvDxVZI3pEq3TrnuUQZgvcHJDMsZ3Dn1pviQnah272d3bh8uL8u/Drb7FLREgK7o8ZlV/rcPGgf++8N7CMEyZgIfVWuXc8EVRHA2KWuSTKgFfNyWX7GAF41f1EYEYn7dMd8EZcv6atpXNuLhsIAyKUeVoYO8nhBLHmtNBvKm2Ly5CSW344MiKUjmpR8+FpuBgLyJrVHkAaZmKLKcmaKqVEcVzqq+uiN0RhXWnkiUyODKdaP+LQjsNzmdbieW0ZaXJJPOkmMrgbuOfeDv6B9MUEW3UOoUEFAY48+Kg=
+```
+{% endcode %}
+{% endtab %}
+
+{% tab title="AMEX" %}
+Card number: **3710 3008 9111 338**
+
+{% code title="Encrypted string" %}
+```
+hWp5QKogAb7jkP85oHB7q+yYLw75IXVBzhGdQ0oZUUNk+z1uVLWK3ZyFwoi1Op8f5naINaHZ9T0ke2OW7Ydh7aYo3nTmhXVkM8LdYB3OUcvscj92HB5CHiWo1jBG0Jv4+vicBfOFT404r4MLwIqpdJVrr0URS0sSbSSPo34vk31GS9mihi+8UBzRXip8WKgnS5003grbvYf7tqGGK4YwrxCIgZRGqGIIrjqhrILBwn3zUmCjFuMItiNJ+VhnrThBeIXk9Lb8+FqzzZw63sIW41m4xOuVa4ZMB/4EpuG84BsA2V1WukRWzQRCo2CFYn55T96/GRdUrz3tGWEVs3NfXs4116IcK5fwYNBt/n0gVhmji4TU4JjUl64XS9gjfnPHGm3YsuOIuHL4Kapklp6UpDh/bVt795zMisGvlYEWazjflsO6MkDE+lgwt5XNs0kGVdWql9OHYSxAcmEmgZ4/ERf4dmgp/3TN5cMh4KZWGnEeWapcUtWWRISnHCCnkOpvz3wDsjH/96zb9DsYsXJ+92u76tCo3PNOMcD/cyEwMpqpjqjg/Z0a1YcS/anEXdGGwoXy65VCEALLy8mAct7whyQeValIPXeNq7sEbU2Y+LO8pevIfepDjChC5lVm4r/vUJOWq0ZvOCfUgHpRKqLS+zq0AYC0xP1Y8Xe1L+yT1zY=
+```
+{% endcode %}
+{% endtab %}
+{% endtabs %}
+
+
+
 ***
 
 

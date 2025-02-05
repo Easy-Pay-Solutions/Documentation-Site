@@ -43,17 +43,17 @@ As a result of authentication, you will obtain a session key. This key is requir
 
 ***
 
-**You will need to reauthenticate when one of the following two errors occurs:**&#x20;
+You will need to reauthenticate when one of the following two errors occurs:&#x20;
 
 {% hint style="danger" %}
-**Error Code 5030:** Expired session (session key has expired after 25 hours)&#x20;
+**Error 5030: Expired session - session key has expired after 25 hours**
 {% endhint %}
 
 {% hint style="danger" %}
-**Error Code 5050:** Unauthorized (your IP has changed since you last authenticated)
+**Error 5050: Unauthorized - your IP has changed since you last authenticated**
 {% endhint %}
 
-**The system will lock your IP out if you send 6 unsuccessful authentication attempts in a row.** Always abort unsuccessful authentication attempts instead of retrying and notify the user. Only the Number support team can remove the lock from a merchant.
+The system will lock your IP out if you send 6 unsuccessful authentication attempts in a row. **Always abort unsuccessful authentication attempts instead of retrying and notify the user.** Only the Number support team can remove the lock from a merchant.
 
 We recommend that you obtain and use the same key until you receive one of above errors.
 
@@ -65,7 +65,11 @@ We recommend that you obtain and use the same key until you receive one of above
 
 ## HMAC and RSA
 
-If you are not passing cardholder data through the API, you only need the session key to authenticate and connect to your account.  Otherwise, you need to use a signature secured by an HMAC secret and and encrypt the cardholder data using our RSA certificate.
+{% hint style="info" %}
+The HMAC and RSA section only applies to using the REST API.
+{% endhint %}
+
+If you are not passing cardholder data through the REST API, you only need the session key to authenticate and connect to your account. Otherwise, you need to use a signature secured by an HMAC secret and and encrypt the cardholder data using our RSA certificate.
 
 {% include "../../../.gitbook/includes/warning-hmac.md" %}
 
@@ -85,10 +89,10 @@ This altered key should be passed instead of the plain session key using a heade
 
 ### RSA encryption
 
-When the API traffic originates from unknown networks or mobile devices, we also mandate that any credit card numbers be encrypted prior to building your request. You can download our RSA 2048 certificate and use the public key to encrypt the cardholder information.&#x20;
+When the REST API traffic originates from unknown networks or mobile devices, we also mandate that any credit card numbers be encrypted prior to building your request. You can download our RSA 2048 certificate and use the public key to encrypt the cardholder information.&#x20;
 
 {% hint style="info" %}
-When passing cardholder data through our APIs, only the credit card number needs to be encrypted using RSA, the expiration date and CVV can be left as is.
+When passing cardholder data through our REST API, only the credit card number needs to be encrypted using RSA, the expiration date and CVV can be left as is.
 {% endhint %}
 
 {% hint style="warning" %}
@@ -349,6 +353,8 @@ The system will lock your IP after 6 unsuccessful attempts in a row. When a lock
 The Client Admin Portal will allow you to create and manage all of your tokens.  There is no limit to the number of tokens you can create. We recommend creating a separate token for each individual processing location (IP address).
 
 Each token has a lifespan of 6 months since it was generated and will need to be replaced afterwards. This can only be done by physically logging into The Client Admin Portal. To make the process faster, The Client Admin Portal provides a way to POST new tokens to your web server to help automate a part of the renewal process.
+
+To learn how to use the Client Admin Portal to renew tokens, see the [client-admin-portal.md](../client-admin-portal.md "mention") guide.
 
 <figure><img src="../../../.gitbook/assets/Token Renewal.png" alt=""><figcaption></figcaption></figure>
 

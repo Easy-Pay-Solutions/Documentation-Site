@@ -231,14 +231,14 @@ components:
           description: "The total number of transactions included in the batch."
         Code:
           type: string
+          enum:
+            - "A" # Approved
+            - "F" # Failed
           example: "A"
           description: |
-            A code representing the status of the batch. 
-            Possible values include:
-            - A: Approved - The batch has been successfully processed.
-            - R: Rejected - The batch has been rejected due to errors.
-            - P: Pending - The batch is currently pending processing.
-            - E: Error - An error occurred during the batch processing.
+            A code representing the status of the batch.
+              - A: Approved - The batch has been successfully processed.
+              - F: Failed - The batch has failed processing or has been rejected.
         RemainingUnsettled:
           type: integer
           example: 0
@@ -560,6 +560,17 @@ components:
       example: ""
       description: Error message. Empty or null if no error.
 
+    TransactionFlags:
+      type: string
+      enum:
+        - "ADJUST_PENDING"
+        - "CAPTURE_PENDING"
+        - "CREDIT_PENDING"
+        - "FORCE_PENDING"
+        - "INC_PENDING"
+      example: ""
+      description: Flags indicating special conditions or statuses related to the transaction.
+
     FunctionOk:
       type: boolean
       example: true
@@ -875,9 +886,7 @@ components:
           example: 44
           description: "A unique identifier for the end customer associated with the transaction."
         Flags:
-          type: string
-          example: ""
-          description: "Flags indicating special conditions or statuses related to the transaction."
+          $ref: "#/components/schemas/TransactionFlags"
         HAuthorizedAmount:
           type: number
           format: float
@@ -965,7 +974,7 @@ components:
         TXN_CODE:
           type: string
           example: "092682"
-          description: "A code representing the type of transaction."
+          description: "Approval code returned by the processor."
         TXN_DATE:
           type: string
           example: "042419"
@@ -3719,7 +3728,7 @@ paths:
                       $ref: "#/components/schemas/RPGUID"
                     EndPoint:
                       type: string
-                      description: "This will point to a specific web application on our web servers and EasyPay will provide guidance"
+                      description: "Points to a specific web app on our servers. Should always have the value of PayForm/PF.aspx."
                       example: "PayForm/PF.aspx"
                     EINDEX:
                       $ref: "#/components/schemas/EINDEX"
@@ -4877,6 +4886,23 @@ paths:
               properties:
                 Query:
                   type: string
+                  enum:
+                    - "ACHSttatus"
+                    - "ACHType"
+                    - "AConsentType"
+                    - "BatchSettleMode"
+                    - "BatchSettleStatus"
+                    - "ConsentType"
+                    - "IntAction"
+                    - "IntlAction"
+                    - "IntlResult"
+                    - "IntlStatus"
+                    - "Period"
+                    - "ReceiptType"
+                    - "Recipient"
+                    - "RecurSchedStatus"
+                    - "TxStatus"
+                    - "TxType"
                   example: "TXStatus"
                   description: The enumeration type to query.
             example:
@@ -4965,7 +4991,8 @@ paths:
                           AID:
                             type: string
                             nullable: true
-                            example: null
+                            example: "A0000000031010"
+                            description: Small bits of information encoded on the chip that identify the type of card.
                           ARC:
                             type: string
                             nullable: true
@@ -5467,8 +5494,7 @@ paths:
                             type: integer
                             example: 12
                           Flags:
-                            type: string
-                            example: ""
+                            $ref: "#/components/schemas/Flags"
                           HAuthorizedAmount:
                             type: number
                             format: float
@@ -5534,6 +5560,7 @@ paths:
                           TXN_CODE:
                             type: string
                             example: "297620"
+                            description: "Approval code returned by the processor."
                           TXN_DATE:
                             type: string
                             example: "021219"
@@ -6181,7 +6208,7 @@ paths:
                       type: string
                       example: ""
                       description: |
-                        The message to send. Use **Merch1** to insert merchant's name into your message template. The payment URL will be added at the end automatically. 
+                        The message to send. Use **Merch1** to insert the merchant's name into your message template. The payment URL will be added at the end automatically. 
                         If the body is left empty, a default generic message will be used:
                           "You have a Payment Due to [Merchant Name] of [Amount] due on [DueOn]. Please follow the link below to make the Payment. [Link Here]"
                     AcctHolderID:

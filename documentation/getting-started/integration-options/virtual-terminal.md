@@ -6,10 +6,6 @@ description: Getting started with Virtual Terminal for Number
 
 <figure><img src="../../../.gitbook/assets/Virtual terminal 1.png" alt=""><figcaption></figcaption></figure>
 
-
-
-## Introduction
-
 The Virtual Terminal is a web application that provides all types of credit card processing functionality. The VT is the fastest way to start trying out our payment services.&#x20;
 
 {% include "../../../.gitbook/includes/link-virtual-terminal.md" %}

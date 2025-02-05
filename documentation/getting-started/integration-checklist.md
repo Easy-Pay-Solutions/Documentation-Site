@@ -1,5 +1,5 @@
 ---
-description: The comprehensive checklist to getting started with Number
+description: The comprehensive checklist to integrating with Number
 ---
 
 # Integration Checklist

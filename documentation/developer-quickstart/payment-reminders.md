@@ -4,7 +4,7 @@ description: Send payment reminders to clients through text or e-mail
 
 # Payment Reminders
 
-<figure><img src="../../.gitbook/assets/Payment Reminder 1.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Payment Reminder (1).png" alt=""><figcaption></figcaption></figure>
 
 As an integrator, you may wish to send a payment reminder to a client through a text or e-mail which will allow them to pay the amount due. Here's an example reminder:
 

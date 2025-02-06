@@ -188,7 +188,7 @@ Read more about using our custom desktop application for sales in the [integrati
 
 When you visit the Virtual Terminal, log in and expand _Credit Cards_ in the navigation on the left. You'll see options for a sale, an EMV sale, authorization, forced auth, and adjustments.&#x20;
 
-<figure><img src="../../.gitbook/assets/HomePageExpandedNav cropped.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Virtual Terminal card present sales.png" alt=""><figcaption></figcaption></figure>
 
 As long as your USB card reader is connected to your machine, it will seamlessly integrate with the Virtual Terminal for card present transactions.
 
@@ -196,9 +196,9 @@ As long as your USB card reader is connected to your machine, it will seamlessly
 
 When you visit the Virtual Terminal, log in and expand _Consents_ in the navigation on the left. You'll see options for annual consent, EMV annual consent, and one-time consent. You can also expand the _Recurring_ tab to find options to create recurring consent, EMV recurring consent, and subscription consent.
 
-<figure><img src="../../.gitbook/assets/HomePageExpandedNav cropped consent.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Virtual Terminal manual consent.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/epvt2.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Virtual Terminal card present consent 2.png" alt=""><figcaption></figcaption></figure>
 
 As long as your USB card reader is connected to your machine, it will seamlessly integrate with the Virtual Terminal for card present transactions.
 
@@ -288,7 +288,15 @@ You can read about configuration specifics in the [#payform-builder](../getting-
 
 In the example below, the PayForm has been setup for **an instant card payment**.&#x20;
 
-<figure><img src="../../.gitbook/assets/payform builder example 5.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/PayForm manual card sale 1.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/PayForm manual card sale 2.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/PayForm manual card sale 3.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/PayForm manual card sale 4.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/PayForm manual card sale 5.png" alt=""><figcaption></figcaption></figure>
 
 {% stepper %}
 {% step %}
@@ -400,13 +408,13 @@ Read more about using our custom desktop application for sales in the [integrati
 
 When you visit the Virtual Terminal, log in and expand _Credit Cards_ in the navigation on the left. You'll see options for a sale, an EMV sale, authorization, forced auth, and adjustments. Follow the instructions and manually enter the cardholder details to make a sale.
 
-<figure><img src="../../.gitbook/assets/HomePageExpandedNav cropped.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Virtual Terminal card present sales (1).png" alt=""><figcaption></figcaption></figure>
 
 #### Virtual Terminal manual consent
 
 Using the Virtual Terminal, you can create annual, one-time, recurring, and subscription consents. Log in and expand _Consents_ and _Recurring_ tabs on the left side of the screen. Choose the type of consent you're interested in and follow the instructions to manually enter the cardholder details and store a card on file.
 
-<figure><img src="../../.gitbook/assets/HomePageExpandedNav cropped consent (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Virtual Terminal manual consent (1).png" alt=""><figcaption></figcaption></figure>
 
 
 

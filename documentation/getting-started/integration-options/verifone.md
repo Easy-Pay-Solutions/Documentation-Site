@@ -36,13 +36,13 @@ Currently, we offer three different options for collecting payments with the Ver
 
 {% stepper %}
 {% step %}
-#### **Standalone desktop application (upon request)** <a href="#h-1-standalone-desktop-application-upon-request-only" id="h-1-standalone-desktop-application-upon-request-only"></a>
+**Standalone desktop application (upon request)**
 
 This application has automatic updates and allows you to collect payments, create card-on-file and payment plans, process a card-on-file, void or credit, settle transactions, and do reporting with an option to export to a PDF.
 {% endstep %}
 
 {% step %}
-#### **Browser-based interface** <a href="#h-3-browser-based-interface" id="h-3-browser-based-interface"></a>
+**Browser-based interface**
 
 We developed a Windows service which uses Cross-Origin Resource Sharing (CORS) to communicate with the browser. The Win service will return a simple XML response for each transaction directly to the HTML/PHP/ASP.NET page for consumption by the host application.
 
@@ -50,7 +50,7 @@ As an integrator, this allows you to write simple client-side scripts within you
 {% endstep %}
 
 {% step %}
-#### **Number Verifone SDK** <a href="#h-2-easy-pay-verifone-sdk" id="h-2-easy-pay-verifone-sdk"></a>
+**Number Verifone SDK**
 
 This DLL provides a means of collecting payments and creating card-on-file plans. Used in conjunction with our API, you can manage all aspects of your payment requirements, all within the confines of your own custom application.
 {% endstep %}
@@ -85,7 +85,7 @@ Before you start, download the Windows service to your machine.
 
 {% include "../../../.gitbook/includes/link-verifone-windows-service.md" %}
 
-To install the Win service:
+**To install the Win service:**
 
 {% stepper %}
 {% step %}
@@ -107,6 +107,16 @@ Locate the EXE file and right click on it to choose _Run as administrator_.
 {% step %}
 Wait for the application to finish, then reboot computer.
 {% endstep %}
+
+{% step %}
+Modify your stored profile and reboot the service (optional)
+
+{% hint style="warning" %}
+If you supply credentials for the Windows service within the stored profile, you will always point to that account. Otherwise, you'll need to provide a session key to call the service.
+{% endhint %}
+
+Go to _c:/ProgramData/EasyPay/Eptools/eptools/profiles_ to add information about your Number account code and token, then find _Services_ on your computer to restart the _EasyPay Verifone MiddleWare E2E 1041 Service_.
+{% endstep %}
 {% endstepper %}
 
 The above installation package does the following:
@@ -114,11 +124,17 @@ The above installation package does the following:
 1. Installs USB drivers for the Verifone.
 2. Creates a custom event log with Windows named _EPmiddleware_.
 3. Installs a certificate which encrypts data between the browser and the Windows service.
-4. Installs the Windows service which listens on port 8031.
+4. Installs the _EasyPay Verifone MiddleWare E2E 1041 Service_ which listens on port 8031.
 
 With this, your website will be able to issue commands to the Windows service by calling `https://localhost:8031` from your website.&#x20;
 
 See [our example website](https://easypay1.com/JqueryVerifone/) communicating with Verifone or download it to see how it works.
+
+{% hint style="warning" %}
+To run the Verifone demo website, you must have the Verifone Windows service installed.
+{% endhint %}
+
+<figure><img src="../../../.gitbook/assets/image (15).png" alt=""><figcaption><p>Verifone example site</p></figcaption></figure>
 
 {% include "../../../.gitbook/includes/link-verifone-example-download.md" %}
 
@@ -136,69 +152,119 @@ You can read more about using the Virtual Terminal in the [virtual-terminal.md](
 
 You can call the middleware to do the following:
 
-1. Chip sale (EMV sale) only
-2. EMV sale (chip sale) and save card
-3. Manual sale (keyed entry sale) only
-4. Manual sale (keyed entry sale) and save card
+1. EMV sale (chip sale) only
+2. EMV save card (consent) only
+3. EMV sale and save card
+4. Manual sale (keyed entry) sale only
+5. Manual sale sale and save card
 
+#### Verifone EMV sale only
+
+Here's an simplified example of how you can invoke the service for a sale:
+
+{% include "../../../.gitbook/includes/code-verifone-cp-sale-browser-based.md" %}
+
+#### Verifone EMV annual consent only
+
+Here's an simplified example of how you can invoke the service to collect annual consent:
+
+{% include "../../../.gitbook/includes/code-verifone-cp-annual-consent-browser-based.md" %}
+
+#### Verifone EMV sale combo
+
+To make a chip sale and store the card on file, follow the previous examples and replace the URL using the template below:
+
+<pre class="language-javascript" data-overflow="wrap"><code class="lang-javascript"><strong>const url = `https://localhost:8031/VerifoneSVC/service/GetEmvComboJson?SessKey=${sessKey}&#x26;AcctHolderJson=${acctHolderJson}&#x26;EndCustJson=${endCustJson}&#x26;PurchDetailsJson=${purchdetailsJson}&#x26;MerchID=${merchID}&#x26;Amount=${amount}&#x26;SaveCard=true`
+</strong></code></pre>
+
+#### Verifone manual sale only
+
+To make a manual sale, follow the previous examples and replace the URL using the template below:
+
+{% code overflow="wrap" %}
 ```javascript
-// EMV sale only
-$(function() {
-    $('#EMVSaleOnly').click(function() {
-        EMVSaleCombo(false);
-    });
-});
-
-// EMV sale and save card
-$(function() {
-    $('#EMVSaleAndSave').click(function() {
-        EMVSaleCombo(true);
-    });
-});
-
-// Manual sale only
-$(function() {
-    $('#ManualSaleOnly').click(function() {
-        ManualSaleCombo(false);
-    });
-});
-
-// Manual sale and save card
-$(function() {
-    $('#ManualSaleAndSave').click(function() {
-        ManualSaleCombo(true);
-    });
-});
+const url = `https://localhost:8031/VerifoneSVC/service/GetManualJson?SessKey=${sessKey}&AcctHolderJson=${acctHolderJson}&EndCustJson=${endCustJson}&PurchDetailsJson=${purchDetailsJson}&MerchID=${merchID}&Amount=${amount}`;
 ```
+{% endcode %}
+
+#### Verifone manual sale combo
+
+To make a manual sale and store the card on file, follow the previous examples and replace the URL using the template below:
+
+{% code overflow="wrap" %}
+```javascript
+const url = `https://localhost:8031/VerifoneSVC/service/GetManualComboJson?SessKey=${sessKey}&AcctHolderJson=${acctHolderJson}&EndCustJson=${endCustJson}&PurchDetailsJson=${purchDetailsJson}&MerchID=${merchID}&Amount=${amount}&SaveCard=true`;
+```
+{% endcode %}
 
 
 
 ### Resetting the device
 
-The red button on the Verifone can be used to cancel the current operation and set up for _Ready_ state in most cases. See the `ResetVerifone` and `UnlockVerifone` commands.
+The red button on the Verifone can be used to cancel the current operation and set up for _Ready_ state in most cases. See the `resetVerifone` and `unlockVerifone` functions.
 
+{% code overflow="wrap" lineNumbers="true" %}
 ```javascript
-// Reset button
-$(function () {
-    $('#ResetButton').click(function() {
-        ResetVerifone();
-    });
-});
+//  Sends a reset command to the Verifone device
+function resetVerifone() {
+    $.ajax({
+        type: "GET",
+        url: "https://localhost:8031/VerifoneSVC/service/GetCard?Option=10",
 
-// Unlock button
-$(function () {
-    $('#UnlockButton').click(function () {
-        UnlockVerifone();
+        success: function (data) {
+            var responseArray = data.split("|"); // parse response
+            
+            // example of showing the results and 
+            // clearing the message after a timeout
+            $('#StatusLabel').html(responseArray[1]); 
+            setTimeout("$('#StatusLabel').html('')", 3000);
+        },
+        error: function (xhr, status, error) {
+            console.error("Verifone Middleware Error", {
+                statusCode: xhr.status,
+                statusText: xhr.statusText,
+                error: error
+            });
+            alert(`Verifone Middleware Error: ${error}`);
+        }
     });
-});
+}
+
+// Sends an unlock command to the Verifone device
+function unlockVerifone() {
+    $.ajax({
+        type: "GET",
+        url: "https://localhost:8031/VerifoneSVC/service/GetCard?Option=911",
+
+        success: function (data) {
+            var responseArray = data.split("|"); // parse response
+            
+            // example of showing the results and 
+            // clearing the message after a timeout
+            $('#StatusLabel').html(responseArray[1]);
+            setTimeout("$('#StatusLabel').html('')", 3000);
+
+        },
+        error: function (xhr, status, error) {
+            console.error("Verifone Middleware Error", {
+                statusCode: xhr.status,
+                statusText: xhr.statusText,
+                error: error
+            });
+            alert(`Verifone Middleware Error: ${error}`);
+        }
+    });
+}
+
 ```
+{% endcode %}
 
-The `ResetVerifone` operation will send a reset command to the Verifone device. This can be used to put the device back into _Ready_ state.
+The `resetVerifone` function will send a reset command to the Verifone device. This can be used to put the device back into _Ready_ state.
 
-The `UnlockVerifone` operation will release the middleware from its current wait state or workflow and also send a reset command to the device.&#x20;
+The `unlockVerifone` function will release the middleware from its current wait state or workflow and also send a reset command to the device.&#x20;
 
 {% hint style="warning" %}
-If, for any reason, you continue to receive a _Busy_ response from the middleware, but you don't believe that waiting will yield productive results, you may use the `UnlockVerifone` feature to return the device to _Ready_ state.
+If you continue to receive a _Busy_ response from the middleware, but you don't believe that waiting will yield productive results, you may use the `unlockVerifone` function to return the device to _Ready_ state.
 {% endhint %}
 
 

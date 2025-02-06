@@ -96,7 +96,7 @@ If you want to use advanced options such as dynamically pre-populating form data
 
 ### Widget builder tool
 
-<figure><img src="../../../.gitbook/assets/PayForm_Builder.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/PayForm builder.png" alt=""><figcaption></figcaption></figure>
 
 Use our widget builder tool to select various settings, options, and styles. The widget manifest and encrypted URL will be generated for you.
 

@@ -68,15 +68,15 @@ Surcharge and convenience fees are automatically calculated during a credit card
 
 Users have the option to waive the fee on any transaction if required. The fee can be waived before processing by checking the _Waive Fee_ box on the form.
 
-<figure><img src="../../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Virtual Terminal 13a Surcharging.png" alt=""><figcaption></figcaption></figure>
 
 The receipt will detail the charge amounts including the base amount, fee, and total amount charged. Rules require that the fee amount is visible to the customer. In addition to the receipts, the Virtual Terminal reporting and detail views show the fee as part of the total amount.
 
-<figure><img src="../../../.gitbook/assets/image (13).png" alt=""><figcaption><p>The base, surcharge, and total amounts on the receipt</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Virtual Terminal 13b Surcharging.png" alt=""><figcaption><p>The base, surcharge, and total amounts on the receipt</p></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/image (11).png" alt=""><figcaption><p>The base, surcharge, and total amounts in the transaction list</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Virtual Terminal 13c Surcharging.png" alt=""><figcaption><p>The base, surcharge, and total amounts in the transaction list</p></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/image (14).png" alt=""><figcaption><p>The base, surcharge, and total amounts in transaction details</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Virtual Terminal 13d Surcharging.png" alt=""><figcaption><p>The base, surcharge, and total amounts in transaction details</p></figcaption></figure>
 
 
 
@@ -112,7 +112,7 @@ Both annual and one-time consents are valid until the card expires or 365 days h
 
 Click the _Consents_ tab on the left side of the screen, then _Create Annual Consent_, _Create Annual: EMV_, or _Create One-Time Consent_ depending on the type of consent you need and payment method.
 
-<figure><img src="../../../.gitbook/assets/Virtual Terminal 3 Annual and one-time.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Virtual Terminal 14a create consent.png" alt=""><figcaption></figcaption></figure>
 
 Annual consents require that a max charge be determined as a limit per transaction. This can be any $ amount determined by your office.&#x20;
 
@@ -136,7 +136,7 @@ Fixed recurring consents can be setup for any length of time.
 
 Click the _Recurring_ tab on the left side of the screen, then _Create Recurring Consent_ or _Create Recurring: EMV_ based on the payment method.
 
-<figure><img src="../../../.gitbook/assets/Virtual Terminal 4 Fixed recurring.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Virtual Terminal 14b create consent.png" alt=""><figcaption></figcaption></figure>
 
 An email address can be added to the consent so your customer will receive a receipt
 
@@ -158,7 +158,7 @@ The subscription consent end date is always automatically set to the card expira
 
 Click the _Recurring_ tab on the left side of the screen, then _Create Subscription_.
 
-<figure><img src="../../../.gitbook/assets/Virtual Terminal 5 Subscription.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Virtual Terminal 14c create consent.png" alt=""><figcaption></figcaption></figure>
 
 Subscription payments can be processed manually or automatically depending on your preference. You can change the payment amount as well as the scheduled dates for your subscription consent.&#x20;
 

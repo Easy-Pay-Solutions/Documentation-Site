@@ -34,7 +34,7 @@ If you are PCI Compliant and want to use our REST API to collect cardholder data
 {% step %}
 #### Username and password
 
-When logging into the Virtual Terminal or the Client Admin Portal, you'll need a username and password. Those may also require two-factor authentication using a text message to your mobile phone.
+When logging into the Virtual Terminal you'll need a username and password. When logging into the Client Admin Portal this will also require two-factor authentication using a text message to your mobile phone.
 {% endstep %}
 {% endstepper %}
 

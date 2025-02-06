@@ -38,7 +38,7 @@ If you have your own PCI level one compliance program, you may write your own cu
 
 ### Verifone integration
 
-There are a few approaches to integration, but we recommend the browser-based interface option.&#x20;
+There are a few approaches to integration, You can either use the browser-based interface option or the Desktop integration with SDK .
 
 {% hint style="info" %}
 For an in-depth tutorial on how to integrate and use your Verifone card reader with Number, see our [verifone.md](../getting-started/integration-options/verifone.md "mention") integration guide.
@@ -66,7 +66,7 @@ Here's an simplified example of how you can invoke the service to collect annual
 
 ### Virtual Terminal or desktop application
 
-When you want to use your USB card reader with the Virtual Terminal, you have to first install the very same Windows service that is used when doing a Verifone browser-based integration. After installation, [contact the Number support team](../../help/customer-support/) to get the card reader features activated.
+When you want to use your Verifone with the Virtual Terminal, you have to first install the very same Windows service that is used when doing a Verifone browser-based integration. After installation, [contact the Number support team](../../help/customer-support/) to get the card reader features activated.
 
 {% include "../../.gitbook/includes/link-verifone-windows-service.md" %}
 
@@ -100,7 +100,7 @@ As long as your USB card reader is connected to your machine, it will seamlessly
 
 ### REST / SOAP API integration
 
-If you wish to have more control over the integration and you are PCI Level 1 compliant, you can try using our APIs. They provide methods for all payment types available using our other services, including card present payments.
+Our APIs are useful for any Integration as you can apply a credit, void, query, charge a stored card etc. For integrators who are PCI Level one compliant you may also pass cardholder data directly through the API. Most integrations will use our PayForms to collect Cardholder data while the API will be used for all remaining activity.
 
 {% hint style="info" %}
 To learn more about our APIs, see the [rest-api.md](../getting-started/integration-options/rest-api.md "mention") and [soap-api.md](../getting-started/integration-options/soap-api.md "mention") integration guides.

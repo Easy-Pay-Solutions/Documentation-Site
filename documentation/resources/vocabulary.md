@@ -47,7 +47,7 @@ A general list of terms specific to the payment industry.
 #### V
 
 * **Verifone**: A brand of payment terminals and devices used for processing card present transactions.
-* **Voiding**: The cancellation of authorized transactions before settlement, stopping fund transfers.
+* **Void (reversal)**: This act will cancel a previously approved authorization prior to nightly settlement
 
 
 
@@ -61,7 +61,7 @@ A list of terms specific to Number services or other terms in context of Number 
 
 #### A
 
-* **Account code**: The unique key which represents your Number account. This code will never change throughout the life of your account. Each `AccountCode` is 2 letters and 7 numbers.
+* **Account code**: The unique key which represents your Number account. This code will never change throughout the life of your account. Each Account Code is 2 letters and 7 numbers.
 
 #### C
 
@@ -85,7 +85,7 @@ A list of terms specific to Number services or other terms in context of Number 
 
 #### T
 
-* **Token**: A 32-characater hexadecimal string generated from the Client Admin Portal which acts as a password when authenticating to our APIs. Tokens expire after a 6-month period and can be renewed from the Client Admin Portal.
+* **Token**: A 32-characater hexadecimal string generated from the Client Admin Portal which acts as a password when authenticating to our APIs. Tokens expire after a 2 year period and can be renewed from the Client Admin Portal.
 
 #### V
 

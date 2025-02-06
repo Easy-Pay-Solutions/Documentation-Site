@@ -8,9 +8,9 @@ title: code - verifone cp sale browser-based
 ```javascript
 // Initiates CHIP transaction
 function initiateEMVTransaction() {
-    // You must either supply a session key for authentication or modify your eptools profile to point to a particular account
+    // // You must either supply a session key for Live credit card authorizations or modify your eptools profile to point to a particular account
     // You may modify your stored profile at c:\ProgramData\EasyPay\Eptools\eptools\profiles
-    const sessKey = getSessKey();
+    const sessKey = getSessKey(); //  your server application can pass this down to your client script 
     
     // Each account can have multiple merchant records. Normally this can be '1' for default if you only have one merchant on account.
     const merchID = getMerchId();

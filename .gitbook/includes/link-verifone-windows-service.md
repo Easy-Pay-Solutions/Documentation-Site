@@ -2,6 +2,4 @@
 title: link - verifone windows service
 ---
 
-{% file src="../assets/VerifoneWindowsServiceSetup.zip" %}
-EPVerifoneSetup\_E2E\_1041.exe
-{% endfile %}
+{% embed url="https://easypay1.com/deploy/MiddleWare/EPVerifoneSetup_E2E_1041.zip" %}

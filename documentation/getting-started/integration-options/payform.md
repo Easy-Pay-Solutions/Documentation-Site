@@ -32,7 +32,7 @@ You get control of all the operational and design parameters of the PayForm:
 
 ## PayForm builder
 
-<figure><img src="../../../.gitbook/assets/PayForm_Builder.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/PayForm builder.png" alt=""><figcaption></figcaption></figure>
 
 It might be difficult to prepare a PayForm request by yourself at first. **To make it easy to get started, we've prepared a tool which can generate that for you**.
 

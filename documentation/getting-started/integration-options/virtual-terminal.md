@@ -30,27 +30,53 @@ Before you start, you may want to read about using your Verifone device with the
 
 ### Non-EMV payments
 
-Click the _Credit Cards_ tab on the left side of the screen, then _Sale_.
+Make non-EMV manual sales using the Virtual Terminal.
 
-When you swipe the credit card through your USB reader, the card information will automatically populate securely into the required fields. After swiping, enter the $ amount to be charged. You may also manually enter the information on your keyboard.
+Click the _Credit Cards_ tab on the left side of the screen, then _Sale_. Manually enter all of the information from your keyboard, and enter the $ amount to be charged.&#x20;
 
 {% include "../../../.gitbook/includes/info-same-as-cardholder.md" %}
 
-A patient / guest ID or a service description can also be added here and searched for later. The ID will also print on the **receipt**, and the service description will print on the **settlement report**.
+A guest ID or a service description can also be added here and searched for later. The ID will also print on the **receipt**, and the service description will print on the **settlement report**.
 
 
 
 ### EMV payments
 
-Click the _Credit Cards_ tab on the left side of the screen, then on _Sale-EMV_.&#x20;
+Make EMV payments using the Virtual Terminal.
 
-You will click _Insert Chip_ or _Manual Card Entry_.&#x20;
+Click the _Credit Cards_ tab on the left side of the screen, then on _Sale-EMV_.  You will then need to click on _Insert Chip_ or _Manual Card Entry_.&#x20;
 
 Clicking on _Insert Chip_ will prompt the end-user or customer to insert or tap their card for contactless payments. For _Manual Card Entry_, the end user must enter the full card number, expiration date, and CVV code by pressing the green enter button on the Verifone after each entry.&#x20;
 
 {% include "../../../.gitbook/includes/info-same-as-cardholder.md" %}
 
 {% include "../../../.gitbook/includes/block-cardholder-data-on-receipt-and-batch-report.md" %}
+
+
+
+***
+
+
+
+## Surcharging
+
+Surcharge and convenience fees are automatically calculated during a credit card sale, both manual entry and EMV, as well as when charging an existing card on file.&#x20;
+
+{% hint style="info" %}
+**The surcharge / convenience fee is automatically calculated based on the percentage set in the Client Admin Portal and the card type used.** The Virtual Terminal will also ensure that fee does not go over the card brand rules of 3%.
+{% endhint %}
+
+Users have the option to waive the fee on any transaction if required. The fee can be waived before processing by checking the _Waive Fee_ box on the form.
+
+<figure><img src="../../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
+
+The receipt will detail the charge amounts including the base amount, fee, and total amount charged. Rules require that the fee amount is visible to the customer. In addition to the receipts, the Virtual Terminal reporting and detail views show the fee as part of the total amount.
+
+<figure><img src="../../../.gitbook/assets/image (13).png" alt=""><figcaption><p>The base, surcharge, and total amounts on the receipt</p></figcaption></figure>
+
+<figure><img src="../../../.gitbook/assets/image (11).png" alt=""><figcaption><p>The base, surcharge, and total amounts in the transaction list</p></figcaption></figure>
+
+<figure><img src="../../../.gitbook/assets/image (14).png" alt=""><figcaption><p>The base, surcharge, and total amounts in transaction details</p></figcaption></figure>
 
 
 
@@ -74,13 +100,7 @@ An email address can be added to the consent so your customer will receive a rec
 
 ### Annual and one-time
 
-Click the _Consents_ tab on the left side of the screen, then _Create Annual Consent_, _Create Annual: EMV_, or _Create One-Time Consent_ depending on the type of consent you need and payment method.
-
-<figure><img src="../../../.gitbook/assets/Virtual Terminal 3 Annual and one-time.png" alt=""><figcaption></figcaption></figure>
-
 Creating annual and one-time consents allows your office to charge a card at a later date. **This can be useful in situations where you expect a balance to be due after services have been provided.**
-
-Annual consents require that a max charge be determined as a limit per transaction. This can be any $ amount determined by your office.&#x20;
 
 An annual consent can be used multiple times, and a one-time consent can only be used once.&#x20;
 
@@ -88,7 +108,15 @@ An annual consent can be used multiple times, and a one-time consent can only be
 Both annual and one-time consents are valid until the card expires or 365 days have passed.
 {% endhint %}
 
-An email address can be added to the consent so your customer will receive a receipt when the consent has been used.&#x20;
+#### Create an annual consent or a one-time consent
+
+Click the _Consents_ tab on the left side of the screen, then _Create Annual Consent_, _Create Annual: EMV_, or _Create One-Time Consent_ depending on the type of consent you need and payment method.
+
+<figure><img src="../../../.gitbook/assets/Virtual Terminal 3 Annual and one-time.png" alt=""><figcaption></figcaption></figure>
+
+Annual consents require that a max charge be determined as a limit per transaction. This can be any $ amount determined by your office.&#x20;
+
+An email address can also be added to the consent so your customer will receive a receipt when the consent has been used.&#x20;
 
 {% include "../../../.gitbook/includes/info-same-as-cardholder.md" %}
 
@@ -98,15 +126,17 @@ An email address can be added to the consent so your customer will receive a rec
 
 ### Fixed recurring
 
-Click the _Recurring_ tab on the left side of the screen, then _Create Recurring Consent_ or _Create Recurring: EMV_ based on the payment method.
-
-<figure><img src="../../../.gitbook/assets/Virtual Terminal 4 Fixed recurring.png" alt=""><figcaption></figcaption></figure>
-
 Creating a fixed recurring consent allows your office to set up a payment plan with your customer.  **This can be useful in situations where your customer has an outstanding balance due.**
 
 {% hint style="info" %}
 Fixed recurring consents can be setup for any length of time.
 {% endhint %}
+
+#### Create a fixed recurring consent
+
+Click the _Recurring_ tab on the left side of the screen, then _Create Recurring Consent_ or _Create Recurring: EMV_ based on the payment method.
+
+<figure><img src="../../../.gitbook/assets/Virtual Terminal 4 Fixed recurring.png" alt=""><figcaption></figcaption></figure>
 
 An email address can be added to the consent so your customer will receive a receipt
 
@@ -118,15 +148,17 @@ An email address can be added to the consent so your customer will receive a rec
 
 ### Subscription
 
-Click the _Recurring_ tab on the left side of the screen, then _Create Subscription_.
-
-<figure><img src="../../../.gitbook/assets/Virtual Terminal 5 Subscription.png" alt=""><figcaption></figcaption></figure>
-
 Creating a subscription consent allows your office to set up a re-occurring payment indefinitely. **This can be useful in situations where your customer makes a regular donation or payment to your organization.**&#x20;
 
 {% hint style="info" %}
 The subscription consent end date is always automatically set to the card expiration date.
 {% endhint %}
+
+#### Create a subscription consent
+
+Click the _Recurring_ tab on the left side of the screen, then _Create Subscription_.
+
+<figure><img src="../../../.gitbook/assets/Virtual Terminal 5 Subscription.png" alt=""><figcaption></figcaption></figure>
 
 Subscription payments can be processed manually or automatically depending on your preference. You can change the payment amount as well as the scheduled dates for your subscription consent.&#x20;
 
@@ -142,9 +174,9 @@ You can also place a subscription on hold. **This will pause all processing unti
 
 ## Consent list
 
-Click the _Reports_ tab on the left side of the screen, then _Consents_.
-
 The consent list is where you will manage your consents after they have been created. The query filter can be used to search your consent list.
+
+Click the _Reports_ tab on the left side of the screen, then _Consents_.
 
 <figure><img src="../../../.gitbook/assets/Virtual Terminal 6a Consent list (1).png" alt=""><figcaption></figcaption></figure>
 
@@ -210,6 +242,8 @@ Allows you to reprint the consent agreement. You can choose between the customer
 
 The scheduled payments view is where you will view and manage all scheduled payments.
 
+Click the _Scheduled_ option on the left side of the screen.
+
 <figure><img src="../../../.gitbook/assets/Virtual Terminal 7a Scheduled payments (1).png" alt=""><figcaption></figcaption></figure>
 
 
@@ -242,9 +276,9 @@ Displays a history of payments run on a particular consent through the _Schedule
 
 ## Transaction list
 
-Click the _Reports_ tab on the left side of the screen, then _Transactions_.
-
 The transaction list is where you will view and manage the transactions.
+
+Click the _Reports_ tab on the left side of the screen, then _Transactions_.
 
 <figure><img src="../../../.gitbook/assets/Virtual Terminal 8a Transaction list (1).png" alt=""><figcaption></figcaption></figure>
 
@@ -322,9 +356,9 @@ Choose the desired comparison type for search.
 
 ## Settlements
 
-Click the _Settlement_ option on the left side of the screen.
-
 View and manage the settlements.
+
+Click the _Settlement_ option on the left side of the screen.
 
 <figure><img src="../../../.gitbook/assets/Virtual Terminal 10 Transaction search (2).png" alt=""><figcaption></figcaption></figure>
 
@@ -343,6 +377,8 @@ Select individual transactions, and click _Settle Selected_. Click _Settle All_ 
 ## Batch history
 
 Displays a list of your settlements and allows for reprinting of batch reports.
+
+Click on the _Reports_ tab on the left side of your screen, then _Batch History_.
 
 <figure><img src="../../../.gitbook/assets/Virtual Terminal 11 Batch history (1).png" alt=""><figcaption></figcaption></figure>
 

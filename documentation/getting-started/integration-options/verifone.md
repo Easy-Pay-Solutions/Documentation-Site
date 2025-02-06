@@ -32,7 +32,7 @@ Software Security Framework (SSF) is a re-working of the existing PCI standard P
 
 ## Software options <a href="#what-we-offer" id="what-we-offer"></a>
 
-Currently, we offer four different options for collecting payments with the Verifone card readers, all of which require a Windows OS on the host computer.
+Currently, we offer three different options for collecting payments with the Verifone card readers, all of which require a Windows OS on the host computer.
 
 {% stepper %}
 {% step %}
@@ -42,21 +42,25 @@ This application has automatic updates and allows you to collect payments, creat
 {% endstep %}
 
 {% step %}
-#### **Number Verifone SDK** <a href="#h-2-easy-pay-verifone-sdk" id="h-2-easy-pay-verifone-sdk"></a>
-
-This DLL provides a means of collecting payments and creating card-on-file plans. Used in conjunction with our API, you can manage all aspects of your payment requirements, all within the confines of your own custom application.
-{% endstep %}
-
-{% step %}
 #### **Browser-based interface** <a href="#h-3-browser-based-interface" id="h-3-browser-based-interface"></a>
 
 We developed a Windows service which uses Cross-Origin Resource Sharing (CORS) to communicate with the browser. The Win service will return a simple XML response for each transaction directly to the HTML/PHP/ASP.NET page for consumption by the host application.
 
-As an integrator, this allows you to write simple client-side scripts within your own web applications to initiate transactions with a local Verifone. You can also use this service with the Virtual Terminal to avoid writing any code.
+As an integrator, this allows you to write simple client-side scripts within your own web applications to initiate transactions with a local Verifone. **You can also use this service with the Virtual Terminal to avoid writing any code.**
+{% endstep %}
+
+{% step %}
+#### **Number Verifone SDK** <a href="#h-2-easy-pay-verifone-sdk" id="h-2-easy-pay-verifone-sdk"></a>
+
+This DLL provides a means of collecting payments and creating card-on-file plans. Used in conjunction with our API, you can manage all aspects of your payment requirements, all within the confines of your own custom application.
 {% endstep %}
 {% endstepper %}
 
-#### **Requirements**
+{% hint style="success" %}
+The browser-based interface together with the Virtual Terminal or your own custom web application is the recommended approach for new customers.&#x20;
+{% endhint %}
+
+**Requirements**
 
 There are 2 categories of integrations which require two different sets of files
 
@@ -70,50 +74,6 @@ There are 2 categories of integrations which require two different sets of files
 <figure><img src="../../../.gitbook/assets/Number Desktop Application.png" alt=""><figcaption></figcaption></figure>
 
 If you wish to use the standalone desktop application for Verifone, [contact Number ](../../../help/customer-support/)for installation files and instructions.
-
-
-
-## Number Verifone SDK <a href="#easy-pay-verifone-sdk" id="easy-pay-verifone-sdk"></a>
-
-<figure><img src="../../../.gitbook/assets/Number .Net Application.png" alt=""><figcaption></figcaption></figure>
-
-For you to directly interface with the Verifone using our SDK, you will need the Verifone drivers with the custom logging package, and the SDK reference files:
-
-{% include "../../../.gitbook/includes/link-verifone-usb-log.md" %}
-
-{% include "../../../.gitbook/includes/link-verifone-sdk.md" %}
-
-When installed, the first component will provide USB drivers and create a virtual COM 9 port. In addition, it will add a unique event log to the existing windows event log collection.&#x20;
-
-To install the first component, please do the following:
-
-{% stepper %}
-{% step %}
-Connect your Verifone to the USB port which you plan to utilize.
-{% endstep %}
-
-{% step %}
-Wait until the device is fully initialized.
-{% endstep %}
-
-{% step %}
-Download and extract the ZIP file named _Setup\_USB\_log.zip_ to the location of your choice.
-{% endstep %}
-
-{% step %}
-Right click the EXE named _Setup\_USB\_log.exe_ and choose _Run as administrator_.
-{% endstep %}
-
-{% step %}
-After installation, there should be a new windows event log named _EPmiddleWare_.
-{% endstep %}
-{% endstepper %}
-
-<figure><img src="../../../.gitbook/assets/Verifone screenshot 2.png" alt=""><figcaption></figcaption></figure>
-
-To use the SDK, you only need to directly interface to the file named _EP.Enterprise.Vx820.dll_. The other files are dependencies. Make sure to extract all 4 of the files to the location of your choice.
-
-<table data-header-hidden><thead><tr><th width="117"></th><th></th></tr></thead><tbody><tr><td><img src="../../../.gitbook/assets/Icon_File2 (1).png" alt=""></td><td>EP.Enterprise.Vx820Lib.dll</td></tr><tr><td><img src="../../../.gitbook/assets/Icon_File2 (1).png" alt=""></td><td>EP.Vx820.Common.dll</td></tr><tr><td><img src="../../../.gitbook/assets/Icon_File1.png" alt=""></td><td>EP.Enterprise.Vx820Lib.dll.config</td></tr><tr><td><img src="../../../.gitbook/assets/Icon_File2 (1).png" alt=""></td><td>DPayments.DPaymentsSDK.dll</td></tr></tbody></table>
 
 
 
@@ -156,9 +116,9 @@ The above installation package does the following:
 3. Installs a certificate which encrypts data between the browser and the Windows service.
 4. Installs the Windows service which listens on port 8031.
 
-With this, your website will be able to issue commands to the Windows service. You can see [our example website](https://easypay1.com/JqueryVerifone/) communicating with Verifone.
+With this, your website will be able to issue commands to the Windows service by calling `https://localhost:8031` from your website.&#x20;
 
-You can also download the entire site to see how it works:
+See [our example website](https://easypay1.com/JqueryVerifone/) communicating with Verifone or download it to see how it works.
 
 {% include "../../../.gitbook/includes/link-verifone-example-download.md" %}
 
@@ -166,7 +126,7 @@ You can also download the entire site to see how it works:
 
 ### Virtual Terminal
 
-You can also use our Virtual Terminal together with the Windows service. It has built-in support for Verifone. This way, you won't have to build your own UI or write any code. After installing the service, [contact Number](../../../help/customer-support/) to have this feature activated.
+You can use our Virtual Terminal together with the Windows service. It has built-in support for Verifone. This way, you won't have to build your own UI or write any code. After installing the service, [contact Number](../../../help/customer-support/) to have this feature activated.
 
 You can read more about using the Virtual Terminal in the [virtual-terminal.md](virtual-terminal.md "mention") guide.
 
@@ -254,7 +214,7 @@ For browser type Verifone operations, the middleware provides a response object 
 
 ### Consuming the sale response
 
-It is important to consume the `WidgetArgs` response in a particular order, starting with `TxEventType`.
+It is important to consume the `WidgetArgs` response in a particular order, starting with `TxEventTyp`.
 
 {% include "../../../.gitbook/includes/info-verifone-friendly-response.md" %}
 
@@ -287,7 +247,7 @@ It is important to consume the `WidgetArgs` response in a particular order, star
 
 ***
 
-`TxEventType` string
+`TxEventTyp` string
 
 The type of event that occurred during the transaction, indicating success or failure.
 
@@ -295,7 +255,7 @@ Values: TxApproved, TxDecline, TxReversed, PreSaleDeviceCode, PostSaleDeviceCode
 
 ***
 
-Here are actions to take for each possible value of `TxEventType`:
+Here are actions to take for each possible value of `TxEventTyp`:
 
 {% stepper %}
 {% step %}
@@ -373,7 +333,7 @@ An error was encountered in the local Windows service. Examine `ErrCode` and `Er
 
 ### Consuming the consent response
 
-It is important to consume the `WidgetArgs2` response in a particular order, starting with `ConsentEventType`.
+It is important to consume the `WidgetArgs2` response in a particular order, starting with `ConsentEventTyp`.
 
 {% include "../../../.gitbook/includes/info-verifone-friendly-response.md" %}
 
@@ -397,7 +357,7 @@ It is important to consume the `WidgetArgs2` response in a particular order, sta
 
 ***
 
-`ConsentEventType` string
+`ConsentEventTyp` string
 
 The type of event that occurred during the save card on file operation, indicating success or failure.
 
@@ -405,7 +365,7 @@ Values: ConsentSuccess, ConsentFailed, PreConDeviceCode, PostConDeviceCode, Time
 
 ***
 
-Here are actions to take for each possible value of `ConsentEventType`:
+Here are actions to take for each possible value of `ConsentEventTyp`:
 
 {% stepper %}
 {% step %}
@@ -462,6 +422,56 @@ Returned when you supply improper or out of range values in the request, or when
 An error was encountered in the local Windows service. Examine `ErrCode` and `ErrMsg` for more information.
 {% endstep %}
 {% endstepper %}
+
+
+
+***
+
+
+
+## Number Verifone SDK <a href="#easy-pay-verifone-sdk" id="easy-pay-verifone-sdk"></a>
+
+<figure><img src="../../../.gitbook/assets/Number .Net Application.png" alt=""><figcaption></figcaption></figure>
+
+For you to directly interface with the Verifone using our SDK, you will need the Verifone drivers with the custom logging package, and the SDK reference files:
+
+{% include "../../../.gitbook/includes/link-verifone-usb-log.md" %}
+
+{% include "../../../.gitbook/includes/link-verifone-sdk.md" %}
+
+When installed, the first component will provide USB drivers and create a virtual COM 9 port. In addition, it will add a unique event log to the existing windows event log collection.&#x20;
+
+To install the first component, please do the following:
+
+{% stepper %}
+{% step %}
+Connect your Verifone to the USB port which you plan to utilize.
+{% endstep %}
+
+{% step %}
+Wait until the device is fully initialized.
+{% endstep %}
+
+{% step %}
+Download and extract the ZIP file named _Setup\_USB\_log.zip_ to the location of your choice.
+{% endstep %}
+
+{% step %}
+Right click the EXE named _Setup\_USB\_log.exe_ and choose _Run as administrator_.
+{% endstep %}
+
+{% step %}
+After installation, there should be a new windows event log named _EPmiddleWare_.
+{% endstep %}
+{% endstepper %}
+
+<figure><img src="../../../.gitbook/assets/Verifone screenshot 2.png" alt=""><figcaption></figcaption></figure>
+
+To use the SDK, you only need to directly interface to the file named _EP.Enterprise.Vx820.dll_. The other files are dependencies. Make sure to extract all 4 of the files to the location of your choice.
+
+<table data-header-hidden><thead><tr><th width="117"></th><th></th></tr></thead><tbody><tr><td><img src="../../../.gitbook/assets/Icon_File2 (1).png" alt=""></td><td>EP.Enterprise.Vx820Lib.dll</td></tr><tr><td><img src="../../../.gitbook/assets/Icon_File2 (1).png" alt=""></td><td>EP.Vx820.Common.dll</td></tr><tr><td><img src="../../../.gitbook/assets/Icon_File1.png" alt=""></td><td>EP.Enterprise.Vx820Lib.dll.config</td></tr><tr><td><img src="../../../.gitbook/assets/Icon_File2 (1).png" alt=""></td><td>DPayments.DPaymentsSDK.dll</td></tr></tbody></table>
+
+[Contact us](../../../help/customer-support/) for further instructions on how to use the SDK.
 
 
 

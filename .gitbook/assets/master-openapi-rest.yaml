@@ -3681,11 +3681,11 @@ paths:
         - $ref: "#/components/parameters/ContentType"
         - $ref: "#/components/parameters/Accept"
 
-  # Void Credit (International)
+  # Void a Transaction (International)
 
   /APIcardProcREST/v1.0.0/Intl/VoidCredit:
     post:
-      summary: Void a credit transaction
+      summary: Void an international transaction
       operationId: voidIntlCredit
       requestBody:
         required: true
@@ -3697,18 +3697,18 @@ paths:
                 TransID:
                   type: string
                   example: "a88ed0e4-5a3b-11ef-b49b-46647bd59a7a"
-                  description: The transaction ID of the credit to be voided
+                  description: The transaction ID of the transaction to be voided
                 CreditAmt:
                   type: number
                   format: float
                   example: 5.0
-                  description: The amount of the credit to be voided
+                  description: The amount of the transaction to be voided
             example:
               TransID: "a88ed0e4-5a3b-11ef-b49b-46647bd59a7a"
               CreditAmt: 5.0
       responses:
         "200":
-          description: Successfully voided the credit
+          description: Successfully voided the transaction
           content:
             application/json:
               schema:

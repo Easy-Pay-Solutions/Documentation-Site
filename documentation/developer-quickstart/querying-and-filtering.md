@@ -4,7 +4,7 @@ description: Find the information you need through the API or Virtual Terminal
 
 # Querying and Filtering
 
-<figure><img src="../../.gitbook/assets/Querying B .png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Querying B.png" alt=""><figcaption></figcaption></figure>
 
 If you need to find a specific record in our database (such as a transaction or saved consent) or you need to find all records matching your criteria, you can either **query our APIs** programatically or **use the Virtual Terminal** to view and filter the records from its user interface.
 

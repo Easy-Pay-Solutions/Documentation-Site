@@ -4,7 +4,7 @@ description: Learn to make credit card sales and collect consent with Number
 
 # Card Sales and Consent
 
-<figure><img src="../../.gitbook/assets/Credit card sale 2 (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Credit card sale 3.png" alt=""><figcaption></figcaption></figure>
 
 ## Card present sales and consent
 

@@ -14,7 +14,7 @@ Cardholder data is encrypted within the device itself, and remains encrypted as 
 When a merchant supports a Verifone card reader, it helps eliminate chargebacks for transactions which were run through the device.
 {% endhint %}
 
-<figure><img src="../../../.gitbook/assets/Verifone.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Verifone (1).png" alt=""><figcaption></figcaption></figure>
 
 
 

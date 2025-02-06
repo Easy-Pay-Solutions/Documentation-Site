@@ -10,8 +10,7 @@ Number software is a collection of lightweight software products that can be cus
 
 ### Computer specifications <a href="#recommend-computer-specifications" id="recommend-computer-specifications"></a>
 
-Processor minimum: Intel i5 Gen 5 and AMD Ryzen 5
-
+Processor minimum: Intel i5 Gen 5 and AMD Ryzen 5\
 RAM minimum: 8GB (4GB free)
 
 
@@ -25,7 +24,7 @@ RAM minimum: 8GB (4GB free)
 
 ### Browsers <a href="#browsers" id="browsers"></a>
 
-* Microsoft Edge version 81+
-* Google Chrome version 84+
-* Mozilla Firefox version 80+
-* Safari version 7+
+* Microsoft Edge v122.00+
+* Google Chrome v122.0.626.1.111+
+* Mozilla Firefox v123.01+
+* Safari version v17.3.1+

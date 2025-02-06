@@ -10,7 +10,7 @@ Integrating payment processing into your system can be a daunting task. To help 
 
 {% stepper %}
 {% step %}
-#### **Create a Number account and obtain credentials: 1-2 days**
+**Create a Number account and obtain credentials: 1-2 days**
 
 Sign up for a Number Sandbox account to gain access to the platform and its features. Ensure you have all necessary business information ready for registration.
 
@@ -23,7 +23,7 @@ After account creation, retrieve the necessary credentials from the Number Clien
 {% endstep %}
 
 {% step %}
-#### **Choose your integration methods: 1-2 days**
+**Choose your integration methods: 1-2 days**
 
 Read about the [integration-options](integration-options/ "mention") and decide which one best suit your business needs. Options include:
 
@@ -40,7 +40,7 @@ For example: PCI Level 1 clients can use a purely API integration, while others 
 {% endstep %}
 
 {% step %}
-#### Develop a payment workflow: 1-2 days
+**Develop a payment workflow: 1-2 days**
 
 Outline all interaction points in your current workflow where payments might be collected.
 
@@ -48,7 +48,7 @@ Define your requirements for various types of payment processes and equipment (c
 {% endstep %}
 
 {% step %}
-#### Develop the frontend components: 1-2 weeks
+**Develop the frontend components: 1-2 weeks**
 
 {% hint style="info" %}
 If you are using the mobile SDKs or the Virtual Terminal, you can skip this step as you won't need to develop any additional frontend or UI components.
@@ -58,7 +58,7 @@ Create the frontend components necessary for user interaction.
 {% endstep %}
 
 {% step %}
-#### Develop the EMV integration: 1 week
+**Develop the EMV integration: 1 week**
 
 {% hint style="info" %}
 Unless you want to use Verifone card readers or other card readers, you can skip this step as you won't need the EMV integration.
@@ -68,7 +68,7 @@ Implement EMV functionality provided by our Windows service or SDK to support ch
 {% endstep %}
 
 {% step %}
-#### Develop the backend integration: 2-3 weeks
+**Develop the backend integration: 2-3 weeks**
 
 {% hint style="info" %}
 Depending on the scope of your integration, it might take less time.\
@@ -81,13 +81,13 @@ Develop data management, coupling your users with the payment activities by stor
 {% endstep %}
 
 {% step %}
-#### Develop the processes for logging, reporting, and reconciliation: 1 week
+**Develop the processes for logging, reporting, and reconciliation: 1 week**
 
 Set up basic logging where applicable. Consult us to set up reporting and reconciliation processes. They will allow you to track transactions and ensure financial accuracy.
 {% endstep %}
 
 {% step %}
-#### **Test your integration on a development environment: 1-2 weeks**
+**Test your integration on a development environment: 1-2 weeks**
 
 Before going live, thoroughly test your integration in a sandbox environment. Ensure that all payment flows work as expected and that you can handle various transaction scenarios. You can read more about using the sandbox in the [testing](../testing/ "mention") section.\
 \
@@ -95,19 +95,19 @@ Conduct unit testing to validate the integration functionality before going live
 {% endstep %}
 
 {% step %}
-#### Number inspection: 1-2 meetings
+N**umber inspection: 1-2 meetings**
 
 The Number team always inspects the workflow that our clients develop prior to going live.
 {% endstep %}
 
 {% step %}
-#### **Go live: 1 day**
+**Go live: 1 day**
 
 Once testing is complete and you are satisfied with the implementation, switch to the production environment. Update your configuration as necessary.
 {% endstep %}
 
 {% step %}
-#### Monitor and maintain: continuous
+**Monitor and maintain: continuous**
 
 Once you go live, monitor your integration to make sure there are no problems. Work on improvements and fixes as required.
 {% endstep %}

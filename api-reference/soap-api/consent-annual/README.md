@@ -108,7 +108,9 @@ Update the payment amounts, expiration, and customer reference information for a
 
 ***
 
-`ConsentMods` api\_ConsentAnnualEditor (object)
+`ConsentMods` [api\_ConsentAnnualEditor](../soap-object-dictionary.md#api_consentannualeditor) (object)
+
+Updated details for the annual consent.
 
 Fields: ExpMonth, ExpYear, Email, Zip, CustomerRefID, ServiceDescrip, RPGUID, NumDays, LimitPerCharge, LimitLifeTime
 {% endtab %}

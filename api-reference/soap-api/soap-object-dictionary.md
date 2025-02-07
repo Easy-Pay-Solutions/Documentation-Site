@@ -845,3 +845,91 @@ The ID that is returned after a checkin.
 
 
 
+***
+
+
+
+## Annual Consent
+
+Objects describing annual consent.
+
+{% tabs %}
+{% tab title="api_ConsentAnnualCreate" %}
+{% include "../../.gitbook/includes/param-merchid.md" %}
+
+***
+
+{% include "../../.gitbook/includes/param-customerrefid.md" %}
+
+***
+
+`ServiceDescrip` string
+
+Service description.
+
+***
+
+{% include "../../.gitbook/includes/param-rpguid.md" %}
+
+***
+
+`StartDate` date
+
+Start date for the consent.
+
+***
+
+{% include "../../.gitbook/includes/params-consent-duration-and-limit.md" %}
+{% endtab %}
+
+{% tab title="api_ConsentAnnualEditor" %}
+`ExpMonth` int
+
+Expiration month of the card.
+
+***
+
+`ExpYear` int
+
+Full expiration year of the card or the last 2 digits.
+
+***
+
+`Email` string
+
+Email address associated with the consent.
+
+***
+
+`Zip` string
+
+ZIP code associated with the consent.
+
+***
+
+{% include "../../.gitbook/includes/param-customerrefid.md" %}
+
+***
+
+`ServiceDescrip` string
+
+Service description.
+
+***
+
+{% include "../../.gitbook/includes/param-rpguid.md" %}
+
+***
+
+{% include "../../.gitbook/includes/params-consent-duration-and-limit.md" %}
+
+***
+
+`LimitLifeTime` decimal
+
+Total $ limit for the lifetime of the consent.
+{% endtab %}
+{% endtabs %}
+
+
+

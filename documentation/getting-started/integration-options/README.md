@@ -160,9 +160,9 @@ The application interfaces with VeriFone card readers. These devices accept EMV 
 
 
 
-## Win service and DLLs
+## Win service and DLL
 
-If you wish, you can take advantage of our end-to-end encryption model used with the Verifone card reader and build around it by referencing our Dynamic Link Library. The DLL will channel its requests through our API and responses can be consumed at the client software product. This way, you can develop your own workflow and displays.
+If you wish, you can take advantage of our end-to-end encryption model used with the Verifone card reader and build around it by using our Windows service or referencing our Dynamic Link Library. They channel requests through our API and responses can be consumed at the client software level. This way, you can develop your own workflow and displays.
 
 You can read more about integrating with Verifone in the integration guide:
 

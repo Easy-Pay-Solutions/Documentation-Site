@@ -402,7 +402,7 @@ The system will lock your IP after 6 unsuccessful attempts in a row. When a lock
 
 The Client Admin Portal will allow you to create and manage all of your tokens.  There is no limit to the number of tokens you can create. We recommend creating a separate token for each individual processing location (IP address).
 
-Each token has a lifespan of 6 months since it was generated and will need to be replaced afterwards. This can only be done by physically logging into The Client Admin Portal. To make the process faster, The Client Admin Portal provides a way to POST new tokens to your web server to help automate a part of the renewal process.
+Each token has a lifespan of 2 years since it was generated and will need to be replaced afterwards. This can only be done by physically logging into The Client Admin Portal. To make the process faster, The Client Admin Portal provides a way to POST new tokens to your web server to help automate a part of the renewal process.
 
 To learn how to use the Client Admin Portal to renew tokens, see the [client-admin-portal.md](../client-admin-portal.md "mention") guide.
 

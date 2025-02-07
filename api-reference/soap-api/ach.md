@@ -4,7 +4,7 @@ description: Methods related to ACH (Automated Clearing House) transactions
 
 # ACH
 
-## Create an ACH Transaction - Apply Credit
+## Apply Credit to ACH Transaction
 
 <mark style="color:green;">`POST`</mark> /ICardProcess/ACH\_ApplyCredit
 
@@ -36,7 +36,7 @@ Applies a credit to the specified ACH transaction. Credits can be applied after 
 {% endtab %}
 {% endtabs %}
 
-***
+
 
 ## Process Payment - ACH Consent Annual
 
@@ -82,7 +82,7 @@ The authorization ID provided by the payment processor upon approval of the tran
 {% endtab %}
 {% endtabs %}
 
-***
+
 
 ## Process Payment - Alt Merchant - ACH Consent Annual
 
@@ -134,13 +134,15 @@ The authorization ID provided by the payment processor upon approval of the tran
 {% endtab %}
 {% endtabs %}
 
-***
+
+
+
 
 ## ACH Transaction Query
 
 <mark style="color:green;">`POST`</mark> /ICardProcess/ACHTransaction\_Query
 
-Returns the details for an ACH transaction. This query can return more than one transaction if searching for a range. Number has a robust query language \[link] that aids in search.&#x20;
+Returns the details for an ACH transaction. This query can return more than one transaction if searching for a range. Number has a [query language](../../documentation/resources/querying.md) that aids in search.&#x20;
 
 {% tabs %}
 {% tab title="Request body" %}
@@ -148,7 +150,7 @@ Returns the details for an ACH transaction. This query can return more than one 
 
 ***
 
-{% include "../../.gitbook/includes/param-query.md" %}
+{% include "../../.gitbook/includes/param-query-transaction.md" %}
 {% endtab %}
 
 {% tab title="Response body" %}
@@ -224,7 +226,9 @@ Fields: ID, UniqueID, TXstamp, TXN\_DATETIME, AuthID, ValMsg, CreatedBy, Created
 ```
 {% endcode %}
 
-***
+
+
+
 
 ## ACH Transaction Void
 
@@ -259,3 +263,6 @@ Voids an ACH transaction. The transaction can be voided before it is settled. On
 Unique identifier for the authorization of the transaction.
 {% endtab %}
 {% endtabs %}
+
+
+

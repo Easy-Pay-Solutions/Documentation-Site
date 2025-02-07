@@ -26,7 +26,9 @@ Fields: DeclCode, RespMsg, RespDef, CustMsg.
 {% endtab %}
 {% endtabs %}
 
-***
+
+
+
 
 ## Query Enums
 
@@ -40,7 +42,27 @@ Return a list of enum items in the system.
 
 ***
 
-{% include "../../.gitbook/includes/param-query.md" %}
+`Query` string
+
+The enumeration type to query.
+
+Values:\
+\- "ACHSttatus"\
+\- "ACHType"\
+\- "AConsentType"\
+\- "BatchSettleMode"\
+\- "BatchSettleStatus"\
+\- "ConsentType"\
+\- "IntAction"\
+\- "IntlAction"\
+\- "IntlResult"\
+\- "IntlStatus"\
+\- "Period"\
+\- "ReceiptType"\
+\- "Recipient"\
+\- "RecurSchedStatus"\
+\- "TxStatus"\
+\- "TxType"
 {% endtab %}
 
 {% tab title="Response body" %}
@@ -54,7 +76,9 @@ Fields: EnumText, EnumValue.
 {% endtab %}
 {% endtabs %}
 
-***
+
+
+
 
 ## Query Lodging Enums
 
@@ -68,7 +92,9 @@ Return a list of lodging-related enum items in the system.
 
 ***
 
-{% include "../../.gitbook/includes/param-query.md" %}
+`Query` string
+
+The enumeration type to query, specific to lodging.
 {% endtab %}
 
 {% tab title="Response body" %}
@@ -81,3 +107,6 @@ Return a list of lodging-related enum items in the system.
 Fields: EnumText, EnumValue.
 {% endtab %}
 {% endtabs %}
+
+
+

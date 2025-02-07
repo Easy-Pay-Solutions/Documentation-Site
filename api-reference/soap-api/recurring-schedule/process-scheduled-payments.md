@@ -60,7 +60,9 @@ Fields: ConsentID, MerchID, SchedNum, SchedID, TxID, TxApproved, IsPartialApprov
 {% endtab %}
 {% endtabs %}
 
-***
+
+
+
 
 ## Process Scheduled Payments - Selective
 

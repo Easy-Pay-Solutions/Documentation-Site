@@ -36,7 +36,9 @@ Fields: ID, AcctHolderID, CustID, MerchID, CustomerRefID, RPGUID, ServiceDescrip
 {% endtab %}
 {% endtabs %}
 
-***
+
+
+
 
 ## Query Annual Consent - Stats
 
@@ -64,7 +66,9 @@ Fields: FirstChargeAttempt, ID, IsEnabled, LastChargeAmount, LastChargeAttempt, 
 {% endtab %}
 {% endtabs %}
 
-***
+
+
+
 
 ## Query Annual Consent - Full
 

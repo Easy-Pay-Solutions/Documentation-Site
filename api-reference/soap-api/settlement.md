@@ -2,7 +2,7 @@
 description: Methods related to settlements
 ---
 
-# Settlement (v1)
+# Settlement
 
 ## Settle Merchant Transactions - All Open
 
@@ -28,7 +28,9 @@ Settle all open transactions (credit card charges) for the specified merchant.
 {% endtab %}
 {% endtabs %}
 
-***
+
+
+
 
 ## Settle Merchant Transactions - Selective
 
@@ -59,4 +61,6 @@ A list of transactions to settle by ID.
 {% include "../../.gitbook/includes/param-batch-result.md" %}
 {% endtab %}
 {% endtabs %}
+
+
 

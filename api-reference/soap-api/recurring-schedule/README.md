@@ -2,7 +2,7 @@
 description: Methods related to modifying recurring schedules
 ---
 
-# Recurring Schedule (v1)
+# Recurring Schedule
 
 ## Modify Recurring Schedule
 
@@ -40,7 +40,9 @@ Due date of the rescheduled recurring consent.
 {% endtab %}
 {% endtabs %}
 
-***
+
+
+
 
 ## Cancel Recurring Schedule
 
@@ -65,4 +67,6 @@ Cancel a specific payment that is part of the recurring schedule.
 {% include "../../../.gitbook/includes/param-scheduled-payment.md" %}
 {% endtab %}
 {% endtabs %}
+
+
 

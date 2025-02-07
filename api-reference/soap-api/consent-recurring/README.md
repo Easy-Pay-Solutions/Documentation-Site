@@ -56,7 +56,9 @@ Fields: SchedID, paymentNo, paymentAmt, paymentDate, Remaining
 {% endtab %}
 {% endtabs %}
 
-***
+
+
+
 
 ## Modify Recurring Consent
 
@@ -88,7 +90,9 @@ Fields: ExpMonth, ExpYear, Email, Zip, CustomerRefID, ServiceDescrip, RPGUID
 {% endtab %}
 {% endtabs %}
 
-***
+
+
+
 
 ## Cancel Recurring Consent
 
@@ -115,4 +119,6 @@ Cancel a recurring consent and remove credit card data from the system.
 {% include "../../../.gitbook/includes/params-consent-cancel-response.md" %}
 {% endtab %}
 {% endtabs %}
+
+
 

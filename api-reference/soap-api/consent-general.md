@@ -32,7 +32,9 @@ Return consent details.
 {% endtab %}
 {% endtabs %}
 
-***
+
+
+
 
 ## Query Expiring Cards - Before/In Days
 
@@ -64,7 +66,9 @@ Number of days in the future to look for expiring cards.
 {% endtab %}
 {% endtabs %}
 
-***
+
+
+
 
 ## Query Expiring Cards - In Date Range
 

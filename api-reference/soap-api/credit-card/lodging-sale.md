@@ -64,7 +64,9 @@ Process a lodging reservation that authorizes the card prior to guest checkin an
 {% endtab %}
 {% endtabs %}
 
-***
+
+
+
 
 ## Lodging Sale - Manual
 
@@ -128,7 +130,9 @@ Fields: FirstName, LastName, IsAuthOnly, ConsentID4Auth, Folio, ArrivalDate, Dep
 {% endtab %}
 {% endtabs %}
 
-***
+
+
+
 
 ## Lodging Sale - By Consent
 
@@ -182,7 +186,9 @@ Process a lodging reservation using an existing consent instead of processing a 
 {% endtab %}
 {% endtabs %}
 
-***
+
+
+
 
 ## Lodging Sale - By Consent (Explicit)
 
@@ -241,8 +247,6 @@ Identity of the data entry person.
 {% include "../../../.gitbook/includes/params-acquirer-opts-voice-opts-auth-balance.md" %}
 {% endtab %}
 {% endtabs %}
-
-
 
 
 

@@ -2,7 +2,7 @@
 description: Methods related to processing annual consent
 ---
 
-# Process Annual Consent (v1)
+# Process Annual Consent
 
 ## Process Annual Consent
 
@@ -52,7 +52,9 @@ Use the credit card stored on file to process a payment for an existing consent.
 {% endtab %}
 {% endtabs %}
 
-***
+
+
+
 
 ## Process Annual Consent - Alternative
 
@@ -109,3 +111,6 @@ The alternate merchant must be previously assigned to the account holders' accou
 {% include "../../../.gitbook/includes/params-acquirer-opts-voice-opts-auth-balance.md" %}
 {% endtab %}
 {% endtabs %}
+
+
+

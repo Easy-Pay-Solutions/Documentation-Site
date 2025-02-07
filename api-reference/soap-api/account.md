@@ -28,7 +28,9 @@ Fields: ID, AccountName, AccountCode, AutoSettle, AutoSchedule, AutoSettleHour, 
 {% endtab %}
 {% endtabs %}
 
-***
+
+
+
 
 ## Account Settings Query
 
@@ -53,3 +55,6 @@ An array of values for user settings.
 Fields: sKey, sValue, sOptions, sGroup
 {% endtab %}
 {% endtabs %}
+
+
+

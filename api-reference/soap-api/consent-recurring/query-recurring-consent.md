@@ -34,7 +34,9 @@ Fields: ID, AcctHolderID, MerchID, CustID, AcctHolderLastName, AcctHolderFirstNa
 {% endtab %}
 {% endtabs %}
 
-***
+
+
+
 
 ## Query Recurring Consent - Full
 
@@ -69,4 +71,6 @@ Fields: ID, AcctHolderID, MerchID, CustID, AcctHolderLastName, AcctHolderFirstNa
 {% include "../../../.gitbook/includes/param-end-customer-full.md" %}
 {% endtab %}
 {% endtabs %}
+
+
 

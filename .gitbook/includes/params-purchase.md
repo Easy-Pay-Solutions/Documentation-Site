@@ -4,7 +4,9 @@ title: params - purchase
 
 `PurchType` PurchaseType (enum)
 
-The type of purchase. Possible values are:\
+The type of purchase.
+
+Values:\
 \- notSet = 0\
 \- CPSwipe = 1\
 \- ManKey = 2\

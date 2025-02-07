@@ -41,7 +41,9 @@ This can be a partial amount of the full transaction.
 {% endtab %}
 {% endtabs %}
 
-***
+
+
+
 
 ## Void Transaction
 
@@ -73,7 +75,9 @@ Voids a credit card sale transaction.&#x20;
 {% endtab %}
 {% endtabs %}
 
-***
+
+
+
 
 ## Query Transactions
 
@@ -87,7 +91,7 @@ Query credit card transactions. Those can include authorizations, charges, credi
 
 ***
 
-{% include "../../.gitbook/includes/param-query.md" %}
+{% include "../../.gitbook/includes/param-query-transaction.md" %}
 {% endtab %}
 
 {% tab title="Response body" %}
@@ -105,7 +109,9 @@ Fields: ID, SEQ\_NO, ACCT\_LAST\_NAME, ACCT\_FIRST\_NAME, ACCT\_NO, EXP\_DATE, A
 {% endtab %}
 {% endtabs %}
 
-***
+
+
+
 
 ## Query Transaction - Full
 

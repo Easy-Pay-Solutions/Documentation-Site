@@ -2,7 +2,7 @@
 description: Methods related to creating and modifying subscription consent
 ---
 
-# Consent Subscription (v1)
+# Consent Subscription
 
 ## Create Subscription Consent - Card Present
 
@@ -46,7 +46,9 @@ Create a subscription payment plan with a specific $ amount paid per time period
 {% endtab %}
 {% endtabs %}
 
-***
+
+
+
 
 ## Create Subscription Consent - Manual
 
@@ -90,7 +92,9 @@ Create a subscription payment plan with specified $ amount paid per time period.
 {% endtab %}
 {% endtabs %}
 
-***
+
+
+
 
 ## Modify Subscription Consent&#x20;
 
@@ -122,7 +126,9 @@ Fields: ExpMonth, ExpYear, Email, Zip, RPGUID, CustomerRefID, ServiceDescrip, Pa
 {% endtab %}
 {% endtabs %}
 
-***
+
+
+
 
 ## Cancel Subscription Consent&#x20;
 

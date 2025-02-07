@@ -10,7 +10,7 @@ Indicates if the function executed correctly.
 
 `RespMsg` string
 
-Information about the response.
+Friendly response message for the user.
 
 ***
 

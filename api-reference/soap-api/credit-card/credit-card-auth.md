@@ -2,7 +2,7 @@
 description: Methods related to credit card authorization
 ---
 
-# Credit Card Auth (v1)
+# Credit Card Auth
 
 ## &#x20;Credit Card Auth - Manual
 
@@ -68,7 +68,9 @@ Authorizes a credit card transaction when the credit card details are entered ma
 {% endtab %}
 {% endtabs %}
 
-***
+
+
+
 
 ## Credit Card Auth - Card Present
 
@@ -134,7 +136,9 @@ Authorizes a card when the card is present at the place of the sale and can be s
 {% endtab %}
 {% endtabs %}
 
-***
+
+
+
 
 ## Credit Card Voice Auth
 
@@ -184,7 +188,9 @@ This method is used to receive approval for credit card transactions that requir
 {% endtab %}
 {% endtabs %}
 
-***
+
+
+
 
 ## Credit Card Voice Auth - Full
 
@@ -223,6 +229,10 @@ This method is used to receive approval for credit card transactions that requir
 ***
 
 `CardType` string
+
+The type of card used.
+
+Example: VI
 
 ***
 
@@ -301,3 +311,6 @@ This method is used to receive approval for credit card transactions that requir
 `SettledAmount` decimal
 {% endtab %}
 {% endtabs %}
+
+
+

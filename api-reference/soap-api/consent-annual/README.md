@@ -2,7 +2,7 @@
 description: Methods related to creating and modifying annual consent
 ---
 
-# Consent Annual (v1)
+# Consent Annual
 
 ## Create Annual Consent - Card Present
 
@@ -44,7 +44,9 @@ Create an annual consent by sending the credit card details to the processor via
 {% endtab %}
 {% endtabs %}
 
-***
+
+
+
 
 ## Create Annual Consent - Manual
 
@@ -86,7 +88,9 @@ Create an annual consent by sending the credit card details, which include: card
 {% endtab %}
 {% endtabs %}
 
-***
+
+
+
 
 ## Modify Annual Consent
 
@@ -118,7 +122,9 @@ Fields: ExpMonth, ExpYear, Email, Zip, CustomerRefID, ServiceDescrip, RPGUID, Nu
 {% endtab %}
 {% endtabs %}
 
-***
+
+
+
 
 ## Cancel Annual Consent
 

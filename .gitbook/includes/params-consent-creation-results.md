@@ -10,10 +10,16 @@ Indicates whether the consent was created successfully.
 
 `PreConsentAuthSuccess` bool
 
+Example: true
+
 ***
 
-`PreConsentAuthMessage` bool
+`PreConsentAuthMessage` string
+
+Example: APPROVED 095710
 
 ***
 
 `PreConsentAuthTxID` int
+
+Example: 84

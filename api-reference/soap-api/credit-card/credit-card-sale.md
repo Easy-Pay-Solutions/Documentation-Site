@@ -81,7 +81,9 @@ Fields: PurchType, Track, EmvTags, CardInfo, EMVRecTags, IsAuthOnly
 {% endtab %}
 {% endtabs %}
 
-***
+
+
+
 
 ## Credit Card Sale - Card Present
 
@@ -147,7 +149,9 @@ Authorizes a card when the card is present at the place of the sale and can be s
 {% endtab %}
 {% endtabs %}
 
-***
+
+
+
 
 ## Credit Card Sale - Manual
 
@@ -213,6 +217,10 @@ Processes a credit card cardsale when the credit card details are entered manual
 {% endtab %}
 {% endtabs %}
 
+
+
+
+
 ## Credit Card Sale - EMV
 
 <mark style="color:green;">`POST`</mark> /ICardProcess/CreditCardSale\_EMV
@@ -272,4 +280,6 @@ Processes a credit card sale using a card reader device. The card information is
 {% include "../../../.gitbook/includes/params-acquirer-opts-voice-opts-auth-balance.md" %}
 {% endtab %}
 {% endtabs %}
+
+
 

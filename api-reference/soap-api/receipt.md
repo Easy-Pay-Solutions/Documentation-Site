@@ -25,20 +25,20 @@ The transaction ID or consent ID
 `ReceiptTypes` int
 
 Values:\
-\- 1 (Customer)\
-\- 2 (Merchant)\
-\- 3 (Both)
+\- 1 (Transaction)\
+\- 2 (Void)\
+\- 3 (Refund)\
+\- 4 (Annual Consent)\
+\- 5 (Recurring Consent)
 
 ***
 
 `Recipient` int
 
 Values:\
-\- 1 (Transaction)\
-\- 2 (Void)\
-\- 3 (Refund)\
-\- 4 (Annual)\
-\- 5 (Recurring)
+\- 1 (Customer)\
+\- 2 (Merchant)\
+\- 3 (Both)
 {% endtab %}
 
 {% tab title="Response body" %}
@@ -52,7 +52,9 @@ The html of the receipt.
 {% endtab %}
 {% endtabs %}
 
-***
+
+
+
 
 ## Query Receipt Details
 
@@ -81,4 +83,6 @@ The details you'll need to create a credit card sale receipt.
 Fields: MerchNumber, MerchDescrip, MerchAddress, MerchCity, MerchState, MerchZip, MerchPhone, MerchEmail, MerchTID, EntryType, TxDateTime, TxAmount, CardHolder, EndCustomer, TxID, TxnCode, TxType, TxStatus, RefID, CardType, CardNumber, AcctHolderID, EndCustID, AID, TVR, TSI, AC, ARC.
 {% endtab %}
 {% endtabs %}
+
+
 

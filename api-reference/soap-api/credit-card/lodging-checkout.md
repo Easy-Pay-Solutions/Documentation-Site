@@ -2,7 +2,7 @@
 description: Methods related to lodging checkout
 ---
 
-# Lodging Checkout (v1)
+# Lodging Checkout
 
 ## Lodging Checkout Full - By TxID
 
@@ -48,7 +48,9 @@ The final $ amount of stay. Cannot be higher than 15% of authorization of checki
 {% endtab %}
 {% endtabs %}
 
-***
+
+
+
 
 ## Lodging Checkout - By TxID
 
@@ -84,7 +86,9 @@ The final $ amount of stay. Cannot be higher than 15% of authorization of checki
 {% endtab %}
 {% endtabs %}
 
-***
+
+
+
 
 ## Lodging Checkout - By StayID
 
@@ -121,3 +125,6 @@ The final $ amount of stay. Cannot be higher than 15% of authorization of checki
 {% include "../../../.gitbook/includes/param-txid.md" %}
 {% endtab %}
 {% endtabs %}
+
+
+

@@ -60,7 +60,7 @@ This DLL provides a means of collecting payments and creating card-on-file plans
 The browser-based interface together with the Virtual Terminal or your own custom web application is the recommended approach for new customers.&#x20;
 {% endhint %}
 
-**Requirements**
+#### **Requirements**
 
 There are 2 categories of integrations which require two different sets of files
 
@@ -368,7 +368,7 @@ The user waited too long to insert the card or interact with the device. Examine
 {% endstep %}
 
 {% step %}
-#### AspenError
+**AspenError**
 
 An error occurred on Number Aspen Cloud processing servers. Examine `ErrCode` and `ErrMsg` for more information.
 {% endstep %}
@@ -465,7 +465,7 @@ The user waited too long to insert the card or interact with the device. Examine
 {% endstep %}
 
 {% step %}
-#### AspenError
+**AspenError**
 
 An error occurred on Number Aspen Cloud processing servers. Examine `ErrCode` and `ErrMsg` for more information.
 {% endstep %}

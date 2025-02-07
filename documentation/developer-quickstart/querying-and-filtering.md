@@ -58,7 +58,7 @@ Once you're logged in, see the navigation on the left and click on _Scheduled_ t
 
 You can read more about using the Virtual Terminal in the [virtual-terminal.md](../getting-started/integration-options/virtual-terminal.md "mention") guide.
 
-<figure><img src="../../.gitbook/assets/Virtual_Terminal.png" alt=""><figcaption><p>Virtual Terminal navigation</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Virtual Terminal.png" alt=""><figcaption><p>Virtual Terminal navigation</p></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/Virtual Terminal 6a Consent list (1).png" alt=""><figcaption><p>Consent list and filters</p></figcaption></figure>
 

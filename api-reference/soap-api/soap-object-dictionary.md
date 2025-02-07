@@ -686,9 +686,7 @@ Objects describing transactions in general.
 {% endtab %}
 
 {% tab title="api_PurchaseDetails" %}
-`ServiceDescrip` string
-
-Service description.
+{% include "../../.gitbook/includes/param-service-descrip.md" %}
 
 ***
 
@@ -843,8 +841,6 @@ The ID that is returned after a checkin.
 {% endtab %}
 {% endtabs %}
 
-
-
 ***
 
 
@@ -853,7 +849,87 @@ The ID that is returned after a checkin.
 
 Objects describing annual consent.
 
+
+
 {% tabs %}
+{% tab title="api_ConsentAnnual" %}
+`ID` int
+
+***
+
+`AcctHolderID` int
+
+***
+
+`CustID` int
+
+***
+
+{% include "../../.gitbook/includes/param-merchid.md" %}
+
+***
+
+{% include "../../.gitbook/includes/param-customerrefid.md" %}
+
+***
+
+{% include "../../.gitbook/includes/param-rpguid.md" %}
+
+***
+
+{% include "../../.gitbook/includes/param-service-descrip.md" %}
+
+***
+
+`AcctHolderLastName` string
+
+***
+
+`AcctHolderFirstName` string
+
+***
+
+`IsEnabled` bool
+
+***
+
+`StartDate` date
+
+Start date for the consent.
+
+***
+
+`EndDate` date
+
+End date for the consent.
+
+***
+
+{% include "../../.gitbook/includes/params-consent-duration-and-limit.md" %}
+
+***
+
+`LimitLifeTime` decimal
+
+Total $ limit for the lifetime of the consent.
+
+***
+
+`AuthTxID` int
+
+***
+
+`CreatedOn` date
+
+***
+
+`CreatedBy` date
+
+***
+
+`AcctNo` string
+{% endtab %}
+
 {% tab title="api_ConsentAnnualCreate" %}
 {% include "../../.gitbook/includes/param-merchid.md" %}
 
@@ -863,9 +939,7 @@ Objects describing annual consent.
 
 ***
 
-`ServiceDescrip` string
-
-Service description.
+{% include "../../.gitbook/includes/param-service-descrip.md" %}
 
 ***
 
@@ -911,9 +985,7 @@ ZIP code associated with the consent.
 
 ***
 
-`ServiceDescrip` string
-
-Service description.
+{% include "../../.gitbook/includes/param-service-descrip.md" %}
 
 ***
 
@@ -922,6 +994,76 @@ Service description.
 ***
 
 {% include "../../.gitbook/includes/params-consent-duration-and-limit.md" %}
+
+***
+
+`LimitLifeTime` decimal
+
+Total $ limit for the lifetime of the consent.
+{% endtab %}
+
+{% tab title="api_ConsentAnnualStats" %}
+`ID` int
+
+ID of the consent.
+
+***
+
+`IsEnabled` bool
+
+***
+
+`NumChargeAttempts` int
+
+***
+
+`NumFailedAttempts` int
+
+***
+
+`FirstChargeAttempt` date
+
+***
+
+`LastChargeAttempt` date
+
+***
+
+`TotalDollarsSettled` decimal
+
+***
+
+`TotalDollarsOpen` decimal
+
+***
+
+`LastSettledAmount` decimal
+
+***
+
+`LastChargeAmount` decimal
+
+***
+
+`RemainingInConsent` decimal
+
+Total $ limit remaining for the consent.
+
+***
+
+`NumTx` int
+
+***
+
+`NumSettled` int
+
+***
+
+`NumFailed` int
+
+***
+
+`NumOpen` int
 
 ***
 

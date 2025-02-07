@@ -28,7 +28,7 @@ Return annual consent details.&#x20;
 
 ***
 
-`Consents` List\<api\_ConsentAnnual> (array\<object>)
+`Consents` List<[api\_ConsentAnnual](../soap-object-dictionary.md#api_consentannual)> (array\<object>)
 
 A list of relevant consent records.
 
@@ -60,9 +60,9 @@ Return statistics for a single consent such as the number of charges or open and
 
 ***
 
-`Stats` api\_ConsentAnnualStats (object)
+`Stats` [api\_ConsentAnnualStats](../soap-object-dictionary.md#api_consentannualstats) (object)
 
-Fields: FirstChargeAttempt, ID, IsEnabled, LastChargeAmount, LastChargeAttempt, LastSettledAmount, LimitLifeTime, NumChargeAttempts, NumFailed, NumFailedAttempts, NumOpen, NumSettled, NumTx, RemainingInConsent, TotalDollarsOpen, TotalDollarsSettled.
+Fields: ID, IsEnabled, NumChargeAttempts, NumFailedAttempts, FirstChargeAttempt, LastChargeAttempt, TotalDollarsSettled, TotalDollarsOpen, LastSettledAmount, LastChargeAmount, RemainingInConsent, NumTx, NumSettled, NumFailed, NumOpen, LimitLifeTime.
 {% endtab %}
 {% endtabs %}
 

@@ -1,4 +1,8 @@
-# Content Guidelines
+---
+description: Guidelines regarding use of specific components and fonts
+---
+
+# Component Guidelines
 
 ## Typography
 

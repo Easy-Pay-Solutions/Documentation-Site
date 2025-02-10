@@ -111,4 +111,4 @@
 
 * [Dev Portal Guidelines](guidelines/dev-portal-guidelines/README.md)
   * [Developer Portal Structure](guidelines/dev-portal-guidelines/developer-portal-structure.md)
-  * [Content Guidelines](guidelines/dev-portal-guidelines/content-guidelines.md)
+  * [Component Guidelines](guidelines/dev-portal-guidelines/component-guidelines.md)

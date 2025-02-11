@@ -12,13 +12,23 @@ layout:
     visible: true
 ---
 
-# React Native Wrapper Sample Code for the Mobile SDK
+# React Native Wrapper
 
-{% embed url="https://github.com/Easy-Pay-Solutions/Mobile-SDK-ReactNative" %}
-React Native Samples
-{% endembed %}
+{% include "../../../.gitbook/includes/link-react-native-wrapper.md" %}
 
-The React Native Mobile SDK Wrapper provides a bridge between a React Native based application and the native Number Mobile SDK libraries. Number's [Android](android-sdk.md) and [iOS](ios-sdk.md) SDK libraries are required for use of these samples. It is highly recommended that you review the core SDK products before proceeding.
+The React Native Mobile SDK wrapper provides a bridge between a React Native based application and the native Number mobile SDK libraries.&#x20;
+
+{% hint style="warning" %}
+Number's [Android](android-sdk.md) and [iOS](ios-sdk.md) SDK libraries are required for use of the wrapper. **It is highly recommended that you review the core SDK products before proceeding.**
+{% endhint %}
+
+
+
+***
+
+
+
+## Installation
 
 ### Requirements
 
@@ -30,49 +40,73 @@ The React Native Mobile SDK Wrapper provides a bridge between a React Native bas
 6. Node v18.19.0 or newer
 7. npm v10.8.2 or newer
 
+
+
 ### Prerequisites
 
-Before beginning your implementation you will need an Easy Pay account. Your account will include the following items:
+Before beginning your implementation you will need a Number account. It should include the following:
 
-1. Session Key: this authenticates you to a particular account.
-2. HMAC secret: used to create a hash which proves your request is authentic.
-3. RSA Certificate: to encrypt the credit card number prior to transmission.
-4. A sentry.io key for logging events and errors.
-5. Merchant Record or Merchant ID: Each Easy Pay account can support multiple merchant records. Each merchant record can be a separate location center which will generate a separate daily settlement report. Many of our API calls require that you specify which MERCHID when executing a particular function.
+1. **Session Key**: this authenticates you to a particular account.
+2. **HMAC secret**: used to create a hash which proves your request is authentic.
+3. **RSA Certificate**: to encrypt the credit card number prior to transmission.
+4. **A sentry.io key**: used for logging events and errors.
+5. **Merchant record or merchant ID**: Each Number account can support multiple merchant records.&#x20;
 
-### Installation Instructions
+{% hint style="info" %}
+Each merchant record can be a separate location center which generates a separate daily settlement report. Many of our API calls require that you specify which merchant ID to use.
+{% endhint %}
 
-#### Step 1: Setup your Environment
+
+
+### Installation instructions
+
+{% stepper %}
+{% step %}
+**Setup your environment**
 
 Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions until the "Creating a new application" step before proceeding.
+{% endstep %}
 
-#### Step 2: Install Components
+{% step %}
+**Install components**
 
 **For iOS**
 
-From the project's _root folder_, run npm install. This will load the node\_modules packages that are listed in the package.json file. Change directories to the ios folder and run pod install.
+From the project's **root folder**, run _npm install_. This will load the `node_modules` packages that are listed in the `package.json` file. Change directories to the iOS folder and run _pod install_.
 
-```
+```ruby
 # in a terminal window
   npm install
 
   cd ios
   pod install
 ```
+{% endstep %}
 
-#### **Configure Keys**
+{% step %}
+**Configure keys**
 
-In the app.tsx file, these values are passed to the `EasyPayModule.configureSecrets` method:
+In the `app.tsx` file, pass your configuration to`EasyPayModule.configureSecrets`:
 
 ```swift
 EasyPayModule.configureSecrets("YOUR_API_KEY", "YOUR_HMAC_SECRET", "SENTRY_DSN", true)
 ```
+{% endstep %}
+{% endstepper %}
 
-### Start Your Application
 
-First, you will need to start the **Metro Server**, the JavaScript bundler that ships with React Native. To start Metro, run the following command from the _root_ of your React Native project:
 
-```
+***
+
+
+
+## Getting started
+
+### Start your application
+
+First, you will need to start the **Metro Server**, the JavaScript bundler that ships with React Native. To start Metro, **run the following command from the root of your React Native project**:
+
+```ruby
 # using npm
   npm start
 
@@ -80,11 +114,9 @@ First, you will need to start the **Metro Server**, the JavaScript bundler that 
   yarn start
 ```
 
-### **Run the App**
+Let the Metro Bundler run in its own terminal. To run the app, **open a new terminal from the root of your React Native project** and run one of the following commands:
 
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your Android or iOS app:
-
-```
+```ruby
 # using npm
   npm run android
 
@@ -92,7 +124,7 @@ Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _roo
   yarn android
 ```
 
-```
+```ruby
 # using npm
   npm run ios
 
@@ -100,7 +132,11 @@ Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _roo
   yarn ios
 ```
 
-If everything is set up correctly, you should see your new app running in your Android Emulator or iOS Simulator.  This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively. To launch the wrapper in XCode, click on the EasyPayRN.xcworkspace file.
+If everything is set up correctly, you should see your new app running in your Android Emulator or iOS Simulator.&#x20;
+
+This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively. To launch the wrapper in XCode, click on the `EasyPayRN.xcworkspace` file.
+
+
 
 ### Certificates
 
@@ -114,11 +150,13 @@ To test the certificate download, call:&#x20;
 EasyPayModule.loadCertificate()
 ```
 
-### Using the Widgets
+
+
+### Using the widgets
 
 Number's prebuilt payment UI components allow you to collect and process credit card information in a secure way.
 
-#### **Managing Cards**
+#### **Managing cards**
 
 For managing saved cards without making a payment, the following initializer should be used:
 
@@ -159,9 +197,11 @@ await EasyPayModule.manageAndSelect(config, user, payment, address)
   }
 ```
 
-The config and payment objects are used for passing additional payment details not visible for the end user. Either customerReferenceId or rpguid must be provided to get the list of consents of a specific customer. In case of of incorrect initialization data, `CardSelectionViewControllerInitError` will be thrown.
+The config and payment objects are used for passing additional payment details not visible for the end user. Either `customerReferenceId` or `rpguid` must be provided to get the list of consents of a specific customer.&#x20;
 
-**Collecting Payments**
+In case of of incorrect data, `CardSelectionViewControllerInitError` will be thrown.
+
+#### **Collecting payments**
 
 For managing saved cards and collecting a payment, following initializer should be used:
 
@@ -203,9 +243,13 @@ await EasyPayModule.pay (config, user, payment, address)
   }
 ```
 
-### Event Emitters
 
-Communication between the Number SDK widgets and the React Native wrapper is handled via event emitters. These event emitters allow you to respond to user events such as a payment being processed. The EasyPayModule.swift file contains functions that map to the iOS SDK's `CardPaymentDelegate` and `CardSelectionDelegate` protocols. These functions send events that are received in the wrapper's Javascript code.
+
+### Event emitters
+
+Communication between the Number SDK widgets and the React Native wrapper is handled via event emitters. These event emitters allow you to respond to user events such as a payment being processed.&#x20;
+
+The `EasyPayModule.swift` file contains functions that map to the iOS SDK's `CardPaymentDelegate` and `CardSelectionDelegate` protocols. These functions send events that are received in the wrapper's JavaScript code.
 
 ```swift
 //MARK: - CardSelectionDelegate
@@ -296,7 +340,7 @@ func didPayWithCard(
 
 ```
 
-On the react native side, configure event listeners to respond to the raised events:
+On the React Native side, **configure event listeners to respond to the raised events**:
 
 ```javascript
 # testing from App.tsx
@@ -388,16 +432,6 @@ On the react native side, configure event listeners to respond to the raised eve
         console.log('Payment result', result.data);
     });
 ```
-
-
-
-
-
-
-
-
-
-
 
 
 

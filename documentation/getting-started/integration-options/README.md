@@ -76,7 +76,7 @@ It's important to note that some API functionality will require you to collect c
 
 You can read more about implementation in the API integration guides:
 
-<table data-card-size="large" data-view="cards"><thead><tr><th></th></tr></thead><tbody><tr><td><a data-mention href="rest-api.md">rest-api.md</a> ></td></tr><tr><td><a data-mention href="soap-api.md">soap-api.md</a> ></td></tr></tbody></table>
+<table data-card-size="large" data-view="cards"><thead><tr><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td>REST API ></td><td><a href="rest-api.md">rest-api.md</a></td></tr><tr><td>SOAP API ></td><td><a href="soap-api.md">soap-api.md</a></td></tr></tbody></table>
 
 
 
@@ -84,15 +84,17 @@ You can read more about implementation in the API integration guides:
 
 
 
-## Android, iOS, and React Native SDKs
+## Mobile SDKs
 
-The mobile SDKs will allow you to integrate Number payments services into any Android and iOS application using the prebuilt payment UI components. Similar to PayForm, those components will allow you to collect cardholder data and process payments in a secure and PCI compliant way. In addition to the native Android and iOS SDKs, we offer a React Native wrapper which can be used to build a cross-platform app.
+The mobile SDKs will allow you to integrate Number payments services into any Android and iOS application using the prebuilt payment UI components. **Similar to PayForm, those components will allow you to collect cardholder data and process payments in a secure and PCI compliant way.**&#x20;
+
+In addition to the native Android and iOS SDKs, we offer a React Native wrapper which can be used to build a cross-platform app.&#x20;
 
 If you need to integrate Number payments with a mobile application, we recommend using the SDKs.
 
 You can read more about implementation in the SDK integration guides:
 
-<table data-view="cards"><thead><tr><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><a data-mention href="android-sdk.md">android-sdk.md</a> ></td><td></td></tr><tr><td><a data-mention href="ios-sdk.md">ios-sdk.md</a> ></td><td></td></tr><tr><td><a href="react-native-wrapper-sample-code-for-the-mobile-sdk.md">React Native SDK ></a></td><td><a href="react-native-wrapper-sample-code-for-the-mobile-sdk.md">react-native-wrapper-sample-code-for-the-mobile-sdk.md</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td>Android SDK ></td><td><a href="android-sdk.md">android-sdk.md</a></td></tr><tr><td>iOS SDK ></td><td><a href="ios-sdk.md">ios-sdk.md</a></td></tr><tr><td>React Native SDK ></td><td><a href="react-native-wrapper.md">react-native-wrapper.md</a></td></tr></tbody></table>
 
 
 
@@ -114,7 +116,7 @@ We recommend using the PayForm to collect all cardholder data when integrating w
 
 You can read more about implementation in the integration guides:
 
-<table data-card-size="large" data-view="cards"><thead><tr><th></th></tr></thead><tbody><tr><td><a data-mention href="payform.md">payform.md</a> ></td></tr><tr><td><a data-mention href="widgets.md">widgets.md</a> ></td></tr></tbody></table>
+<table data-card-size="large" data-view="cards"><thead><tr><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td>PayForm ></td><td><a href="payform.md">payform.md</a></td></tr><tr><td>Widgets ></td><td><a href="widgets.md">widgets.md</a></td></tr></tbody></table>
 
 
 
@@ -136,7 +138,7 @@ The VT is the fastest way to start trying out our payment services. Otherwise, i
 
 You can read more about the Virtual Terminal in the user guide:
 
-<table data-card-size="large" data-view="cards"><thead><tr><th></th></tr></thead><tbody><tr><td><a data-mention href="virtual-terminal.md">virtual-terminal.md</a> ></td></tr></tbody></table>
+<table data-card-size="large" data-view="cards"><thead><tr><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td>Virtual Terminal ></td><td><a href="virtual-terminal.md">virtual-terminal.md</a></td></tr></tbody></table>
 
 
 
@@ -166,7 +168,7 @@ If you wish, you can take advantage of our end-to-end encryption model used with
 
 You can read more about integrating with Verifone in the integration guide:
 
-<table data-card-size="large" data-view="cards"><thead><tr><th></th></tr></thead><tbody><tr><td><a data-mention href="verifone.md">verifone.md</a> ></td></tr></tbody></table>
+<table data-card-size="large" data-view="cards"><thead><tr><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td>Verifone ></td><td><a href="verifone.md">verifone.md</a></td></tr></tbody></table>
 
 
 

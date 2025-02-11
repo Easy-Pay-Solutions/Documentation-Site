@@ -84,15 +84,15 @@ You can read more about implementation in the API integration guides:
 
 
 
-## Android and iOS SDKs
+## Android, iOS, and React Native SDKs
 
-The mobile SDKs will allow you to integrate Number payments services into any Android and iOS application using the prebuilt payment UI components. Similar to PayForm, those components will allow you to collect cardholder data and process payments in a secure and PCI compliant way.
+The mobile SDKs will allow you to integrate Number payments services into any Android and iOS application using the prebuilt payment UI components. Similar to PayForm, those components will allow you to collect cardholder data and process payments in a secure and PCI compliant way. In addition to the native Android and iOS SDKs, we offer a React Native wrapper which can be used to build a cross-platform app.
 
-If you need to integrate Number payments with a mobile application, we recommend using this approach.
+If you need to integrate Number payments with a mobile application, we recommend using the SDKs.
 
 You can read more about implementation in the SDK integration guides:
 
-<table data-card-size="large" data-view="cards"><thead><tr><th></th></tr></thead><tbody><tr><td><a data-mention href="android-sdk.md">android-sdk.md</a> ></td></tr><tr><td><a data-mention href="ios-sdk.md">ios-sdk.md</a> ></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><a data-mention href="android-sdk.md">android-sdk.md</a> ></td><td></td></tr><tr><td><a data-mention href="ios-sdk.md">ios-sdk.md</a> ></td><td></td></tr><tr><td><a href="react-native-wrapper-sample-code-for-the-mobile-sdk.md">React Native SDK ></a></td><td><a href="react-native-wrapper-sample-code-for-the-mobile-sdk.md">react-native-wrapper-sample-code-for-the-mobile-sdk.md</a></td></tr></tbody></table>
 
 
 

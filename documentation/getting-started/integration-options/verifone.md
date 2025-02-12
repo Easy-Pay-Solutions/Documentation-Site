@@ -252,69 +252,16 @@ https://localhost:8031/VerifoneSVC/service/GetEmvComboJson?SessKey=&AcctHolderJs
 ```
 {% endcode %}
 
-Resetting the device
+### Resetting The Device&#x20;
 
-The red button on the Verifone can be used to cancel the current operation and set up for _Ready_ state in most cases. See the `resetVerifone` and `unlockVerifone` functions.
+The red Button on the Verifone can be used to Cancel the current operation and also to setup for the Ready State. \
+\
+Your software will be notified of the Reset should this Occur.
 
-{% code overflow="wrap" lineNumbers="true" %}
-```javascript
-//  Sends a reset command to the Verifone device
-function resetVerifone() {
-    $.ajax({
-        type: "GET",
-        url: "https://localhost:8031/VerifoneSVC/service/GetCard?Option=10",
+You can also call the function named UnlockVerifone(); which will reset both the software and the hardware so that you can once again enter the ready state. &#x20;
 
-        success: function (data) {
-            var responseArray = data.split("|"); // parse response
-            
-            // example of showing the results and 
-            // clearing the message after a timeout
-            $('#StatusLabel').html(responseArray[1]); 
-            setTimeout("$('#StatusLabel').html('')", 3000);
-        },
-        error: function (xhr, status, error) {
-            console.error("Verifone Middleware Error", {
-                statusCode: xhr.status,
-                statusText: xhr.statusText,
-                error: error
-            });
-            alert(`Verifone Middleware Error: ${error}`);
-        }
-    });
-}
-
-// Sends an unlock command to the Verifone device
-function unlockVerifone() {
-    $.ajax({
-        type: "GET",
-        url: "https://localhost:8031/VerifoneSVC/service/GetCard?Option=911",
-
-        success: function (data) {
-            var responseArray = data.split("|"); // parse response
-            
-            // example of showing the results and 
-            // clearing the message after a timeout
-            $('#StatusLabel').html(responseArray[1]);
-            setTimeout("$('#StatusLabel').html('')", 3000);
-
-        },
-        error: function (xhr, status, error) {
-            console.error("Verifone Middleware Error", {
-                statusCode: xhr.status,
-                statusText: xhr.statusText,
-                error: error
-            });
-            alert(`Verifone Middleware Error: ${error}`);
-        }
-    });
-}
-
-```
-{% endcode %}
-
-The `resetVerifone` function will send a reset command to the Verifone device. This can be used to put the device back into _Ready_ state.
-
-The `unlockVerifone` function will release the middleware from its current wait state or workflow and also send a reset command to the device.&#x20;
+If you ever send a command to the Verifone Middleware while it is still processing the previous one, it will respond with an error stating that is it BUSY.  In the rare situation where the Middleware remains Busy for an unreasonable amount of time you can issue the UnlockVerifone(); command in order to return the device to the ready State. You can also press the red Button on the device 2 times to \
+enter the ready state.
 
 {% hint style="warning" %}
 If you continue to receive a _Busy_ response from the middleware, but you don't believe that waiting will yield productive results, you may use the `unlockVerifone` function to return the device to _Ready_ state.
@@ -581,6 +528,12 @@ Right click the EXE named _Setup\_USB\_log.exe_ and choose _Run as administrator
 
 {% step %}
 After installation, there should be a new windows event log named _EPmiddleWare_.
+{% endstep %}
+
+{% step %}
+With the VeriFone plugged in you should also see an entry in the device manager attched to COM 9
+
+
 {% endstep %}
 {% endstepper %}
 

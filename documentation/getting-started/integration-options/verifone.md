@@ -91,7 +91,8 @@ For any browser-based Implementation using the Verifone, you will need to instal
 
 To Begin: Download the compressed archive:
 
-{% include "../../../.gitbook/includes/link-verifone-windows-service.md" %}
+[Verifone Middleware Installer](https://easypay1.com/deploy/MiddleWare/EPVerifoneSetup_E2E_1041.zip)\
+
 
 **To install the Win service:**
 
@@ -126,15 +127,11 @@ The above installation package does the following:
 
 Your website can now issue commands to the Win Service as is demonstrated using the sample site:&#x20;
 
-{% embed url="https://easypay1.com/JqueryVerifone/" %}
-[https://easypay1.com/JqueryVerifone/](https://easypay1.com/JqueryVerifone/)
-{% endembed %}
+[Sample Verifone Website](https://easypay1.com/JqueryVerifone/)
 
 You can download the entire site here:
 
-{% embed url="https://easypay1.com/docs/jquery_verifone.zip" %}
-https://easypay1.com/docs/jquery\_verifone.zip
-{% endembed %}
+[Sample Verifone Website Content](https://easypay1.com/docs/jquery_verifone.zip)
 
 {% hint style="warning" %}
 To run the Verifone demo website, you must have the Verifone Windows service installed.
@@ -159,48 +156,103 @@ You will find a script file named EasyPayVerifone.js which has provided the foll
 5. EMV save card only
 6. Reset the Middleware and Verifone
 
-#### Verifone EMV sale only
+#### You can call these functions as follows:
 
-Here's an simplified example of how you can invoke the service for a sale:
+```clike
+// EMV Sale Only
+$(document).ready(function () {
+	$('#EMVSaleOnly').click(function () {
+		EMVSaleCombo(false);
+	});
+});
+// EMV Sale and Save Card
+$(document).ready(function () {
+	$('#EMVSaleAndSave').click(function () {
+		EMVSaleCombo(true);
+	});
+});
+// Manual Sale Only
+$(document).ready(function () {
+	$('#ManualSaleOnly').click(function () {
+		ManualSaleCombo(false);
+	});
+});
+// Manual Sale and Save Card
+$(document).ready(function () {
+	$('#ManualSaleAndSave').click(function () {
+		ManualSaleCombo(true);
+	});
+});
+// EMV Save Card Only
+$(document).ready(function () {
+	$('#SaveCardOnly').click(function () {
+		SaveCardChip();
+	});
+});
+// Unlock Middleware and Reset Verifone
+$(document).ready(function () {
+	$('#UnlockButton').click(function () {
+		UnlockVerifone();
+	});
+});
+```
 
-{% include "../../../.gitbook/includes/code-verifone-cp-sale-browser-based.md" %}
+### Creating your first EMV transaction
 
-#### Verifone EMV annual consent only
+In the script file named EasyPayVerifone.js you can inspect the function named EMVSaleCombo():
 
-Here's an simplified example of how you can invoke the service to collect annual consent:
+EMVSaleCombo(SaveCard)
 
-{% include "../../../.gitbook/includes/code-verifone-cp-annual-consent-browser-based.md" %}
+It expects the following objects
 
-#### Verifone EMV sale combo
+1. SaveCard ( true / false)
+2. SessionKey ( string )
+3. AccountHolder ( Json )
+4. EndCustomer ( can be the same as Accountholder )
+5. PurchaseDetails (Json)
+6. Amount ( can be numeric value or JSON object )
 
-To make a chip sale and store the card on file, follow the previous examples and replace the URL using the template below:
+The SessionKey is obtained by using our API to Authenticate.  Your Server can pass this down to your client side script.  &#x20;
 
-<pre class="language-javascript" data-overflow="wrap"><code class="lang-javascript"><strong>const url = `https://localhost:8031/VerifoneSVC/service/GetEmvComboJson?SessKey=${sessKey}&#x26;AcctHolderJson=${acctHolderJson}&#x26;EndCustJson=${endCustJson}&#x26;PurchDetailsJson=${purchdetailsJson}&#x26;MerchID=${merchID}&#x26;Amount=${amount}&#x26;SaveCard=true`
-</strong></code></pre>
-
-#### Verifone manual sale only
-
-To make a manual sale, follow the previous examples and replace the URL using the template below:
+The AccountHolder object looks like this. Note the embedded address object:
 
 {% code overflow="wrap" %}
-```javascript
-const url = `https://localhost:8031/VerifoneSVC/service/GetManualJson?SessKey=${sessKey}&AcctHolderJson=${acctHolderJson}&EndCustJson=${endCustJson}&PurchDetailsJson=${purchDetailsJson}&MerchID=${merchID}&Amount=${amount}`;
+```
+{"Firstname":"Jim","Lastname":"Smith","address":{"Address1":"21 Elm St","Address2":"","City":"Farmindale","State":"CA","ZIP":"83765","Country":"USA"},"Phone":"207-453-4587"}
 ```
 {% endcode %}
 
-#### Verifone manual sale combo
+The End Customer object is identical to the Accountholder object .  You may not have two objects so you can set both to the same value.
 
-To make a manual sale and store the card on file, follow the previous examples and replace the URL using the template below:
+The Purchase details object looks like this:
 
 {% code overflow="wrap" %}
-```javascript
-const url = `https://localhost:8031/VerifoneSVC/service/GetManualComboJson?SessKey=${sessKey}&AcctHolderJson=${acctHolderJson}&EndCustJson=${endCustJson}&PurchDetailsJson=${purchDetailsJson}&MerchID=${merchID}&Amount=${amount}&SaveCard=true`;
+```
+{"REFID":"41-96875","RPGUID":"1265432","ServiceDesc":"SERVICE DESCRIPTION HERE"}
 ```
 {% endcode %}
 
+The Amount object supports both a simple number such as 103.41 or an object such as the following:
 
+{% code overflow="wrap" %}
+```
+{"baseAmt":"100.43","feeAmt":"2.01","totalAmt":"102.44"}   
+```
+{% endcode %}
 
-### Resetting the device
+If you don’t plan to collect processing fees then you can just send a simple numeric value.&#x20;
+
+Once you have compiled all Json Object data you make your call to the local windows service as is outlined in the EasyPayVerifone.js
+
+Here is a sample URL GET request:
+
+{% code overflow="wrap" %}
+```
+https://localhost:8031/VerifoneSVC/service/GetEmvComboJson?SessKey=&AcctHolderJson={"Firstname":"Jim","Lastname":"Smith","address":{"Address1":"21 Elm St","Address2":"","City":"Farmindale","State":"CA","ZIP":"83765","Country":"USA"},"Phone":"207-453-4587"}&EndCustJson={"Firstname":"Jim","Lastname":"Smith","address":{"Address1":"21 Elm St","Address2":"","City":"Farmindale","State":"CA","ZIP":"83765","Country":"USA"},"Phone":"207-453-4587"}&PurchDetailsJson={"REFID":"41-96875","RPGUID":"","ServiceDesc":"SERVICE DESCRIPTION HERE"}&MerchID=1&Amount={"baseAmt":"100.43","feeAmt":"2.01","totalAmt":"102.44"}&SaveCard=false
+```
+{% endcode %}
+
+Resetting the device
 
 The red button on the Verifone can be used to cancel the current operation and set up for _Ready_ state in most cases. See the `resetVerifone` and `unlockVerifone` functions.
 

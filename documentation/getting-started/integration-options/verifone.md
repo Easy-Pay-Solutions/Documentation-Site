@@ -4,6 +4,8 @@ description: Getting started with Verifone for Number
 
 # Verifone
 
+### Introduction
+
 The Verifone card readers are small hand-held devices. They communicate with your computer on a USB port. A chip transaction is comprised of about a dozen transmissions between the host (your computer) and the device, and then finally to the Number cloud platform.
 
 Using the Verifone card readers offers a highly secure method of collecting cardholder data.
@@ -42,17 +44,23 @@ This application has automatic updates and allows you to collect payments, creat
 {% endstep %}
 
 {% step %}
-**Browser-based interface**
+**Number Verifone SDK**
 
-We developed a Windows service which uses Cross-Origin Resource Sharing (CORS) to communicate with the browser. The Win service will return a simple XML response for each transaction directly to the HTML/PHP/ASP.NET page for consumption by the host application.
-
-As an integrator, this allows you to write simple client-side scripts within your own web applications to initiate transactions with a local Verifone. **You can also use this service with the Virtual Terminal to avoid writing any code.**
+This DLL provides a means of collecting payments and creating card-on-file plans. Used in conjunction with our API, you can manage all aspects of your payment requirements, all within the confines of your own custom application.
 {% endstep %}
 
 {% step %}
-**Number Verifone SDK**
+**Browser-based interface**
 
-This Managed Code DLL provides a means of connecting your custom windows application to the Verifone device. Used in conjunction with our API, you can manage all aspects of your payment requirements, all within the confines of your own custom application.
+We developed a Windows service which uses Cross-Origin Resource Sharing (CORS) to communicate with the browser. As an integrator, this allows you to write simple client-side scripts within your own web applications to initiate transactions with a local Verifone.&#x20;
+
+The Win service will return a simple XML response for each transaction directly to the HTML/PHP/ASP.NET page for consumption by the host application.
+{% endstep %}
+
+{% step %}
+**Virtual Terminal**
+
+Our Number Virtual Terminal has a built-in support for Verifone. After installing the middleware service, you can ask the Number team for this feature to be activated.&#x20;
 {% endstep %}
 {% endstepper %}
 

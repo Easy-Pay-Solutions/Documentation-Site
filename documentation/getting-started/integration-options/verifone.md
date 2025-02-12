@@ -52,13 +52,11 @@ As an integrator, this allows you to write simple client-side scripts within you
 {% step %}
 **Number Verifone SDK**
 
-This DLL provides a means of collecting payments and creating card-on-file plans. Used in conjunction with our API, you can manage all aspects of your payment requirements, all within the confines of your own custom application.
+This Managed Code DLL provides a means of connecting your custom windows application to the Verifone device. Used in conjunction with our API, you can manage all aspects of your payment requirements, all within the confines of your own custom application.
 {% endstep %}
 {% endstepper %}
 
-{% hint style="success" %}
-The browser-based interface together with the Virtual Terminal or your own custom web application is the recommended approach for new customers.&#x20;
-{% endhint %}
+
 
 #### **Requirements**
 
@@ -79,9 +77,11 @@ If you wish to use the standalone desktop application for Verifone, [contact Num
 
 ## Browser-based installation <a href="#browser-based-installation" id="browser-based-installation"></a>
 
+For any browser-based Implementation using the Verifone, you will need to install the local win service. This includes our Virtual Terminal application as well as your own custom web applications.
+
 <figure><img src="../../../.gitbook/assets/Number VX Module.jpg" alt=""><figcaption></figcaption></figure>
 
-Before you start, download the Windows service to your machine.
+To Begin: Download the compressed archive:
 
 {% include "../../../.gitbook/includes/link-verifone-windows-service.md" %}
 
@@ -107,16 +107,6 @@ Locate the EXE file and right click on it to choose _Run as administrator_.
 {% step %}
 Wait for the application to finish, then reboot computer.
 {% endstep %}
-
-{% step %}
-Modify your stored profile and reboot the service (optional)
-
-{% hint style="warning" %}
-If you supply credentials for the Windows service within the stored profile, you will always point to that account. Otherwise, you'll need to provide a session key to call the service.
-{% endhint %}
-
-Go to _c:/ProgramData/EasyPay/Eptools/eptools/profiles_ to add information about your Number account code and token, then find _Services_ on your computer to restart the _EasyPay Verifone MiddleWare E2E 1041 Service_.
-{% endstep %}
 {% endstepper %}
 
 The above installation package does the following:
@@ -126,19 +116,21 @@ The above installation package does the following:
 3. Installs a certificate which encrypts data between the browser and the Windows service.
 4. Installs the _EasyPay Verifone MiddleWare E2E 1041 Service_ which listens on port 8031.
 
-With this, your website will be able to issue commands to the Windows service by calling `https://localhost:8031` from your website.&#x20;
+Your website can now issue commands to the Win Service as is demonstrated using the sample site:&#x20;
 
-See [our example website](https://easypay1.com/JqueryVerifone/) communicating with Verifone or download it to see how it works.
+{% embed url="https://easypay1.com/JqueryVerifone/" %}
+[https://easypay1.com/JqueryVerifone/](https://easypay1.com/JqueryVerifone/)
+{% endembed %}
+
+You can download the entire site here:
+
+{% embed url="https://easypay1.com/docs/jquery_verifone.zip" %}
+https://easypay1.com/docs/jquery\_verifone.zip
+{% endembed %}
 
 {% hint style="warning" %}
 To run the Verifone demo website, you must have the Verifone Windows service installed.
 {% endhint %}
-
-<figure><img src="../../../.gitbook/assets/image (15).png" alt=""><figcaption><p>Verifone example site</p></figcaption></figure>
-
-{% include "../../../.gitbook/includes/link-verifone-example-download.md" %}
-
-
 
 ### Virtual Terminal
 
@@ -148,15 +140,16 @@ You can read more about using the Virtual Terminal in the [virtual-terminal.md](
 
 
 
-### Requesting a transaction
+### Requesting a transaction from your custom web application
 
-You can call the middleware to do the following:
+You will find a script file named EasyPayVerifone.js which has provided the following functionality:
 
-1. EMV sale (chip sale) only
-2. EMV save card (consent) only
-3. EMV sale and save card
-4. Manual sale (keyed entry) sale only
-5. Manual sale sale and save card
+1. EMV sale only
+2. EMV sale and save card
+3. Manual sale (keyed entry) sale only
+4. Manual sale and save card
+5. EMV save card only
+6. Reset the Middleware and Verifone
 
 #### Verifone EMV sale only
 

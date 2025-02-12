@@ -8,7 +8,7 @@ description: Reference to the Number query language
 
 Number provides a robust query language for filtering specific records using the APIs.&#x20;
 
-{% include "../../.gitbook/includes/warning-query-date-factor.md" %}
+{% include "../../.gitbook/includes/danger-query-date-factor.md" %}
 
 #### Example
 

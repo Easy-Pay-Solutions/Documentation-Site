@@ -24,7 +24,7 @@ Read about Number's query language in our [querying.md](../resources/querying.md
 Depending on the type of record you're querying (transaction, consent, ...), the variables you can use inside of a `Query` string will differ. The formatting rules do not change.
 {% endhint %}
 
-{% include "../../.gitbook/includes/warning-query-date-factor.md" %}
+{% include "../../.gitbook/includes/danger-query-date-factor.md" %}
 
 
 

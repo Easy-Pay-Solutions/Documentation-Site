@@ -38,7 +38,7 @@ Use it to create subsections within H2.
 {% step %}
 **Paragraph bold**
 
-Recommended for lowest-level subsection titles and parts of paragraphs that should be highlighted. **When creating longer paragraphs, highlighting using bold font can also help break up the text.**
+Recommended for lowest-level subsection titles and parts of paragraphs that should be highlighted. **When creating longer paragraphs, highlighting using bold font can also help break up the sentences.**
 
 {% hint style="danger" %}
 **When creating danger-level hints, use the bold font and keep the text brief.**
@@ -52,9 +52,63 @@ It should be used in paragraph text and as the main content of other available c
 {% endstep %}
 {% endstepper %}
 
-{% hint style="info" %}
+{% hint style="warning" %}
 H1, H2, H3, and the paragraph all create a different type of spacing and may appear differently from the editor on the finished website.
 {% endhint %}
+
+
+
+### Text formatting
+
+There are a couple text formatting options available in GitBook:
+
+{% stepper %}
+{% step %}
+**Bold text**
+
+Use bold text to **highlight text in paragraphs** and **break up sentences in longer paragraphs**.
+{% endstep %}
+
+{% step %}
+**Italic text**
+
+Italics should only be used for quotations and pointing our navigation elements. **Alternatively, you can use quotation marks.**&#x20;
+
+Example: You need to press _Run as administrator_ to install the service.
+
+{% hint style="danger" %}
+**Do not use italics or quotations to highlight. Depending on context, they can be confused for sarcasm when not used for the purpose of quotation.**&#x20;
+
+**Use bold text or hint components to highlight key text.**
+{% endhint %}
+{% endstep %}
+
+{% step %}
+**Code text**
+
+When using names of variables or parameters, files, or just adding a bit of code, use the code highlighting.
+
+Example: Use the `SessKey` as a header to authenticate.
+{% endstep %}
+
+{% step %}
+**Strikethrough**
+
+Not used. You can consider using strikethrough for corrections, but you can also version your documentation using GitBook if you want to keep the older text available for the users.
+{% endstep %}
+
+{% step %}
+#### Colored text and background
+
+Green text can be used to highlight a link formatted as code. This will make them more similar to other links that appear in a tint of the primary color. Otherwise not used, but can be an alternative method of highlighting.
+{% endstep %}
+
+{% step %}
+**Annotations**
+
+Annotations allow you to add more context when the user hovers over some text. Use sparringly when you want to save some space to explain a lot of values or if you want to add dictionary-like descriptions to language that belongs to the business domain.
+{% endstep %}
+{% endstepper %}
 
 
 
@@ -95,7 +149,9 @@ To make the page content more readable, it is recommended to use an empty row of
 
 
 
-## Available components
+## Components
+
+### Available components
 
 To create this page, we used most of the components available in GitBook. Below are some recommendations for their use in future iterations of the documentation.
 
@@ -109,9 +165,7 @@ You can find all available components by clicking on "+" icon next to each main 
 
 We highly recommend mixing the content by adding:
 
-
-
-### Lists
+#### Lists
 
 * **Stepper:**\
   A component that is ideally suited to describe a process with steps that logically follow each other or a more complex list with longer descriptions. This component can also be used to differentiate the look of content.
@@ -122,9 +176,7 @@ We highly recommend mixing the content by adding:
 * **Task lists:**\
   A list of checkboxes added to allow the user to mark the completion of individual necessary tasks.
 
-
-
-### Hints
+#### Hints
 
 We can use 4 types of hints: info, success, warning, and danger. **Hints should always have all of the necessary context to understand them and not depend on the adjecent content.** Avoid using words like "this" to begin a hint and instead fully clarify the object of the hint.
 
@@ -152,15 +204,11 @@ Example: "If your customer wants to change the schedule completely, it is recomm
 **Example: "Never request a query without a limiting date factor. As the account grows, you may attempt to return an excessive number of past records and cause an error."**
 {% endhint %}
 
-
-
-### Quotes
+#### Quotes
 
 > Quotes can be used to quote text from another website or, in rare circumstances, to help highlight some content and to separate it from a larger part.
 
-
-
-### Files and URLs
+#### File and URL embeddings
 
 For additional files, documents and any other types of materials that we want to make available to users, please use the "Files" component - it allows you to highlight files for download.
 
@@ -177,9 +225,7 @@ You should also use the "Embed a URL" component to link to external websites or 
 **The same is true for links to various tools and examples**
 {% endhint %}
 
-
-
-### Tables
+#### Tables
 
 A table is a readable component that can be used for various purposes:
 
@@ -203,9 +249,7 @@ For a tables with a lot of content, we recommend using a standard content width 
 
     <table data-full-width="false"><thead><tr><th width="134">Card brand</th><th width="201">Card number</th><th width="104">EXP date</th><th width="82">CVV</th><th width="513">Track data</th></tr></thead><tbody><tr><td><img src="../../.gitbook/assets/1 Visa icon.png" alt="" data-size="original"></td><td>4012 8818 8881 8888</td><td>12/28</td><td>999</td><td>%B4012881888818888^TSYS PAYMENT^25121011796251900000?;4012881888818888=25121011796251900000?</td></tr><tr><td><img src="../../.gitbook/assets/1 Master card icon.png" alt="" data-size="original"></td><td>5146 3150 0000 0055</td><td>12/28</td><td>998</td><td>%B5146315000000055^TSYS PAYMENT^251210100000?;5146315000000055=251210100000?</td></tr><tr><td><img src="../../.gitbook/assets/1 Amex icon.png" alt="" data-size="original"></td><td>3714 4963 5392 376</td><td>12/28</td><td>9997</td><td>%B371449635392376^TSYS PAYMENT^251210100000?;371449635392376=251210100000?</td></tr></tbody></table>
 
-
-
-### Cards
+#### Cards
 
 A component that can replace a bullet list and can be used in many variants to improve content readability:
 
@@ -215,20 +259,196 @@ A component that can replace a bullet list and can be used in many variants to i
 * With content image&#x20;
 * With redirect on click
 
-Example: Credit card (3 columns, full card image):\
+Example: Credit card (3 columns, full card image):
 
+<table data-view="cards"><thead><tr><th data-card-cover data-type="files"></th></tr></thead><tbody><tr><td><a href="../../.gitbook/assets/Masercard.png">Masercard.png</a></td></tr><tr><td><a href="../../.gitbook/assets/Visa.png">Visa.png</a></td></tr><tr><td><a href="../../.gitbook/assets/Amex.png">Amex.png</a></td></tr></tbody></table>
 
-* <table data-view="cards"><thead><tr><th data-card-cover data-type="files"></th></tr></thead><tbody><tr><td><a href="../../.gitbook/assets/Masercard.png">Masercard.png</a></td></tr><tr><td><a href="../../.gitbook/assets/Visa.png">Visa.png</a></td></tr><tr><td><a href="../../.gitbook/assets/Amex.png">Amex.png</a></td></tr></tbody></table>
-
-
-
-### Tabs
+#### Tabs
 
 A component that can be used to condense equivalent or similar content consisting by placing it in individual tabs.&#x20;
 
 We highly recommend using it for multiple code blocks with different technology presentations:
 
 {% include "../../.gitbook/includes/code-hmac.md" %}
+
+#### Code blocks and multi-syntax code blocks
+
+The code block component is used to show code with syntax highlighting. Depending on the situation, you might want to add a file name, text wrapping, or line numbers.&#x20;
+
+The multi-syntax code block is just short for adding the tab component with code blocks inside.
+
+{% hint style="success" %}
+You can use code blocks for any values that the user might need to copy like encrypted test card numbers. Each code block comes with a copy button.
+{% endhint %}
+
+{% hint style="info" %}
+For text that doesn't have a supported syntax highlighting, use the next closest thing.
+
+For console commands, use Ruby, and for Number's query language, use SQL.
+{% endhint %}
+
+{% hint style="danger" %}
+**Try to format your sample code to fit each line of code without wrapping, and enable line wrapping for the rest.**&#x20;
+
+**For longer code, always enable line numbering to make it easier to read the code and reference specific lines of code.**
+{% endhint %}
+
+Example:
+
+{% include "../../.gitbook/includes/code-verifone-cp-sale-browser-based.md" %}
+
+
+
+### API specification components
+
+#### REST API
+
+Use the OpenAPI block and update the `master-openapi-rest.yaml` file with your specification. GitBook will create REST API specification blocks based on the specification you provide in an OpenAPI format.&#x20;
+
+{% embed url="https://docs.gitbook.com/creating-content/openapi" %}
+Guide to OpenAPI with GitBook
+{% endembed %}
+
+{% embed url="https://swagger.io/specification/" %}
+OpenAPI specification
+{% endembed %}
+
+{% embed url="https://github.com/Easy-Pay-Solutions/Documentation-Site/blob/main/.gitbook/assets/master-openapi-rest.yaml" %}
+master-openapi-rest.yaml file
+{% endembed %}
+
+To make changes, you can try placing a new OpenAPI component to change the "Source" and replace it with an updated version of this file. You can also try updating the file in the _Documentation-Site_ repo and it should sync back to GitBook.
+
+{% hint style="success" %}
+Use OpenAPI components to create reusable parameters and schema. This will allow you to propagate changes like an updated description easily across all relevant endpoints.
+{% endhint %}
+
+{% hint style="warning" %}
+When working on API reference, even when something feels self-explanatory, always try to describe each request and response parameter and give meaningful examples.
+{% endhint %}
+
+#### SOAP API
+
+Since OpenAPI standard is not ideal for representing SOAP APIs, they use a more granular approach. Unfortunately it requires a lot of work upfront, but then becomes easier to maintain when used in conjunction with [#reusable-components](component-guidelines.md#reusable-components "mention").
+
+<figure><img src="../../.gitbook/assets/image (17).png" alt=""><figcaption><p>Example SOAP API reference</p></figcaption></figure>
+
+Add a header with the name of your method, then describe the type and address, add a paragraph with a description, and two tabs with the request body and response body. You can optionally follow it up with a code block containing a sample XML response.
+
+Request body and response body describe their parameters by using their name, type, providing a description when available, an example in a separate line, and a list of values for enums. Complex objects also list off the fields inside them and link to the [soap-object-dictionary.md](../../api-reference/soap-api/soap-object-dictionary.md "mention") where those are broken down in the same way. **Each parameter should be delimited by dividers and the tab borders**.
+
+
+
+### Reusable components
+
+To make it easier to propagate changes across the documentation, instead of manually duplicating the content by copy-pasting it, **it's recommended to use the "Turn into reusable component" feature**.
+
+{% hint style="success" %}
+Making change to a reusable component in one place will propagate it to all instances of the reusable component.
+{% endhint %}
+
+{% hint style="info" %}
+When hovering over a component, you can expand its options to turn it into a reusable component.&#x20;
+
+When you create a reusable component, you can expand it into more lines by pressing enter and add new or existing components into it.
+
+When you press Ctrl+Enter on the last line of a component, you can force yourself out of a component, and out of reusable component scope instead of expanding them.
+{% endhint %}
+
+{% hint style="warning" %}
+It's not possible to nest reusable components within each other or to create a reusable component that's meant to be nested within a normal component (e.g. paragraph inside of a paragraph).
+{% endhint %}
+
+{% hint style="danger" %}
+**If you attempt to create a reusable component within tabs, it will delete the entire tab.**&#x20;
+
+**After you do that, click off somewhere else and Ctrl+Z to revert the tab deletion. The reusable component will still be saved to your list with a default name.**
+{% endhint %}
+
+You can read more about reusable components here:&#x20;
+
+{% embed url="https://docs.gitbook.com/creating-content/reusable-content" %}
+
+#### Removing reusable components
+
+When you hover over a reusable component, you can expand options to rename, detach, or delete.
+
+* Renaming will allow you to change the name of the component.
+* Detatching a reusable component instance will unsync it with the reusable component, making it possible to make changes without propagating them.
+* Deleting a reusable component instance will remove that instance from the selected place.
+
+<figure><img src="../../.gitbook/assets/image (16).png" alt=""><figcaption></figcaption></figure>
+
+#### Naming reusable components
+
+**When naming reusable components, always follow this template:** \
+`<type of component> - <short descriptive name>`
+
+#### Reusable component types
+
+Here are the reusable component type names you should use and when:
+
+{% stepper %}
+{% step %}
+**param**
+
+Use when describing a single API request or response parameter (name, type, description, example, enum values). Example:
+
+{% include "../../.gitbook/includes/param-sess-key.md" %}
+{% endstep %}
+
+{% step %}
+**params**
+
+Use when grouping descriptive components for parameters used often together into one reusable component. Example:
+
+{% include "../../.gitbook/includes/params-purchase.md" %}
+{% endstep %}
+
+{% step %}
+info / warning / danger
+
+Use when creating a reusable hint of specific type. Examples:
+
+{% include "../../.gitbook/includes/info-payform-builder.md" %}
+
+{% include "../../.gitbook/includes/warning-hmac.md" %}
+
+{% include "../../.gitbook/includes/danger-query-date-factor.md" %}
+{% endstep %}
+
+{% step %}
+**link**
+
+Use when creating a reusable URL embedding or file download tiles. Examples:
+
+{% include "../../.gitbook/includes/link-ios-sdk.md" %}
+
+{% include "../../.gitbook/includes/link-wsdl-files.md" %}
+
+{% include "../../.gitbook/includes/link-verifone-example-download.md" %}
+{% endstep %}
+
+{% step %}
+code
+
+Use when creating a reusable code block component. Example:
+
+{% include "../../.gitbook/includes/code-hmac.md" %}
+{% endstep %}
+
+{% step %}
+#### block
+
+Use when creating a reusable component that consists of text and, optionally, of other components. You can use it for other complex components. Examples:
+
+{% include "../../.gitbook/includes/block-reauthenticate.md" %}
+
+{% include "../../.gitbook/includes/block-cardholder-data-on-receipt-and-batch-report.md" %}
+
+{% include "../../.gitbook/includes/block-android-config-ep.md" %}
+{% endstep %}
+{% endstepper %}
 
 
 

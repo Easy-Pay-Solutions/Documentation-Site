@@ -284,7 +284,7 @@ You can use code blocks for any values that the user might need to copy like enc
 {% hint style="info" %}
 For text that doesn't have a supported syntax highlighting, use the next closest thing.
 
-For console commands, use Ruby, and for Number's query language, use SQL.
+For console commands, use **Ruby**, and for Number's query language, use **SQL**.
 {% endhint %}
 
 {% hint style="danger" %}

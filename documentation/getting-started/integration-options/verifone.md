@@ -501,9 +501,9 @@ An error was encountered in the local Windows service. Examine `ErrCode` and `Er
 
 For you to directly interface with the Verifone using our SDK, you will need the Verifone drivers with the custom logging package, and the SDK reference files:
 
-{% include "../../../.gitbook/includes/link-verifone-usb-log.md" %}
+[USB drivers and Logging Package](https://easypay1.com/deploy/SetupVerifoneDrivers/Setup_USB_log_win11.zip)
 
-{% include "../../../.gitbook/includes/link-verifone-sdk.md" %}
+[SDK Interface](https://easypay1.com/deploy/VerifoneSDK/EP.Enterprise.Vx820Lib2.zip)
 
 When installed, the first component will provide USB drivers and create a virtual COM 9 port. In addition, it will add a unique event log to the existing windows event log collection.&#x20;
 
@@ -531,13 +531,11 @@ After installation, there should be a new windows event log named _EPmiddleWare_
 {% endstep %}
 
 {% step %}
-With the VeriFone plugged in you should also see an entry in the device manager attched to COM 9
-
-
+With the Verifone plugged in you should also see an entry in the device manager attached to COM 9
 {% endstep %}
 {% endstepper %}
 
-<figure><img src="../../../.gitbook/assets/Verifone screenshot 2.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/ev-na.png" alt=""><figcaption></figcaption></figure>
 
 To use the SDK, you only need to directly interface to the file named _EP.Enterprise.Vx820.dll_. The other files are dependencies. Make sure to extract all 4 of the files to the location of your choice.
 

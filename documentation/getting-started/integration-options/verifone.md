@@ -84,6 +84,8 @@ To Begin: Download the compressed archive:
 [Verifone Middleware Installer](https://easypay1.com/deploy/MiddleWare/EPVerifoneSetup_E2E_1041.zip)\
 
 
+
+
 **To install the Win service:**
 
 {% stepper %}
@@ -489,6 +491,10 @@ An error was encountered in the local Windows service. Examine `ErrCode` and `Er
 
 <figure><img src="../../../.gitbook/assets/Number .Net Application.png" alt=""><figcaption></figcaption></figure>
 
+**Important :** You can not run both the Verifone Middleware and the Verifone SDK together at the same time. Both packages will need to have control over COM 9 so only one can be active at one time.
+
+**Installation**
+
 For you to directly interface with the Verifone using our SDK, you will need the Verifone drivers with the custom logging package, and the SDK reference files:
 
 [USB drivers and Logging Package](https://easypay1.com/deploy/SetupVerifoneDrivers/Setup_USB_log_win11.zip)
@@ -531,13 +537,51 @@ To use the SDK, you only need to directly interface to the file named _EP.Enterp
 
 <table data-header-hidden><thead><tr><th width="117"></th><th></th></tr></thead><tbody><tr><td><img src="../../../.gitbook/assets/Icon_File2 (1).png" alt=""></td><td>EP.Enterprise.Vx820Lib.dll</td></tr><tr><td><img src="../../../.gitbook/assets/Icon_File2 (1).png" alt=""></td><td>EP.Vx820.Common.dll</td></tr><tr><td><img src="../../../.gitbook/assets/Icon_File1.png" alt=""></td><td>EP.Enterprise.Vx820Lib.dll.config</td></tr><tr><td><img src="../../../.gitbook/assets/Icon_File2 (1).png" alt=""></td><td>DPayments.DPaymentsSDK.dll</td></tr></tbody></table>
 
-[Contact us](../../../help/customer-support/) for further instructions on how to use the SDK.
+Number has developed a sample executable program using the SDK which allows you to authorize cards, save cards, and create payment plans:
 
+[Sample Program Executable](https://easypay1.com/Deploy/VerifoneSDK/WinFrm.zip)
 
+[Sample Program Source Code](https://easypay1.com/Deploy/VerifoneSDK/SourceCode_WinFrm.zip)
 
 ***
 
+### Sample SDK Program&#x20;
 
+<figure><img src="../../../.gitbook/assets/image (18).png" alt=""><figcaption></figcaption></figure>
+
+Initially you will need the following to begin processing cards&#x20;
+
+* Number URL Endpoint ( API URL )&#x20;
+* Account Code&#x20;
+* Token&#x20;
+
+For testing you can use the default URL supplied but it is important that you consult with Number personnel to determine the best endpoint prior to going live. Your Account code and Token will be supplied to you for your sandbox account.&#x20;
+
+&#x20;
+
+### EMV Sale&#x20;
+
+Once you have authenticated you can proceed to the SALE page.
+
+Take Notice of the MERCHID field as each Number Account can have one or more merchant records associated with it.  For Live accounts you will be provided a deployment form which identifies these along with their identifier {1,2,3} etc. &#x20;
+
+For a typical Chip transaction, you only need to specify an amount and press INITIATE CHIP.  The device should now prompt you to insert the CHIP.  If you check the SAVE CARD checkbox then Number will VAULT the card details after the successful sale and return a CONSENT ID which you can use to authorize the card directly using our API at a later time.  If you want to KEY IN the card details directly into the VeriFone, you will enter Account Holder Information then press INITIATE MANUAL TRANSACTION. &#x20;
+
+<figure><img src="../../../.gitbook/assets/image (19).png" alt=""><figcaption></figcaption></figure>
+
+
+
+
+
+
+
+
+
+
+
+##
+
+##
 
 ## Custom Windows event log
 

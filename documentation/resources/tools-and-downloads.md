@@ -22,10 +22,6 @@ All links and downloads for the REST and SOAP API.
 
 
 
-***
-
-
-
 ## Mobile SDK
 
 All links and downloads for the mobile SDKs.
@@ -60,35 +56,23 @@ All links and downloads for the PayForm and the legacy widget.
 
 {% include "../../.gitbook/includes/link-widget-encryption-helper-tool.md" %}
 
-
-
 ***
 
 
 
 ## Verifone
 
-All links and downloads for the Verifone card reader.
-
-
+All links and downloads for the Verifone card reader:
 
 ### Verifone services
 
-{% include "../../.gitbook/includes/link-verifone-windows-service.md" %}
+[Verifone Middleware Installer](https://easypay1.com/deploy/MiddleWare/EPVerifoneSetup_E2E_1041.zip)
 
-{% include "../../.gitbook/includes/link-verifone-usb-log.md" %}
+### Verifone example site&#x20;
 
-{% include "../../.gitbook/includes/link-verifone-sdk.md" %}
+[Sample Verifone Website](https://easypay1.com/JqueryVerifone/)
 
-
-
-### Verifone example site
-
-{% include "../../.gitbook/includes/link-verifone-example-site.md" %}
-
-{% include "../../.gitbook/includes/link-verifone-example-download.md" %}
-
-
+[Sample Verifone Website Content](https://easypay1.com/docs/jquery_verifone.zip)
 
 ***
 
@@ -96,7 +80,7 @@ All links and downloads for the Verifone card reader.
 
 ## Virtual Terminal
 
-All links  and downloads for the Virtual Terminal.
+All links and downloads for the Virtual Terminal.
 
 {% include "../../.gitbook/includes/link-virtual-terminal.md" %}
 

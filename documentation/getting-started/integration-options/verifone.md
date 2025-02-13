@@ -629,7 +629,7 @@ Here are some steps required prior to doing a card authorization &#x20;
 
 
 
-Npw you can initiate a transaction&#x20;
+Now you can initiate a transaction&#x20;
 
 
 
@@ -819,9 +819,7 @@ Wait for your transaction to complete and event will fire&#x20;
 }
 ```
 
-##
-
-##
+For additional coding samples including creating recurring payment plans please refer to the sample SDK program &#x20;
 
 ## Custom Windows event log
 

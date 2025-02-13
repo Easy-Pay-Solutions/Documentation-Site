@@ -569,6 +569,20 @@ For a typical Chip transaction, you only need to specify an amount and press INI
 
 <figure><img src="../../../.gitbook/assets/image (19).png" alt=""><figcaption></figcaption></figure>
 
+### Programming Considerations
+
+To reference the SDK&#x20;
+
+<mark style="color:blue;">using</mark> EP.Enterprise.Vx820Lib;
+
+**Important :** manage only one single instance of the class ( this allows you to operate on the COM 9 port )&#x20;
+
+<mark style="color:blue;">private</mark> <mark style="color:purple;">EP\_Verifone\_Mod</mark> EPVerifone;
+
+
+
+
+
 
 
 

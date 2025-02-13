@@ -583,153 +583,145 @@ To reference the SDK&#x20;
 
 Here are some steps required prior to doing a card authorization &#x20;
 
+```clike
+private void Form1_Load(object sender, EventArgs e)
+{
+
+	// Instantiate Class . .assumes that this form will manage one instance of the class . . Only One instance should exist  . .  
+	EPVerifone = new EP_Verifone_Mod();
+
+	// subscribe to event which provides info concerning the transaction 
+	EPVerifone.OnDeviceMsg += new EP_Verifone_Mod.TxHandler(On_Device_Msg);
+
+	// subscribe to event which tells you when the card was removed  
+	EPVerifone.OnCardRemoved += new EP_Verifone_Mod.CardRemovedHandler(On_Card_Removed);
+
+	/// attempt to initiate the com port 
+	if (!EPVerifone.InitComPort())
+	{
+		MessageBox.Show(EPVerifone.Err.SafeMessage);
+		return;
+	}
+
+	/// attempt to open the com port 
+	if (!EPVerifone.OpenPort())
+	{
+		MessageBox.Show(EPVerifone.Err.SafeMessage);
+		return;
+	}
+
+	// do basic configuration ; which EasyPay API to use 
+	EPVerifone.Url = EasyPayParams.APIurl;
+
+	/// set ASPEN credentials 
+	EPVerifone.Credentials.AccountCode = EasyPayParams.AccountCode;
+	EPVerifone.Credentials.Token = EasyPayParams.Token;
+
+	/// this will Initialize the module and validate your settings 
+	if (!EPVerifone.InitMod())
+	{
+		MessageBox.Show(EPVerifone.Err.SafeMessage);
+		return;
+	}
+
+} 
 ```
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-            // Instantiate Class . .assumes that this form will manage one instance of the class . . Only One instance should exist  . .  
-            EPVerifone = new EP_Verifone_Mod();
-
-            // subscribe to event which provides info concerning the transaction 
-            EPVerifone.OnDeviceMsg += new EP_Verifone_Mod.TxHandler(On_Device_Msg);
-
-            // subscribe to event which tells you when the card was removed  
-            EPVerifone.OnCardRemoved += new EP_Verifone_Mod.CardRemovedHandler(On_Card_Removed);
-
-            /// attempt to initiate the com port 
-            if (!EPVerifone.InitComPort())
-            {
-                MessageBox.Show(EPVerifone.Err.SafeMessage);
-                return;
-            }
-
-            /// attempt to open the com port 
-            if (!EPVerifone.OpenPort())
-            {
-                MessageBox.Show(EPVerifone.Err.SafeMessage);
-                return;
-            }
-
-            // do basic configuration ; which EasyPay API to use 
-            EPVerifone.Url = EasyPayParams.APIurl;
-
-            /// set ASPEN credentials 
-            EPVerifone.Credentials.AccountCode = EasyPayParams.AccountCode;
-            EPVerifone.Credentials.Token = EasyPayParams.Token;
-
-            /// this will Initialize the module and validate your settings 
-            if (!EPVerifone.InitMod())
-            {
-                MessageBox.Show(EPVerifone.Err.SafeMessage);
-                return;
-            }
-
-        } 
-```
-
-
 
 Now you can initiate a transaction&#x20;
 
+```clike
+private void Btn_InitChipTx_Click(object sender, EventArgs e)
+{
+	 //ensure your amount, fee, total are correct 
+	if (!figureAmounts()) {
+		return;
+	}
+	
+	/// clear previous responses
+	ClearResponseTbox();
+
+	/// IMPORTANT !!  make sure the class is not already working on a transaction 
+	if (EPVerifone.DeviceIsBusy)
+	{   /// not you can use the UNLOCK command if class not responding 
+		MessageBox.Show("Please wait for previous Transaction to complete");
+		return;
+	}
+
+	/// attempt to open the com port IF NECCESARY 
+	if (!EPVerifone.OpenPort())
+	{
+		MessageBox.Show(EPVerifone.Err.SafeMessage);
+		return;
+	}
+
+	// set up a new transaction 
+	EmvParams Params = new EmvParams();
+
+	/// decide if you also want EasyPay to Save the card for Furure Payments 
+	if (Chk_SaveCard.Checked) {
+		Params.QuickSaveCard = true;
+	}
+
+	string Amt1 = Txt_Amount.Text.Replace("$", "").Replace(" ", "").Replace(",", "");
+	decimal Amt2 = 0;
 
 
+	if (!decimal.TryParse(Amt1, out Amt2)) {
+		return;
+	}
+
+	if (Amt2 < 0.01M)
+	{
+		// need more than zero  
+		return;
+	}
+
+	Params.Amounts = new EP_Amounts1(Amt, Fee, Total);
+
+	Params.TxAmount = Params.Amounts.TotalAmt;
+	Params.MerchID = (int)NumericMerchID.Value;
+	Params.AcctHolder = new EP_Person();
+	Params.AcctHolder.Firstname = txtFirstName.Text.Trim();
+	Params.AcctHolder.Lastname = txtLastName.Text.Trim();
+	Params.AcctHolder.BillIngAdress = new EP_Address();
+	Params.AcctHolder.BillIngAdress.Address1 = txtAddress.Text.Trim();
+	Params.AcctHolder.BillIngAdress.City = txtCity.Text.Trim();
+	Params.AcctHolder.BillIngAdress.State = txtState.Text.Trim();
+	Params.AcctHolder.BillIngAdress.ZIP = txtZip.Text.Trim();
+	Params.AcctHolder.Email = Txt_Email.Text.Trim();
+
+	Params.EndCustomer = new EP_Person();
+
+	Params.EndCustomer.Firstname = txtCustFirstName.Text.Trim();
+	Params.EndCustomer.Lastname = txtCustLastName.Text.Trim();
+	Params.EndCustomer.BillIngAdress = new EP_Address();
+	Params.EndCustomer.BillIngAdress.Address1 = txtCustAddress.Text.Trim();
+	Params.EndCustomer.BillIngAdress.City = txtCustCity.Text.Trim();
+	Params.EndCustomer.BillIngAdress.State = txtCustState.Text.Trim();
+	Params.EndCustomer.BillIngAdress.ZIP = txtCustZip.Text.Trim();
+
+	Params.RefID = txtRefID.Text.Trim();
+	Params.RPGUID = txtRPGUID.Text.Trim();
+	Params.ServiceDesc = txtServiceDesc.Text.Trim();
+
+
+	/// in case you want to log your request 
+	string MyString = Serialize(Params);
+
+	/// initiate the transaction and wait for the event to fire . .
+	if (!EPVerifone.InitiateEmvPayment(Params))
+	{
+		MessageBox.Show(EPVerifone.Err.SafeMessage);
+		return;
+	}
+}
 ```
-        private void Btn_InitChipTx_Click(object sender, EventArgs e)
-        {
-             //ensure your amount, fee, total are correct 
-            if (!figureAmounts()) {
-                return;
-            }
-            
-            /// clear previous responses
-            ClearResponseTbox();
-
-            /// IMPORTANT !!  make sure the class is not already working on a transaction 
-            if (EPVerifone.DeviceIsBusy)
-            {   /// not you can use the UNLOCK command if class not responding 
-                MessageBox.Show("Please wait for previous Transaction to complete");
-                return;
-            }
-
-            /// attempt to open the com port IF NECCESARY 
-            if (!EPVerifone.OpenPort())
-            {
-                MessageBox.Show(EPVerifone.Err.SafeMessage);
-                return;
-            }
-
-            // set up a new transaction 
-            EmvParams Params = new EmvParams();
-
-            /// decide if you also want EasyPay to Save the card for Furure Payments 
-            if (Chk_SaveCard.Checked) {
-                Params.QuickSaveCard = true;
-            }
-
-            string Amt1 = Txt_Amount.Text.Replace("$", "").Replace(" ", "").Replace(",", "");
-            decimal Amt2 = 0;
-
-
-            if (!decimal.TryParse(Amt1, out Amt2)) {
-                return;
-            }
-
-            if (Amt2 < 0.01M)
-            {
-                // need more than zero  
-                return;
-            }
-
-            Params.Amounts = new EP_Amounts1(Amt, Fee, Total);
-
-            Params.TxAmount = Params.Amounts.TotalAmt;
-            Params.MerchID = (int)NumericMerchID.Value;
-            Params.AcctHolder = new EP_Person();
-            Params.AcctHolder.Firstname = txtFirstName.Text.Trim();
-            Params.AcctHolder.Lastname = txtLastName.Text.Trim();
-            Params.AcctHolder.BillIngAdress = new EP_Address();
-            Params.AcctHolder.BillIngAdress.Address1 = txtAddress.Text.Trim();
-            Params.AcctHolder.BillIngAdress.City = txtCity.Text.Trim();
-            Params.AcctHolder.BillIngAdress.State = txtState.Text.Trim();
-            Params.AcctHolder.BillIngAdress.ZIP = txtZip.Text.Trim();
-            Params.AcctHolder.Email = Txt_Email.Text.Trim();
-
-            Params.EndCustomer = new EP_Person();
-
-            Params.EndCustomer.Firstname = txtCustFirstName.Text.Trim();
-            Params.EndCustomer.Lastname = txtCustLastName.Text.Trim();
-            Params.EndCustomer.BillIngAdress = new EP_Address();
-            Params.EndCustomer.BillIngAdress.Address1 = txtCustAddress.Text.Trim();
-            Params.EndCustomer.BillIngAdress.City = txtCustCity.Text.Trim();
-            Params.EndCustomer.BillIngAdress.State = txtCustState.Text.Trim();
-            Params.EndCustomer.BillIngAdress.ZIP = txtCustZip.Text.Trim();
-
-            Params.RefID = txtRefID.Text.Trim();
-            Params.RPGUID = txtRPGUID.Text.Trim();
-            Params.ServiceDesc = txtServiceDesc.Text.Trim();
-
-
-            /// in case you want to log your request 
-            string MyString = Serialize(Params);
-
-            /// initiate the transaction and wait for the event to fire . .
-            if (!EPVerifone.InitiateEmvPayment(Params))
-            {
-                MessageBox.Show(EPVerifone.Err.SafeMessage);
-                return;
-            }
-        }
-```
-
-
 
 
 
 Wait for your transaction to complete and event will fire&#x20;
 
-
-
-```
+```clike
  private void On_Device_Msg(object e, TxArgs MyArgs)
  {
     /// This event Fires when Device has completed processing transaction ( fires in a separate thread ) 

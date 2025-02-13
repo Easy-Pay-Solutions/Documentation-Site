@@ -581,17 +581,243 @@ To reference the SDK&#x20;
 
 
 
+Here are some steps required prior to doing a card authorization &#x20;
+
+```
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+            // Instantiate Class . .assumes that this form will manage one instance of the class . . Only One instance should exist  . .  
+            EPVerifone = new EP_Verifone_Mod();
+
+            // subscribe to event which provides info concerning the transaction 
+            EPVerifone.OnDeviceMsg += new EP_Verifone_Mod.TxHandler(On_Device_Msg);
+
+            // subscribe to event which tells you when the card was removed  
+            EPVerifone.OnCardRemoved += new EP_Verifone_Mod.CardRemovedHandler(On_Card_Removed);
+
+            /// attempt to initiate the com port 
+            if (!EPVerifone.InitComPort())
+            {
+                MessageBox.Show(EPVerifone.Err.SafeMessage);
+                return;
+            }
+
+            /// attempt to open the com port 
+            if (!EPVerifone.OpenPort())
+            {
+                MessageBox.Show(EPVerifone.Err.SafeMessage);
+                return;
+            }
+
+            // do basic configuration ; which EasyPay API to use 
+            EPVerifone.Url = EasyPayParams.APIurl;
+
+            /// set ASPEN credentials 
+            EPVerifone.Credentials.AccountCode = EasyPayParams.AccountCode;
+            EPVerifone.Credentials.Token = EasyPayParams.Token;
+
+            /// this will Initialize the module and validate your settings 
+            if (!EPVerifone.InitMod())
+            {
+                MessageBox.Show(EPVerifone.Err.SafeMessage);
+                return;
+            }
+
+        } 
+```
+
+
+
+Npw you can initiate a transaction&#x20;
+
+
+
+```
+        private void Btn_InitChipTx_Click(object sender, EventArgs e)
+        {
+             //ensure your amount, fee, total are correct 
+            if (!figureAmounts()) {
+                return;
+            }
+            
+            /// clear previous responses
+            ClearResponseTbox();
+
+            /// IMPORTANT !!  make sure the class is not already working on a transaction 
+            if (EPVerifone.DeviceIsBusy)
+            {   /// not you can use the UNLOCK command if class not responding 
+                MessageBox.Show("Please wait for previous Transaction to complete");
+                return;
+            }
+
+            /// attempt to open the com port IF NECCESARY 
+            if (!EPVerifone.OpenPort())
+            {
+                MessageBox.Show(EPVerifone.Err.SafeMessage);
+                return;
+            }
+
+            // set up a new transaction 
+            EmvParams Params = new EmvParams();
+
+            /// decide if you also want EasyPay to Save the card for Furure Payments 
+            if (Chk_SaveCard.Checked) {
+                Params.QuickSaveCard = true;
+            }
+
+            string Amt1 = Txt_Amount.Text.Replace("$", "").Replace(" ", "").Replace(",", "");
+            decimal Amt2 = 0;
+
+
+            if (!decimal.TryParse(Amt1, out Amt2)) {
+                return;
+            }
+
+            if (Amt2 < 0.01M)
+            {
+                // need more than zero  
+                return;
+            }
+
+            Params.Amounts = new EP_Amounts1(Amt, Fee, Total);
+
+            Params.TxAmount = Params.Amounts.TotalAmt;
+            Params.MerchID = (int)NumericMerchID.Value;
+            Params.AcctHolder = new EP_Person();
+            Params.AcctHolder.Firstname = txtFirstName.Text.Trim();
+            Params.AcctHolder.Lastname = txtLastName.Text.Trim();
+            Params.AcctHolder.BillIngAdress = new EP_Address();
+            Params.AcctHolder.BillIngAdress.Address1 = txtAddress.Text.Trim();
+            Params.AcctHolder.BillIngAdress.City = txtCity.Text.Trim();
+            Params.AcctHolder.BillIngAdress.State = txtState.Text.Trim();
+            Params.AcctHolder.BillIngAdress.ZIP = txtZip.Text.Trim();
+            Params.AcctHolder.Email = Txt_Email.Text.Trim();
+
+            Params.EndCustomer = new EP_Person();
+
+            Params.EndCustomer.Firstname = txtCustFirstName.Text.Trim();
+            Params.EndCustomer.Lastname = txtCustLastName.Text.Trim();
+            Params.EndCustomer.BillIngAdress = new EP_Address();
+            Params.EndCustomer.BillIngAdress.Address1 = txtCustAddress.Text.Trim();
+            Params.EndCustomer.BillIngAdress.City = txtCustCity.Text.Trim();
+            Params.EndCustomer.BillIngAdress.State = txtCustState.Text.Trim();
+            Params.EndCustomer.BillIngAdress.ZIP = txtCustZip.Text.Trim();
+
+            Params.RefID = txtRefID.Text.Trim();
+            Params.RPGUID = txtRPGUID.Text.Trim();
+            Params.ServiceDesc = txtServiceDesc.Text.Trim();
+
+
+            /// in case you want to log your request 
+            string MyString = Serialize(Params);
+
+            /// initiate the transaction and wait for the event to fire . .
+            if (!EPVerifone.InitiateEmvPayment(Params))
+            {
+                MessageBox.Show(EPVerifone.Err.SafeMessage);
+                return;
+            }
+        }
+```
 
 
 
 
 
+Wait for your transaction to complete and event will fire&#x20;
 
 
 
+```
+ private void On_Device_Msg(object e, TxArgs MyArgs)
+ {
+    /// This event Fires when Device has completed processing transaction ( fires in a separate thread ) 
+  
+    /// update textboxes from a foriegn thread 
+   if (TxtApprovedAmt.InvokeRequired)
+       TxtApprovedAmt.Invoke((MethodInvoker)delegate { TxtApprovedAmt.Text = MyArgs.ApprovedAmt.ToString("c"); });
+   else
+       TxtApprovedAmt.Text = MyArgs.ApprovedAmt.ToString("c");
+
+   if (TxtResponseType.InvokeRequired)
+       TxtResponseType.Invoke((MethodInvoker)delegate { TxtResponseType.Text = MyArgs.TxEventType.ToString(); });
+   else
+       TxtResponseType.Text = MyArgs.TxEventType.ToString();
+
+   if (TxtIsPartialApproval.InvokeRequired)
+       TxtIsPartialApproval.Invoke((MethodInvoker)delegate { TxtIsPartialApproval.Text = MyArgs.IsPartialApproval.ToString(); });
+   else
+       TxtIsPartialApproval.Text = MyArgs.IsPartialApproval.ToString();
+
+   if (TxtErrMsg.InvokeRequired)
+       TxtErrMsg.Invoke((MethodInvoker)delegate { TxtErrMsg.Text = MyArgs.ErrMsg; });
+   else
+       TxtErrMsg.Text = MyArgs.ErrMsg;
+
+   if (TxtErrorCode.InvokeRequired)
+       TxtErrorCode.Invoke((MethodInvoker)delegate { TxtErrorCode.Text = MyArgs.ErrCode.ToString(); });
+   else
+       TxtErrorCode.Text = MyArgs.ErrCode.ToString();
+
+   if (TxtResponseMessage.InvokeRequired)
+       TxtResponseMessage.Invoke((MethodInvoker)delegate { TxtResponseMessage.Text = MyArgs.RespMsg; });
+   else
+       TxtResponseMessage.Text = MyArgs.RespMsg;
+
+   if (TxtTxID.InvokeRequired)
+       TxtTxID.Invoke((MethodInvoker)delegate { TxtTxID.Text = MyArgs.TxID.ToString(); });
+   else
+       TxtTxID.Text = MyArgs.TxID.ToString();
+
+   if (TxtTxnCode.InvokeRequired)
+       TxtTxnCode.Invoke((MethodInvoker)delegate { TxtTxnCode.Text = MyArgs.TxnCode; });
+   else
+       TxtTxnCode.Text = MyArgs.TxnCode;
 
 
+   /// GET CARD DETAILS HERE FOR CHIP OR MANUAL 
+   TxHist lastTrans = EPVerifone.LastTransaction;
 
+   TxEntryTypes EntryType = lastTrans.TxEntryTyp;
+   if (EntryType == TxEntryTypes.EMV)
+   {
+      ///  must wait for card removed event to fire before you close port ( if at all)  , ( always use ClosePortSoft method ) 
+   }
+   else {
+      ///  if it is not a chip transaction you can close the port if needed  ( always use the ClosePortSoft method )  
+   }
+
+   
+   /// if a request was made to save the card you can gather the important paramters 
+   string ConsentResults = "ConsentRequested=" + MyArgs.ConsentResult.ConsentRequested.ToString() + "; ConsentCreated=" + MyArgs.ConsentResult.ConsentCreated.ToString() + "; ConsentID=" + MyArgs.ConsentResult.ConsentID.ToString() + "; CardLast4=" + MyArgs.ConsentResult.CardLast4 + "; ExpDate=" + MyArgs.ConsentResult.ExpDate + "; ErrCode=" + MyArgs.ConsentResult.ErrCode + "; ErrMsg=" + MyArgs.ConsentResult.ErrMsg;
+
+   /// if a request was made to save the card you can gather the important paramters 
+   if (MyArgs.ConsentResult.ConsentRequested)
+   {
+       if (TxtSavedCardResults.InvokeRequired)
+  TxtSavedCardResults.Invoke((MethodInvoker)delegate { TxtSavedCardResults.Text = ConsentResults; });
+       else
+  TxtSavedCardResults.Text = ConsentResults;
+   }
+
+   /// here we can gather info about the card which was processed 
+    if (MyArgs.TxEventType == TxEventType.TxApproved || MyArgs.TxEventType == TxEventType.TxDecline)
+   {
+ 
+      string AcctNum =  lastTrans.CardNum;
+      string CardType =  lastTrans.CardType;
+      string Fname =  lastTrans.FirstName;
+      string LastName =  lastTrans.LastName;
+   }
+   else
+   {
+      //  no need to look at Card details since no authorization was performed
+   }
+
+
+}
+```
 
 ##
 

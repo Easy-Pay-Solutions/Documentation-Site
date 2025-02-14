@@ -1,5 +1,6 @@
 ---
 description: Getting started with widgets for Number
+hidden: true
 ---
 
 # Widgets

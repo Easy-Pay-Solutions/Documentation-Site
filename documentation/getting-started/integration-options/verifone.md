@@ -46,13 +46,13 @@ This application has automatic updates and allows you to collect payments, creat
 
 We developed a Windows service which uses Cross-Origin Resource Sharing (CORS) to communicate with the browser. The Win service will return a simple XML response for each transaction directly to the HTML/PHP/ASP.NET page for consumption by the host application.
 
-As an integrator, this allows you to write simple client-side scripts within your own web applications to initiate transactions with a local Verifone. **You can also use this service with the Virtual Terminal to avoid writing any code.**
+As an integrator, this allows you to write simple client-side scripts within your own web applications to initiate transactions with a local Verifone. **You can also use this service with our Virtual Terminal to avoid writing any code.**
 {% endstep %}
 
 {% step %}
 **Number Verifone SDK**
 
-This DLL provides a means of collecting payments and creating card-on-file plans. Used in conjunction with our API, you can manage all aspects of your payment requirements, all within the confines of your own custom application.
+This DLL provides a means of collecting payments and creating card-on-file plans. Used in conjunction with your custom windows application, you can manage all aspects of your payment requirements.
 {% endstep %}
 {% endstepper %}
 
@@ -75,16 +75,13 @@ If you wish to use the standalone desktop application for Verifone, [contact Num
 
 ## Browser-based installation <a href="#browser-based-installation" id="browser-based-installation"></a>
 
-For any browser-based Implementation using the Verifone, you will need to install the local win service. This includes our Virtual Terminal application as well as your own custom web applications.
+For any browser-based Implementation using the Verifone, you will need to install the local win service. This includes our Virtual Terminal implementation as well as your own custom web applications.
 
 <figure><img src="../../../.gitbook/assets/Number VX Module.jpg" alt=""><figcaption></figcaption></figure>
 
 To Begin: Download the compressed archive:
 
-[Verifone Middleware Installer](https://easypay1.com/deploy/MiddleWare/EPVerifoneSetup_E2E_1041.zip)\
-
-
-
+#### [Verifone Middleware Installer](https://easypay1.com/deploy/MiddleWare/EPVerifoneSetup_E2E_1041.zip) 
 
 **To install the Win service:**
 
@@ -139,7 +136,7 @@ You can read more about using the Virtual Terminal in the [virtual-terminal.md](
 
 ### Requesting a transaction from your custom web application
 
-You will find a script file named EasyPayVerifone.js which has provided the following functionality:
+You will find a script file named EasyPayVerifone.js in the sample VeriFone website provides the following functionality:
 
 1. EMV sale only
 2. EMV sale and save card
@@ -216,7 +213,7 @@ The AccountHolder object looks like this. Note the embedded address object:
 
 The End Customer object is identical to the Accountholder object .  You may not have two objects so you can set both to the same value.
 
-The Purchase details object looks like this:
+The PurchaseDetails object provides two user defined fields and a service description for your use and this object looks like this:
 
 {% code overflow="wrap" %}
 ```
@@ -224,7 +221,7 @@ The Purchase details object looks like this:
 ```
 {% endcode %}
 
-The Amount object supports both a simple number such as 103.41 or an object such as the following:
+The Amount object supports both a simple number such as "103.41" or an object such as the following:
 
 {% code overflow="wrap" %}
 ```
@@ -234,7 +231,7 @@ The Amount object supports both a simple number such as 103.41 or an object such
 
 If you don’t plan to collect processing fees then you can just send a simple numeric value.&#x20;
 
-Once you have compiled all Json Object data you make your call to the local windows service as is outlined in the EasyPayVerifone.js
+Once you have compiled all Json Object data you make your call to the local windows service as is outlined in the EasyPayVerifone.js script file.&#x20;
 
 Here is a sample URL GET request:
 
@@ -777,7 +774,7 @@ Wait for your transaction to complete and event will fire&#x20;
       ///  must wait for card removed event to fire before you close port ( if at all)  , ( always use ClosePortSoft method ) 
    }
    else {
-      ///  if it is not a chip transaction you can close the port if needed  ( always use the ClosePortSoft method )  
+      ///  if it is not a chip transaction you can close the port if needed ( you dont have to close the port at all , but if you do always use the ClosePortSoft method )  
    }
 
    
@@ -788,9 +785,9 @@ Wait for your transaction to complete and event will fire&#x20;
    if (MyArgs.ConsentResult.ConsentRequested)
    {
        if (TxtSavedCardResults.InvokeRequired)
-  TxtSavedCardResults.Invoke((MethodInvoker)delegate { TxtSavedCardResults.Text = ConsentResults; });
+           TxtSavedCardResults.Invoke((MethodInvoker)delegate { TxtSavedCardResults.Text = ConsentResults; });
        else
-  TxtSavedCardResults.Text = ConsentResults;
+           TxtSavedCardResults.Text = ConsentResults;
    }
 
    /// here we can gather info about the card which was processed 
@@ -813,7 +810,11 @@ Wait for your transaction to complete and event will fire&#x20;
 
 For additional coding samples including creating recurring payment plans please refer to the sample SDK program &#x20;
 
-## Custom Windows event log
+### Managing the Workflow&#x20;
+
+Once you initiate a transaction the  EPVerifone class will set the DeviceIsBusy flag to True.  make sure you monitor this flag before attempting another transaction. EMV transactions can take time and you will expect the On\_Device\_Msg Event to Fire to alert you of the Results.  If for some reason the DeviceIsBusy flag stays true for an unreasonable amount of time you should issue the   UnLockAndReset(ref ErrStr) command which will reset both the SDK Software and the Verifone Device in order for you to once again enter the Ready State. There is also a Red Button on the Verifone device which you can press two times to reset the process and fire the On\_Device\_Msg Event.
+
+### Custom Windows event log
 
 After installing all the dependencies for either the SDK or the browser-based approach,, you will notice a new Windows event log has been registered named _EPmiddleWare_.&#x20;
 

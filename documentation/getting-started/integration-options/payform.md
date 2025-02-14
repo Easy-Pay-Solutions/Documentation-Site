@@ -4,11 +4,11 @@ description: Getting started with PayForm for Number
 
 # PayForm
 
-The PayForm is designed to be a highly flexible and secure payment form for your users.&#x20;
+The PayForm is designed to be a highly flexible and secure payment form for your users. It is designed to rendered in the browser and integrated with your existing web content.
 
 Collecting a payment or saving a card on file is a two-step process: a call is made to our REST API to initialize the payment parameters, and a payment link is generated.
 
-You get control of all the operational and design parameters of the PayForm:
+You control of all the operational and design parameters of the PayForm:
 
 1. From styling
 2. Field visibility and read-only parameters

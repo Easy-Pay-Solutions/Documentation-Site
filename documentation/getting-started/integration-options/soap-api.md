@@ -1,5 +1,6 @@
 ---
 description: Getting started with SOAP API for Number
+hidden: true
 ---
 
 # SOAP API

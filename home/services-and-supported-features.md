@@ -4,7 +4,7 @@ description: A short compilation of Number services and supported features
 
 # Services and Supported Features
 
-### REST/SOAP API
+### REST API
 
 **Characteristics:** \
 Enables integration of payment systems with external applications, allowing for full automation.
@@ -13,7 +13,7 @@ Enables integration of payment systems with external applications, allowing for 
 Perfect for companies developing custom applications with embedded payment functionality that are adaptable to various programming environments.
 
 {% hint style="info" %}
-To learn how to use the APIs, see the [rest-api.md](../documentation/getting-started/integration-options/rest-api.md "mention") and [soap-api.md](../documentation/getting-started/integration-options/soap-api.md "mention") integration guides.
+To learn how to use the API, see the [rest-api.md](../documentation/getting-started/integration-options/rest-api.md "mention") integration guide.
 {% endhint %}
 
 

@@ -34,19 +34,19 @@ You control of all the operational and design parameters of the PayForm:
 
 <figure><img src="../../../.gitbook/assets/PayForm builder.png" alt=""><figcaption></figcaption></figure>
 
-It might be difficult to prepare a PayForm request by yourself at first. **To make it easy to get started, we've prepared a tool which can generate that for you**.
+It might be difficult to prepare a PayForm request by yourself at first. **To make it easy and to get started, we've prepared a tool which can generate your form for you**.
 
-{% include "../../../.gitbook/includes/link-payform-builder.md" %}
-
-
+{% embed url="https://easypay8.com/payformwizard/" %}
+PayForm Builder
+{% endembed %}
 
 ### Transaction types
 
 There are three operation types you can choose from:
 
-* Collecting an instant card payment;
-* Saving cardholder data to be charged later (card-on-file);
-* Both saving the cardholder data (card-on-file) and an instant card payment.
+* Collecting an instant payment (credit card or ACH);
+* Saving accountholder data to be charged later (card-on-file, account on file);
+* Both saving the accountholder data and an collecting instant payment.
 
 This choice will also pre-determine some of the required fields and submission options for you.
 

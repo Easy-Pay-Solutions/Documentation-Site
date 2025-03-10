@@ -10,9 +10,9 @@ If you need to find a specific record in our database (such as a transaction or 
 
 
 
-## REST and SOAP API
+## REST API
 
-To query records, you'll need to find a relevant method in the [rest-api](../../api-reference/rest-api/ "mention") or [soap-api](../../api-reference/soap-api/ "mention") reference.
+To query records, you'll need to find a relevant method in the [rest-api](../../api-reference/rest-api/ "mention") reference.
 
 When querying, you'll need to prepare the `Query` string. It should consist of variables that correspond to fields on the records and logical terms built using those variables.&#x20;
 

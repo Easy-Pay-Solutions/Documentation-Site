@@ -26,9 +26,9 @@ We also have a custom desktop application which can be convenient in an office s
 {% endstep %}
 
 {% step %}
-#### Custom integration with our REST API or SOAP API
+#### Custom integration with our REST API
 
-Both our REST API and SOAP API offer methods for handling card present transactions.
+Our REST API offers methods for handling card present transactions.
 
 If you have your own PCI level one compliance program, you may write your own custom code calling our APIs to collect card present payments and consent. You can read more about PCI compliance in the short [#pci-compliance](../getting-started/integration-options/#pci-compliance "mention") section of our [integration-options](../getting-started/integration-options/ "mention") guide.
 {% endstep %}
@@ -98,12 +98,12 @@ As long as your USB card reader is connected to your machine, it will seamlessly
 
 
 
-### REST / SOAP API integration
+### REST API integration
 
 Our APIs are useful for any Integration as you can apply a credit, void, query, charge a stored card etc. For integrators who are PCI Level one compliant you may also pass cardholder data directly through the API. Most integrations will use our PayForms to collect Cardholder data while the API will be used for all remaining activity.
 
 {% hint style="info" %}
-To learn more about our APIs, see the [rest-api.md](../getting-started/integration-options/rest-api.md "mention") and [soap-api.md](../getting-started/integration-options/soap-api.md "mention") integration guides.
+To learn more about our APIs, see the [rest-api.md](../getting-started/integration-options/rest-api.md "mention") integration guide.
 {% endhint %}
 
 When you scan the credit card and collect the track data alongside the other payment details, if using the REST API, prepare the HMAC secured header like shown in [authentication.md](authentication.md "mention") quickstart guide, and encrypt the card number using our RSA certificate.&#x20;
@@ -115,14 +115,12 @@ Follow the instructions in the API reference to prepare and handle the request.
 You can use the following API operations:
 
 * For the REST API, use [#apicardprocrest-v1.0.0-cardsale-cardpresent](../../api-reference/rest-api/card-operations/process-a-card-sale.md#apicardprocrest-v1.0.0-cardsale-cardpresent "mention")
-* For the SOAP API, use [#credit-card-sale-card-present](../../api-reference/soap-api/credit-card/credit-card-sale.md#credit-card-sale-card-present "mention")
 
 #### API card present consent
 
 You can use the following API operations:
 
 * For the REST API, you can use [#apicardprocrest-v1.0.0-consentannual-create\_cp](../../api-reference/rest-api/consent-annual/create-annual-consent.md#apicardprocrest-v1.0.0-consentannual-create_cp "mention") and [#apicardprocrest-v1.0.0-consentrecurring-create](../../api-reference/rest-api/consent-recurring/create-recurring-consent.md#apicardprocrest-v1.0.0-consentrecurring-create "mention").
-* For the SOAP API, you can use [#create-annual-consent-card-present](../../api-reference/soap-api/consent-annual/#create-annual-consent-card-present "mention"), [#create-recurring-consent](../../api-reference/soap-api/consent-recurring/#create-recurring-consent "mention"), and [#create-subscription-consent-card-present](../../api-reference/soap-api/consent-subscription/#create-subscription-consent-card-present "mention").
 
 
 
@@ -156,11 +154,11 @@ If you have a mobile application that needs to handle payments and consent, our 
 {% endstep %}
 
 {% step %}
-#### REST API or SOAP API integration
+#### REST API integration
 
-For more customization, you can call our APIs for sales and consent.
+For more customization, you can call our API for sales and consent.
 
-If you have your own PCI level one compliance program, you may write your own custom code calling our APIs to collect manual card payments and consent. You can read more about PCI compliance in the short [#pci-compliance](../getting-started/integration-options/#pci-compliance "mention") section of our integration guide.
+If you have your own PCI level one compliance program, you may write your own custom code calling our API to collect manual card payments and consent. You can read more about PCI compliance in the short [#pci-compliance](../getting-started/integration-options/#pci-compliance "mention") section of our integration guide.
 {% endstep %}
 {% endstepper %}
 
@@ -330,12 +328,12 @@ The relevant methods are described in [#id-3.-create-annual-consent](../getting-
 
 
 
-### REST / SOAP API integration
+### REST API integration
 
 If you wish to have more control over the integration and you are PCI Level 1 compliant, you can try using our APIs. They provide methods for all payment types available using our other services, including manual card sales and collecting different types of consent.
 
 {% hint style="info" %}
-To learn more about our APIs, see the [rest-api.md](../getting-started/integration-options/rest-api.md "mention") and [soap-api.md](../getting-started/integration-options/soap-api.md "mention") integration guides.
+To learn more about our APIs, see the [rest-api.md](../getting-started/integration-options/rest-api.md "mention") integration guide.
 {% endhint %}
 
 After authenticating, when you collect cardholder data alongside the other payment details, if using the REST API, prepare the HMAC secured header like shown in [authentication.md](authentication.md "mention") quickstart guide, and encrypt the card number using our RSA certificate. Follow the instructions in the API reference to prepare and handle the request.
@@ -345,14 +343,10 @@ After authenticating, when you collect cardholder data alongside the other payme
 You can use the following API operations:
 
 * For the REST API, use [#apicardprocrest-v1.0.0-cardsale-manual](../../api-reference/rest-api/card-operations/process-a-card-sale.md#apicardprocrest-v1.0.0-cardsale-manual "mention").
-* For the SOAP API, use [#credit-card-sale-manual](../../api-reference/soap-api/credit-card/credit-card-sale.md#credit-card-sale-manual "mention").
 
 #### Manual consent
 
 You can use the following API operations:
 
 * For the REST API, use [#apicardprocrest-v1.0.0-consentannual-create\_man](../../api-reference/rest-api/consent-annual/create-annual-consent.md#apicardprocrest-v1.0.0-consentannual-create_man "mention") for annual consent and [#apicardprocrest-v1.0.0-consentrecurring-create](../../api-reference/rest-api/consent-recurring/create-recurring-consent.md#apicardprocrest-v1.0.0-consentrecurring-create "mention") for recurring consent.
-* For the SOAP API, use [#create-annual-consent-manual](../../api-reference/soap-api/consent-annual/#create-annual-consent-manual "mention") for annual, [#create-recurring-consent](../../api-reference/soap-api/consent-recurring/#create-recurring-consent "mention") for recurring, and [#create-subscription-consent-card-present](../../api-reference/soap-api/consent-subscription/#create-subscription-consent-card-present "mention")for subscription consent.
-
-
 

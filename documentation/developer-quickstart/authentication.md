@@ -44,7 +44,7 @@ When logging into the Virtual Terminal you'll need a username and password. When
 
 
 
-## REST and SOAP API
+## REST API
 
 Here's a basic step-by-step guide on how to authenticate with our APIs:
 
@@ -66,8 +66,7 @@ Use the Client Admin Portal to create a token. If you don't have access to the C
 
 You'll need to provide your account code as `AcctCode` and token as `Token`.
 
-REST API: [#apicardprocrest-v1.0.0-authenticate](../../api-reference/rest-api/authentication.md#apicardprocrest-v1.0.0-authenticate "mention")\
-SOAP API: [#authenticate](../../api-reference/soap-api/authentication.md#authenticate "mention")
+REST API: [#apicardprocrest-v1.0.0-authenticate](../../api-reference/rest-api/authentication.md#apicardprocrest-v1.0.0-authenticate "mention")
 
 Handle the response and store the `SessKey` value.
 {% endstep %}

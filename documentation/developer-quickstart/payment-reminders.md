@@ -22,8 +22,6 @@ After the payment is submitted, a transaction receipt would be sent to the e-mai
 
 To send a payment reminder using the REST API, use the [#apicardprocrest-v1.0.0-other-smspay](../../api-reference/rest-api/text-to-pay.md#apicardprocrest-v1.0.0-other-smspay "mention")endpoint.
 
-To do the same using the SOAP API, you can use [#send-a-payment-reminder](../../api-reference/soap-api/text2pay.md#send-a-payment-reminder "mention")  method.
-
 
 
 ### Request

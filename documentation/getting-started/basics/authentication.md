@@ -23,7 +23,7 @@ layout:
 
 
 
-Both the REST and SOAP APIs provide their own methods for authenticating with Number. You will need to use them to receive a `SessKey`. To authenticate, you need to provide your `AccountCode` and `Token`.
+The REST API provides their own methods for authenticating with Number. You will need to use them to receive a `SessKey`. To authenticate, you need to provide your `AccountCode` and `Token`.
 
 ***
 

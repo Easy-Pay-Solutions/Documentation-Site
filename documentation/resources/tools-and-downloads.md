@@ -6,21 +6,13 @@ description: Compilation of all tools and downloads from the documentation
 
 ## API
 
-All links and downloads for the REST and SOAP API.
+All links and downloads for the REST API.
 
 
 
 ### REST API downloads
 
 {% include "../../.gitbook/includes/link-rsa-certificate.md" %}
-
-
-
-### SOAP API downloads
-
-{% include "../../.gitbook/includes/link-wsdl-files.md" %}
-
-
 
 ## Mobile SDK
 

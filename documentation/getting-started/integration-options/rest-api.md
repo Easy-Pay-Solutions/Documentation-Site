@@ -16,7 +16,7 @@ An example of using the [<mark style="color:green;">`Authenticate`</mark>](../..
 
 {% tabs %}
 {% tab title="C# Synchronous" %}
-{% code overflow="wrap" lineNumbers="true" %}
+{% code lineNumbers="true" %}
 ```csharp
 private void Authenticate() {
 
@@ -104,7 +104,7 @@ private void Authenticate() {
 {% endtab %}
 
 {% tab title="C# Asynchronous" %}
-{% code overflow="wrap" lineNumbers="true" %}
+{% code lineNumbers="true" %}
 ```csharp
 public static async Task<string> Authenticate()
 {
@@ -174,8 +174,6 @@ public static async Task<string> Authenticate()
 }
 ```
 {% endcode %}
-
-s
 {% endtab %}
 {% endtabs %}
 

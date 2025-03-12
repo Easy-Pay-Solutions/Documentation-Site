@@ -19,85 +19,83 @@ An example of using the [<mark style="color:green;">`Authenticate`</mark>](../..
 {% code lineNumbers="true" %}
 ```csharp
 private void Authenticate() {
+  /// create request with account code and Token 
+  string jsonContent = "{\"AcctCode\":\"EP9142446\",\"Token\":\"F31D16BA862F4EC6AE95CB90450C826A\"}";
 
-	/// create request with account code and Token 
-	string jsonContent = "{\"AcctCode\":\"EP9142446\",\"Token\":\"F31D16BA862F4EC6AE95CB90450C826A\"}";
+  byte[] data = Encoding.UTF8.GetBytes(jsonContent);
 
-	byte[] data = Encoding.UTF8.GetBytes(jsonContent);
+  // Specify Number Endpoint 
+  string MyUrl = "https://easypay5.com/APIcardProcREST/v1.0.0/Authenticate";
 
-	// Specify Number Endpoint 
-	string MyUrl = "https://easypay5.com/APIcardProcREST/v1.0.0/Authenticate";
-
-	// create a webrequest 
-	WebRequest request = WebRequest.Create(MyUrl);
-	request.Method = "POST";
-	request.ContentType = "application/json";
-	request.ContentLength = data.Length;
-	string responseContent = null;
+  // create a webrequest 
+  WebRequest request = WebRequest.Create(MyUrl);
+  request.Method = "POST";
+  request.ContentType = "application/json";
+  request.ContentLength = data.Length;
+  string responseContent = null;
 
 
-	///  Important to handle any exceptions 
-	try
-	{
-		// execute request 
-		using (Stream stream = request.GetRequestStream())
-		{
-			stream.Write(data, 0, data.Length);
-		}
-		using (WebResponse response = request.GetResponse())
-		{
-			using (Stream stream = response.GetResponseStream())
-			{
-				using (StreamReader sr = new StreamReader(stream))
-				{
-					responseContent = sr.ReadToEnd();
-				}
-			}
-		}
-	}
-	catch (Exception ee)
-	{
-		///  consume any communication exceptions and abort
-		MessageBox.Show("Communication Exception : " + ee.Message);
-		/// important to insert your Logging function here
-		return;
+  ///  Important to handle any exceptions 
+  try
+  {
+    // execute request 
+    using (Stream stream = request.GetRequestStream())
+    {
+      stream.Write(data, 0, data.Length);
+    }
+    using (WebResponse response = request.GetResponse())
+    {
+      using (Stream stream = response.GetResponseStream())
+      {
+        using (StreamReader sr = new StreamReader(stream))
+        {
+          responseContent = sr.ReadToEnd();
+        }
+      }
+    }
+  }
+  catch (Exception ee)
+  {
+    ///  consume any communication exceptions and abort
+    MessageBox.Show("Communication Exception : " + ee.Message);
+    /// important to insert your Logging function here
+    return;
 
-	}
+  }
 
-	/// parse Json in any number of ways  , we use Newtonsoft 
-	var AuthResp = Newtonsoft.Json.JsonConvert.DeserializeObject<dynamic>(responseContent);
+  /// parse Json in any number of ways  , we use Newtonsoft 
+  var AuthResp = Newtonsoft.Json.JsonConvert.DeserializeObject<dynamic>(responseContent);
 
-	var MyResp = AuthResp.AuthenticateResult;
+  var MyResp = AuthResp.AuthenticateResult;
 
-	///  here are the important values to consume
-	bool FunctionOk = (bool)MyResp.FunctionOk;
-	bool AuthSuccess = (bool)MyResp.AuthSuccess;
-	int ErrCode = (int)MyResp.ErrCode;
-	string ErrMsg = (string)MyResp.ErrMsg;
-	string RespMsg = (string)MyResp.RespMsg;
+  ///  here are the important values to consume
+  bool FunctionOk = (bool)MyResp.FunctionOk;
+  bool AuthSuccess = (bool)MyResp.AuthSuccess;
+  int ErrCode = (int)MyResp.ErrCode;
+  string ErrMsg = (string)MyResp.ErrMsg;
+  string RespMsg = (string)MyResp.RespMsg;
 
-	//Check for unexpected Errors on cloud servers. If errors found log Error info and abort;
-	if (!FunctionOk)
-	{
-		MessageBox.Show("Aspen Error : " + ErrMsg + " : ErrorCode: " + ErrCode);
-		/// important to insert your Logging function here
-		return;
-	}
+  //Check for unexpected Errors on cloud servers. If errors found log Error info and abort;
+  if (!FunctionOk)
+  {
+    MessageBox.Show("Aspen Error : " + ErrMsg + " : ErrorCode: " + ErrCode);
+    /// important to insert your Logging function here
+    return;
+  }
 
-	//Check for failures such as Invalid or Expired Credentials or Inactive Account.
-	if (!AuthSuccess)
-	{
-		MessageBox.Show("Failed Authentication : " + RespMsg);
-		/// important to insert your Logging function here
-		return;
-	}
+  //Check for failures such as Invalid or Expired Credentials or Inactive Account.
+  if (!AuthSuccess)
+  {
+    MessageBox.Show("Failed Authentication : " + RespMsg);
+    /// important to insert your Logging function here
+    return;
+  }
 
-	/// Arriving here means that the Authentication was successful. You will retrieve a SessionKey and 
-	/// a list of Merchant Records associated with this account. The session key will be used for all
-	/// subsequent API calls within the next 25 hours 
-	string SessKey = (string)MyResp.SessKey;
-	var MerchantList = MyResp.MerchantList;
-
+  /// Arriving here means that the Authentication was successful. You will retrieve a SessionKey and 
+  /// a list of Merchant Records associated with this account. The session key will be used for all
+  /// subsequent API calls within the next 25 hours 
+  string SessKey = (string)MyResp.SessKey;
+  var MerchantList = MyResp.MerchantList;
 }
 ```
 {% endcode %}
@@ -108,69 +106,67 @@ private void Authenticate() {
 ```csharp
 public static async Task<string> Authenticate()
 {
+  string responseData = string.Empty;
 
-	string responseData = string.Empty;
+  HttpClient httpClient = new HttpClient();
+  /// Number Endpoint
+  string apiUrl = "https://easypay5.com/APIcardProcREST/v1.0.0/Authenticate";
 
-	HttpClient httpClient = new HttpClient();
-	/// Number Endpoint
-	string apiUrl = "https://easypay5.com/APIcardProcREST/v1.0.0/Authenticate";
+  // Here is your account code and Token used to authenticate 
+  string jsonContent = "{\"AcctCode\":\"EP9142446\",\"Token\":\"F31D16BA862F4EC6AE95CB90450C826A\"}";
 
-	// Here is your account code and Token used to authenticate 
-	string jsonContent = "{\"AcctCode\":\"EP9142446\",\"Token\":\"F31D16BA862F4EC6AE95CB90450C826A\"}";
+  HttpResponseMessage response = new HttpResponseMessage();
+  HttpContent content = new StringContent(jsonContent, Encoding.UTF8, "application/json");
 
-	HttpResponseMessage response = new HttpResponseMessage();
-	HttpContent content = new StringContent(jsonContent, Encoding.UTF8, "application/json");
+  ///  important exception handling will provide info for communication issues  
+  try
+  {
+    response = await httpClient.PostAsync(apiUrl, content);
+  }
+  catch (Exception ee) {
+    return "Exception : " + ee.Message;
+  }
 
+  if (response.IsSuccessStatusCode)
+  {
+    // Handle successful POST response
+    responseData = await response.Content.ReadAsStringAsync();
+  }
+  else
+  {
+    return "http error code " + response.StatusCode;
+  }
 
-	///  important exception handling will provide info for communication issues  
-	try
-	{
-		response = await httpClient.PostAsync(apiUrl, content);
-	}
-	catch (Exception ee) {
-		return "Exception : " + ee.Message;
-	}
+  //  now you can parse the Json Response in a number of ways ( we will use newtonsoft )
+  var AuthResp = Newtonsoft.Json.JsonConvert.DeserializeObject<dynamic>(responseData);
+  var MyResp = AuthResp.AuthenticateResult;
 
-	if (response.IsSuccessStatusCode)
-	{
-		// Handle successful POST response
-		responseData = await response.Content.ReadAsStringAsync();
-	}
-	else
-	{
-		return "http error code " + response.StatusCode;
-	}
+  ///  here are the important values 
+  bool FunctionOk = (bool)MyResp.FunctionOk;
+  bool AuthSuccess = (bool)MyResp.AuthSuccess;
+  int ErrCode = (int)MyResp.ErrCode;
+  string ErrMsg = (string)MyResp.ErrMsg;
+  string RespMsg = (string)MyResp.RespMsg;
 
-	//  now you can parse the Json Response in a number of ways ( we will use newtonsoft )
-	var AuthResp = Newtonsoft.Json.JsonConvert.DeserializeObject<dynamic>(responseData);
-	var MyResp = AuthResp.AuthenticateResult;
+  //Check for Aspen Errors on cloud servers. If errors found log Error info and abort;
+  if (!FunctionOk)
+  {
+    return "Aspen Error : " + ErrMsg + " : ErrorCode:" + ErrCode;
+  }
 
-	///  here are the important values 
-	bool FunctionOk = (bool)MyResp.FunctionOk;
-	bool AuthSuccess = (bool)MyResp.AuthSuccess;
-	int ErrCode = (int)MyResp.ErrCode;
-	string ErrMsg = (string)MyResp.ErrMsg;
-	string RespMsg = (string)MyResp.RespMsg;
+  //Check for failures such as Invalid or Expired Credentials or Inactive Account.
+  if (!AuthSuccess)
+  {
+    return " Invalid Authentication : " + RespMsg;
+  }
 
-	//Check for Aspen Errors on cloud servers. If errors found log Error info and abort;
-	if (!FunctionOk)
-	{
-		return "Aspen Error : " + ErrMsg + " : ErrorCode:" + ErrCode;
-	}
+  /// Arriving here means that the Authentication was successful. You will retrieve a SessionKey and 
+  /// a list of Merchant Records associated with this account. The session key will be used for all
+  /// subsequent API calls
+  string SessKey = (string)MyResp.SessKey;
+  var MerchantList = MyResp.MerchantList;
 
-	//Check for failures such as Invalid or Expired Credentials or Inactive Account.
-	if (!AuthSuccess)
-	{
-		return " Invalid Authentication : " + RespMsg;
-	}
-
-	/// Arriving here means that the Authentication was successful. You will retrieve a SessionKey and 
-	/// a list of Merchant Records associated with this account. The session key will be used for all
-	/// subsequent API calls
-	string SessKey = (string)MyResp.SessKey;
-	var MerchantList = MyResp.MerchantList;
-
-	return "Success : " + SessKey;
+  return "Success : " + SessKey;
 }
 ```
 {% endcode %}

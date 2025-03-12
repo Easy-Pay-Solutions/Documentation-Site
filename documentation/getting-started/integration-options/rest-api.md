@@ -8,8 +8,6 @@ Our REST API allows full integration of Number services with a high degree of cu
 
 Before you continue this section, we recommend reading sections about [authentication](../basics/authentication.md), [best practices](../basics/api-best-practices.md), and [input validation](../basics/api-input-validation.md).
 
-
-
 ## Examples
 
 ### Authenticate
@@ -17,178 +15,167 @@ Before you continue this section, we recommend reading sections about [authentic
 An example of using the [<mark style="color:green;">`Authenticate`</mark>](../../../api-reference/rest-api/authentication.md#apicardprocrest-v1.0.0-authenticate) method.
 
 {% tabs %}
-{% tab title="C#" %}
+{% tab title="C# Synchronous" %}
 {% code overflow="wrap" lineNumbers="true" %}
 ```csharp
-public static async Task Authenticate(string acctCode, string token)
-{
-  using HttpClient httpClient = new HttpClient();
-  string apiUrl =
-    "https://easypay5.com/APIcardProcREST/v1.0.0/Authenticate";
+private void Authenticate() {
 
-  string jsonContent = $$"""
-    {"AcctCode":"{{acctCode}}","Token":"{{token}}"}
-  """;
+	/// create request with account code and Token 
+	string jsonContent = "{\"AcctCode\":\"EP9142446\",\"Token\":\"F31D16BA862F4EC6AE95CB90450C826A\"}";
 
-  HttpContent content = new StringContent(
-    jsonContent, System.Text.Encoding.UTF8, "application/json");
-  HttpResponseMessage response = await httpClient
-    .PostAsync(apiUrl, content);
+	byte[] data = Encoding.UTF8.GetBytes(jsonContent);
 
-  if (!response.IsSuccessStatusCode)
-  {
-    MessageBox.Show("Error code: " + response.StatusCode);
-    // <Insert your Logging function here>
-    return;
-  }
+	// Specify Number Endpoint 
+	string MyUrl = "https://easypay5.com/APIcardProcREST/v1.0.0/Authenticate";
 
-  var authResponse = Newtonsoft.Json.JsonConvert
-    .DeserializeObject<dynamic>(
-      await response.Content.ReadAsStringAsync());
-  var authResult = authResponse.AuthenticateResult;
+	// create a webrequest 
+	WebRequest request = WebRequest.Create(MyUrl);
+	request.Method = "POST";
+	request.ContentType = "application/json";
+	request.ContentLength = data.Length;
+	string responseContent = null;
 
-  // Here are some of the important values 
-  bool functionOk = (bool)authResult.FunctionOk;
-  bool authSuccess = (bool)authResult.AuthSuccess;
-  int errCode = (int)authResult.ErrCode;
-  string errMsg = (string)authResult.ErrMsg;
-  string respMsg = (string)authResult.RespMsg;
 
-  // Check for unexpected error on server
-  if (!functionOk)
-  {
-    MessageBox.Show(errMsg + " ErrorCode: " + errCode);
-    // <Insert your Logging function here>
-    return;
-  }
+	///  Important to handle any exceptions 
+	try
+	{
+		// execute request 
+		using (Stream stream = request.GetRequestStream())
+		{
+			stream.Write(data, 0, data.Length);
+		}
+		using (WebResponse response = request.GetResponse())
+		{
+			using (Stream stream = response.GetResponseStream())
+			{
+				using (StreamReader sr = new StreamReader(stream))
+				{
+					responseContent = sr.ReadToEnd();
+				}
+			}
+		}
+	}
+	catch (Exception ee)
+	{
+		///  consume any communication exceptions and abort
+		MessageBox.Show("Communication Exception : " + ee.Message);
+		/// important to insert your Logging function here
+		return;
 
-  // Check for expected problems such as invalid
-  // or expired credentials and inactive account.
-  if (!authSuccess)
-  {
-    MessageBox.Show(respMsg);
-    // <Insert your Logging function here>
-    return;
-  }
+	}
 
-  /* Arriving here means that the Authentication was successful. 
-     * You will retrieve a SessionKey and 
-     * a list of Merchant Records associated with this account. 
-     * The session key should be used for all subsequent API calls */
+	/// parse Json in any number of ways  , we use Newtonsoft 
+	var AuthResp = Newtonsoft.Json.JsonConvert.DeserializeObject<dynamic>(responseContent);
 
-  string sessKey = (string)authResult.SessKey;
-  var merchantList = authResult.MerchantList;
+	var MyResp = AuthResp.AuthenticateResult;
 
-  // <Store the Session Key and the Merchant List>
+	///  here are the important values to consume
+	bool FunctionOk = (bool)MyResp.FunctionOk;
+	bool AuthSuccess = (bool)MyResp.AuthSuccess;
+	int ErrCode = (int)MyResp.ErrCode;
+	string ErrMsg = (string)MyResp.ErrMsg;
+	string RespMsg = (string)MyResp.RespMsg;
+
+	//Check for unexpected Errors on cloud servers. If errors found log Error info and abort;
+	if (!FunctionOk)
+	{
+		MessageBox.Show("Aspen Error : " + ErrMsg + " : ErrorCode: " + ErrCode);
+		/// important to insert your Logging function here
+		return;
+	}
+
+	//Check for failures such as Invalid or Expired Credentials or Inactive Account.
+	if (!AuthSuccess)
+	{
+		MessageBox.Show("Failed Authentication : " + RespMsg);
+		/// important to insert your Logging function here
+		return;
+	}
+
+	/// Arriving here means that the Authentication was successful. You will retrieve a SessionKey and 
+	/// a list of Merchant Records associated with this account. The session key will be used for all
+	/// subsequent API calls within the next 25 hours 
+	string SessKey = (string)MyResp.SessKey;
+	var MerchantList = MyResp.MerchantList;
+
 }
 ```
 {% endcode %}
 {% endtab %}
 
-{% tab title="JavaScript (Node.js)" %}
+{% tab title="C# Asynchronous" %}
 {% code overflow="wrap" lineNumbers="true" %}
-```javascript
-'use strict';
+```csharp
+public static async Task<string> Authenticate()
+{
 
-const http = require('http');
-const https = require('https');
+	string responseData = string.Empty;
 
-const port = process.env.PORT || 1337;
+	HttpClient httpClient = new HttpClient();
+	/// Number Endpoint
+	string apiUrl = "https://easypay5.com/APIcardProcREST/v1.0.0/Authenticate";
 
-http.createServer((req, res) => {
-    let body = '';
+	// Here is your account code and Token used to authenticate 
+	string jsonContent = "{\"AcctCode\":\"EP9142446\",\"Token\":\"F31D16BA862F4EC6AE95CB90450C826A\"}";
 
-    // AcctCode and Token supplied by Number
-    const data = JSON.stringify({
-        AcctCode: 'EP8449374',
-        Token: '645E3CC4FD04472182C4161BA624C565'
-    });
+	HttpResponseMessage response = new HttpResponseMessage();
+	HttpContent content = new StringContent(jsonContent, Encoding.UTF8, "application/json");
 
-    const options = {
-        host: 'easypay5.com',
-        port: 443,
-        path: '/APIcardProcREST/v1.0.0/Authenticate',
-        method: 'POST',
-        timeout: 2000,
-        headers: {
-            'Content-Type': 'application/json',
-            'Content-Length': Buffer.byteLength(data)
-        }
-    };
 
-    const postReq = https.request(options, (postRes) => {
-        postRes.setEncoding('utf8');
+	///  important exception handling will provide info for communication issues  
+	try
+	{
+		response = await httpClient.PostAsync(apiUrl, content);
+	}
+	catch (Exception ee) {
+		return "Exception : " + ee.Message;
+	}
 
-        postRes.on('data', (chunk) => {
-            body += chunk;
-        });
+	if (response.IsSuccessStatusCode)
+	{
+		// Handle successful POST response
+		responseData = await response.Content.ReadAsStringAsync();
+	}
+	else
+	{
+		return "http error code " + response.StatusCode;
+	}
 
-        postRes.on('end', () => {
-            try {
-                if (body === 'Bad Request') {
-                    console.error('Bad request');
-                    res.writeHead(400, { 'Content-Type': 'text/plain' });
-                    res.end('Bad Request');
-                    return;
-                }
+	//  now you can parse the Json Response in a number of ways ( we will use newtonsoft )
+	var AuthResp = Newtonsoft.Json.JsonConvert.DeserializeObject<dynamic>(responseData);
+	var MyResp = AuthResp.AuthenticateResult;
 
-                const obj = JSON.parse(body);
+	///  here are the important values 
+	bool FunctionOk = (bool)MyResp.FunctionOk;
+	bool AuthSuccess = (bool)MyResp.AuthSuccess;
+	int ErrCode = (int)MyResp.ErrCode;
+	string ErrMsg = (string)MyResp.ErrMsg;
+	string RespMsg = (string)MyResp.RespMsg;
 
-                if (!obj) {
-                    console.error('Communication Error: Null Object');
-                    res.writeHead(500, { 'Content-Type': 'text/plain' });
-                    res.end('Communication Error: Null Object');
-                    return;
-                }
+	//Check for Aspen Errors on cloud servers. If errors found log Error info and abort;
+	if (!FunctionOk)
+	{
+		return "Aspen Error : " + ErrMsg + " : ErrorCode:" + ErrCode;
+	}
 
-                const { AuthenticateResult } = obj;
+	//Check for failures such as Invalid or Expired Credentials or Inactive Account.
+	if (!AuthSuccess)
+	{
+		return " Invalid Authentication : " + RespMsg;
+	}
 
-                if (!AuthenticateResult.FunctionOk) {
-                    console.error(`${AuthenticateResult.ErrMsg} ${AuthenticateResult.ErrCode}`);
-                    res.writeHead(500, { 'Content-Type': 'text/plain' });
-                    res.end(`${AuthenticateResult.ErrMsg} ${AuthenticateResult.ErrCode}`);
-                    return;
-                }
+	/// Arriving here means that the Authentication was successful. You will retrieve a SessionKey and 
+	/// a list of Merchant Records associated with this account. The session key will be used for all
+	/// subsequent API calls
+	string SessKey = (string)MyResp.SessKey;
+	var MerchantList = MyResp.MerchantList;
 
-                if (!AuthenticateResult.AuthSuccess) {
-                    console.error(AuthenticateResult.RespMsg);
-                    res.writeHead(401, { 'Content-Type': 'text/plain' });
-                    res.end(AuthenticateResult.RespMsg);
-                    return;
-                }
-
-                console.log(`SessKey: ${AuthenticateResult.SessKey}`);
-                res.writeHead(200, { 'Content-Type': 'text/plain' });
-                res.end(`SessKey: ${AuthenticateResult.SessKey}`);
-            } catch (error) {
-                console.error('Error parsing response:', error);
-                res.writeHead(500, { 'Content-Type': 'text/plain' });
-                res.end('Internal Server Error');
-            }
-        });
-    });
-
-    postReq.on('error', (error) => {
-        console.error('Request error:', error);
-        res.writeHead(500, { 'Content-Type': 'text/plain' });
-        res.end('Request Error');
-    });
-
-    postReq.on('timeout', () => {
-        console.error('Request timed out');
-        res.writeHead(504, { 'Content-Type': 'text/plain' });
-        res.end('Request Timeout');
-    });
-
-    postReq.write(data);
-    postReq.end();
-}).listen(port, () => {
-    console.log(`Server listening on port ${port}`);
-});
+	return "Success : " + SessKey;
+}
 ```
 {% endcode %}
 
-
+s
 {% endtab %}
 {% endtabs %}
 

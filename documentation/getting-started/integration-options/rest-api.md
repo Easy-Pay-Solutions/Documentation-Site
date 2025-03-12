@@ -171,9 +171,109 @@ public static async Task<string> Authenticate()
 ```
 {% endcode %}
 {% endtab %}
+
+{% tab title="JavaScript (Node.js)" %}
+```javascript
+'use strict';
+
+const http = require('http');
+const https = require('https');
+
+const port = process.env.PORT || 1337;
+
+http.createServer((req, res) => {
+    let body = '';
+
+    // AcctCode and Token supplied by Number
+    const data = JSON.stringify({
+        AcctCode: 'EP8449374',
+        Token: '645E3CC4FD04472182C4161BA624C565'
+    });
+
+    const options = {
+        host: 'easypay5.com',
+        port: 443,
+        path: '/APIcardProcREST/v1.0.0/Authenticate',
+        method: 'POST',
+        timeout: 2000,
+        headers: {
+            'Content-Type': 'application/json',
+            'Content-Length': Buffer.byteLength(data)
+        }
+    };
+
+    const postReq = https.request(options, (postRes) => {
+        postRes.setEncoding('utf8');
+
+        postRes.on('data', (chunk) => {
+            body += chunk;
+        });
+
+        postRes.on('end', () => {
+            try {
+                if (body === 'Bad Request') {
+                    console.error('Bad request');
+                    res.writeHead(400, { 'Content-Type': 'text/plain' });
+                    res.end('Bad Request');
+                    return;
+                }
+
+                const obj = JSON.parse(body);
+
+                if (!obj) {
+                    console.error('Communication Error: Null Object');
+                    res.writeHead(500, { 'Content-Type': 'text/plain' });
+                    res.end('Communication Error: Null Object');
+                    return;
+                }
+
+                const { AuthenticateResult } = obj;
+
+                if (!AuthenticateResult.FunctionOk) {
+                    console.error(`${AuthenticateResult.ErrMsg} ${AuthenticateResult.ErrCode}`);
+                    res.writeHead(500, { 'Content-Type': 'text/plain' });
+                    res.end(`${AuthenticateResult.ErrMsg} ${AuthenticateResult.ErrCode}`);
+                    return;
+                }
+
+                if (!AuthenticateResult.AuthSuccess) {
+                    console.error(AuthenticateResult.RespMsg);
+                    res.writeHead(401, { 'Content-Type': 'text/plain' });
+                    res.end(AuthenticateResult.RespMsg);
+                    return;
+                }
+
+                console.log(`SessKey: ${AuthenticateResult.SessKey}`);
+                res.writeHead(200, { 'Content-Type': 'text/plain' });
+                res.end(`SessKey: ${AuthenticateResult.SessKey}`);
+            } catch (error) {
+                console.error('Error parsing response:', error);
+                res.writeHead(500, { 'Content-Type': 'text/plain' });
+                res.end('Internal Server Error');
+            }
+        });
+    });
+
+    postReq.on('error', (error) => {
+        console.error('Request error:', error);
+        res.writeHead(500, { 'Content-Type': 'text/plain' });
+        res.end('Request Error');
+    });
+
+    postReq.on('timeout', () => {
+        console.error('Request timed out');
+        res.writeHead(504, { 'Content-Type': 'text/plain' });
+        res.end('Request Timeout');
+    });
+
+    postReq.write(data);
+    postReq.end();
+}).listen(port, () => {
+    console.log(`Server listening on port ${port}`);
+});
+```
+{% endtab %}
 {% endtabs %}
-
-
 
 ### Process Annual Consent <a href="#process-annual-consent" id="process-annual-consent"></a>
 
@@ -181,68 +281,78 @@ An example of using [<mark style="color:green;">`ConsentAnnual_ProcPayment`</mar
 
 {% tabs %}
 {% tab title="C#" %}
-{% code overflow="wrap" lineNumbers="true" %}
+{% code lineNumbers="true" %}
 ```csharp
-public static async Task ProcessConsent(
-  string sessKey, int consentId, decimal processAmount)
+public static async Task<string> ProcessConsent( )
 {
-  using HttpClient httpClient = new HttpClient();
+  string responseData = string.Empty;
+
+  HttpClient httpClient = new HttpClient();
+
+  /// Number Endpoint
   string apiUrl = "https://easypay5.com/APIcardProcREST/v1.0.0/ConsentAnnual/ProcPayment";
+  
+  // Here is your consentID and amount of purchase
+  string jsonContent = "{\"ConsentID\": 1 ,\"ProcessAmount\": 52.00 }";
 
-  string jsonContent = $$"""
-    {"ConsentID":{{consentId}},"ProcessAmount":{{processAmount}}}
-  """;
+  HttpContent content = new StringContent( jsonContent, System.Text.Encoding.UTF8, "application/json");
+  HttpResponseMessage response = new HttpResponseMessage();
 
-  HttpContent content = new StringContent(
-    jsonContent, System.Text.Encoding.UTF8, "application/json");
-  httpClient.DefaultRequestHeaders.Add("SessKey", sessKey);
-  HttpResponseMessage response = await httpClient
-    .PostAsync(apiUrl, content);
+  // add your session Key to Header
+  httpClient.DefaultRequestHeaders.Add("SessKey", "8D85FD7E140A4098AB303330323241303430333238");
 
-  if (!response.IsSuccessStatusCode)
+  try
   {
-    MessageBox.Show("Error code: " + response.StatusCode);
-    // <Insert your Logging function here>
-    return;
+    response = await httpClient.PostAsync(apiUrl, content);
+  }
+  catch (Exception ee)
+  {
+    return "Exception : " + ee.Message;
   }
 
-  var saleResponse = Newtonsoft.Json.JsonConvert
-    .DeserializeObject<dynamic>(
-      await response.Content.ReadAsStringAsync());
-  var procPaymentResult = saleResponse.ConsentAnnual_ProcPaymentResult;
-
-  // Here are some of the important values 
-  bool functionOk = (bool)procPaymentResult.FunctionOk;
-  bool txApproved = (bool)procPaymentResult.TxApproved;
-  int errCode = (int)procPaymentResult.ErrCode;
-  string errMsg = (string)procPaymentResult.ErrMsg;
-  string respMsg = (string)procPaymentResult.RespMsg;
-
-  int txId = (int)procPaymentResult.TxID;
-  int txnCode = (int)procPaymentResult.TxnCode;
-
-  // Check for unexpected error on server
-  if (!functionOk)
+  if (response.IsSuccessStatusCode)
   {
-    MessageBox.Show(errMsg + " ErrorCode: " + errCode);
-    // <Insert your Logging function here>
-    return;
-  }
-
-  // Check for declined transaction
-  if (!txApproved)
-  {
-    MessageBox.Show(respMsg + " Decline Code: " + txnCode);
-    // <Insert your Logging function here>
-    return;
+    // Handle successful POST response
+    responseData = await response.Content.ReadAsStringAsync();
   }
   else
   {
-    MessageBox.Show(respMsg + " Approval Code: " + txnCode);
-    // <Insert your Logging function here>
-    // <Do something with the response if needed>
-    return;
+    // handle http error
+    return "http error code " + response.StatusCode;
   }
+
+
+  var saleResponse = Newtonsoft.Json.JsonConvert.DeserializeObject<dynamic>(responseData);
+
+  var procPaymentResult = saleResponse.ConsentAnnual_ProcPaymentResult;
+
+  // Here are some of the important values 
+  bool FunctionOk = (bool)procPaymentResult.FunctionOk;
+  bool TxApproved = (bool)procPaymentResult.TxApproved;
+  int ErrCode = (int)procPaymentResult.ErrCode;
+  string ErrMsg = (string)procPaymentResult.ErrMsg;
+  string RespMsg = (string)procPaymentResult.RespMsg;
+
+  int TxID = (int)procPaymentResult.TxID;
+  string TxnCode = (string)procPaymentResult.TxnCode;
+
+
+
+  //Check for Aspen Errors on cloud servers. If errors found log Error info and abort;
+  if (!FunctionOk)
+  {
+    return "Aspen Error : " + ErrMsg + " : ErrorCode:" + ErrCode;
+  }
+
+  //check for card issuer decline 
+  if (!TxApproved)
+  {
+    return "Declined Transaction : " + RespMsg + " : " + TxnCode;
+  }
+
+
+  return "Approved Transaction " + TxID.ToString() + " : Approval Code " + TxnCode;
+
 }
 ```
 {% endcode %}

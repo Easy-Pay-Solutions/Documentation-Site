@@ -737,6 +737,42 @@ components:
           - 1: Merchant
           - 2: Customer
           - 3: Both
+  
+    Reconcile:
+      type: object
+      properties:
+
+        AMOUNT:
+          type: number
+          format: float
+          example: 10.0000
+          description: "The total $ amount of the transaction." 
+        CreatedOn:
+          $ref: "#/components/schemas/Date"
+        Origin:
+          type: string
+          enum:
+            - "API" # REST / SOAP API
+            - "WID" # Widget
+            - "VT" # Virtual Terminal
+            - "MOBL" # Mobile SDK
+            - "SDK" # Verifone
+            - "AUTO" # Automatically scheduled from a payment plan
+          example: "API"
+          description: |
+            The source from which the transaction originated.
+              - API: REST / SOAP API
+              - WID: Widget
+              - VT: Virtual Terminal
+              - MOBL: Mobile SDK
+              - SDK: Verifone
+              - AUTO: Automatically scheduled from a payment plan
+        TxID:
+          type: integer
+          example: -1
+          description: "The transaction ID associated with this payment."
+        TxSTATUS:
+          $ref: "#/components/schemas/TxStatus"
 
     REF_ID:
       type: string
@@ -1984,7 +2020,7 @@ paths:
 
   # Card Sale - Surcharge
 
-  /APIcardProcREST/v1.0.0/CardSale/Surcharge:
+  /APIcardProcREST/v1.0.0/CardSale/WithOptions:
     post:
       summary: Process a card sale with surcharge
       description: |
@@ -2020,11 +2056,11 @@ paths:
                 CSV: "122"
               AcctHolder:
                 Firstname: "Sean"
-                Lastname: "Wood"
+                Lastname: "Testing"
                 Company: ""
                 Title: ""
                 Url: ""
-                BillIngAdress:
+                BillingAddress:
                   Address1: "123 Fake St."
                   Address2: ""
                   City: "PORTLAND"
@@ -2035,18 +2071,18 @@ paths:
                 Phone: "8777248472"
               EndCustomer:
                 Firstname: "Sean"
-                Lastname: "Wood"
+                Lastname: "Testing"
                 Company: ""
                 Title: ""
                 Url: ""
-                BillIngAdress:
+                BillingAddress:
                   Address1: "123 Fake St."
                   Address2: ""
                   City: "PORTLAND"
                   State: "ME"
                   ZIP: "04106"
                   Country: "USA"
-                Email: "robert@easypaysolutions.com"
+                Email: "tester@easypaysolutions.com"
                 Phone: "8777248472"
               Amounts:
                 BaseAmt: 52
@@ -2064,7 +2100,7 @@ paths:
               schema:
                 type: object
                 properties:
-                  CreditCardSale_SurchargeResult:
+                  CreditCardSale_WithOptionsResult:
                     type: object
                     properties:
                       AVSresult:
@@ -5693,6 +5729,61 @@ paths:
                         type: array
                         items:
                           $ref: "#/components/schemas/Transaction"
+      parameters:
+        - $ref: "#/components/parameters/SessKey"
+        - $ref: "#/components/parameters/ContentType"
+        - $ref: "#/components/parameters/Accept"
+  
+  # Transaction Reconcile Query
+
+  /APIcardProcREST/v1.0.0/Query/Reconcile:
+    post:
+      summary: The reconcile Query is designed to be called at a specific periodic interval, perhaps once per day. We will return all the unique transaction IDs encountered during that interval.
+      operationId: reconcileTransactions
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+               StartDate:
+                  type: date
+                  example: "2024-12-01"
+                  description: The start date
+               EndDate:
+                  type: date                  
+                  example: "2025-01-01"
+                  description: The end date           
+      responses:
+        "200":
+          description: Successfully returned transaction records
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  ReconcileResult:
+                    type: object
+                    properties:
+                      ErrCode:
+                        $ref: "#/components/schemas/ErrCode"
+                      ErrMsg:
+                        $ref: "#/components/schemas/ErrMsg"
+                      FunctionOk:
+                        $ref: "#/components/schemas/FunctionOk"
+                      NumRecords:
+                        type: integer
+                        example: 5
+                        description: Number of records returned
+                      RespMsg:
+                        type: string
+                        example: "Successfully Returned Transaction Records : 5"
+                        description: Response message
+                      Transactions:
+                        type: array
+                        items:
+                          $ref: "#/components/schemas/Reconcile"
       parameters:
         - $ref: "#/components/parameters/SessKey"
         - $ref: "#/components/parameters/ContentType"

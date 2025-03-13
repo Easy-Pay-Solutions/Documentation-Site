@@ -1,6 +1,8 @@
 ---
-icon: object-intersect
 description: The API reference for the SOAP API
+hidden: true
+noIndex: true
+icon: object-intersect
 ---
 
 # SOAP API
@@ -45,5 +47,3 @@ End Class
 {% endtabs %}
 
 The base URL of the SOAP service is [https://easypay5.com/APIcardProcR119/CardProcAPI.svc](https://easypay5.com/APIcardProcR119/CardProcAPI.svc)
-
-{% include "../../.gitbook/includes/link-wsdl-files.md" %}

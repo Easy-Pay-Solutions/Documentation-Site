@@ -1,6 +1,7 @@
 ---
 description: Getting started with widgets for Number
 hidden: true
+noIndex: true
 ---
 
 # Widgets
@@ -100,8 +101,6 @@ If you want to use advanced options such as dynamically pre-populating form data
 <figure><img src="../../../.gitbook/assets/PayForm builder.png" alt=""><figcaption></figcaption></figure>
 
 Use our widget builder tool to select various settings, options, and styles. The widget manifest and encrypted URL will be generated for you.
-
-{% include "../../../.gitbook/includes/link-widget-builder.md" %}
 
 Most of the options should be easy to understand or described in the footer of the tool. If you have any questions, please refer to the [#payform-builder](payform.md#payform-builder "mention") guide or [contact Number](../../../help/customer-support/).
 

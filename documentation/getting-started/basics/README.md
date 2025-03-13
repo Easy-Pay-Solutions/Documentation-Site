@@ -4,7 +4,7 @@ description: How to correctly integrate with Number and our backend
 
 # Basics
 
-If you choose to use the REST or SOAP API, we recommend you to read about [authentication.md](authentication.md "mention"), [api-best-practices.md](api-best-practices.md "mention"), and [api-input-validation.md](api-input-validation.md "mention"). You may also want to refer to the resources about [querying.md](../../resources/querying.md "mention") and [error-codes.md](../../resources/error-codes.md "mention") once you start working on the integration.
+If you choose to use the REST API, we recommend you to read about [authentication.md](authentication.md "mention"), [api-best-practices.md](api-best-practices.md "mention"), and [api-input-validation.md](api-input-validation.md "mention"). You may also want to refer to the resources about [querying.md](../../resources/querying.md "mention") and [error-codes.md](../../resources/error-codes.md "mention") once you start working on the integration.
 
 
 

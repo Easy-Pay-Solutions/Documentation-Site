@@ -5738,7 +5738,7 @@ paths:
 
   /APIcardProcREST/v1.0.0/Query/Reconcile:
     post:
-      summary: Reconcile daily transactions.
+      summary: Reconcile transactions
       operationId: reconcileTransactions
       requestBody:
         required: true
@@ -5774,11 +5774,11 @@ paths:
                         $ref: "#/components/schemas/FunctionOk"
                       NumRecords:
                         type: integer
-                        example: 5
+                        example: 1
                         description: Number of records returned
                       RespMsg:
                         type: string
-                        example: "Successfully Returned Transaction Records : 5"
+                        example: "Successfully Returned Transaction Records : 1"
                         description: Response message
                       Transactions:
                         type: array

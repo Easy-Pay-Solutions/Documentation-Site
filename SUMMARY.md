@@ -69,6 +69,7 @@
     * [Transaction](api-reference/rest-api/query/transaction.md)
     * [Voice](api-reference/rest-api/query/voice.md)
     * [Query General](api-reference/rest-api/query/query-general.md)
+    * [Reconcile](api-reference/rest-api/query/reconcile.md)
   * [Receipt](api-reference/rest-api/receipt.md)
   * [Recurring Schedule](api-reference/rest-api/recurring-schedule.md)
   * [Settlement](api-reference/rest-api/settlement.md)

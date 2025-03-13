@@ -5738,7 +5738,7 @@ paths:
 
   /APIcardProcREST/v1.0.0/Query/Reconcile:
     post:
-      summary: The reconcile Query is designed to be called at a specific periodic interval, perhaps once per day. We will return all the unique transaction IDs encountered during that interval.
+      summary: Reconcile daily transactions.
       operationId: reconcileTransactions
       requestBody:
         required: true

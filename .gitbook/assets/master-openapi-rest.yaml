@@ -1353,10 +1353,10 @@ paths:
         - $ref: "#/components/parameters/Accept"
       description: |
         For member variable "AccountType" use the following values:
-        Personal Checking = 1 
-        Personal Saving = 2
-        Business Checking = 3
-        Business Saving = 4
+        1. Personal Checking = 1
+        2. Personal Saving = 2
+        3. Business Checking = 3 
+        4. Business Saving = 4
              
   # Create an ACH Combo Sale and Consent
 

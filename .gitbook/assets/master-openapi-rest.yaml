@@ -2022,9 +2022,8 @@ paths:
   /APIcardProcREST/v1.0.0/CardSale/WithOptions:
     post:
       summary: Process a card sale with surcharge
-      description: |
-        <style>h4{color:red;}</style>
-        <h4>For PCI compliant merchants only</h4>
+      description: |       
+        __ _For PCI compliant merchants only_ __
       operationId: cardSaleSurcharge
       requestBody:
         required: true

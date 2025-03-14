@@ -1351,11 +1351,11 @@ paths:
         - $ref: "#/components/parameters/SessKey"
         - $ref: "#/components/parameters/ContentType"
         - $ref: "#/components/parameters/Accept"
-      description:
-        For member variable "AccountType" use the following values:\n
-        Personal Checking = 1\n 
-        Personal Saving = 2\n
-        Business Checking = 3\n
+      description: |
+        For member variable "AccountType" use the following values:
+        Personal Checking = 1 
+        Personal Saving = 2
+        Business Checking = 3
         Business Saving = 4
              
   # Create an ACH Combo Sale and Consent

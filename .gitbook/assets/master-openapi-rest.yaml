@@ -2023,7 +2023,7 @@ paths:
     post:
       summary: Process a card sale with surcharge
       description: |       
-        __ _For PCI compliant merchants only_ __
+        ***For PCI compliant merchants only***
       operationId: cardSaleSurcharge
       requestBody:
         required: true

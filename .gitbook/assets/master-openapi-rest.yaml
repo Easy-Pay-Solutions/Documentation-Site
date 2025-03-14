@@ -1351,7 +1351,7 @@ paths:
         - $ref: "#/components/parameters/SessKey"
         - $ref: "#/components/parameters/ContentType"
         - $ref: "#/components/parameters/Accept"
-      notes:
+      description:
         For member variable "AccountType" use the following values:\n
         Personal Checking = 1\n 
         Personal Saving = 2\n
@@ -1461,7 +1461,7 @@ paths:
         - $ref: "#/components/parameters/SessKey"
         - $ref: "#/components/parameters/ContentType"
         - $ref: "#/components/parameters/Accept"
-      notes:
+      description:
         For member variable "AccountType" use the following values:\n
         Personal Checking = 1\n
         Personal Saving = 2\n
@@ -2029,7 +2029,8 @@ paths:
   /APIcardProcREST/v1.0.0/CardSale/WithOptions:
     post:
       summary: Process a card sale with surcharge
-      description: For PCI compliant merchants only
+      description: |        
+        ***For PCI compliant merchants only***
       operationId: cardSaleSurcharge
       requestBody:
         required: true

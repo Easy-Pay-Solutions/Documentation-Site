@@ -1352,7 +1352,7 @@ paths:
         - $ref: "#/components/parameters/ContentType"
         - $ref: "#/components/parameters/Accept"
       description: |
-        For member variable "AccountType" use the following values:
+        **For member variable "AccountType" use the following values:**
         1. Personal Checking = 1
         2. Personal Saving = 2
         3. Business Checking = 3 
@@ -1461,12 +1461,14 @@ paths:
         - $ref: "#/components/parameters/SessKey"
         - $ref: "#/components/parameters/ContentType"
         - $ref: "#/components/parameters/Accept"
-      description:
-        For member variable "AccountType" use the following values:\n
-        Personal Checking = 1\n
-        Personal Saving = 2\n
-        Business Checking = 3\n
-        Business Saving = 4
+      description: |
+        This method creates both an ACH sale and consent. To create a consent only without processing the sale, set the Amount to zero.
+        
+        **For member variable "AccountType" use the following values:**
+        1. Personal Checking = 1
+        2. Personal Saving = 2
+        3. Business Checking = 3 
+        4. Business Saving = 4
   # ACH Transaction Credit (Create an ACH Transaction)
 
   /APIcardProcREST/v1.0.0/ACH/ApplyCredit:
@@ -2214,7 +2216,8 @@ paths:
         - $ref: "#/components/parameters/SessKey"
         - $ref: "#/components/parameters/ContentType"
         - $ref: "#/components/parameters/Accept"
-
+      description: |
+        Use this call to process a refund to a settled charge. You will need the Transaction ID and the amount to be refunded.
   # Void a Transaction
 
   /APIcardProcREST/v1.0.0/CardSale/Void:
@@ -2264,7 +2267,9 @@ paths:
         - $ref: "#/components/parameters/SessKey"
         - $ref: "#/components/parameters/ContentType"
         - $ref: "#/components/parameters/Accept"
-
+      description: |
+        Use this call to void a pending charge. The status of the transaction needs to be OPEN, such as transactions that have not settled yet. To refund a transaction that was previously settled, use the Credit method. You will need the Transaction ID of the charge to be voided.
+        
   # CONSENT ANNUAL
   # Calculate Annual Consent Fees
 
@@ -2322,7 +2327,14 @@ paths:
         - $ref: "#/components/parameters/SessKey"
         - $ref: "#/components/parameters/ContentType"
         - $ref: "#/components/parameters/Accept"
-
+      description: |
+        This API call is for merchant accounts that are specifically configured for surcharge and/or convenience fee processing. Prior to charging a card on file, you may use this method to properly calculate the intended fees (Surcharging or Convenience fees ).
+        
+        Fees will be calculated based on the merchant configuration and the card type itself. It is important to show the calculated fees at the point of sale so that a cardholder can reject the sale if they desire.
+        
+        You can specify a Alternate MerchID rather than use the merchant record originally designated when you saved the card. A Value Of ZERO will use the original Merchant record.
+        
+        Once you have determined your fees you can then call the method named : Charge Stored Card with Options to authorize the sale.
   # Cancel Annual Consent
 
   /APIcardProcREST/v1.0.0/ConsentAnnual/Cancel:
@@ -2372,7 +2384,9 @@ paths:
         - $ref: "#/components/parameters/SessKey"
         - $ref: "#/components/parameters/ContentType"
         - $ref: "#/components/parameters/Accept"
-
+      description: |
+        Use this call to Cancel a consent (Card On File). You will need the ConsentID in order to execute this method. 
+        
   # Charge Stored Card with Options
 
   /APIcardProcREST/v1.0.0/ConsentAnnual/ChargeStoredCard:
@@ -2475,7 +2489,38 @@ paths:
         - $ref: "#/components/parameters/SessKey"
         - $ref: "#/components/parameters/ContentType"
         - $ref: "#/components/parameters/Accept"
-
+      description: |
+        This Method allows the user to charge a stored Card.
+        
+        ConsentID
+        Please supply the ID of the Consent ( or stored card data )
+        
+        AlternateMerchID
+        Here you can use ZERO if you plan to charge the same merchant record which was specified when saving the Card Info. You can use a positive integer if you plan to charge a merchant record which differs from the one originally used.
+        
+        purchDetails
+        If you want to attach new reference data to the transaction you may do so using the following fields:
+        
+        ServiceDescrip : description of the transaction
+        ClientRefID : your user defined reference ID
+        RPGUID : another user defined reference ID
+        If you choose NOT to supply these fields ( use empty string ) the system will pull this data from the original stored card data.
+        
+        Amounts
+        Here you will supply the amount of the transaction. You may supply FEES but only if these have been properly configured for each Merchant record.
+        
+        If you don't have FEES configured simply supply the BaseAmt and TotalAmt.
+        
+        If you do Have Fees Configured you can call the method named: Calculate Annual Consent Fees prior to calling this method.
+        
+        You can specify fee values up to and including those determined using the above method.
+        
+        If you specify values greater than those calculated above, then your value will be clamped.
+        
+        IMPORTANT : Always check your response to determine the fees which are APPROVED as this may differ from what was REQUESTED.
+        
+        User
+        Here you can assign a user to the sale so that we record the person which is initiating the sale within the integrator software.
   # Create an Annual Consent - Card Present
 
   /APIcardProcREST/v1.0.0/ConsentAnnual/Create_CP:
@@ -2831,7 +2876,12 @@ paths:
         - $ref: "#/components/parameters/SessKey"
         - $ref: "#/components/parameters/ContentType"
         - $ref: "#/components/parameters/Accept"
-
+      description: |
+        Use this call to process a payment using a stored card. You will need the ConsentID acquired from creating a consent. As usual you will monitor the FunctionOK flag (to ensure no exceptions were encountered), then take a look at the TxApproved Flag to determine your approval or declined status.
+        
+        IMPORTANT: Duplicate Charges
+        One of the most common issues we encounter is the DUPLICATE CHARGE: It is up to you to make sure the user cannot cause a stored card to get charged twice in a short period of time. Make sure your Button or other means of requesting an authorization is Immediately disabled in order to prevent the DOUBLE TAP. Merchants and Cardholders need to be protected against this nuisance. For Web Forms simply disable your button during processing and close out your session after you receive a response. In addition, you can take note of the ConsentID and amount so that you no longer process a charge for this SAME ConsentID and amount for some reasonable time period.
+        
   # Annual Consent Process Payment Alternate Merchant
 
   /APIcardProcREST/v1.0.0/ConsentAnnual/ProcPayment_Alt:
@@ -2921,6 +2971,11 @@ paths:
         - $ref: "#/components/parameters/SessKey"
         - $ref: "#/components/parameters/ContentType"
         - $ref: "#/components/parameters/Accept"
+      description: |
+        Use this call to process a payment using a stored card. You will need the ConsentID acquired from creating a consent. As usual you will monitor the FunctionOK flag (to ensure no exceptions were encountered), then take a look at the TxApproved Flag to determine your approval or declined status.
+        
+        IMPORTANT: Duplicate Charges
+        One of the most common issues we encounter is the DUPLICATE CHARGE: It is up to you to make sure the user cannot cause a stored card to get charged twice in a short period of time. Make sure your Button or other means of requesting an authorization is Immediately disabled in order to prevent the DOUBLE TAP. Merchants and Cardholders need to be protected against this nuisance. For Web Forms simply disable your button during processing and close out your session after you receive a response. In addition, you can take note of the ConsentID and amount so that you no longer process a charge for this SAME ConsentID and amount for some reasonable time period.
 
   # Annual Consent Stats
 
@@ -3322,7 +3377,9 @@ paths:
         - $ref: "#/components/parameters/SessKey"
         - $ref: "#/components/parameters/ContentType"
         - $ref: "#/components/parameters/Accept"
-
+      description: |
+        For values which should not be altered use value 1 or “1”
+        
   # Modify Subscription Consent
 
   /APIcardProcREST/v1.0.0/ConsentSubscription/Modify:
@@ -3474,6 +3531,17 @@ paths:
         - $ref: "#/components/parameters/SessKey"
         - $ref: "#/components/parameters/ContentType"
         - $ref: "#/components/parameters/Accept"
+      description: |
+        REFID will be the transaction ID
+        ReceiptType will always be 23 for International
+        Merchant copy use Recipient = 1
+        Customer Copy use Recipient = 2
+        For Dual Receipt use Recipient = 3
+        
+        Consuming the Response
+        The member named ReceiptHtml holds the receipt data
+        Important you must replace all Unicode characters to consume clean HTML
+        Example : CleanHtml = Regex.Replace(my, @"[^\u0000-\u007F]+", string.Empty);
 
   # Process Consent (International)
 
@@ -3541,7 +3609,9 @@ paths:
         - $ref: "#/components/parameters/SessKey"
         - $ref: "#/components/parameters/ContentType"
         - $ref: "#/components/parameters/Accept"
-
+      description: |
+        This API call is for merchant accounts that are specifically configured for international processing.
+        
   # Query International Transaction
 
   /APIcardProcREST/v1.0.0/Intl/QueryTransaction:
@@ -3715,6 +3785,8 @@ paths:
         - $ref: "#/components/parameters/SessKey"
         - $ref: "#/components/parameters/ContentType"
         - $ref: "#/components/parameters/Accept"
+      description: |
+        Info Coming Soon
 
   # Void a Transaction (International)
 
@@ -3779,6 +3851,8 @@ paths:
         - $ref: "#/components/parameters/SessKey"
         - $ref: "#/components/parameters/ContentType"
         - $ref: "#/components/parameters/Accept"
+      description: |
+        This API call is for merchant accounts that are specifically configured for international processing.
 
   # PAYFORM
   # Initialize PayForm
@@ -3786,7 +3860,6 @@ paths:
   /PayForm/Initialize:
     post:
       summary: Initialize PayForm
-      description: This endpoint initializes the PayForm with the specified parameters and returns a payment URL.
       operationId: initializePayForm
       requestBody:
         required: true
@@ -3957,6 +4030,10 @@ paths:
         - $ref: "#/components/parameters/SessKey"
         - $ref: "#/components/parameters/ContentType"
         - $ref: "#/components/parameters/Accept"
+      description: |
+        Call this method to initialize a payment form used for collecting payments, saving card-on-file data, or both. The call returns the URL used to open the form.
+        
+        For details on configurations and options, view our builder tool at https://easypay8.com/byopayform/
 
   # QUERY
   # Account Profile Query
@@ -4752,7 +4829,12 @@ paths:
         - $ref: "#/components/parameters/SessKey"
         - $ref: "#/components/parameters/ContentType"
         - $ref: "#/components/parameters/Accept"
-
+      description: |
+        Use this call to determine if the purchaser has a card on file. If you have created the consent (card on file) using a reference ID or PatientID then you can use the following Query to return an array of Consents ( Card On File Info ) for a particular patient with this PatientID:
+        F='213456')&&(H=1)&& (C>='01/21/2024') This will return consents with a particular PatientID which are still enabled and have not yet expired ( use todays date ).
+        
+        You will want to present the user with the last 4 digits of each stored card so they can decide to choose a stored card or simply enter a new one. Easy Pay offers multiple ways of querying consent data. View the https://easypaysoftware.com/en/Querying Query Guide for more details.
+  
   # Consent General Query
 
   /APIcardProcREST/v1.0.0/Query/ConsentGeneral:
@@ -5681,7 +5763,13 @@ paths:
         - $ref: "#/components/parameters/SessKey"
         - $ref: "#/components/parameters/ContentType"
         - $ref: "#/components/parameters/Accept"
-
+      description: |
+        Use this call to return all the details for a single transaction. Details are separated into 3 distinct objects including:
+        
+        - AccountHolder (Card Holder)
+        - EndCustomer (Optional user entity if not the actual cardholder such as a child or spouse receiving the services)
+        - Transaction (All Transaction details)
+        
   # Transaction Query
 
   /APIcardProcREST/v1.0.0/Query/Transaction:
@@ -5732,7 +5820,23 @@ paths:
         - $ref: "#/components/parameters/SessKey"
         - $ref: "#/components/parameters/ContentType"
         - $ref: "#/components/parameters/Accept"
-  
+      description: |
+        Easy Pay provides a variety of ways to search for and query transactions. To view a complete list of options, view the https://easypaysoftware.com/en/Querying Query Guide.
+        
+        Use this call to search for transactions based on one or more parameters. A collection of transaction objects is returned. Transactions can be searched using several different parameters including the following.
+        
+        - ID ( TxID ) ( Unique Identifier for the transaction )
+        - TRANSACTION STATUS ( OPEN , VOID, SETTLED, FAILED )
+        - DATE CREATED
+        - CARDHOLDER LAST NAME / FIRST NAME
+        - BATCH NUMBER ( Settlement group )
+        - TRANSACTION TYPE ( CCSALE, CCCREDIT , CCAUTHONLY)
+        - APPROVAL CODE / DECLINE CODE
+        - AMOUNT
+        - Reference ID (User defined field which can be searchable)
+        - RPGUID (Another user defined field which can be searchable)
+        - Last 4 Digits of the Card 
+        
   # Transaction Reconcile Query
 
   /APIcardProcREST/v1.0.0/Query/Reconcile:
@@ -5787,7 +5891,11 @@ paths:
         - $ref: "#/components/parameters/SessKey"
         - $ref: "#/components/parameters/ContentType"
         - $ref: "#/components/parameters/Accept"
-
+      description: |
+        The reconcile Query is designed to be called at a specific periodic interval, perhaps once per day. We will return all the unique transaction IDs encountered during that interval. The query allows you to reconcile this list with data you have gathered during cardholder data interactions such as PayForm or Verifone Activity. If you find that a particular transaction is missing in your database you can call the TRANSACTION FULL DETAIL to consume any missing information.
+        
+        IMPORTANT: Do not call this method more than once a day. Excessive queries can cause your endpoint to be blocked. The max date range for this method is 31 days. The max records returned is 20,000. If you notice that the NumRecords returned equals 20000 then this means you have maxed out your query and you should use a smaller date range.
+  
   # Transaction Receipt Query
 
   /APIcardProcREST/v1.0.0/Query/TransactionReceipt:
@@ -5972,7 +6080,31 @@ paths:
         - $ref: "#/components/parameters/SessKey"
         - $ref: "#/components/parameters/ContentType"
         - $ref: "#/components/parameters/Accept"
-
+      description: |
+        Use this call to request receipt details in HTML format for a particular TXID (Transaction ID). This method works for card on file documents as well as transaction receipts. You will need the TXID (Transaction ID) as well as a receipt type and a targeted recipient ( Customer or Merchant ).
+        
+        The following will provide a customer receipt for TXID 123: { "REFID": 123, "ReceiptType": 1 (Sales Receipt) "Recipient": 1 (Customer Copy) }
+        
+        Recipient
+        1 Merchant
+        2 Customer
+        3 Both
+        
+        Receipt Types
+        1 Transaction
+        2 Void
+        3 Refund
+        4 Annual Consent
+        5 Recurring Consent
+        6 Subscription
+        7 ACH Transaction
+        8 ACH Void
+        9 ACH Refund
+        
+        Important you must replace all Unicode characters to consume clean HTML
+        
+        Example : CleanHtml = Regex.Replace(my, @"[^\u0000-\u007F]+", string.Empty);
+        
   # RECURRING SCHEDULE
   # Cancel Recurring Schedule
 
@@ -6488,3 +6620,13 @@ paths:
         - $ref: "#/components/parameters/SessKey"
         - $ref: "#/components/parameters/ContentType"
         - $ref: "#/components/parameters/Accept"
+      description: |
+        This call allows you to create a tinyURL of the widget payment link that will display a message and payment form to the customer. The message and form that is displayed to the customer is easily configured by using the API call options.
+        
+        This API method allows users to accomplish three typical tasks:
+        
+        1 Send a SMS text with a message and Payment Link
+        2 Send an email with message and Payment Link
+        3 Acquire the Payment Link and use it internally or externally
+        
+        For more details on the use of Text to Pay as well as some sample code is available on our documentation site located at https://easypaysoftware.com/en/text-to-pay.

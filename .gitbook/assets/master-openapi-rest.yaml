@@ -1351,13 +1351,7 @@ paths:
         - $ref: "#/components/parameters/SessKey"
         - $ref: "#/components/parameters/ContentType"
         - $ref: "#/components/parameters/Accept"
-      notes:
-        **For member variable "AccountType" use the following values:**
-        Personal Checking = 1  
-        Personal Saving = 2  
-        Business Checking = 3  
-        Business Saving = 4
-             
+
   # Create an ACH Combo Sale and Consent
 
   /APIcardProcREST/v1.0.0/ACH/Combo:
@@ -1461,12 +1455,7 @@ paths:
         - $ref: "#/components/parameters/SessKey"
         - $ref: "#/components/parameters/ContentType"
         - $ref: "#/components/parameters/Accept"
-      notes:
-        **For member variable "AccountType" use the following values:**
-        Personal Checking = 1  
-        Personal Saving = 2  
-        Business Checking = 3  
-        Business Saving = 4
+
   # ACH Transaction Credit (Create an ACH Transaction)
 
   /APIcardProcREST/v1.0.0/ACH/ApplyCredit:
@@ -1754,7 +1743,8 @@ paths:
   /APIcardProcREST/v1.0.0/CardSale/CardPresent:
     post:
       summary: Process a card sale with card present
-      description: **For PCI compliant merchants only**
+      description: |        
+        ***For PCI compliant merchants only***
       operationId: cardSaleCardPresent
       requestBody:
         required: true
@@ -1890,7 +1880,8 @@ paths:
   /APIcardProcREST/v1.0.0/CardSale/Manual:
     post:
       summary: Process a manual card sale
-      description: **For PCI compliant merchants only**
+      description: |       
+        ***For PCI compliant merchants only***
       operationId: cardSaleManual
       requestBody:
         required: true
@@ -2029,7 +2020,8 @@ paths:
   /APIcardProcREST/v1.0.0/CardSale/WithOptions:
     post:
       summary: Process a card sale with surcharge
-      description: **For PCI compliant merchants only**
+      description: |       
+        ***For PCI compliant merchants only***
       operationId: cardSaleSurcharge
       requestBody:
         required: true
@@ -2480,7 +2472,8 @@ paths:
   /APIcardProcREST/v1.0.0/ConsentAnnual/Create_CP:
     post:
       summary: Create an annual consent with card present
-      description: **For PCI compliant merchants only**
+      description: |        
+        ***For PCI compliant merchants only***
       operationId: createAnnualConsentCP
       requestBody:
         required: true
@@ -2584,7 +2577,8 @@ paths:
   /APIcardProcREST/v1.0.0/ConsentAnnual/Create_MAN:
     post:
       summary: Create an annual consent with manual card entry
-      description: **For PCI compliant merchants only**
+      description: |        
+        ***For PCI compliant merchants only***
       operationId: createAnnualConsentMAN
       requestBody:
         required: true
@@ -3089,7 +3083,9 @@ paths:
   /APIcardProcREST/v1.0.0/ConsentRecurring/Create:
     post:
       summary: Create a recurring consent with manual card entry
-      description: **For PCI compliant merchants only**
+      description: |
+        <style>h4{color:red;}</style>
+        <h4>For PCI compliant merchants only</h4>
       operationId: createRecurringConsentManual
       requestBody:
         required: true

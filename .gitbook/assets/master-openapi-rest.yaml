@@ -741,7 +741,6 @@ components:
     Reconcile:
       type: object
       properties:
-
         AMOUNT:
           type: number
           format: float

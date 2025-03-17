@@ -12,8 +12,6 @@ Generate the html layout needed to create a customer, merchant, or dual receipt.
 
 {% tabs %}
 {% tab title="Request body" %}
-{% include "../../.gitbook/includes/param-sess-key.md" %}
-
 ***
 
 `RefID` int
@@ -42,8 +40,6 @@ Values:\
 {% endtab %}
 
 {% tab title="Response body" %}
-{% include "../../.gitbook/includes/param-ok-msg-errs.md" %}
-
 ***
 
 `ReceiptHtml` string
@@ -64,16 +60,10 @@ Return the details needed to generate a receipt for a credit card sale. For othe
 
 {% tabs %}
 {% tab title="Request body" %}
-{% include "../../.gitbook/includes/param-sess-key.md" %}
-
 ***
-
-{% include "../../.gitbook/includes/param-txid.md" %}
 {% endtab %}
 
 {% tab title="Response body" %}
-{% include "../../.gitbook/includes/param-ok-msg-errs.md" %}
-
 ***
 
 `ReceiptInfo` api\_ReceiptDetail (object)

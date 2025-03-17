@@ -12,12 +12,8 @@ Return a list of decline codes.
 
 {% tabs %}
 {% tab title="Request body" %}
-{% include "../../.gitbook/includes/param-sess-key.md" %}
-{% endtab %}
 
 {% tab title="Response body" %}
-{% include "../../.gitbook/includes/param-ok-msg-errs.md" %}
-
 ***
 
 `DeclineCodes` List\<api\_DeclineCodes> (array\<object>)
@@ -38,8 +34,6 @@ Return a list of enum items in the system.
 
 {% tabs %}
 {% tab title="Request body" %}
-{% include "../../.gitbook/includes/param-sess-key.md" %}
-
 ***
 
 `Query` string
@@ -66,8 +60,6 @@ Values:\
 {% endtab %}
 
 {% tab title="Response body" %}
-{% include "../../.gitbook/includes/param-ok-msg-errs.md" %}
-
 ***
 
 `EnumItems` List\<api\_EnumItem>
@@ -88,8 +80,6 @@ Return a list of lodging-related enum items in the system.
 
 {% tabs %}
 {% tab title="Request body" %}
-{% include "../../.gitbook/includes/param-sess-key.md" %}
-
 ***
 
 `Query` string
@@ -98,8 +88,6 @@ The enumeration type to query, specific to lodging.
 {% endtab %}
 
 {% tab title="Response body" %}
-{% include "../../.gitbook/includes/param-ok-msg-errs.md" %}
-
 ***
 
 `EnumItems` List\<api\_EnumItem>

@@ -12,19 +12,11 @@ Settle all open transactions (credit card charges) for the specified merchant.
 
 {% tabs %}
 {% tab title="Request body" %}
-{% include "../../.gitbook/includes/param-sess-key.md" %}
-
 ***
-
-{% include "../../.gitbook/includes/param-merchid.md" %}
 {% endtab %}
 
 {% tab title="Response body" %}
-{% include "../../.gitbook/includes/param-ok-msg-errs.md" %}
-
 ***
-
-{% include "../../.gitbook/includes/param-batch-result.md" %}
 {% endtab %}
 {% endtabs %}
 
@@ -40,8 +32,6 @@ Settle open transactions (credit card charges) for the specified merchant by tra
 
 {% tabs %}
 {% tab title="Request body" %}
-{% include "../../.gitbook/includes/param-sess-key.md" %}
-
 ***
 
 TxIDs array\<int>
@@ -49,16 +39,10 @@ TxIDs array\<int>
 A list of transactions to settle by ID.
 
 ***
-
-{% include "../../.gitbook/includes/param-merchid.md" %}
 {% endtab %}
 
 {% tab title="Response body" %}
-{% include "../../.gitbook/includes/param-ok-msg-errs.md" %}
-
 ***
-
-{% include "../../.gitbook/includes/param-batch-result.md" %}
 {% endtab %}
 {% endtabs %}
 

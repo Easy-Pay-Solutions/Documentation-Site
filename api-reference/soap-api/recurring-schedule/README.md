@@ -12,11 +12,7 @@ Modifies the schedule of a specific recurring consent.
 
 {% tabs %}
 {% tab title="Request body" %}
-{% include "../../../.gitbook/includes/param-sess-key.md" %}
-
 ***
-
-{% include "../../../.gitbook/includes/param-scheduleid.md" %}
 
 ***
 
@@ -32,11 +28,7 @@ Due date of the rescheduled recurring consent.
 {% endtab %}
 
 {% tab title="Response body" %}
-{% include "../../../.gitbook/includes/param-ok-msg-errs.md" %}
-
 ***
-
-{% include "../../../.gitbook/includes/param-scheduled-payment.md" %}
 {% endtab %}
 {% endtabs %}
 
@@ -52,19 +44,11 @@ Cancel a specific payment that is part of the recurring schedule.
 
 {% tabs %}
 {% tab title="Request body" %}
-{% include "../../../.gitbook/includes/param-sess-key.md" %}
-
 ***
-
-{% include "../../../.gitbook/includes/param-scheduleid.md" %}
 {% endtab %}
 
 {% tab title="Response body" %}
-{% include "../../../.gitbook/includes/param-ok-msg-errs.md" %}
-
 ***
-
-{% include "../../../.gitbook/includes/param-scheduled-payment.md" %}
 {% endtab %}
 {% endtabs %}
 

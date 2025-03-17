@@ -10,23 +10,13 @@ description: Methods related to authentication
 
 Authenticates the user. The method returns a session key that is used on subsequent method calls, the account details, and a list of merchants associated with the account.&#x20;
 
-{% include "../../.gitbook/includes/block-reauthenticate.md" %}
-
 {% tabs %}
 {% tab title="Request body" %}
-{% include "../../.gitbook/includes/param-account-code.md" %}
-
 ***
-
-{% include "../../.gitbook/includes/param-token.md" %}
 {% endtab %}
 
 {% tab title="Response body" %}
-{% include "../../.gitbook/includes/param-ok-msg-errs.md" %}
-
 ***
-
-{% include "../../.gitbook/includes/param-sess-key.md" %}
 
 ***
 

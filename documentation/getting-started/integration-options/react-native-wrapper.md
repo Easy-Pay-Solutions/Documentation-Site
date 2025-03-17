@@ -14,8 +14,6 @@ layout:
 
 # React Native Wrapper
 
-{% include "../../../.gitbook/includes/link-react-native-wrapper.md" %}
-
 The React Native Mobile SDK wrapper provides a bridge between a React Native based application and the native Number mobile SDK libraries.&#x20;
 
 {% hint style="warning" %}

@@ -12,19 +12,11 @@ Return recurring consent details.
 
 {% tabs %}
 {% tab title="Request body" %}
-{% include "../../../.gitbook/includes/param-sess-key.md" %}
-
 ***
-
-{% include "../../../.gitbook/includes/param-query-consent.md" %}
 {% endtab %}
 
 {% tab title="Response body" %}
-{% include "../../../.gitbook/includes/param-ok-msg-errs.md" %}
-
 ***
-
-{% include "../../../.gitbook/includes/param-num-records.md" %}
 
 ***
 
@@ -46,16 +38,10 @@ Return the details for the consent, the card holder contact, and end customer in
 
 {% tabs %}
 {% tab title="Request body" %}
-{% include "../../../.gitbook/includes/param-sess-key.md" %}
-
 ***
-
-{% include "../../../.gitbook/includes/param-consent-id.md" %}
 {% endtab %}
 
 {% tab title="Response body" %}
-{% include "../../../.gitbook/includes/param-ok-msg-errs.md" %}
-
 ***
 
 `ConsentRecurring` api\_ConsentRecurring \<object>
@@ -64,11 +50,7 @@ Fields: ID, AcctHolderID, MerchID, CustID, AcctHolderLastName, AcctHolderFirstNa
 
 ***
 
-{% include "../../../.gitbook/includes/param-account-holder-full.md" %}
-
 ***
-
-{% include "../../../.gitbook/includes/param-end-customer-full.md" %}
 {% endtab %}
 {% endtabs %}
 

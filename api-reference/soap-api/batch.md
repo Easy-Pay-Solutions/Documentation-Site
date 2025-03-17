@@ -12,19 +12,11 @@ Return batch processing details. Batches are used for settling open transactions
 
 {% tabs %}
 {% tab title="Request body" %}
-{% include "../../.gitbook/includes/param-sess-key.md" %}
-
 ***
-
-{% include "../../.gitbook/includes/param-query-batch-log.md" %}
 {% endtab %}
 
 {% tab title="Response body" %}
-{% include "../../.gitbook/includes/param-ok-msg-errs.md" %}
-
 ***
-
-{% include "../../.gitbook/includes/param-num-records.md" %}
 
 ***
 
@@ -33,4 +25,6 @@ Return batch processing details. Batches are used for settling open transactions
 Fields: ID, BatchNO, BatchAmt, BatchRecs, TxLOCK, CreatedOn, FinishedOn, CreatedBy, MerchID, SettleResp, Code, BatchOpen, BatchClose, Released.
 {% endtab %}
 {% endtabs %}
+
+
 

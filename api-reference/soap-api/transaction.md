@@ -10,15 +10,9 @@ description: Methods related to transactions
 
 Apply a full or partial credit against a settled credit card charge.&#x20;
 
-{% include "../../.gitbook/includes/info-void-credit-transaction.md" %}
-
 {% tabs %}
 {% tab title="Request body" %}
-{% include "../../.gitbook/includes/param-sess-key.md" %}
-
 ***
-
-{% include "../../.gitbook/includes/param-txid.md" %}
 
 ***
 
@@ -29,15 +23,9 @@ This can be a partial amount of the full transaction.
 {% endtab %}
 
 {% tab title="Response body" %}
-{% include "../../.gitbook/includes/param-ok-msg-errs.md" %}
-
 ***
 
-{% include "../../.gitbook/includes/param-tx-approved.md" %}
-
 ***
-
-{% include "../../.gitbook/includes/param-txid.md" %}
 {% endtab %}
 {% endtabs %}
 
@@ -51,27 +39,15 @@ This can be a partial amount of the full transaction.
 
 Voids a credit card sale transaction.&#x20;
 
-{% include "../../.gitbook/includes/info-void-credit-transaction.md" %}
-
 {% tabs %}
 {% tab title="Request body" %}
-{% include "../../.gitbook/includes/param-sess-key.md" %}
-
 ***
-
-{% include "../../.gitbook/includes/param-txid.md" %}
 {% endtab %}
 
 {% tab title="Response body" %}
-{% include "../../.gitbook/includes/param-ok-msg-errs.md" %}
-
 ***
 
-{% include "../../.gitbook/includes/param-tx-approved.md" %}
-
 ***
-
-{% include "../../.gitbook/includes/param-txid.md" %}
 {% endtab %}
 {% endtabs %}
 
@@ -87,19 +63,11 @@ Query credit card transactions. Those can include authorizations, charges, credi
 
 {% tabs %}
 {% tab title="Request body" %}
-{% include "../../.gitbook/includes/param-sess-key.md" %}
-
 ***
-
-{% include "../../.gitbook/includes/param-query-transaction.md" %}
 {% endtab %}
 
 {% tab title="Response body" %}
-{% include "../../.gitbook/includes/param-ok-msg-errs.md" %}
-
 ***
-
-{% include "../../.gitbook/includes/param-num-records.md" %}
 
 ***
 
@@ -121,16 +89,10 @@ Return the details for the transaction, the card holder contact, and end custome
 
 {% tabs %}
 {% tab title="Request body" %}
-{% include "../../.gitbook/includes/param-sess-key.md" %}
-
 ***
-
-{% include "../../.gitbook/includes/param-txid.md" %}
 {% endtab %}
 
 {% tab title="Response body" %}
-{% include "../../.gitbook/includes/param-ok-msg-errs.md" %}
-
 ***
 
 Transaction api\_Transaction (object)
@@ -139,11 +101,7 @@ Fields: ID, SEQ\_NO, ACCT\_LAST\_NAME, ACCT\_FIRST\_NAME, ACCT\_NO, EXP\_DATE, A
 
 ***
 
-{% include "../../.gitbook/includes/param-account-holder-full.md" %}
-
 ***
-
-{% include "../../.gitbook/includes/param-end-customer-full.md" %}
 {% endtab %}
 {% endtabs %}
 

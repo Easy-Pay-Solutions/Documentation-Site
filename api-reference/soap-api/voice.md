@@ -2,7 +2,7 @@
 description: Methods related to voice authorization
 ---
 
-# Voice (v1)
+# Voice
 
 ## Query Voice Settings
 
@@ -12,16 +12,10 @@ Return the information provided for a voice authorization of specific transactio
 
 {% tabs %}
 {% tab title="Request body" %}
-{% include "../../.gitbook/includes/param-sess-key.md" %}
-
 ***
-
-{% include "../../.gitbook/includes/param-txid.md" %}
 {% endtab %}
 
 {% tab title="Response body" %}
-{% include "../../.gitbook/includes/param-ok-msg-errs.md" %}
-
 ***
 
 `VoiceSettings` api\_VoiceSettingsTX (object)
@@ -29,4 +23,6 @@ Return the information provided for a voice authorization of specific transactio
 Fields: PhoneNumber, BankNumber, MerchantID, CardNumber, ExpDate, ChargeAmount, AccountHolder.
 {% endtab %}
 {% endtabs %}
+
+
 

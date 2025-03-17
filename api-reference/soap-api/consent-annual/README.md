@@ -12,35 +12,19 @@ Create an annual consent by sending the credit card details to the processor via
 
 {% tabs %}
 {% tab title="Request body" %}
-{% include "../../../.gitbook/includes/param-sess-key.md" %}
+***
 
 ***
 
-{% include "../../../.gitbook/includes/param-track.md" %}
-
 ***
 
-{% include "../../../.gitbook/includes/param-consent-annual-creator.md" %}
-
 ***
-
-{% include "../../../.gitbook/includes/param-account-holder.md" %}
-
-***
-
-{% include "../../../.gitbook/includes/param-end-customer.md" %}
 {% endtab %}
 
 {% tab title="Response body" %}
-{% include "../../../.gitbook/includes/param-ok-msg-errs.md" %}
-
 ***
 
-{% include "../../../.gitbook/includes/params-consent-creation-results.md" %}
-
 ***
-
-{% include "../../../.gitbook/includes/param-consent-id.md" %}
 {% endtab %}
 {% endtabs %}
 
@@ -56,35 +40,19 @@ Create an annual consent by sending the credit card details, which include: card
 
 {% tabs %}
 {% tab title="Request body" %}
-{% include "../../../.gitbook/includes/param-sess-key.md" %}
+***
 
 ***
 
-{% include "../../../.gitbook/includes/param-credit-card-info.md" %}
-
 ***
 
-{% include "../../../.gitbook/includes/param-consent-annual-creator.md" %}
-
 ***
-
-{% include "../../../.gitbook/includes/param-account-holder.md" %}
-
-***
-
-{% include "../../../.gitbook/includes/param-end-customer.md" %}
 {% endtab %}
 
 {% tab title="Response body" %}
-{% include "../../../.gitbook/includes/param-ok-msg-errs.md" %}
-
 ***
 
-{% include "../../../.gitbook/includes/params-consent-creation-results.md" %}
-
 ***
-
-{% include "../../../.gitbook/includes/param-consent-id.md" %}
 {% endtab %}
 {% endtabs %}
 
@@ -100,11 +68,7 @@ Update the payment amounts, expiration, and customer reference information for a
 
 {% tabs %}
 {% tab title="Request body" %}
-{% include "../../../.gitbook/includes/param-sess-key.md" %}
-
 ***
-
-{% include "../../../.gitbook/includes/param-consent-id.md" %}
 
 ***
 
@@ -116,11 +80,7 @@ Fields: ExpMonth, ExpYear, Email, Zip, CustomerRefID, ServiceDescrip, RPGUID, Nu
 {% endtab %}
 
 {% tab title="Response body" %}
-{% include "../../../.gitbook/includes/param-ok-msg-errs.md" %}
-
 ***
-
-{% include "../../../.gitbook/includes/params-consent-modify-response.md" %}
 {% endtab %}
 {% endtabs %}
 
@@ -136,19 +96,11 @@ Cancel an annual consent and remove credit card data from the system.
 
 {% tabs %}
 {% tab title="Request body" %}
-{% include "../../../.gitbook/includes/param-sess-key.md" %}
-
 ***
-
-{% include "../../../.gitbook/includes/param-consent-id.md" %}
 {% endtab %}
 
 {% tab title="Response body" %}
-{% include "../../../.gitbook/includes/param-ok-msg-errs.md" %}
-
 ***
-
-{% include "../../../.gitbook/includes/params-consent-cancel-response.md" %}
 {% endtab %}
 {% endtabs %}
 

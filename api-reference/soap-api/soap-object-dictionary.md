@@ -20,8 +20,6 @@ Example: 2547
 
 ***
 
-{% include "../../.gitbook/includes/param-account-code.md" %}
-
 ***
 
 `AcctID` int
@@ -141,8 +139,6 @@ Unique account ID.
 `AccountName` string
 
 ***
-
-{% include "../../.gitbook/includes/param-account-code.md" %}
 
 ***
 
@@ -268,8 +264,6 @@ Example: Success
 
 ***
 
-{% include "../../.gitbook/includes/params-created-modified-on-by.md" %}
-
 ***
 
 `AcctType` string
@@ -284,19 +278,11 @@ Values:\
 
 ***
 
-{% include "../../.gitbook/includes/param-origin.md" %}
+***
 
 ***
 
-{% include "../../.gitbook/includes/param-reftxid.md" %}
-
 ***
-
-{% include "../../.gitbook/includes/param-ref_id.md" %}
-
-***
-
-{% include "../../.gitbook/includes/param-rpguid.md" %}
 
 ***
 
@@ -312,11 +298,7 @@ End customer unique ID.
 
 ***
 
-{% include "../../.gitbook/includes/param-txstatus.md" %}
-
 ***
-
-{% include "../../.gitbook/includes/param-txtype.md" %}
 
 ***
 
@@ -337,8 +319,6 @@ The total $ amount of the transaction.
 The unique identifier for the merchant associated with the transaction.
 
 ***
-
-{% include "../../.gitbook/includes/param-userid.md" %}
 
 ***
 
@@ -392,8 +372,6 @@ The identifier for the batch log associated with the transaction.
 `LastName` string
 
 ***
-
-{% include "../../.gitbook/includes/param-consent-id.md" %}
 {% endtab %}
 {% endtabs %}
 
@@ -471,8 +449,6 @@ Unique ID of the merchant associated with the batch.
 Example: APPROVAL Batch:512:Recs:3:$110.00
 
 ***
-
-{% include "../../.gitbook/includes/param-batch-code.md" %}
 
 ***
 
@@ -682,19 +658,11 @@ Objects describing transactions in general.
 {% endtab %}
 
 {% tab title="api_Purchase" %}
-{% include "../../.gitbook/includes/params-purchase.md" %}
-{% endtab %}
 
 {% tab title="api_PurchaseDetails" %}
-{% include "../../.gitbook/includes/param-service-descrip.md" %}
-
 ***
 
-{% include "../../.gitbook/includes/param-clientrefid.md" %}
-
 ***
-
-{% include "../../.gitbook/includes/param-rpguid.md" %}
 {% endtab %}
 {% endtabs %}
 
@@ -747,8 +715,6 @@ The duration of stay in days.
 Service description.
 
 ***
-
-{% include "../../.gitbook/includes/param-clientrefid.md" %}
 {% endtab %}
 
 {% tab title="api_LodgingDetails" %}
@@ -814,8 +780,6 @@ The extra charge $ amount related to the `ExtraChargesCode`.
 
 ***
 
-{% include "../../.gitbook/includes/param-extra-charge-code.md" %}
-
 ***
 
 `SaleCode` int
@@ -865,19 +829,11 @@ Objects describing annual consent.
 
 ***
 
-{% include "../../.gitbook/includes/param-merchid.md" %}
+***
 
 ***
 
-{% include "../../.gitbook/includes/param-customerrefid.md" %}
-
 ***
-
-{% include "../../.gitbook/includes/param-rpguid.md" %}
-
-***
-
-{% include "../../.gitbook/includes/param-service-descrip.md" %}
 
 ***
 
@@ -905,8 +861,6 @@ End date for the consent.
 
 ***
 
-{% include "../../.gitbook/includes/params-consent-duration-and-limit.md" %}
-
 ***
 
 `LimitLifeTime` decimal
@@ -931,19 +885,11 @@ Total $ limit for the lifetime of the consent.
 {% endtab %}
 
 {% tab title="api_ConsentAnnualCreate" %}
-{% include "../../.gitbook/includes/param-merchid.md" %}
+***
 
 ***
 
-{% include "../../.gitbook/includes/param-customerrefid.md" %}
-
 ***
-
-{% include "../../.gitbook/includes/param-service-descrip.md" %}
-
-***
-
-{% include "../../.gitbook/includes/param-rpguid.md" %}
 
 ***
 
@@ -952,8 +898,6 @@ Total $ limit for the lifetime of the consent.
 Start date for the consent.
 
 ***
-
-{% include "../../.gitbook/includes/params-consent-duration-and-limit.md" %}
 {% endtab %}
 
 {% tab title="api_ConsentAnnualEditor" %}
@@ -981,19 +925,11 @@ ZIP code associated with the consent.
 
 ***
 
-{% include "../../.gitbook/includes/param-customerrefid.md" %}
+***
 
 ***
 
-{% include "../../.gitbook/includes/param-service-descrip.md" %}
-
 ***
-
-{% include "../../.gitbook/includes/param-rpguid.md" %}
-
-***
-
-{% include "../../.gitbook/includes/params-consent-duration-and-limit.md" %}
 
 ***
 

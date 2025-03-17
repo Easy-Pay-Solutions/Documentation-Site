@@ -10,39 +10,21 @@ description: Methods related to creating and modifying subscription consent
 
 Create a subscription payment plan with a specific $ amount paid per time period. The credit card data is supplied by reading the magnetic stripe via a card reader device.
 
-{% include "../../../.gitbook/includes/info-process-scheduled-payments.md" %}
-
 {% tabs %}
 {% tab title="Request body" %}
-{% include "../../../.gitbook/includes/param-sess-key.md" %}
+***
 
 ***
 
-{% include "../../../.gitbook/includes/param-track.md" %}
-
 ***
 
-{% include "../../../.gitbook/includes/param-consent-sub-creator.md" %}
-
 ***
-
-{% include "../../../.gitbook/includes/param-account-holder.md" %}
-
-***
-
-{% include "../../../.gitbook/includes/param-end-customer.md" %}
 {% endtab %}
 
 {% tab title="Response body" %}
-{% include "../../../.gitbook/includes/param-ok-msg-errs.md" %}
-
 ***
 
-{% include "../../../.gitbook/includes/params-consent-creation-results.md" %}
-
 ***
-
-{% include "../../../.gitbook/includes/param-consent-id.md" %}
 {% endtab %}
 {% endtabs %}
 
@@ -56,39 +38,21 @@ Create a subscription payment plan with a specific $ amount paid per time period
 
 Create a subscription payment plan with specified $ amount paid per time period.The credit card data is supplied by manually.
 
-{% include "../../../.gitbook/includes/info-process-scheduled-payments.md" %}
-
 {% tabs %}
 {% tab title="Request body" %}
-{% include "../../../.gitbook/includes/param-sess-key.md" %}
+***
 
 ***
 
-{% include "../../../.gitbook/includes/param-credit-card-info.md" %}
-
 ***
 
-{% include "../../../.gitbook/includes/param-consent-sub-creator.md" %}
-
 ***
-
-{% include "../../../.gitbook/includes/param-account-holder.md" %}
-
-***
-
-{% include "../../../.gitbook/includes/param-end-customer.md" %}
 {% endtab %}
 
 {% tab title="Response body" %}
-{% include "../../../.gitbook/includes/param-ok-msg-errs.md" %}
-
 ***
 
-{% include "../../../.gitbook/includes/params-consent-creation-results.md" %}
-
 ***
-
-{% include "../../../.gitbook/includes/param-consent-id.md" %}
 {% endtab %}
 {% endtabs %}
 
@@ -104,11 +68,7 @@ Update the subscription payment and expiration date information. Does not alter 
 
 {% tabs %}
 {% tab title="Request body" %}
-{% include "../../../.gitbook/includes/param-sess-key.md" %}
-
 ***
-
-{% include "../../../.gitbook/includes/param-consent-id.md" %}
 
 ***
 
@@ -118,11 +78,7 @@ Fields: ExpMonth, ExpYear, Email, Zip, RPGUID, CustomerRefID, ServiceDescrip, Pa
 {% endtab %}
 
 {% tab title="Response body" %}
-{% include "../../../.gitbook/includes/param-ok-msg-errs.md" %}
-
 ***
-
-{% include "../../../.gitbook/includes/params-consent-modify-response.md" %}
 {% endtab %}
 {% endtabs %}
 
@@ -138,19 +94,11 @@ Cancel the subscription plan and removes the credit card information.
 
 {% tabs %}
 {% tab title="Request body" %}
-{% include "../../../.gitbook/includes/param-sess-key.md" %}
-
 ***
-
-{% include "../../../.gitbook/includes/param-consent-id.md" %}
 {% endtab %}
 
 {% tab title="Response body" %}
-{% include "../../../.gitbook/includes/param-ok-msg-errs.md" %}
-
 ***
-
-{% include "../../../.gitbook/includes/params-consent-cancel-response.md" %}
 {% endtab %}
 {% endtabs %}
 

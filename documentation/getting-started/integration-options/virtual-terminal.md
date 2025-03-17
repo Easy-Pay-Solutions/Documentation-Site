@@ -8,8 +8,6 @@ description: Getting started with Virtual Terminal for Number
 
 The Virtual Terminal is a web application that provides all types of credit card processing functionality. The VT is the fastest way to start trying out our payment services.&#x20;
 
-{% include "../../../.gitbook/includes/link-virtual-terminal.md" %}
-
 When you log in to the Virtual Terminal, you are brought to the home screen. The number of open transactions and scheduled payments due display at the top of the screen. Your default merchant and user roles are listed just below, along with the expiration date of your password.&#x20;
 
 <figure><img src="../../../.gitbook/assets/Virtual Terminal 2 (1) (1).png" alt=""><figcaption></figcaption></figure>
@@ -34,8 +32,6 @@ Make non-EMV manual sales using the Virtual Terminal.
 
 Click the _Credit Cards_ tab on the left side of the screen, then _Sale_. Manually enter all of the information from your keyboard, and enter the $ amount to be charged.&#x20;
 
-{% include "../../../.gitbook/includes/info-same-as-cardholder.md" %}
-
 A guest ID or a service description can also be added here and searched for later. The ID will also print on the **receipt**, and the service description will print on the **settlement report**.
 
 
@@ -47,10 +43,6 @@ Make EMV payments using the Virtual Terminal.
 Click the _Credit Cards_ tab on the left side of the screen, then on _Sale-EMV_.  You will then need to click on _Insert Chip_ or _Manual Card Entry_.&#x20;
 
 Clicking on _Insert Chip_ will prompt the end-user or customer to insert or tap their card for contactless payments. For _Manual Card Entry_, the end user must enter the full card number, expiration date, and CVV code by pressing the green enter button on the Verifone after each entry.&#x20;
-
-{% include "../../../.gitbook/includes/info-same-as-cardholder.md" %}
-
-{% include "../../../.gitbook/includes/block-cardholder-data-on-receipt-and-batch-report.md" %}
 
 
 
@@ -92,10 +84,6 @@ A consent receipt is always created by the system for your customer to sign. We 
 
 An email address can be added to the consent so your customer will receive a receipt when the consent has been used.&#x20;
 
-{% include "../../../.gitbook/includes/info-same-as-cardholder.md" %}
-
-{% include "../../../.gitbook/includes/block-cardholder-data-on-receipt-and-batch-report.md" %}
-
 
 
 ### Annual and one-time
@@ -118,10 +106,6 @@ Annual consents require that a max charge be determined as a limit per transacti
 
 An email address can also be added to the consent so your customer will receive a receipt when the consent has been used.&#x20;
 
-{% include "../../../.gitbook/includes/info-same-as-cardholder.md" %}
-
-{% include "../../../.gitbook/includes/block-cardholder-data-on-receipt-and-batch-report.md" %}
-
 
 
 ### Fixed recurring
@@ -139,10 +123,6 @@ Click the _Recurring_ tab on the left side of the screen, then _Create Recurring
 <figure><img src="../../../.gitbook/assets/Virtual Terminal 14b create consent.png" alt=""><figcaption></figcaption></figure>
 
 An email address can be added to the consent so your customer will receive a receipt
-
-{% include "../../../.gitbook/includes/info-same-as-cardholder.md" %}
-
-{% include "../../../.gitbook/includes/block-cardholder-data-on-receipt-and-batch-report.md" %}
 
 
 

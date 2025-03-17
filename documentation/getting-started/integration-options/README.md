@@ -6,7 +6,7 @@ description: Learn about how you can integrate with Number
 
 Before you start using our services, you'll want to decide which type of integration is most suited to your business case. We provide a plethora of ways to start using our services:
 
-* REST and SOAP APIs
+* REST API
 * Mobile SDKs for Android and iOS
 * PayForm and legacy widgets
 * The Virtual Terminal web application
@@ -59,24 +59,22 @@ Depending on whether or not you are handling the card holder data under your own
 
 
 
-## REST & SOAP APIs
+## REST API
 
-Both APIs will allow you to enable integration of Number payments with external applications, allowing for full automation and a high degree of customization.&#x20;
+The REST API will allow you to enable integration of Number payments with external applications, allowing for full automation and a high degree of customization.&#x20;
 
 They allow a variety of functions:&#x20;
 
 * Processing payments / voids / credits / settlements,&#x20;
-* Runing queries and reports,&#x20;
+* Running queries and reports,&#x20;
 * Returning receipts and documents for signature,&#x20;
 * Creating / modifying / processing payment plans.
 
-You don't need to use both of the APIs, they share similar functionality. **We recommend starting with the REST API as our modern option.** We continue to have both of the APIs supported.
-
 It's important to note that some API functionality will require you to collect cardholder data, such as [Processing a card sale with card present](../../../api-reference/rest-api/card-operations/process-a-card-sale.md#apicardprocrest-v1.0.0-cardsale-cardpresent), and that requires you to be PCI Level 1 compliant. You can overcome this by using our PayForm to collect all cardholder data securely.
 
-You can read more about implementation in the API integration guides:
+You can read more about implementation in the API integration guide:
 
-<table data-card-size="large" data-view="cards"><thead><tr><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td>REST API ></td><td><a href="rest-api.md">rest-api.md</a></td></tr><tr><td>SOAP API ></td><td><a href="soap-api.md">soap-api.md</a></td></tr></tbody></table>
+<table data-card-size="large" data-view="cards"><thead><tr><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td>REST API ></td><td><a href="rest-api.md">rest-api.md</a></td></tr></tbody></table>
 
 
 

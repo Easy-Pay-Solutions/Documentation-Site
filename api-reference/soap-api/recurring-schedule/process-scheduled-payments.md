@@ -12,16 +12,10 @@ Process the scheduled payments that are due as part of a subscription plan/recur
 
 {% tabs %}
 {% tab title="Request body" %}
-{% include "../../../.gitbook/includes/param-sess-key.md" %}
-
 ***
-
-{% include "../../../.gitbook/includes/param-merchid.md" %}
 {% endtab %}
 
 {% tab title="Response body" %}
-{% include "../../../.gitbook/includes/param-ok-msg-errs.md" %}
-
 ***
 
 `NumProcessed` int
@@ -72,8 +66,6 @@ Process the scheduled payments that are due as part of a subscription plan/recur
 
 {% tabs %}
 {% tab title="Request body" %}
-{% include "../../../.gitbook/includes/param-sess-key.md" %}
-
 ***
 
 `SchedIDs` array\<int>
@@ -82,8 +74,6 @@ IDs of the schedules to process.
 {% endtab %}
 
 {% tab title="Response body" %}
-{% include "../../../.gitbook/includes/param-ok-msg-errs.md" %}
-
 ***
 
 `NumProcessed` int

@@ -269,8 +269,6 @@ A component that can be used to condense equivalent or similar content consistin
 
 We highly recommend using it for multiple code blocks with different technology presentations:
 
-{% include "../../.gitbook/includes/code-hmac.md" %}
-
 #### Code blocks and multi-syntax code blocks
 
 The code block component is used to show code with syntax highlighting. Depending on the situation, you might want to add a file name, text wrapping, or line numbers.&#x20;
@@ -294,8 +292,6 @@ For console commands, use **Ruby**, and for Number's query language, use **SQL**
 {% endhint %}
 
 Example:
-
-{% include "../../.gitbook/includes/code-verifone-cp-sale-browser-based.md" %}
 
 
 
@@ -393,60 +389,36 @@ Here are the reusable component type names you should use and when:
 **param**
 
 Use when describing a single API request or response parameter (name, type, description, example, enum values). Example:
-
-{% include "../../.gitbook/includes/param-sess-key.md" %}
 {% endstep %}
 
 {% step %}
 **params**
 
 Use when grouping descriptive components for parameters used often together into one reusable component. Example:
-
-{% include "../../.gitbook/includes/params-purchase.md" %}
 {% endstep %}
 
 {% step %}
 info / warning / danger
 
 Use when creating a reusable hint of specific type. Examples:
-
-{% include "../../.gitbook/includes/info-payform-builder.md" %}
-
-{% include "../../.gitbook/includes/warning-hmac.md" %}
-
-{% include "../../.gitbook/includes/danger-query-date-factor.md" %}
 {% endstep %}
 
 {% step %}
 **link**
 
 Use when creating a reusable URL embedding or file download tiles. Examples:
-
-{% include "../../.gitbook/includes/link-ios-sdk.md" %}
-
-{% include "../../.gitbook/includes/link-wsdl-files.md" %}
-
-{% include "../../.gitbook/includes/link-verifone-example-download.md" %}
 {% endstep %}
 
 {% step %}
 code
 
 Use when creating a reusable code block component. Example:
-
-{% include "../../.gitbook/includes/code-hmac.md" %}
 {% endstep %}
 
 {% step %}
 #### block
 
 Use when creating a reusable component that consists of text and, optionally, of other components. You can use it for other complex components. Examples:
-
-{% include "../../.gitbook/includes/block-reauthenticate.md" %}
-
-{% include "../../.gitbook/includes/block-cardholder-data-on-receipt-and-batch-report.md" %}
-
-{% include "../../.gitbook/includes/block-android-config-ep.md" %}
 {% endstep %}
 {% endstepper %}
 

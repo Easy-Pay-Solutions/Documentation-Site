@@ -16,8 +16,6 @@ An example user name for the Virtual Terminal can look like this: **VT4914533**
 
 For more information about the Virtual Terminal, see the [virtual-terminal.md](../getting-started/integration-options/virtual-terminal.md "mention") guide. You can access Virtual Terminal using the link below.
 
-{% include "../../.gitbook/includes/link-virtual-terminal.md" %}
-
 <figure><img src="../../.gitbook/assets/Testing 1.png" alt=""><figcaption></figcaption></figure>
 
 
@@ -53,8 +51,6 @@ You can click _Full Detail_ to try to find out the reason for decline by checkin
 
 
 ### Testing partial auth <a href="#doing-a-partial-authorization-with-aspen" id="doing-a-partial-authorization-with-aspen"></a>
-
-{% include "../../.gitbook/includes/segment-allow-partial-auth.md" %}
 
 #### Partial auth testing data <a href="#partial-auth-testing-data" id="partial-auth-testing-data"></a>
 

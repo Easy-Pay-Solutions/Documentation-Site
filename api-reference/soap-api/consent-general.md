@@ -12,23 +12,13 @@ Return consent details.
 
 {% tabs %}
 {% tab title="Request body" %}
-{% include "../../.gitbook/includes/param-sess-key.md" %}
-
 ***
-
-{% include "../../.gitbook/includes/param-query-consent.md" %}
 {% endtab %}
 
 {% tab title="Response body" %}
-{% include "../../.gitbook/includes/param-ok-msg-errs.md" %}
-
 ***
 
-{% include "../../.gitbook/includes/param-num-records.md" %}
-
 ***
-
-{% include "../../.gitbook/includes/param-consents.md" %}
 {% endtab %}
 {% endtabs %}
 
@@ -44,8 +34,6 @@ Find expired cards and cards expiring before/in the specified number of days use
 
 {% tabs %}
 {% tab title="Request body" %}
-{% include "../../.gitbook/includes/param-sess-key.md" %}
-
 ***
 
 `NumDays` int
@@ -54,15 +42,9 @@ Number of days in the future to look for expiring cards.
 {% endtab %}
 
 {% tab title="Response body" %}
-{% include "../../.gitbook/includes/param-ok-msg-errs.md" %}
-
 ***
 
-{% include "../../.gitbook/includes/param-num-records.md" %}
-
 ***
-
-{% include "../../.gitbook/includes/param-expiring-cards.md" %}
 {% endtab %}
 {% endtabs %}
 
@@ -78,8 +60,6 @@ Find expired cards and cards expiring during the specified range of dates used o
 
 {% tabs %}
 {% tab title="Request body" %}
-{% include "../../.gitbook/includes/param-sess-key.md" %}
-
 ***
 
 `StartDate` string
@@ -94,15 +74,9 @@ End date of the consent expiring cards range.
 {% endtab %}
 
 {% tab title="Response body" %}
-{% include "../../.gitbook/includes/param-ok-msg-errs.md" %}
-
 ***
 
-{% include "../../.gitbook/includes/param-num-records.md" %}
-
 ***
-
-{% include "../../.gitbook/includes/param-expiring-cards.md" %}
 {% endtab %}
 {% endtabs %}
 

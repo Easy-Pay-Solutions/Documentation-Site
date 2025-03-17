@@ -12,19 +12,11 @@ Return annual consent details.&#x20;
 
 {% tabs %}
 {% tab title="Request body" %}
-{% include "../../../.gitbook/includes/param-sess-key.md" %}
-
 ***
-
-{% include "../../../.gitbook/includes/param-query-consent.md" %}
 {% endtab %}
 
 {% tab title="Response body" %}
-{% include "../../../.gitbook/includes/param-ok-msg-errs.md" %}
-
 ***
-
-{% include "../../../.gitbook/includes/param-num-records.md" %}
 
 ***
 
@@ -48,16 +40,10 @@ Return statistics for a single consent such as the number of charges or open and
 
 {% tabs %}
 {% tab title="Request body" %}
-{% include "../../../.gitbook/includes/param-sess-key.md" %}
-
 ***
-
-{% include "../../../.gitbook/includes/param-consent-id.md" %}
 {% endtab %}
 
 {% tab title="Response body" %}
-{% include "../../../.gitbook/includes/param-ok-msg-errs.md" %}
-
 ***
 
 `Stats` [api\_ConsentAnnualStats](../soap-object-dictionary.md#api_consentannualstats) (object)
@@ -78,16 +64,10 @@ Return the details for the consent, the card holder contact, and end customer in
 
 {% tabs %}
 {% tab title="Request body" %}
-{% include "../../../.gitbook/includes/param-sess-key.md" %}
-
 ***
-
-{% include "../../../.gitbook/includes/param-consent-id.md" %}
 {% endtab %}
 
 {% tab title="Response body" %}
-{% include "../../../.gitbook/includes/param-ok-msg-errs.md" %}
-
 ***
 
 `ConsentAnnual` api\_ConsentAnnualFullDetailResponse (object)
@@ -96,11 +76,7 @@ Fields: ID, AcctHolderID, CustID, MerchID, CustomerRefID, RPGUID, ServiceDescrip
 
 ***
 
-{% include "../../../.gitbook/includes/param-account-holder-full.md" %}
-
 ***
-
-{% include "../../../.gitbook/includes/param-end-customer-full.md" %}
 {% endtab %}
 {% endtabs %}
 

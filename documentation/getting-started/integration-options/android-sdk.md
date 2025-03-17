@@ -4,8 +4,6 @@ description: Getting started with Android SDK for Number
 
 # Android SDK
 
-{% include "../../../.gitbook/includes/link-android-sdk.md" %}
-
 The EasyPay Android SDK offers access to the Number API for seamless integration with any and all Android applications. For iOS integration, refer to the [iOS SDK integration guide](ios-sdk.md).
 
 
@@ -54,8 +52,6 @@ Prerequisites - get API key, HMAC secret and optional Sentry DSN from Number.
 {% endstep %}
 
 {% step %}
-{% include "../../../.gitbook/includes/block-android-config-ep.md" %}
-{% endstep %}
 
 {% step %}
 During initialization, the RSA certificate download begins. Proceeding with any call before downloading has finished will result with an exception `RSA_CERTIFICATE_NOT_FETCHED`.&#x20;

@@ -46,29 +46,21 @@ For an in-depth tutorial on how to integrate and use your Verifone card reader w
 
 Before you start, you'll need to download the Verifone Windows service to your machine, connect your card reader device to a free USB port, allow it to initialize, extract the archive with the service and run the EXE as an administrator. After the installation is complete, reboot the system.
 
-{% include "../../.gitbook/includes/link-verifone-windows-service.md" %}
-
 You can issue commands to the service by calling `https://localhost:8031` from your website.&#x20;
 
 #### Verifone card present sales
 
 Here's an simplified example of how you can invoke the service for a card present sale:
 
-{% include "../../.gitbook/includes/code-verifone-cp-sale-browser-based.md" %}
-
 #### Verifone card present annual consent
 
 Here's an simplified example of how you can invoke the service to collect annual consent:
-
-{% include "../../.gitbook/includes/code-verifone-cp-annual-consent-browser-based.md" %}
 
 
 
 ### Virtual Terminal or desktop application
 
 When you want to use your Verifone with the Virtual Terminal, you have to first install the very same Windows service that is used when doing a Verifone browser-based integration. After installation, [contact the Number support team](../../help/customer-support/) to get the card reader features activated.
-
-{% include "../../.gitbook/includes/link-verifone-windows-service.md" %}
 
 {% hint style="info" %}
 To learn more about using the Virtual Terminal, see the [virtual-terminal.md](../getting-started/integration-options/virtual-terminal.md "mention") user guide.
@@ -171,8 +163,6 @@ The PayForm is designed to be a highly flexible and secure payment form for your
 {% hint style="info" %}
 Learn more about how to configure and use the PayForm in the [payform.md](../getting-started/integration-options/payform.md "mention") guide.
 {% endhint %}
-
-{% include "../../.gitbook/includes/info-payform-builder.md" %}
 
 You can read about configuration specifics in the [#payform-builder](../getting-started/integration-options/payform.md#payform-builder "mention") section of our full PayForm guide. For the purpose of this tutorial, you can follow the example below; we'll briefly explain each configuration step.&#x20;
 

@@ -4,8 +4,6 @@ description: Getting started with iOS SDK for Number
 
 # iOS SDK
 
-{% include "../../../.gitbook/includes/link-ios-sdk.md" %}
-
 The EasyPay iOS SDK offers access to the Number API for effortless integration with any iOS application. For Android integration, refer to the [Android SDK integration guide](android-sdk.md).
 
 
@@ -57,8 +55,6 @@ Prerequisites - get HMAC secret, API key and optional Sentry DSN from Number.
 {% endstep %}
 
 {% step %}
-{% include "../../../.gitbook/includes/block-ios-configure-easypay.md" %}
-{% endstep %}
 
 {% step %}
 During the initialization, the process of downloading the certificate is starting. Proceeding with any call before downloading has finished will result in an error `RsaCertificateError.failedToLoadCertificateData`.&#x20;

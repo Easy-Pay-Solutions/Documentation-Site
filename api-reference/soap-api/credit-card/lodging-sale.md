@@ -12,55 +12,29 @@ Process a lodging reservation that authorizes the card prior to guest checkin an
 
 {% tabs %}
 {% tab title="Request body" %}
-{% include "../../../.gitbook/includes/param-sess-key.md" %}
+***
 
 ***
 
-{% include "../../../.gitbook/includes/param-track.md" %}
+***
 
 ***
 
-{% include "../../../.gitbook/includes/param-account-holder.md" %}
-
 ***
-
-{% include "../../../.gitbook/includes/param-end-customer.md" %}
-
-***
-
-{% include "../../../.gitbook/includes/param-lodging-details.md" %}
-
-***
-
-{% include "../../../.gitbook/includes/param-merchid.md" %}
 {% endtab %}
 
 {% tab title="Response body" %}
-{% include "../../../.gitbook/includes/param-ok-msg-errs.md" %}
+***
 
 ***
 
-{% include "../../../.gitbook/includes/param-tx-approved.md" %}
+***
 
 ***
 
-{% include "../../../.gitbook/includes/param-txid.md" %}
-
 ***
 
-{% include "../../../.gitbook/includes/param-txncode.md" %}
-
 ***
-
-{% include "../../../.gitbook/includes/param-avsr.md" %}
-
-***
-
-{% include "../../../.gitbook/includes/param-cvvr.md" %}
-
-***
-
-{% include "../../../.gitbook/includes/params-acquirer-opts-voice-opts-auth-balance.md" %}
 {% endtab %}
 {% endtabs %}
 
@@ -76,19 +50,11 @@ Process a lodging reservation that authorizes the card prior to guest checkin an
 
 {% tabs %}
 {% tab title="Request body" %}
-{% include "../../../.gitbook/includes/param-sess-key.md" %}
+***
 
 ***
 
-{% include "../../../.gitbook/includes/param-credit-card-info.md" %}
-
 ***
-
-{% include "../../../.gitbook/includes/param-account-holder.md" %}
-
-***
-
-{% include "../../../.gitbook/includes/param-end-customer.md" %}
 
 ***
 
@@ -97,36 +63,20 @@ Process a lodging reservation that authorizes the card prior to guest checkin an
 Fields: FirstName, LastName, IsAuthOnly, ConsentID4Auth, Folio, ArrivalDate, DepartureDate, Duration, ChangeDescriptor[^1], ChargeAmount, ExtraChargeAmount, ExtraChargesCode[^2], SaleCode[^3], StayID, CustomerData
 
 ***
-
-{% include "../../../.gitbook/includes/param-merchid.md" %}
 {% endtab %}
 
 {% tab title="Response body" %}
-{% include "../../../.gitbook/includes/param-ok-msg-errs.md" %}
+***
 
 ***
 
-{% include "../../../.gitbook/includes/param-tx-approved.md" %}
+***
 
 ***
 
-{% include "../../../.gitbook/includes/param-txid.md" %}
-
 ***
 
-{% include "../../../.gitbook/includes/param-txncode.md" %}
-
 ***
-
-{% include "../../../.gitbook/includes/param-avsr.md" %}
-
-***
-
-{% include "../../../.gitbook/includes/param-cvvr.md" %}
-
-***
-
-{% include "../../../.gitbook/includes/params-acquirer-opts-voice-opts-auth-balance.md" %}
 {% endtab %}
 {% endtabs %}
 
@@ -142,47 +92,25 @@ Process a lodging reservation using an existing consent instead of processing a 
 
 {% tabs %}
 {% tab title="Request body" %}
-{% include "../../../.gitbook/includes/param-sess-key.md" %}
+***
 
 ***
 
-{% include "../../../.gitbook/includes/param-consent-id.md" %}
-
 ***
-
-{% include "../../../.gitbook/includes/param-lodging-details.md" %}
-
-***
-
-{% include "../../../.gitbook/includes/param-merchid.md" %}
 {% endtab %}
 
 {% tab title="Response body" %}
-{% include "../../../.gitbook/includes/param-ok-msg-errs.md" %}
+***
 
 ***
 
-{% include "../../../.gitbook/includes/param-tx-approved.md" %}
+***
 
 ***
 
-{% include "../../../.gitbook/includes/param-txid.md" %}
-
 ***
 
-{% include "../../../.gitbook/includes/param-txncode.md" %}
-
 ***
-
-{% include "../../../.gitbook/includes/param-avsr.md" %}
-
-***
-
-{% include "../../../.gitbook/includes/param-cvvr.md" %}
-
-***
-
-{% include "../../../.gitbook/includes/params-acquirer-opts-voice-opts-auth-balance.md" %}
 {% endtab %}
 {% endtabs %}
 
@@ -198,15 +126,9 @@ Process a lodging reservation using an existing consent and specify the data ent
 
 {% tabs %}
 {% tab title="Request body" %}
-{% include "../../../.gitbook/includes/param-sess-key.md" %}
-
 ***
 
-{% include "../../../.gitbook/includes/param-consent-id.md" %}
-
 ***
-
-{% include "../../../.gitbook/includes/param-lodging-details.md" %}
 
 ***
 
@@ -215,36 +137,20 @@ Process a lodging reservation using an existing consent and specify the data ent
 Identity of the data entry person.
 
 ***
-
-{% include "../../../.gitbook/includes/param-merchid.md" %}
 {% endtab %}
 
 {% tab title="Response body" %}
-{% include "../../../.gitbook/includes/param-ok-msg-errs.md" %}
+***
 
 ***
 
-{% include "../../../.gitbook/includes/param-tx-approved.md" %}
+***
 
 ***
 
-{% include "../../../.gitbook/includes/param-txid.md" %}
-
 ***
 
-{% include "../../../.gitbook/includes/param-txncode.md" %}
-
 ***
-
-{% include "../../../.gitbook/includes/param-avsr.md" %}
-
-***
-
-{% include "../../../.gitbook/includes/param-cvvr.md" %}
-
-***
-
-{% include "../../../.gitbook/includes/params-acquirer-opts-voice-opts-auth-balance.md" %}
 {% endtab %}
 {% endtabs %}
 

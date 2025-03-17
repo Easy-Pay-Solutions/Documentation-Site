@@ -12,19 +12,11 @@ Return the recurring schedule details.
 
 {% tabs %}
 {% tab title="Request body" %}
-{% include "../../../.gitbook/includes/param-sess-key.md" %}
-
 ***
-
-{% include "../../../.gitbook/includes/param-query-recurring-schedule.md" %}
 {% endtab %}
 
 {% tab title="Response body" %}
-{% include "../../../.gitbook/includes/param-ok-msg-errs.md" %}
-
 ***
-
-{% include "../../../.gitbook/includes/param-num-records.md" %}
 
 ***
 
@@ -33,4 +25,6 @@ Return the recurring schedule details.
 Fields: ID, ConsentID, MerchID, AcctHolderID, SchedNum, DueOn, PaymentNum, OfTotalPayments, PaymentAmt, OfTotalPayment,  Period, RStatus, TxID, Tries, AcctNo, LastName, RPGUID, ConsentType.
 {% endtab %}
 {% endtabs %}
+
+
 

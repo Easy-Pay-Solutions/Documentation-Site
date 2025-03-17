@@ -27,19 +27,13 @@ The REST API provides their own methods for authenticating with Number. You will
 
 ***
 
-{% include "../../../.gitbook/includes/param-account-code.md" %}
-
 ***
-
-{% include "../../../.gitbook/includes/param-token.md" %}
 
 ***
 
 As a result of authentication, you will obtain a session key. This key is required to prove your identity when using any of the other methods provided by our backend.
 
 ***
-
-{% include "../../../.gitbook/includes/param-sess-key.md" %}
 
 ***
 
@@ -71,21 +65,15 @@ The HMAC and RSA section only applies to using the REST API.
 
 If you are not passing cardholder data through the REST API, you only need the session key to authenticate and connect to your account. Otherwise, you need to use a signature secured by an HMAC secret and and encrypt the cardholder data using our RSA certificate.
 
-{% include "../../../.gitbook/includes/warning-hmac.md" %}
-
 ### HMAC header
 
 When required to secure the request, the `SessKey` header will need to include additional data.
 
 ***
 
-{% include "../../../.gitbook/includes/param-sesskey-pci-secure.md" %}
-
 ***
 
 This altered key should be passed instead of the plain session key using a header with the same name, `SessKey`. Here are some examples of creating the header signature:
-
-{% include "../../../.gitbook/includes/code-hmac.md" %}
 
 ### RSA encryption
 
@@ -99,8 +87,6 @@ When passing cardholder data through our REST API, only the credit card number n
 When encrypting sensitive cardholder data, use RSA encryption padding of OaepSHA1. \
 Encrypted card numbers will always have 512 bytes.
 {% endhint %}
-
-{% include "../../../.gitbook/includes/link-rsa-certificate.md" %}
 
 Examples of RSA encryption:
 

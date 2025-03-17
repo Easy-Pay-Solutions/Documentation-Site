@@ -10,12 +10,8 @@ description: Methods related to creating and modifying recurring consent
 
 Creates a recurring consent. Depending upon user account settings, this also authorize the card for $0.
 
-{% include "../../../.gitbook/includes/info-process-scheduled-payments.md" %}
-
 {% tabs %}
 {% tab title="Request body" %}
-{% include "../../../.gitbook/includes/param-sess-key.md" %}
-
 ***
 
 `ccCardInfo` api\_CardInfo2 (object)
@@ -30,23 +26,13 @@ Fields: MerchID, CustomerRefID, ServiceDescrip, RPGUID, StartDate, NumPayments, 
 
 ***
 
-{% include "../../../.gitbook/includes/param-account-holder.md" %}
-
 ***
-
-{% include "../../../.gitbook/includes/param-end-customer.md" %}
 {% endtab %}
 
 {% tab title="Response body" %}
-{% include "../../../.gitbook/includes/param-ok-msg-errs.md" %}
-
 ***
 
-{% include "../../../.gitbook/includes/params-consent-creation-results.md" %}
-
 ***
-
-{% include "../../../.gitbook/includes/param-consent-id.md" %}
 
 ***
 
@@ -68,11 +54,7 @@ Update the payment amounts, expiration, and customer reference information for a
 
 {% tabs %}
 {% tab title="Request body" %}
-{% include "../../../.gitbook/includes/param-sess-key.md" %}
-
 ***
-
-{% include "../../../.gitbook/includes/param-consent-id.md" %}
 
 ***
 
@@ -82,11 +64,7 @@ Fields: ExpMonth, ExpYear, Email, Zip, CustomerRefID, ServiceDescrip, RPGUID
 {% endtab %}
 
 {% tab title="Response body" %}
-{% include "../../../.gitbook/includes/param-ok-msg-errs.md" %}
-
 ***
-
-{% include "../../../.gitbook/includes/params-consent-modify-response.md" %}
 {% endtab %}
 {% endtabs %}
 
@@ -102,21 +80,13 @@ Cancel a recurring consent and remove credit card data from the system.
 
 {% tabs %}
 {% tab title="Request body" %}
-{% include "../../../.gitbook/includes/param-sess-key.md" %}
-
 ***
-
-{% include "../../../.gitbook/includes/param-consent-id.md" %}
 
 
 {% endtab %}
 
 {% tab title="Response body" %}
-{% include "../../../.gitbook/includes/param-ok-msg-errs.md" %}
-
 ***
-
-{% include "../../../.gitbook/includes/params-consent-cancel-response.md" %}
 {% endtab %}
 {% endtabs %}
 

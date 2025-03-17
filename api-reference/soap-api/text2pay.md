@@ -16,8 +16,6 @@ Once the client receives the reminder, they can click a link to open a payment w
 
 {% tabs %}
 {% tab title="Request body" %}
-{% include "../../.gitbook/includes/param-sess-key.md" %}
-
 ***
 
 `PaymentObject` api\_SMSPayment (object)
@@ -26,8 +24,6 @@ Fields: Person, Email, Phone, MessageType, RefID, RPGUID, MessageBody, AcctHolde
 {% endtab %}
 
 {% tab title="Response body" %}
-{% include "../../.gitbook/includes/param-ok-msg-errs.md" %}
-
 ***
 
 `PaymentUrl` string
@@ -35,4 +31,6 @@ Fields: Person, Email, Phone, MessageType, RefID, RPGUID, MessageBody, AcctHolde
 The payment URL that was generated and send alongside the reminder.
 {% endtab %}
 {% endtabs %}
+
+
 

@@ -12,12 +12,8 @@ Get information about the logged-in user, such as: account code, name, settlemen
 
 {% tabs %}
 {% tab title="Request body" %}
-{% include "../../.gitbook/includes/param-sess-key.md" %}
-{% endtab %}
 
 {% tab title="Response body" %}
-{% include "../../.gitbook/includes/param-ok-msg-errs.md" %}
-
 ***
 
 `AccountProfile` [api\_AccountProfile](soap-object-dictionary.md#api_accountprofile) (object)
@@ -40,12 +36,8 @@ Get individual settings and their values configured for the logged-in user.
 
 {% tabs %}
 {% tab title="Request body" %}
-{% include "../../.gitbook/includes/param-sess-key.md" %}
-{% endtab %}
 
 {% tab title="Response body" %}
-{% include "../../.gitbook/includes/param-ok-msg-errs.md" %}
-
 ***
 
 `AcctSettings` List<[api\_AccountSettings](soap-object-dictionary.md#api_accountsettings)> (array\<object>)

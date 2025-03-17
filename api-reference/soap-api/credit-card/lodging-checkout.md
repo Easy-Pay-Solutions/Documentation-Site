@@ -12,15 +12,9 @@ Process a lodging checkout. Additional details such as the checkout date and add
 
 {% tabs %}
 {% tab title="Request body" %}
-{% include "../../../.gitbook/includes/param-sess-key.md" %}
-
 ***
 
-{% include "../../../.gitbook/includes/param-txid.md" %}
-
 ***
-
-{% include "../../../.gitbook/includes/param-extra-charge-code.md" %}
 
 ***
 
@@ -36,15 +30,9 @@ The final $ amount of stay. Cannot be higher than 15% of authorization of checki
 {% endtab %}
 
 {% tab title="Response body" %}
-{% include "../../../.gitbook/includes/param-ok-msg-errs.md" %}
-
 ***
 
-{% include "../../../.gitbook/includes/param-tx-approved.md" %}
-
 ***
-
-{% include "../../../.gitbook/includes/param-txid.md" %}
 {% endtab %}
 {% endtabs %}
 
@@ -60,11 +48,7 @@ Process a lodging checkout by transaction ID.
 
 {% tabs %}
 {% tab title="Request body" %}
-{% include "../../../.gitbook/includes/param-sess-key.md" %}
-
 ***
-
-{% include "../../../.gitbook/includes/param-txid.md" %}
 
 ***
 
@@ -74,15 +58,9 @@ The final $ amount of stay. Cannot be higher than 15% of authorization of checki
 {% endtab %}
 
 {% tab title="Response body" %}
-{% include "../../../.gitbook/includes/param-ok-msg-errs.md" %}
-
 ***
 
-{% include "../../../.gitbook/includes/param-tx-approved.md" %}
-
 ***
-
-{% include "../../../.gitbook/includes/param-txid.md" %}
 {% endtab %}
 {% endtabs %}
 
@@ -98,8 +76,6 @@ Process a lodging checkout by StayID.
 
 {% tabs %}
 {% tab title="Request body" %}
-{% include "../../../.gitbook/includes/param-sess-key.md" %}
-
 ***
 
 `StayID` int
@@ -114,15 +90,9 @@ The final $ amount of stay. Cannot be higher than 15% of authorization of checki
 {% endtab %}
 
 {% tab title="Response body" %}
-{% include "../../../.gitbook/includes/param-ok-msg-errs.md" %}
-
 ***
 
-{% include "../../../.gitbook/includes/param-tx-approved.md" %}
-
 ***
-
-{% include "../../../.gitbook/includes/param-txid.md" %}
 {% endtab %}
 {% endtabs %}
 

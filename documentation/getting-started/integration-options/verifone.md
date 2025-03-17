@@ -271,8 +271,6 @@ For browser type Verifone operations, the middleware provides a response object 
 
 It is important to consume the `WidgetArgs` response in a particular order, starting with `TxEventTyp`.
 
-{% include "../../../.gitbook/includes/info-verifone-friendly-response.md" %}
-
 {% code title="Response example" overflow="wrap" %}
 ```xml
 <?xml version="1.0" encoding="utf-16"?>
@@ -389,8 +387,6 @@ An error was encountered in the local Windows service. Examine `ErrCode` and `Er
 ### Consuming the consent response
 
 It is important to consume the `WidgetArgs2` response in a particular order, starting with `ConsentEventTyp`.
-
-{% include "../../../.gitbook/includes/info-verifone-friendly-response.md" %}
 
 {% code title="Response example" overflow="wrap" %}
 ```xml

@@ -12,27 +12,15 @@ Applies a credit to the specified ACH transaction. Credits can be applied after 
 
 {% tabs %}
 {% tab title="Request body" %}
-{% include "../../.gitbook/includes/param-sess-key.md" %}
-
 ***
 
-{% include "../../.gitbook/includes/param-consent-id.md" %}
-
 ***
-
-{% include "../../.gitbook/includes/param-process-amount.md" %}
 {% endtab %}
 
 {% tab title="Response body" %}
-{% include "../../.gitbook/includes/param-ok-msg-errs.md" %}
-
 ***
 
-{% include "../../.gitbook/includes/param-tx-approved.md" %}
-
 ***
-
-{% include "../../.gitbook/includes/param-txid.md" %}
 {% endtab %}
 {% endtabs %}
 
@@ -46,8 +34,6 @@ Processes the specified $ amount against the associated ACH consent.
 
 {% tabs %}
 {% tab title="Request body" %}
-{% include "../../.gitbook/includes/param-sess-key.md" %}
-
 ***
 
 `ConsentID` int
@@ -55,20 +41,12 @@ Processes the specified $ amount against the associated ACH consent.
 This is the the ID number that is returned after you save a card on file.
 
 ***
-
-{% include "../../.gitbook/includes/param-process-amount.md" %}
 {% endtab %}
 
 {% tab title="Response body" %}
-{% include "../../.gitbook/includes/param-ok-msg-errs.md" %}
-
 ***
 
-{% include "../../.gitbook/includes/param-tx-approved.md" %}
-
 ***
-
-{% include "../../.gitbook/includes/param-txid.md" %}
 
 ***
 
@@ -77,8 +55,6 @@ This is the the ID number that is returned after you save a card on file.
 The authorization ID provided by the payment processor upon approval of the transaction.
 
 ***
-
-{% include "../../.gitbook/includes/param-uniquetranid.md" %}
 {% endtab %}
 {% endtabs %}
 
@@ -92,35 +68,19 @@ Processes the specified $ amount for an existing ACH consent, but the payment is
 
 The alternate merchant must be previously assigned to the account holders' account.
 
-{% include "../../.gitbook/includes/info-alt-merchant.md" %}
-
 {% tabs %}
 {% tab title="Request body" %}
-{% include "../../.gitbook/includes/param-sess-key.md" %}
+***
 
 ***
 
-{% include "../../.gitbook/includes/param-consent-id.md" %}
-
 ***
-
-{% include "../../.gitbook/includes/param-process-amount.md" %}
-
-***
-
-{% include "../../.gitbook/includes/param-alternate-merchid.md" %}
 {% endtab %}
 
 {% tab title="Response body" %}
-{% include "../../.gitbook/includes/param-ok-msg-errs.md" %}
-
 ***
 
-{% include "../../.gitbook/includes/param-tx-approved.md" %}
-
 ***
-
-{% include "../../.gitbook/includes/param-txid.md" %}
 
 ***
 
@@ -129,8 +89,6 @@ The alternate merchant must be previously assigned to the account holders' accou
 The authorization ID provided by the payment processor upon approval of the transaction.
 
 ***
-
-{% include "../../.gitbook/includes/param-uniquetranid.md" %}
 {% endtab %}
 {% endtabs %}
 
@@ -146,19 +104,11 @@ Returns the details for an ACH transaction. This query can return more than one 
 
 {% tabs %}
 {% tab title="Request body" %}
-{% include "../../.gitbook/includes/param-sess-key.md" %}
-
 ***
-
-{% include "../../.gitbook/includes/param-query-transaction.md" %}
 {% endtab %}
 
 {% tab title="Response body" %}
-{% include "../../.gitbook/includes/param-ok-msg-errs.md" %}
-
 ***
-
-{% include "../../.gitbook/includes/param-num-records.md" %}
 
 ***
 
@@ -238,23 +188,13 @@ Voids an ACH transaction. The transaction can be voided before it is settled. On
 
 {% tabs %}
 {% tab title="Request body" %}
-{% include "../../.gitbook/includes/param-sess-key.md" %}
-
 ***
-
-{% include "../../.gitbook/includes/param-txid.md" %}
 {% endtab %}
 
 {% tab title="Response body" %}
-{% include "../../.gitbook/includes/param-ok-msg-errs.md" %}
-
 ***
 
-{% include "../../.gitbook/includes/param-tx-approved.md" %}
-
 ***
-
-{% include "../../.gitbook/includes/param-txid.md" %}
 
 ***
 

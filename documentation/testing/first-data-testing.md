@@ -42,8 +42,6 @@ To request an error response code, the last three digits of the transaction amou
 
 ## Partial authorization <a href="#partial-authorization-test-data" id="partial-authorization-test-data"></a>
 
-{% include "../../.gitbook/includes/segment-allow-partial-auth.md" %}
-
 ### Partial auth test cards <a href="#partial-authorization-test-data" id="partial-authorization-test-data"></a>
 
 To test a partial authorization, use these cards and request values:

@@ -1,10 +1,10 @@
-# PayForm (v3)
+# PayForm
 
-{% include "../../.gitbook/includes/info-payform-builder.md" %}
 
-{% include "../../.gitbook/includes/info-payform-styles.md" %}
 
-{% swagger src="../../.gitbook/assets/master-openapi-rest.yaml" path="/PayForm/Initialize" method="post" %}
+{% openapi src="../../.gitbook/assets/master-openapi-rest.yaml" path="/PayForm/Initialize" method="post" %}
 [master-openapi-rest.yaml](../../.gitbook/assets/master-openapi-rest.yaml)
-{% endswagger %}
+{% endopenapi %}
+
+
 

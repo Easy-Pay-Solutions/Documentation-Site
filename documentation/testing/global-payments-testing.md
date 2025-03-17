@@ -70,8 +70,6 @@ To receive a **full AVS and CVV match**, please use the following test card and 
 
 ## Partial authorization <a href="#partial-authorization-with-global-tsys" id="partial-authorization-with-global-tsys"></a>
 
-{% include "../../.gitbook/includes/segment-allow-partial-auth.md" %}
-
 ### Partial auth test cards <a href="#partial-authorization-test-data" id="partial-authorization-test-data"></a>
 
 To test partial authorization, use these cards and request values:

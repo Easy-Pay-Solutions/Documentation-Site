@@ -3532,7 +3532,7 @@ paths:
         - $ref: "#/components/parameters/ContentType"
         - $ref: "#/components/parameters/Accept"
       description: |
-        REFID will be the transaction ID
+        "REFID" will be the transaction ID
         ReceiptType will always be 23 for International
         Merchant copy use Recipient = 1
         Customer Copy use Recipient = 2

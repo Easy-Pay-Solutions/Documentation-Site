@@ -3892,9 +3892,8 @@ paths:
         {  
           "Query": "(F='328217c4-7059-11ef-a730-a6469c956913')&&(B=3)&&(E=1) "  
         }  
-        ___
         This will return the transaction of interest without returning the intermediate steps as noted above.  
-        
+        ___
         If you want to query by Last name on a specific Date  
         {  
           "Query": "(C>'2024-09-16')&&(C<'2024-09-17')&&(D='SMITH')&&(B=3)&&(E=1)"  

@@ -3786,7 +3786,33 @@ paths:
         - $ref: "#/components/parameters/ContentType"
         - $ref: "#/components/parameters/Accept"
       description: |
-        Info Coming Soon
+        **Query Strings:**  
+        EasyPay provides a robust query language which provides a means for you to obtain specific records.  
+        
+        In order to Create a Query you will build logical terms and join them with Logical AND or Logical OR.  
+        
+        Use && for Logical AND  
+        
+        Use || for Logical OR  
+        
+        For instance, Let's say you want to return all records from merchant record 1 which were created in JUNE.  
+        
+        HERE IS THE QUERY: (A=1)&&(C>='6/1/2024')&&(C<'7/1/2024') (notice that any TEXT or DATES use a single Quote delimiter while numeric items do not)  
+        
+        Each Letter represents a variable and the following chart shows each meaning.
+        
+        A: [A, MerchID]  
+        B: [B, Status] 
+        C: [C, CreatedON] 
+        D: [D, LastName] 
+        E: [E, Result] 
+        F: [F, TransID] 
+        G: [J, FirstName] 
+        H: [L, Amount] 
+        I: [M, REFID] 
+        J: [Q, CardNum Last 4] 
+        K: [N, RPGUID] 
+        L: [W, ConsentID]
 
   # Void a Transaction (International)
 

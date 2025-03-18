@@ -3681,6 +3681,10 @@ paths:
                             Card:
                               type: string
                               example: "0042"
+                            CardType:
+                              type: string
+                              example: "VI"
+                              description: The brand of the card used in the transaction
                             Card_Expiration_Date:
                               type: string
                               example: "12/2025"

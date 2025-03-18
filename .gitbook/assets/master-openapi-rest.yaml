@@ -3867,57 +3867,59 @@ paths:
         {  
           "Query": "(B=3)&&(E=1)"  
         }  
+        ----
         You can further limit your query by specifying a Date Range  
         
         {  
           "Query": "(B=3)&&(E=1)&&(C>’2024-09-01’)"  
         }  
-        
+        ---
         If you want to limit your results to transactions which are REFUNDS then use ACTION CREDITVOID  
         
         Or specifically (G=2)  
         {  
           "Query": "(B=3)&&(E=1)&&(C>'2024-09-01')&&(G=2)"  
         }  
-        
+        ---
         If you want to limit your results to transactions which are Processed from stored Card use ACTION RECURRING_SALE  
         
         Or specifically (G=3)  
         {  
           "Query": "(B=3)&&(E=1)&&(C>'2024-09-01')&&(G=3)"  
         }  
-        
+        ---
         If you are looking for a particular transaction based on its unique TransID, you can do the following:  
         {  
           "Query": "(F='328217c4-7059-11ef-a730-a6469c956913')&&(B=3)&&(E=1) "  
         }  
+        ---
         This will return the transaction of interest without returning the intermediate steps as noted above.  
         
         If you want to query by Last name on a specific Date  
         {  
           "Query": "(C>'2024-09-16')&&(C<'2024-09-17')&&(D='SMITH')&&(B=3)&&(E=1)"  
         }  
-        
+        ---
         If you are looking for a specific Amount  
         {  
           "Query": "(L=4.44)&&(B=3)&&(E=1)"  
         }  
-        
+        ---
         If you are looking for a specific Amount within a date range  
         {  
           "Query": "(L=4.44)&&(C>'2024-09-16')&&(C<'2024-09-17')&&(B=3)&&(E=1)"  
         }  
-        
+        ---
         If you are looking for a particular Card Number ( use last 4 digits ) for settled records  
         {  
           "Query": "(Q='1111')&&(B=3)&&(E=1)"  
         }  
-        
+        ---
         If you are looking for a particular Reference ID  
         {  
           "Query": "(M='ABC 888')&&(B=3)&&(E=1)"  
         }  
-        
+        ---
         If you are looking for a particular saved card transaction based on the ConsentID  
         {  
           "Query": "(W='c30eca54-75c1-11ef-b9e6-7aa481e33aa5')&&(B=3)&&(E=1)"  

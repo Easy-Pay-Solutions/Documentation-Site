@@ -3532,15 +3532,15 @@ paths:
         - $ref: "#/components/parameters/ContentType"
         - $ref: "#/components/parameters/Accept"
       description: |
-        "REFID" will be the transaction ID
-        ReceiptType will always be 23 for International
-        Merchant copy use Recipient = 1
-        Customer Copy use Recipient = 2
-        For Dual Receipt use Recipient = 3
+        REFID will be the transaction ID  
+        ReceiptType will always be 23 for International  
+        Merchant copy use Recipient = 1  
+        Customer Copy use Recipient = 2  
+        For Dual Receipt use Recipient = 3  
         
-        **Consuming the Response**
-        The member named ReceiptHtml holds the receipt data
-        Important you must replace all Unicode characters to consume clean HTML
+        **Consuming the Response**  
+        The member named ReceiptHtml holds the receipt data  
+        Important you must replace all Unicode characters to consume clean HTML  
         Example : CleanHtml = Regex.Replace(my, @"[^\u0000-\u007F]+", string.Empty);
 
   # Process Consent (International)

@@ -3801,18 +3801,18 @@ paths:
         
         Each Letter represents a variable and the following chart shows each meaning.
         
-        A: [A, MerchID]  
-        B: [B, Status] 
-        C: [C, CreatedON] 
-        D: [D, LastName] 
-        E: [E, Result] 
-        F: [F, TransID] 
-        G: [J, FirstName] 
-        H: [L, Amount] 
-        I: [M, REFID] 
-        J: [Q, CardNum Last 4] 
-        K: [N, RPGUID] 
-        L: [W, ConsentID]
+        A: MerchID   
+        B: Status  
+        C: CreatedON  
+        D: LastName   
+        E: Result  
+        F: TransID  
+        J: FirstName  
+        L: Amount  
+        M: REFID  
+        Q: CardNum Last 4  
+        N: RPGUID  
+        W: ConsentID  
 
   # Void a Transaction (International)
 

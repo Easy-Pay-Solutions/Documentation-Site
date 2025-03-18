@@ -5821,20 +5821,20 @@ paths:
         - $ref: "#/components/parameters/ContentType"
         - $ref: "#/components/parameters/Accept"
       description: |
-        Easy Pay provides a variety of ways to search for and query transactions. To view a complete list of options, view the https://easypaysoftware.com/en/Querying Query Guide.
+        Easy Pay provides a variety of ways to search for and query transactions. To view a complete list of options, view the https://easypaysoftware.com/en/Querying Query Guide.  
         
-        Use this call to search for transactions based on one or more parameters. A collection of transaction objects is returned. Transactions can be searched using several different parameters including the following.
+        Use this call to search for transactions based on one or more parameters. A collection of transaction objects is returned. Transactions can be searched using several different parameters including the following.  
         
-        - ID ( TxID ) ( Unique Identifier for the transaction )
-        - TRANSACTION STATUS ( OPEN , VOID, SETTLED, FAILED )
-        - DATE CREATED
-        - CARDHOLDER LAST NAME / FIRST NAME
-        - BATCH NUMBER ( Settlement group )
-        - TRANSACTION TYPE ( CCSALE, CCCREDIT , CCAUTHONLY)
-        - APPROVAL CODE / DECLINE CODE
-        - AMOUNT
-        - Reference ID (User defined field which can be searchable)
-        - RPGUID (Another user defined field which can be searchable)
+        - ID ( TxID ) ( Unique Identifier for the transaction )  
+        - TRANSACTION STATUS ( OPEN , VOID, SETTLED, FAILED )  
+        - DATE CREATED 
+        - CARDHOLDER LAST NAME / FIRST NAME  
+        - BATCH NUMBER ( Settlement group )  
+        - TRANSACTION TYPE ( CCSALE, CCCREDIT , CCAUTHONLY)  
+        - APPROVAL CODE / DECLINE CODE  
+        - AMOUNT  
+        - Reference ID (User defined field which can be searchable)  
+        - RPGUID (Another user defined field which can be searchable)  
         - Last 4 Digits of the Card 
         
   # Transaction Reconcile Query

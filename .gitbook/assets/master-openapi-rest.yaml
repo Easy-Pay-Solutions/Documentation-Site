@@ -3814,7 +3814,114 @@ paths:
         | M | REFID          |
         | Q | CardNum Last 4 |
         | N | RPGUID         |
-        | W | ConsentID      |
+        | W | ConsentID      |  
+        
+        EasyPay stores a copy of the transactional data on its servers. For international transactions data is stored in such a way that we may have multiple records in our system for a single credit card authorization or OrderID. Two Fields of Interest are Result and Status.  
+        
+        | Seq |  OrderID | Action |  Result  |  Status  |  
+        |-----|----------|--------|----------|----------|
+        |  1  | 09B370DD |  SALE  | REDIRECT | REDIRECT |
+        |  2  | 09B370DD |  SALE  | REDIRECT |   3DS    |
+        |  3  | 09B370DD |  SALE  | SUCCESS  | SETTLED  |  
+        
+        The above table shows three records we record as we process a single transaction on the International Processing Servers. As you request transaction information you are most likely only interested in the last entry which shows SUCCESS and SETTLED as the other two are simply intermediate steps.  
+        
+        The following shows query enum values for RESULT and STATUS and ACTION  
+        
+        | E Result Values |    |
+        |-----------------|----|
+        | ALL             | -1 |
+        | SUCCESS         |  1 |
+        | DECLINED        |  2 |
+        | REDIRECT        |  3 |
+        | ACCEPTED        |  4 |
+        | ERROR           |  5 |
+        | UNDEFINED       |  6 |
+        
+        | B Status Values |    |
+        |-----------------|----|        
+        | ALL             | -1 |
+        | PENDING         |  1 |
+        | REDIRECT        |  2 |
+        | SETTLED         |  3 |
+        | REVERSAL        |  4 |
+        | REFUND          |  5 |
+        | DECLINED        |  6 |
+        | PENDING         |  7 |
+        | CHARGEBACK      |  8 |
+        | VOID            |  9 |
+        
+        | G Action Values |    |
+        |-----------------|----|
+        | ALL	          | -1 |
+        | SALES           |  1 |
+        | CREDITVOID      |  2 |
+        | RECURRING_SALE  |  3 |  
+        
+        So, to return all Transactions which are successfully settled please use the following query:  
+        
+        Result ➔ E Use 1 for Success  
+        Status ➔ B Use 3 for Settled
+        
+        Your query now becomes the following  
+        {  
+          "Query": "(B=3)&&(E=1)"  
+        }  
+        You can further limit your query by specifying a Date Range  
+        
+        {  
+          "Query": "(B=3)&&(E=1)&&(C>’2024-09-01’)"  
+        }  
+        
+        If you want to limit your results to transactions which are REFUNDS then use ACTION CREDITVOID  
+        
+        Or specifically (G=2)  
+        {  
+          "Query": "(B=3)&&(E=1)&&(C>'2024-09-01')&&(G=2)"  
+        }  
+        
+        If you want to limit your results to transactions which are Processed from stored Card use ACTION RECURRING_SALE  
+        
+        Or specifically (G=3)  
+        {  
+          "Query": "(B=3)&&(E=1)&&(C>'2024-09-01')&&(G=3)"  
+        }  
+        
+        If you are looking for a particular transaction based on its unique TransID, you can do the following:  
+        {  
+          "Query": "(F='328217c4-7059-11ef-a730-a6469c956913')&&(B=3)&&(E=1) "  
+        }  
+        This will return the transaction of interest without returning the intermediate steps as noted above.  
+        
+        If you want to query by Last name on a specific Date  
+        {  
+          "Query": "(C>'2024-09-16')&&(C<'2024-09-17')&&(D='SMITH')&&(B=3)&&(E=1)"  
+        }  
+        
+        If you are looking for a specific Amount  
+        {  
+          "Query": "(L=4.44)&&(B=3)&&(E=1)"  
+        }  
+        
+        If you are looking for a specific Amount within a date range  
+        {  
+          "Query": "(L=4.44)&&(C>'2024-09-16')&&(C<'2024-09-17')&&(B=3)&&(E=1)"  
+        }  
+        
+        If you are looking for a particular Card Number ( use last 4 digits ) for settled records  
+        {  
+          "Query": "(Q='1111')&&(B=3)&&(E=1)"  
+        }  
+        
+        If you are looking for a particular Reference ID  
+        {  
+          "Query": "(M='ABC 888')&&(B=3)&&(E=1)"  
+        }  
+        
+        If you are looking for a particular saved card transaction based on the ConsentID  
+        {  
+          "Query": "(W='c30eca54-75c1-11ef-b9e6-7aa481e33aa5')&&(B=3)&&(E=1)"  
+        }
 
   # Void a Transaction (International)
 

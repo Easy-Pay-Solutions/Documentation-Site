@@ -27,6 +27,7 @@
     * [Authentication](documentation/getting-started/basics/authentication.md)
     * [API Best Practices](documentation/getting-started/basics/api-best-practices.md)
     * [API Input Validation](documentation/getting-started/basics/api-input-validation.md)
+    * [Testing Considerations](documentation/getting-started/basics/testing-considerations.md)
   * [Client Admin Portal](documentation/getting-started/client-admin-portal.md)
 * [Card Present Payments](documentation/card-present-payments.md)
 * [Store Card on File](documentation/store-card-on-file.md)

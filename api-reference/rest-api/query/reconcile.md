@@ -2,7 +2,7 @@
 description: >-
   The reconcile query is designed to be called at a specific periodic interval,
   perhaps once per day. We will return all the unique transaction IDs
-  encountered during that interval.
+  encountered during that interval.  This can be called
 ---
 
 # Reconcile

@@ -6251,7 +6251,7 @@ paths:
 
         You may specify either Credit Card or ACH transactions to be returned in the Query ( see qType parameter ) use "CARD" or "ACH". When choosing dates you can consider the StartDate to be Included in your data request however the EndDate will not. You will receive all data which runs up to but not including the end date.  For example choosing the following dates will provide data for a single day on the calendar: "2024-12-01" "2024-12-02"  
 
-        IMPORTANT: Do not call this method more than once a day. Excessive queries can cause your endpoint to be blocked. The max date range for this method is 31 days. The max records returned is 20,000. If you notice that the NumRecords returned equals 20000 then this means you have maxed out your query and you should use a smaller date range.
+        IMPORTANT: Do not call this method more than once a day. Excessive queries can cause your endpoint to be blocked. The max date range for this method is 31 days. The max records returned is 20,000. If you notice that the NumRecords returned equals 20000 then this means you have maxed out your query and you should use a smaller date range.  
   /APIcardProcREST/v1.0.0/Query/TransactionReceipt:
     post:
       summary: Retrieve a transaction receipt

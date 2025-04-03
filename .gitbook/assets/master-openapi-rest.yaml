@@ -548,7 +548,7 @@ components:
           - N: No Match - The CVV provided does not match the cardholder's information.
     Date:
       type: string
-      example: /Date(1549947600000-0500)/
+      example: 2024-12-01 11:19:01
       description: Date and time in Microsoft JSON date format (Unix timestamp and
         timezone offset).
     EINDEX:

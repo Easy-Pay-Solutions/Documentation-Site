@@ -482,7 +482,7 @@ An example of using [<mark style="color:green;">`CardSale_Void`</mark>](../../..
 public static async Task TransactionVoid(string sessKey, int txID)
 {
   using HttpClient httpClient = new HttpClient();
-  string apiUrl = "https://easypay5.com/APIcardProcREST/v1.0.0/ConsentAnnual/ProcPayment";
+  string apiUrl = "https://easypay5.com/APIcardProcREST/v1.0.0/CardSale/Void";
 
   string jsonContent = $$"""
     {"TxID":{{txID}}}

@@ -75,6 +75,8 @@
   * [Recurring Schedule](api-reference/rest-api/recurring-schedule.md)
   * [Settlement](api-reference/rest-api/settlement.md)
   * [Text to Pay](api-reference/rest-api/text-to-pay.md)
+* [REST API Alt](api-reference/rest-api-alt/README.md)
+  * [Authentication](api-reference/rest-api-alt/authentication.md)
 * [SOAP API](api-reference/soap-api/README.md)
   * [Authentication](api-reference/soap-api/authentication.md)
   * [Account](api-reference/soap-api/account.md)

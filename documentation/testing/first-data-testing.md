@@ -8,10 +8,16 @@ description: Cards for testing, response code reference, and penny codes for Fir
 
 You can use the below cards for testing with First Data.
 
-<table data-header-hidden data-full-width="false"><thead><tr><th width="134"></th><th width="146">Card brand</th><th width="468">Card Number</th></tr></thead><tbody><tr><td><img src="../../.gitbook/assets/Pin icon.png" alt="" data-size="original">  </td><td>PIN Debit</td><td>4017 7799 9111 3335</td></tr><tr><td><img src="../../.gitbook/assets/Visa icon.png" alt="" data-size="original"></td><td>Visa</td><td>4761 5300 0111 1118</td></tr><tr><td><img src="../../.gitbook/assets/master card icon.png" alt="" data-size="original"></td><td>MasterCard</td><td>5137 2211 1111 6668</td></tr><tr><td><img src="../../.gitbook/assets/Discover icon.png" alt="" data-size="original"></td><td>Discover</td><td>6011 2087 0111 7775</td></tr><tr><td><img src="../../.gitbook/assets/Amex icon.png" alt="" data-size="original"></td><td>Amex</td><td>3710 3008 9111 338</td></tr></tbody></table>
+<table data-header-hidden data-full-width="false"><thead><tr><th width="134"></th><th width="146">Card brand</th><th width="468">Card Number</th></tr></thead><tbody><tr><td><img src="../../.gitbook/assets/Visa icon.png" alt="" data-size="original"></td><td>Visa</td><td>4005 5200 0000 0939</td></tr><tr><td><img src="../../.gitbook/assets/master card icon.png" alt="" data-size="original"></td><td>MasterCard</td><td>5405 0011 1111 1116</td></tr><tr><td><img src="../../.gitbook/assets/Discover icon.png" alt="" data-size="original"></td><td>Discover</td><td>6011 2087 0111 1117</td></tr><tr><td><img src="../../.gitbook/assets/Amex icon.png" alt="" data-size="original"></td><td>Amex</td><td>3759 8765 4111 116</td></tr></tbody></table>
 
 {% hint style="info" %}
-When using the test cards for First Data, you can use the Discover card _6011 2087 0111 1117_ with the CVV of _123_ for a full CVV match, and for AVS match, you can use the address of _1307 Broad Hollow Road_ with zip code _11747_.
+To get AVS and CVV match use the following:
+
+**ADDRESS** - 1307 Broad Hollow Road
+
+**CVV** - 123
+
+**CVV FOR AMEX** - 1234
 {% endhint %}
 
 
@@ -46,7 +52,14 @@ To request an error response code, the last three digits of the transaction amou
 
 To test a partial authorization, use these cards and request values:
 
-<table><thead><tr><th width="164">Card brand</th><th width="195">Card number</th><th width="104">EXP date</th><th width="71">CVV</th><th width="94">Request</th><th>Partial approval</th></tr></thead><tbody><tr><td><h3><img src="../../.gitbook/assets/Discover icon.png" alt=""></h3></td><td>6011 2087 0333 1119</td><td>12/28</td><td>-</td><td>$1169.10</td><td>$584.55</td></tr><tr><td><h3><img src="../../.gitbook/assets/Visa icon.png" alt=""></h3></td><td>4005 5717 0222 2222</td><td>12/28</td><td> -</td><td>$612.64</td><td>$306.32</td></tr></tbody></table>
+<table><thead><tr><th width="164">Card brand</th><th width="195">Card number</th><th width="104">EXP date</th><th width="67">CVV</th><th width="94">Request</th><th>Partial approval</th></tr></thead><tbody><tr><td><h3><img src="../../.gitbook/assets/Discover icon.png" alt=""></h3></td><td>6011 2087 0333 1119</td><td>12/28</td><td>-</td><td>$1169.10</td><td>$584.55</td></tr><tr><td><h3><img src="../../.gitbook/assets/Visa icon.png" alt=""></h3></td><td>4005 5717 0222 2222</td><td>12/28</td><td> -</td><td>$612.64</td><td>$306.32</td></tr></tbody></table>
 
+## Address Verification Services <a href="#address-verification-services" id="address-verification-services"></a>
 
+To receive a FULL AVS AND CVV MATCH, please use the following address, zip code, card numbers and CVV:
+
+**ADDRESS:** 1307 Broad Hollow Road\
+**ZIP:** 11747
+
+<table data-header-hidden data-full-width="false"><thead><tr><th width="134"></th><th width="146">Card brand</th><th width="211">Card Number</th><th>CVV</th></tr></thead><tbody><tr><td><img src="../../.gitbook/assets/Visa icon.png" alt="" data-size="original"></td><td>Visa</td><td>4005 5200 0000 0939</td><td>123</td></tr><tr><td><img src="../../.gitbook/assets/master card icon.png" alt="" data-size="original"></td><td>MasterCard</td><td>5405 0011 1111 1116</td><td>123</td></tr><tr><td><img src="../../.gitbook/assets/Discover icon.png" alt="" data-size="original"></td><td>Discover</td><td>6011 2087 0111 1117</td><td>123</td></tr><tr><td><img src="../../.gitbook/assets/Amex icon.png" alt="" data-size="original"></td><td>Amex</td><td>3759 8765 4111 116</td><td>1234</td></tr></tbody></table>
 

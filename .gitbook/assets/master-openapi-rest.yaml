@@ -2,11 +2,11 @@
 openapi: 3.1.0
 servers:
   - url: https://easypay5.com
-    description: Production Server
+    description: Production server
 info:
   title: EasyPay5 API
   version: 1.0.0
-  description: API for Number's Services
+  description: API for Number's services
 x-hideTryItPanel: true
 components:
   parameters:

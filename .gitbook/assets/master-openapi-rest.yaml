@@ -6,7 +6,7 @@ servers:
 info:
   title: EasyPay5 API
   version: 1.0.0
-  description: API for Number's services
+  description: API for Number's Services
 x-hideTryItPanel: true
 components:
   parameters:

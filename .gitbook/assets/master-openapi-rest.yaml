@@ -1,4 +1,4 @@
-openapi: 3.0.3
+openapi: 3.0.1
 servers:
   - url: 'https://easypay5.com'
     description: Production server
@@ -263,14 +263,11 @@ components:
     BatchStatus:
       type: string
       oneOf:
-        - title: 'N'
-          const: 'N'
+        - title: 'N'         
           description: Not settled yet
-        - title: A
-          const: A
+        - title: A        
           description: Approved
-        - title: S
-          const: S
+        - title: S         
           description: Locked for resettlement
       example: 'N'
       description: The status of the batch.
@@ -837,7 +834,7 @@ components:
             The unique identifier for the merchant associated with the scheduled
             payment.
         OfTotalPayment:
-          type: float
+          type: number
           example: 100
           description: >-
             The $ amount that this scheduled payment contributes to the total
@@ -4062,7 +4059,7 @@ paths:
                     EINDEX:
                       $ref: '#/components/schemas/EINDEX'
                     Amounts:
-                      $ref: '#/components/schemas/Amount'
+                      $ref: '#/components/schemas/Amounts'
                     Payer:
                       type: object
                       properties:
@@ -5954,7 +5951,7 @@ paths:
                             type: integer
                             example: 12
                           Flags:
-                            $ref: '#/components/schemas/Flags'
+                            $ref: '#/components/schemas/TransactionFlags'
                           HAuthorizedAmount:
                             type: number
                             format: float
@@ -6147,11 +6144,11 @@ paths:
               type: object
               properties:
                 StartDate:
-                  type: date
+                  type: object
                   example: 2024-12-01T00:00:00.000Z
                   description: The start date
                 EndDate:
-                  type: date
+                  type: object
                   example: 2025-01-01T00:00:00.000Z
                   description: The end date
                 qType:

@@ -3140,15 +3140,12 @@ paths:
                           NumChargeAttempts:
                             type: integer
                             example: 0
-                            description: >-
-                              Total number of charge attempts made for this
+                            description: Total number of charge attempts made for this
                               consent
                           NumFailed:
                             type: integer
                             example: 0
-                            description: >-
-                              Number of failed transactions associated with this
-                              consent
+                            description: Number of failed transactions associated with this consent
                           NumFailedAttempts:
                             type: integer
                             example: 0
@@ -3156,9 +3153,7 @@ paths:
                           NumOpen:
                             type: integer
                             example: 0
-                            description: >-
-                              Number of open transactions related to this
-                              consent
+                            description: Number of open transactions related to this consent
                           NumSettled:
                             type: integer
                             example: 0
@@ -3166,9 +3161,7 @@ paths:
                           NumTx:
                             type: integer
                             example: 0
-                            description: >-
-                              Total number of transactions processed under this
-                              consent
+                            description: Total number of transactions processed under this consent
                           RemainingInConsent:
                             type: number
                             format: float

@@ -3140,9 +3140,8 @@ paths:
                           NumChargeAttempts:
                             type: integer
                             example: 0
-                            description: Total number of charge attempts made for this
-                              consent
-                          NumFailed:
+                            description: Total number of charge attempts made for this consent
+                            NumFailed:
                             type: integer
                             example: 0
                             description: Number of failed transactions associated with this consent

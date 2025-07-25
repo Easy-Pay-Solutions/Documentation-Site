@@ -8,9 +8,9 @@ The PayForm is designed to be a highly flexible and secure payment form for your
 
 Collecting a payment or saving a card on file is a two-step process: a call is made to our REST API to initialize the payment parameters, and a payment link is generated.
 
-You control of all the operational and design parameters of the PayForm:
+You control all of the operational and design parameters of the PayForm:
 
-1. From styling
+1. Form styling
 2. Field visibility and read-only parameters
 3. Initial data (cardholder names, $ amounts, etc.)
 4. User-defined data (ReferenceID, etc.)
@@ -44,9 +44,9 @@ PayForm Builder
 
 There are three operation types you can choose from:
 
-* Collecting an instant payment (credit card or ACH);
-* Saving accountholder data to be charged later (card-on-file, account on file);
-* Both saving the accountholder data and an collecting instant payment.
+* Collect an instant payment using credit cards, ACH, Google Pay or Apple Pay;
+* Save accountholder data to be charged later (card-on-file, account on file);
+* Both saving the accountholder data and collecting instant payment.
 
 This choice will also pre-determine some of the required fields and submission options for you.
 

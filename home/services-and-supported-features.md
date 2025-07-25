@@ -87,6 +87,7 @@ To learn to use the PayForm, see the [payform.md](../documentation/getting-start
 | Online payments                                       | Provides a quick and simple way to accept payments directly through a highly configurable embedded form which can be used on your website. |
 | Store card on file (after collecting cardholder data) | Allows merchants to securely store and reuse cardholder information for future transactions.                                               |
 | Surcharge payments                                    | Allows businesses to add a surcharge or an extra fee to the transaction amount.                                                            |
+| Multiple payment types                                | Payform supports a range of payment options, such as credit cards, ACH, Apple Pay, and Google Pay.                                         |
 
 
 

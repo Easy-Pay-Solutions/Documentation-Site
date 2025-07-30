@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # React Native Wrapper
 
 The React Native Mobile SDK wrapper provides a bridge between a React Native based application and the native Number mobile SDK libraries.&#x20;

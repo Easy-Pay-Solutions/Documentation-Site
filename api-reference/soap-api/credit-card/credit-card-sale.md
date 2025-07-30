@@ -1,16 +1,5 @@
 ---
 description: Methods related to credit card sale
-layout:
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Credit Card Sale

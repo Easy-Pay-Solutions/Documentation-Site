@@ -1,20 +1,6 @@
 ---
 description: How to authenticate with the Number backend
 coverY: 0
-layout:
-  cover:
-    visible: false
-    size: hero
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Authentication

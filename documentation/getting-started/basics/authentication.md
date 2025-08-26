@@ -23,6 +23,8 @@ As a result of authentication, you will obtain a session key. This key is requir
 
 ***
 
+It is required that you manage a session key throughout any 24-hour period:&#x20;
+
 You will need to reauthenticate when one of the following two errors occurs:&#x20;
 
 {% hint style="danger" %}

@@ -40,7 +40,7 @@ When using the test cards below, transactions above $100.00 will receive a respo
 
 To request an error response code, the last three digits of the transaction amount should be the response code you wish to receive. For example, a transaction amount of $101.16 will return a response with the response code of 116.
 
-<table><thead><tr><th>Test Card</th><th>Address</th><th>Zip Code</th><th data-hidden></th></tr></thead><tbody><tr><td>4005571702222222 CVV 123</td><td>1307 Broad Hollow Road</td><td>11747</td><td></td></tr><tr><td>375987654000004 CVV 1234</td><td>1307 Broad Hollow Road, </td><td>11747</td><td></td></tr><tr><td></td><td></td><td></td><td></td></tr></tbody></table>
+<table><thead><tr><th>Test Card</th><th>Address</th><th>Zip Code</th><th data-hidden></th></tr></thead><tbody><tr><td>4005571702222222 CVV 123</td><td>1307 Broad Hollow Road</td><td>11747</td><td></td></tr><tr><td>375987654000004 CVV 1234</td><td>1307 Broad Hollow Road </td><td>11747</td><td></td></tr><tr><td></td><td></td><td></td><td></td></tr></tbody></table>
 
 
 

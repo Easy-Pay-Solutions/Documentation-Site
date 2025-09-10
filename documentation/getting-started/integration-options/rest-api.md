@@ -950,6 +950,6 @@ The essentials postman collection includes sample requests to get you started wi
 * Transaction query
 * Generate a receipt
 
-&#x20;_Download the Complete Postman Collection:_
+&#x20;_Download the Essentials Postman Collection:_
 
 {% file src="../../../.gitbook/assets/SampleRESTAPI.postman_collection.zip" %}

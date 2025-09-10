@@ -928,5 +928,28 @@ http.createServer((req, res) => {
 {% endtab %}
 {% endtabs %}
 
+### Download our Postman Collections
 
+**The Complete Postman Collection**
 
+The complete postman collection includes sample requests for all of the API calls listed on this site.
+
+&#x20;_Download the Complete Postman Collection:_
+
+{% file src="../../../.gitbook/assets/RESTAPI.postman_collection.zip" %}
+
+**The Essentials Postman Collection**
+
+The essentials postman collection includes sample requests to get you started with the essential API calls. The essentials collection includes:
+
+* Authentication
+* Voiding an open sale transaction
+* Crediting a previously settled sale transaction
+* Process an annual consent payment
+* Annual consent query
+* Transaction query
+* Generate a receipt
+
+&#x20;_Download the Complete Postman Collection:_
+
+{% file src="../../../.gitbook/assets/SampleRESTAPI.postman_collection.zip" %}

@@ -112,7 +112,7 @@ The above installation package does the following:
 1. Installs USB drivers for the Verifone.
 2. Creates a custom event log with Windows named _EPmiddleware_.
 3. Installs a certificate which encrypts data between the browser and the Windows service.
-4. Installs the _EasyPay Verifone MiddleWare E2E 1041 Service_ which listens on port 8031.
+4. Installs the _EasyPay Verifone MiddleWare E2E 1042 Service_ which listens on port 8031.
 
 Your website can now issue commands to the Win Service as is demonstrated using the sample site:&#x20;
 

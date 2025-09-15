@@ -44,7 +44,7 @@ PayForm Builder
 
 This is a second option for creating PayForm configuration:
 
-{% embed url="https://easypay8.com/byopayform/webform2.aspx" %}
+{% embed url="https://easypay8.com/byopayform/" %}
 Legacy Builder
 {% endembed %}
 

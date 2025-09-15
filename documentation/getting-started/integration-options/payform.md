@@ -34,10 +34,18 @@ You control all of the operational and design parameters of the PayForm:
 
 <figure><img src="../../../.gitbook/assets/PayForm builder.png" alt=""><figcaption></figcaption></figure>
 
-It might be difficult to prepare a PayForm request by yourself at first. **To make it easy and to get started, we've prepared a tool which can generate your form for you**.
+It might be difficult to prepare a PayForm request by yourself at first. **To make it easy and to get started, we've prepared a tool which can generate your form for you**.&#x20;
+
+This is the PayForm wizard tool:
 
 {% embed url="https://easypay8.com/payformwizard/" %}
 PayForm Builder
+{% endembed %}
+
+This is a second option for creating PayForm configuration:
+
+{% embed url="https://easypay8.com/byopayform/webform2.aspx" %}
+Legacy Builder
 {% endembed %}
 
 ### Transaction types

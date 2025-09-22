@@ -37,7 +37,7 @@ You will need to reauthenticate when one of the following two errors occurs:&#x2
 
 The system will lock your IP out if you send 6 unsuccessful authentication attempts in a row. **Always abort unsuccessful authentication attempts instead of retrying and notify the user.** Only the Number support team can remove the lock from a merchant.
 
-We recommend that you obtain and use the same key until you receive one of above errors.
+We recommend that either manage a session key object for 24 hours or simply use the key until you receive one of above errors at which time you will RE-Authenticate.
 
 
 

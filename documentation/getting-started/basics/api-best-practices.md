@@ -2,7 +2,7 @@
 description: A list of best practices for working with the APIs
 ---
 
-# API Best Practices (v2)
+# API Best Practices
 
 
 
@@ -166,3 +166,6 @@ You may also choose to include simple logic that checks `ConsentID` and `Transac
 
 
 
+**Timeouts**&#x20;
+
+The mechanics of processing a credit card transaction involves many servers operating at separate geographical locations.  Normally this is all accomplished within 2 seconds. Occasional delays will be encountered somewhere within the processing train.  We submit each transaction to the Acquirer and then the card Issuer in order to get a decision. In the case where you receive a timeout from our gateway you should assume that the transaction was still successful. The best practice would be to query our system immediately after you receive a timeout or communication error to determine if the transaction was successful.  If you are processing a stored card, then you can query by ConsentID. If you are passing cardholder data, you can Query by Reference ID or other elements.  Employing this important logic will eliminate duplicate transactions and ensure your ledger agrees with ours.&#x20;

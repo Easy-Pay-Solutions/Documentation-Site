@@ -2861,215 +2861,215 @@ paths:
         - $ref: '#/components/parameters/SessKey'
         - $ref: '#/components/parameters/ContentType'
         - $ref: '#/components/parameters/Accept'
-  /APIcardProcREST/v1.0.0/ConsentAnnual/ProcPayment:
-    post:
-      summary: Process a payment using a stored card consent
-      operationId: processConsentPayment
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                ConsentID:
-                  type: integer
-                  example: 21
-                  description: ID of the consent to be used for payment
-                ProcessAmount:
-                  type: number
-                  format: float
-                  example: 5
-                  description: Amount to be processed
-            example:
-              ConsentID: 21
-              ProcessAmount: 5
-      responses:
-        '200':
-          description: Successful processing of consent payment
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  ConsentAnnual_ProcPaymentResult:
-                    type: object
-                    properties:
-                      AVSresult:
-                        $ref: '#/components/schemas/AVSr'
-                      AcquirerResponseEMV:
-                        type: string
-                        nullable: true
-                        example: null
-                      CVVresult:
-                        $ref: '#/components/schemas/CVVr'
-                      ErrCode:
-                        $ref: '#/components/schemas/ErrCode'
-                      ErrMsg:
-                        $ref: '#/components/schemas/ErrMsg'
-                      FunctionOk:
-                        $ref: '#/components/schemas/FunctionOk'
-                      IsPartialApproval:
-                        type: boolean
-                        example: false
-                      RequiresVoiceAuth:
-                        type: boolean
-                        example: false
-                      RespMsg:
-                        type: string
-                        example: 'APPROVED 098853                 '
-                      ResponseApprovedAmount:
-                        type: number
-                        format: float
-                        example: -1
-                      ResponseAuthorizedAmount:
-                        type: number
-                        format: float
-                        example: -1
-                      ResponseBalanceAmount:
-                        type: number
-                        format: float
-                        example: -1
-                      TxApproved:
-                        type: boolean
-                        example: true
-                      TxID:
-                        type: integer
-                        example: 65
-                      TxnCode:
-                        type: string
-                        example: 098853
-      parameters:
-        - $ref: '#/components/parameters/SessKey'
-        - $ref: '#/components/parameters/ContentType'
-        - $ref: '#/components/parameters/Accept'
-      description: >
-        Use this call to process a payment using a stored card. You will need
-        the ConsentID acquired from creating a consent. As usual you will
-        monitor the FunctionOK flag (to ensure no exceptions were encountered),
-        then take a look at the TxApproved Flag to determine your approval or
-        declined status.
+  # /APIcardProcREST/v1.0.0/ConsentAnnual/ProcPayment:
+  #   post:
+  #     summary: Process a payment using a stored card consent
+  #     operationId: processConsentPayment
+  #     requestBody:
+  #       required: true
+  #       content:
+  #         application/json:
+  #           schema:
+  #             type: object
+  #             properties:
+  #               ConsentID:
+  #                 type: integer
+  #                 example: 21
+  #                 description: ID of the consent to be used for payment
+  #               ProcessAmount:
+  #                 type: number
+  #                 format: float
+  #                 example: 5
+  #                 description: Amount to be processed
+  #           example:
+  #             ConsentID: 21
+  #             ProcessAmount: 5
+  #     responses:
+  #       '200':
+  #         description: Successful processing of consent payment
+  #         content:
+  #           application/json:
+  #             schema:
+  #               type: object
+  #               properties:
+  #                 ConsentAnnual_ProcPaymentResult:
+  #                   type: object
+  #                   properties:
+  #                     AVSresult:
+  #                       $ref: '#/components/schemas/AVSr'
+  #                     AcquirerResponseEMV:
+  #                       type: string
+  #                       nullable: true
+  #                       example: null
+  #                     CVVresult:
+  #                       $ref: '#/components/schemas/CVVr'
+  #                     ErrCode:
+  #                       $ref: '#/components/schemas/ErrCode'
+  #                     ErrMsg:
+  #                       $ref: '#/components/schemas/ErrMsg'
+  #                     FunctionOk:
+  #                       $ref: '#/components/schemas/FunctionOk'
+  #                     IsPartialApproval:
+  #                       type: boolean
+  #                       example: false
+  #                     RequiresVoiceAuth:
+  #                       type: boolean
+  #                       example: false
+  #                     RespMsg:
+  #                       type: string
+  #                       example: 'APPROVED 098853                 '
+  #                     ResponseApprovedAmount:
+  #                       type: number
+  #                       format: float
+  #                       example: -1
+  #                     ResponseAuthorizedAmount:
+  #                       type: number
+  #                       format: float
+  #                       example: -1
+  #                     ResponseBalanceAmount:
+  #                       type: number
+  #                       format: float
+  #                       example: -1
+  #                     TxApproved:
+  #                       type: boolean
+  #                       example: true
+  #                     TxID:
+  #                       type: integer
+  #                       example: 65
+  #                     TxnCode:
+  #                       type: string
+  #                       example: 098853
+  #     parameters:
+  #       - $ref: '#/components/parameters/SessKey'
+  #       - $ref: '#/components/parameters/ContentType'
+  #       - $ref: '#/components/parameters/Accept'
+  #     description: >
+  #       Use this call to process a payment using a stored card. You will need
+  #       the ConsentID acquired from creating a consent. As usual you will
+  #       monitor the FunctionOK flag (to ensure no exceptions were encountered),
+  #       then take a look at the TxApproved Flag to determine your approval or
+  #       declined status.
 
 
-        IMPORTANT: Duplicate Charges
+  #       IMPORTANT: Duplicate Charges
 
-        One of the most common issues we encounter is the DUPLICATE CHARGE: It
-        is up to you to make sure the user cannot cause a stored card to get
-        charged twice in a short period of time. Make sure your Button or other
-        means of requesting an authorization is Immediately disabled in order to
-        prevent the DOUBLE TAP. Merchants and Cardholders need to be protected
-        against this nuisance. For Web Forms simply disable your button during
-        processing and close out your session after you receive a response. In
-        addition, you can take note of the ConsentID and amount so that you no
-        longer process a charge for this SAME ConsentID and amount for some
-        reasonable time period.
-  /APIcardProcREST/v1.0.0/ConsentAnnual/ProcPayment_Alt:
-    post:
-      summary: Process a payment using a stored card consent with an alternate merchant
-      operationId: processConsentPaymentAltMerchant
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                ConsentID:
-                  type: integer
-                  example: 542
-                  description: ID of the consent to be used for payment
-                ProcessAmount:
-                  type: number
-                  format: float
-                  example: 1
-                  description: Amount to be processed
-                AlternateMerchID:
-                  type: integer
-                  example: 1
-                  description: ID of the alternate merchant
-            example:
-              ConsentID: 542
-              ProcessAmount: 1
-              AlternateMerchID: 1
-      responses:
-        '200':
-          description: Successful processing of consent payment with alternate merchant
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  ConsentAnnual_ProcPayment_AltResult:
-                    type: object
-                    properties:
-                      AVSresult:
-                        $ref: '#/components/schemas/AVSr'
-                      AcquirerResponseEMV:
-                        type: string
-                        nullable: true
-                        example: null
-                      CVVresult:
-                        $ref: '#/components/schemas/CVVr'
-                      ErrCode:
-                        $ref: '#/components/schemas/ErrCode'
-                      ErrMsg:
-                        $ref: '#/components/schemas/ErrMsg'
-                      FunctionOk:
-                        $ref: '#/components/schemas/FunctionOk'
-                      IsPartialApproval:
-                        type: boolean
-                        example: false
-                      RequiresVoiceAuth:
-                        type: boolean
-                        example: false
-                      RespMsg:
-                        type: string
-                        example: APPROVAL
-                      ResponseApprovedAmount:
-                        type: number
-                        format: float
-                        example: 0
-                      ResponseAuthorizedAmount:
-                        type: number
-                        format: float
-                        example: 0
-                      ResponseBalanceAmount:
-                        type: number
-                        format: float
-                        example: 0
-                      TxApproved:
-                        type: boolean
-                        example: true
-                      TxID:
-                        type: integer
-                        example: 2875
-                      TxnCode:
-                        type: string
-                        example: TAS018
-      parameters:
-        - $ref: '#/components/parameters/SessKey'
-        - $ref: '#/components/parameters/ContentType'
-        - $ref: '#/components/parameters/Accept'
-      description: >
-        Use this call to process a payment using a stored card. You will need
-        the ConsentID acquired from creating a consent. As usual you will
-        monitor the FunctionOK flag (to ensure no exceptions were encountered),
-        then take a look at the TxApproved Flag to determine your approval or
-        declined status.
+  #       One of the most common issues we encounter is the DUPLICATE CHARGE: It
+  #       is up to you to make sure the user cannot cause a stored card to get
+  #       charged twice in a short period of time. Make sure your Button or other
+  #       means of requesting an authorization is Immediately disabled in order to
+  #       prevent the DOUBLE TAP. Merchants and Cardholders need to be protected
+  #       against this nuisance. For Web Forms simply disable your button during
+  #       processing and close out your session after you receive a response. In
+  #       addition, you can take note of the ConsentID and amount so that you no
+  #       longer process a charge for this SAME ConsentID and amount for some
+  #       reasonable time period.
+  # /APIcardProcREST/v1.0.0/ConsentAnnual/ProcPayment_Alt:
+  #   post:
+  #     summary: Process a payment using a stored card consent with an alternate merchant
+  #     operationId: processConsentPaymentAltMerchant
+  #     requestBody:
+  #       required: true
+  #       content:
+  #         application/json:
+  #           schema:
+  #             type: object
+  #             properties:
+  #               ConsentID:
+  #                 type: integer
+  #                 example: 542
+  #                 description: ID of the consent to be used for payment
+  #               ProcessAmount:
+  #                 type: number
+  #                 format: float
+  #                 example: 1
+  #                 description: Amount to be processed
+  #               AlternateMerchID:
+  #                 type: integer
+  #                 example: 1
+  #                 description: ID of the alternate merchant
+  #           example:
+  #             ConsentID: 542
+  #             ProcessAmount: 1
+  #             AlternateMerchID: 1
+  #     responses:
+  #       '200':
+  #         description: Successful processing of consent payment with alternate merchant
+  #         content:
+  #           application/json:
+  #             schema:
+  #               type: object
+  #               properties:
+  #                 ConsentAnnual_ProcPayment_AltResult:
+  #                   type: object
+  #                   properties:
+  #                     AVSresult:
+  #                       $ref: '#/components/schemas/AVSr'
+  #                     AcquirerResponseEMV:
+  #                       type: string
+  #                       nullable: true
+  #                       example: null
+  #                     CVVresult:
+  #                       $ref: '#/components/schemas/CVVr'
+  #                     ErrCode:
+  #                       $ref: '#/components/schemas/ErrCode'
+  #                     ErrMsg:
+  #                       $ref: '#/components/schemas/ErrMsg'
+  #                     FunctionOk:
+  #                       $ref: '#/components/schemas/FunctionOk'
+  #                     IsPartialApproval:
+  #                       type: boolean
+  #                       example: false
+  #                     RequiresVoiceAuth:
+  #                       type: boolean
+  #                       example: false
+  #                     RespMsg:
+  #                       type: string
+  #                       example: APPROVAL
+  #                     ResponseApprovedAmount:
+  #                       type: number
+  #                       format: float
+  #                       example: 0
+  #                     ResponseAuthorizedAmount:
+  #                       type: number
+  #                       format: float
+  #                       example: 0
+  #                     ResponseBalanceAmount:
+  #                       type: number
+  #                       format: float
+  #                       example: 0
+  #                     TxApproved:
+  #                       type: boolean
+  #                       example: true
+  #                     TxID:
+  #                       type: integer
+  #                       example: 2875
+  #                     TxnCode:
+  #                       type: string
+  #                       example: TAS018
+  #     parameters:
+  #       - $ref: '#/components/parameters/SessKey'
+  #       - $ref: '#/components/parameters/ContentType'
+  #       - $ref: '#/components/parameters/Accept'
+  #     description: >
+  #       Use this call to process a payment using a stored card. You will need
+  #       the ConsentID acquired from creating a consent. As usual you will
+  #       monitor the FunctionOK flag (to ensure no exceptions were encountered),
+  #       then take a look at the TxApproved Flag to determine your approval or
+  #       declined status.
 
 
-        IMPORTANT: Duplicate Charges
+  #       IMPORTANT: Duplicate Charges
 
-        One of the most common issues we encounter is the DUPLICATE CHARGE: It
-        is up to you to make sure the user cannot cause a stored card to get
-        charged twice in a short period of time. Make sure your Button or other
-        means of requesting an authorization is Immediately disabled in order to
-        prevent the DOUBLE TAP. Merchants and Cardholders need to be protected
-        against this nuisance. For Web Forms simply disable your button during
-        processing and close out your session after you receive a response. In
-        addition, you can take note of the ConsentID and amount so that you no
-        longer process a charge for this SAME ConsentID and amount for some
-        reasonable time period.
+  #       One of the most common issues we encounter is the DUPLICATE CHARGE: It
+  #       is up to you to make sure the user cannot cause a stored card to get
+  #       charged twice in a short period of time. Make sure your Button or other
+  #       means of requesting an authorization is Immediately disabled in order to
+  #       prevent the DOUBLE TAP. Merchants and Cardholders need to be protected
+  #       against this nuisance. For Web Forms simply disable your button during
+  #       processing and close out your session after you receive a response. In
+  #       addition, you can take note of the ConsentID and amount so that you no
+  #       longer process a charge for this SAME ConsentID and amount for some
+  #       reasonable time period.
   /APIcardProcREST/v1.0.0/ConsentRecurring/Cancel:
     post:
       summary: Cancel a recurring consent
@@ -6864,3 +6864,4 @@ paths:
         For more details on the use of Text to Pay as well as some sample code
         is available on our documentation site located at
         https://easypaysoftware.com/en/text-to-pay.
+

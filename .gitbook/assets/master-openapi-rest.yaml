@@ -1741,7 +1741,7 @@ paths:
   /APIcardProcREST/v1.0.0/CardSale/CardPresent:
     post:
       summary: Process a card sale with card present
-      description: + "***For PCI compliant merchants only (AOC on file with Number required)***"
+      description: + ***For PCI compliant merchants only (AOC on file with Number required)***
       operationId: cardSaleCardPresent
       requestBody:
         required: true
@@ -1877,7 +1877,7 @@ paths:
   /APIcardProcREST/v1.0.0/CardSale/Manual:
     post:
       summary: Process a manual card sale
-      description: + "***For PCI compliant merchants only (AOC on file with Number required)***"
+      description: + ***For PCI compliant merchants only (AOC on file with Number required)***
       operationId: cardSaleManual
       requestBody:
         required: true
@@ -2013,7 +2013,7 @@ paths:
   /APIcardProcREST/v1.0.0/CardSale/WithOptions:
     post:
       summary: Process a card sale with surcharge
-      description: + "***For PCI compliant merchants only (AOC on file with Number required)***"
+      description: + ***For PCI compliant merchants only (AOC on file with Number required)***
       operationId: cardSaleSurcharge
       requestBody:
         required: true
@@ -2523,7 +2523,7 @@ paths:
   /APIcardProcREST/v1.0.0/ConsentAnnual/Create_CP:
     post:
       summary: Create an annual consent with card present
-      description: + "***For PCI compliant merchants only (AOC on file with Number required)***"
+      description: + ***For PCI compliant merchants only (AOC on file with Number required)***
       operationId: createAnnualConsentCP
       requestBody:
         required: true
@@ -2627,7 +2627,7 @@ paths:
   /APIcardProcREST/v1.0.0/ConsentAnnual/Create_MAN:
     post:
       summary: Create an annual consent with manual card entry
-      description: + "***For PCI compliant merchants only (AOC on file with Number required)***"
+      description: + ***For PCI compliant merchants only (AOC on file with Number required)***
       operationId: createAnnualConsentMAN
       requestBody:
         required: true
@@ -2835,7 +2835,7 @@ paths:
   /APIcardProcREST/v1.0.0/ConsentRecurring/Create:
     post:
       summary: Create a recurring consent with manual card entry
-      description: + "***For PCI compliant merchants only (AOC on file with Number required)***"
+      description: + ***For PCI compliant merchants only (AOC on file with Number required)***
       operationId: createRecurringConsentManual
       requestBody:
         required: true
@@ -6686,6 +6686,7 @@ paths:
 
 
         For more details on the use of Text to Pay as well as some sample code is available on our documentation site located at https://easypaysoftware.com/en/text-to-pay.
+
 
 
 

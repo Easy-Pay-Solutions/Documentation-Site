@@ -1741,7 +1741,7 @@ paths:
   /APIcardProcREST/v1.0.0/CardSale/CardPresent:
     post:
       summary: Process a card sale with card present
-      description: "***For PCI compliant merchants only (AOC on file with Number required)***"
+      description: + "***For PCI compliant merchants only (AOC on file with Number required)***"
       operationId: cardSaleCardPresent
       requestBody:
         required: true
@@ -6691,5 +6691,6 @@ paths:
 
 
         For more details on the use of Text to Pay as well as some sample code is available on our documentation site located at https://easypaysoftware.com/en/text-to-pay.
+
 
 

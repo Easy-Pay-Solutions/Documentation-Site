@@ -3811,7 +3811,7 @@ paths:
       description: >
         This API call is for merchant accounts that are specifically
         configured for international processing.
-  /Payform/Initialize:
+  /APIcardProcRest/v1.0.0/CardSale/InitForm:
     post:
       summary: Initialize PayForm
       operationId: initializePayForm
@@ -6686,6 +6686,7 @@ paths:
 
 
         For more details on the use of Text to Pay as well as some sample code is available on our documentation site located at https://easypaysoftware.com/en/text-to-pay.
+
 
 
 

@@ -15,6 +15,10 @@ The goal is to retrieve a session key which will be used in all subsequent calls
 &#xNAN;_&#x54;he credentials below are samples only. Actual credentials will be sent upon request._
 {% endtab %}
 
+{% tab title="Untitled" %}
+
+{% endtab %}
+
 {% tab title="Sample Request" %}
 ```clike
 {
@@ -25,6 +29,7 @@ The goal is to retrieve a session key which will be used in all subsequent calls
 {% endtab %}
 
 {% tab title="Sample Response" %}
+{% code overflow="wrap" %}
 ```clike
 {
   "AuthenticateResult": {
@@ -68,9 +73,11 @@ The goal is to retrieve a session key which will be used in all subsequent calls
   }
 }
 ```
+{% endcode %}
 {% endtab %}
 
 {% tab title="C# Code" %}
+{% code overflow="wrap" %}
 ```clike
 private void AuthenticateRest()
         {
@@ -158,6 +165,7 @@ private void AuthenticateRest()
 
         }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 

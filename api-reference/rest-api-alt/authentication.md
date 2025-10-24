@@ -15,10 +15,6 @@ The goal is to retrieve a session key which will be used in all subsequent calls
 &#xNAN;_&#x54;he credentials below are samples only. Actual credentials will be sent upon request._
 {% endtab %}
 
-{% tab title="Untitled" %}
-
-{% endtab %}
-
 {% tab title="Sample Request" %}
 ```clike
 {

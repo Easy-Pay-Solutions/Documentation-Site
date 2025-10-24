@@ -3205,7 +3205,8 @@ paths:
                         $ref: "#/components/schemas/FunctionOk"
                       ReceiptHtml:
                         type: string
-                        example: <!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head
+                        example: <!DOCTYPE html>
+                        <html xmlns="http://www.w3.org/1999/xhtml"><head
                           runat="server"><meta name="viewport"
                           content="width=device-width, initial-scale=1"
                           />    <title></title></head><body>    <form id="form1"
@@ -6686,6 +6687,7 @@ paths:
 
 
         For more details on the use of Text to Pay as well as some sample code is available on our documentation site located at https://easypaysoftware.com/en/text-to-pay.
+
 
 
 

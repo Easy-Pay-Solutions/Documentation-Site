@@ -3207,40 +3207,71 @@ paths:
                         type: string
                         example: >
                           <!DOCTYPE html>
-                          <html xmlns="http://www.w3.org/1999/xhtml"><head
-                          runat="server"><meta name="viewport"
-                          content="width=device-width, initial-scale=1"
-                          />    <title></title></head><body>    <form id="form1"
-                          runat="server"><div style="
-                          font-size:12px;font-family:Verdana"
-                          align="center"><h3>SALE RECEIPT</h3><br
-                          /><div><label>TEST MERCHANT TWO</label><br
-                          /><label>222 RAND ROAD</label><br /><label>LONDON, AK
-                          54321</label><br /><label>(555)
-                          555-5555</label></div><br />  <br /><table
-                          style="text-align:left"><tr><td>CARDHOLDER
-                          NAME:</td><td><label>Smith,
-                          Nancy</label></td></tr><tr><td>ACCT
-                          NUMBER:</td><td><label>x1111</label></td></tr><tr><td>EXP
-                          DATE:</td><td><label>xxxx</label></td></tr><tr><td>TX
-                          ID:</td><td><label>5eef4782-5be1-11ef-bbc1-46647bd59a7a</label></td></tr><tr><td><label>PATIENT</label>
-                          REF ID:</td><td><label>N/A</label></td></tr><tr><td>TX
-                          DATE:</td><td><label>8/16/2024 11:08:23
-                          AM</label></td></tr><tr><td>CARD
-                          TYPE:</td><td><label>VI</label></td></tr><tr><td>ENTRY
-                          METHOD:</td><td><label>Manual
-                          Entry</label></td></tr><tr><td>AMOUNT:</td><td><asp:label
-                          runat="server">£8.14
-                          GBR</asp:label></td></tr><tr><td></td><td><asp:label
-                          runat="server"></asp:label></td></tr><tr><td>TOTAL(GBP):</td><td><label>£8.14
-                          GBR</label></td></tr></table><br /><div><label>THANK
-                          YOU FOR YOUR PATRONAGE</label><br /><label>All Sales
-                          Final</label><br /><div><label>I agree to pay TEST
-                          MERCHANT TWO the above amount according to card issuer
-                          agreement.</label></div><br /><br
-                          /><div><label>SIGNATURE</label></div><br
-                          /><div>___________________________________</div><h3><b>MERCHANT
-                          COPY</b></h3></div></div></form></body></html>
+                          <html xmlns="http://www.w3.org/1999/xhtml">
+                          <head runat="server">
+                          <meta name="viewport" content="width=device-width, initial-scale=1" />
+                          <title></title>
+                          </head>
+                          <body>
+                          <form id="form1" runat="server">
+                          <div style="font-size:12px;font-family:Verdana" align="center">
+                          <h3>SALE RECEIPT</h3><br />
+                          <div><label>TEST MERCHANT TWO</label><br />
+                          <label>222 RAND ROAD</label><br />
+                          <label>LONDON, AK 54321</label><br />
+                          <label>(555) 555-5555</label></div><br /><br />
+                          <table style="text-align:left">
+                          <tr>
+                          <td>CARDHOLDER NAME:</td>
+                          <td><label>Smith, Nancy</label></td>
+                          </tr>
+                          <tr>
+                          <td>ACCT NUMBER:</td>
+                          <td><label>x1111</label></td>
+                          </tr>
+                          <tr><td>EXP DATE:</td>
+                          <td><label>xxxx</label></td>
+                          </tr>
+                          <tr>
+                          <td>TX ID:</td>
+                          <td><label>5eef4782-5be1-11ef-bbc1-46647bd59a7a</label></td>
+                          </tr>
+                          <tr>
+                          <td><label>PATIENT</label> REF ID:</td>
+                          <td><label>N/A</label></td>
+                          </tr>
+                          <tr>
+                          <td>TX DATE:</td>
+                          <td><label>8/16/2024 11:08:23 AM</label></td>
+                          </tr>
+                          <tr>
+                          <td>CARD TYPE:</td>
+                          <td><label>VI</label></td>
+                          </tr>
+                          <tr>
+                          <td>ENTRY METHOD:</td>
+                          <td><label>Manual Entry</label></td>
+                          </tr>
+                          <tr>
+                          <td>AMOUNT:</td>
+                          <td><asp:label runat="server">£8.14 GBR</asp:label></td>
+                          </tr>
+                          <tr>
+                          <td></td>
+                          <td><asp:label runat="server"></asp:label></td>
+                          </tr>
+                          <tr>
+                          <td>TOTAL(GBP):</td>
+                          <td><label>£8.14 GBR</label></td>
+                          </tr>
+                          </table><br />
+                          <div><label>THANK YOU FOR YOUR PATRONAGE</label><br />
+                          <label>All Sales Final</label><br />
+                          <div><label>I agree to pay TEST MERCHANT TWO the above amount according to card issuer agreement.</label></div>
+                          <br /><br /><div><label>SIGNATURE</label></div><br />
+                          <div>___________________________________</div>
+                          <h3><b>MERCHANT COPY</b></h3></div></div>
+                          </form></body></html>
                         description: The HTML content of the receipt
                       RespMsg:
                         type: string
@@ -6688,6 +6719,7 @@ paths:
 
 
         For more details on the use of Text to Pay as well as some sample code is available on our documentation site located at https://easypaysoftware.com/en/text-to-pay.
+
 
 
 

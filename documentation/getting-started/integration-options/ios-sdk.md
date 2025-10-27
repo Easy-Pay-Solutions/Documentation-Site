@@ -376,7 +376,7 @@ EasyPay.apiClient.chargeCreditCard(request: CardSaleManualRequest,
                                    completion: @escaping (Result<CreditCardSaleResponse, Error>) -> Void)
 ```
 
-REST API equivalent: [#apicardprocrest-v1.0.0-cardsale-manual](../../../api-reference/rest-api/card-operations/process-a-card-sale.md#apicardprocrest-v1.0.0-cardsale-manual "mention")
+REST API equivalent: [#apicardprocrest-v1.0.0-cardsale-manual](../../../api-reference/rest-api/card-operations-1/process-a-card-sale.md#apicardprocrest-v1.0.0-cardsale-manual "mention")
 
 #### **Request parameters**
 

@@ -1,2 +1,0 @@
-# Process a Card Sale
-

@@ -473,7 +473,7 @@ http.createServer((req, res) => {
 
 ### Void Transaction <a href="#void-transaction" id="void-transaction"></a>
 
-An example of using [<mark style="color:green;">`CardSale_Void`</mark>](../../../api-reference/rest-api/card-operations/#apicardprocrest-v1.0.0-cardsale-void) method.
+An example of using [<mark style="color:green;">`CardSale_Void`</mark>](../../../api-reference/rest-api/card-operations-1/#apicardprocrest-v1.0.0-cardsale-void) method.
 
 {% tabs %}
 {% tab title="C#" %}
@@ -547,7 +547,7 @@ public static async Task TransactionVoid(string sessKey, int txID)
 
 ### Credit Transaction <a href="#credit-transaction" id="credit-transaction"></a>
 
-An example of using [<mark style="color:green;">`CardSale_ApplyCredit`</mark>](../../../api-reference/rest-api/card-operations/#apicardprocrest-v1.0.0-cardsale-applycredit) method.
+An example of using [<mark style="color:green;">`CardSale_ApplyCredit`</mark>](../../../api-reference/rest-api/card-operations-1/#apicardprocrest-v1.0.0-cardsale-applycredit) method.
 
 
 

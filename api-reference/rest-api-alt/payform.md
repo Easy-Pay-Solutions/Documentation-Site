@@ -42,7 +42,7 @@ Example: `application/json`
 >
 > ***
 >
-> **WTYPE** string · enum <mark style="color:purple;">optional</mark>
+> **WTYPE** string · enum <mark style="color:orange;">required</mark>
 >
 > The widget type for the PayForm
 >

@@ -12,7 +12,7 @@ Before you continue this section, we recommend reading sections about [authentic
 
 ### Authenticate
 
-An example of using the [<mark style="color:green;">`Authenticate`</mark>](../../../api-reference/rest-api/authentication.md#apicardprocrest-v1.0.0-authenticate) method.
+An example of using the [<mark style="color:green;">`Authenticate`</mark>](../../../api-reference/rest-api/authentication-1.md#apicardprocrest-v1.0.0-authenticate) method.
 
 {% tabs %}
 {% tab title="C# Synchronous" %}
@@ -936,7 +936,7 @@ The complete postman collection includes sample requests for all of the API call
 
 &#x20;_Download the Complete Postman Collection:_
 
-{% file src="../../../.gitbook/assets/RESTAPI.postman_collection.zip" %}
+{% file src="../../../.gitbook/assets/RESTAPI.postman_collection_v2.zip" %}
 
 **The Essentials Postman Collection**
 

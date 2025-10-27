@@ -48,7 +48,9 @@
 
 * [REST API](api-reference/rest-api/README.md)
   * [Authentication](api-reference/rest-api/authentication.md)
+  * [Authentication Old](api-reference/rest-api/authentication-1.md)
   * [ACH](api-reference/rest-api/ach.md)
+  * [ACH Old](api-reference/rest-api/ach-1.md)
   * [Card Operations](api-reference/rest-api/card-operations/README.md)
     * [Process a Card Sale](api-reference/rest-api/card-operations/process-a-card-sale.md)
   * [Consent Annual](api-reference/rest-api/consent-annual/README.md)
@@ -77,8 +79,6 @@
   * [Settlement](api-reference/rest-api/settlement.md)
   * [Text to Pay](api-reference/rest-api/text-to-pay.md)
 * [REST API Alt](api-reference/rest-api-alt/README.md)
-  * [Authentication](api-reference/rest-api-alt/authentication.md)
-  * [ACH](api-reference/rest-api-alt/ach.md)
   * [Card Operations](api-reference/rest-api-alt/card-operations/README.md)
     * [Process a Card Sale](api-reference/rest-api-alt/card-operations/process-a-card-sale.md)
   * [Consent Annual](api-reference/rest-api-alt/consent-annual/README.md)

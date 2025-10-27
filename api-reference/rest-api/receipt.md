@@ -8,11 +8,11 @@ description: Generate a transaction receipt
 
 Use this call to request receipt details in HTML format for a particular TXID (Transaction ID). This method works for card on file documents as well as transaction receipts. You will need the TXID (Transaction ID) as well as a receipt type and a targeted recipient ( Customer or Merchant ).
 
-The following will provide a customer receipt for TXID 123:
+> The following will provide a customer receipt for TXID 123:
+>
+> { "REFID": 123, "ReceiptType": 1 (Sales Receipt) "Recipient": 1 (Customer Copy) }
 
-{ "REFID": 123, "ReceiptType": 1 (Sales Receipt) "Recipient": 1 (Customer Copy) }
-
-Important you must replace all Unicode characters to consume clean HTML
+_Important you must replace all Unicode characters to consume clean HTML_
 
 Example : CleanHtml = Regex.Replace(my, @"\[^\u0000-\u007F]+", string.Empty);
 

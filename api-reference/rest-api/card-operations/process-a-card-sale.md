@@ -4,7 +4,7 @@ description: Process a card sale with card present
 
 # Process a Card Sale
 
-<mark style="color:orange;">post:</mark> https://easypay5.com/APIcardProcREST/v1.0.0/Authenticate
+<mark style="color:orange;">post:</mark> https://easypay5.com/APIcardProcREST/v1.0.0/CardSale/CardPresent
 
 _<mark style="color:$danger;">**For PCI compliant merchants only (AOC on file with Number required)**</mark>_
 
@@ -493,3 +493,4 @@ Example: `%B4788250000028291^VISA TEST/GOOD^231010100733000000?;4895390000000013
 Example: `1`
 {% endtab %}
 {% endtabs %}
+

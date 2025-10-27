@@ -90,7 +90,7 @@ Example: `application/json`
 {% tab title="Body" %}
 **InitParams** object <mark style="color:purple;">optional</mark>
 
-> **MerchID** integer <mark style="color:purple;">optional</mark>
+> **MerchID** integer <mark style="color:orange;">required</mark>
 >
 > Use 1 unless your account has multiple merchant records. The merchant ID for the transaction.
 >
@@ -143,7 +143,7 @@ Example: `application/json`
 >
 > ***
 >
-> **EndPoint** string <mark style="color:purple;">optional</mark>
+> **EndPoint** string <mark style="color:orange;">required</mark>
 >
 > Points to a specific web app on our servers. Should always have the value of PayForm/PF.aspx.
 >
@@ -213,9 +213,9 @@ Example: `application/json`
 >
 > **BillingAddress** object <mark style="color:purple;">optional</mark>
 
-**WidOptions** object <mark style="color:purple;">optional</mark>
+**WidOptions** object <mark style="color:orange;">required</mark>
 
-> **eVisible** string <mark style="color:purple;">optional</mark>
+> **eVisible** string <mark style="color:orange;">required</mark>
 >
 > Hex digits controlling field visibility.
 >
@@ -223,7 +223,7 @@ Example: `application/json`
 >
 > ***
 >
-> **eReadOnly** string <mark style="color:purple;">optional</mark>
+> **eReadOnly** string <mark style="color:orange;">required</mark>
 >
 > Hex digits dictating read-only fields.
 >
@@ -231,7 +231,7 @@ Example: `application/json`
 >
 > ***
 >
-> **eStyles** string <mark style="color:purple;">optional</mark>
+> **eStyles** string <mark style="color:orange;">required</mark>
 >
 > Hex digits controlling form styling.
 >
@@ -239,7 +239,7 @@ Example: `application/json`
 >
 > ***
 >
-> **eSubmission** string <mark style="color:purple;">optional</mark>
+> **eSubmission** string <mark style="color:orange;">required</mark>
 >
 > Hex digits controlling submission options.
 >
@@ -247,7 +247,7 @@ Example: `application/json`
 >
 > ***
 >
-> **eColors** string <mark style="color:purple;">optional</mark>
+> **eColors** string <mark style="color:orange;">required</mark>
 >
 > String controlling optional color schemes.
 >

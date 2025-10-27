@@ -34,7 +34,7 @@ Example: `application/json`
 {% tab title="Body" %}
 **InitParams** object <mark style="color:purple;">optional</mark>
 
-> **MerchID** integer optional
+> **MerchID** integer <mark style="color:purple;">optional</mark>
 >
 > Use 1 unless your account has multiple merchant records. The merchant ID for the transaction.
 >

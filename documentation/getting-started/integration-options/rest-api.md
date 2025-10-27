@@ -745,7 +745,7 @@ public static async Task ConsentGeneralQuery(string sessKey, string query)
 
 ### Generate Receipt <a href="#generate-receipt" id="generate-receipt"></a>
 
-An example of using [<mark style="color:green;">`ReceiptGenerate`</mark>](../../../api-reference/rest-api/receipt.md#apicardprocrest-v1.0.0-receipt-receiptgenerate) method.
+An example of using [<mark style="color:green;">`ReceiptGenerate`</mark>](../../../api-reference/rest-api/receipt-1.md#apicardprocrest-v1.0.0-receipt-receiptgenerate) method.
 
 {% tabs %}
 {% tab title="C#" %}

@@ -7,10 +7,7 @@ description: Generate a receipt for an international transaction
 <mark style="color:orange;">post:</mark> https://easypay5.com/APIcardProcREST/v1.0.0/Intl/ReceiptGenerate
 
 REFID will be the transaction ID\
-ReceiptType will always be 23 for International\
-Merchant copy use Recipient = 1\
-Customer Copy use Recipient = 2\
-For Dual Receipt use Recipient = 3
+&#xNAN;_&#x52;eceiptType will always be 23 for International_
 
 **Consuming the Response**\
 The member named ReceiptHtml holds the receipt data\

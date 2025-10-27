@@ -1,20 +1,12 @@
+---
+description: Authenticate user and retrieve session key
+---
+
 # Authentication
 
-**URL Endpoint: https://easypay5.com/APIcardProcREST/v1.0.0/Authenticate**
-
-**Request Method: POST**
+<mark style="color:orange;">post:</mark> https://easypay5.com/APIcardProcREST/v1.0.0/Authenticate
 
 {% tabs %}
-{% tab title="Headers" %}
-In this method you will pass us TWO values:
-
-* Account Code (never changes throughout the lifetime of your account)
-* Token (expires every 2 years)
-
-The goal is to retrieve a session key which will be used in all subsequent calls (placed in the header.)\
-&#xNAN;_&#x54;he credentials below are samples only. Actual credentials will be sent upon request._
-{% endtab %}
-
 {% tab title="Sample Request" %}
 ```clike
 {
@@ -34,21 +26,14 @@ The goal is to retrieve a session key which will be used in all subsequent calls
     "FunctionOk": true,
     "MerchantList": [
       {
-        "Address": "45 spring street portland Maine 04101 ",
+        "Address": "45 spring street portland Maine 04101",
         "Descrip": "Test Merchant 1",
         "ID": 1,
         "Location": "Test Merchant 1",
         "TermID": "006"
-      },
-      {
-        "Address": "78 spring street portland Maine 04101 ",
-        "Descrip": "Lodging Merch",
-        "ID": 2,
-        "Location": "Lodging Merch",
-        "TermID": "033"
       }
     ],
-    "RespMsg": "SessKey Expires|4\/18\/2019 7:29:47 AM",
+    "RespMsg": "SessKey Expires|4/18/2019 7:29:47 AM",
     "SessKey": "B9F24903C3BA4770AE303032303541303032353437",
     "ThisUser": {
       "APILocationID": 2210,
@@ -56,10 +41,10 @@ The goal is to retrieve a session key which will be used in all subsequent calls
       "AcctID": 205,
       "Alias": "vidya_Venkatraman",
       "CreatedBy": "ADMIN : vidya Venkatraman",
-      "DateCreated": "\/Date(1552318720210-0400)\/",
-      "DateModified": "\/Date(1552318720210-0400)\/",
+      "DateCreated": "2024-12-01T11:19:01.000Z",
+      "DateModified": "2024-12-01T11:19:01.000Z",
       "Description": "EP DEV ACCT",
-      "ExpirationDate": "\/Date(1568216320210-0400)\/",
+      "ExpirationDate": "2024-12-01T11:19:01.000Z",
       "ID": 2547,
       "IsExpired": false,
       "IsLockedOut": false,
@@ -70,94 +55,31 @@ The goal is to retrieve a session key which will be used in all subsequent calls
 ```
 {% endtab %}
 
-{% tab title="C# Code" %}
-```clike
-private void AuthenticateRest()
-        {
-            // create JSON object with credentials ( using NewtonSoft Library  )   
-            var MyCredentials = JObject.FromObject(new
-           {    // insert your credentials here 
-                AcctCode = "EP8449111",
-                Token = "645E3CC4FD04472182C4161BA624C578"
-            });
+{% tab title="Header Parameters" %}
+**Content-Type** string <mark style="color:orange;">required</mark>
 
-            byte[] data = Encoding.UTF8.GetBytes(MyCredentials.ToString());
+Example: `application/json`
 
-            // create Request 
-            WebRequest request = WebRequest.Create("https://easypay5.com/APIcardProcREST/v1.0.0/Authenticate");
-            request.Method = "POST";
-            request.ContentType = "application/json";
-            request.ContentLength = data.Length;
+***
 
-            string Myheaders = request.Headers.ToString();
-            string responseContent = null;
+**Accept** string <mark style="color:orange;">required</mark>
 
-            // Using the Try block will catch communication errors 
-            try
-            {
-                using (Stream stream = request.GetRequestStream())
-                {
-                    stream.Write(data, 0, data.Length);
-                }
-                using (WebResponse response = request.GetResponse())
-                {
-                    using (Stream stream = response.GetResponseStream())
-                    {
-                        using (StreamReader sr99 = new StreamReader(stream))
-                        {
-                            responseContent = sr99.ReadToEnd();
-                        }
-                    }
-                }
-            }
-            catch (Exception ee)
-            {
-                MessageBox.Show("Problem communicating with EasyPay Service:" + ee.Message);
-                /// important to insert your Logging function here 
-                return;
-            }
+Example: `application/json`
+{% endtab %}
 
-            // Check for null Response as this would be a critical communication error as well 
-            if (responseContent == null)
-            {
-                MessageBox.Show("Critical Error , Null Response");
-                /// important to insert your Logging function here 
-                return;
-            }
+{% tab title="Body" %}
+**AcctCode** string <mark style="color:purple;">optional</mark>
 
-            /// develop Response Object 
-            var Auth = Newtonsoft.Json.JsonConvert.DeserializeObject<dynamic>(responseContent);
+Account code that never changes
 
-            bool FunctionOk = (bool)Auth.AuthenticateResult.FunctionOk;
-            bool AuthSuccess = (bool)Auth.AuthenticateResult.AuthSuccess;
-            int ErrCode = (int)Auth.AuthenticateResult.ErrCode;
-            string ErrMsg = (string)Auth.AuthenticateResult.ErrMsg;
-            string RespMsg = (string)Auth.AuthenticateResult.RespMsg;
+Example: `EP911XXXX`
 
-            //Check for unexpected Errors on cloud servers. If errors found Stop Processing and check ErrorCodes
-            if (!FunctionOk)
-            {
-                MessageBox.Show(ErrMsg + "ErrorCode:" + ErrCode);
-                /// important to insert your Logging function here 
-                return;
-            }
+***
 
-            //Check for failures uch as Invalid or Expired Credentials or Inactive Account.
-            if (!AuthSuccess)
-            {
-                MessageBox.Show(RespMsg);
-                /// important to insert your Logging function here 
-                return;
-            }
+**Token** string <mark style="color:purple;">optional</mark>
 
-            /// Arriving here means that the Authentication was successful. You will retrieve a SessionKey and 
-            /// a list of Merchant Records associated with this account. The session key will be used for all
-            /// subsequent API calls 
-            string SessKey = (string)Auth.AuthenticateResult.SessKey;
-            var MerchantList = Auth.AuthenticateResult.MerchantList;
+Token that expires every 2 years
 
-        }
-```
+Example: `2148B239CF6846BDA5D141BF4A4CFBE8`
 {% endtab %}
 {% endtabs %}
-

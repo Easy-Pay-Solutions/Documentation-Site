@@ -257,7 +257,7 @@ The JSON will look like the following:
 You may re-use this JSON to generate the same type of form for multiple different users. You may also want to dynamically configure values like the amounts from your code.
 
 {% hint style="success" %}
-To generate a PayForm, make a request to [#payform-initialize](../../api-reference/rest-api/payform.md#payform-initialize "mention").&#x20;
+To generate a PayForm, make a request to [#payform-initialize](../../api-reference/rest-api/payform-1.md#payform-initialize "mention").&#x20;
 {% endhint %}
 
 If you include a valid session key, the PayForm will be accessible under the `PaymentUrl` included in the response. You can embed it into your site or redirect the user to the page.

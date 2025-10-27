@@ -102,7 +102,7 @@ Additionally, in this part of the builder, you can set values for the hidden con
 
 ## PayForm API request
 
-Once you have the request ready, you can call our REST API to generate the PayForm and the `PaymentURL` that you can use to access it. See the reference to [#payform-initialize](../../../api-reference/rest-api/payform.md#payform-initialize "mention") endpoint.
+Once you have the request ready, you can call our REST API to generate the PayForm and the `PaymentURL` that you can use to access it. See the reference to [#payform-initialize](../../../api-reference/rest-api/payform-1.md#payform-initialize "mention") endpoint.
 
 Here's an example PayForm generated using the endpoint:
 

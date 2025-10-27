@@ -34,11 +34,11 @@ Example: `application/json`
 {% tab title="Body" %}
 **InitParams** object <mark style="color:purple;">optional</mark>
 
-> <mark style="color:$primary;">**MerchID**</mark> <mark style="color:$primary;"></mark><mark style="color:$primary;">integer</mark> <mark style="color:purple;">optional</mark>
+> **MerchID** integer optional
 >
-> <mark style="color:$primary;">Use 1 unless your account has multiple merchant records. The merchant ID for the transaction.</mark>
+> Use 1 unless your account has multiple merchant records. The merchant ID for the transaction.
 >
-> <mark style="color:$primary;">Example:</mark> <mark style="color:$primary;"></mark><mark style="color:$primary;">`1`</mark>
+> Example: `1`
 >
 > ***
 >

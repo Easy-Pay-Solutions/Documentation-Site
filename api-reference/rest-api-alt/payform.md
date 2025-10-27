@@ -11,6 +11,62 @@ Call this method to initialize a payment form used for collecting payments, savi
 For details on configurations and options, view our builder tool at [https://easypay8.com/byopayform/](https://easypay8.com/byopayform/)
 
 {% tabs %}
+{% tab title="Sample Request" %}
+```clike
+{
+  "InitParams": {
+    "MerchID": 1,
+    "WTYPE": "PF",
+    "PostURL": "https://easypay7.com/swidget/JsonGet.aspx",
+    "RedirectURL": "https://easypay8.com/CYWidget/",
+    "REF_ID": "A97689#",
+    "RPGUID": "92e1e15c-f64a-466b-8733-9b518b9f374c",
+    "EndPoint": "PayForm/PF.aspx",
+    "EINDEX": "300",
+    "Amounts": {
+      "Amount": 20,
+      "Surcharge": 0,
+      "TotalAmt": 20
+    },
+    "Payer": {
+      "Firstname": "John Doe",
+      "Lastname": "",
+      "BillingAddress": {
+        "StreetAddress": "",
+        "City": "",
+        "State": "",
+        "ZIP": "04048",
+        "Country": ""
+      },
+      "Email": "",
+      "Phone": ""
+    },
+    "WidOptions": {
+      "eVisible": "0665",
+      "eReadOnly": "0040",
+      "eStyles": "0001",
+      "eSubmission": "0A01",
+      "eColors": "#ffffff,#428bca,#007bff,#212121,#ffffff,#212121,#ffffff"
+    }
+  }
+}
+```
+{% endtab %}
+
+{% tab title="Sample Response" %}
+```clike
+{
+  "PaymentInitResult": {
+    "ErrCode": 0,
+    "ErrMsg": "",
+    "FunctionOk": true,
+    "PaymentUrl": "https://easypay5.com/swidget/?eGUID=239F97C4&CS=021&Digest=tru49A2ncbyvHoaIa6T81Q",
+    "RespMsg": "successfully returned payment Url"
+  }
+}
+```
+{% endtab %}
+
 {% tab title="Header Parameters" %}
 **SessKey** string <mark style="color:orange;">required</mark>
 
@@ -196,62 +252,6 @@ Example: `application/json`
 > String controlling optional color schemes.
 >
 > Example: `#ffffff,#428bca,#007bff,#212121,#ffffff,#212121,#ffffff`
-{% endtab %}
-
-{% tab title="Sample Request" %}
-```clike
-{
-  "InitParams": {
-    "MerchID": 1,
-    "WTYPE": "PF",
-    "PostURL": "https://easypay7.com/swidget/JsonGet.aspx",
-    "RedirectURL": "https://easypay8.com/CYWidget/",
-    "REF_ID": "A97689#",
-    "RPGUID": "92e1e15c-f64a-466b-8733-9b518b9f374c",
-    "EndPoint": "PayForm/PF.aspx",
-    "EINDEX": "300",
-    "Amounts": {
-      "Amount": 20,
-      "Surcharge": 0,
-      "TotalAmt": 20
-    },
-    "Payer": {
-      "Firstname": "John Doe",
-      "Lastname": "",
-      "BillingAddress": {
-        "StreetAddress": "",
-        "City": "",
-        "State": "",
-        "ZIP": "04048",
-        "Country": ""
-      },
-      "Email": "",
-      "Phone": ""
-    },
-    "WidOptions": {
-      "eVisible": "0665",
-      "eReadOnly": "0040",
-      "eStyles": "0001",
-      "eSubmission": "0A01",
-      "eColors": "#ffffff,#428bca,#007bff,#212121,#ffffff,#212121,#ffffff"
-    }
-  }
-}
-```
-{% endtab %}
-
-{% tab title="Sample Response" %}
-```clike
-{
-  "PaymentInitResult": {
-    "ErrCode": 0,
-    "ErrMsg": "",
-    "FunctionOk": true,
-    "PaymentUrl": "https://easypay5.com/swidget/?eGUID=239F97C4&CS=021&Digest=tru49A2ncbyvHoaIa6T81Q",
-    "RespMsg": "successfully returned payment Url"
-  }
-}
-```
 {% endtab %}
 {% endtabs %}
 

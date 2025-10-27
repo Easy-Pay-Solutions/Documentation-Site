@@ -1,6 +1,8 @@
-# PayForm
+---
+description: Initialize PayForm
+---
 
-### Initialize PayForm
+# PayForm
 
 <mark style="color:orange;">post:</mark> https://easypay5.com/APIcardProcREST/v1.0.0/CardSale/InitForm
 

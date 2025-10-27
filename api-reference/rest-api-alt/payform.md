@@ -11,7 +11,7 @@ Call this method to initialize a payment form used for collecting payments, savi
 For details on configurations and options, view our builder tool at [https://easypay8.com/byopayform/](https://easypay8.com/byopayform/)
 
 {% tabs %}
-{% tab title="Header Paramaters" %}
+{% tab title="Header Parameters" %}
 **SessKey** string <mark style="color:orange;">required</mark>
 
 A unique session key used for authentication in API calls. This key is generated upon successful authentication and must be included in all subsequent requests.

@@ -53,6 +53,7 @@
   * [ACH](api-reference/rest-api/ach.md)
   * [Card Operations](api-reference/rest-api/card-operations/README.md)
     * [Process a Card Sale](api-reference/rest-api/card-operations/process-a-card-sale.md)
+    * [Process a Refund](api-reference/rest-api/card-operations/process-a-refund.md)
   * [Card Operations Old](api-reference/rest-api/card-operations-1/README.md)
     * [Process a Card Sale Old](api-reference/rest-api/card-operations-1/process-a-card-sale.md)
   * [Consent Annual](api-reference/rest-api/consent-annual/README.md)

@@ -1,9 +1,4 @@
----
-description: Create an ACH Sale
-hidden: true
----
-
-# ACH wip
+# Create an ACH Sale
 
 <mark style="color:orange;">post:</mark> https://easypay5.com/APIcardProcREST/v1.0.0/ACH/Sale
 

@@ -1,12 +1,20 @@
-# Consent Recurring (v2)
+---
+hidden: true
+---
 
-{% swagger src="../../../.gitbook/assets/master-openapi-rest.yaml" path="/APIcardProcREST/v1.0.0/ConsentRecurring/Cancel" method="post" %}
+# Consent Recurring Old
+
+{% openapi src="../../../.gitbook/assets/master-openapi-rest.yaml" path="/APIcardProcREST/v1.0.0/ConsentRecurring/Cancel" method="post" %}
 [master-openapi-rest.yaml](../../../.gitbook/assets/master-openapi-rest.yaml)
-{% endswagger %}
+{% endopenapi %}
 
 
 
-{% swagger src="../../../.gitbook/assets/master-openapi-rest.yaml" path="/APIcardProcREST/v1.0.0/ConsentRecurring/Modify" method="post" %}
+
+
+{% openapi src="../../../.gitbook/assets/master-openapi-rest.yaml" path="/APIcardProcREST/v1.0.0/ConsentRecurring/Modify" method="post" %}
 [master-openapi-rest.yaml](../../../.gitbook/assets/master-openapi-rest.yaml)
-{% endswagger %}
+{% endopenapi %}
+
+
 

@@ -99,7 +99,7 @@
   * [Text to Pay Old](api-reference/rest-api/text-to-pay-1.md)
 * [REST API Alt](api-reference/rest-api-alt/README.md)
   * [Consent Recurring](api-reference/rest-api-alt/consent-recurring/README.md)
-    * [Create Recurring Consent](api-reference/rest-api-alt/consent-recurring/create-recurring-consent.md)
+    * [Create a recurring consent with manual card entry](api-reference/rest-api-alt/consent-recurring/create-a-recurring-consent-with-manual-card-entry.md)
   * [Query](api-reference/rest-api-alt/query/README.md)
     * [Account](api-reference/rest-api-alt/query/account.md)
     * [ACH](api-reference/rest-api-alt/query/ach.md)

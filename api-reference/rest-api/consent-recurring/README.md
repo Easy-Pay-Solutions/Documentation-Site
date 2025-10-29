@@ -1,20 +1,19 @@
----
-hidden: true
----
+# Consent Recurring
 
-# Consent Recurring Old
+{% columns %}
+{% column %}
+{% content-ref url="create-a-recurring-consent-with-manual-card-entry.md" %}
+[create-a-recurring-consent-with-manual-card-entry.md](create-a-recurring-consent-with-manual-card-entry.md)
+{% endcontent-ref %}
 
-{% openapi src="../../../.gitbook/assets/master-openapi-rest.yaml" path="/APIcardProcREST/v1.0.0/ConsentRecurring/Cancel" method="post" %}
-[master-openapi-rest.yaml](../../../.gitbook/assets/master-openapi-rest.yaml)
-{% endopenapi %}
+{% content-ref url="modify-a-recurring-consent.md" %}
+[modify-a-recurring-consent.md](modify-a-recurring-consent.md)
+{% endcontent-ref %}
+{% endcolumn %}
 
-
-
-
-
-{% openapi src="../../../.gitbook/assets/master-openapi-rest.yaml" path="/APIcardProcREST/v1.0.0/ConsentRecurring/Modify" method="post" %}
-[master-openapi-rest.yaml](../../../.gitbook/assets/master-openapi-rest.yaml)
-{% endopenapi %}
-
-
-
+{% column %}
+{% content-ref url="cancel-a-recurring-consent.md" %}
+[cancel-a-recurring-consent.md](cancel-a-recurring-consent.md)
+{% endcontent-ref %}
+{% endcolumn %}
+{% endcolumns %}

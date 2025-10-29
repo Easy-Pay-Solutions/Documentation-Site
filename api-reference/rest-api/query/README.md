@@ -1,11 +1,76 @@
----
-description: All of the queries for the REST API
-hidden: true
----
+# Query
 
-# Query Old
+{% columns %}
+{% column %}
+{% content-ref url="account-profile.md" %}
+[account-profile.md](account-profile.md)
+{% endcontent-ref %}
 
-<table data-card-size="large" data-view="cards"><thead><tr><th></th><th data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Account ></strong></td><td><a href="account.md">account.md</a></td></tr><tr><td><strong>ACH ></strong></td><td><a href="ach.md">ach.md</a></td></tr><tr><td><strong>Batch ></strong></td><td><a href="batch.md">batch.md</a></td></tr><tr><td><strong>Consent Annual ></strong></td><td><a href="consent-annual.md">consent-annual.md</a></td></tr><tr><td><strong>Consent Recurring ></strong></td><td><a href="consent-recurring.md">consent-recurring.md</a></td></tr><tr><td><strong>Consent General ></strong></td><td><a href="consent-general.md">consent-general.md</a></td></tr><tr><td><strong>Recurring Schedule ></strong></td><td><a href="recurring-schedule.md">recurring-schedule.md</a></td></tr><tr><td><strong>Receipt ></strong></td><td><a href="receipt.md">receipt.md</a></td></tr><tr><td><strong>Transaction ></strong></td><td><a href="transaction.md">transaction.md</a></td></tr><tr><td><strong>Voice ></strong></td><td><a href="voice.md">voice.md</a></td></tr><tr><td><strong>Query General ></strong></td><td><a href="query-general.md">query-general.md</a></td></tr><tr><td><strong>Reconcile ></strong></td><td><a href="reconcile.md">reconcile.md</a></td></tr></tbody></table>
+{% content-ref url="batch-logs.md" %}
+[batch-logs.md](batch-logs.md)
+{% endcontent-ref %}
+
+{% content-ref url="recurring-consents.md" %}
+[recurring-consents.md](recurring-consents.md)
+{% endcontent-ref %}
+
+{% content-ref url="consent-general-query.md" %}
+[consent-general-query.md](consent-general-query.md)
+{% endcontent-ref %}
+
+{% content-ref url="receipt-details.md" %}
+[receipt-details.md](receipt-details.md)
+{% endcontent-ref %}
+
+{% content-ref url="transaction-full-detail.md" %}
+[transaction-full-detail.md](transaction-full-detail.md)
+{% endcontent-ref %}
+
+{% content-ref url="voice.md" %}
+[voice.md](voice.md)
+{% endcontent-ref %}
+
+{% content-ref url="reconcile.md" %}
+[reconcile.md](reconcile.md)
+{% endcontent-ref %}
+
+
+
+
+
+
+
+
+{% endcolumn %}
+
+{% column %}
+{% content-ref url="ach-transactions.md" %}
+[ach-transactions.md](ach-transactions.md)
+{% endcontent-ref %}
+
+{% content-ref url="annual-consent.md" %}
+[annual-consent.md](annual-consent.md)
+{% endcontent-ref %}
+
+{% content-ref url="retrieve-full-details-of-a-recurring-consent.md" %}
+[retrieve-full-details-of-a-recurring-consent.md](retrieve-full-details-of-a-recurring-consent.md)
+{% endcontent-ref %}
+
+{% content-ref url="recurring-schedules.md" %}
+[recurring-schedules.md](recurring-schedules.md)
+{% endcontent-ref %}
+
+{% content-ref url="transaction-search.md" %}
+[transaction-search.md](transaction-search.md)
+{% endcontent-ref %}
+
+{% content-ref url="transaction-receipt.md" %}
+[transaction-receipt.md](transaction-receipt.md)
+{% endcontent-ref %}
+
+{% content-ref url="enumeration-values.md" %}
+[enumeration-values.md](enumeration-values.md)
+{% endcontent-ref %}
 
 
 
@@ -16,14 +81,5 @@ hidden: true
 
 
 
-
-
-
-
-
-
-
-
-
-
-
+{% endcolumn %}
+{% endcolumns %}

@@ -624,7 +624,7 @@ A query that returns annual consent details. Depending on the query sent, a sing
 ListAnnualConsents().listAnnualConsents(params: ListAnnualConsentsBodyParams): NetworkResource<ListAnnualConsentsResult>
 ```
 
-REST API equivalent: [#apicardprocrest-v1.0.0-query-consentannual](../../../api-reference/rest-api/query/#apicardprocrest-v1.0.0-query-consentannual "mention")
+REST API equivalent: [#apicardprocrest-v1.0.0-query-consentannual](../../../api-reference/rest-api/query-1/#apicardprocrest-v1.0.0-query-consentannual "mention")
 
 #### **Request parameters**
 

@@ -421,7 +421,7 @@ EasyPay.apiClient.listAnnualConsents(request: ConsentAnnualListingRequest,
                                      completion: @escaping (Result<ListingConsentAnnualResponse, Error>) -> Void)
 ```
 
-REST API equivalent: [#apicardprocrest-v1.0.0-query-consentannual](../../../api-reference/rest-api/query/#apicardprocrest-v1.0.0-query-consentannual "mention")
+REST API equivalent: [#apicardprocrest-v1.0.0-query-consentannual](../../../api-reference/rest-api/query-1/#apicardprocrest-v1.0.0-query-consentannual "mention")
 
 #### **Request body**
 

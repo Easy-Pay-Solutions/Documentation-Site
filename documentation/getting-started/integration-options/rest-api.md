@@ -624,7 +624,7 @@ public static async Task TransactionCredit(
 
 ### Query Transaction <a href="#query-transaction" id="query-transaction"></a>
 
-An example of using [<mark style="color:green;">`Query_Transaction`</mark>](../../../api-reference/rest-api/query/#apicardprocrest-v1.0.0-query-transaction) method.
+An example of using [<mark style="color:green;">`Query_Transaction`</mark>](../../../api-reference/rest-api/query-1/#apicardprocrest-v1.0.0-query-transaction) method.
 
 {% tabs %}
 {% tab title="C#" %}
@@ -684,7 +684,7 @@ public static async Task TransactionQuery(string sessKey, string query)
 
 ### Consent General Query <a href="#consent-general-query" id="consent-general-query"></a>
 
-An example of using [<mark style="color:green;">`Query_ConsentGeneral`</mark>](../../../api-reference/rest-api/query/#apicardprocrest-v1.0.0-query-consentgeneral) method.
+An example of using [<mark style="color:green;">`Query_ConsentGeneral`</mark>](../../../api-reference/rest-api/query-1/#apicardprocrest-v1.0.0-query-consentgeneral) method.
 
 {% tabs %}
 {% tab title="C#" %}

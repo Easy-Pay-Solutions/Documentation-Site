@@ -10,8 +10,8 @@
 [charge-a-stored-card.md](charge-a-stored-card.md)
 {% endcontent-ref %}
 
-{% content-ref url="../consent-annual/create-annual-consent.md" %}
-[create-annual-consent.md](../consent-annual/create-annual-consent.md)
+{% content-ref url="create-annual-consent.md" %}
+[create-annual-consent.md](create-annual-consent.md)
 {% endcontent-ref %}
 
 

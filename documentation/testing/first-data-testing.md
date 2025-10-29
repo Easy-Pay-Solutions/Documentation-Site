@@ -13,7 +13,9 @@ You can use the below cards for testing with First Data.
 {% hint style="info" %}
 To get AVS and CVV match use the following:
 
-**ADDRESS** - 1307 Broad Hollow Road
+**Address** - 1307 Broad Hollow Road
+
+**Zip** - 11747
 
 **CVV** - 123
 

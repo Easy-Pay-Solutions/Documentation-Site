@@ -6,7 +6,7 @@ description: Process a card sale with card present
 
 <mark style="color:orange;">post:</mark> https://easypay5.com/APIcardProcREST/v1.0.0/CardSale/CardPresent
 
-_<mark style="color:$danger;">**For PCI compliant merchants only (AOC on file with Number required)**</mark>_
+_<mark style="color:red;">**For PCI compliant merchants only (AOC on file with Number required)**</mark>_
 
 {% tabs %}
 {% tab title="Sample Request" %}

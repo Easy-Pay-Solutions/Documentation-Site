@@ -1,12 +1,20 @@
-# Settlement (v2)
+---
+hidden: true
+---
 
-{% swagger src="../../.gitbook/assets/master-openapi-rest.yaml" path="/APIcardProcREST/v1.0.0/Settlement/ExecuteBatch_Selective" method="post" %}
+# Settlement Old
+
+{% openapi src="../../.gitbook/assets/master-openapi-rest.yaml" path="/APIcardProcREST/v1.0.0/Settlement/ExecuteBatch_Selective" method="post" %}
 [master-openapi-rest.yaml](../../.gitbook/assets/master-openapi-rest.yaml)
-{% endswagger %}
+{% endopenapi %}
 
 
 
-{% swagger src="../../.gitbook/assets/master-openapi-rest.yaml" path="/APIcardProcREST/v1.0.0/Settlement/ExecuteBatch_All" method="post" %}
+
+
+{% openapi src="../../.gitbook/assets/master-openapi-rest.yaml" path="/APIcardProcREST/v1.0.0/Settlement/ExecuteBatch_All" method="post" %}
 [master-openapi-rest.yaml](../../.gitbook/assets/master-openapi-rest.yaml)
-{% endswagger %}
+{% endopenapi %}
+
+
 

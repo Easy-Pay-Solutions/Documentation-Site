@@ -277,7 +277,7 @@ http.createServer((req, res) => {
 
 ### Process Annual Consent <a href="#process-annual-consent" id="process-annual-consent"></a>
 
-An example of using [<mark style="color:green;">`ConsentAnnual_ProcPayment`</mark>](../../../api-reference/rest-api/consent-annual/#apicardprocrest-v1.0.0-consentannual-procpayment) method.
+An example of using [<mark style="color:green;">`ConsentAnnual_ProcPayment`</mark>](../../../api-reference/rest-api/consent-annual-1/#apicardprocrest-v1.0.0-consentannual-procpayment) method.
 
 {% tabs %}
 {% tab title="C#" %}

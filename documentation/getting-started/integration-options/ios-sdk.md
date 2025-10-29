@@ -482,7 +482,7 @@ EasyPay.apiClient.createAnnualConsent(request: CreateConsentAnnualRequest,
                                       completion: @escaping (Result<CreateConsentAnnualResponse, Error>) -> Void)
 ```
 
-REST API equivalent: [#apicardprocrest-v1.0.0-consentannual-create\_man](../../../api-reference/rest-api/consent-annual/create-annual-consent.md#apicardprocrest-v1.0.0-consentannual-create_man "mention")
+REST API equivalent: [#apicardprocrest-v1.0.0-consentannual-create\_man](../../../api-reference/rest-api/consent-annual-1/create-annual-consent.md#apicardprocrest-v1.0.0-consentannual-create_man "mention")
 
 #### **Request body**
 
@@ -519,7 +519,7 @@ EasyPay.apiClient.cancelAnnualConsent(request: CancelConsentAnnualRequest,
                                       completion: @escaping (Result<CancelConsentAnnualResponse, Error>) -> Void)
 ```
 
-REST API equivalent: [#apicardprocrest-v1.0.0-consentannual-cancel](../../../api-reference/rest-api/consent-annual/#apicardprocrest-v1.0.0-consentannual-cancel "mention")
+REST API equivalent: [#apicardprocrest-v1.0.0-consentannual-cancel](../../../api-reference/rest-api/consent-annual-1/#apicardprocrest-v1.0.0-consentannual-cancel "mention")
 
 #### Request parameters
 
@@ -550,7 +550,7 @@ EasyPay.apiClient.processPaymentAnnualConsent(request: ProcessPaymentAnnualReque
                                               completion: @escaping (Result<ProcessPaymentAnnualResponse, Error>) -> Void)
 ```
 
-REST API equivalent: [#apicardprocrest-v1.0.0-consentannual-procpayment](../../../api-reference/rest-api/consent-annual/#apicardprocrest-v1.0.0-consentannual-procpayment "mention")
+REST API equivalent: [#apicardprocrest-v1.0.0-consentannual-procpayment](../../../api-reference/rest-api/consent-annual-1/#apicardprocrest-v1.0.0-consentannual-procpayment "mention")
 
 #### **Request body**
 

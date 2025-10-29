@@ -1,35 +1,60 @@
-# Consent Annual
+---
+hidden: true
+---
 
-{% columns %}
-{% column width="50%" %}
-{% content-ref url="calculate-surcharging-or-convenience-fees.md" %}
-[calculate-surcharging-or-convenience-fees.md](calculate-surcharging-or-convenience-fees.md)
-{% endcontent-ref %}
+# Consent Annual Old
 
-{% content-ref url="charge-a-stored-card.md" %}
-[charge-a-stored-card.md](charge-a-stored-card.md)
-{% endcontent-ref %}
-
-{% content-ref url="create-annual-consent.md" %}
-[create-annual-consent.md](create-annual-consent.md)
-{% endcontent-ref %}
+{% openapi src="../../../.gitbook/assets/master-openapi-rest.yaml" path="/APIcardProcREST/v1.0.0/ConsentAnnual/CalcFees" method="post" %}
+[master-openapi-rest.yaml](../../../.gitbook/assets/master-openapi-rest.yaml)
+{% endopenapi %}
 
 
-{% endcolumn %}
-
-{% column width="50%" %}
-{% content-ref url="cancel-a-consent-card-on-file.md" %}
-[cancel-a-consent-card-on-file.md](cancel-a-consent-card-on-file.md)
-{% endcontent-ref %}
-
-{% content-ref url="modify-an-annual-consent.md" %}
-[modify-an-annual-consent.md](modify-an-annual-consent.md)
-{% endcontent-ref %}
-
-{% content-ref url="create-an-annual-consent-with-manual-card-entry.md" %}
-[create-an-annual-consent-with-manual-card-entry.md](create-an-annual-consent-with-manual-card-entry.md)
-{% endcontent-ref %}
 
 
-{% endcolumn %}
-{% endcolumns %}
+
+{% openapi src="../../../.gitbook/assets/master-openapi-rest.yaml" path="/APIcardProcREST/v1.0.0/ConsentAnnual/Cancel" method="post" %}
+[master-openapi-rest.yaml](../../../.gitbook/assets/master-openapi-rest.yaml)
+{% endopenapi %}
+
+
+
+
+
+{% openapi src="../../../.gitbook/assets/master-openapi-rest.yaml" path="/APIcardProcREST/v1.0.0/ConsentAnnual/ChargeStoredCard" method="post" %}
+[master-openapi-rest.yaml](../../../.gitbook/assets/master-openapi-rest.yaml)
+{% endopenapi %}
+
+
+
+
+
+{% openapi src="../../../.gitbook/assets/master-openapi-rest.yaml" path="/APIcardProcREST/v1.0.0/ConsentAnnual/Modify" method="post" %}
+[master-openapi-rest.yaml](../../../.gitbook/assets/master-openapi-rest.yaml)
+{% endopenapi %}
+
+
+
+
+
+{% openapi src="../../../.gitbook/assets/master-openapi-rest.yaml" path="/APIcardProcREST/v1.0.0/ConsentAnnual/ProcPayment" method="post" %}
+[master-openapi-rest.yaml](../../../.gitbook/assets/master-openapi-rest.yaml)
+{% endopenapi %}
+
+
+
+
+
+{% openapi src="../../../.gitbook/assets/master-openapi-rest.yaml" path="/APIcardProcREST/v1.0.0/ConsentAnnual/ProcPayment_Alt" method="post" %}
+[master-openapi-rest.yaml](../../../.gitbook/assets/master-openapi-rest.yaml)
+{% endopenapi %}
+
+
+
+
+
+{% openapi src="../../../.gitbook/assets/master-openapi-rest.yaml" path="/APIcardProcREST/v1.0.0/ConsentAnnual/Stats" method="post" %}
+[master-openapi-rest.yaml](../../../.gitbook/assets/master-openapi-rest.yaml)
+{% endopenapi %}
+
+
+

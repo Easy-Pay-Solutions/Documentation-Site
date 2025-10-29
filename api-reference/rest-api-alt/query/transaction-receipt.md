@@ -1,16 +1,17 @@
 ---
-description: Retrieve voice settings
+description: Retrieve a transaction receipt
 ---
 
-# Voice
+# Transaction Receipt
 
-<mark style="color:orange;">post:</mark> https://easypay5.com/APIcardProcREST/v1.0.0/Query/VoiceSettings
+<mark style="color:orange;">post:</mark> https://easypay5.com/APIcardProcREST/v1.0.0/Query/TransactionReceipt
 
 {% tabs %}
 {% tab title="Sample Request" %}
 ```clike
 {
-  "TxID": 2
+  "TxID": 2,
+  "ReceiptType": 2
 }
 ```
 {% endtab %}
@@ -18,20 +19,12 @@ description: Retrieve voice settings
 {% tab title="Sample Response" %}
 ```clike
 {
-  "VoiceSettingsQryResult": {
+  "TransactionReceiptQryResult": {
     "ErrCode": 0,
     "ErrMsg": "",
     "FunctionOk": true,
-    "RespMsg": "Successfully Returned Voice Settings",
-    "VoiceSettings": {
-      "AccountHolder": "Sean Wood",
-      "BankNumber": "067600",
-      "CardNumber": "wDgEk7v5w7c=is9fm7hewavmpQks4Y5qRMNDNKGGk7on",
-      "ChargeAmount": 0,
-      "ExpDate": "1028",
-      "MerchantID": "27150000350101",
-      "PhoneNumber": "1-800-944-1111"
-    }
+    "ReceiptHtml": "html",
+    "RespMsg": "Successfully Returned Transaction Receipt Markup"
   }
 }
 ```
@@ -64,6 +57,24 @@ The unique identifier for the transaction
 
 Example: `2`
 
+***
 
+**ReceiptType** integer · enum <mark style="color:purple;">optional</mark>
+
+The type of receipt
+
+* 1: Transaction
+* 2: Void
+* 3: Refund
+* 4: Annual Consent
+* 5: Recurring Consent
+* 6: Subscription
+* 7: ACH Transaction
+* 8: ACH Void
+* 9: ACH Refund
+
+Example: 2
+
+Possible values: 1,2,3,4,5,6,7,8,9
 {% endtab %}
 {% endtabs %}

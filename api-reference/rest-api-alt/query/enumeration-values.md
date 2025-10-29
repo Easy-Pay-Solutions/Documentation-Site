@@ -1,16 +1,16 @@
 ---
-description: Retrieve voice settings
+description: Methods related querying general information such as enum values
 ---
 
-# Voice
+# Enumeration values
 
-<mark style="color:orange;">post:</mark> https://easypay5.com/APIcardProcREST/v1.0.0/Query/VoiceSettings
+<mark style="color:orange;">post:</mark> https://easypay5.com/APIcardProcREST/v1.0.0/Query/Enum
 
 {% tabs %}
 {% tab title="Sample Request" %}
 ```clike
 {
-  "TxID": 2
+  "Query": "TXStatus"
 }
 ```
 {% endtab %}
@@ -18,20 +18,17 @@ description: Retrieve voice settings
 {% tab title="Sample Response" %}
 ```clike
 {
-  "VoiceSettingsQryResult": {
+  "Enum_QueryResult": {
+    "EnumItems": [
+      {
+        "EnumText": "ALL",
+        "EnumValue": -1
+      }
+    ],
     "ErrCode": 0,
     "ErrMsg": "",
     "FunctionOk": true,
-    "RespMsg": "Successfully Returned Voice Settings",
-    "VoiceSettings": {
-      "AccountHolder": "Sean Wood",
-      "BankNumber": "067600",
-      "CardNumber": "wDgEk7v5w7c=is9fm7hewavmpQks4Y5qRMNDNKGGk7on",
-      "ChargeAmount": 0,
-      "ExpDate": "1028",
-      "MerchantID": "27150000350101",
-      "PhoneNumber": "1-800-944-1111"
-    }
+    "RespMsg": "Successfully Returned Enum Records : 6"
   }
 }
 ```
@@ -58,12 +55,42 @@ Example: `application/json`
 {% endtab %}
 
 {% tab title="Body" %}
-**TxID** integer <mark style="color:purple;">optional</mark>
+**Query** string · enum <mark style="color:purple;">optional</mark>
 
-The unique identifier for the transaction
+The enumeration type to query.
 
-Example: `2`
+Example: `TXStatus`
 
+Possible values: `ACHStatus`
 
+`ACHType`
+
+`AConsentType`
+
+`BatchSettleMode`
+
+`BatchSettleStatus`
+
+`ConsentType`
+
+`IntAction`
+
+`IntlAction`
+
+`IntlResult`
+
+`IntlStatus`
+
+`Period`
+
+`ReceiptType`
+
+`Recipient`
+
+`RecurSchedStatus`
+
+`TxStatus`
+
+`TxType`
 {% endtab %}
 {% endtabs %}

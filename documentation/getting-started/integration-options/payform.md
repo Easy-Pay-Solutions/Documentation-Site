@@ -102,7 +102,7 @@ Additionally, in this part of the builder, you can set values for the hidden con
 
 ## PayForm API request
 
-Once you have the request ready, you can call our REST API to generate the PayForm and the `PaymentURL` that you can use to access it. See the reference to [#payform-initialize](../../../api-reference/rest-api/payform-1.md#payform-initialize "mention") endpoint.
+Once you have the request ready, you can call our REST API to generate the PayForm and the `PaymentURL` that you can use to access it. See the reference to [#payform-initialize](../../../api-reference/rest-api-alt/payform.md#payform-initialize "mention") endpoint.
 
 Here's an example PayForm generated using the endpoint:
 
@@ -182,7 +182,7 @@ In case you're not using encryption, we recommend **validating the information**
 {% step %}
 #### Retrieve and validate the transaction details
 
-Using the `TransactionID` returned by the PayForm, you can call our REST API to [retrieve full transaction details](../../../api-reference/rest-api/query-1/#apicardprocrest-v1.0.0-query-transaction_fulldetail) to get all of the information regarding the transaction.
+Using the `TransactionID` returned by the PayForm, you can call our REST API to [retrieve full transaction details](../../../api-reference/rest-api-alt/query/#apicardprocrest-v1.0.0-query-transaction_fulldetail) to get all of the information regarding the transaction.
 
 Then, you can confirm if a transaction with the selected ID exists, and if the `CreatedOn` date roughly matches the current time or the time the PayForm was submitted.
 {% endstep %}
@@ -190,7 +190,7 @@ Then, you can confirm if a transaction with the selected ID exists, and if the `
 {% step %}
 #### Retrieve and validate the consent details (if the card was saved)
 
-If `ConsentID` was returned alongside the `TransactionID`, you can use the REST API to [get full detail of annual consent](../../../api-reference/rest-api/query-1/#apicardprocrest-v1.0.0-query-consentannual_fulldetail) to get all of the information regarding the consent.
+If `ConsentID` was returned alongside the `TransactionID`, you can use the REST API to [get full detail of annual consent](../../../api-reference/rest-api-alt/query/#apicardprocrest-v1.0.0-query-consentannual_fulldetail) to get all of the information regarding the consent.
 
 Then, you can confirm if a consent with the selected ID exists, and if the `CreatedOn` date roughly matches the current time or the time the PayForm was submitted.
 {% endstep %}
@@ -268,9 +268,9 @@ If you are not using encryption, it will contain 2 URL parameters instead, and c
 Having the `TransactionID` (`TxID`) and `ConsentID`, you can use our REST API to:
 
 * Gather additional informating concerning the sale;
-  * For the REST API, you can use [full transaction details](../../../api-reference/rest-api/query-1/#apicardprocrest-v1.0.0-query-transaction_fulldetail), and [full consent details](../../../api-reference/rest-api/query-1/#apicardprocrest-v1.0.0-query-consentannual_fulldetail) methods;
+  * For the REST API, you can use [full transaction details](../../../api-reference/rest-api-alt/query/#apicardprocrest-v1.0.0-query-transaction_fulldetail), and [full consent details](../../../api-reference/rest-api-alt/query/#apicardprocrest-v1.0.0-query-consentannual_fulldetail) methods;
 * Provide a receipt;
-  * For the REST API, you can use [generate a transaction receipt](../../../api-reference/rest-api/receipt-1.md#apicardprocrest-v1.0.0-receipt-receiptgenerate) method;
+  * For the REST API, you can use [generate a transaction receipt](../../../api-reference/rest-api-alt/receipt.md#apicardprocrest-v1.0.0-receipt-receiptgenerate) method;
 
 
 

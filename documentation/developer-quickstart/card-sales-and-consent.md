@@ -106,13 +106,13 @@ Follow the instructions in the API reference to prepare and handle the request.
 
 You can use the following API operations:
 
-* For the REST API, use [#apicardprocrest-v1.0.0-cardsale-cardpresent](../../api-reference/rest-api/card-operations-1/process-a-card-sale.md#apicardprocrest-v1.0.0-cardsale-cardpresent "mention")
+* For the REST API, use [#apicardprocrest-v1.0.0-cardsale-cardpresent](../../api-reference/rest-api-alt/card-operations/process-a-card-sale.md#apicardprocrest-v1.0.0-cardsale-cardpresent "mention")
 
 #### API card present consent
 
 You can use the following API operations:
 
-* For the REST API, you can use [#apicardprocrest-v1.0.0-consentannual-create\_cp](../../api-reference/rest-api/consent-annual-1/create-annual-consent.md#apicardprocrest-v1.0.0-consentannual-create_cp "mention") and [#apicardprocrest-v1.0.0-consentrecurring-create](../../api-reference/rest-api/consent-recurring-1/create-recurring-consent.md#apicardprocrest-v1.0.0-consentrecurring-create "mention").
+* For the REST API, you can use [#apicardprocrest-v1.0.0-consentannual-create\_cp](../../api-reference/rest-api-alt/consent-annual/create-annual-consent.md#apicardprocrest-v1.0.0-consentannual-create_cp "mention") and [#apicardprocrest-v1.0.0-consentrecurring-create](../../api-reference/rest-api-alt/consent-recurring/create-recurring-consent.md#apicardprocrest-v1.0.0-consentrecurring-create "mention").
 
 
 
@@ -257,7 +257,7 @@ The JSON will look like the following:
 You may re-use this JSON to generate the same type of form for multiple different users. You may also want to dynamically configure values like the amounts from your code.
 
 {% hint style="success" %}
-To generate a PayForm, make a request to [#payform-initialize](../../api-reference/rest-api/payform-1.md#payform-initialize "mention").&#x20;
+To generate a PayForm, make a request to [#payform-initialize](../../api-reference/rest-api-alt/payform.md#payform-initialize "mention").&#x20;
 {% endhint %}
 
 If you include a valid session key, the PayForm will be accessible under the `PaymentUrl` included in the response. You can embed it into your site or redirect the user to the page.
@@ -332,11 +332,11 @@ After authenticating, when you collect cardholder data alongside the other payme
 
 You can use the following API operations:
 
-* For the REST API, use [#apicardprocrest-v1.0.0-cardsale-manual](../../api-reference/rest-api/card-operations-1/process-a-card-sale.md#apicardprocrest-v1.0.0-cardsale-manual "mention").
+* For the REST API, use [#apicardprocrest-v1.0.0-cardsale-manual](../../api-reference/rest-api-alt/card-operations/process-a-card-sale.md#apicardprocrest-v1.0.0-cardsale-manual "mention").
 
 #### Manual consent
 
 You can use the following API operations:
 
-* For the REST API, use [#apicardprocrest-v1.0.0-consentannual-create\_man](../../api-reference/rest-api/consent-annual-1/create-annual-consent.md#apicardprocrest-v1.0.0-consentannual-create_man "mention") for annual consent and [#apicardprocrest-v1.0.0-consentrecurring-create](../../api-reference/rest-api/consent-recurring-1/create-recurring-consent.md#apicardprocrest-v1.0.0-consentrecurring-create "mention") for recurring consent.
+* For the REST API, use [#apicardprocrest-v1.0.0-consentannual-create\_man](../../api-reference/rest-api-alt/consent-annual/create-annual-consent.md#apicardprocrest-v1.0.0-consentannual-create_man "mention") for annual consent and [#apicardprocrest-v1.0.0-consentrecurring-create](../../api-reference/rest-api-alt/consent-recurring/create-recurring-consent.md#apicardprocrest-v1.0.0-consentrecurring-create "mention") for recurring consent.
 

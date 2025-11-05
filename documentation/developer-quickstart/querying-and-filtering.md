@@ -28,7 +28,7 @@ Depending on the type of record you're querying (transaction, consent, ...), the
 
 ### Example
 
-As an example, if want to find settled ACH transactions made in January 2025 made using Verifone card readers, you can call [#apicardprocrest-v1.0.0-query-achtransaction](../../api-reference/rest-api/query-1/ach.md#apicardprocrest-v1.0.0-query-achtransaction "mention") or [#ach-transaction-query](../../api-reference/soap-api/ach.md#ach-transaction-query "mention") depending on which API you are using.
+As an example, if want to find settled ACH transactions made in January 2025 made using Verifone card readers, you can call [#apicardprocrest-v1.0.0-query-achtransaction](../../api-reference/rest-api-alt/query/ach.md#apicardprocrest-v1.0.0-query-achtransaction "mention") or [#ach-transaction-query](../../api-reference/soap-api/ach.md#ach-transaction-query "mention") depending on which API you are using.
 
 You can check the description of the `Query` string parameter or check the [querying.md](../resources/querying.md "mention") reference for [#transaction-query](../resources/querying.md#transaction-query "mention") section to find out that **variable 'B' corresponds to transaction status, variable 'C' corresponds to date created, and 'U' corresponds to the transaction origin**.
 

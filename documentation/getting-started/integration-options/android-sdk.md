@@ -548,7 +548,7 @@ This method processes a credit card when the credit card details are entered man
 ChargeCreditCard().chargeCreditCard(params: ChargeCreditCardBodyParams): NetworkResource<ChargeCreditCardResult>
 ```
 
-REST API equivalent: [#apicardprocrest-v1.0.0-cardsale-manual](../../../api-reference/rest-api/card-operations-1/process-a-card-sale.md#apicardprocrest-v1.0.0-cardsale-manual "mention")
+REST API equivalent: [#apicardprocrest-v1.0.0-cardsale-manual](../../../api-reference/rest-api-alt/card-operations/process-a-card-sale.md#apicardprocrest-v1.0.0-cardsale-manual "mention")
 
 #### **Request parameters**
 
@@ -624,7 +624,7 @@ A query that returns annual consent details. Depending on the query sent, a sing
 ListAnnualConsents().listAnnualConsents(params: ListAnnualConsentsBodyParams): NetworkResource<ListAnnualConsentsResult>
 ```
 
-REST API equivalent: [#apicardprocrest-v1.0.0-query-consentannual](../../../api-reference/rest-api/query-1/#apicardprocrest-v1.0.0-query-consentannual "mention")
+REST API equivalent: [#apicardprocrest-v1.0.0-query-consentannual](../../../api-reference/rest-api-alt/query/#apicardprocrest-v1.0.0-query-consentannual "mention")
 
 #### **Request parameters**
 
@@ -735,7 +735,7 @@ This method creates an annual consent by sending the credit card details, which 
 CreateAnnualConsent().createAnnualConsent(params: CreateAnnualConsentBodyParams): NetworkResource<CreateAnnualConsentResult>
 ```
 
-REST API equivalent: [#apicardprocrest-v1.0.0-consentannual-create\_man](../../../api-reference/rest-api/consent-annual-1/create-annual-consent.md#apicardprocrest-v1.0.0-consentannual-create_man "mention")
+REST API equivalent: [#apicardprocrest-v1.0.0-consentannual-create\_man](../../../api-reference/rest-api-alt/consent-annual/create-annual-consent.md#apicardprocrest-v1.0.0-consentannual-create_man "mention")
 
 #### **Request parameters**
 
@@ -791,7 +791,7 @@ Cancels an annual consent. Credit card data is removed from the system after the
 CancelAnnualConsent().cancelAnnualConsent(params: CancelAnnualConsentBodyParams): NetworkResource<CancelAnnualConsentResult>
 ```
 
-REST API equivalent: [#apicardprocrest-v1.0.0-consentannual-cancel](../../../api-reference/rest-api/consent-annual-1/#apicardprocrest-v1.0.0-consentannual-cancel "mention")
+REST API equivalent: [#apicardprocrest-v1.0.0-consentannual-cancel](../../../api-reference/rest-api-alt/consent-annual/#apicardprocrest-v1.0.0-consentannual-cancel "mention")
 
 #### **Request parameters**
 
@@ -834,7 +834,7 @@ This method uses the credit card stored on file to process a payment for an exis
 ProcessPaymentAnnual().processPaymentAnnual(params: ProcessPaymentAnnualBodyParams): NetworkResource<ProcessPaymentAnnualResult>
 ```
 
-REST API equivalent: [#apicardprocrest-v1.0.0-consentannual-procpayment](../../../api-reference/rest-api/consent-annual-1/#apicardprocrest-v1.0.0-consentannual-procpayment "mention")
+REST API equivalent: [#apicardprocrest-v1.0.0-consentannual-procpayment](../../../api-reference/rest-api-alt/consent-annual/#apicardprocrest-v1.0.0-consentannual-procpayment "mention")
 
 #### **Request parameters**
 

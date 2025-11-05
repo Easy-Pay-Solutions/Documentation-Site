@@ -12,7 +12,7 @@ Before you continue this section, we recommend reading sections about [authentic
 
 ### Authenticate
 
-An example of using the [<mark style="color:green;">`Authenticate`</mark>](../../../api-reference/rest-api/authentication-1.md#apicardprocrest-v1.0.0-authenticate) method.
+An example of using the [<mark style="color:green;">`Authenticate`</mark>](../../../api-reference/rest-api-alt/authentication.md#apicardprocrest-v1.0.0-authenticate) method.
 
 {% tabs %}
 {% tab title="C# Synchronous" %}
@@ -277,7 +277,7 @@ http.createServer((req, res) => {
 
 ### Process Annual Consent <a href="#process-annual-consent" id="process-annual-consent"></a>
 
-An example of using [<mark style="color:green;">`ConsentAnnual_ProcPayment`</mark>](../../../api-reference/rest-api/consent-annual-1/#apicardprocrest-v1.0.0-consentannual-procpayment) method.
+An example of using [<mark style="color:green;">`ConsentAnnual_ProcPayment`</mark>](../../../api-reference/rest-api-alt/consent-annual/#apicardprocrest-v1.0.0-consentannual-procpayment) method.
 
 {% tabs %}
 {% tab title="C#" %}
@@ -473,7 +473,7 @@ http.createServer((req, res) => {
 
 ### Void Transaction <a href="#void-transaction" id="void-transaction"></a>
 
-An example of using [<mark style="color:green;">`CardSale_Void`</mark>](../../../api-reference/rest-api/card-operations-1/#apicardprocrest-v1.0.0-cardsale-void) method.
+An example of using [<mark style="color:green;">`CardSale_Void`</mark>](../../../api-reference/rest-api-alt/card-operations/#apicardprocrest-v1.0.0-cardsale-void) method.
 
 {% tabs %}
 {% tab title="C#" %}
@@ -547,7 +547,7 @@ public static async Task TransactionVoid(string sessKey, int txID)
 
 ### Credit Transaction <a href="#credit-transaction" id="credit-transaction"></a>
 
-An example of using [<mark style="color:green;">`CardSale_ApplyCredit`</mark>](../../../api-reference/rest-api/card-operations-1/#apicardprocrest-v1.0.0-cardsale-applycredit) method.
+An example of using [<mark style="color:green;">`CardSale_ApplyCredit`</mark>](../../../api-reference/rest-api-alt/card-operations/#apicardprocrest-v1.0.0-cardsale-applycredit) method.
 
 
 
@@ -624,7 +624,7 @@ public static async Task TransactionCredit(
 
 ### Query Transaction <a href="#query-transaction" id="query-transaction"></a>
 
-An example of using [<mark style="color:green;">`Query_Transaction`</mark>](../../../api-reference/rest-api/query-1/#apicardprocrest-v1.0.0-query-transaction) method.
+An example of using [<mark style="color:green;">`Query_Transaction`</mark>](../../../api-reference/rest-api-alt/query/#apicardprocrest-v1.0.0-query-transaction) method.
 
 {% tabs %}
 {% tab title="C#" %}
@@ -684,7 +684,7 @@ public static async Task TransactionQuery(string sessKey, string query)
 
 ### Consent General Query <a href="#consent-general-query" id="consent-general-query"></a>
 
-An example of using [<mark style="color:green;">`Query_ConsentGeneral`</mark>](../../../api-reference/rest-api/query-1/#apicardprocrest-v1.0.0-query-consentgeneral) method.
+An example of using [<mark style="color:green;">`Query_ConsentGeneral`</mark>](../../../api-reference/rest-api-alt/query/#apicardprocrest-v1.0.0-query-consentgeneral) method.
 
 {% tabs %}
 {% tab title="C#" %}
@@ -745,7 +745,7 @@ public static async Task ConsentGeneralQuery(string sessKey, string query)
 
 ### Generate Receipt <a href="#generate-receipt" id="generate-receipt"></a>
 
-An example of using [<mark style="color:green;">`ReceiptGenerate`</mark>](../../../api-reference/rest-api/receipt-1.md#apicardprocrest-v1.0.0-receipt-receiptgenerate) method.
+An example of using [<mark style="color:green;">`ReceiptGenerate`</mark>](../../../api-reference/rest-api-alt/receipt.md#apicardprocrest-v1.0.0-receipt-receiptgenerate) method.
 
 {% tabs %}
 {% tab title="C#" %}

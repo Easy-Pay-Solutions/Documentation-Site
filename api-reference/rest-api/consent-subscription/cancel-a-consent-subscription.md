@@ -9,7 +9,9 @@ description: Cancel an existing subscription consent
 {% tabs %}
 {% tab title="Sample Request" %}
 ```clike
-{"ConsentID": 4162}
+{
+    "ConsentID": 4162
+}
 ```
 {% endtab %}
 

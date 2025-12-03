@@ -81,7 +81,7 @@ For any browser-based Implementation using the Verifone, you will need to instal
 
 To Begin: Download the compressed archive:
 
-#### [Verifone Middleware Installer](https://easypay1.com/deploy/MiddleWare/EPVerifoneSetup_E2E_1042.zip) 
+#### [Verifone Middleware Installer](https://easypay1.com/deploy/MiddleWare/EPVerifoneSetup_E2E_1042.zip)<br>
 
 **To install the Win service:**
 

@@ -138,17 +138,13 @@ The hidden guideline sections outline rules to follow when updating the document
 
 We recommend the following solutions when adding additional content to the developer portal:
 
-* Before adding a section, category, or subcategory in the navigation column, **make sure there is no other place on the page where the content may be assigned**.\
-
+* Before adding a section, category, or subcategory in the navigation column, **make sure there is no other place on the page where the content may be assigned**.<br>
 * If there is a need to add a link to an external site, we can divide them into three categories:
   * A link that complements the content of a specific subpage/category/subcategory: in this case, the link should be located in the content it complements.
   * A link that supplements the content of the entire page: in this case, the link should be placed as a separate item in the top navigation bar.
-  * A link to the external page that supplements the documentation overall, like AI Assistant, Number informational website etc: in this case, the link should be placed as a separate item in the top navigation bar.\
-
-* Each main category of the page should have **an icon** assigned (from the Gitbook icon collection - you can select them at "Page title")\
-
-* Each main category of the website should have **a graphic in the hero section** - to assist the user in navigating through extensive documentation.\
-
+  * A link to the external page that supplements the documentation overall, like AI Assistant, Number informational website etc: in this case, the link should be placed as a separate item in the top navigation bar.<br>
+* Each main category of the page should have **an icon** assigned (from the Gitbook icon collection - you can select them at "Page title")<br>
+* Each main category of the website should have **a graphic in the hero section** - to assist the user in navigating through extensive documentation.<br>
 * The content of the page should be added in a legible way, making it easier to find information by **visually diversifying the content** (using components available in GitBook - which are described in [Content Guidelines](component-guidelines.md))
 
 

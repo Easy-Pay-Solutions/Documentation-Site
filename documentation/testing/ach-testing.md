@@ -2,7 +2,7 @@
 description: Response code reference for ACH.
 ---
 
-# ACH Testing (v1)
+# ACH Testing
 
 ### Returned check codes <a href="#ach-return-codes" id="ach-return-codes"></a>
 
@@ -26,4 +26,4 @@ Below you'll find a reference list to every possible return code value.
 
 \
 \
-\
+<br>

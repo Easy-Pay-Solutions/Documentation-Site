@@ -1,6 +1,6 @@
 ---
-icon: book-open
 noIndex: true
+icon: book-open
 ---
 
 # Dev Portal Guidelines
@@ -9,7 +9,7 @@ noIndex: true
 
 <figure><img src="../../.gitbook/assets/Guidelines.png" alt=""><figcaption></figcaption></figure>
 
-The [Broken link](broken-reference "mention") are dedicated to the content administrator of the Developer Portal documentation. The group should be marked as a "Hidden Group" and never be published as it's not relevant for Number integrators.
+The [Broken link](/broken/pages/aJxGziIHpgOGMeU7r2ql "mention") are dedicated to the content administrator of the Developer Portal documentation. The group should be marked as a "Hidden Group" and never be published as it's not relevant for Number integrators.
 
 {% hint style="danger" %}
 **Any new content added to this website must comply with the policies described** \

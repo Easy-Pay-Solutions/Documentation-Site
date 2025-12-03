@@ -240,12 +240,10 @@ For a tables with a lot of content, we recommend using a standard content width 
 
 **Examples:**
 
-*   Bullet points table:\
-
+*   Bullet points table:<br>
 
     <table data-full-width="false"><thead><tr><th width="134"></th><th width="146">Card brand</th><th width="468">Card number</th></tr></thead><tbody><tr><td><img src="../../.gitbook/assets/Discover icon 2.png" alt="" data-size="original"></td><td><strong>PIN Debit</strong></td><td><strong>4017 7799 9111 3335</strong></td></tr><tr><td><img src="../../.gitbook/assets/1 Visa icon.png" alt="" data-size="original"></td><td><strong>Visa</strong></td><td><strong>4761 5300 0111 1118</strong></td></tr><tr><td><img src="../../.gitbook/assets/1 Master card icon.png" alt="" data-size="original"></td><td><strong>MasterCard</strong></td><td><strong>5137 2211 1111 6668</strong></td></tr></tbody></table>
-*   Content-heavy table with internal horizontal scroll:\
-
+*   Content-heavy table with internal horizontal scroll:<br>
 
     <table data-full-width="false"><thead><tr><th width="134">Card brand</th><th width="201">Card number</th><th width="104">EXP date</th><th width="82">CVV</th><th width="513">Track data</th></tr></thead><tbody><tr><td><img src="../../.gitbook/assets/1 Visa icon.png" alt="" data-size="original"></td><td>4012 8818 8881 8888</td><td>12/28</td><td>999</td><td>%B4012881888818888^TSYS PAYMENT^25121011796251900000?;4012881888818888=25121011796251900000?</td></tr><tr><td><img src="../../.gitbook/assets/1 Master card icon.png" alt="" data-size="original"></td><td>5146 3150 0000 0055</td><td>12/28</td><td>998</td><td>%B5146315000000055^TSYS PAYMENT^251210100000?;5146315000000055=251210100000?</td></tr><tr><td><img src="../../.gitbook/assets/1 Amex icon.png" alt="" data-size="original"></td><td>3714 4963 5392 376</td><td>12/28</td><td>9997</td><td>%B371449635392376^TSYS PAYMENT^251210100000?;371449635392376=251210100000?</td></tr></tbody></table>
 

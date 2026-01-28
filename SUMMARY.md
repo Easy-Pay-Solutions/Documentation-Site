@@ -57,6 +57,7 @@
   * [Card Operations](api-reference/rest-api/card-operations/README.md)
     * [Process a Card Sale](api-reference/rest-api/card-operations/process-a-card-sale.md)
     * [Process a Refund](api-reference/rest-api/card-operations/process-a-refund.md)
+    * [Void a Transaction](api-reference/rest-api/card-operations/void-a-transaction.md)
   * [Consent Annual](api-reference/rest-api/consent-annual/README.md)
     * [Calculate surcharging or convenience fees](api-reference/rest-api/consent-annual/calculate-surcharging-or-convenience-fees.md)
     * [Cancel a consent (Card On File)](api-reference/rest-api/consent-annual/cancel-a-consent-card-on-file.md)

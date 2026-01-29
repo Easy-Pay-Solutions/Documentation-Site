@@ -6,7 +6,7 @@ description: Initialize PayForm
 
 <mark style="color:orange;">post:</mark> https://easypay5.com/APIcardProcREST/v1.0.0/CardSale/InitForm
 
-Call this method to initialize a payment form used for collecting payments, saving card-on-file data, or both. The call returns the URL used to open the form.
+Call this method to initialize a payment form used for collecting payments, saving card-on-file data, or both. This call can be used to initiate both Credit card payments and ACH. The call returns the URL used to open the form.
 
 For details on configurations and options, view our builder tool at [https://easypay8.com/byopayform/](https://easypay8.com/byopayform/)
 

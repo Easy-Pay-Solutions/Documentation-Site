@@ -51,7 +51,7 @@ The method name is **SMSPayment**: api\_SMSPaymentResponse SMSPayment(string Ses
     "TXID": 0,
     "WType": "SW",
     "RedirectURL": "https://easypay7.com/PostingApp",
-    "WidgetURL": "https://easypay5.com/stdwidget",
+    "WidgetURL": "https://easypay5.com/sw",
     "ExpiresOn": "2025-10-05T00:00:00.000Z",
     "SingleUse": 0,
     "OptParam": "VISIBLE|1EE7|READONLY|0000|STYLES|0000|OPTIONS|0601|COLORS|#ffffff,#428bca,#007bff,#212121,#ffffff,#212121,#ffffff",

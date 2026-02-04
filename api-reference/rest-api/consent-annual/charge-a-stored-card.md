@@ -4,27 +4,31 @@
 
 This Method allows the user to charge a stored Card.
 
-ConsentID: Please supply the ID of the Consent ( or stored card data )
+**ConsentID:** Please supply the ID of the Consent ( or stored card data )
 
-AlternateMerchID: Here you can use ZERO if you plan to charge the same merchant record which was specified when saving the Card Info. You can use a positive integer if you plan to charge a merchant record which differs from the one originally used.
+**AlternateMerchID:** Here you can use ZERO if you plan to charge the same merchant record which was specified when saving the Card Info. You can use a positive integer if you plan to charge a merchant record which differs from the one originally used.
 
-purchDetails: If you want to attach new reference data to the transaction you may do so using the following fields:
+**purchDetails:** If you want to attach new reference data to the transaction you may do so using the following fields:
 
-ServiceDescrip : description of the transaction ClientRefID : your user defined reference ID RPGUID : another user defined reference ID If you choose NOT to supply these fields ( use empty string ) the system will pull this data from the original stored card data.
+* ServiceDescrip : description of the transaction
+* ClientRefID : your user defined reference ID
+* RPGUID : another user defined reference ID&#x20;
 
-Amounts: Here you will supply the amount of the transaction. You may supply FEES but only if these have been properly configured for each Merchant record.
+If you choose NOT to supply these fields ( use empty string ) the system will pull this data from the original stored card data.
+
+**Amounts:** Here you will supply the amount of the transaction. You may supply FEES but only if these have been properly configured for each Merchant record.
 
 If you don't have FEES configured simply supply the BaseAmt and TotalAmt.
 
-If you do Have Fees Configured you can call the method named: Calculate Annual Consent Fees prior to calling this method.
+If you do Have Fees Configured you can call the method named: _Calculate Annual Consent Fees_ prior to calling this method.
 
 You can specify fee values up to and including those determined using the above method.
 
 If you specify values greater than those calculated above, then your value will be clamped.
 
-_**IMPORTANT : Always check your response to determine the fees which are APPROVED as this may differ from what was REQUESTED.**_
+_<mark style="color:$danger;">IMPORTANT : Always check your response to determine the fees which are APPROVED as this may differ from what was REQUESTED.</mark>_
 
-User: Here you can assign a user to the sale so that we record the person which is initiating the sale within the integrator software.
+**User:** Here you can assign a user to the sale so that we record the person which is initiating the sale within the integrator software.
 
 {% tabs %}
 {% tab title="Sample Request" %}

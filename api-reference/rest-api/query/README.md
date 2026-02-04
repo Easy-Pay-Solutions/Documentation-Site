@@ -48,8 +48,8 @@
 [ach-transactions.md](ach-transactions.md)
 {% endcontent-ref %}
 
-{% content-ref url="annual-consent.md" %}
-[annual-consent.md](annual-consent.md)
+{% content-ref url="consent-annual-query.md" %}
+[consent-annual-query.md](consent-annual-query.md)
 {% endcontent-ref %}
 
 {% content-ref url="retrieve-full-details-of-a-recurring-consent.md" %}

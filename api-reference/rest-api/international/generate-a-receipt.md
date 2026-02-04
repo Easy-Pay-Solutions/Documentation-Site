@@ -2,7 +2,7 @@
 description: Generate a receipt for an international transaction
 ---
 
-# International
+# Generate a Receipt
 
 <mark style="color:orange;">post:</mark> https://easypay5.com/APIcardProcREST/v1.0.0/Intl/ReceiptGenerate
 

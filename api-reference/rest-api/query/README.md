@@ -52,8 +52,8 @@
 [consent-annual-query.md](consent-annual-query.md)
 {% endcontent-ref %}
 
-{% content-ref url="retrieve-full-details-of-a-recurring-consent.md" %}
-[retrieve-full-details-of-a-recurring-consent.md](retrieve-full-details-of-a-recurring-consent.md)
+{% content-ref url="recurring-consent-full-detail.md" %}
+[recurring-consent-full-detail.md](recurring-consent-full-detail.md)
 {% endcontent-ref %}
 
 {% content-ref url="recurring-schedules.md" %}

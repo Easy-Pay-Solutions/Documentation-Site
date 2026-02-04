@@ -17,7 +17,7 @@ For details on configurations and options, view our builder tool at [https://eas
   "InitParams": {
     "MerchID": 1,
     "WTYPE": "PF",
-    "PostURL": "https://easypay7.com/swidget/JsonGet.aspx",
+    "PostURL": "https://easypay1.com/swidget/JsonGet.aspx",
     "RedirectURL": "https://easypay8.com/CYWidget/",
     "REF_ID": "A97689#",
     "RPGUID": "92e1e15c-f64a-466b-8733-9b518b9f374c",

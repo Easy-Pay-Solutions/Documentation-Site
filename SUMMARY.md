@@ -65,6 +65,7 @@
     * [Modify an annual consent](api-reference/rest-api/consent-annual/modify-an-annual-consent.md)
     * [Create Annual Consent](api-reference/rest-api/consent-annual/create-annual-consent.md)
     * [Create an annual consent with manual card entry](api-reference/rest-api/consent-annual/create-an-annual-consent-with-manual-card-entry.md)
+    * [Annual Consent Stats](api-reference/rest-api/consent-annual/annual-consent-stats.md)
   * [Consent Recurring](api-reference/rest-api/consent-recurring/README.md)
     * [Create a recurring consent with manual card entry](api-reference/rest-api/consent-recurring/create-a-recurring-consent-with-manual-card-entry.md)
     * [Cancel a recurring consent](api-reference/rest-api/consent-recurring/cancel-a-recurring-consent.md)

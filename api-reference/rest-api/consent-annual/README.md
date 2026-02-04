@@ -14,6 +14,10 @@
 [create-annual-consent.md](create-annual-consent.md)
 {% endcontent-ref %}
 
+{% content-ref url="annual-consent-stats.md" %}
+[annual-consent-stats.md](annual-consent-stats.md)
+{% endcontent-ref %}
+
 
 {% endcolumn %}
 

@@ -115,7 +115,7 @@ Example: `application/json`
 >
 > The URL where real-time values will be posted after payment completion.
 >
-> Example: `https://easypay7.com/swidget/JsonGet.aspx`
+> Example: `https://easypay1.com/swidget/JsonGet.aspx`
 >
 > ***
 >

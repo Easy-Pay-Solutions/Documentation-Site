@@ -122,8 +122,6 @@ EasyPay stores a copy of the transactional data on its servers. For internationa
 | 2   | 09B370DD | SALE   | REDIRECT | 3DS      |
 | 3   | 09B370DD | SALE   | SUCCESS  | SETTLED  |
 
-<br>
-
 The above table shows three records we record as we process a single transaction on the International Processing Servers. As you request transaction information you are most likely only interested in the last entry which shows SUCCESS and SETTLED as the other two are simply intermediate steps.
 
 The following shows query enum values for RESULT and STATUS and ACTION

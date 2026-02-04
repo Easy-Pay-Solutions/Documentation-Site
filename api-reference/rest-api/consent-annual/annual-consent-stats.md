@@ -1,6 +1,6 @@
 # Annual Consent Stats
 
-<mark style="color:orange;">post:</mark> https://easypay5.com/APIcardProcREST/v1.0.0/ConsentAnnual/Create\_MAN
+<mark style="color:orange;">post:</mark> https://easypay5.com/APIcardProcREST/v1.0.0/ConsentAnnual/Stats
 
 {% tabs %}
 {% tab title="Sample Request" %}

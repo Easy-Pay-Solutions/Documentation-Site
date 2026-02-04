@@ -113,6 +113,7 @@ Each Letter represents a variable and the following chart shows each meaning.
 | Q | CardNum Last 4 |
 | N | RPGUID         |
 | W | ConsentID      |
+|   |                |
 
 EasyPay stores a copy of the transactional data on its servers. For international transactions data is stored in such a way that we may have multiple records in our system for a single credit card authorization or OrderID. Two Fields of Interest are **Result and Status**.
 

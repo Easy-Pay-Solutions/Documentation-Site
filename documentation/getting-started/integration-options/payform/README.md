@@ -18,7 +18,7 @@ You control all of the operational and design parameters of the PayForm:
 
 **You can then present the PayForm in one of two ways:**&#x20;
 
-<table data-header-hidden><thead><tr><th width="114"></th><th></th></tr></thead><tbody><tr><td><img src="../../../.gitbook/assets/Link_S.png" alt="" data-size="original"></td><td>As an iFrame on your website</td></tr><tr><td><img src="../../../.gitbook/assets/iFrame_S.png" alt="" data-size="original"></td><td>As a direct link to the PayForm</td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th width="114"></th><th></th></tr></thead><tbody><tr><td><img src="../../../../.gitbook/assets/Link_S.png" alt="" data-size="original"></td><td>As an iFrame on your website</td></tr><tr><td><img src="../../../../.gitbook/assets/iFrame_S.png" alt="" data-size="original"></td><td>As a direct link to the PayForm</td></tr></tbody></table>
 
 {% hint style="info" %}
 **To generate a PayForm**, you can make a call to our REST API using a request body generated on the PayForm builder website.
@@ -32,7 +32,7 @@ You control all of the operational and design parameters of the PayForm:
 
 ## PayForm builder
 
-<figure><img src="../../../.gitbook/assets/PayForm builder.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/PayForm builder.png" alt=""><figcaption></figcaption></figure>
 
 It might be difficult to prepare a PayForm request by yourself at first. **To make it easy and to get started, we've prepared a tool which can generate your form for you**.&#x20;
 
@@ -102,11 +102,11 @@ Additionally, in this part of the builder, you can set values for the hidden con
 
 ## PayForm API request
 
-Once you have the request ready, you can call our REST API to generate the PayForm and the `PaymentURL` that you can use to access it. See the reference to [#payform-initialize](../../../api-reference/rest-api-alt/payform.md#payform-initialize "mention") endpoint.
+Once you have the request ready, you can call our REST API to generate the PayForm and the `PaymentURL` that you can use to access it. See the reference to [#payform-initialize](../../../../api-reference/rest-api-alt/payform.md#payform-initialize "mention") endpoint.
 
 Here's an example PayForm generated using the endpoint:
 
-<figure><img src="../../../.gitbook/assets/payform-googleapplepay2.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/payform-googleapplepay2.png" alt=""><figcaption></figcaption></figure>
 
 
 
@@ -182,7 +182,7 @@ In case you're not using encryption, we recommend **validating the information**
 {% step %}
 #### Retrieve and validate the transaction details
 
-Using the `TransactionID` returned by the PayForm, you can call our REST API to [retrieve full transaction details](../../../api-reference/rest-api-alt/query/#apicardprocrest-v1.0.0-query-transaction_fulldetail) to get all of the information regarding the transaction.
+Using the `TransactionID` returned by the PayForm, you can call our REST API to [retrieve full transaction details](../../../../api-reference/rest-api-alt/query/#apicardprocrest-v1.0.0-query-transaction_fulldetail) to get all of the information regarding the transaction.
 
 Then, you can confirm if a transaction with the selected ID exists, and if the `CreatedOn` date roughly matches the current time or the time the PayForm was submitted.
 {% endstep %}
@@ -190,7 +190,7 @@ Then, you can confirm if a transaction with the selected ID exists, and if the `
 {% step %}
 #### Retrieve and validate the consent details (if the card was saved)
 
-If `ConsentID` was returned alongside the `TransactionID`, you can use the REST API to [get full detail of annual consent](../../../api-reference/rest-api-alt/query/#apicardprocrest-v1.0.0-query-consentannual_fulldetail) to get all of the information regarding the consent.
+If `ConsentID` was returned alongside the `TransactionID`, you can use the REST API to [get full detail of annual consent](../../../../api-reference/rest-api-alt/query/#apicardprocrest-v1.0.0-query-consentannual_fulldetail) to get all of the information regarding the consent.
 
 Then, you can confirm if a consent with the selected ID exists, and if the `CreatedOn` date roughly matches the current time or the time the PayForm was submitted.
 {% endstep %}
@@ -268,9 +268,9 @@ If you are not using encryption, it will contain 2 URL parameters instead, and c
 Having the `TransactionID` (`TxID`) and `ConsentID`, you can use our REST API to:
 
 * Gather additional informating concerning the sale;
-  * For the REST API, you can use [full transaction details](../../../api-reference/rest-api-alt/query/#apicardprocrest-v1.0.0-query-transaction_fulldetail), and [full consent details](../../../api-reference/rest-api-alt/query/#apicardprocrest-v1.0.0-query-consentannual_fulldetail) methods;
+  * For the REST API, you can use [full transaction details](../../../../api-reference/rest-api-alt/query/#apicardprocrest-v1.0.0-query-transaction_fulldetail), and [full consent details](../../../../api-reference/rest-api-alt/query/#apicardprocrest-v1.0.0-query-consentannual_fulldetail) methods;
 * Provide a receipt;
-  * For the REST API, you can use [generate a transaction receipt](../../../api-reference/rest-api-alt/receipt.md#apicardprocrest-v1.0.0-receipt-receiptgenerate) method;
+  * For the REST API, you can use [generate a transaction receipt](../../../../api-reference/rest-api-alt/receipt.md#apicardprocrest-v1.0.0-receipt-receiptgenerate) method;
 
 
 

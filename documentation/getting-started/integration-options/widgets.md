@@ -6,7 +6,7 @@ noIndex: true
 
 # Widgets
 
-Widgets are our legacy option to collecting cardholder data and payments. If you are just getting started with Number, we recommend using the [payform.md](payform.md "mention") instead.
+Widgets are our legacy option to collecting cardholder data and payments. If you are just getting started with Number, we recommend using the [payform](payform/ "mention") instead.
 
 A Number widget is a pre-made web form which can be used to collect cardholder data. They can be used to make instant payments and collect consent.
 
@@ -64,7 +64,7 @@ Loading an IFrame with Number's widget or PayForm gives you 100% isolation from 
 Do note that **our widget requires a session cookie**. Extra steps are required to utilize the IFrame approach. For example, Safari will block cookies from an IFrame if the parent page does not share the same domain. To resolve this, a subdomain can be created and served on our web farm.
 
 {% hint style="info" %}
-[PayForms](payform.md) do not utilize session cookies, there are no issues loading them as IFrames. This makes them preferable to using the widget.
+[PayForms](payform/) do not utilize session cookies, there are no issues loading them as IFrames. This makes them preferable to using the widget.
 {% endhint %}
 
 
@@ -102,7 +102,7 @@ If you want to use advanced options such as dynamically pre-populating form data
 
 Use our widget builder tool to select various settings, options, and styles. The widget manifest and encrypted URL will be generated for you.
 
-Most of the options should be easy to understand or described in the footer of the tool. If you have any questions, please refer to the [#payform-builder](payform.md#payform-builder "mention") guide or [contact Number](../../../help/customer-support/).
+Most of the options should be easy to understand or described in the footer of the tool. If you have any questions, please refer to the [#payform-builder](payform/#payform-builder "mention") guide or [contact Number](../../../help/customer-support/).
 
 
 

@@ -161,10 +161,10 @@ If you have your own PCI level one compliance program, you may write your own cu
 The PayForm is designed to be a highly flexible and secure payment form for your users. To start collecting payments and consent with the PayForm, you'll want to use our builder tool for configuration, then our REST API to generate a payment URL.&#x20;
 
 {% hint style="info" %}
-Learn more about how to configure and use the PayForm in the [payform.md](../getting-started/integration-options/payform.md "mention") guide.
+Learn more about how to configure and use the PayForm in the [payform](../getting-started/integration-options/payform/ "mention") guide.
 {% endhint %}
 
-You can read about configuration specifics in the [#payform-builder](../getting-started/integration-options/payform.md#payform-builder "mention") section of our full PayForm guide. For the purpose of this tutorial, you can follow the example below; we'll briefly explain each configuration step.&#x20;
+You can read about configuration specifics in the [#payform-builder](../getting-started/integration-options/payform/#payform-builder "mention") section of our full PayForm guide. For the purpose of this tutorial, you can follow the example below; we'll briefly explain each configuration step.&#x20;
 
 #### PayForm manual card sale
 
@@ -264,7 +264,7 @@ If you include a valid session key, the PayForm will be accessible under the `Pa
 
 Once the user fills out and submits the form, we'll handle the payment.
 
-If you want to handle the query string when redirecting back to your website to store the transaction ID in your database, read the [#redirect-with-query-string](../getting-started/integration-options/payform.md#redirect-with-query-string "mention") section of our full PayForm guide.
+If you want to handle the query string when redirecting back to your website to store the transaction ID in your database, read the [#redirect-with-query-string](../getting-started/integration-options/payform/#redirect-with-query-string "mention") section of our full PayForm guide.
 
 #### PayForm manual consent
 

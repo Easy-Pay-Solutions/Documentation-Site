@@ -114,7 +114,7 @@ We recommend using the PayForm to collect all cardholder data when integrating w
 
 You can read more about implementation in the integration guides:
 
-<table data-card-size="large" data-view="cards"><thead><tr><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td>PayForm ></td><td><a href="payform.md">payform.md</a></td></tr><tr><td>Widgets ></td><td><a href="widgets.md">widgets.md</a></td></tr></tbody></table>
+<table data-card-size="large" data-view="cards"><thead><tr><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td>PayForm ></td><td><a href="payform/">payform</a></td></tr><tr><td>Widgets ></td><td><a href="widgets.md">widgets.md</a></td></tr></tbody></table>
 
 
 

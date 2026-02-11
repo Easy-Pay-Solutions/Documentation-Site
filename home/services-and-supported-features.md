@@ -75,7 +75,7 @@ A plug-and-play payment form that can be easily embedded on websites without adv
 Ideal for businesses seeking a quick, simple way to accept online payments without extensive integration. Can be rendered in IFrame or as a top-level page.
 
 {% hint style="info" %}
-To learn to use the PayForm, see the [payform](../documentation/getting-started/integration-options/payform/ "mention") configuration guide.
+To learn to use the PayForm, see the [payform.md](../documentation/getting-started/integration-options/payform.md "mention") configuration guide.
 {% endhint %}
 
 

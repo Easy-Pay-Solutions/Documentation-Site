@@ -19,7 +19,7 @@
     * [Android SDK](documentation/getting-started/integration-options/android-sdk.md)
     * [iOS SDK](documentation/getting-started/integration-options/ios-sdk.md)
     * [React Native Wrapper](documentation/getting-started/integration-options/react-native-wrapper.md)
-    * [PayForm](documentation/getting-started/integration-options/payform/README.md)
+    * [PayForm](documentation/getting-started/integration-options/payform.md)
       * [Subscription](documentation/getting-started/integration-options/payform/subscription.md)
     * [Widgets](documentation/getting-started/integration-options/widgets.md)
     * [Verifone](documentation/getting-started/integration-options/verifone.md)

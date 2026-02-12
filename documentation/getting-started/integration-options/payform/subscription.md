@@ -7,9 +7,7 @@ hidden: true
 
 In order to do this you will want to provide the following:&#x20;
 
-```
-"eSubmission": "0221",
-```
+> "eSubmission": "0221",
 
 This will provide for your final redirect address as well as a webhook URL
 

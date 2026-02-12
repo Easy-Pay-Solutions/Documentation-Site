@@ -13,25 +13,21 @@ In order to do this you will want to provide the following:&#x20;
 
 This will provide for your final redirect address as well as a webhook URL
 
-Here are other changes you will need to consider:
+Here are other changes you will need to consider:&#x20;
 
-```
-"eSubmission": "0221",
-"WTYPE": "PFS",
-"EndPoint": "Payform/PFS.aspx",
-"PostURL": "HTTPS://easypay1.com/postingapp/submit.aspx", (your webhook location)
-"RedirectURL": "https://easypay8.com/CYWidget/",  (your redirect URL)
-```
+> "eSubmission": "0221",\
+> "WTYPE": "PFS",\
+> "EndPoint": "Payform/PFS.aspx",\
+> "PostURL": "HTTPS://easypay1.com/postingapp/submit.aspx", <mark style="color:$danger;">// your webhook location</mark>\
+> "RedirectURL": "https://easypay8.com/CYWidget/", <mark style="color:$danger;">// your redirect URL</mark>
 
-You can add the following section to your initialization request to describe your desired subscription
+You can add the following section to your initialization request to describe your desired subscription:
 
-```
-"Subscription": {
-    "Amount": 20.0,
-    "Period": "WEEKLY",
-    "FirstPayDate": "2026-02-11"
-},
-```
+> "Subscription": {\
+> "Amount": 20.0,\
+> "Period": "WEEKLY",\
+> "FirstPayDate": "2026-02-11"\
+> },
 
 Note:  _You must use a date which is today or future, or an error will occur._
 
@@ -52,7 +48,7 @@ The Subscription PayForm is designed to do the following:
 
 1. Collect an independent Fee ( optional )
 2. Create a Subscription consent ( stored card )
-3. Do the initial; Charge ( depending on  "FirstPayDate":)
+3. Do the initial charge ( depending on "FirstPayDate":)
 
 &#x20;**Fig 1  (when a fee is also required):**&#x20;
 
@@ -63,6 +59,12 @@ The Subscription PayForm is designed to do the following:
 "eReadOnly": "0040",
 "eStyles": "0001",
 "eSubmission": "0221",
+
+"Amounts": {
+ "Amount": 20,
+ "Surcharge": 0,
+ "TotalAmt": 20
+ },
 ```
 {% endcolumn %}
 
@@ -71,7 +73,7 @@ The Subscription PayForm is designed to do the following:
 {% endcolumn %}
 {% endcolumns %}
 
-&#x20;**Fig 2 when NO fee is required initially (use these options:)**
+&#x20;**Fig 2 (when NO fee is required initially):**
 
 {% columns %}
 {% column %}
@@ -126,7 +128,7 @@ The Subscription PayForm is designed to do the following:
       "Phone": ""
     },
     "Subscription": {
-        "Amount": 20,
+        "Amount": 120,
         "Period": "WEEKLY",
         "FirstPayDate": "2026-02-11"
      },
@@ -157,7 +159,7 @@ You will continue to get webhooks throughout the lifetime of your subscription
     "cardholder":"John Doe",
     "email":"",
     "subscription":{
-        "id":15,"amount":2000,
+        "id":15,"amount":120000,
         "result":"SUCCESS","period":"WEEKLY",
         "startdate":"2/11/2026",
         "nextdate":"2/18/2026",
@@ -179,7 +181,7 @@ You will continue to get webhooks throughout the lifetime of your subscription
     "subscrip_id":15,
     "transaction":{
         "id":100,
-        "amount":2000,
+        "amount":120000,
         "result":"APPROVED",
         "txncode":"OK2194",
         "errcode":0,
@@ -188,6 +190,6 @@ You will continue to get webhooks throughout the lifetime of your subscription
 } 
 ```
 
-Cancelling a subscription
+### Cancelling a subscription
 
 [Cancel a consent subscription | Docs](https://docs.number.tech/api-reference/rest-api/consent-subscription/cancel-a-consent-subscription)

@@ -190,4 +190,6 @@ You will continue to get webhooks throughout the lifetime of your subscription
 
 ### Cancelling a subscription
 
+In order to discontinue automatic payments for a given subscription you must cancel the subscription using the API.
+
 [Cancel a consent subscription | Docs](https://docs.number.tech/api-reference/rest-api/consent-subscription/cancel-a-consent-subscription)

@@ -15,7 +15,7 @@ Here are other changes you will need to consider:&#x20;
 > "eSubmission": "0221",\
 > "WTYPE": "PFS",\
 > "EndPoint": "Payform/PFS.aspx",\
-> "PostURL": "HTTPS://easypay1.com/postingapp/submit.aspx", <mark style="color:$danger;">// your webhook location</mark>\
+> "PostURL": "https://easypay1.com/postingapp/submit.aspx", <mark style="color:$danger;">// your webhook location</mark>\
 > "RedirectURL": "https://easypay8.com/CYWidget/", <mark style="color:$danger;">// your redirect URL</mark>
 
 You can add the following section to your initialization request to describe your desired subscription:

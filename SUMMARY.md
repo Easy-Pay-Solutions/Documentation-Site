@@ -21,7 +21,6 @@
     * [React Native Wrapper](documentation/getting-started/integration-options/react-native-wrapper.md)
     * [PayForm](documentation/getting-started/integration-options/payform.md)
       * [Subscription](documentation/getting-started/integration-options/payform/subscription.md)
-      * [Test](documentation/getting-started/integration-options/payform/test.md)
     * [Widgets](documentation/getting-started/integration-options/widgets.md)
     * [Verifone](documentation/getting-started/integration-options/verifone.md)
     * [Virtual Terminal](documentation/getting-started/integration-options/virtual-terminal.md)

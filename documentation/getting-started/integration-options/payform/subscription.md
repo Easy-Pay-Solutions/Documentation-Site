@@ -1,6 +1,5 @@
 ---
 description: The PayForm can be configured to collect subscription type payments
-hidden: true
 ---
 
 # Subscription

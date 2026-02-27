@@ -97,7 +97,7 @@ Please view our [API Best Practices](https://docs.number.tech/documentation/gett
 
 {% code overflow="wrap" %}
 ```
-IMPORTANT : Always check your response to determine the fees which are approved as this may differ from what was requested. The ResponseAuthorizedAmount element shows the amount that was charged.
+IMPORTANT: Always check your response to determine the fees which are approved as this may differ from what was requested. The ResponseAuthorizedAmount element shows the amount that was charged.
 ```
 {% endcode %}
 {% endtab %}
@@ -136,4 +136,3 @@ Example: `application/json`
 * **POSUser** (string) - POS user/operator name
 {% endtab %}
 {% endtabs %}
-

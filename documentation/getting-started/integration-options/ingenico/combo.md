@@ -103,7 +103,23 @@ IMPORTANT : Always check your response to determine the fees which are approved 
 {% endtab %}
 
 {% tab title="Header Parameters" %}
-Use the same content as rest api docs, such as [https://docs.number.tech/api-reference/rest-api/consent-annual/calculate-surcharging-or-convenience-fees#header-parameters](https://docs.number.tech/api-reference/rest-api/consent-annual/calculate-surcharging-or-convenience-fees#header-parameters)
+**SessKey** string <mark style="color:orange;">required</mark>
+
+A unique session key used for authentication in API calls. This key is generated upon successful authentication and must be included in all subsequent requests.
+
+Example: `A1842D663E9A4A72XXXXXXXX303541303234373138`
+
+***
+
+**Content-Type** string <mark style="color:orange;">required</mark>
+
+Example: `application/json`
+
+***
+
+**Accept** string <mark style="color:orange;">required</mark>
+
+Example: `application/json`
 {% endtab %}
 
 {% tab title="Body" %}

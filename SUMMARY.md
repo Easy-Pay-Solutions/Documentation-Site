@@ -23,7 +23,7 @@
       * [Process a Combination Payment](documentation/getting-started/integration-options/ingenico/combo.md)
       * [Process a Store Card Only](documentation/getting-started/integration-options/ingenico/process-a-store-card-only.md)
       * [Get Device Configuration](documentation/getting-started/integration-options/ingenico/get-configuration.md)
-      * [Set DeviceConfiguration](documentation/getting-started/integration-options/ingenico/set-deviceconfiguration.md)
+      * [Set Device Configuration](documentation/getting-started/integration-options/ingenico/set-device-configuration.md)
       * [Reset the Device](documentation/getting-started/integration-options/ingenico/reset.md)
       * [Check Device Status](documentation/getting-started/integration-options/ingenico/check-device-status.md)
     * [iOS SDK](documentation/getting-started/integration-options/ios-sdk.md)

@@ -21,7 +21,7 @@
       * [Certificate Installation](documentation/getting-started/integration-options/ingenico/certificate.md)
       * [Process a Card Sale](documentation/getting-started/integration-options/ingenico/process-a-card-sale.md)
       * [Process a Combination Payment](documentation/getting-started/integration-options/ingenico/combo.md)
-      * [Process a Store Card Only](documentation/getting-started/integration-options/ingenico/process-a-store-card-only.md)
+      * [Stored Card Only](documentation/getting-started/integration-options/ingenico/stored-card-only.md)
       * [Get Device Configuration](documentation/getting-started/integration-options/ingenico/get-configuration.md)
       * [Set Device Configuration](documentation/getting-started/integration-options/ingenico/set-device-configuration.md)
       * [Reset the Device](documentation/getting-started/integration-options/ingenico/reset.md)

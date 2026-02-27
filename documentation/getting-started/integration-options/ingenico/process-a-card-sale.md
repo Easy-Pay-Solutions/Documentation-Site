@@ -1,8 +1,8 @@
-# Payment
+# Process a Card Sale
 
 The transact API call processes a payment and optionally stores the card for future use.
 
-This sample shows charging a payment without saving the card.
+**This sample shows charging a payment without saving the card.**
 
 POST https://`[your-terminal-ip]`:8090/transact\
 SessKey: `[your-session-key]`\

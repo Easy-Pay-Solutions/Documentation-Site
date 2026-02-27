@@ -21,7 +21,7 @@
       * [Certificate](documentation/getting-started/integration-options/ingenico/certificate.md)
       * [Combo](documentation/getting-started/integration-options/ingenico/combo.md)
       * [Get Configuration](documentation/getting-started/integration-options/ingenico/get-configuration.md)
-      * [Payment](documentation/getting-started/integration-options/ingenico/payment.md)
+      * [Process a Card Sale](documentation/getting-started/integration-options/ingenico/process-a-card-sale.md)
       * [Reset](documentation/getting-started/integration-options/ingenico/reset.md)
       * [Set Configuration](documentation/getting-started/integration-options/ingenico/set-configuration.md)
       * [Status](documentation/getting-started/integration-options/ingenico/status.md)

@@ -2,7 +2,7 @@
 description: How to Download and  Install, by Browser type
 ---
 
-# Certificate
+# Certificate Installation
 
 #### **Download the Certificate**
 

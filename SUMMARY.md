@@ -18,7 +18,7 @@
     * [SOAP API](documentation/getting-started/integration-options/soap-api.md)
     * [Android SDK](documentation/getting-started/integration-options/android-sdk.md)
     * [Ingenico](documentation/getting-started/integration-options/ingenico/README.md)
-      * [Certificate](documentation/getting-started/integration-options/ingenico/certificate.md)
+      * [Certificate Installation](documentation/getting-started/integration-options/ingenico/certificate-installation.md)
       * [Combo](documentation/getting-started/integration-options/ingenico/combo.md)
       * [Get Configuration](documentation/getting-started/integration-options/ingenico/get-configuration.md)
       * [Process a Card Sale](documentation/getting-started/integration-options/ingenico/process-a-card-sale.md)

@@ -1,4 +1,4 @@
-# Get Configuration
+# Get Device Configuration
 
 Retrieves the current configuration settings.
 

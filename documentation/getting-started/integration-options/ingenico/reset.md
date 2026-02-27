@@ -1,4 +1,4 @@
-# Reset
+# Reset the Device
 
 Sends a reset command to the terminal device, cancelling any active transaction and returning the device to idle state.
 

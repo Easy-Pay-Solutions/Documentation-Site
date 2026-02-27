@@ -60,6 +60,7 @@ Please view our [API Best Practices](https://docs.number.tech/documentation/gett
 
 {% tab title="Sample Response" %}
 ```
+
 {
   "CreditCardSaleCompositeResult": {
     "AVSresult": "U",
@@ -89,17 +90,9 @@ Please view our [API Best Practices](https://docs.number.tech/documentation/gett
   }
  }
 ```
-
-{% code overflow="wrap" %}
-```
-IMPORTANT : Always check your response to determine the fees which are approved as this may differ from what was requested. The ResponseAuthorizedAmount element shows the amount that was charged.
-```
-{% endcode %}
 {% endtab %}
 
 {% tab title="Header Parameters" %}
-**SessKey** string <mark style="color:orange;">required</mark>
-
 A unique session key used for authentication in API calls. This key is generated upon successful authentication and must be included in all subsequent requests.
 
 Example: `A1842D663E9A4A72XXXXXXXX303541303234373138`
@@ -131,4 +124,8 @@ Example: `application/json`
 * **POSUser** (string) - POS user/operator name
 {% endtab %}
 {% endtabs %}
+
+{% hint style="info" %}
+IMPORTANT : Always check your response to determine the fees and final amoount which are approved as this may differ from what was requested. The ResponseAuthorizedAmount element shows the amount that was charged.
+{% endhint %}
 

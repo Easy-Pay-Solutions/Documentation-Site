@@ -10,7 +10,7 @@ This guide will help you quickly get started with your Ingenico card reader usin
 
 #### **Install the Certificate**
 
-Once the device is powered on and connected to the network, its certificate needs to be loaded into the browser. Complete instructions are available at [Download and Install certificates](./#install-the-certificate).
+Once the device is powered on and connected to the network, its certificate needs to be loaded into the browser. Complete instructions are available at [Download and Install](certificate.md) certificates.
 
 #### **Authenticate and retrieve a session key**
 

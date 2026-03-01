@@ -6,7 +6,7 @@ Updates the middleware runtime configuration settings.  Changes take effect imme
 All fields are optional; send only the fields you want to update.
 {% endhint %}
 
-<mark style="color:orange;">GET</mark> https://`[your-terminal-ip]`:8090/config\
+<mark style="color:orange;">POST</mark> https://`[your-terminal-ip]`:8090/config\
 Content-Type: application/json
 
 #### Response Status Codes

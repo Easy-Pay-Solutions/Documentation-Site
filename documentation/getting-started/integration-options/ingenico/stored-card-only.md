@@ -8,7 +8,7 @@ The transact API call processes a payment and optionally stores the card for fut
 To save the card without processing a payment, set all of the request amount fields to zero and turn on the SaveCard flag. View the Sample Request tab for a complete example.
 {% endhint %}
 
-POST https://`[your-terminal-ip]`:8090/transact\
+<mark style="color:orange;">POST</mark> https://`[your-terminal-ip]`:8090/transact\
 SessKey: `[your-session-key]`\
 Content-Type: application/json
 

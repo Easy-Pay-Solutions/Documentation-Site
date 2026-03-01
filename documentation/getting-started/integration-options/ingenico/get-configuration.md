@@ -2,7 +2,7 @@
 
 Retrieves the current configuration settings.
 
-GET https://`[your-terminal-ip]`:8090/config\
+<mark style="color:orange;">GET</mark> https://`[your-terminal-ip]`:8090/config\
 Content-Type: application/json
 
 #### Response Status Codes

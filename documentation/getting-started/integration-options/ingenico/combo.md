@@ -4,7 +4,7 @@ The transact API call processes a payment and optionally stores the card for fut
 
 **This sample shows processing a payment and saving the card**. Look at the sample response tab to view the ConsentResult element.
 
-POST https://`[your-terminal-ip]`:8090/transact\
+<mark style="color:orange;">POST</mark> https://`[your-terminal-ip]`:8090/transact\
 SessKey: `[your-session-key]`\
 Content-Type: application/json
 

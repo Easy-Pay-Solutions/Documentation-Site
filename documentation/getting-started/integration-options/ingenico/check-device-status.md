@@ -1,8 +1,8 @@
-# Status
+# Check Device Status
 
 This health check endpoint returns the status of the device.
 
-GET https://`[your-terminal-ip]`:8090/status\
+<mark style="color:orange;">GET</mark> https://`[your-terminal-ip]`:8090/status\
 Content-Type: application/json
 
 #### Response Status Codes

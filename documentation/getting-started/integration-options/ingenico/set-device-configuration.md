@@ -1,8 +1,10 @@
-# Set Configuration
+# Set Device Configuration
 
-Updates the middleware runtime configuration settings. All fields are optional; send only the fields you want to update.
+Updates the middleware runtime configuration settings.  Changes take effect immediately for subsequent transactions.
 
-Changes take effect immediately for subsequent transactions.
+{% hint style="info" %}
+All fields are optional; send only the fields you want to update.
+{% endhint %}
 
 POST https://`[your-terminal-ip]`:8090/config\
 Content-Type: application/json

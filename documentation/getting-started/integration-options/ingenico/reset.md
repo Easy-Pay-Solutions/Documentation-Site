@@ -2,7 +2,7 @@
 
 Sends a reset command to the terminal device, cancelling any active transaction and returning the device to idle state.
 
-POST https://`[your-terminal-ip]`:8090/reset\
+<mark style="color:orange;">POST</mark> https://`[your-terminal-ip]`:8090/reset\
 Content-Type: application/json
 
 #### Response Status Codes

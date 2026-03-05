@@ -39,6 +39,7 @@
     * [API Input Validation](documentation/getting-started/basics/api-input-validation.md)
     * [Testing Considerations](documentation/getting-started/basics/testing-considerations.md)
   * [Client Admin Portal](documentation/getting-started/client-admin-portal.md)
+  * [Client Admin Portal New](documentation/getting-started/client-admin-portal-1.md)
 * [Card Present Payments](documentation/card-present-payments.md)
 * [Store Card on File](documentation/store-card-on-file.md)
 * [Surcharge Payments](documentation/surcharge-payments.md)

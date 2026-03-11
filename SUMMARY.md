@@ -30,7 +30,7 @@
     * [React Native Wrapper](documentation/getting-started/integration-options/react-native-wrapper.md)
     * [PayForm](documentation/getting-started/integration-options/payform.md)
       * [Subscription](documentation/getting-started/integration-options/payform/subscription.md)
-      * [Apple Pay / Google Pay](documentation/getting-started/integration-options/payform/apple-pay-google-pay.md)
+      * [Apple Pay](documentation/getting-started/integration-options/payform/apple-pay.md)
     * [Widgets](documentation/getting-started/integration-options/widgets.md)
     * [Verifone](documentation/getting-started/integration-options/verifone.md)
     * [Virtual Terminal](documentation/getting-started/integration-options/virtual-terminal.md)

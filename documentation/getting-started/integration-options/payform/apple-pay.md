@@ -2,9 +2,9 @@
 hidden: true
 ---
 
-# Apple Pay / Google Pay
+# Apple Pay
 
-In order to add Apple Pay / Google Pay functionality to your PayForm you modify your request as follows:
+In order to add Apple Pay functionality to your PayForm you modify your request as follows:
 
 **No Apple Pay:**
 
@@ -47,13 +47,7 @@ Next we send a request to Apple which allows them to verify the text file exists
 **4) SandBox -** In order to get approvals in the sandbox you will need:\
 \- A Sandbox Apple ID (different from your real Apple ID)\
 \- An iPhone or iPad that supports Apple Pay.\
-\- The device must be signed into iCloud with the sandbox account, not your normal Apple ID.\
-\
-Note :  you can log in to our Sandbox ApplePay ID if you wish:\
-Username : MacSand@number.tech\
-Password : All6cowswentswimming!
-
-***
+\- The device must be signed into iCloud with the sandbox account, not your normal Apple ID.<br>
 
 #### Step-by-step: How to get test cards into your Wallet
 

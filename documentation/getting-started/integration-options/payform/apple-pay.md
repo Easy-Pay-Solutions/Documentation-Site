@@ -51,15 +51,16 @@ Next we send a request to Apple which allows them to verify the text file exists
 
 #### Step-by-step: How to get test cards into your Wallet
 
-1. **Create a Sandbox Apple ID ( or use ours )**\
+1. **Create a Sandbox Apple ID** \
    Go to Apple’s developer site → _Account_ → _Users and Access_ → _Sandbox Testers_. Create a new tester account (email must be unique and not tied to an existing Apple ID).
 2. **Sign out of your real Apple ID on your device**\
    Settings → Your Name → _Sign Out_.
 3. **Sign in with the Sandbox Apple ID**\
    Settings → Sign in → use the sandbox credentials.
 4. **Open the Wallet app**\
-   Once the device is in sandbox mode, **Apple Pay will automatically offer test cards** when you tap **Add Card**. You’ll see region‑appropriate test Visa, Mastercard, Amex, etc. You do _not_ enter card numbers manually - Apple provides them.
-5. **Use the cards only in sandbox-supported apps/sites**\
-   They will not work in production environments. Real cards are required for production testing.
-6. **This link has valid test cards you can put in your wallet:**\
+   Once the device is in sandbox mode, You can begin to add Sandbox test cards to your **Apple Pay Wallet (**&#x74;ap **Add Card)**.&#x20;
+5. **This link has valid test cards you can put in your wallet:**\
    [Sandbox Testing - Apple Pay - Apple Developer](https://developer.apple.com/apple-pay/sandbox-testing/)
+6. **Use the cards only in sandbox-supported apps/sites**\
+   They will not work in production environments. Real cards are required for production testing.
+

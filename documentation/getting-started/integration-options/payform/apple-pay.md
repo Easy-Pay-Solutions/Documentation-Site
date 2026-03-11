@@ -4,7 +4,7 @@ hidden: true
 
 # Apple Pay
 
-In order to add Apple Pay functionality to your PayForm you modify your request as follows:
+In order to add Apple Pay functionality to your PayForm you modify your [request](../../../../api-reference/rest-api/payform.md) as follows:
 
 **No Apple Pay:**
 

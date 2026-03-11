@@ -32,24 +32,18 @@ In order to add Apple Pay / Google Pay functionality to your PayForm you modify 
 
 <figure><img src="../../../../.gitbook/assets/applepayss.png" alt=""><figcaption></figcaption></figure>
 
-(PayForm will grow vertically depending on what is detected.)
+
 
 ***
 
-**3) Domain -** If you plan to display our widget within an IFRAME we will need to get your Domain approved.\
+**3) Domain -** If you plan to display our widget within an IFRAME we will need to get your Domain approved (Apple Pay Only).  Contact our tech team to accomplish this. We will have you publish a small text file on your web server which Apple will discover.\
 \
-Contact our tech team to accomplish this. We will have you publish a small text file on your server.\
-\
-Next we send a request to Apple which allows them to verify the text file exists so that they can trust your domain ( as a parent page )
-
-***
-
-**4) SandBox -** In order to get approvals in the sandbox you will need:\
+**4) SandBox -** In order to get approvals in the sandbox (Apple Pay Only) you will need:\
 \- A Sandbox Apple ID (different from your real Apple ID)\
 \- An iPhone or iPad that supports Apple Pay.\
 \- The device must be signed into iCloud with the sandbox account, not your normal Apple ID.<br>
 
-#### Step-by-step: How to get test cards into your Wallet
+#### Step-by-step: How to get test cards into your Apple Pay Wallet
 
 1. **Create a Sandbox Apple ID** \
    Go to Apple’s developer site → _Account_ → _Users and Access_ → _Sandbox Testers_. Create a new tester account (email must be unique and not tied to an existing Apple ID).
@@ -64,3 +58,24 @@ Next we send a request to Apple which allows them to verify the text file exists
 6. **Use the cards only in sandbox-supported apps/sites**\
    They will not work in production environments. Real cards are required for production testing.
 
+
+
+## Google Pay Considerations&#x20;
+
+To test Google Pay in our PayForm you need to do the following&#x20;
+
+**1) Notify us that you are ready to Test** (we will modify your test account)
+
+2\) **Make sure you are logged in to your google account**&#x20;
+
+3\) **Open your Easy Pay PayForm using your test Account**&#x20;
+
+3\)  **The Google Sandbox Wallet should become available automatically**&#x20;
+
+4\) **Once you are ready to Pay you will see a message** which indicates that no actual funds will be charged in the TEST ENVIRONMENT.&#x20;
+
+
+
+<figure><img src="../../../../.gitbook/assets/image (20).png" alt=""><figcaption></figcaption></figure>
+
+&#x20;

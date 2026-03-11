@@ -2,11 +2,11 @@
 hidden: true
 ---
 
-# Apple Pay
+# Apple Pay / Google Pay
 
-In order to add Apple Pay functionality to your PayForm you modify your [request](../../../../api-reference/rest-api/payform.md) as follows:
+In order to add Apple Pay / Google Pay functionality to your PayForm you modify your [request](../../../../api-reference/rest-api/payform.md) as follows:
 
-**No Apple Pay:**
+**Standard Payform :**
 
 {% code overflow="wrap" %}
 ```
@@ -14,7 +14,7 @@ In order to add Apple Pay functionality to your PayForm you modify your [request
 ```
 {% endcode %}
 
-**With Apple Pay:**
+**Add Apple Pay / Google Pay :**
 
 {% code overflow="wrap" %}
 ```
@@ -24,11 +24,11 @@ In order to add Apple Pay functionality to your PayForm you modify your [request
 
 #### Considerations&#x20;
 
-**1) Notify us that you are ready to Test**  ( we will modify your test account )
+**1) Notify us that you are ready to Test**  (we will modify your test account)
 
 ***
 
-**2) Size** - If our PayForm determines that Apple Pay can be used during the browser session you will notice the following buttons appear:
+**2) Size** - If our PayForm determines that Apple Pay or Google Pay can be used during the browser session you will notice the following extra buttons will appear: Your PayForm will grow vertically depending on what is detected
 
 <figure><img src="../../../../.gitbook/assets/applepayss.png" alt=""><figcaption></figcaption></figure>
 

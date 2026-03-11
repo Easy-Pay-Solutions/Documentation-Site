@@ -1,7 +1,3 @@
----
-hidden: true
----
-
 # Apple Pay / Google Pay
 
 In order to add Apple Pay / Google Pay functionality to your PayForm you modify your [request](../../../../api-reference/rest-api/payform.md) as follows:

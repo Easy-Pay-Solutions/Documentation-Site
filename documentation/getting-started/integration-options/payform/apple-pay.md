@@ -30,7 +30,7 @@ In order to add Apple Pay functionality to your PayForm you modify your request 
 
 **2) Size** - If our PayForm determines that Apple Pay can be used during the browser session you will notice the following buttons appear:
 
-<figure><img src="../../../../.gitbook/assets/applepayss.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/applepayss2.png" alt=""><figcaption></figcaption></figure>
 
 (PayForm will grow vertically depending on what is detected.)
 

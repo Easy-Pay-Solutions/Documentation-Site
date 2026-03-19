@@ -4,6 +4,10 @@ description: Cards for testing, response code reference, and penny codes for Fir
 
 # First Data Testing
 
+_You can order EMV test cards directly from the First Data Test Pack 2 available on OmniPay’s store. This pack includes a set of preconfigured test cards designed for EMV certification and integration testing, making it easy to validate transaction flows in your environment:_
+
+[https://omnipaystore.com/product/first-data-test-pack-2/](https://omnipaystore.com/product/first-data-test-pack-2/)
+
 ## Test Cards <a href="#test-cards" id="test-cards"></a>
 
 You can use the below cards for testing with First Data.

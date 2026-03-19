@@ -863,5 +863,8 @@ REG ADD HKLM\SYSTEM\CurrentControlSet\Control\Power\PowerSettings\2a737441-1930-
 3. After running the command, reboot your computer, then reopen your advanced power settings following the steps listed above.
 {% endhint %}
 
+### Order Test Cards
 
+You can order EMV test cards directly from the First Data Test Pack 2 available on OmniPay’s store. This pack includes a set of preconfigured test cards designed for EMV certification and integration testing, making it easy to validate transaction flows in your environment:
 
+[https://omnipaystore.com/product/first-data-test-pack-2/](https://omnipaystore.com/product/first-data-test-pack-2/)

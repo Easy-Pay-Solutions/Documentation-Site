@@ -41,7 +41,7 @@
 {% tab title="Notes" %}
 To Implement Incremental Auth you can follow these steps:
 
-* To Begin , you will need to create an AUTHORIZATION (AuthOnly) for a specific \
+* To Begin, you will need to create an AUTHORIZATION (AuthOnly) for a specific \
   amount using the PayForm or Virtual Terminal.
 * You will need to take note of the ORIGINAL returned TxID as this must be sent in all \
   subsequent Incremental Authorizations using this API method.  &#x20;

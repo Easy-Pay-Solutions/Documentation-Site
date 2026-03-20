@@ -60,6 +60,7 @@
 
 * [REST API](api-reference/rest-api/README.md)
   * [Authentication](api-reference/rest-api/authentication.md)
+  * [Incremental Auth](api-reference/rest-api/authentication-1.md)
   * [ACH](api-reference/rest-api/ach-wip.md)
     * [Create an ACH Sale](api-reference/rest-api/ach/create-an-ach-sale.md)
     * [Create an ACH Combo Sale and Consent](api-reference/rest-api/ach/create-an-ach-combo-sale-and-consent.md)

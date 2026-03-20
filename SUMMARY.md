@@ -67,7 +67,7 @@
     * [Process payment with ACH annual consent](api-reference/rest-api/ach/process-payment-with-ach-annual-consent.md)
     * [Void an ACH transaction](api-reference/rest-api/ach/void-an-ach-transaction.md)
   * [Card Operations](api-reference/rest-api/card-operations/README.md)
-    * [Incremental Auth](api-reference/rest-api/card-operations/authentication.md)
+    * [Incremental Auth](api-reference/rest-api/authentication-1.md)
     * [Process a Card Sale](api-reference/rest-api/card-operations/process-a-card-sale.md)
     * [Process a Refund](api-reference/rest-api/card-operations/process-a-refund.md)
     * [Void a Transaction](api-reference/rest-api/card-operations/void-a-transaction.md)

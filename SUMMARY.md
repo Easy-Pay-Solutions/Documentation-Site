@@ -60,7 +60,6 @@
 
 * [REST API](api-reference/rest-api/README.md)
   * [Authentication](api-reference/rest-api/authentication.md)
-  * [Incremental Auth](api-reference/rest-api/authentication-1.md)
   * [ACH](api-reference/rest-api/ach-wip.md)
     * [Create an ACH Sale](api-reference/rest-api/ach/create-an-ach-sale.md)
     * [Create an ACH Combo Sale and Consent](api-reference/rest-api/ach/create-an-ach-combo-sale-and-consent.md)
@@ -86,6 +85,7 @@
   * [Consent Subscription](api-reference/rest-api/consent-subscription/README.md)
     * [Modify a consent subscription](api-reference/rest-api/consent-subscription/modify-a-consent-subscription.md)
     * [Cancel a consent subscription](api-reference/rest-api/consent-subscription/cancel-a-consent-subscription.md)
+  * [Incremental Auth](api-reference/rest-api/authentication-1.md)
   * [International](api-reference/rest-api/international/README.md)
     * [Generate a Receipt](api-reference/rest-api/international/generate-a-receipt.md)
     * [Process Consent](api-reference/rest-api/international/process-consent.md)

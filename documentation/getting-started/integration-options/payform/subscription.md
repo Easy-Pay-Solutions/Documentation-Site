@@ -1,10 +1,10 @@
 ---
-description: The PayForm can be configured to collect subscription type payments
+description: The PayForm can be configured to collect subscription type payments.
 ---
 
 # Subscription
 
-In order to do this you will want to provide the following:&#x20;
+In order to do this, you can adjust your [request](../../../../api-reference/rest-api/payform.md) as follows:
 
 > "eSubmission": "0221",
 

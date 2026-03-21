@@ -12,5 +12,5 @@ This Authorization can be Reversed or Incrementally increased during your workfl
 
 This tells the PayForm that any dollar amount authorized will stay in a PENDING state awaiting any changes or Incremental increases you specify using our API.  &#x20;
 
-Use this REST API call to execute incremental Auths or Finalize the transaction.&#x20;
+Use this [REST API call](../../../../api-reference/rest-api/authentication-1.md) to execute incremental Auths or Finalize the transaction.&#x20;
 

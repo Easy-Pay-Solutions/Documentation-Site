@@ -25,7 +25,7 @@ private void Authenticate() {
   byte[] data = Encoding.UTF8.GetBytes(jsonContent);
 
   // Specify Number Endpoint 
-  string MyUrl = "https://easypay5.com/APIcardProcREST/v1.0.0/Authenticate";
+  string MyUrl = "https://easypay5.com/APIcardProcNumber/v1.0.0/Authenticate";
 
   // create a webrequest 
   WebRequest request = WebRequest.Create(MyUrl);
@@ -290,7 +290,7 @@ public static async Task<string> ProcessConsent( )
   HttpClient httpClient = new HttpClient();
 
   /// Number Endpoint
-  string apiUrl = "https://easypay5.com/APIcardProcREST/v1.0.0/ConsentAnnual/ProcPayment";
+  string apiUrl = "https://easypay5.com/APIcardProcNumber/v1.0.0/ConsentAnnual/ProcPayment";
   
   // Here is your consentID and amount of purchase
   string jsonContent = "{\"ConsentID\": 1 ,\"ProcessAmount\": 52.00 }";

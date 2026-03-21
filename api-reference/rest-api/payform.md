@@ -46,7 +46,7 @@ For details on configurations and options, view our builder tool at [https://eas
       "eReadOnly": "0040",
       "eStyles": "0001",
       "eSubmission": "0A01",
-      "eFeatures": "0001",
+      "eFeatures": "0000",
       "eColors": "#ffffff,#428bca,#007bff,#212121,#ffffff,#212121,#ffffff"
     }
   }

@@ -4,7 +4,7 @@ description: Process a card sale with card present
 
 # Process a Card Sale
 
-<mark style="color:orange;">post:</mark> https://easypay5.com/APIcardProcREST/v1.0.0/CardSale/CardPresent
+<mark style="color:orange;">post:</mark> https://easypay5.com/APIcardProcNumber/v1.0.0/CardSale/CardPresent
 
 _<mark style="color:red;">**For PCI compliant merchants only (AOC on file with Number required)**</mark>_
 

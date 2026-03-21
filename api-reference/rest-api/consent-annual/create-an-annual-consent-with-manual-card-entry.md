@@ -1,6 +1,6 @@
 # Create an annual consent with manual card entry
 
-<mark style="color:orange;">post:</mark> https://easypay5.com/APIcardProcREST/v1.0.0/ConsentAnnual/Create\_MAN
+<mark style="color:orange;">post:</mark> https://easypay5.com/APIcardProcNumber/v1.0.0/ConsentAnnual/Create\_MAN
 
 _<mark style="color:red;">**For PCI compliant merchants only (AOC on file with Number required)**</mark>_
 

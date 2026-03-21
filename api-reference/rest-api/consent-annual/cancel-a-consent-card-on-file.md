@@ -1,6 +1,6 @@
 # Cancel a consent (Card On File)
 
-<mark style="color:orange;">post:</mark> https://easypay5.com/APIcardProcREST/v1.0.0/ConsentAnnual/Cancel
+<mark style="color:orange;">post:</mark> https://easypay5.com/APIcardProcNumber/v1.0.0/ConsentAnnual/Cancel
 
 Use this call to Cancel a consent (Card On File). You will need the ConsentID in order to execute this method.
 

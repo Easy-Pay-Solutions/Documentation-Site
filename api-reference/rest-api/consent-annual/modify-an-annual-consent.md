@@ -1,6 +1,6 @@
 # Modify an annual consent
 
-<mark style="color:orange;">post:</mark> https://easypay5.com/APIcardProcREST/v1.0.0/ConsentAnnual/Modify
+<mark style="color:orange;">post:</mark> https://easypay5.com/APIcardProcNumber/v1.0.0/ConsentAnnual/Modify
 
 {% tabs %}
 {% tab title="Sample Request" %}

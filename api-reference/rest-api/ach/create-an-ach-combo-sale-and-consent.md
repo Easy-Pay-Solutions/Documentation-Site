@@ -1,6 +1,6 @@
 # Create an ACH Combo Sale and Consent
 
-<mark style="color:orange;">post:</mark> https://easypay5.com/APIcardProcREST/v1.0.0/ACH/Combo
+<mark style="color:orange;">post:</mark> https://easypay5.com/APIcardProcNumber/v1.0.0/ACH/Combo
 
 This method creates both an ACH sale and consent. To create a consent only without processing the sale, set the Amount to zero.
 

@@ -1,6 +1,6 @@
 # Calculate surcharging or convenience fees
 
-<mark style="color:orange;">post:</mark> https://easypay5.com/APIcardProcREST/v1.0.0/ConsentAnnual/CalcFees
+<mark style="color:orange;">post:</mark> https://easypay5.com/APIcardProcNumber/v1.0.0/ConsentAnnual/CalcFees
 
 This API call is for merchant accounts that are specifically configured for surcharge and/or convenience fee processing. Prior to charging a card on file, you may use this method to properly calculate the intended fees (Surcharging or Convenience fees ).
 

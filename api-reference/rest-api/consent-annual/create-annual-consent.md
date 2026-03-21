@@ -4,7 +4,7 @@ description: Create an annual consent with card present
 
 # Create Annual Consent
 
-<mark style="color:orange;">post:</mark> https://easypay5.com/APIcardProcREST/v1.0.0/ConsentAnnual/Create\_CP
+<mark style="color:orange;">post:</mark> https://easypay5.com/APIcardProcNumber/v1.0.0/ConsentAnnual/Create\_CP
 
 _<mark style="color:red;">**For PCI compliant merchants only (AOC on file with Number required)**</mark>_
 

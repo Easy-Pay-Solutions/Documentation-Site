@@ -1,6 +1,6 @@
 # Charge a stored card
 
-<mark style="color:orange;">post:</mark> https://easypay5.com/APIcardProcREST/v1.0.0/ConsentAnnual/ChargeStoredCard
+<mark style="color:orange;">post:</mark> https://easypay5.com/APIcardProcNumber/v1.0.0/ConsentAnnual/ChargeStoredCard
 
 This Method allows the user to charge a stored Card.
 

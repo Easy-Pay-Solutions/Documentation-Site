@@ -4,7 +4,7 @@ description: Authenticate user and retrieve session key
 
 # Authentication
 
-<mark style="color:orange;">post:</mark> https://easypay5.com/APIcardProcREST/v1.0.0/Authenticate
+<mark style="color:orange;">post:</mark> https://easypay5.com/APIcardProcNumber/v1.0.0/Authenticate
 
 {% tabs %}
 {% tab title="Sample Request" %}

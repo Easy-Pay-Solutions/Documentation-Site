@@ -4,7 +4,7 @@ description: Void a Transaction
 
 # Void a Transaction
 
-<mark style="color:orange;">post:</mark> https://easypay5.com/APIcardProcREST/v1.0.0/CardSale/CardPresent
+<mark style="color:orange;">post:</mark> https://easypay5.com/APIcardProcNumber/v1.0.0/CardSale/CardPresent
 
 {% tabs %}
 {% tab title="Sample Request" %}

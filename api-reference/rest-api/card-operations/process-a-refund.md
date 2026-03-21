@@ -4,7 +4,7 @@ description: Process a refund to a settled charge
 
 # Process a Refund
 
-<mark style="color:orange;">post:</mark> https://easypay5.com/APIcardProcREST/v1.0.0/CardSale/ApplyCredit
+<mark style="color:orange;">post:</mark> https://easypay5.com/APIcardProcNumber/v1.0.0/CardSale/ApplyCredit
 
 Use this call to process a refund to a settled charge. You will need the Transaction ID and the amount to be refunded.
 

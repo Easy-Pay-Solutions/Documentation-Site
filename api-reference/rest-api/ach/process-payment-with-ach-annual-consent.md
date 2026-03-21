@@ -1,6 +1,6 @@
 # Process payment with ACH annual consent
 
-<mark style="color:orange;">post:</mark> https://easypay5.com/APIcardProcREST/v1.0.0/ACH/ProcPayment
+<mark style="color:orange;">post:</mark> https://easypay5.com/APIcardProcNumber/v1.0.0/ACH/ProcPayment
 
 {% tabs %}
 {% tab title="Sample Request" %}

@@ -482,7 +482,7 @@ An example of using [<mark style="color:green;">`CardSale_Void`</mark>](../../..
 public static async Task TransactionVoid(string sessKey, int txID)
 {
   using HttpClient httpClient = new HttpClient();
-  string apiUrl = "https://easypay5.com/APIcardProcREST/v1.0.0/CardSale/Void";
+  string apiUrl = "https://easypay5.com/APIcardProcNumber/v1.0.0/CardSale/Void";
 
   string jsonContent = $$"""
     {"TxID":{{txID}}}
@@ -559,7 +559,7 @@ public static async Task TransactionCredit(
   string sessKey, int txID, decimal creditAmount)
 {
   using HttpClient httpClient = new HttpClient();
-  string apiUrl = "https://easypay5.com/APIcardProcREST/v1.0.0/CardSale/ApplyCredit";
+  string apiUrl = "https://easypay5.com/APIcardProcNumber/v1.0.0/CardSale/ApplyCredit";
 
   string jsonContent = $$"""
     {"TxID":{{txID}},"CreditAmount":{{creditAmount}}}
@@ -633,7 +633,7 @@ An example of using [<mark style="color:green;">`Query_Transaction`</mark>](../.
 public static async Task TransactionQuery(string sessKey, string query)
 {
   using HttpClient httpClient = new HttpClient();
-  string apiUrl = "https://easypay5.com/APIcardProcREST/v1.0.0/Query/Transaction";
+  string apiUrl = "https://easypay5.com/APIcardProcNumber/v1.0.0/Query/Transaction";
 
   string jsonContent = $$"""
     {"Query":"{{query}}"}
@@ -693,7 +693,7 @@ An example of using [<mark style="color:green;">`Query_ConsentGeneral`</mark>](.
 public static async Task ConsentGeneralQuery(string sessKey, string query)
 {
   using HttpClient httpClient = new HttpClient();
-  string apiUrl = "https://easypay5.com/APIcardProcREST/v1.0.0/Query/ConsentGeneral";
+  string apiUrl = "https://easypay5.com/APIcardProcNumber/v1.0.0/Query/ConsentGeneral";
 
   string jsonContent = $$"""
     {"Query":"{{query}}"}
@@ -767,7 +767,7 @@ public static async Task ShowReceipt(
 
 
   using HttpClient httpClient = new HttpClient();
-  string apiUrl = "https://easypay5.com/APIcardProcREST/v1.0.0/Receipt/ReceiptGenerate";
+  string apiUrl = "https://easypay5.com/APIcardProcNumber/v1.0.0/Receipt/ReceiptGenerate";
 
   string jsonContent = $$"""
     {"REFID":{{refID}}, "ReceiptType":{{receiptType}}, "Recipient":{{recipient}}}

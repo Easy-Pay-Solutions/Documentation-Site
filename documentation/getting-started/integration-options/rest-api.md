@@ -847,7 +847,7 @@ http.createServer((req, res) => {
     const options = {
         host: 'easypay5.com',
         port: 443,
-        path: '/APIcardProcREST/v1.0.0/Receipt/ReceiptGenerate',
+        path: '/APIcardProcNumber/v1.0.0/Receipt/ReceiptGenerate',
         timeout: 2000,
         method: 'POST',
         headers: {

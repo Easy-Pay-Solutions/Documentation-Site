@@ -4,7 +4,7 @@ description: Retrieve full details of a transaction
 
 # Transaction Full Detail
 
-<mark style="color:orange;">post:</mark> https://easypay5.com/APIcardProcREST/v1.0.0/Query/Transaction\_FullDetail
+<mark style="color:orange;">post:</mark> https://easypay5.com/APIcardProcNumber/v1.0.0/Query/Transaction\_FullDetail
 
 Use this call to return all the details for a single transaction. Details are separated into 3 distinct objects including:
 

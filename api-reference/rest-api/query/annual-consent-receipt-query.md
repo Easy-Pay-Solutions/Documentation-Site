@@ -1,6 +1,6 @@
 # Annual Consent Receipt Query
 
-<mark style="color:orange;">post:</mark> <mark style="color:$info;">https://easypay5.com/APIcardProcREST/v1.0.0/Query/ConsentAnnualReceipt</mark>
+<mark style="color:orange;">post:</mark> <mark style="color:$info;">https://easypay5.com/APIcardProc</mark><mark style="color:$info;">Number</mark><mark style="color:$info;">/v1.0.0/Query/ConsentAnnualReceipt</mark>
 
 {% tabs %}
 {% tab title="Sample Request" %}

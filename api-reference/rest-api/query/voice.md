@@ -4,7 +4,7 @@ description: Retrieve voice settings
 
 # Voice
 
-<mark style="color:orange;">post:</mark> https://easypay5.com/APIcardProcREST/v1.0.0/Query/VoiceSettings
+<mark style="color:orange;">post:</mark> https://easypay5.com/APIcardProcNumber/v1.0.0/Query/VoiceSettings
 
 {% tabs %}
 {% tab title="Sample Request" %}
@@ -67,3 +67,4 @@ Example: `2`
 
 {% endtab %}
 {% endtabs %}
+

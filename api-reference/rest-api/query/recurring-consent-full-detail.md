@@ -1,6 +1,6 @@
-# Retrieve full details of a recurring consent
+# Recurring Consent Full Detail
 
-<mark style="color:orange;">post:</mark> https://easypay5.com/APIcardProcREST/v1.0.0/Query/ConsentRecurring\_FullDetail
+<mark style="color:orange;">post:</mark> https://easypay5.com/APIcardProcNumber/v1.0.0/Query/ConsentRecurring\_FullDetail
 
 {% tabs %}
 {% tab title="Sample Request" %}

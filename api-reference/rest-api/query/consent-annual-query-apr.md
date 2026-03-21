@@ -1,6 +1,6 @@
 # Consent Annual Query APR
 
-<mark style="color:orange;">post:</mark> https://easypay5.com/APIcardProcREST/v1.0.0/ConsentAnnual/QueryApr
+<mark style="color:orange;">post:</mark> https://easypay5.com/APIcardProcNumber/v1.0.0/ConsentAnnual/QueryApr
 
 Use this call to determine if the purchaser has a card on file. If you have created the consent (card on file) using a reference ID or PatientID then you can use the following Query to return an array of Consents ( Card On File Info ) for a particular patient with this PatientID:\
 (F='213456')&&(H=1)&& (C>='01/21/2024')&#x20;

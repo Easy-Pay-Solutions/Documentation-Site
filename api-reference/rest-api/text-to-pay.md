@@ -4,7 +4,7 @@ description: Create a payment link via SMS or email
 
 # Text to Pay
 
-<mark style="color:orange;">post:</mark> https://easypay5.com/APIcardProcREST/v1.0.0/Other/SMSPay
+<mark style="color:orange;">post:</mark> https://easypay5.com/APIcardProcNumber/v1.0.0/Other/SMSPay
 
 This call allows you to create a tinyURL of the widget payment link that will display a message and payment form to the customer. The message and form that is displayed to the customer is easily configured by using the API call options.
 

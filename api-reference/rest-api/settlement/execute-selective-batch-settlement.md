@@ -1,6 +1,6 @@
 # Execute selective batch settlement
 
-<mark style="color:orange;">post:</mark> https://easypay5.com/APIcardProcREST/v1.0.0/Settlement/ExecuteBatch\_Selective
+<mark style="color:orange;">post:</mark> https://easypay5.com/APIcardProcNumber/v1.0.0/Settlement/ExecuteBatch\_Selective
 
 {% tabs %}
 {% tab title="Sample Request" %}

@@ -4,7 +4,7 @@ description: Methods related querying general information such as enum values
 
 # Enumeration values
 
-<mark style="color:orange;">post:</mark> https://easypay5.com/APIcardProcREST/v1.0.0/Query/Enum
+<mark style="color:orange;">post:</mark> https://easypay5.com/APIcardProcNumber/v1.0.0/Query/Enum
 
 {% tabs %}
 {% tab title="Sample Request" %}

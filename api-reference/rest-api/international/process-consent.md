@@ -1,6 +1,6 @@
 # Process Consent
 
-<mark style="color:orange;">post:</mark> https://easypay5.com/APIcardProcREST/v1.0.0/Intl/ProcPayment
+<mark style="color:orange;">post:</mark> https://easypay5.com/APIcardProcNumber/v1.0.0/Intl/ProcPayment
 
 _This API call is for merchant accounts that are specifically configured for international processing._
 

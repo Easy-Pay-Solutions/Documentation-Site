@@ -4,7 +4,7 @@ description: Generate a receipt for an international transaction
 
 # Generate a Receipt
 
-<mark style="color:orange;">post:</mark> https://easypay5.com/APIcardProcREST/v1.0.0/Intl/ReceiptGenerate
+<mark style="color:orange;">post:</mark> https://easypay5.com/APIcardProcNumber/v1.0.0/Intl/ReceiptGenerate
 
 REFID will be the transaction ID\
 &#xNAN;_&#x52;eceiptType will always be 23 for International_

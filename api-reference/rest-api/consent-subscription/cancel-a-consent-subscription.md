@@ -4,7 +4,7 @@ description: Cancel an existing subscription consent
 
 # Cancel a consent subscription
 
-<mark style="color:orange;">post:</mark> https://easypay5.com/APIcardProcREST/v1.0.0/ConsentSubscription/Cancel
+<mark style="color:orange;">post:</mark> https://easypay5.com/APIcardProcNumber/v1.0.0/ConsentSubscription/Cancel
 
 {% tabs %}
 {% tab title="Sample Request" %}

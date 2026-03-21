@@ -1,6 +1,6 @@
 # Query International Transaction
 
-<mark style="color:orange;">post:</mark> https://easypay5.com/APIcardProcREST/v1.0.0/Intl/QueryTransaction
+<mark style="color:orange;">post:</mark> https://easypay5.com/APIcardProcNumber/v1.0.0/Intl/QueryTransaction
 
 _See Notes for Details_
 

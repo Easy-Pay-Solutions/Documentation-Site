@@ -4,7 +4,7 @@ description: Retrieve a transaction receipt
 
 # Transaction Receipt
 
-<mark style="color:orange;">post:</mark> https://easypay5.com/APIcardProcREST/v1.0.0/Query/TransactionReceipt
+<mark style="color:orange;">post:</mark> https://easypay5.com/APIcardProcNumber/v1.0.0/Query/TransactionReceipt
 
 {% tabs %}
 {% tab title="Sample Request" %}

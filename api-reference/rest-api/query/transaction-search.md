@@ -4,7 +4,7 @@ description: Search for transactions based on parameters
 
 # Transaction Search
 
-<mark style="color:orange;">post:</mark> https://easypay5.com/APIcardProcREST/v1.0.0/Query/Transaction
+<mark style="color:orange;">post:</mark> https://easypay5.com/APIcardProcNumber/v1.0.0/Query/Transaction
 
 Easy Pay provides a variety of ways to search for and query transactions. To view a complete list of options, view the [https://easypaysoftware.com/en/Querying](https://easypaysoftware.com/en/Querying) Query Guide.
 

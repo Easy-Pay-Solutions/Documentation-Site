@@ -4,7 +4,7 @@ description: Generate a transaction receipt
 
 # Receipt
 
-<mark style="color:orange;">post:</mark> https://easypay5.com/APIcardProcREST/v1.0.0/Receipt/ReceiptGenerate
+<mark style="color:orange;">post:</mark> https://easypay5.com/APIcardProcNumber/v1.0.0/Receipt/ReceiptGenerate
 
 Use this call to request receipt details in HTML format for a particular TXID (Transaction ID). This method works for card on file documents as well as transaction receipts. You will need the TXID (Transaction ID) as well as a receipt type and a targeted recipient ( Customer or Merchant ).
 

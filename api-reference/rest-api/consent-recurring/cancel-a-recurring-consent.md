@@ -1,6 +1,6 @@
 # Cancel a recurring consent
 
-<mark style="color:orange;">post:</mark> https://easypay5.com/APIcardProcREST/v1.0.0/ConsentRecurring/Cancel
+<mark style="color:orange;">post:</mark> https://easypay5.com/APIcardProcNumber/v1.0.0/ConsentRecurring/Cancel
 
 {% tabs %}
 {% tab title="Sample Request" %}

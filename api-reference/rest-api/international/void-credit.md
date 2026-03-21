@@ -1,6 +1,6 @@
 # Void Credit
 
-<mark style="color:orange;">post:</mark> https://easypay5.com/APIcardProcREST/v1.0.0/Intl/VoidCredit
+<mark style="color:orange;">post:</mark> https://easypay5.com/APIcardProcNumber/v1.0.0/Intl/VoidCredit
 
 _This API call is for merchant accounts that are specifically configured for international processing._
 

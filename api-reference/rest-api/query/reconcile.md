@@ -4,7 +4,7 @@ description: Reconcile transactions
 
 # Reconcile
 
-<mark style="color:orange;">post:</mark> https://easypay5.com/APIcardProcREST/v1.0.0/Query/Reconcile
+<mark style="color:orange;">post:</mark> https://easypay5.com/APIcardProcNumber/v1.0.0/Query/Reconcile
 
 The reconcile Query is designed to be called at a specific periodic interval, perhaps once per day. We will return all the unique transaction IDs encountered during that interval. The query allows you to reconcile this list with data you have gathered during cardholder data interactions such as PayForm or Verifone Activity. If you find that a particular transaction is missing in your database you can call the TRANSACTION FULL DETAIL to consume any missing information.
 

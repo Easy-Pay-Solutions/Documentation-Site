@@ -2,9 +2,9 @@
 description: Modify an existing subscription consent
 ---
 
-# Consent Subscription
+# Modify a consent subscription
 
-<mark style="color:orange;">post:</mark> https://easypay5.com/APIcardProcREST/v1.0.0/ConsentSubscription/Modify
+<mark style="color:orange;">post:</mark> https://easypay5.com/APIcardProcNumber/v1.0.0/ConsentSubscription/Modify
 
 {% tabs %}
 {% tab title="Sample Request" %}

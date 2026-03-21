@@ -1,6 +1,6 @@
 # Process scheduled payments
 
-<mark style="color:orange;">post:</mark> https://easypay5.com/APIcardProcREST/v1.0.0/RecurringSchedule/ProcessScheduledPayments
+<mark style="color:orange;">post:</mark> https://easypay5.com/APIcardProcNumber/v1.0.0/RecurringSchedule/ProcessScheduledPayments
 
 {% tabs %}
 {% tab title="Sample Request" %}

@@ -1,6 +1,6 @@
-# Recurring consents
+# Recurring Consents
 
-<mark style="color:orange;">post:</mark> https://easypay5.com/APIcardProcREST/v1.0.0/Query/ConsentRecurring
+<mark style="color:orange;">post:</mark> https://easypay5.com/APIcardProcNumber/v1.0.0/Query/ConsentRecurring
 
 {% tabs %}
 {% tab title="Sample Request" %}

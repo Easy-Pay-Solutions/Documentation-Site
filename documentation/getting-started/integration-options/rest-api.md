@@ -380,7 +380,7 @@ http.createServer((req, res) => {
     const options = {
         host: 'easypay5.com',
         port: 443,
-        path: '/APIcardProcREST/v1.0.0/ConsentAnnual/ProcPayment',
+        path: '/APIcardProcNumber/v1.0.0/ConsentAnnual/ProcPayment',
         method: 'POST',
         timeout: 2000,
         headers: {

@@ -110,7 +110,7 @@ public static async Task<string> Authenticate()
 
   HttpClient httpClient = new HttpClient();
   /// Number Endpoint
-  string apiUrl = "https://easypay5.com/APIcardProcREST/v1.0.0/Authenticate";
+  string apiUrl = "https://easypay5.com/APIcardProcNumber/v1.0.0/Authenticate";
 
   // Here is your account code and Token used to authenticate 
   string jsonContent = "{\"AcctCode\":\"EP9142446\",\"Token\":\"F31D16BA862F4EC6AE95CB90450C826A\"}";
@@ -193,7 +193,7 @@ http.createServer((req, res) => {
     const options = {
         host: 'easypay5.com',
         port: 443,
-        path: '/APIcardProcREST/v1.0.0/Authenticate',
+        path: '/APIcardProcNumber/v1.0.0/Authenticate',
         method: 'POST',
         timeout: 2000,
         headers: {

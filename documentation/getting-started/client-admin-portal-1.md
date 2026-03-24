@@ -64,16 +64,16 @@ using (var reader = new StreamReader(Request.InputStream))
 
 <figure><img src="../../.gitbook/assets/tokenrenew4.png" alt=""><figcaption></figcaption></figure>
 
-#### Transactions Report
+#### Reports (Transactions, ACH Transactions, Cards on File, ACH on File)
 
-Once you log in, you'll see a menu on the left with a _Reports_ heading. _Transactions_ is a subheading.
+Once you log in, you'll see a menu on the left with a _Reports_ heading. Expand this to see all the subheadings. All pages in this section function the same way.
 
 <figure><img src="../../.gitbook/assets/transactions1.png" alt=""><figcaption></figcaption></figure>
 
-This page allows you to filter all transactions by date, txstatus,txtype and search by various field types. After adjusting your criteria, press the _Refresh Data_ button to see the applicable reports.
+These pages allow you to filter all transactions (or COF) by date, txstatus,txtype and search by various field types. After adjusting your criteria, press the _Refresh Data_ button to see the applicable reports.
 
 <figure><img src="../../.gitbook/assets/transactions2.png" alt=""><figcaption></figcaption></figure>
 
-After finding the transaction desired, you can click on the _Details_ link to see the in depth information.
+After finding the transaction or COF desired, you can click on the _Details_ link to see the in depth information.
 
 <figure><img src="../../.gitbook/assets/transactions3.png" alt=""><figcaption></figcaption></figure>

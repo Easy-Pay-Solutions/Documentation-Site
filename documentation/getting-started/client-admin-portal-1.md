@@ -64,3 +64,16 @@ using (var reader = new StreamReader(Request.InputStream))
 
 <figure><img src="../../.gitbook/assets/tokenrenew4.png" alt=""><figcaption></figcaption></figure>
 
+#### Transactions Report
+
+Once you log in, you'll see a menu on the left with a _Reports_ heading. _Transactions_ is a subheading.
+
+<figure><img src="../../.gitbook/assets/transactions1.png" alt=""><figcaption></figcaption></figure>
+
+This page allows you to filter all transactions by date, txstatus,txtype and search by various field types. After adjusting your criteria, press the _Refresh Data_ button to see the applicable reports.
+
+<figure><img src="../../.gitbook/assets/transactions2.png" alt=""><figcaption></figcaption></figure>
+
+After finding the transaction desired, you can click on the _Details_ link to see the in depth information.
+
+<figure><img src="../../.gitbook/assets/transactions3.png" alt=""><figcaption></figcaption></figure>

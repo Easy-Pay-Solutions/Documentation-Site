@@ -64,6 +64,16 @@ using (var reader = new StreamReader(Request.InputStream))
 
 <figure><img src="../../.gitbook/assets/tokenrenew4.png" alt=""><figcaption></figcaption></figure>
 
+## Manage Fees
+
+To manage a Merchant's Fees, click on the _Manage Fees_ link. Acknowledge the Disclaimer to view the list of Merchants.
+
+<figure><img src="../../.gitbook/assets/managefees2.png" alt=""><figcaption></figcaption></figure>
+
+Click the go link next to a respective merchant to get to the edit screen, where you can edit fee type, rate, cards allowed and notations.
+
+<figure><img src="../../.gitbook/assets/managefees3.png" alt=""><figcaption></figcaption></figure>
+
 ## Reports
 
 (Transactions, ACH Transactions, Cards on File, ACH on File)

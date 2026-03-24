@@ -36,7 +36,7 @@ After selecting the accounts you wish to renew, you will see a summary with new 
 
 <figure><img src="../../.gitbook/assets/tokenrenew2.png" alt=""><figcaption></figcaption></figure>
 
-#### Posting the token JSON data to your webhook URL
+### Posting the token JSON data to your webhook URL
 
 <figure><img src="../../.gitbook/assets/tokenrenew3.png" alt=""><figcaption></figcaption></figure>
 

@@ -7,7 +7,7 @@ hidden: true
 
 The Client Admin Portal gives the means to create, modify, and remove Virtual Terminal users, create new API tokens, and inspect active or expiring tokens.
 
-#### Single Sign-On (SSO)
+#### **Single Sign-On (SSO)**
 
 Single Sign-On (SSO) is integrated between the Client Admin Portal and the Virtual Terminal (VT). Client admin credentials allow users to log in to the Virtual Terminal without needing a separate set of VT credentials.
 
@@ -17,5 +17,50 @@ When you receive your client admin credentials, it is recommended that you log i
 Note: SSO is only available for single-account logins and is not supported for multi-user integrator accounts.&#x20;
 {% endhint %}
 
+#### **Integrator token renewal**
 
+{% hint style="info" %}
+API tokens are automatically renewed if both of the following conditions are met:
+
+1. The credentials have been successfully authenticated within the last month.
+2. The token is set to expire within the next month and has not yet expired.
+{% endhint %}
+
+Once you log in, you'll see a menu on the left with a _Token Renewal_ heading.
+
+The Token Renewal function allows you to select the accounts for which to issue new tokens. It also provides a summary including the total number of active tokens assigned to each account. Select the account(s) you wish to renew, then click Next.
+
+<figure><img src="../../.gitbook/assets/tokenrenew1.png" alt=""><figcaption></figcaption></figure>
+
+After selecting the accounts you wish to renew, you will see a summary with new token information. At this point you can either copy the new token or proceed to the next step for automated processing at your url.
+
+<figure><img src="../../.gitbook/assets/tokenrenew2.png" alt=""><figcaption></figcaption></figure>
+
+#### **Posting the token JSON data to your webhook URL**
+
+<figure><img src="../../.gitbook/assets/tokenrenew3.png" alt=""><figcaption></figcaption></figure>
+
+We will create a JSON array named _TOKENS_ and send it directly to the URL you specify. You can obtain this data by accessing the InputStream at your server endpoint.
+
+When you select `POST JSON`, we will create a JSON array named _TOKENS_ and send it directly to the URL you specify. You can obtain this data by accessing the InputStream at your server endpoint.
+
+{% tabs %}
+{% tab title="C#" %}
+```csharp
+string json;
+using (var reader = new StreamReader(Request.InputStream))
+{
+    json = reader.ReadToEnd();
+}
+```
+{% endtab %}
+{% endtabs %}
+
+{% code title="JSON array example" overflow="wrap" %}
+```json
+"Tokens": [{"TokenID":"8961", "AccountCode":"EP8179234", "Token":"AB87E1D81559466E9165FCDA2B5B12C3", "AccountName":"CY FD TEST", "ExpirationDate":"11/22/2026 1:59:54 PM"}, {"TokenID":"8962", "AccountCode":"EP1519128", "Token":"EDB6D3FC1DE44A5C883BC718350C40BC", "AccountName":"CY TSYS TEST", "ExpirationDate":"11/22/2026 1:59:54 PM"}]
+```
+{% endcode %}
+
+<figure><img src="../../.gitbook/assets/tokenrenew4.png" alt=""><figcaption></figcaption></figure>
 

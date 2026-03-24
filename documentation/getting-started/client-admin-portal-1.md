@@ -7,7 +7,7 @@ hidden: true
 
 The Client Admin Portal gives the means to create, modify, and remove Virtual Terminal users, create new API tokens, and inspect active or expiring tokens.
 
-## **Single Sign-On (SSO)**
+## Single Sign-On (SSO)
 
 Single Sign-On (SSO) is integrated between the Client Admin Portal and the Virtual Terminal (VT). Client admin credentials allow users to log in to the Virtual Terminal without needing a separate set of VT credentials.
 
@@ -17,7 +17,7 @@ When you receive your client admin credentials, it is recommended that you log i
 Note: SSO is only available for single-account logins and is not supported for multi-user integrator accounts.&#x20;
 {% endhint %}
 
-## **Integrator token renewal**
+## Integrator token renewal
 
 {% hint style="info" %}
 API tokens are automatically renewed if both of the following conditions are met:
@@ -36,7 +36,7 @@ After selecting the accounts you wish to renew, you will see a summary with new 
 
 <figure><img src="../../.gitbook/assets/tokenrenew2.png" alt=""><figcaption></figcaption></figure>
 
-#### **Posting the token JSON data to your webhook URL**
+#### Posting the token JSON data to your webhook URL
 
 <figure><img src="../../.gitbook/assets/tokenrenew3.png" alt=""><figcaption></figcaption></figure>
 

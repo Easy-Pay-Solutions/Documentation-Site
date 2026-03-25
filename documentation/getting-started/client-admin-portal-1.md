@@ -11,6 +11,18 @@ The Client Admin Portal allows you to do Admin Tasks such as:
 * View Transaction Details
 * View Card On File Details
 
+#### Client Admin Portal Modes of Operation
+
+**Merchant/Single Account Admin**
+
+This type of access is provided if you are responsible for a single account. You have unlimited access to create Users and API Tokens. You have full access to all reports. &#x20;
+
+***
+
+**Integrator / Multi Account Admin**
+
+This type of access is granted to Integrators who must process transactions for multiple accounts. You can Create API Tokens , but NOT Virtual Terminal Users. You have Read-Only access to reports.
+
 ## Single Sign-On (SSO)
 
 Single Sign-On (SSO) is integrated between the Client Admin Portal and the Virtual Terminal (VT). Client admin credentials allow users to log in to the Virtual Terminal without needing a separate set of VT credentials.

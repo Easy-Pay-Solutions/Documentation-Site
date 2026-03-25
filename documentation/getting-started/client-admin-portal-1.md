@@ -4,7 +4,12 @@ description: Getting started with the Client Admin Portal
 
 # Client Admin Portal
 
-The Client Admin Portal gives the means to create, modify, and remove Virtual Terminal users, create new API tokens, and inspect active or expiring tokens.
+The Client Admin Portal allows you to do Admin Tasks such as:
+
+* Create/Modify Virtual Terminal Users&#x20;
+* Create/Inspect API Tokens&#x20;
+* View Transaction Details
+* View Card On File Details
 
 ## Single Sign-On (SSO)
 

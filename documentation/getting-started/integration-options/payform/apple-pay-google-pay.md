@@ -60,15 +60,17 @@ In order to add Apple Pay / Google Pay functionality to your PayForm you modify 
 
 To test Google Pay in our PayForm you need to do the following&#x20;
 
-**1) Notify us that you are ready to Test** (we will modify your test account)
+1\) Notify us that you are ready to test (we will modify your test account)
 
-2\) **Make sure you are logged in to your google account**&#x20;
+2\) Make sure you are logged in to your google account&#x20;
 
-3\) **Open your Easy Pay PayForm using your test Account**&#x20;
+3\) Open your Easy Pay PayForm using your test account&#x20;
 
-3\)  **The Google Sandbox Wallet should become available automatically**&#x20;
+4\)  The Google Sandbox Wallet should become available automatically
 
-4\) **Once you are ready to Pay you will see a message** which indicates that no actual funds will be charged in the TEST ENVIRONMENT.&#x20;
+5\) The sandbox test cards provided by Google often do not pass CVV match requirements. You may want to leave that option out of the submission options while you test.&#x20;
+
+6\) Once you are ready to Pay you will see a message which indicates that no actual funds will be charged in the TEST ENVIRONMENT.&#x20;
 
 
 

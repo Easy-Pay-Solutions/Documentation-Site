@@ -4,9 +4,12 @@ description: Getting started with PayForm for Number
 
 # PayForm
 
-The PayForm is designed to be a highly flexible and secure payment form for your users. It is designed to rendered in the browser and integrated with your existing web content.
+The PayForm is designed to be a highly flexible and secure payment form for your users. It is built to be rendered in the browser and integrated with your existing web content.
 
-Collecting a payment or saving a card on file is a two-step process: a call is made to our REST API to initialize the payment parameters, and a payment link is generated.
+Collecting a payment or saving a card on file is a two-step process:
+
+1. A call is made to our REST API to initialize the payment parameters
+2. A payment link is generated.
 
 You control all of the operational and design parameters of the PayForm:
 
@@ -24,7 +27,9 @@ You control all of the operational and design parameters of the PayForm:
 **To generate a PayForm**, you can make a call to our REST API using a request body generated on the PayForm builder website.
 {% endhint %}
 
-
+{% content-ref url="../../../api-reference/rest-api/payform.md" %}
+[payform.md](../../../api-reference/rest-api/payform.md)
+{% endcontent-ref %}
 
 ***
 
@@ -52,13 +57,11 @@ Legacy Builder
 
 There are three operation types you can choose from:
 
-* Collect an instant payment using credit cards, ACH, Google Pay or Apple Pay;
-* Save accountholder data to be charged later (card-on-file, account on file);
-* Both saving the accountholder data and collecting instant payment.
+1. Collect an instant payment using credit cards, ACH, Apple Pay or Google Pay
+2. Save accountholder data to be charged later (card-on-file, account on file)
+3. Both saving the accountholder data _and_ collecting instant payment
 
 This choice will also pre-determine some of the required fields and submission options for you.
-
-
 
 ### Visible and read-only fields
 
@@ -119,15 +122,15 @@ When configuring the form, you may provide one or both of the following URLs:
 * `POST URL` where we will POST values as either JSON stream or by appending a query string,
 * `Redirect URL` to redirect to the page of your choice after transaction is completed, with or without a query string appended.
 
-#### JSON post
+#### JSON POST
 
-Using `JSON post`, you'll be able to provide a `POST URL` for our servers to stream the data to. Then, you can tap into the request input stream to receive your JSON string.
+Using `JSON POST`, you'll be able to provide a `POST URL` for our servers to stream the data to. Then, you can tap into the request input stream to receive your JSON string.
 
 Here's an example of the result and how to tap into the input stream:
 
 {% tabs %}
 {% tab title="JSON" %}
-```json
+```jsonc
 {
   "ConsentID": 33,
   "TransactionID": 21008,
@@ -167,16 +170,16 @@ public void ProcessPayFormInput(object sender, EventArgs e)
 
 #### Redirect with query string
 
-If you don't choose to use `JSON post`, we will web request your page and add query parameters to the URL. In order for you to validate the information, when configuring the form, you can choose from the following:
+If you don't choose to use `JSON POST`, we will submit an HTTP GET request to your page with query parameters appended to the URL. In order for you to validate the information, when configuring the form you can choose from the following encryption options for those query parameters:
 
-* If you supply `EIndex`, which is a value that defines your unique AES 256 encryption key as described above, you can read query string values as encrypted parameters (the encrypted message `m`, and the initialization vector `i`);
-* Otherwise, we will supply the query parameters with **no encryption** and you will be able to query our API to ensure that **1. those values exist** and **2. they were created in the last few moments**.
+* EIndex: If you supply `EIndex`, a value which defines your unique AES 256 encryption key as described above, you can read query string values as encrypted parameters (the encrypted message `m`, and the initialization vector `i`);
+* None: Otherwise, we will supply the query parameters with **no encryption** and you will be able to query our API to ensure that **1. those values exist** and **2. they were created in the last few moments**.
 
 {% hint style="danger" %}
 **When you are receiving transaction data that is not encrypted, you should validate it before storing any details to avoid malicious actors creating unqualified data.**
 {% endhint %}
 
-In case you're not using encryption, we recommend **validating the information**.&#x20;
+In the case that you're not using encryption, we recommend **validating the information**.&#x20;
 
 {% stepper %}
 {% step %}
@@ -198,7 +201,7 @@ Then, you can confirm if a consent with the selected ID exists, and if the `Crea
 
 With this, **you can avoid malicious actors filling your database with unqualified transaction data**.
 
-#### Post message
+#### HTTP POST message
 
 In this method, the PayForm you have rendered in your iFrame will message your parent page directly.
 
@@ -251,13 +254,13 @@ bindEvent(window, 'message', function(e) {
 {% endtab %}
 {% endtabs %}
 
-If your implementation is using encryption, after decrypting, you'll get a string which can look like this:
+If your implementation is using encryption, after decrypting, you'll get a string which looks similar to this:
 
 ```
 TXID|174|CONSENTID|213|CARDNO|5339|CARDTYPE|Amex|FIRSTNAME|Bob|LASTNAME|smith|REFID|7899
 ```
 
-If you are not using encryption, it will contain 2 URL parameters instead, and can look like this:
+If you are not using encryption, it will contain 2 URL parameters instead, and looks similar to this:
 
 ```
 ?txid=123&cid=321

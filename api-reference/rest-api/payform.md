@@ -12,7 +12,7 @@ For details on configurations and options, view our builder tool at [https://eas
 
 {% tabs %}
 {% tab title="Sample Request" %}
-```clike
+```jsonc
 {
   "InitParams": {
     "MerchID": 1,

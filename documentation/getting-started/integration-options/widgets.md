@@ -2,6 +2,7 @@
 description: Getting started with widgets for Number
 hidden: true
 noIndex: true
+icon: grip
 ---
 
 # Widgets

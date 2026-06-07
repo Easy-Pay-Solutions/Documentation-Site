@@ -1,5 +1,6 @@
 ---
 description: Getting started with Verifone for Number
+icon: dialpad
 ---
 
 # Verifone

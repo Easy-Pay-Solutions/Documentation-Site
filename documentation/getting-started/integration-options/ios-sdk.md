@@ -1,5 +1,6 @@
 ---
 description: Getting started with iOS SDK for Number
+icon: apple
 ---
 
 # iOS SDK

@@ -1,5 +1,6 @@
 ---
 description: Getting started with the REST API for Number
+icon: object-intersect
 ---
 
 # REST API

@@ -2,6 +2,7 @@
 description: Getting started with SOAP API for Number
 hidden: true
 noIndex: true
+icon: object-intersect
 ---
 
 # SOAP API

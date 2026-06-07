@@ -1,5 +1,6 @@
 ---
 description: Getting started with Android SDK for Number
+icon: android
 ---
 
 # Android SDK

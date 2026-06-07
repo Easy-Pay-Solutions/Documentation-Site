@@ -1,5 +1,6 @@
 ---
 description: Getting started with Virtual Terminal for Number
+icon: rectangle-terminal
 ---
 
 # Virtual Terminal

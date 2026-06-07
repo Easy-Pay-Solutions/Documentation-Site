@@ -1,5 +1,6 @@
 ---
 description: Getting started with PayForm for Number
+icon: wpforms
 ---
 
 # PayForm

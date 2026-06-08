@@ -42,7 +42,7 @@ define('Number_ENCRYPTION_KEY', getenv('Number_ENCRYPTION_KEY') ?: ($_SERVER['Nu
 /* That's all, stop editing! Happy publishing. */
 ```
 
-{% file src="../../../.gitbook/assets/numberpayments-plugin.zip" %}
+{% file src="../../../.gitbook/assets/numberpayments-plugin (1).zip" %}
 
 #### Configuration and Settings
 

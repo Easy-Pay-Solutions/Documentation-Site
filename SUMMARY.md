@@ -36,6 +36,7 @@
     * [Verifone](documentation/getting-started/integration-options/verifone.md)
     * [Virtual Terminal](documentation/getting-started/integration-options/virtual-terminal.md)
     * [WooCommerce Plugin](documentation/getting-started/integration-options/woocommerce-plugin.md)
+    * [Text2Pay](documentation/getting-started/integration-options/text2pay.md)
   * [Basics](documentation/getting-started/basics/README.md)
     * [Authentication](documentation/getting-started/basics/authentication.md)
     * [API Best Practices](documentation/getting-started/basics/api-best-practices.md)

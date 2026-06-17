@@ -4,7 +4,7 @@ icon: comment-dollar
 
 # Text2Pay
 
-One popular feature provided allows you to generate payment links at will using our API, then deliver them to your cardholders either by SMS or email.
+One popular feature allows you to generate payment links at will using our API, then deliver them to your cardholders either by SMS or email.
 
 The API call needed to invoke this activity is shown here: [Text to Pay](https://app.gitbook.com/o/BBeFXc7fqAfKkKCdsmTJ/s/4UWkWFnnmVPzvJTdMtC0/api-reference/rest-api/text-to-pay)
 

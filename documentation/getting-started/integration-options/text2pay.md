@@ -4,11 +4,11 @@ icon: comment-dollar
 
 # Text2Pay
 
-One popular feature allows you to generate payment links at will using our API, then deliver them to your cardholders either by SMS or email.
+One of our most popular features enables you to generate payment links on demand through the API and deliver them directly to cardholders via SMS or email.
 
 The API call needed to invoke this activity is shown here: [Text to Pay](https://app.gitbook.com/o/BBeFXc7fqAfKkKCdsmTJ/s/4UWkWFnnmVPzvJTdMtC0/api-reference/rest-api/text-to-pay)
 
-This singular API call allows you to configure the payment form in terms of visible fields, read-only fields, other stylings and behaviors as well as deliver it with a custom message to your cardholders. You can prepopulate the form with information such as name and address and PatientID. You can pass background information or other reference data which we will associate with the transaction when once authorized.&#x20;
+With a single API call, you can configure the payment experience by controlling visible and read-only fields, customizing form behavior and styling, and including a personalized message for the recipient. The payment form can be pre-populated with customer information such as name, address, and Patient ID. You may also provide reference data or other contextual information, which will be associated with the transaction after authorization.
 
 #### Field Descriptions&#x20;
 
@@ -34,7 +34,7 @@ _MessageBody:_ (here you can create a custom message to send via text or email)&
 
 #### Defining your Form&#x20;
 
-The OPTPARAM field defines the payment form in terms of visible fields, read-only fields, styles,  and behavior.  We use a specific tool to generate this value found here  [https://easypay8.com/byowidget/](https://easypay8.com/byowidget/) .  You may select the options you desire then press GENERATE OPTPARAMS.  We are always glad to assist you with defining your form as this is a very important part of collecting payments. &#x20;
+The OPTPARAM field defines the payment form in terms of visible fields, read-only fields, styles and behavior.  We use a specific tool to generate this value found here  [https://easypay8.com/byowidget/](https://easypay8.com/byowidget/) .  You may select the options you desire then press GENERATE OPTPARAMS.  We are always glad to assist you with defining your form as this is a very important part of collecting payments. &#x20;
 
 #### Sending a Custom TEXT Message&#x20;
 

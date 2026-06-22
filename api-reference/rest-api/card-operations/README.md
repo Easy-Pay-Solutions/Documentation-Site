@@ -1,9 +1,13 @@
 # Card Operations
 
 {% columns %}
-{% column %}
+{% column width="50%" %}
 {% content-ref url="process-a-card-sale.md" %}
 [process-a-card-sale.md](process-a-card-sale.md)
+{% endcontent-ref %}
+
+{% content-ref url="authentication-1.md" %}
+[authentication-1.md](authentication-1.md)
 {% endcontent-ref %}
 
 {% content-ref url="void-a-transaction.md" %}
@@ -11,7 +15,7 @@
 {% endcontent-ref %}
 {% endcolumn %}
 
-{% column %}
+{% column width="50%" %}
 {% content-ref url="process-a-refund.md" %}
 [process-a-refund.md](process-a-refund.md)
 {% endcontent-ref %}

@@ -72,7 +72,7 @@
   * [Card Operations](api-reference/rest-api/card-operations/README.md)
     * [Incremental Auth](api-reference/rest-api/authentication-1.md)
     * [Process a Card Sale](api-reference/rest-api/card-operations/process-a-card-sale.md)
-    * [Process a Card Sale with Surcharge](api-reference/rest-api/card-operations/authentication-1.md)
+    * [Process a Card Sale with Surcharge](api-reference/rest-api/card-operations/process-card-sale-surcharge.md)
     * [Process a Refund](api-reference/rest-api/card-operations/process-a-refund.md)
     * [Void a Transaction](api-reference/rest-api/card-operations/void-a-transaction.md)
   * [Consent Annual](api-reference/rest-api/consent-annual/README.md)

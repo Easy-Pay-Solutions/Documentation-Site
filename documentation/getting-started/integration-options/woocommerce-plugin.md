@@ -52,7 +52,7 @@ define('Number_ENCRYPTION_KEY', getenv('Number_ENCRYPTION_KEY') ?: ($_SERVER['Nu
 
 **API Settings**
 
-<table><thead><tr><th width="189.4000244140625">Setting</th><th>Description</th><th>Default</th></tr></thead><tbody><tr><td>Account Code</td><td>The account code provided by Number.</td><td>—</td></tr><tr><td>Token</td><td>Secure API token used for authentication. Store securely and do not share publicly.</td><td>—</td></tr><tr><td>Merchant ID</td><td>Unique merchant identifier.</td><td>—</td></tr><tr><td>API URL</td><td>Endpoint URL used to submit payment transactions. </td><td><a href="https://easypay5.com/ApicardProcRest/v1.0.0">https://easypay5.com/ApicardProcRest/v1.0.0</a></td></tr><tr><td>eIndex</td><td>Encryption key index used by the hosted payment form.</td><td>—</td></tr></tbody></table>
+<table><thead><tr><th width="189.4000244140625">Setting</th><th>Description</th><th>Default</th></tr></thead><tbody><tr><td>Account Code</td><td>The account code provided by Number.</td><td>—</td></tr><tr><td>Token</td><td>Secure API token used for authentication. Store securely and do not share publicly.</td><td>—</td></tr><tr><td>Merchant ID</td><td>The merchant ID from your Number account.</td><td>—</td></tr><tr><td>API URL</td><td>Endpoint URL used to submit payment transactions. </td><td><a href="https://easypay5.com/ApicardProcRest/v1.0.0">https://easypay5.com/ApicardProcRest/v1.0.0</a></td></tr><tr><td>eIndex</td><td>Encryption key index used by the hosted payment form.</td><td>300</td></tr></tbody></table>
 
 **Payment Form Fields and Styling**
 

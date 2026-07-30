@@ -65,9 +65,9 @@ For the Email Option you must create a custom message. To help create your messa
 
 **Adding your own Anchor tags**&#x20;
 
-here is an example of an Anchor tag you may wish to insert&#x20;
+Here is an example of an Anchor tag you may wish to insert:
 
-[Click here for Statement](https://mypatientportal.com/Statement/page1.php?ID=457)
+\<a href="https://MypatientPortal.com/Statement/page1.php?ID=457">Click Here for Statement\</a>
 
 Here is an example Custom Message for EMAIL using the variables above
 

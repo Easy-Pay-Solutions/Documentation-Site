@@ -79,11 +79,11 @@ for the above example you will end up with the following&#x20;
 
 Here is an example Custom Message for EMAIL using the variables above
 
-\<b>Dear John Doe,\</b>\<br />\<br />This is a friendly reminder that you have an outstanding balance of \<br /> $26.56 for your visit on 5/5/2026 with ||Merch1||. \<br />\<br />This payment is due on ||DueOn||. You can easily review your statement and submit your payment securely through our patient Portal \<br />\<br />Or you can also safely follow the link shown here.\<br />||PayLink||\<br/>This Link Expires on ||ExpOn||\<br />\<br />\<b>Thank You\<b>\<br/>||Merch1|| Billing Dept\</b>
+\<b>Dear John Doe,\</b>\<br />\<br />This is a friendly reminder that you have an outstanding balance of \<br /> $26.56 for your visit on 5/5/2026 with ||Merch1||. \<br />\<br />This payment is due on ||DueOn||. You can easily review your statement and submit your payment securely through our patient Portal \<br />\<br />Or you can also safely follow the link shown here.\<br />||PayLink||\<br />This Link Expires on ||ExpOn||\<br />\<br />\<a20687265663D2268747470733A2F2F4D7970617469656E74506F7274616C2E636F6D2F53746174656D656E742F70616765312E7068703F49443D343537223E436C69636B206865726520666F722053746174656D656E74\</a>\<br />\<br />\<b>Thank You\<br/>||Merch1|| Billing Dept\</b>
 
 &#x20; Here is the resulting email message:&#x20;
 
-<figure><img src="../../../.gitbook/assets/image (24).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/dearjohndoe.png" alt=""><figcaption></figcaption></figure>
 
 
 

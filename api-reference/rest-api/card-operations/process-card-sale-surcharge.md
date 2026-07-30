@@ -1,7 +1,7 @@
 # Process a Card Sale with Surcharge
 
 <mark style="color:orange;">post:</mark> https://easypay5.com/APIcardProcNumber/v1.0.0/CardSale/WithOptions\
-&#xNAN;_<mark style="color:$danger;">**For PCI compliant merchants only (AOC on file with Number required)**</mark>_
+_<mark style="color:$danger;">**For PCI compliant merchants only (AOC on file with Number required)**</mark>_
 
 {% tabs %}
 {% tab title="Sample Request" %}

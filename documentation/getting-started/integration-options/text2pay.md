@@ -17,20 +17,20 @@ RefID: ( user defined field )&#x20;\
 RPGUID: ( user defined field )
 
 _MessageBody:_ (here you can create a custom message to send via text or email)&#x20;\
-&#xNAN;_&#x41;cctHolderID:_ ( NOT USED )&#x20;\
-&#xNAN;_&#x41;mount:_ ( payment amount )&#x20;\
-&#xNAN;_&#x43;onsentID:_ ( NOT USED )&#x20;\
-&#xNAN;_&#x44;ueOn:_ ( can be shown in message to indicate when payment is due  )\
-&#xNAN;_&#x45;INDEX:_ ( can be used to indicate encrypted webhook )&#x20;\
-&#xNAN;_&#x4D;erchID:_ ( Must provide a valid Merchant record index for the Account used )&#x20;\
-&#xNAN;_&#x54;XID:_ (NOT USED)&#x20;\
-&#xNAN;_&#x57;Type:_  ( use SW here )&#x20;\
-&#xNAN;_&#x52;edirectURL:_  ( we can redirect to your site and pass real-time info after authorization )&#x20;\
-&#xNAN;_&#x57;idgetURL:_ ( we will provide you the proper address for your payment form )\
-&#xNAN;_&#x45;xpiresOn:_ ( we can display the link expiration date within your message)&#x20;\
-&#xNAN;_&#x53;ingleUse:_ ( enter a 1 to restrict the link to be used more than one time for payment )&#x20;\
-&#xNAN;_&#x4F;ptParam:_ (this provides a means for us to configure and style the payment form)\
-&#xNAN;_&#x51;uestions:_ ( NOT USED )&#x20;
+_&#x41;cctHolderID:_ ( NOT USED )&#x20;\
+_&#x41;mount:_ ( payment amount )&#x20;\
+_&#x43;onsentID:_ ( NOT USED )&#x20;\
+_&#x44;ueOn:_ ( can be shown in message to indicate when payment is due  )\
+_&#x45;INDEX:_ ( can be used to indicate encrypted webhook )&#x20;\
+_&#x4D;erchID:_ ( Must provide a valid Merchant record index for the Account used )&#x20;\
+_&#x54;XID:_ (NOT USED)&#x20;\
+_&#x57;Type:_  ( use SW here )&#x20;\
+_&#x52;edirectURL:_  ( we can redirect to your site and pass real-time info after authorization )&#x20;\
+_&#x57;idgetURL:_ ( we will provide you the proper address for your payment form )\
+_&#x45;xpiresOn:_ ( we can display the link expiration date within your message)&#x20;\
+_&#x53;ingleUse:_ ( enter a 1 to restrict the link to be used more than one time for payment )&#x20;\
+_&#x4F;ptParam:_ (this provides a means for us to configure and style the payment form)\
+_&#x51;uestions:_ ( NOT USED )&#x20;
 
 #### Defining your Form&#x20;
 
@@ -62,6 +62,12 @@ For the Email Option you must create a custom message. To help create your messa
 * ||PayLink||  when we see this in your message we will replace it with the payment link
 * ||DueOn||  when we see this we will replace it with the Date you specify for payment due date
 * ||ExpOn||  when we see this we will replace it with the Date you specify for payment link expiration Date&#x20;
+
+**Adding your own Anchor tags**&#x20;
+
+here is an example of an Anchor tag you may wish to insert&#x20;
+
+[Click here for Statement](https://mypatientportal.com/Statement/page1.php?ID=457)
 
 Here is an example Custom Message for EMAIL using the variables above
 

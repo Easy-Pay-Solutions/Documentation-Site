@@ -83,7 +83,7 @@ Here is an example Custom Message for EMAIL using the variables above
 
 &#x20; Here is the resulting email message:&#x20;
 
-<figure><img src="../../../.gitbook/assets/dearjohndoe.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/dearjohndoe2.png" alt=""><figcaption></figcaption></figure>
 
 
 

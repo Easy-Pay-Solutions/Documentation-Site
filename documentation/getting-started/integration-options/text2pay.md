@@ -70,7 +70,7 @@ The SMS option does NOT support HTML tags however you can force a Line Break wit
 
 Here is an example of an Link you may wish to insert:
 
-[https://MypatientPortal.com/Statement/page1.php?ID=457"](https://mypatientportal.com/Statement/page1.php?ID=457)
+[https://MypatientPortal.com/Statement/page1.php?ID=457](https://mypatientportal.com/Statement/page1.php?ID=457)
 
 In order to insert this into your custom SMS you will need to extract ALL the text and convert to a Byte Array represented as HEXADECIMAL then place between Custom Tag Z as follows \<z....\<z/>&#x20;
 

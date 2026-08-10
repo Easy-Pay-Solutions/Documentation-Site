@@ -76,15 +76,15 @@ In order to insert this into your custom SMS you will need to extract ALL the te
 
 for the above example you will end up with the following&#x20;
 
-\<z68747470733A2F2F6D7970617469656E74706F7274616C2E636F6D2F73746174656D656E742F70616765312E7068703F49443D343537
+\<z68747470733A2F2F6D7970617469656E74706F7274616C2E636F6D2F73746174656D656E742F70616765312E7068703F49443D343537\</z>
 
 Here is an example Custom Message for SMS using the variables above
 
-Dear John Doe\nThis is a friendly reminder that you have an outstanding balance of ||Amt|| for your visit on 5/5/2026 with ||Merch1|| Due On ||DueOn||. Please follow this link to make payment ||PayLink||\n and click here for Statement\n\<z68747470733A2F2F6D7970617469656E74706F7274616C2E636F6D2F73746174656D656E742F70616765312E7068703F49443D343537
+Dear John Doe\nThis is a friendly reminder that you have an outstanding balance of ||Amt|| for your visit on 5/5/2026 with ||Merch1|| Due On ||DueOn||. Please follow this link to make payment ||PayLink||\n and click here for Statement\n\<z68747470733A2F2F6D7970617469656E74706F7274616C2E636F6D2F73746174656D656E742F70616765312E7068703F49443D343537\</z>
 
 **The resulting text message will read as Follows**&#x20;
 
-<figure><img src="../../../.gitbook/assets/image (25).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/dearjohndoe6.JPG" alt=""><figcaption></figcaption></figure>
 
 
 

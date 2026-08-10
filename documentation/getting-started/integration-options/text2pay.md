@@ -12,7 +12,7 @@ With a single API call, you can configure the payment experience by controlling 
 
 #### Field Descriptions&#x20;
 
-MessageType: ( TEXT,EMAIL,URLONLY )\
+MessageType: ( TEXT,EMAIL,URLONLY ,SMS)\
 RefID: ( user defined field )&#x20;\
 RPGUID: ( user defined field )
 
@@ -36,7 +36,7 @@ _&#x51;uestions:_ ( NOT USED )&#x20;
 
 The OPTPARAM field defines the payment form in terms of visible fields, read-only fields, styles and behavior.  We use a specific tool to generate this value found here  [https://easypay8.com/byowidget/](https://easypay8.com/byowidget/) .  You may select the options you desire then press GENERATE OPTPARAMS.  We are always glad to assist you with defining your form as this is a very important part of collecting payments. &#x20;
 
-#### Sending a Custom TEXT Message&#x20;
+#### Sending a Simple TEXT Message ( Use Option TEXT )
 
 here you can use the _MessageBody Field_ &#x20;
 
@@ -54,11 +54,46 @@ If you decide to create your own message we will append the following to your me
 
 <sup>_Follow the link below to make payment (Payment Link) This Link Expires on ( Exp Date )_</sup>&#x20;
 
+#### Sending a Custom SMS Message ( Use Option SMS )
+
+For the This Option you must create a custom message. To help create your message we have provided some Variable fields: Please include the "||" characters.&#x20;
+
+* ||Merch1||  when we see this in your message we will replace it with the actual Merchant name
+* ||Amt||  when we see this in your message we will replace it with Amount specified
+* ||PayLink||  when we see this in your message we will replace it with the payment link
+* ||DueOn||  when we see this we will replace it with the Date you specify for payment due date
+* ||ExpOn||  when we see this we will replace it with the Date you specify for payment link expiration Date&#x20;
+
+The SMS option does NOT support HTML tags however you can force a Line Break with "\n"
+
+**Adding your own HTML Links**
+
+Here is an example of an Link you may wish to insert:
+
+[https://MypatientPortal.com/Statement/page1.php?ID=457"](https://mypatientportal.com/Statement/page1.php?ID=457)
+
+In order to insert this into your custom SMS you will need to extract ALL the text and convert to a Byte Array represented as HEXADECIMAL then place between Custom Tag Z as follows \<z....\<z/>&#x20;
+
+for the above example you will end up with the following&#x20;
+
+\<z68747470733A2F2F6D7970617469656E74706F7274616C2E636F6D2F73746174656D656E742F70616765312E7068703F49443D343537
+
+Here is an example Custom Message for SMS using the variables above
+
+Dear John Doe\nThis is a friendly reminder that you have an outstanding balance of ||Amt|| for your visit on 5/5/2026 with ||Merch1|| Due On ||DueOn||. Please follow this link to make payment ||PayLink||\n and click here for Statement\n\<z68747470733A2F2F6D7970617469656E74706F7274616C2E636F6D2F73746174656D656E742F70616765312E7068703F49443D343537
+
+**The resulting text message will read as Follows**&#x20;
+
+<figure><img src="../../../.gitbook/assets/image (25).png" alt=""><figcaption></figcaption></figure>
+
+
+
 #### Sending a Custom EMAIL Message&#x20;
 
 For the Email Option you must create a custom message. To help create your message we have provided some Variable fields: Please include the "||" characters.&#x20;
 
 * ||Merch1||  when we see this in your message we will replace it with the actual Merchant name
+* ||Amt||  when we see this in your message we will replace it with Amount specified
 * ||PayLink||  when we see this in your message we will replace it with the payment link
 * ||DueOn||  when we see this we will replace it with the Date you specify for payment due date
 * ||ExpOn||  when we see this we will replace it with the Date you specify for payment link expiration Date&#x20;

@@ -68,7 +68,7 @@ The SMS option does NOT support HTML tags however you can force a Line Break wit
 
 **Adding your own HTML Links**
 
-Here is an example of an Link you may wish to insert:
+Here is an example of an Html Link you may wish to insert:
 
 [https://mypatientportal.com/statement/page1.php?ID=457](https://mypatientportal.com/statement/page1.php?ID=457)
 

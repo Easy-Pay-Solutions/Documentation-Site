@@ -6,14 +6,13 @@ description: The PayForm can be configured to collect subscription type payments
 
 In order to do this, you can adjust your [request](../../../../api-reference/rest-api/payform.md) as follows:
 
-> "eSubmission": "0221",
+> "eFeatures": "0001",
 
 This will provide for your final redirect address as well as a webhook URL
 
 Here are other changes you will need to consider:&#x20;
 
-> "eSubmission": "0221",
->
+> "eSubmission": "0221",\
 > "eFeatures": "0001",\
 > "WTYPE": "PF",\
 > "EndPoint": "Payform/PF.aspx",\

@@ -12,9 +12,11 @@ This will provide for your final redirect address as well as a webhook URL
 
 Here are other changes you will need to consider:&#x20;
 
-> "eSubmission": "0221",\
-> "WTYPE": "PFS",\
-> "EndPoint": "Payform/PFS.aspx",\
+> "eSubmission": "0221",
+>
+> "eFeatures": "0001",\
+> "WTYPE": "PF",\
+> "EndPoint": "Payform/PF.aspx",\
 > "PostURL": "https://easypay1.com/postingapp/submit.aspx", <mark style="color:$danger;">// your webhook location</mark>\
 > "RedirectURL": "https://easypay8.com/CYWidget/", <mark style="color:$danger;">// your redirect URL</mark>
 
@@ -53,6 +55,7 @@ The Subscription PayForm is designed to do the following:
 {% column %}
 ```
 "eVisible": "0665",
+"eFeatures": "0001",
 "eReadOnly": "0040",
 "eStyles": "0001",
 "eSubmission": "0221",
@@ -76,6 +79,7 @@ The Subscription PayForm is designed to do the following:
 {% column %}
 ```
 "eVisible": "0625",
+"eFeatures": "0001",
 "eReadOnly": "0040",
 "eStyles": "0001",
 "eSubmission": "0221",
@@ -99,12 +103,12 @@ The Subscription PayForm is designed to do the following:
 {
   "InitParams": {
     "MerchID": 1,
-    "WTYPE": "PFS",
+    "WTYPE": "PF",
     "PostURL": "HTTPS://easypay1.com/postingapp/submit.aspx",
     "RedirectURL": "https://easypay8.com/CYWidget/",
     "REF_ID": "A97689#",
     "RPGUID": "92e1e15c-f64a-466b-8733-9b518b9f374c",
-    "EndPoint": "PayForm/PFS.aspx",
+    "EndPoint": "PayForm/PF.aspx",
     "EINDEX": "300",
     "Amounts": {
       "Amount": 0, (only if you want to collect a separate fee) 
@@ -131,6 +135,7 @@ The Subscription PayForm is designed to do the following:
      },
     "WidOptions": {
       "eVisible": "0625",
+      "eFeatures": "0001",
       "eReadOnly": "0040",
       "eStyles": "0001",
       "eSubmission": "0221",

@@ -186,7 +186,7 @@ In the case that you're not using encryption, we recommend **validating the info
 {% step %}
 #### Retrieve and validate the transaction details
 
-Using the `TransactionID` returned by the PayForm, you can call our REST API to [retrieve full transaction details](../../../api-reference/rest-api-alt/query/#apicardprocrest-v1.0.0-query-transaction_fulldetail) to get all of the information regarding the transaction.
+Using the `TransactionID` returned by the PayForm, you can call our REST API to [retrieve full transaction details](../../../api-reference/rest-api/query/transaction-full-detail.md) to get all of the information regarding the transaction.
 
 Then, you can confirm if a transaction with the selected ID exists, and if the `CreatedOn` date roughly matches the current time or the time the PayForm was submitted.
 {% endstep %}

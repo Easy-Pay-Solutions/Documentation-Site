@@ -12,24 +12,24 @@ With a single API call, you can configure the payment experience by controlling 
 
 #### Field Descriptions&#x20;
 
-MessageType: ( TEXT,EMAIL,URLONLY ,SMS)\
+MessageType: ( TEXT, EMAIL, URLONLY, SMS )\
 RefID: ( user defined field )&#x20;\
 RPGUID: ( user defined field )
 
-_MessageBody:_ (here you can create a custom message to send via text or email)&#x20;\
+_MessageBody:_ ( here you can create a custom message to send via text or email )&#x20;\
 _&#x41;cctHolderID:_ ( NOT USED )&#x20;\
 _&#x41;mount:_ ( payment amount )&#x20;\
 _&#x43;onsentID:_ ( NOT USED )&#x20;\
-_&#x44;ueOn:_ ( can be shown in message to indicate when payment is due  )\
+_&#x44;ueOn:_ ( can be shown in message to indicate when payment is due )\
 _&#x45;INDEX:_ ( can be used to indicate encrypted webhook )&#x20;\
 _&#x4D;erchID:_ ( Must provide a valid Merchant record index for the Account used )&#x20;\
 _&#x54;XID:_ (NOT USED)&#x20;\
 _&#x57;Type:_  ( use SW here )&#x20;\
 _&#x52;edirectURL:_  ( we can redirect to your site and pass real-time info after authorization )&#x20;\
 _&#x57;idgetURL:_ ( we will provide you the proper address for your payment form )\
-_&#x45;xpiresOn:_ ( we can display the link expiration date within your message)&#x20;\
+_&#x45;xpiresOn:_ ( we can display the link expiration date within your message )&#x20;\
 _&#x53;ingleUse:_ ( enter a 1 to restrict the link to be used more than one time for payment )&#x20;\
-_&#x4F;ptParam:_ (this provides a means for us to configure and style the payment form)\
+_&#x4F;ptParam:_ ( this provides a means for us to configure and style the payment form )\
 _&#x51;uestions:_ ( NOT USED )&#x20;
 
 #### Defining your Form&#x20;
@@ -38,7 +38,7 @@ The OPTPARAM field defines the payment form in terms of visible fields, read-onl
 
 #### Sending a Simple TEXT Message ( Use Option TEXT )
 
-here you can use the _MessageBody Field_ &#x20;
+Here you can use the _MessageBody Field_ &#x20;
 
 When sending a TEXT/SMS, it is best to keep the message short and sweet. it is for this reason we have a DEFAULT message which you can use by simply leaving this field empty.&#x20;
 

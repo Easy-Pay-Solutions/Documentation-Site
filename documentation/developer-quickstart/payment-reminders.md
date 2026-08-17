@@ -20,7 +20,7 @@ After the payment is submitted, a transaction receipt would be sent to the e-mai
 
 ## Implementation
 
-To send a payment reminder using the REST API, use the [text-to-pay.md](../../api-reference/rest-api/text-to-pay.md "mention")endpoint.
+To send a payment reminder using the REST API, use the [text-to-pay.md](../../api-reference/rest-api/text-to-pay.md "mention") endpoint.
 
 
 

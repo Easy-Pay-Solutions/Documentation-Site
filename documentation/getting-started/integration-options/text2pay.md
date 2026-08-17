@@ -104,7 +104,7 @@ Here is an example of an Anchor tag you may wish to insert:
 
 \<a href="https://MypatientPortal.com/Statement/page1.php?ID=457">Click Here for Statement\</a>
 
-In order to insert this into your custom Email you will need to extract ALL the text between the Anchor Tags ( IINCLUDING SPACES ) and convert to a Byte Array represented as HEXADECIMAL&#x20;
+In order to insert this into your custom Email you will need to extract ALL the text between the Anchor Tags ( INCLUDING SPACES ) and convert to a Byte Array represented as HEXADECIMAL&#x20;
 
 for the above example you will end up with the following&#x20;
 

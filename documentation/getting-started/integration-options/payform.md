@@ -272,9 +272,9 @@ If you are not using encryption, it will contain 2 URL parameters instead, and l
 Having the `TransactionID` (`TxID`) and `ConsentID`, you can use our REST API to:
 
 * Gather additional informating concerning the sale;
-  * For the REST API, you can use [full transaction details](../../../api-reference/rest-api-alt/query/#apicardprocrest-v1.0.0-query-transaction_fulldetail), and [full consent details](../../../api-reference/rest-api-alt/query/#apicardprocrest-v1.0.0-query-consentannual_fulldetail) methods;
+  * For the REST API, you can use [full transaction details](../../../api-reference/rest-api/query/transaction-full-detail.md), and [full consent details](../../../api-reference/rest-api/query/consent-annual-full-detail.md) methods;
 * Provide a receipt;
-  * For the REST API, you can use [generate a transaction receipt](../../../api-reference/rest-api-alt/receipt.md#apicardprocrest-v1.0.0-receipt-receiptgenerate) method;
+  * For the REST API, you can use [generate a transaction receipt](../../../api-reference/rest-api/receipt.md) method;
 
 
 

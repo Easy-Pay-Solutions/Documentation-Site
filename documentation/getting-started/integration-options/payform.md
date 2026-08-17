@@ -194,7 +194,7 @@ Then, you can confirm if a transaction with the selected ID exists, and if the `
 {% step %}
 #### Retrieve and validate the consent details (if the card was saved)
 
-If `ConsentID` was returned alongside the `TransactionID`, you can use the REST API to [get full detail of annual consent](../../../api-reference/rest-api-alt/query/#apicardprocrest-v1.0.0-query-consentannual_fulldetail) to get all of the information regarding the consent.
+If `ConsentID` was returned alongside the `TransactionID`, you can use the REST API to [get full detail of annual consent](../../../api-reference/rest-api/query/consent-annual-full-detail.md) to get all of the information regarding the consent.
 
 Then, you can confirm if a consent with the selected ID exists, and if the `CreatedOn` date roughly matches the current time or the time the PayForm was submitted.
 {% endstep %}

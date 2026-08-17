@@ -549,7 +549,7 @@ This method processes a credit card when the credit card details are entered man
 ChargeCreditCard().chargeCreditCard(params: ChargeCreditCardBodyParams): NetworkResource<ChargeCreditCardResult>
 ```
 
-REST API equivalent: [#apicardprocrest-v1.0.0-cardsale-manual](../../../api-reference/rest-api-alt/card-operations/process-a-card-sale.md#apicardprocrest-v1.0.0-cardsale-manual "mention")
+REST API equivalent: [process-a-card-sale.md](../../../api-reference/rest-api/card-operations/process-a-card-sale.md "mention")
 
 #### **Request parameters**
 
@@ -625,7 +625,7 @@ A query that returns annual consent details. Depending on the query sent, a sing
 ListAnnualConsents().listAnnualConsents(params: ListAnnualConsentsBodyParams): NetworkResource<ListAnnualConsentsResult>
 ```
 
-REST API equivalent: [#apicardprocrest-v1.0.0-query-consentannual](../../../api-reference/rest-api-alt/query/#apicardprocrest-v1.0.0-query-consentannual "mention")
+REST API equivalent: [query](../../../api-reference/rest-api/query/ "mention")
 
 #### **Request parameters**
 
@@ -736,7 +736,7 @@ This method creates an annual consent by sending the credit card details, which 
 CreateAnnualConsent().createAnnualConsent(params: CreateAnnualConsentBodyParams): NetworkResource<CreateAnnualConsentResult>
 ```
 
-REST API equivalent: [#apicardprocrest-v1.0.0-consentannual-create\_man](../../../api-reference/rest-api-alt/consent-annual/create-annual-consent.md#apicardprocrest-v1.0.0-consentannual-create_man "mention")
+REST API equivalent: [create-annual-consent.md](../../../api-reference/rest-api/consent-annual/create-annual-consent.md "mention")
 
 #### **Request parameters**
 
@@ -792,7 +792,7 @@ Cancels an annual consent. Credit card data is removed from the system after the
 CancelAnnualConsent().cancelAnnualConsent(params: CancelAnnualConsentBodyParams): NetworkResource<CancelAnnualConsentResult>
 ```
 
-REST API equivalent: [#apicardprocrest-v1.0.0-consentannual-cancel](../../../api-reference/rest-api-alt/consent-annual/#apicardprocrest-v1.0.0-consentannual-cancel "mention")
+REST API equivalent: [cancel-a-consent-card-on-file.md](../../../api-reference/rest-api/consent-annual/cancel-a-consent-card-on-file.md "mention")
 
 #### **Request parameters**
 

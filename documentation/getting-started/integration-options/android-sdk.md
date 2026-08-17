@@ -835,7 +835,7 @@ This method uses the credit card stored on file to process a payment for an exis
 ProcessPaymentAnnual().processPaymentAnnual(params: ProcessPaymentAnnualBodyParams): NetworkResource<ProcessPaymentAnnualResult>
 ```
 
-REST API equivalent: [#apicardprocrest-v1.0.0-consentannual-procpayment](../../../api-reference/rest-api-alt/consent-annual/#apicardprocrest-v1.0.0-consentannual-procpayment "mention")
+REST API equivalent: [charge-a-stored-card.md](../../../api-reference/rest-api/consent-annual/charge-a-stored-card.md "mention")
 
 #### **Request parameters**
 

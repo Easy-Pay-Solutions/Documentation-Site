@@ -56,8 +56,6 @@ Prerequisites - get HMAC secret, API key and optional Sentry DSN from Number.
 {% endstep %}
 
 {% step %}
-
-{% step %}
 During the initialization, the process of downloading the certificate is starting. Proceeding with any call before downloading has finished will result in an error `RsaCertificateError.failedToLoadCertificateData`.&#x20;
 
 You can check the status of downloading by accessing the following enum:
@@ -377,14 +375,14 @@ EasyPay.apiClient.chargeCreditCard(request: CardSaleManualRequest,
                                    completion: @escaping (Result<CreditCardSaleResponse, Error>) -> Void)
 ```
 
-REST API equivalent: [#apicardprocrest-v1.0.0-cardsale-manual](../../../api-reference/rest-api-alt/card-operations/process-a-card-sale.md#apicardprocrest-v1.0.0-cardsale-manual "mention")
+REST API equivalent: [process-a-card-sale.md](../../../api-reference/rest-api/card-operations/process-a-card-sale.md "mention")
 
 #### **Request parameters**
 
 * `TransactionRequest`
   * `creditCardInfo`: [CreditCardInfo](ios-sdk.md#creditcardinfo)
   * `accountHolder`: [AccountHolder](ios-sdk.md#accountholder)
-  * `endCustomer`: [EndCustomer](ios-sdk.md#endcustomer)?
+  * `endCustomer`: [EndCustomer](ios-sdk.md#endcustomer)
   * `amounts`: [Amounts](ios-sdk.md#amounts)
   * `purchItems`: [PurchItems](ios-sdk.md#purchitems)
   * `merchantId`: Int
@@ -422,7 +420,7 @@ EasyPay.apiClient.listAnnualConsents(request: ConsentAnnualListingRequest,
                                      completion: @escaping (Result<ListingConsentAnnualResponse, Error>) -> Void)
 ```
 
-REST API equivalent: [#apicardprocrest-v1.0.0-query-consentannual](../../../api-reference/rest-api-alt/query/#apicardprocrest-v1.0.0-query-consentannual "mention")
+REST API equivalent: [query](../../../api-reference/rest-api/query/ "mention")
 
 #### **Request body**
 
@@ -483,7 +481,7 @@ EasyPay.apiClient.createAnnualConsent(request: CreateConsentAnnualRequest,
                                       completion: @escaping (Result<CreateConsentAnnualResponse, Error>) -> Void)
 ```
 
-REST API equivalent: [#apicardprocrest-v1.0.0-consentannual-create\_man](../../../api-reference/rest-api-alt/consent-annual/create-annual-consent.md#apicardprocrest-v1.0.0-consentannual-create_man "mention")
+REST API equivalent: [create-annual-consent.md](../../../api-reference/rest-api/consent-annual/create-annual-consent.md "mention")
 
 #### **Request body**
 
@@ -520,7 +518,7 @@ EasyPay.apiClient.cancelAnnualConsent(request: CancelConsentAnnualRequest,
                                       completion: @escaping (Result<CancelConsentAnnualResponse, Error>) -> Void)
 ```
 
-REST API equivalent: [#apicardprocrest-v1.0.0-consentannual-cancel](../../../api-reference/rest-api-alt/consent-annual/#apicardprocrest-v1.0.0-consentannual-cancel "mention")
+REST API equivalent: [cancel-a-consent-card-on-file.md](../../../api-reference/rest-api/consent-annual/cancel-a-consent-card-on-file.md "mention")
 
 #### Request parameters
 
@@ -551,7 +549,7 @@ EasyPay.apiClient.processPaymentAnnualConsent(request: ProcessPaymentAnnualReque
                                               completion: @escaping (Result<ProcessPaymentAnnualResponse, Error>) -> Void)
 ```
 
-REST API equivalent: [#apicardprocrest-v1.0.0-consentannual-procpayment](../../../api-reference/rest-api-alt/consent-annual/#apicardprocrest-v1.0.0-consentannual-procpayment "mention")
+REST API equivalent: [charge-a-stored-card.md](../../../api-reference/rest-api/consent-annual/charge-a-stored-card.md "mention")
 
 #### **Request body**
 

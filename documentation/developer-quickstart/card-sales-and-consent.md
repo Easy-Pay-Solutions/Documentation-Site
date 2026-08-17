@@ -332,11 +332,11 @@ After authenticating, when you collect cardholder data alongside the other payme
 
 You can use the following API operations:
 
-* For the REST API, use [#apicardprocrest-v1.0.0-cardsale-manual](../../api-reference/rest-api-alt/card-operations/process-a-card-sale.md#apicardprocrest-v1.0.0-cardsale-manual "mention").
+* For the REST API, use [process-card-sale-surcharge.md](../../api-reference/rest-api/card-operations/process-card-sale-surcharge.md "mention").
 
 #### Manual consent
 
 You can use the following API operations:
 
-* For the REST API, use [#apicardprocrest-v1.0.0-consentannual-create\_man](../../api-reference/rest-api-alt/consent-annual/create-annual-consent.md#apicardprocrest-v1.0.0-consentannual-create_man "mention") for annual consent and [#apicardprocrest-v1.0.0-consentrecurring-create](../../api-reference/rest-api-alt/consent-recurring/create-recurring-consent.md#apicardprocrest-v1.0.0-consentrecurring-create "mention") for recurring consent.
+* For the REST API, use [create-annual-consent.md](../../api-reference/rest-api/consent-annual/create-annual-consent.md "mention") for annual consent and [create-a-recurring-consent-with-manual-card-entry.md](../../api-reference/rest-api/consent-recurring/create-a-recurring-consent-with-manual-card-entry.md "mention") for recurring consent.
 

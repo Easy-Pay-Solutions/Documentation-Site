@@ -106,7 +106,7 @@ Follow the instructions in the API reference to prepare and handle the request.
 
 You can use the following API operations:
 
-* For the REST API, use [#apicardprocrest-v1.0.0-cardsale-cardpresent](../../api-reference/rest-api-alt/card-operations/process-a-card-sale.md#apicardprocrest-v1.0.0-cardsale-cardpresent "mention")
+* For the REST API, use [process-a-card-sale.md](../../api-reference/rest-api/card-operations/process-a-card-sale.md "mention")
 
 #### API card present consent
 

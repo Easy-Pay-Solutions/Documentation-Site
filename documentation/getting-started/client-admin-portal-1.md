@@ -21,7 +21,7 @@ This type of access is provided if you are responsible for a single account. You
 
 **Integrator / Multi Account Admin**
 
-This type of access is granted to Integrators who must process transactions for multiple accounts. You can Create API Tokens , but NOT Virtual Terminal Users. You have Read-Only access to reports.
+This type of access is granted to Integrators who must process transactions for multiple accounts. You can Create API Tokens, but NOT Virtual Terminal Users. You have Read-Only access to reports.
 
 ## Single Sign-On (SSO)
 

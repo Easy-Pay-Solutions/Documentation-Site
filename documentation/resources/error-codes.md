@@ -14,7 +14,7 @@ If you want to be able to tell when a specific type of error occurs, you can use
 
 ### Global Payments decline codes
 
-These codes are used when processing transactions through the Global Payments system. For Global Payments transaction decline codes, see[#decline-codes](../testing/global-payments-testing.md#decline-codes "mention").
+These codes are used when processing transactions through the Global Payments system. For Global Payments transaction decline codes, see [#decline-codes](../testing/global-payments-testing.md#decline-codes "mention").
 
 
 

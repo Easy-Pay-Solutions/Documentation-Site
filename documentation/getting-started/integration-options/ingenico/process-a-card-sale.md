@@ -126,6 +126,6 @@ Example: `application/json`
 {% endtabs %}
 
 {% hint style="info" %}
-IMPORTANT : Always check your response to determine the fees and final amoount which are approved as this may differ from what was requested. The ResponseAuthorizedAmount element shows the amount that was charged.
+IMPORTANT : Always check your response to determine the fees and final amount which are approved as this may differ from what was requested. The ResponseAuthorizedAmount element shows the amount that was charged.
 {% endhint %}
 

@@ -80,7 +80,7 @@ Please view our [API Best Practices](https://docs.number.tech/documentation/gett
     "ResponseApprovedAmount": 0,
     "ResponseAuthorizedAmount": 0,
     "ResponseBalanceAmount": 0,
-    "TxApproved": true,
+    "TxApproved": false,   (when saving card only, TxApproved is not used)
     "TxID": 22475, "TxnCode": null,
     "ConsentResult": {
       "CardLast4": "0885",

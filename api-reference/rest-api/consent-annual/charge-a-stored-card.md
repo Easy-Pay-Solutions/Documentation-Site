@@ -46,7 +46,8 @@ _<mark style="color:$danger;">IMPORTANT : Always check your response to determin
     "RPGUID": "99438332"
   },
   "AlternateMerchID": 0,
-  "User": "Samuel"
+  "User": "Samuel",
+  "AuthOnly": 0
 }
 ```
 {% endtab %}

@@ -30,6 +30,10 @@ _<mark style="color:$danger;">IMPORTANT : Always check your response to determin
 
 **User:** Here you can assign a user to the sale so that we record the person which is initiating the sale within the integrator software.
 
+**AuthOnly:** If you specify a value of 1 you are indicating that you want to Authorize Only. A Transaction created in this manner will not be sent in for settlement automatically.\
+\
+This can be used to create an initial Authorization which can be further adjusted or finalized by calling the CardSale/IncrementAuth method.
+
 {% tabs %}
 {% tab title="Sample Request" %}
 ```clike

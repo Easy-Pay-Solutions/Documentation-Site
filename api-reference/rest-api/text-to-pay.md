@@ -14,8 +14,6 @@ This API method allows users to accomplish three typical tasks:
 2. Send an email with message and Payment Link
 3. Acquire the Payment Link and use it internally or externally
 
-The method name is **SMSPayment**: api\_SMSPaymentResponse SMSPayment(string SessKey, api\_SMSPayment PaymentObject);
-
 {% tabs %}
 {% tab title="Sample Request" %}
 ```clike

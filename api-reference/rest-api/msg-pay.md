@@ -1,62 +1,70 @@
 ---
-description: Create a payment link via SMS or email
+description: Creates a payment link and sends it via SMS or email along with a message.
 hidden: true
 ---
 
 # Msg Pay
 
-<mark style="color:orange;">post:</mark> https://easypay5.com/APIcardProcNumber/v1.0.0/Other/SMSPay
+<mark style="color:orange;">post:</mark> https://easypay5.com/APIcardProcNumber/v1.0.0/Other/MsgPay
 
-This call allows you to create a tinyURL of the widget payment link that will display a message and payment form to the customer. The message and form that is displayed to the customer is easily configured by using the API call options.
+This call allows you to create a targeted payment link and send this along with a message to the party (or parties) of your choice.  Used in conjunction with our highly flexible [PayForm](https://docs.number.tech/documentation/getting-started/integration-options/payform) it can be used to collect a targeted amount from a specific party or to route funds for a general purpose or event. &#x20;
 
-This API method allows users to accomplish three typical tasks:
+This API method allows users to accomplish three typical tasks:&#x20;
 
-1. Send a SMS text with a message and Payment Link
-2. Send an email with message and Payment Link
-3. Acquire the Payment Link and use it internally or externally
+1. Send a SMS text with a message and Payment Link&#x20;
+2. Send an email with message and Payment Link&#x20;
+3. Acquire the Payment Link and use it internally or externally&#x20;
 
 {% tabs %}
 {% tab title="Sample Request" %}
 ```clike
 {
-  "Msg": {
-    "Person": {
-      "Firstname": "EasyPay",
-      "Lastname": "Tester",
-      "Company": "",
-      "Title": "",
-      "Url": "",
-      "BillIngAdress": {
-        "Address1": "123 Fake St.",
-        "Address2": "",
-        "City": "Portland",
-        "State": "ME",
-        "ZIP": "04106",
-        "Country": "USA"
-      },
-      "Email": "testing@here.com",
-      "Phone": "2076885025"
-    },
-    "MessageType": "TEXT",
-    "RefID": "52520ABC",
-    "RPGUID": "4c269391-a698-4e10-a1a8-0353ee80d1a6",
+   "MsgParams": {
+    "MessageType": "SMS",
     "MessageBody": "",
-    "AcctHolderID": 0,
-    "Amount": 50,
-    "ConsentID": 0,
-    "DueOn": "1/12/2025",
-    "EINDEX": "100",
+    "MessageSubject": "OK Health",
+    "DueOn": "1/7/2027",
+    "ExpiresOn": "3/7/2027",
+    "SingleUsage": 1
+  },
+  "InitParams": {
     "MerchID": 1,
-    "TXID": 0,
-    "WType": "SW",
-    "RedirectURL": "https://easypay7.com/PostingApp",
-    "WidgetURL": "https://easypay5.com/sw",
-    "ExpiresOn": "2025-10-05T00:00:00.000Z",
-    "SingleUse": 0,
-    "OptParam": "VISIBLE|1EE7|READONLY|0000|STYLES|0000|OPTIONS|0601|COLORS|#ffffff,#428bca,#007bff,#212121,#ffffff,#212121,#ffffff",
-    "Questions": []
+    "WTYPE": "PF",
+    "PostURL": "https://easypay7.com/swidget/JsonGet.aspx",
+    "RedirectURL": "https://easypay8.com/CYWidget/",
+    "REF_ID": "A97689#",
+    "RPGUID": "92e1e15c-f64a-466b-8733-9b518b9f374c",
+    "EndPoint": "PF",
+    "EINDEX": "300",
+    "Amounts": {
+      "Amount": 20,
+      "Surcharge": 0,
+      "TotalAmt": 20
+    },
+    "Payer": {
+      "Firstname": "John",
+      "Lastname": "Doe",
+      "BillingAddress": {
+        "StreetAddress": "123 Elm St",
+        "City": "Tulsa",
+        "State": "OK",
+        "ZIP": "84048",
+        "Country": "USA"
+      }, 
+      "Email": "Jdoe@acme.net", 
+      "Phone": "6078595025",
+      "Company": ""
+    },
+    "WidOptions": {
+      "eVisible": "0665",
+      "eReadOnly": "0040",
+      "eStyles": "0001",
+      "eSubmission": "0A01",
+      "eFeatures": "0000",
+      "eColors": "#ffffff,#428bca,#007bff,#212121,#ffffff,#212121,#ffffff"
+    }
   }
-}
+} 
 ```
 {% endtab %}
 

@@ -3,7 +3,7 @@ description: Creates a payment link and sends it via SMS or email along with a m
 hidden: true
 ---
 
-# Msg Pay
+# Message Pay
 
 <mark style="color:orange;">post:</mark> https://easypay5.com/APIcardProcNumber/v1.0.0/Other/MsgPay
 
@@ -71,12 +71,12 @@ This API method allows users to accomplish three typical tasks:&#x20;
 {% tab title="Sample Response" %}
 ```clike
 {
-  "SMSPaymentResult": {
+  "MsgPaymentResult": {
     "ErrCode": 0,
     "ErrMsg": "",
     "FunctionOk": true,
-    "PaymentUrl": null,
-    "RespMsg": "Text Sent Successfully to 2078995025"
+    "PaymentUrl": "https://easypay8.com/PayForm?SP=8CBE8D1B2",
+    "RespMsg": "Text Sent Successfully to 2075434562"
   }
 }
 ```

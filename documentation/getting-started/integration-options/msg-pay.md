@@ -7,7 +7,7 @@ icon: comment-dollar
 
 One of our most popular features enables you to generate payment links on demand through the API and deliver them directly to cardholders via SMS or email.  Our newest revision of this feature is called “Message Pay’.&#x20;
 
-The API call needed to invoke this activity is shown here:->  [Msg Pay](../../../api-reference/rest-api/msg-pay.md)&#x20;
+The API call needed to invoke this activity is shown here:->  [Msg Pay](../../../api-reference/rest-api/message-pay.md)&#x20;
 
 This feature combines our ultra flexible [PayForm](https://docs.number.tech/documentation/getting-started/integration-options/payform) feature with a messaging system such as SMS or EMAIL. &#x20;
 
@@ -35,7 +35,7 @@ The standard Message Pay URL will be available for up to 3 months. After this pe
 
 ### Field Descriptions&#x20;
 
-If you inspect the Json Request for this API call [HERE](../../../api-reference/rest-api/msg-pay.md), you will notice it is comprised of two parent objects &#x20;
+If you inspect the Json Request for this API call [HERE](../../../api-reference/rest-api/message-pay.md), you will notice it is comprised of two parent objects &#x20;
 
 1. Message parameters ( MsgParams ) &#x20;
 2. PayForm parameters  ( InitParams) &#x20;

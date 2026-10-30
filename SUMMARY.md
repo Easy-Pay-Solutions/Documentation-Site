@@ -128,7 +128,7 @@
     * [Execute selective batch settlement](api-reference/rest-api/settlement/execute-selective-batch-settlement.md)
     * [Execute batch settlement for all transactions](api-reference/rest-api/settlement/execute-batch-settlement-for-all-transactions.md)
   * [Text to Pay](api-reference/rest-api/text-to-pay.md)
-  * [Msg Pay](api-reference/rest-api/msg-pay.md)
+  * [Message Pay](api-reference/rest-api/message-pay.md)
 * [REST API Old / Backup](api-reference/rest-api-alt/README.md)
   * [Authentication Old](api-reference/rest-api-alt/authentication.md)
   * [ACH Old](api-reference/rest-api-alt/ach.md)

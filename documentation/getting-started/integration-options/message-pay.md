@@ -3,7 +3,7 @@ hidden: true
 icon: comment-dollar
 ---
 
-# Msg Pay
+# Message Pay
 
 One of our most popular features enables you to generate payment links on demand through the API and deliver them directly to cardholders via SMS or email.  Our newest revision of this feature is called “Message Pay’.&#x20;
 
@@ -35,7 +35,7 @@ The standard Message Pay URL will be available for up to 3 months. After this pe
 
 ### Field Descriptions&#x20;
 
-If you inspect the Json Request for this API call [HERE](../../../api-reference/rest-api/message-pay.md), you will notice it is comprised of two parent objects &#x20;
+If you inspect the Json Request for this API call [HERE](https://app.gitbook.com/o/BBeFXc7fqAfKkKCdsmTJ/sites/site_o8JDg/s/4UWkWFnnmVPzvJTdMtC0/~/edit/~/changes/965/api-reference/rest-api/message-pay#sample-request), you will notice it is comprised of two parent objects &#x20;
 
 1. Message parameters ( MsgParams ) &#x20;
 2. PayForm parameters  ( InitParams) &#x20;

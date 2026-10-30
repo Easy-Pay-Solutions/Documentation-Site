@@ -37,7 +37,7 @@
     * [Virtual Terminal](documentation/getting-started/integration-options/virtual-terminal.md)
     * [WooCommerce Plugin](documentation/getting-started/integration-options/woocommerce-plugin.md)
     * [Text2Pay](documentation/getting-started/integration-options/text2pay.md)
-    * [Msg Pay](documentation/getting-started/integration-options/msg-pay.md)
+    * [Message Pay](documentation/getting-started/integration-options/message-pay.md)
   * [Basics](documentation/getting-started/basics/README.md)
     * [Authentication](documentation/getting-started/basics/authentication.md)
     * [API Best Practices](documentation/getting-started/basics/api-best-practices.md)

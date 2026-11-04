@@ -1,4 +1,5 @@
 ---
+description: '(deprecated) : Use Message Pay feature'
 icon: comment-dollar
 ---
 

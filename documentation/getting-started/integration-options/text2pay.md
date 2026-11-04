@@ -4,7 +4,7 @@ icon: comment-dollar
 
 # Text2Pay
 
-<mark style="color:$danger;">(deprecated) : Use</mark> [<mark style="color:$danger;">Message Pay</mark>](message-pay.md) <mark style="color:$danger;">feature</mark>\
+<mark style="color:$danger;">(deprecated): Use</mark> [<mark style="color:$danger;">Message Pay</mark>](message-pay.md) <mark style="color:$danger;">feature instead</mark>\
 \
 One of our most popular features enables you to generate payment links on demand through the API and deliver them directly to cardholders via SMS or email.
 

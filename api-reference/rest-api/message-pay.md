@@ -1,6 +1,5 @@
 ---
 description: Creates a payment link and sends it via SMS or email along with a message.
-hidden: true
 ---
 
 # Message Pay

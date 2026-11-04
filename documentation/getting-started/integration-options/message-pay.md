@@ -67,7 +67,7 @@ If you inspect the Json Request for this API call [HERE](https://app.gitbook.com
 * ZIP"  \[O]  for prepopulating data on the PayForm
 * Country: \[O]  for prepopulating data on the PayForm
 * Email: \[O] this is required if choosing the EMAIL option&#x20;
-* Phone: O] this is required if choosing the SMSL option
+* Phone: O] this is required if choosing the SMS option
 * Company: \[O] for prepopulating data on the PayForm
 * eVisible: \[R] These are required Configuration settings: see PayForm
 * eReadOnly:  \[R] These are required Configuration settings: see PayForm
